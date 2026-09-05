@@ -156,6 +156,26 @@ export default {
         'The vegetable supplier’s prices are up nine percent over four months while the fish supplier missed two deliveries. Both are visible from the same records.',
     },
     {
+      id: 'people',
+      title: 'Chefs, servers and section leads',
+      line:
+        'Staff, roles and responsibilities are modelled once, and every order, prep step and stock movement shows who owns it.',
+      why:
+        'A restaurant is run by whoever is on tonight, and almost nothing about a service is interpretable without knowing who was responsible for what.',
+      example:
+        'A section’s covers, average order value and comps are attributable to the people who worked it, which is the only fair basis for a conversation about performance.',
+    },
+    {
+      id: 'work',
+      title: 'Prep, opening checks and closing tasks',
+      line:
+        'The day’s fixed tasks are work with an owner, a due time and a state, connected to the service they prepare for.',
+      why:
+        'Restaurant failures are usually a step that did not happen on time rather than a step that went wrong, and a laminated checklist records neither.',
+      example:
+        'Prep for dinner is either marked complete at 16:40 by the person who owns it, or it is visibly not, while there is still time.',
+    },
+    {
       id: 'workforce',
       title: 'Shifts, attendance and who was actually in',
       line:

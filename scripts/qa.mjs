@@ -8,7 +8,11 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { FORBIDDEN_CLAIMS } from '../content/capabilities.js';
+import {
+  FORBIDDEN_CLAIMS, PRIMITIVES, WEDGE, MIN_PRIMITIVES_WITH_WEDGE,
+} from '../content/capabilities.js';
+import { REGISTRY } from '../content/businesses/registry.js';
+import { INDUSTRIES } from '../content/industries.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const failures = [];
@@ -136,6 +140,59 @@ for (const [page, links] of hrefs) {
     fail(page, `not in sitemap.xml (expected ${canonicalPath})`);
   }
 }
+
+/* ------------------------------------------------- positioning guard --- */
+
+/* Verity is a general operational layer whose wedge is inventory and
+   logistics. A page that reaches for the wedge and skips the primitives
+   describes a supply-chain tool instead, so any page using a wedge capability
+   must also cover at least MIN_PRIMITIVES_WITH_WEDGE primitives. */
+
+async function checkPositioning() {
+  const { readdir } = await import('node:fs/promises');
+  const dir = join(root, 'content/businesses');
+  const files = (await readdir(dir)).filter((f) => f.endsWith('.js') && f !== 'registry.js');
+
+  for (const file of files) {
+    const biz = (await import(join(dir, file))).default;
+    if (biz.status !== 'published') continue;
+    const ids = biz.modules.map((m) => m.id);
+    const usedWedge = ids.filter((id) => WEDGE.includes(id));
+    const usedPrimitives = ids.filter((id) => PRIMITIVES.includes(id));
+    if (usedWedge.length && usedPrimitives.length < MIN_PRIMITIVES_WITH_WEDGE) {
+      const missing = PRIMITIVES.filter((p) => !ids.includes(p));
+      fail(
+        `content/businesses/${file}`,
+        `uses ${usedWedge.length} wedge capabilities but only ${usedPrimitives.length} primitives ` +
+          `(minimum ${MIN_PRIMITIVES_WITH_WEDGE}); missing ${missing.join(', ')}`
+      );
+    }
+    if (!ids.includes('ai')) warn(`content/businesses/${file}`, 'does not cover Verity AI');
+    if (!ids.includes('intelligence')) warn(`content/businesses/${file}`, 'does not cover reporting');
+  }
+
+  for (const [slug, ind] of Object.entries(INDUSTRIES)) {
+    const usedWedge = ind.capabilities.filter((id) => WEDGE.includes(id));
+    const usedPrimitives = ind.capabilities.filter((id) => PRIMITIVES.includes(id));
+    if (usedWedge.length && usedPrimitives.length < MIN_PRIMITIVES_WITH_WEDGE) {
+      fail(
+        `content/industries.js (${slug})`,
+        `uses ${usedWedge.length} wedge capabilities but only ${usedPrimitives.length} primitives ` +
+          `(minimum ${MIN_PRIMITIVES_WITH_WEDGE})`
+      );
+    }
+  }
+
+  /* The registry is the scope of record; a content file for a slug that is not
+     in it would publish a page no index or hub knows about. */
+  const known = new Set(REGISTRY.map((b) => b.slug));
+  for (const file of files) {
+    const slug = file.replace(/\.js$/, '');
+    if (!known.has(slug)) fail(`content/businesses/${file}`, 'slug is not in the registry');
+  }
+}
+
+await checkPositioning();
 
 /* ------------------------------------------------------- duplication --- */
 

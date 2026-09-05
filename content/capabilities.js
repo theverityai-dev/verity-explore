@@ -13,63 +13,20 @@
    Adding a capability requires evidence. If a business genuinely needs
    something Verity does not do, the answer is to leave it out of the page,
    not to add it here.
+
+   POSITIONING. Verity is a general operational layer. The eight primitives
+   below come first because they are what the layer is made of, and every
+   business has all eight regardless of sector. Inventory, orders, suppliers
+   and logistics follow: they are Verity's initial wedge and its most deeply
+   shipped area, and they should be described that way — as the part that is
+   furthest along, not as the definition of the category. A business page that
+   reaches for the wedge capabilities and skips the primitives is describing a
+   supply-chain tool rather than Verity, which is why scripts/qa.mjs enforces a
+   minimum primitive count on any page that uses them.
 --------------------------------------------------------------------------- */
 
 export const CAPABILITIES = {
-  records: {
-    name: 'Records',
-    label: 'One record for everything the business knows',
-    evidence: 'both',
-    summary:
-      'Documents, products, assets and transactions live as records rather than files. Every record carries the same identity, permissions and history as everything else in Verity.',
-    derive: 'What the business knows, in one place, with the history of how it got there.',
-  },
-
-  inventory: {
-    name: 'Inventory',
-    label: 'Stock, movement and reorder',
-    evidence: 'product',
-    summary:
-      'Stock levels, movement between locations and reorder points, tracked against the same records the rest of the business uses.',
-    derive: 'What you hold, what is moving, and what is about to run out.',
-  },
-
-  orders: {
-    name: 'Orders',
-    label: 'Orders from placement to fulfilment',
-    evidence: 'product',
-    summary:
-      'Orders as first-class records with a state, an owner and a history — not a row in a sheet that someone updates when they remember.',
-    derive: 'What was ordered, where it is, and what is holding it up.',
-  },
-
-  suppliers: {
-    name: 'Suppliers',
-    label: 'Vendors, purchase and supply',
-    evidence: 'product',
-    summary:
-      'Suppliers and vendors as relationships with their own records, orders and history, connected to the stock and work they feed.',
-    derive: 'Who you buy from, what you owe them, and how reliably they deliver.',
-  },
-
-  logistics: {
-    name: 'Logistics',
-    label: 'Dispatch, movement and delivery',
-    evidence: 'product',
-    summary:
-      'Dispatch, routing and delivery tracked against the orders they fulfil, so a delay upstream is visible downstream.',
-    derive: 'What has left, what is in transit, and what arrived late.',
-  },
-
-  work: {
-    name: 'Work',
-    label: 'Tasks, projects, jobs and activities',
-    evidence: 'site',
-    summary:
-      'Tasks, projects, jobs, orders and activities share one execution model. Every piece of work has an owner, a state and a record of what happened.',
-    derive: 'What needs to happen, who has it, and what is blocked.',
-  },
-
+  /* --- The eight primitives. Every business has all of these. --------- */
   people: {
     name: 'People',
     label: 'Teams, roles and responsibilities',
@@ -78,7 +35,14 @@ export const CAPABILITIES = {
       'Teams, roles, responsibilities and the workforce itself, modelled once and referenced by every other part of the system.',
     derive: 'Who is responsible for what, and where the load actually sits.',
   },
-
+  work: {
+    name: 'Work',
+    label: 'Tasks, projects, jobs and activities',
+    evidence: 'site',
+    summary:
+      'Tasks, projects, jobs, orders and activities share one execution model. Every piece of work has an owner, a state and a record of what happened.',
+    derive: 'What needs to happen, who has it, and what is blocked.',
+  },
   relationships: {
     name: 'Relationships',
     label: 'Customers, vendors, partners',
@@ -87,7 +51,14 @@ export const CAPABILITIES = {
       'Customers, vendors, partners and stakeholders as records with full interaction history, connected to the work and transactions that involve them.',
     derive: 'Who you deal with, what you have done together, and what is outstanding.',
   },
-
+  records: {
+    name: 'Records',
+    label: 'One record for everything the business knows',
+    evidence: 'both',
+    summary:
+      'Documents, products, assets and transactions live as records rather than files. Every record carries the same identity, permissions and history as everything else in Verity.',
+    derive: 'What the business knows, in one place, with the history of how it got there.',
+  },
   workflows: {
     name: 'Workflows',
     label: 'Approvals, processes and states',
@@ -96,7 +67,6 @@ export const CAPABILITIES = {
       'Approvals, processes, states and automations that move work from one owner to the next without anyone chasing it.',
     derive: 'How work moves, where it stalls, and which step owns the delay.',
   },
-
   communication: {
     name: 'Communication',
     label: 'Comments, notifications and activity',
@@ -105,7 +75,6 @@ export const CAPABILITIES = {
       'Comments, notifications, activity and conversations attached to the record they concern, so context does not live in someone’s inbox.',
     derive: 'What was said about this, by whom, and when.',
   },
-
   intelligence: {
     name: 'Reports and analytics',
     label: 'Reports, dashboards and insight',
@@ -114,16 +83,6 @@ export const CAPABILITIES = {
       'Reports and dashboards drawn from live operational records rather than from an export someone assembled last week.',
     derive: 'How the business is performing, without waiting for a report cycle.',
   },
-
-  ai: {
-    name: 'Verity AI',
-    label: 'Ask, understand, act',
-    evidence: 'site',
-    summary:
-      'Ask a question in plain language and get an answer grounded in your own records and workflows. Verity AI is permission-aware, so it only sees what the person asking is allowed to see, and every action it takes stays part of the operational record.',
-    derive: 'An answer with its reasoning shown, and the follow-up already created.',
-  },
-
   control: {
     name: 'Control',
     label: 'Permissions, policy and audit',
@@ -132,7 +91,40 @@ export const CAPABILITIES = {
       'One permission model and one audit trail across every object, rather than a different access model per tool.',
     derive: 'Who can see what, who changed what, and when.',
   },
-
+  /* --- The wedge. Verity's deepest-shipped area, not its definition. --- */
+  inventory: {
+    name: 'Inventory',
+    label: 'Stock, movement and reorder',
+    evidence: 'product',
+    summary:
+      'Stock levels, movement between locations and reorder points, tracked against the same records the rest of the business uses.',
+    derive: 'What you hold, what is moving, and what is about to run out.',
+  },
+  orders: {
+    name: 'Orders',
+    label: 'Orders from placement to fulfilment',
+    evidence: 'product',
+    summary:
+      'Orders as first-class records with a state, an owner and a history — not a row in a sheet that someone updates when they remember.',
+    derive: 'What was ordered, where it is, and what is holding it up.',
+  },
+  suppliers: {
+    name: 'Suppliers',
+    label: 'Vendors, purchase and supply',
+    evidence: 'product',
+    summary:
+      'Suppliers and vendors as relationships with their own records, orders and history, connected to the stock and work they feed.',
+    derive: 'Who you buy from, what you owe them, and how reliably they deliver.',
+  },
+  logistics: {
+    name: 'Logistics',
+    label: 'Dispatch, movement and delivery',
+    evidence: 'product',
+    summary:
+      'Dispatch, routing and delivery tracked against the orders they fulfil, so a delay upstream is visible downstream.',
+    derive: 'What has left, what is in transit, and what arrived late.',
+  },
+  /* --- Surfaces built on top of the primitives. ------------------------ */
   commandCentre: {
     name: 'Command centre',
     label: 'The live operational picture',
@@ -141,7 +133,14 @@ export const CAPABILITIES = {
       'One live view of what is moving, what is blocked, who owns it and what needs attention today — assembled continuously instead of on request.',
     derive: 'The state of the business right now, not at the last close.',
   },
-
+  ai: {
+    name: 'Verity AI',
+    label: 'Ask, understand, act',
+    evidence: 'site',
+    summary:
+      'Ask a question in plain language and get an answer grounded in your own records and workflows. Verity AI is permission-aware, so it only sees what the person asking is allowed to see, and every action it takes stays part of the operational record.',
+    derive: 'An answer with its reasoning shown, and the follow-up already created.',
+  },
   schedule: {
     name: 'Schedule',
     label: 'Work in motion, start to finish',
@@ -150,7 +149,6 @@ export const CAPABILITIES = {
       'A timeline of the day’s work with each step’s state and owner, from assignment through to completion.',
     derive: 'What is done, what is running, and what is still ahead today.',
   },
-
   workforce: {
     name: 'Workforce',
     label: 'Assignment, attendance and availability',
@@ -159,7 +157,6 @@ export const CAPABILITIES = {
       'Assignment, attendance, availability and execution stay connected to the work they support. Every state is a record rather than a status someone typed into a sheet.',
     derive: 'Who is on, who is assigned, and what they finished.',
   },
-
   locations: {
     name: 'Locations',
     label: 'Sites, regions and rollup',
@@ -168,7 +165,6 @@ export const CAPABILITIES = {
       'Locations roll into organisations and organisations roll into the business. Permissions, reporting, work and exceptions all follow that same structure.',
     derive: 'One site, one region or the whole operation, from the same records.',
   },
-
   migration: {
     name: 'Migration',
     label: 'Bring your existing systems with you',
@@ -177,7 +173,6 @@ export const CAPABILITIES = {
       'Existing systems are mapped into Verity and the records that matter are migrated, so the new layer is introduced alongside what already works rather than replacing everything on day one.',
     derive: 'A move you can make in stages instead of over a weekend.',
   },
-
   implementation: {
     name: 'Implementation',
     label: 'Configured with you, in four weeks',
@@ -206,6 +201,22 @@ export const FORBIDDEN_CLAIMS = [
   'sign up free',
   'storefront',
 ];
+
+/* The eight objects the operational layer is made of. Every business has all
+   of them, which is why a page that skips them is not describing Verity. */
+export const PRIMITIVES = [
+  'people', 'work', 'relationships', 'records',
+  'workflows', 'communication', 'intelligence', 'control',
+];
+
+/* Verity's initial wedge: the area that is furthest along in the product.
+   Real, and worth leading with where the business genuinely runs on it — but
+   never the whole of what a page says Verity is. */
+export const WEDGE = ['inventory', 'orders', 'suppliers', 'logistics'];
+
+/* The minimum number of primitives a business page must cover once it uses any
+   wedge capability. Below this the page reads as a supply-chain tool. */
+export const MIN_PRIMITIVES_WITH_WEDGE = 5;
 
 export function capability(id) {
   const cap = CAPABILITIES[id];

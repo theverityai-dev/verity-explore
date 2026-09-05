@@ -6,6 +6,7 @@ export const INDUSTRIES = {
   'retail-commerce': {
     name: 'Retail & Commerce',
     short: 'Retail',
+    lower: 'retail and commerce',
     metaTitle: 'AI software for retail and commerce businesses | Verity',
     metaDescription:
       'Verity connects stock, orders, suppliers, customers and store performance into one operational system for retail and commerce businesses.',
@@ -16,7 +17,7 @@ export const INDUSTRIES = {
       'Retail is unusual among industries in that the thing being managed is physically present and constantly moving. Stock arrives from suppliers, sits, sells, gets returned, gets written off, and has to be reordered before it runs out — usually while the person who understands the pattern is serving a customer.',
       'The information problem is not that retailers lack data. It is that the sale, the stock movement, the purchase order and the customer’s history are recorded in four systems that do not know about each other, so answering "which lines are tying up money without moving" takes an evening with a spreadsheet.',
     ],
-    capabilities: ['inventory', 'orders', 'suppliers', 'relationships', 'intelligence', 'ai', 'workflows', 'locations'],
+    capabilities: ['people', 'relationships', 'records', 'workflows', 'intelligence', 'ai', 'inventory', 'orders', 'suppliers', 'locations'],
     challenges: [
       ['Stock truth lives in two places', 'The shelf says one thing and the sheet says another, and nobody trusts either at the point where a reorder decision has to be made.'],
       ['Reordering is a memory exercise', 'Purchase decisions depend on whoever has been there longest noticing that something is running low.'],
@@ -28,6 +29,7 @@ export const INDUSTRIES = {
   'food-hospitality': {
     name: 'Food & Hospitality',
     short: 'Hospitality',
+    lower: 'food and hospitality',
     metaTitle: 'AI software for restaurants and hospitality | Verity',
     metaDescription:
       'Verity connects orders, ingredients, staff rosters, suppliers and daily revenue into one operational system for restaurants, cafés, hotels and catering businesses.',
@@ -38,7 +40,7 @@ export const INDUSTRIES = {
       'A hospitality business converts perishable stock into revenue on a clock. Everything that matters — covers, order volume, ingredient consumption, staff on shift, waste — happens inside a few hours and then is gone, which is why so much of the sector’s reporting is reconstructed from memory the next morning.',
       'The operational questions are not complicated, but they are time-sensitive: what is selling tonight, what are we about to run out of, who is short-staffed, and did today make money. Those answers exist in the orders, the stock movements and the roster — provided those three are the same system.',
     ],
-    capabilities: ['orders', 'inventory', 'workforce', 'suppliers', 'schedule', 'intelligence', 'ai', 'locations'],
+    capabilities: ['people', 'work', 'records', 'workflows', 'intelligence', 'ai', 'inventory', 'orders', 'suppliers', 'workforce'],
     challenges: [
       ['Consumption is invisible until it is a shortage', 'Ingredients leave stock without leaving a record, so the first sign of a problem is an item coming off the menu.'],
       ['Rosters and revenue are unrelated data', 'Staffing decisions are made on habit rather than on what the equivalent day actually produced.'],
@@ -50,6 +52,7 @@ export const INDUSTRIES = {
   'professional-services': {
     name: 'Professional Services',
     short: 'Professional',
+    lower: 'professional services',
     metaTitle: 'AI software for professional services firms | Verity',
     metaDescription:
       'Verity connects client work, matters, projects, documents, approvals and billing into one operational system for law firms, accountants, consultancies and agencies.',
@@ -72,6 +75,7 @@ export const INDUSTRIES = {
   healthcare: {
     name: 'Healthcare',
     short: 'Healthcare',
+    lower: 'healthcare',
     metaTitle: 'AI software for clinics and healthcare practices | Verity',
     metaDescription:
       'Verity connects patient records, clinical work, staff rosters, consumables and reporting into one operational system for clinics, hospitals, labs and pharmacies.',
@@ -94,6 +98,7 @@ export const INDUSTRIES = {
   education: {
     name: 'Education',
     short: 'Education',
+    lower: 'education',
     metaTitle: 'Business management software for schools and institutes | Verity',
     metaDescription:
       'Verity connects admissions, student records, staff, timetabling, fees and reporting into one operational system for schools, colleges and training institutes.',
@@ -116,6 +121,7 @@ export const INDUSTRIES = {
   'real-estate-construction': {
     name: 'Real Estate & Construction',
     short: 'Real estate',
+    lower: 'real estate and construction',
     metaTitle: 'AI software for real estate and construction | Verity',
     metaDescription:
       'Verity connects leads, properties, site work, contractors, materials and approvals into one operational system for agencies, developers and construction firms.',
@@ -138,6 +144,7 @@ export const INDUSTRIES = {
   'manufacturing-b2b': {
     name: 'Manufacturing & B2B',
     short: 'Manufacturing',
+    lower: 'manufacturing and B2B',
     metaTitle: 'AI software for manufacturers and B2B businesses | Verity',
     metaDescription:
       'Verity connects production work, raw materials, suppliers, orders, quality checks and dispatch into one operational system for manufacturers, wholesalers and distributors.',
@@ -148,7 +155,7 @@ export const INDUSTRIES = {
       'This is the operation Verity’s record model was shaped around. Raw materials arrive against purchase orders, are consumed by production work, become finished goods in stock, are committed to customer orders and leave through dispatch — with quality checks, approvals and exceptions at every transition.',
       'When those transitions are recorded in different systems, the business can see that an order is late but not why. When they share a record, the QC backlog that is holding eleven items is visible in the same view as the dispatch it is blocking.',
     ],
-    capabilities: ['inventory', 'orders', 'suppliers', 'logistics', 'work', 'workflows', 'locations', 'intelligence'],
+    capabilities: ['work', 'records', 'workflows', 'control', 'intelligence', 'inventory', 'orders', 'suppliers', 'logistics', 'locations'],
     challenges: [
       ['Late orders have untraceable causes', 'The delay is visible at the end of the chain, and the reason is somewhere in the middle.'],
       ['Raw material and finished stock are counted separately', 'Two stock systems means no view of what can actually be committed to a customer.'],
@@ -160,6 +167,7 @@ export const INDUSTRIES = {
   'personal-local-services': {
     name: 'Personal & Local Services',
     short: 'Local services',
+    lower: 'personal and local services',
     metaTitle: 'Business software for salons, gyms and local services | Verity',
     metaDescription:
       'Verity connects customers, staff, jobs, stock and daily takings into one operational system for salons, spas, gyms, studios and local service businesses.',
@@ -182,6 +190,7 @@ export const INDUSTRIES = {
   'digital-technology': {
     name: 'Digital & Technology',
     short: 'Technology',
+    lower: 'digital and technology',
     metaTitle: 'Business management software for technology companies | Verity',
     metaDescription:
       'Verity connects clients, projects, delivery work, orders and team capacity into one operational system for SaaS companies, agencies, developers and e-commerce businesses.',

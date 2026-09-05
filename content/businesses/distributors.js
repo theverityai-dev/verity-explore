@@ -165,6 +165,26 @@ export default {
         'A van loaded against fourteen orders returns with three partial deliveries and two returns, all reconciled against the same records.',
     },
     {
+      id: 'records',
+      title: 'Price lists, agreements and claim documentation',
+      line:
+        'Documents attach to the principal, retailer or transaction they belong to, with version history and the same permissions as everything else.',
+      why:
+        'Distribution runs on documents that decide money — the scheme circular, the credit agreement, the damage claim — and they are the ones most often produced late or not at all.',
+      example:
+        'A principal disputes a claim. The scheme circular it was raised against and the transactions it covers are on the same records.',
+    },
+    {
+      id: 'communication',
+      title: 'Retailer context on the record',
+      line:
+        'Notes, notifications and activity attach to the outlet, order or delivery they concern.',
+      why:
+        'Why a retailer stopped ordering is known to one salesperson and to nobody else, which is exactly the fact the business most needs.',
+      example:
+        'The note that an outlet switched to a competitor on one category sits on that outlet, where the field manager will see it.',
+    },
+    {
       id: 'workflows',
       title: 'Credit limits, schemes and approvals',
       line:

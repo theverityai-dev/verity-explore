@@ -205,6 +205,46 @@ export default {
         'Attendance against shift plan on Line 3 sits alongside the output that shift actually produced.',
     },
     {
+      id: 'relationships',
+      title: 'Customers behind the orders',
+      line:
+        'Customers are records with their orders, agreed terms, delivery history, quality history and outstanding balances.',
+      why:
+        'A factory that only holds orders can see what is late. A factory that holds customers can see which relationship has absorbed three late deliveries in a row and is about to be lost.',
+      example:
+        'An account whose last four orders all shipped past their committed date is visible as a relationship at risk, not just as four separate exceptions.',
+    },
+    {
+      id: 'records',
+      title: 'Specifications, drawings and test reports',
+      line:
+        'Documents attach to the product, batch or order they belong to, with version history and the same permission model as everything else.',
+      why:
+        'The specification a batch was made against, and the report that cleared it, are needed years later during a complaint or an audit, usually by someone who was not there.',
+      example:
+        'A customer queries a batch shipped eighteen months ago. The drawing revision, the inspection report and the release decision are on the batch record.',
+    },
+    {
+      id: 'control',
+      title: 'Traceability, permissions and audit',
+      line:
+        'One permission model and one audit trail across every record, so every state change carries the person who made it and when.',
+      why:
+        'Traceability is not a reporting feature in manufacturing, it is the ability to answer what went into a batch and who released it. That has to be a property of the records themselves.',
+      example:
+        'A recall enquiry resolves to the material lots consumed, the line that ran them and the person who cleared the batch, from the trail rather than from a reconstruction.',
+    },
+    {
+      id: 'communication',
+      title: 'Shop-floor context on the record',
+      line:
+        'Comments, notifications and activity attach to the work order, batch or delivery they concern.',
+      why:
+        'Most of what a factory knows about why something went wrong is said out loud at a handover and never written down.',
+      example:
+        'The note that a substitute material was used on a batch sits on that batch, where quality will see it rather than hear about it.',
+    },
+    {
       id: 'commandCentre',
       title: 'The plant as it is running',
       line:
