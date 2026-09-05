@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
+      "destination": "/explore/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/explore",
+      "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/businesses/:path*",
+      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
+      "destination": "https://explore.theverityai.xyz/businesses/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/industries/:path*",
+      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
+      "destination": "https://explore.theverityai.xyz/industries/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/explore/:path*",
+      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
+      "destination": "https://explore.theverityai.xyz/",
+      "permanent": true
+    }
+  ]
+}
