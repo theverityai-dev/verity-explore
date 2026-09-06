@@ -167,6 +167,14 @@ async function checkPositioning() {
           `(minimum ${MIN_PRIMITIVES_WITH_WEDGE}); missing ${missing.join(', ')}`
       );
     }
+    /* A related slug that is not in the registry is silently dropped at build
+       time, so a typo would quietly shrink the internal-link graph. */
+    for (const rel of biz.related) {
+      if (!REGISTRY.some((b) => b.slug === rel)) {
+        fail(`content/businesses/${file}`, `related slug "${rel}" is not in the registry`);
+      }
+    }
+
     if (!ids.includes('ai')) warn(`content/businesses/${file}`, 'does not cover Verity AI');
     if (!ids.includes('intelligence')) warn(`content/businesses/${file}`, 'does not cover reporting');
   }
