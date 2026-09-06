@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<title>AI business management software for car rental businesses | Verity</title>
+<meta name="description" content="Verity gives car rental businesses one system for fleet utilisation and idle gaps, condition evidence and damage recovery, document and service expiry, and per-vehicle earnings.">
+<link rel="canonical" href="https://explore.theverityai.xyz/businesses/car-rentals/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verity">
+<meta property="og:url" content="https://explore.theverityai.xyz/businesses/car-rentals/">
+<meta property="og:title" content="AI business management software for car rental businesses | Verity">
+<meta property="og:description" content="Verity gives car rental businesses one system for fleet utilisation and idle gaps, condition evidence and damage recovery, document and service expiry, and per-vehicle earnings.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI business management software for car rental businesses | Verity">
+<meta name="twitter:description" content="Verity gives car rental businesses one system for fleet utilisation and idle gaps, condition evidence and damage recovery, document and service expiry, and per-vehicle earnings.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%23F7F8FA%27%2F%3E%3Cg%20transform%3D%27translate%284%201%29%27%3E%3Cpath%20d%3D%27M2.6%201.6h18.8a1.6%201.6%200%20011.2%202.7L13.2%2014a1.6%201.6%200%2001-2.4%200L1.4%204.3A1.6%201.6%200%20012.6%201.6z%27%20fill%3D%27%230FA894%27%2F%3E%3Cpath%20d%3D%27M10.8%2016a1.6%201.6%200%20012.4%200l9.4%209.7a1.6%201.6%200%2001-1.2%202.7H2.6a1.6%201.6%200%2001-1.2-2.7z%27%20fill%3D%27%230FA894%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<script>
+  try {
+    if (localStorage.getItem('verity-theme') === 'dark')
+      document.documentElement.setAttribute('data-theme', 'dark');
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css?v=64">
+<link rel="stylesheet" href="/css/verity.css?v=64">
+<link rel="stylesheet" href="/css/sections.css?v=64">
+<link rel="stylesheet" href="/css/motion.css?v=64">
+<link rel="stylesheet" href="/css/explore.css?v=64">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://explore.theverityai.xyz/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://explore.theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Personal & Local Services","item":"https://explore.theverityai.xyz/industries/personal-local-services/"},{"@type":"ListItem","position":4,"name":"Car Rentals","item":"https://explore.theverityai.xyz/businesses/car-rentals/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Car Rentals","description":"Verity gives car rental businesses one system for fleet utilisation and idle gaps, condition evidence and damage recovery, document and service expiry, and per-vehicle earnings.","url":"https://explore.theverityai.xyz/businesses/car-rentals/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://www.theverityai.xyz"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can AI software do for a car rental business?","acceptedAnswer":{"@type":"Answer","text":"Verity AI answers questions from your own vehicle, booking, condition and document records: which vehicles have been idle longest and why, which damage incidents have no recovery decision, which documents fall due next month, what revenue and cost each vehicle produced. Each answer can become a claim or a repositioning decision."}},{"@type":"Question","name":"Why record a reason for idle days?","acceptedAnswer":{"@type":"Answer","text":"Because idle time has different fixes. A vehicle idle through oversupply in its category needs a pricing or repositioning decision; one idle through an expired document or an overdue service needs an administrative one. Without the reason, both look like weak demand."}},{"@type":"Question","name":"How does it help recover damage?","acceptedAnswer":{"@type":"Answer","text":"Condition, fuel and mileage are recorded with photographs at handover and again at return, both attached to the booking. A charge supported by evidence at both ends is defensible, and one supported by evidence at only one end usually is not."}},{"@type":"Question","name":"Can it prevent documents lapsing?","acceptedAnswer":{"@type":"Answer","text":"Every vehicle carries its insurance, permit, fitness and registration expiry, with renewals raised in advance and bookings blocked from extending beyond validity, because a lapsed document removes the vehicle from earning entirely."}},{"@type":"Question","name":"Does it track service by mileage?","acceptedAnswer":{"@type":"Answer","text":"Service intervals are projected from current mileage and the length of the booking, so a service that would fall due mid-hire is dealt with before dispatch rather than skipped."}},{"@type":"Question","name":"Can it show per-vehicle profitability?","acceptedAnswer":{"@type":"Answer","text":"Revenue, damage, repair, repositioning and downtime are attributed to individual vehicles, which is what makes fleet composition and replacement decisions possible."}},{"@type":"Question","name":"Does it replace telematics?","acceptedAnswer":{"@type":"Answer","text":"No. Telematics and payment tools continue as they are. Verity holds the rental business around them — fleet, bookings, condition evidence, compliance and per-vehicle economics."}},{"@type":"Question","name":"How long does implementation take?","acceptedAnswer":{"@type":"Answer","text":"About four weeks: discovery and mapping of categories, rate structures, condition process and document types, configuration, migration of fleet, customers and bookings, then an ongoing operations partnership."}}]}</script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="shell nav-inner">
+    <a href="/" class="nav-logo" aria-label="Verity Explore, home">
+      <svg width="16" height="20" viewBox="0 0 24 30" aria-hidden="true">
+        <path d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z" fill="var(--accent)"/>
+        <path d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z" fill="var(--accent)"/>
+      </svg>
+      <span>verity</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/industries/">Industries</a>
+      <a href="/#platform">Platform</a>
+      <a href="/#primitives">Modules</a>
+      <a href="/#intelligence">Verity AI</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+        <svg class="theme-icon theme-icon--moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M21 13a8.5 8.5 0 0 1-10-10 8.5 8.5 0 1 0 10 10Z"/></svg>
+        <svg class="theme-icon theme-icon--sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/></svg>
+      </button>
+      <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry" class="nav-signin">Email us</a>
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+        <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1.5h16M0 10.5h16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+  <div class="nav-sheet" id="mobile-nav">
+    <a href="/industries/">Industries</a>
+    <a href="https://www.theverityai.xyz/#platform">Platform</a>
+    <a href="https://www.theverityai.xyz/#primitives">Modules</a>
+    <a href="https://www.theverityai.xyz/#intelligence">Verity AI</a>
+    <div class="nav-sheet-cta">
+      <a href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us." target="_blank" rel="noopener" class="btn btn--primary">Book a demo</a>
+      <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry" class="btn btn--secondary">Email us</a>
+    </div>
+  </div>
+</header>
+<nav class="xb" aria-label="Breadcrumb">
+  <div class="shell"><ol class="xb-list"><li><a href="/">Explore</a></li><li class="xb-sep" aria-hidden="true">/</li><li><a href="/industries/">Industries</a></li><li class="xb-sep" aria-hidden="true">/</li><li><a href="/industries/personal-local-services/">Personal &amp; Local Services</a></li><li class="xb-sep" aria-hidden="true">/</li><li aria-current="page">Car Rentals</li></ol></div>
+</nav>
+<main id="main">
+<section class="section section--tall x-hero" id="top" aria-labelledby="hero-heading">
+  <div class="shell x-hero-grid">
+    <div class="x-hero-copy">
+      <p class="label" data-reveal>Verity for car rentals</p>
+      <h1 id="hero-heading" class="h-lg x-hero-h1" data-reveal data-words>A car earns on the days it is out. Everything else is the same cost.</h1>
+      <p class="lede x-hero-lede" data-reveal>Rental margin is decided by idle days, unrecovered damage and paperwork nobody was watching. Verity holds all three against each vehicle.</p>
+      <div class="x-hero-cta" data-reveal>
+        <a class="btn btn--primary" href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20car%20rental%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Talk about your operation</a>
+        <a class="btn btn--secondary" href="#ecosystem">See what Verity manages</a>
+      </div>
+      <p class="caption x-hero-note" data-reveal>Verity runs the rental business. Telematics and payment tools stay where they are.</p>
+    </div>
+    <div class="x-hero-panel">
+      
+  <div class="panel panel--high" data-reveal>
+    <div class="panel-head">
+      <p class="label label--ink">Verity / Fleet</p>
+      <p class="panel-meta">This month</p>
+      <span class="panel-live"><i></i><span class="label">Live</span></span>
+    </div>
+    <div class="panel-body x-panel-body">
+          <div class="metric-row"><div class="metric">
+        <p class="label">Vehicles in fleet</p>
+        <p class="metric-value tnum">68</p>
+        <div class="metric-note">5 categories</div>
+      </div><div class="metric">
+        <p class="label">Utilisation</p>
+        <p class="metric-value tnum">61%</p>
+        <div class="metric-note">days on rent</div>
+      </div><div class="metric">
+        <p class="label">Damage unrecovered</p>
+        <p class="metric-value tnum">₹3.4 L</p>
+        <div class="metric-note">19 incidents</div>
+      </div><div class="metric">
+        <p class="label">Documents expiring</p>
+        <p class="metric-value tnum">11</p>
+        <div class="metric-note">within 30 days</div>
+      </div></div>
+          <p class="label x-rows-head">Needs attention</p>
+          <ul class="rows x-rows"><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">19 damage incidents with no recovery decision</span>
+          <span class="x-row-meta">Condition evidence incomplete</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">11 vehicle documents expiring in 30 days</span>
+          <span class="x-row-meta">Vehicle cannot be rented if lapsed</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">9 vehicles idle more than 12 days</span>
+          <span class="x-row-meta">Category oversupplied</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">4 services overdue by mileage</span>
+          <span class="x-row-meta">Warranty and breakdown risk</span>
+        </span>
+      </li></ul>
+        </div>
+  </div>
+      <p class="caption x-panel-note">Illustrative figures. Verity shows your own fleet in this shape.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt section--tall" id="context" aria-labelledby="context-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>How the business runs</p>
+          <h2 id="context-heading" class="h-lg" data-reveal data-words>Every vehicle is either earning or costing, and the paperwork decides which.</h2>
+        </div>
+        <div class="x-split-b">
+          <p class="body-copy" data-reveal>A rental business owns depreciating assets whose only income comes from days on hire. Sixty-one per cent utilisation means thirty-nine per cent of the fleet’s life is being consumed without revenue, and nine vehicles idle for more than twelve days is usually a category oversupplied rather than a demand problem across the fleet.</p><p class="body-copy" data-reveal>The second characteristic is damage recovery, which depends entirely on evidence. Nineteen incidents with no recovery decision is money the business will absorb, because a claim against a customer requires a documented condition at handover and at return. Without both, the conversation is unwinnable.</p><p class="body-copy" data-reveal>The third is documents. Insurance, permits, fitness and registration all expire, and a vehicle with a lapsed document is not a vehicle that can be rented. Eleven expiring within thirty days is eleven potential removals from earning capacity.</p><p class="body-copy" data-reveal>The fourth is service. Mileage-based service intervals pass during a hire, and a missed service is a breakdown, a stranded customer and a recovery cost.</p><p class="body-copy" data-reveal>The fifth is that a booking, a vehicle and a customer are only connected during the hire, while the money question — what did this vehicle earn this year against what it cost — spans all of them.</p><p class="body-copy" data-reveal>Verity holds utilisation and idle time per vehicle, condition evidence at both ends of a hire, and document and service expiry against earning availability.</p>
+          <div class="x-terms" data-reveal data-stagger>
+            <p class="label">What Verity calls these things</p>
+            <ul class="x-term-list"><li><span class="x-term">Vehicles, categories, fleet</span><span class="x-term-map">Inventory</span></li><li><span class="x-term">Bookings, hires, extensions</span><span class="x-term-map">Orders</span></li><li><span class="x-term">Customers, corporate accounts, drivers</span><span class="x-term-map">Relationships</span></li><li><span class="x-term">Handover, return, condition</span><span class="x-term-map">Workflows</span></li><li><span class="x-term">Insurance, permits, fitness, service</span><span class="x-term-map">Control</span></li><li><span class="x-term">Branches, yards, delivery points</span><span class="x-term-map">Locations</span></li><li><span class="x-term">Drivers, cleaners, counter staff</span><span class="x-term-map">People</span></li></ul>
+          </div>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--tall" id="challenges" aria-labelledby="challenges-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">What gets in the way</p>
+    <h2 id="challenges-heading" class="h-lg">Idle days, unprovable damage and expiring paper.</h2>
+    <p class="lede x-lede">Rental difficulties come from owning assets whose income depends on being out.</p>
+  </div><ul class="x-prob-grid" data-stagger><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Idle days are not attributed to a cause</p>
+              <p class="x-prob-body">A vehicle sits and nobody records whether it was demand, damage, service or documents.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Idle days carry a reason, so oversupply is separated from downtime.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Damage cannot be recovered without evidence</p>
+              <p class="x-prob-body">Condition at handover and return is not documented consistently.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Condition evidence is captured at both ends of every hire and attached to the booking.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Documents lapse and remove earning capacity</p>
+              <p class="x-prob-body">Insurance, permits and fitness expire while the vehicle is on hire or idle.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Every document carries expiry with renewal raised in advance.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Service intervals pass during a hire</p>
+              <p class="x-prob-body">Mileage crosses the interval mid-rental and the service is skipped.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Service due is projected from mileage and booking length before dispatch.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Per-vehicle economics are unknown</p>
+              <p class="x-prob-body">Revenue is measured across the fleet and cost sits in general expenses.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Revenue, damage, service and downtime are attributed per vehicle.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Extensions and overdue returns are handled informally</p>
+              <p class="x-prob-body">A vehicle promised to the next customer is still out.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Extensions and overdue returns are tracked against forward bookings.</p>
+            </li></ul></div>
+</section>
+
+<section class="section section--alt section--tall" id="ecosystem" aria-labelledby="ecosystem-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">The complete system</p>
+    <h2 id="ecosystem-heading" class="h-lg">Everything Verity manages for car rental businesses</h2>
+    <p class="lede x-lede">One system across fleet, bookings, condition and compliance.</p>
+  </div><div class="x-mod-grid" data-stagger><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Inventory</p>
+              <h3 class="h-sm x-mod-title">Vehicles, categories and availability</h3>
+              <p class="x-mod-body">Each vehicle carries its category, status, mileage, location, current hire and forward bookings.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Availability is the product and it changes hour by hour.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Nine vehicles idle beyond twelve days.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Orders</p>
+              <h3 class="h-sm x-mod-title">Bookings, hires and extensions</h3>
+              <p class="x-mod-body">Bookings carry customer, vehicle or category, period, rate, deposit, extensions and return state.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> An extension changes the availability of a vehicle already promised.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Extensions against forward bookings for the same vehicle.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Workflows</p>
+              <h3 class="h-sm x-mod-title">Handover, return and condition evidence</h3>
+              <p class="x-mod-body">Condition, fuel, mileage and photographs are recorded at handover and return against the booking.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Damage recovery is only possible with evidence at both ends.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Nineteen incidents without complete condition evidence.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Control</p>
+              <h3 class="h-sm x-mod-title">Insurance, permits, fitness and service</h3>
+              <p class="x-mod-body">One permission model and one audit trail, with document expiry, service intervals and compliance state carried per vehicle.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A lapsed document removes the vehicle from earning capacity entirely.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Eleven documents expiring within thirty days.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Relationships</p>
+              <h3 class="h-sm x-mod-title">Customers, corporate accounts and drivers</h3>
+              <p class="x-mod-body">Customers carry hire history, damage record, payment behaviour and account terms.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A customer with a damage history is a pricing and deposit decision.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Damage incidents by customer across hires.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Locations</p>
+              <h3 class="h-sm x-mod-title">Branches, yards and delivery points</h3>
+              <p class="x-mod-body">Vehicles are located across branches with movement, delivery and collection recorded.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A vehicle in the wrong city is idle regardless of demand.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Idle vehicles by branch against demand by branch.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Reports and analytics</p>
+              <h3 class="h-sm x-mod-title">Utilisation, damage and vehicle reporting</h3>
+              <p class="x-mod-body">Utilisation and idle reasons, revenue per vehicle, damage recovery rate, downtime causes and category mix come from the records.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> The fleet is a set of individual assets and should be measured that way.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Revenue and cost per vehicle for the year.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Verity AI</p>
+              <h3 class="h-sm x-mod-title">Ask the fleet a question</h3>
+              <p class="x-mod-body">Verity AI answers from your own vehicle, booking, condition and document records, respects permissions, and can create assigned follow-ups.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> The useful questions are about idle assets and unrecovered damage.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> "Which vehicles have been idle longest and why?" returns nine with reasons.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">People</p>
+              <h3 class="h-sm x-mod-title">Drivers, cleaners and counter staff</h3>
+              <p class="x-mod-body">Staff carry deliveries, collections, handovers performed and condition records completed.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Evidence quality varies by who performed the handover.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Condition evidence completeness by staff member.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Logistics</p>
+              <h3 class="h-sm x-mod-title">Delivery, collection and movement</h3>
+              <p class="x-mod-body">Vehicle movements between branches, customers and workshops are recorded with cost.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Repositioning is a real cost that fleet reports usually omit.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Repositioning movements and their cost per vehicle.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Communication</p>
+              <h3 class="h-sm x-mod-title">Customer contact and claims</h3>
+              <p class="x-mod-body">Booking confirmations, extension conversations and damage claims attach to the booking and customer.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A damage claim is a conversation that needs its evidence attached.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Claim correspondence attached to the condition record.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Records</p>
+              <h3 class="h-sm x-mod-title">Damage, repair and recovery</h3>
+              <p class="x-mod-body">Incidents carry evidence, assessment, repair cost, recovery decision and outcome.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Unrecovered damage is a decision, and it should be a recorded one.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Recovery rate on assessed damage.</p>
+            </article></div></div>
+</section>
+
+<section class="section section--tall" id="workflows" aria-labelledby="workflows-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Work in motion</p>
+    <h2 id="workflows-heading" class="h-lg">Book, hand over, monitor, return, recover.</h2>
+    <p class="lede x-lede">These already happen. Recorded, idle days and damage stop being absorbed.</p>
+  </div><div class="x-flow-grid" data-stagger><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Booking and allocation</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Booking taken with category and period</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Vehicle allocated against forward commitments</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Document and service validity checked to the end of the hire</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Deposit and terms recorded</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Vehicle prepared for handover</span>
+                  </li></ol>
+              <p class="x-flow-note">Checking document validity to the end of the hire prevents a mid-rental lapse.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Handover</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Condition recorded with photographs</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Fuel and mileage captured</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Customer acknowledgement obtained</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Vehicle released with the booking</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Return expectation set</span>
+                  </li></ol>
+              <p class="x-flow-note">The handover record is the half of the evidence most often missing.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Return and assessment</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Condition recorded against handover</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Fuel and mileage compared</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Differences identified with evidence</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Charges assessed</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Deposit released or applied</span>
+                  </li></ol>
+              <p class="x-flow-note">Comparison against the handover record is what makes a charge defensible.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Damage recovery</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Incident created with both condition records</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Repair assessed and costed</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Recovery decision made and recorded</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Customer contacted with evidence</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Outcome recorded against the customer</span>
+                  </li></ol>
+              <p class="x-flow-note">A recovery decision recorded, even a decision not to pursue, is better than silence.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Compliance and service</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Document expiry and service intervals tracked per vehicle</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Renewals and services scheduled in low-demand windows</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Vehicle marked unavailable for the period</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Completion recorded</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Availability restored</span>
+                  </li></ol>
+              <p class="x-flow-note">Scheduling downtime into low-demand windows is how utilisation is protected.</p>
+            </article></div></div>
+</section>
+
+<section class="section section--alt section--tall" id="ai" aria-labelledby="ai-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>Verity AI</p>
+          <h2 id="ai-heading" class="h-lg" data-reveal data-words>Ask about utilisation and recovery.</h2>
+          <p class="lede x-lede" data-reveal>Verity AI reads the same vehicle, booking, condition and document records the business creates as it operates. It answers from your own fleet, respects permissions, and can turn an answer into a claim or a repositioning decision.</p>
+          <ul class="x-ai-facts" data-reveal data-stagger>
+            <li><span class="label">Grounded</span> Answers come from your own records and workflows, not from generic model knowledge.</li>
+            <li><span class="label">Permission-aware</span> It only sees what the person asking is allowed to see.</li>
+            <li><span class="label">Actionable</span> An answer can become a task, an assignment or a follow-up.</li>
+            <li><span class="label">Traceable</span> Every action it takes stays part of the operational record.</li>
+          </ul>
+        </div>
+        <div class="x-split-b">
+          
+  <div class="panel" data-reveal>
+    <div class="panel-head">
+      <p class="label label--ink">Verity / Ask</p>
+      <p class="panel-meta">Grounded in your fleet records</p>
+      
+    </div>
+    <div class="panel-body">
+              <ul class="x-ask" data-stagger><li class="x-ask-q" data-reveal>Which vehicles have been idle longest and for what reason?</li><li class="x-ask-q" data-reveal>Which damage incidents have no recovery decision?</li><li class="x-ask-q" data-reveal>Which documents and services fall due in the next month?</li><li class="x-ask-q" data-reveal>What is revenue and cost per vehicle this year?</li><li class="x-ask-q" data-reveal>Which categories are oversupplied against demand?</li><li class="x-ask-q" data-reveal>Which customers have repeated damage incidents?</li><li class="x-ask-q" data-reveal>Which hires are overdue against forward bookings?</li><li class="x-ask-q" data-reveal>What did repositioning cost by branch?</li><li class="x-ask-q" data-reveal>Summarise utilisation and recovery position.</li></ul>
+            </div>
+  </div>
+          <p class="caption x-panel-note">Verity AI only returns what the person asking has permission to see.</p>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--tall" id="automation" aria-labelledby="automation-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Without chasing</p>
+    <h2 id="automation-heading" class="h-lg">Idle time, expiry and evidence.</h2>
+    <p class="lede x-lede">Each runs from the business’s own records at the point the condition is met.</p>
+  </div><div class="x-auto-grid" data-stagger><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A vehicle passes an idle threshold</p>
+              <ul class="x-auto-steps"><li>Reason recorded</li><li>Repositioning or pricing option surfaced</li><li>Decision recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A document or service falls due</p>
+              <ul class="x-auto-steps"><li>Vehicle flagged with the earning impact</li><li>Renewal or service scheduled in a low-demand window</li><li>Availability updated on completion</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A return shows condition differences</p>
+              <ul class="x-auto-steps"><li>Incident created with both condition records</li><li>Assessment assigned</li><li>Recovery decision recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A hire runs past its return date</p>
+              <ul class="x-auto-steps"><li>Forward bookings for the vehicle flagged</li><li>Customer contacted</li><li>Extension or reallocation recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A booking would extend beyond document validity</p>
+              <ul class="x-auto-steps"><li>Blocked with the expiring document named</li><li>Alternative vehicle offered</li><li>Outcome recorded</li></ul>
+            </article></div></div>
+</section>
+
+<section class="section section--alt section--tall" id="intelligence" aria-labelledby="intelligence-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">What you can understand</p>
+    <h2 id="intelligence-heading" class="h-lg">What the business can see.</h2>
+    <p class="lede x-lede">Utilisation, recovery and compliance from fleet records.</p>
+  </div><div class="x-int-grid" data-stagger><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Utilisation</h3>
+              <ul class="x-int-list"><li>Days on hire by vehicle and category</li><li>Idle days by reason</li><li>Demand against supply by category and branch</li><li>Repositioning movements and cost</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Vehicle economics</h3>
+              <ul class="x-int-list"><li>Revenue per vehicle</li><li>Damage and repair cost per vehicle</li><li>Downtime cost</li><li>Contribution by category</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Damage</h3>
+              <ul class="x-int-list"><li>Incidents by customer and vehicle</li><li>Evidence completeness at handover and return</li><li>Recovery rate on assessed damage</li><li>Repair turnaround</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Compliance</h3>
+              <ul class="x-int-list"><li>Document expiry across the fleet</li><li>Service adherence against mileage</li><li>Vehicles unavailable for compliance reasons</li><li>Renewal lead times</li></ul>
+            </div></div>
+        <p class="caption x-int-note" data-reveal>Verity records the rental operation. Telematics and payment tools continue as they are.</p></div>
+</section>
+
+<section class="section section--tall" id="roles" aria-labelledby="roles-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">One system, different ways of seeing it</p>
+    <h2 id="roles-heading" class="h-lg">One fleet, four views.</h2>
+    <p class="lede x-lede">Everyone works from the same records.</p>
+  </div><ul class="x-role-grid" data-stagger><li class="x-role" data-reveal>
+              <p class="x-role-name">Owner</p>
+              <p class="x-role-q">Which vehicles earn?</p>
+              <p class="x-role-focus">Revenue and cost per vehicle, utilisation by category, damage recovery, downtime causes.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Fleet manager</p>
+              <p class="x-role-q">What is available and compliant?</p>
+              <p class="x-role-focus">Vehicle status, document and service due dates, repositioning, workshop time.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Counter and delivery staff</p>
+              <p class="x-role-q">What am I handing over?</p>
+              <p class="x-role-focus">Booking details, condition capture, fuel and mileage, customer acknowledgement.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Accounts</p>
+              <p class="x-role-q">What is recoverable?</p>
+              <p class="x-role-focus">Damage assessments, deposits, outstanding charges, customer payment behaviour.</p>
+            </li></ul></div>
+</section>
+
+<section class="section section--alt" id="use-cases" aria-labelledby="use-cases-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Where it is used</p>
+    <h2 id="use-cases-heading" class="h-lg">What car rental businesses use Verity for</h2>
+    
+  </div><ul class="x-uc-grid" data-stagger><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Attributing idle days</h3>
+              <p class="x-uc-body">Every idle day carrying a reason — demand, damage, service or documents — so oversupply in a category is separated from downtime on a vehicle.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Making damage recoverable</h3>
+              <p class="x-uc-body">Condition, fuel and mileage evidence captured at handover and return against the booking, which is what makes a charge defensible.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Protecting earning availability</h3>
+              <p class="x-uc-body">Document expiry and service intervals tracked per vehicle with downtime scheduled into low-demand windows.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Per-vehicle economics</h3>
+              <p class="x-uc-body">Revenue, damage, repair and downtime attributed to individual vehicles rather than pooled across the fleet.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Managing extensions against commitments</h3>
+              <p class="x-uc-body">Overdue and extended hires checked against forward bookings for the same vehicle, so a promise is not broken silently.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Customer damage history</h3>
+              <p class="x-uc-body">Incidents held against customers across hires, informing deposit and pricing decisions on the next booking.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Asking about the fleet</h3>
+              <p class="x-uc-body">Plain-language questions across vehicles, bookings, damage and compliance, with claims and repositioning raised in the same step.</p>
+            </li></ul></div>
+</section>
+
+<section class="section" id="migration" aria-labelledby="migration-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>Getting there</p>
+          <h2 id="migration-heading" class="h-lg" data-reveal data-words>Bring the business with you.</h2>
+        </div>
+        <div class="x-split-b">
+          <p class="body-copy" data-reveal>Telematics and payment tools continue and are mapped during implementation. Vehicles with documents and service history, customers, forward bookings, rate structures and damage history are brought across.</p>
+          <ul class="x-src" data-reveal data-stagger>
+            <li class="chip">Excel</li><li class="chip">Google Sheets</li><li class="chip">Legacy ERP</li><li class="chip">CRM</li>
+            <li class="chip chip--accent">One operating environment</li>
+          </ul>
+          <p class="caption x-src-note" data-reveal>Implementation runs about four weeks: discovery and mapping, configuration, migration, then an ongoing operations partnership.</p>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--alt section--tall" id="faq" aria-labelledby="faq-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Questions</p>
+    <h2 id="faq-heading" class="h-lg">Questions car rental businesses ask</h2>
+    
+  </div><div class="x-faq" data-stagger><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>What can AI software do for a car rental business?</span></summary>
+              <div class="x-faq-a"><p>Verity AI answers questions from your own vehicle, booking, condition and document records: which vehicles have been idle longest and why, which damage incidents have no recovery decision, which documents fall due next month, what revenue and cost each vehicle produced. Each answer can become a claim or a repositioning decision.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Why record a reason for idle days?</span></summary>
+              <div class="x-faq-a"><p>Because idle time has different fixes. A vehicle idle through oversupply in its category needs a pricing or repositioning decision; one idle through an expired document or an overdue service needs an administrative one. Without the reason, both look like weak demand.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>How does it help recover damage?</span></summary>
+              <div class="x-faq-a"><p>Condition, fuel and mileage are recorded with photographs at handover and again at return, both attached to the booking. A charge supported by evidence at both ends is defensible, and one supported by evidence at only one end usually is not.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Can it prevent documents lapsing?</span></summary>
+              <div class="x-faq-a"><p>Every vehicle carries its insurance, permit, fitness and registration expiry, with renewals raised in advance and bookings blocked from extending beyond validity, because a lapsed document removes the vehicle from earning entirely.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Does it track service by mileage?</span></summary>
+              <div class="x-faq-a"><p>Service intervals are projected from current mileage and the length of the booking, so a service that would fall due mid-hire is dealt with before dispatch rather than skipped.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Can it show per-vehicle profitability?</span></summary>
+              <div class="x-faq-a"><p>Revenue, damage, repair, repositioning and downtime are attributed to individual vehicles, which is what makes fleet composition and replacement decisions possible.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Does it replace telematics?</span></summary>
+              <div class="x-faq-a"><p>No. Telematics and payment tools continue as they are. Verity holds the rental business around them — fleet, bookings, condition evidence, compliance and per-vehicle economics.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>How long does implementation take?</span></summary>
+              <div class="x-faq-a"><p>About four weeks: discovery and mapping of categories, rate structures, condition process and document types, configuration, migration of fleet, customers and bookings, then an ongoing operations partnership.</p></div>
+            </details></div></div>
+</section>
+
+<section class="section" id="related" aria-labelledby="related-heading">
+  <div class="shell">
+      <p class="label" data-reveal>Keep exploring</p>
+      <h2 id="related-heading" class="h-md x-rel-h" data-reveal>Businesses that run on the same records</h2>
+      <ul class="x-rel-grid" data-stagger><li class="x-rel" data-reveal>
+            <a href="/businesses/auto-repair-shops/">
+              <span class="x-rel-name">Auto Repair Shops</span>
+              <span class="x-rel-ind label">Local services</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/car-washes/">
+              <span class="x-rel-name">Car Washes</span>
+              <span class="x-rel-ind label">Local services</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/travel-agencies/">
+              <span class="x-rel-name">Travel Agencies</span>
+              <span class="x-rel-ind label">Hospitality</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/tour-operators/">
+              <span class="x-rel-name">Tour Operators</span>
+              <span class="x-rel-ind label">Hospitality</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/auto-parts-stores/">
+              <span class="x-rel-name">Auto Parts Stores</span>
+              <span class="x-rel-ind label">Retail</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/facility-management/">
+              <span class="x-rel-name">Facility Management</span>
+              <span class="x-rel-ind label">Real estate</span>
+            </a>
+          </li></ul>
+      <p class="x-rel-up" data-reveal>Part of <a href="/industries/personal-local-services/">Personal &amp; Local Services</a> · <a href="/">All 123 business types</a></p></div>
+</section>
+
+<section class="section section--cta" id="cta" aria-labelledby="cta-heading" style="padding-block:clamp(120px,18vw,220px)">
+  <div class="shell cta-inner">
+    <h2 id="cta-heading" class="display cta-heading" data-reveal>Start with the damage you did not recover.</h2>
+    <p class="lede cta-deck" data-reveal>It is usually an evidence problem, not a customer problem. Tell us how condition is recorded today.</p>
+    <div class="cta-buttons" data-reveal>
+      <a class="btn btn--primary" href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20car%20rental%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Talk about your operation</a>
+      <a class="btn btn--secondary" href="mailto:theplotarmour@gmail.com?subject=Verity%20%E2%80%94%20Car%20Rentals">Email us</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pf-foot">
+  <div class="shell pf-foot-inner">
+    <div class="pf-foot-brand">
+      <a href="/" class="nav-logo pf-foot-logo-link" aria-label="Verity, home">
+        <svg width="16" height="20" viewBox="0 0 24 30" aria-hidden="true">
+        <path d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z" fill="var(--accent)"/>
+        <path d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z" fill="var(--accent)"/>
+      </svg>
+        <span class="pf-foot-logo">verity</span>
+      </a>
+      <p class="caption pf-foot-line">Operate. Optimize. Outperform.</p>
+    </div>
+    <nav class="pf-foot-nav" aria-label="Footer">
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Explore</p>
+        <a href="/">All industries</a>
+        <a href="/industries/retail-commerce/">Retail &amp; Commerce</a>
+        <a href="/industries/food-hospitality/">Food &amp; Hospitality</a>
+        <a href="/industries/manufacturing-b2b/">Manufacturing &amp; B2B</a>
+        <a href="/industries/professional-services/">Professional Services</a>
+      </div>
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Product</p>
+        <a href="https://www.theverityai.xyz/#platform">Platform</a>
+        <a href="https://www.theverityai.xyz/#primitives">Modules</a>
+        <a href="https://www.theverityai.xyz/#intelligence">Verity AI</a>
+        <a href="https://www.theverityai.xyz/#implementation">Implementation</a>
+      </div>
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Company</p>
+        <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry">Contact</a>
+        <a href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Book a demo</a>
+      </div>
+    </nav>
+  </div>
+  <div class="shell pf-foot-base">
+    <p class="caption">© 2026 Verity · The business operating system</p>
+  </div>
+</footer>
+<script src="/js/motion.js?v=64"></script>
+<script src="/js/ui.js?v=64"></script>
+</body>
+</html>
