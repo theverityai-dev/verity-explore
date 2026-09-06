@@ -111,6 +111,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/dental-clinics/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/diagnostic-labs/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/distributors/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -141,6 +151,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/hospitals/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/hotels/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -167,6 +182,11 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/marketing-agencies/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/pharmacies/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
