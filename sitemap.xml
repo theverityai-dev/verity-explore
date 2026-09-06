@@ -56,7 +56,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/bakeries/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/bookstores/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/cafes/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/catering-businesses/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -67,6 +82,11 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/clothing-boutiques/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/cloud-kitchens/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -91,12 +111,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/fast-food-businesses/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/furniture-stores/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/grocery-stores/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/hotels/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
