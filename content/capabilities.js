@@ -188,8 +188,13 @@ export const CAPABILITIES = {
 export const MIGRATION_SOURCES = ['Excel', 'Google Sheets', 'Legacy ERP', 'CRM'];
 
 /* Claims that are not evidenced anywhere and must never appear on a page.
-   scripts/qa.mjs fails the build if a page mentions one of these as a Verity
-   capability. */
+   scripts/qa.mjs fails the build if a page contains one of these strings.
+
+   The check is a plain substring match, so it also catches an honest denial
+   ("Verity does not replace your storefront"). That is deliberate: a false
+   positive costs one rewording, while a context-aware check that let a real
+   claim through would ship a false statement about the product. Phrase
+   disclaimers around the listed term rather than weakening the check. */
 export const FORBIDDEN_CLAIMS = [
   'point of sale',
   'payroll processing',
