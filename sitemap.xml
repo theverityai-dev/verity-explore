@@ -56,12 +56,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/accounting-firms/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/bakeries/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/bookstores/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/ca-firms/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -87,6 +97,11 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/cloud-kitchens/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/consulting-firms/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -131,6 +146,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/it-services-companies/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/jewellery-stores/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -152,6 +172,11 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/real-estate-agencies/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/recruitment-agencies/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
