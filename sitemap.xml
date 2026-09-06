@@ -121,6 +121,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/chemical-manufacturers/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/clinics/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -231,6 +236,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/exporters/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/facility-management/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -247,6 +257,16 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/financial-advisors/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/food-manufacturers/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/furniture-manufacturers/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -307,6 +327,16 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/hotels/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/importers/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/industrial-suppliers/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -376,7 +406,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/packaging-companies/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/pet-stores/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/pharmaceutical-manufacturers/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
