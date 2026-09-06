@@ -71,6 +71,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/bars-and-lounges/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/beauty-stores/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -181,6 +186,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/event-venues/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/fashion-stores/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -211,6 +221,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/guest-houses/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/gyms/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -227,6 +242,11 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/hospitals/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/hostels/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
@@ -301,6 +321,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://explore.theverityai.xyz/businesses/resorts/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://explore.theverityai.xyz/businesses/restaurants/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
@@ -362,6 +387,16 @@
   </url>
   <url>
     <loc>https://explore.theverityai.xyz/businesses/textile-manufacturers/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/tour-operators/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://explore.theverityai.xyz/businesses/travel-agencies/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.7</priority>
   </url>
