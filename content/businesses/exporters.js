@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for exporters | Verity',
     description:
-      'Verity gives exporters one system for document sets and their deadlines, buyer inspection and certification requirements, shipment bookings, incentive claims and payment realisation.',
+      'Verity gives exporters one system for document sets and deadlines, inspections and certificates, shipment windows, incentive claims and realisation.',
     keywords: [
       'AI software for exporters',
       'export business management software',

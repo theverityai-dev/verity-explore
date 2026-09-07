@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for importers | Verity',
     description:
-      'Verity gives importers one system for shipments in transit, landed cost with duty and freight, clearance and demurrage exposure, overseas supplier lead times and arrival quality.',
+      'Verity gives importers one system for shipments in transit, landed cost, clearance and demurrage exposure, supplier lead times and arrival quality.',
     keywords: [
       'AI software for importers',
       'import business management software',

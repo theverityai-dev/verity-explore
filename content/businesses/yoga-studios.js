@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for yoga studios | Verity',
     description:
-      'Verity gives yoga studios one system for teacher pay against class income, practitioner progression and injury notes, workshop and teacher training programmes, and studio hire.',
+      'Verity gives yoga studios one system for teacher pay against class income, practitioner notes, workshops and teacher training programmes.',
     keywords: [
       'AI software for yoga studios',
       'yoga studio management software',

@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<title>AI business management software for AI companies | Verity</title>
+<meta name="description" content="Verity gives AI companies one system for inference cost per account, model versions in production, evaluation runs, annotation work and pilot decisions.">
+<link rel="canonical" href="https://explore.theverityai.xyz/businesses/ai-companies/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verity">
+<meta property="og:url" content="https://explore.theverityai.xyz/businesses/ai-companies/">
+<meta property="og:title" content="AI business management software for AI companies | Verity">
+<meta property="og:description" content="Verity gives AI companies one system for inference cost per account, model versions in production, evaluation runs, annotation work and pilot decisions.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI business management software for AI companies | Verity">
+<meta name="twitter:description" content="Verity gives AI companies one system for inference cost per account, model versions in production, evaluation runs, annotation work and pilot decisions.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%23F7F8FA%27%2F%3E%3Cg%20transform%3D%27translate%284%201%29%27%3E%3Cpath%20d%3D%27M2.6%201.6h18.8a1.6%201.6%200%20011.2%202.7L13.2%2014a1.6%201.6%200%2001-2.4%200L1.4%204.3A1.6%201.6%200%20012.6%201.6z%27%20fill%3D%27%230FA894%27%2F%3E%3Cpath%20d%3D%27M10.8%2016a1.6%201.6%200%20012.4%200l9.4%209.7a1.6%201.6%200%2001-1.2%202.7H2.6a1.6%201.6%200%2001-1.2-2.7z%27%20fill%3D%27%230FA894%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<script>
+  try {
+    if (localStorage.getItem('verity-theme') === 'dark')
+      document.documentElement.setAttribute('data-theme', 'dark');
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css?v=64">
+<link rel="stylesheet" href="/css/verity.css?v=64">
+<link rel="stylesheet" href="/css/sections.css?v=64">
+<link rel="stylesheet" href="/css/motion.css?v=64">
+<link rel="stylesheet" href="/css/explore.css?v=64">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://explore.theverityai.xyz/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://explore.theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Digital & Technology","item":"https://explore.theverityai.xyz/industries/digital-technology/"},{"@type":"ListItem","position":4,"name":"AI Companies","item":"https://explore.theverityai.xyz/businesses/ai-companies/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for AI Companies","description":"Verity gives AI companies one system for inference cost per account, model versions in production, evaluation runs, annotation work and pilot decisions.","url":"https://explore.theverityai.xyz/businesses/ai-companies/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://www.theverityai.xyz"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can AI software do for an AI company?","acceptedAnswer":{"@type":"Answer","text":"Verity AI answers questions from your own account, cost, deployment and evaluation records: which accounts cost more to serve than they pay, what gross margin is by feature, which model versions are live and what justified them, which pilots are past their decision date. Each answer can become a pricing conversation or a deployment review."}},{"@type":"Question","name":"Why attribute serving cost per account?","acceptedAnswer":{"@type":"Answer","text":"Because the cost is variable per request and the price is usually fixed per seat or per month. Without attribution the company knows its total compute spend and not which customers are profitable, and heavy users erode margin invisibly."}},{"@type":"Question","name":"How does it help with model governance?","acceptedAnswer":{"@type":"Answer","text":"Every deployment carries the model version, the evaluation that justified it, the person who approved it and the accounts it affects, so what is running in production is a recorded decision rather than an accumulated state."}},{"@type":"Question","name":"Does it track annotation work?","acceptedAnswer":{"@type":"Answer","text":"Annotation carries datasets, annotators, throughput and quality, with the evaluations waiting on it linked, so labelling capacity is visible as the upstream constraint on shipping model changes."}},{"@type":"Question","name":"What about pilots?","acceptedAnswer":{"@type":"Answer","text":"Pilots carry criteria, a decision date and an owner, and a decision is recorded either way. An indefinite pilot consumes engineering attention and serving cost with no commercial outcome, which is the most expensive state in the business."}},{"@type":"Question","name":"Can it answer customer questions about behaviour changes?","acceptedAnswer":{"@type":"Answer","text":"Accounts are linked to the model versions they were served and the dates those changed, so a customer reporting different results receives a specific answer rather than an investigation."}},{"@type":"Question","name":"Does it replace our training infrastructure?","acceptedAnswer":{"@type":"Answer","text":"No. Training infrastructure, experiment tracking and model tooling continue as they are. Verity holds the company around them — accounts, cost, deployments, evaluations, annotation and pilots."}},{"@type":"Question","name":"How long does implementation take?","acceptedAnswer":{"@type":"Answer","text":"About four weeks: discovery and mapping of cost attribution, deployment process, evaluation practice and plan structures, configuration, migration of accounts and history, then an ongoing operations partnership."}}]}</script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="shell nav-inner">
+    <a href="/" class="nav-logo" aria-label="Verity Explore, home">
+      <svg width="16" height="20" viewBox="0 0 24 30" aria-hidden="true">
+        <path d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z" fill="var(--accent)"/>
+        <path d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z" fill="var(--accent)"/>
+      </svg>
+      <span>verity</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/industries/">Industries</a>
+      <a href="/#platform">Platform</a>
+      <a href="/#primitives">Modules</a>
+      <a href="/#intelligence">Verity AI</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+        <svg class="theme-icon theme-icon--moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M21 13a8.5 8.5 0 0 1-10-10 8.5 8.5 0 1 0 10 10Z"/></svg>
+        <svg class="theme-icon theme-icon--sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/></svg>
+      </button>
+      <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry" class="nav-signin">Email us</a>
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+        <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1.5h16M0 10.5h16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+  <div class="nav-sheet" id="mobile-nav">
+    <a href="/industries/">Industries</a>
+    <a href="https://www.theverityai.xyz/#platform">Platform</a>
+    <a href="https://www.theverityai.xyz/#primitives">Modules</a>
+    <a href="https://www.theverityai.xyz/#intelligence">Verity AI</a>
+    <div class="nav-sheet-cta">
+      <a href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us." target="_blank" rel="noopener" class="btn btn--primary">Book a demo</a>
+      <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry" class="btn btn--secondary">Email us</a>
+    </div>
+  </div>
+</header>
+<nav class="xb" aria-label="Breadcrumb">
+  <div class="shell"><ol class="xb-list"><li><a href="/">Explore</a></li><li class="xb-sep" aria-hidden="true">/</li><li><a href="/industries/">Industries</a></li><li class="xb-sep" aria-hidden="true">/</li><li><a href="/industries/digital-technology/">Digital &amp; Technology</a></li><li class="xb-sep" aria-hidden="true">/</li><li aria-current="page">AI Companies</li></ol></div>
+</nav>
+<main id="main">
+<section class="section section--tall x-hero" id="top" aria-labelledby="hero-heading">
+  <div class="shell x-hero-grid">
+    <div class="x-hero-copy">
+      <p class="label" data-reveal>Verity for AI companies</p>
+      <h1 id="hero-heading" class="h-lg x-hero-h1" data-reveal data-words>Three accounts cost more to serve than they pay, and nobody can name them.</h1>
+      <p class="lede x-hero-lede" data-reveal>AI businesses have a variable cost per request and a fixed price per seat. Verity attributes cost to accounts and tracks what is actually running in production.</p>
+      <div class="x-hero-cta" data-reveal>
+        <a class="btn btn--primary" href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20AI%20company.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Talk about your operation</a>
+        <a class="btn btn--secondary" href="#ecosystem">See what Verity manages</a>
+      </div>
+      <p class="caption x-hero-note" data-reveal>Verity runs the company. Training infrastructure and model tooling stay where they are.</p>
+    </div>
+    <div class="x-hero-panel">
+      
+  <div class="panel panel--high" data-reveal>
+    <div class="panel-head">
+      <p class="label label--ink">Verity / Company</p>
+      <p class="panel-meta">Current position</p>
+      <span class="panel-live"><i></i><span class="label">Live</span></span>
+    </div>
+    <div class="panel-body x-panel-body">
+          <div class="metric-row"><div class="metric">
+        <p class="label">Production accounts</p>
+        <p class="metric-value tnum">64</p>
+        <div class="metric-note">9 in pilot</div>
+      </div><div class="metric">
+        <p class="label">Gross margin</p>
+        <p class="metric-value tnum">48%</p>
+        <div class="metric-note">inference and serving cost</div>
+      </div><div class="metric">
+        <p class="label">Accounts below cost</p>
+        <p class="metric-value tnum">3</p>
+        <div class="metric-note">usage above plan assumptions</div>
+      </div><div class="metric">
+        <p class="label">Pilots past their window</p>
+        <p class="metric-value tnum">5</p>
+        <div class="metric-note">no deployment decision</div>
+      </div></div>
+          <p class="label x-rows-head">Needs attention</p>
+          <ul class="rows x-rows"><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">3 accounts costing more to serve than they pay</span>
+          <span class="x-row-meta">Heavy usage on flat pricing</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">5 pilots past their evaluation window</span>
+          <span class="x-row-meta">No decision recorded either way</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state is-active" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">2 model versions live that nobody chose</span>
+          <span class="x-row-meta">Deployed for a test, never reverted</span>
+        </span>
+      </li><li class="row">
+        <span class="row-state" aria-hidden="true"></span>
+        <span class="x-row-text">
+          <span class="x-row-name">Annotation backlog affecting 3 evaluations</span>
+          <span class="x-row-meta">Labelling capacity the constraint</span>
+        </span>
+      </li></ul>
+        </div>
+  </div>
+      <p class="caption x-panel-note">Illustrative figures. Verity shows your own company in this shape.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt section--tall" id="context" aria-labelledby="context-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>How the business runs</p>
+          <h2 id="context-heading" class="h-lg" data-reveal data-words>A variable cost to serve, a fixed price to charge, and models that change under you.</h2>
+        </div>
+        <div class="x-split-b">
+          <p class="body-copy" data-reveal>An AI company has a cost structure most software businesses do not: every request costs money. When pricing is per seat or per month and cost is per token, per image or per hour of compute, three accounts costing more to serve than they pay is not unusual — it is the default outcome unless cost is attributed per account.</p><p class="body-copy" data-reveal>The second characteristic is that what is running in production drifts. Two model versions live that nobody deliberately chose, deployed for a test and never reverted, is a common and consequential state, because behaviour customers depend on has changed without a decision.</p><p class="body-copy" data-reveal>The third is evaluation. Model changes need evidence before deployment, and evaluation depends on annotated data, which depends on labelling capacity. An annotation backlog is a deployment blocker one step removed.</p><p class="body-copy" data-reveal>The fourth is the pilot-to-production gap. Five pilots past their evaluation window with no recorded decision is the most expensive state in the business — engineering attention and serving cost with no commercial outcome either way.</p><p class="body-copy" data-reveal>The fifth is that customers ask what changed. A behaviour difference needs an answer that connects the account, the version it was served and when the change happened.</p><p class="body-copy" data-reveal>Verity attributes serving cost to accounts, records what is deployed and why, and tracks evaluations, annotation work and pilot decisions.</p>
+          <div class="x-terms" data-reveal data-stagger>
+            <p class="label">What Verity calls these things</p>
+            <ul class="x-term-list"><li><span class="x-term">Models, versions, deployments</span><span class="x-term-map">Work</span></li><li><span class="x-term">Evaluations, benchmarks, results</span><span class="x-term-map">Records</span></li><li><span class="x-term">Annotation, labelling, review</span><span class="x-term-map">Workflows</span></li><li><span class="x-term">Accounts, pilots, deployments</span><span class="x-term-map">Relationships</span></li><li><span class="x-term">Inference, compute, serving cost</span><span class="x-term-map">Control</span></li><li><span class="x-term">Researchers, engineers, annotators</span><span class="x-term-map">People</span></li><li><span class="x-term">Plans, usage, pricing</span><span class="x-term-map">Orders</span></li></ul>
+          </div>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--tall" id="challenges" aria-labelledby="challenges-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">What gets in the way</p>
+    <h2 id="challenges-heading" class="h-lg">Cost per request against price per seat.</h2>
+    <p class="lede x-lede">AI company difficulties come from variable delivery cost and changing model behaviour.</p>
+  </div><ul class="x-prob-grid" data-stagger><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Serving cost is not attributed to accounts</p>
+              <p class="x-prob-body">Compute and inference spend is a single line and unit economics are unknown.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Cost is attributed per account and per feature against the price they pay.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Production model versions drift</p>
+              <p class="x-prob-body">Deployments made for tests remain live and nobody chose them.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Deployed versions carry the decision, evaluation and date behind them.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Evaluations wait on annotation</p>
+              <p class="x-prob-body">A model change cannot be evidenced because labelled data is not ready.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Annotation work is tracked as capacity against the evaluations depending on it.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Pilots have no decision point</p>
+              <p class="x-prob-body">An evaluation window passes and the pilot continues without a commercial outcome.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Pilots carry a decision date, criteria and an owner.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Behaviour change questions cannot be answered</p>
+              <p class="x-prob-body">A customer reports different results and nobody can say what changed.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Accounts, versions served and change dates are linked.</p>
+            </li><li class="x-prob" data-reveal>
+              <p class="x-prob-title">Heavy users are not identified early</p>
+              <p class="x-prob-body">Usage grows past plan assumptions and margin erodes silently.</p>
+              <p class="x-prob-fix"><span class="label">In Verity</span> Usage against plan assumptions is monitored per account.</p>
+            </li></ul></div>
+</section>
+
+<section class="section section--alt section--tall" id="ecosystem" aria-labelledby="ecosystem-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">The complete system</p>
+    <h2 id="ecosystem-heading" class="h-lg">Everything Verity manages for AI companies</h2>
+    <p class="lede x-lede">One system across cost, deployments, evaluations and accounts.</p>
+  </div><div class="x-mod-grid" data-stagger><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Control</p>
+              <h3 class="h-sm x-mod-title">Inference, compute and serving cost</h3>
+              <p class="x-mod-body">One permission model and one audit trail, with serving cost attributed per account, feature and model version against the revenue each produces.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Variable cost against fixed price is the defining economic risk of the business.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Three accounts costing more to serve than they pay.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Work</p>
+              <h3 class="h-sm x-mod-title">Models, versions and deployments</h3>
+              <p class="x-mod-body">Each deployment carries its model version, the accounts it serves, the evaluation behind it, the person who approved it and the date.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> What is running should be a decision with evidence attached.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Two live versions nobody deliberately chose.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Records</p>
+              <h3 class="h-sm x-mod-title">Evaluations, benchmarks and results</h3>
+              <p class="x-mod-body">Evaluation runs carry datasets, metrics, comparison against the incumbent and the decision they supported.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A deployment without an evaluation is a change without evidence.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Evaluation results linked to the deployment they justified.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Workflows</p>
+              <h3 class="h-sm x-mod-title">Annotation, labelling and review</h3>
+              <p class="x-mod-body">Annotation work carries datasets, annotators, throughput, quality checks and the evaluations waiting on it.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Labelling capacity is an upstream constraint on shipping model changes.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Annotation backlog blocking three evaluations.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Relationships</p>
+              <h3 class="h-sm x-mod-title">Accounts, pilots and deployments</h3>
+              <p class="x-mod-body">Accounts carry their plan, usage, serving cost, model versions, pilot state and decision dates.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A pilot without a decision date does not end.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Five pilots past their evaluation window.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Orders</p>
+              <h3 class="h-sm x-mod-title">Plans, usage and pricing</h3>
+              <p class="x-mod-body">Plans carry their usage assumptions, actual consumption and margin per account.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Pricing assumptions have to be compared with real usage.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Usage against plan assumptions by account.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">People</p>
+              <h3 class="h-sm x-mod-title">Researchers, engineers and annotators</h3>
+              <p class="x-mod-body">Staff carry assignments, evaluation ownership, deployment approvals and annotation throughput.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Deployment approval is a named responsibility.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Deployments by approver with evaluation attached.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Reports and analytics</p>
+              <h3 class="h-sm x-mod-title">Margin, deployment and evaluation reporting</h3>
+              <p class="x-mod-body">Cost per account and feature, gross margin, deployment history, evaluation outcomes and pilot conversion come from the records.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Unit economics and model governance are both measurable.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Gross margin by account and by feature.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Verity AI</p>
+              <h3 class="h-sm x-mod-title">Ask the company a question</h3>
+              <p class="x-mod-body">Verity AI answers from your own account, cost, deployment and evaluation records, respects permissions, and can create assigned follow-ups.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> The useful questions are about which accounts lose money and what is deployed.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> "Which accounts cost more than they pay?" returns three with usage patterns.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Communication</p>
+              <h3 class="h-sm x-mod-title">Customer contact and change notices</h3>
+              <p class="x-mod-body">Pilot reviews, change notifications and usage conversations attach to the account.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A behaviour change customers notice needs to be a notification, not a discovery.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Change notice recorded against the accounts affected.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Schedule</p>
+              <h3 class="h-sm x-mod-title">Evaluation and deployment planning</h3>
+              <p class="x-mod-body">Evaluations, annotation capacity and deployment windows are planned together.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> A deployment date is only real if the evaluation and its data are ready.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Deployment windows planned against annotation capacity.</p>
+            </article><article class="x-mod" data-reveal>
+              <p class="label x-mod-kicker">Suppliers</p>
+              <h3 class="h-sm x-mod-title">Compute providers and data vendors</h3>
+              <p class="x-mod-body">Providers carry cost, commitments, capacity and reliability.</p>
+              <p class="x-mod-why"><span class="label">Why it matters here</span> Compute commitments are a large fixed obligation against variable demand.</p>
+              <p class="x-mod-eg"><span class="label">In practice</span> Committed compute against actual consumption.</p>
+            </article></div></div>
+</section>
+
+<section class="section section--tall" id="workflows" aria-labelledby="workflows-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Work in motion</p>
+    <h2 id="workflows-heading" class="h-lg">Evaluate, deploy, serve, measure, decide.</h2>
+    <p class="lede x-lede">These already happen. Recorded, unit economics and model governance both become visible.</p>
+  </div><div class="x-flow-grid" data-stagger><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Evaluation and deployment</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Change proposed with an evaluation plan</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Annotated data confirmed available</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Evaluation run against the incumbent</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Deployment approved by a named person with results attached</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Deployment recorded with accounts affected</span>
+                  </li></ol>
+              <p class="x-flow-note">Attaching the evaluation to the deployment is what makes the change reversible with reason.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Cost attribution</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Serving cost captured per request class</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Attributed to account and feature</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Compared with the revenue from that account</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Accounts below cost surfaced</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Pricing or usage conversation raised</span>
+                  </li></ol>
+              <p class="x-flow-note">Attribution per account is the only way flat pricing survives variable cost.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Annotation pipeline</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Dataset requirement defined by the evaluation</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Annotation assigned with quality criteria</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Throughput and quality tracked</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Dataset released for evaluation</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Evaluations unblocked</span>
+                  </li></ol>
+              <p class="x-flow-note">Labelling is a capacity constraint on shipping, not a background task.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Pilot to decision</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Pilot opened with criteria and a decision date</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Usage and cost tracked during the pilot</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Results assessed against the criteria</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Decision recorded either way</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Conversion or closure completed</span>
+                  </li></ol>
+              <p class="x-flow-note">A recorded decision to stop is worth more than an indefinite pilot.</p>
+            </article><article class="x-flow" data-reveal>
+              <h3 class="h-sm x-flow-title">Change communication</h3>
+              <ol class="x-flow-steps"><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">01</span>
+                    <span class="x-flow-text">Deployment identified as behaviour-affecting</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">02</span>
+                    <span class="x-flow-text">Accounts served by the change listed</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">03</span>
+                    <span class="x-flow-text">Notification issued</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">04</span>
+                    <span class="x-flow-text">Customer responses recorded</span>
+                  </li><li class="x-flow-step">
+                    <span class="x-flow-num label tnum">05</span>
+                    <span class="x-flow-text">Rollback decision made if required</span>
+                  </li></ol>
+              <p class="x-flow-note">Knowing which accounts were served which version is what makes the answer possible.</p>
+            </article></div></div>
+</section>
+
+<section class="section section--alt section--tall" id="ai" aria-labelledby="ai-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>Verity AI</p>
+          <h2 id="ai-heading" class="h-lg" data-reveal data-words>Ask about margin and deployments.</h2>
+          <p class="lede x-lede" data-reveal>Verity AI reads the same account, cost, deployment and evaluation records the company creates as it operates. It answers from your own company, respects permissions, and can turn an answer into a pricing conversation or a deployment review.</p>
+          <ul class="x-ai-facts" data-reveal data-stagger>
+            <li><span class="label">Grounded</span> Answers come from your own records and workflows, not from generic model knowledge.</li>
+            <li><span class="label">Permission-aware</span> It only sees what the person asking is allowed to see.</li>
+            <li><span class="label">Actionable</span> An answer can become a task, an assignment or a follow-up.</li>
+            <li><span class="label">Traceable</span> Every action it takes stays part of the operational record.</li>
+          </ul>
+        </div>
+        <div class="x-split-b">
+          
+  <div class="panel" data-reveal>
+    <div class="panel-head">
+      <p class="label label--ink">Verity / Ask</p>
+      <p class="panel-meta">Grounded in your company records</p>
+      
+    </div>
+    <div class="panel-body">
+              <ul class="x-ask" data-stagger><li class="x-ask-q" data-reveal>Which accounts cost more to serve than they pay?</li><li class="x-ask-q" data-reveal>What is gross margin by account and by feature?</li><li class="x-ask-q" data-reveal>Which model versions are live and what evaluation justified them?</li><li class="x-ask-q" data-reveal>Which pilots are past their decision date?</li><li class="x-ask-q" data-reveal>Which evaluations are blocked on annotation?</li><li class="x-ask-q" data-reveal>Which accounts have usage far above their plan assumptions?</li><li class="x-ask-q" data-reveal>Which accounts were served the version that changed last week?</li><li class="x-ask-q" data-reveal>What is committed compute against actual consumption?</li><li class="x-ask-q" data-reveal>Summarise unit economics and deployment position.</li></ul>
+            </div>
+  </div>
+          <p class="caption x-panel-note">Verity AI only returns what the person asking has permission to see.</p>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--tall" id="automation" aria-labelledby="automation-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Without chasing</p>
+    <h2 id="automation-heading" class="h-lg">Cost, deployments and decisions.</h2>
+    <p class="lede x-lede">Each runs from the company’s own records at the point the condition is met.</p>
+  </div><div class="x-auto-grid" data-stagger><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">An account’s serving cost approaches its revenue</p>
+              <ul class="x-auto-steps"><li>Flagged with usage pattern</li><li>Pricing or usage conversation raised</li><li>Outcome recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A deployment is made without an attached evaluation</p>
+              <ul class="x-auto-steps"><li>Flagged with the accounts affected</li><li>Evaluation or rollback assigned</li><li>Decision recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">A pilot passes its decision date</p>
+              <ul class="x-auto-steps"><li>Criteria and results surfaced</li><li>Decision assigned to an owner</li><li>Conversion or closure recorded</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">An evaluation is blocked on annotation</p>
+              <ul class="x-auto-steps"><li>Annotation requirement surfaced with capacity</li><li>Priority decision raised</li><li>Evaluation unblocked on release</li></ul>
+            </article><article class="x-auto" data-reveal>
+              <p class="label x-auto-kicker">When</p>
+              <p class="x-auto-trigger">Usage exceeds plan assumptions</p>
+              <ul class="x-auto-steps"><li>Account flagged with cost impact</li><li>Plan review raised</li><li>Outcome recorded</li></ul>
+            </article></div></div>
+</section>
+
+<section class="section section--alt section--tall" id="intelligence" aria-labelledby="intelligence-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">What you can understand</p>
+    <h2 id="intelligence-heading" class="h-lg">What the company can see.</h2>
+    <p class="lede x-lede">Unit economics, deployments and evaluations from operating records.</p>
+  </div><div class="x-int-grid" data-stagger><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Economics</h3>
+              <ul class="x-int-list"><li>Serving cost by account and feature</li><li>Gross margin per account</li><li>Usage against plan assumptions</li><li>Committed compute against consumption</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Deployments</h3>
+              <ul class="x-int-list"><li>Live versions and their approvals</li><li>Deployment history by account</li><li>Evaluations behind each change</li><li>Rollbacks and their causes</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Evaluation</h3>
+              <ul class="x-int-list"><li>Evaluation outcomes against incumbent</li><li>Annotation throughput and quality</li><li>Datasets available and blocked</li><li>Time from evaluation to deployment</li></ul>
+            </div><div class="x-int" data-reveal>
+              <h3 class="h-sm x-int-title">Commercial</h3>
+              <ul class="x-int-list"><li>Pilot conversion and duration</li><li>Pilots without decisions</li><li>Account expansion and churn</li><li>Pricing against real cost</li></ul>
+            </div></div>
+        <p class="caption x-int-note" data-reveal>Verity records the company’s operations. Training infrastructure and model tooling continue as they are.</p></div>
+</section>
+
+<section class="section section--tall" id="roles" aria-labelledby="roles-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">One system, different ways of seeing it</p>
+    <h2 id="roles-heading" class="h-lg">One company, four views.</h2>
+    <p class="lede x-lede">Everyone works from the same records.</p>
+  </div><ul class="x-role-grid" data-stagger><li class="x-role" data-reveal>
+              <p class="x-role-name">Founder</p>
+              <p class="x-role-q">Do the unit economics work?</p>
+              <p class="x-role-focus">Cost per account, gross margin, accounts below cost, pilot conversion.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Engineering lead</p>
+              <p class="x-role-q">What is deployed and why?</p>
+              <p class="x-role-focus">Live versions and approvals, evaluations attached, rollback position, annotation capacity.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Research lead</p>
+              <p class="x-role-q">What can we evaluate?</p>
+              <p class="x-role-focus">Evaluation queue, dataset availability, annotation throughput, results against incumbent.</p>
+            </li><li class="x-role" data-reveal>
+              <p class="x-role-name">Account manager</p>
+              <p class="x-role-q">Where does this customer stand?</p>
+              <p class="x-role-focus">Usage against plan, cost to serve, pilot decision date, version and change history.</p>
+            </li></ul></div>
+</section>
+
+<section class="section section--alt" id="use-cases" aria-labelledby="use-cases-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Where it is used</p>
+    <h2 id="use-cases-heading" class="h-lg">What AI companies use Verity for</h2>
+    
+  </div><ul class="x-uc-grid" data-stagger><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Attributing serving cost to accounts</h3>
+              <p class="x-uc-body">Inference and compute cost held per account and feature against the revenue each produces, which is the only way flat pricing survives a variable cost to serve.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Knowing what is deployed</h3>
+              <p class="x-uc-body">Live model versions carrying the evaluation, the approver and the date, so production reflects decisions rather than leftover tests.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Unblocking evaluations</h3>
+              <p class="x-uc-body">Annotation tracked as capacity against the evaluations that depend on it, making labelling a visible constraint on shipping.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Ending pilots deliberately</h3>
+              <p class="x-uc-body">Pilots carrying criteria, a decision date and an owner, so an evaluation converts or closes instead of continuing indefinitely.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Answering what changed</h3>
+              <p class="x-uc-body">Accounts linked to the versions they were served and the dates they changed, so a customer reporting different behaviour gets a real answer.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Catching heavy usage early</h3>
+              <p class="x-uc-body">Consumption compared with plan assumptions per account, surfacing margin erosion before it becomes a renewal problem.</p>
+            </li><li class="x-uc" data-reveal>
+              <h3 class="h-sm x-uc-title">Asking about the company</h3>
+              <p class="x-uc-body">Plain-language questions across cost, deployments, evaluations and accounts, with pricing and review actions raised in the same step.</p>
+            </li></ul></div>
+</section>
+
+<section class="section" id="migration" aria-labelledby="migration-heading">
+  <div class="shell">
+      <div class="x-split">
+        <div class="x-split-a">
+          <p class="label" data-reveal>Getting there</p>
+          <h2 id="migration-heading" class="h-lg" data-reveal data-words>Bring the business with you.</h2>
+        </div>
+        <div class="x-split-b">
+          <p class="body-copy" data-reveal>Training infrastructure and model tooling continue and are mapped during implementation. Accounts with plans and usage, cost attribution structures, deployment and evaluation history, annotation records and compute commitments are brought across.</p>
+          <ul class="x-src" data-reveal data-stagger>
+            <li class="chip">Excel</li><li class="chip">Google Sheets</li><li class="chip">Legacy ERP</li><li class="chip">CRM</li>
+            <li class="chip chip--accent">One operating environment</li>
+          </ul>
+          <p class="caption x-src-note" data-reveal>Implementation runs about four weeks: discovery and mapping, configuration, migration, then an ongoing operations partnership.</p>
+        </div>
+      </div></div>
+</section>
+
+<section class="section section--alt section--tall" id="faq" aria-labelledby="faq-heading">
+  <div class="shell">
+  <div class="x-head" data-reveal>
+    <p class="label">Questions</p>
+    <h2 id="faq-heading" class="h-lg">Questions AI companies ask</h2>
+    
+  </div><div class="x-faq" data-stagger><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>What can AI software do for an AI company?</span></summary>
+              <div class="x-faq-a"><p>Verity AI answers questions from your own account, cost, deployment and evaluation records: which accounts cost more to serve than they pay, what gross margin is by feature, which model versions are live and what justified them, which pilots are past their decision date. Each answer can become a pricing conversation or a deployment review.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Why attribute serving cost per account?</span></summary>
+              <div class="x-faq-a"><p>Because the cost is variable per request and the price is usually fixed per seat or per month. Without attribution the company knows its total compute spend and not which customers are profitable, and heavy users erode margin invisibly.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>How does it help with model governance?</span></summary>
+              <div class="x-faq-a"><p>Every deployment carries the model version, the evaluation that justified it, the person who approved it and the accounts it affects, so what is running in production is a recorded decision rather than an accumulated state.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Does it track annotation work?</span></summary>
+              <div class="x-faq-a"><p>Annotation carries datasets, annotators, throughput and quality, with the evaluations waiting on it linked, so labelling capacity is visible as the upstream constraint on shipping model changes.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>What about pilots?</span></summary>
+              <div class="x-faq-a"><p>Pilots carry criteria, a decision date and an owner, and a decision is recorded either way. An indefinite pilot consumes engineering attention and serving cost with no commercial outcome, which is the most expensive state in the business.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Can it answer customer questions about behaviour changes?</span></summary>
+              <div class="x-faq-a"><p>Accounts are linked to the model versions they were served and the dates those changed, so a customer reporting different results receives a specific answer rather than an investigation.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>Does it replace our training infrastructure?</span></summary>
+              <div class="x-faq-a"><p>No. Training infrastructure, experiment tracking and model tooling continue as they are. Verity holds the company around them — accounts, cost, deployments, evaluations, annotation and pilots.</p></div>
+            </details><details class="x-faq-item" data-reveal>
+              <summary class="x-faq-q"><span>How long does implementation take?</span></summary>
+              <div class="x-faq-a"><p>About four weeks: discovery and mapping of cost attribution, deployment process, evaluation practice and plan structures, configuration, migration of accounts and history, then an ongoing operations partnership.</p></div>
+            </details></div></div>
+</section>
+
+<section class="section" id="related" aria-labelledby="related-heading">
+  <div class="shell">
+      <p class="label" data-reveal>Keep exploring</p>
+      <h2 id="related-heading" class="h-md x-rel-h" data-reveal>Businesses that run on the same records</h2>
+      <ul class="x-rel-grid" data-stagger><li class="x-rel" data-reveal>
+            <a href="/businesses/saas-companies/">
+              <span class="x-rel-name">SaaS Companies</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/data-companies/">
+              <span class="x-rel-name">Data Companies</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/startups/">
+              <span class="x-rel-name">Startups</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/software-agencies/">
+              <span class="x-rel-name">Software Agencies</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/cybersecurity-companies/">
+              <span class="x-rel-name">Cybersecurity Companies</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li><li class="x-rel" data-reveal>
+            <a href="/businesses/online-marketplaces/">
+              <span class="x-rel-name">Online Marketplaces</span>
+              <span class="x-rel-ind label">Technology</span>
+            </a>
+          </li></ul>
+      <p class="x-rel-up" data-reveal>Part of <a href="/industries/digital-technology/">Digital &amp; Technology</a> · <a href="/">All 123 business types</a></p></div>
+</section>
+
+<section class="section section--cta" id="cta" aria-labelledby="cta-heading" style="padding-block:clamp(120px,18vw,220px)">
+  <div class="shell cta-inner">
+    <h2 id="cta-heading" class="display cta-heading" data-reveal>Start with cost per account.</h2>
+    <p class="lede cta-deck" data-reveal>A few accounts usually carry the margin problem. Tell us how serving cost is attributed today.</p>
+    <div class="cta-buttons" data-reveal>
+      <a class="btn btn--primary" href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20AI%20company.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Talk about your operation</a>
+      <a class="btn btn--secondary" href="mailto:theplotarmour@gmail.com?subject=Verity%20%E2%80%94%20AI%20Companies">Email us</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pf-foot">
+  <div class="shell pf-foot-inner">
+    <div class="pf-foot-brand">
+      <a href="/" class="nav-logo pf-foot-logo-link" aria-label="Verity, home">
+        <svg width="16" height="20" viewBox="0 0 24 30" aria-hidden="true">
+        <path d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z" fill="var(--accent)"/>
+        <path d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z" fill="var(--accent)"/>
+      </svg>
+        <span class="pf-foot-logo">verity</span>
+      </a>
+      <p class="caption pf-foot-line">Operate. Optimize. Outperform.</p>
+    </div>
+    <nav class="pf-foot-nav" aria-label="Footer">
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Explore</p>
+        <a href="/">All industries</a>
+        <a href="/industries/retail-commerce/">Retail &amp; Commerce</a>
+        <a href="/industries/food-hospitality/">Food &amp; Hospitality</a>
+        <a href="/industries/manufacturing-b2b/">Manufacturing &amp; B2B</a>
+        <a href="/industries/professional-services/">Professional Services</a>
+      </div>
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Product</p>
+        <a href="https://www.theverityai.xyz/#platform">Platform</a>
+        <a href="https://www.theverityai.xyz/#primitives">Modules</a>
+        <a href="https://www.theverityai.xyz/#intelligence">Verity AI</a>
+        <a href="https://www.theverityai.xyz/#implementation">Implementation</a>
+      </div>
+      <div class="pf-foot-col">
+        <p class="pf-foot-head label">Company</p>
+        <a href="mailto:theplotarmour@gmail.com?subject=Verity%20enquiry">Contact</a>
+        <a href="https://wa.me/918744069597?text=Hi%20Verity%2C%20I%20run%20a%20business.%20I'd%20like%20to%20see%20how%20Verity%20would%20work%20for%20us.">Book a demo</a>
+      </div>
+    </nav>
+  </div>
+  <div class="shell pf-foot-base">
+    <p class="caption">© 2026 Verity · The business operating system</p>
+  </div>
+</footer>
+<script src="/js/motion.js?v=64"></script>
+<script src="/js/ui.js?v=64"></script>
+</body>
+</html>

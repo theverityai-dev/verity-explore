@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for food manufacturers | Verity',
     description:
-      'Verity gives food manufacturers one system for perishable raw material yield, allergen changeover and line cleaning, date coding and shelf life, hygiene audit evidence and retailer commitments.',
+      'Verity gives food manufacturers one system for intake yield, allergen changeover, shelf life against customer minimums and hygiene audit evidence.',
     keywords: [
       'AI software for food manufacturers',
       'food manufacturing management software',

@@ -5,7 +5,7 @@ export default {
   subject: 'pharmaceutical manufacturer',
 
   seo: {
-    title: 'AI business management software for pharmaceutical manufacturers | Verity',
+    title: 'AI business software for pharmaceutical manufacturers | Verity',
     description:
       'Verity gives pharmaceutical manufacturers one system for batch record completeness, deviations and corrective actions, release status, stability and recall traceability.',
     keywords: [

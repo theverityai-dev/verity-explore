@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for home builders | Verity',
     description:
-      'Verity gives home builders one system for per-home costing, buyer selections and change orders, trade scheduling, snagging and defects liability across every home under construction.',
+      'Verity gives home builders one system for per-home costing, buyer selections and change orders, trade scheduling, snagging and defects liability.',
     keywords: [
       'AI software for home builders',
       'home builder management software',

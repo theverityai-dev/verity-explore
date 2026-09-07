@@ -5,7 +5,7 @@ export default {
   subject: 'vocational training centre',
 
   seo: {
-    title: 'AI business management software for vocational training centres | Verity',
+    title: 'AI business software for vocational training centres | Verity',
     description:
       'Verity connects practical assessment records, equipment and consumable cost per trainee, trainer and assessor coverage, and funding audit evidence into one system.',
     keywords: [

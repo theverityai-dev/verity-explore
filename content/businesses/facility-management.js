@@ -5,9 +5,9 @@ export default {
   subject: 'facility management company',
 
   seo: {
-    title: 'AI business management software for facility management companies | Verity',
+    title: 'AI business software for facility management | Verity',
     description:
-      'Verity gives facility management companies one system for service level response times, planned and reactive maintenance, deployed staff across sites, assets and contract profitability.',
+      'Verity gives facility management companies one system for response times, planned and reactive work, deployed staff, assets and contract margin.',
     keywords: [
       'AI software for facility management companies',
       'facility management software',

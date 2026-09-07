@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for car rental businesses | Verity',
     description:
-      'Verity gives car rental businesses one system for fleet utilisation and idle gaps, condition evidence and damage recovery, document and service expiry, and per-vehicle earnings.',
+      'Verity gives car rental businesses one system for fleet utilisation, condition evidence and damage recovery, document expiry and per-vehicle earnings.',
     keywords: [
       'AI software for car rental businesses',
       'car rental fleet management software',

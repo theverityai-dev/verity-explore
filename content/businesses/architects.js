@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for architects | Verity',
     description:
-      'Verity gives architects one system for project stages, drawing issue and revision, statutory submissions, consultant coordination and the personal capacity that limits the practice.',
+      'Verity gives architects one system for the review queue, drawing issue and revision, statutory submissions, consultant dependencies and fee recovery.',
     keywords: [
       'AI software for architects',
       'architect practice management software',

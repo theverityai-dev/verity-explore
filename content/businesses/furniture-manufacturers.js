@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for furniture manufacturers | Verity',
     description:
-      'Verity gives furniture manufacturers one system for configured orders and their bill of materials, timber and finish variation, finished goods space, and damage in transit and installation.',
+      'Verity gives furniture manufacturers one system for configured orders, blocked components, finished goods space, finish batching and transit damage.',
     keywords: [
       'AI software for furniture manufacturers',
       'furniture manufacturing management software',

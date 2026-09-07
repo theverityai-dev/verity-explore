@@ -5,7 +5,7 @@ export default {
   subject: 'building material supplier',
 
   seo: {
-    title: 'AI business management software for building material suppliers | Verity',
+    title: 'AI business software for building material suppliers | Verity',
     description:
       'Verity gives building material suppliers one system for site delivery scheduling, vehicle and load planning, contractor credit exposure, volatile input prices and yard stock.',
     keywords: [

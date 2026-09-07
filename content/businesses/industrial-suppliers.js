@@ -7,7 +7,7 @@ export default {
   seo: {
     title: 'AI business management software for industrial suppliers | Verity',
     description:
-      'Verity gives industrial suppliers one system for a large slow-moving part catalogue, technical specification matching, breakdown urgency, rate contracts and plant customer accounts.',
+      'Verity gives industrial suppliers one system for specification search, breakdown urgency, dead stock, rate contracts and plant customer accounts.',
     keywords: [
       'AI software for industrial suppliers',
       'industrial supplies management software',
