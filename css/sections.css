@@ -73,28 +73,39 @@
 }
 
 /* ----------------------------------------------------------------- nav --- */
-/* Liquid Glass: a floating capsule detached from the viewport edge, not a
-   flush full-width bar. The glass surface lives on .nav-inner (shell-width,
-   rounded, elevated); .nav is just the sticky positioning wrapper with a
-   constant top margin so it never reflows the page. */
+/* Liquid Glass: a flush full-width bar, edge to edge on every device. The
+   glass surface lives on .nav-inner (blur, tint, border, shadow); .nav is
+   just the sticky positioning wrapper. */
 .nav {
   position: sticky; top: 0; z-index: 60;
-  padding-top: 16px;
   background: transparent;
+}
+/* The bar is transparent chrome, not a solid strip: nothing should paint
+   behind it separately from the page. Pull whatever section follows nav up
+   behind it (negative margin) and give that section back the same amount as
+   padding, so its background reaches y:0 while its content sits exactly
+   where it always did. Without this, page background shows through nav's
+   68px reserved height as a flat seam against the section's own background
+   starting only where nav ends. */
+.nav + * {
+  margin-top: -68px;
+  padding-top: 68px;
 }
 .nav-inner {
   display: flex; align-items: center; gap: 56px;
+  /* .nav-inner is also .shell, which sets max-width:1440px and
+     margin-inline:auto for every other use of that class. Nav explicitly
+     overrides both so it stays full-bleed instead of shell's centered,
+     capped width. */
+  max-width: none;
+  margin-inline: 0;
+  width: 100%;
   /* Constant height on purpose. The bar used to shrink 68px to 56px, but a
      sticky header in flow that animates its own height reflows the entire page
      on every crossing of the scroll threshold. The frost, the border and the
      shadow already say "you have left the top"; none of them cost layout. */
   height: 68px;
-  /* .nav-inner is also .shell: shell's own padding-inline only spaces the
-     content, it doesn't move the box off the viewport edge below the shell's
-     max-width. This margin is what actually detaches the capsule. */
-  margin-inline: var(--gutter);
-  max-width: calc(var(--maxw) - var(--gutter) * 2);
-  border-radius: 22px;
+  border-radius: 0;
   background: var(--surface-floating);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
