@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "promo-creator-skills": {
+      "source": "kangarooking/promo-creator-skills",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "69e1abb1a2f9176e2b7768b3249e7fe598e5a96bb6681bff666f30e63ce8e7ad"
+    }
+  }
+}

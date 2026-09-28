@@ -7,7 +7,7 @@
 import { writeFile, readFile, mkdir, readdir, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { SITE, esc } from '../lib/render.js';
 import { renderBusinessPage } from '../lib/business-page.js';
@@ -32,7 +32,7 @@ const files = (await readdir(contentDir)).filter((f) => f.endsWith('.js') && f !
 
 const businesses = [];
 for (const file of files) {
-  const mod = await import(join(contentDir, file));
+  const mod = await import(pathToFileURL(join(contentDir, file)));
   const biz = mod.default;
   if (!BY_SLUG[biz.slug]) throw new Error(`${file}: slug "${biz.slug}" is not in the registry`);
   if (biz.status !== 'published') {
