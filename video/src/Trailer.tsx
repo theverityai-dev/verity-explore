@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {createContext, useContext} from 'react';
 import {AbsoluteFill, Img, staticFile, useCurrentFrame} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Inter';
+import {CONFIGS, VideoConfig, VideoId, general} from './configs';
 import {FPS, inOut, lerp, pop, quad, seg, track} from './timeline';
 
 const {fontFamily} = loadFont('normal', {weights: ['400', '500', '600', '700'], subsets: ['latin']});
+
+const CfgCtx = createContext<VideoConfig>(general);
+const useCfg = () => useContext(CfgCtx);
 
 /* ----------------------------------------------------------------------------
    Geometry. World = 2x2 grid of product panels; camera navigates it.
@@ -122,14 +126,6 @@ const Shell: React.FC<{
 /* ----------------------------------------------------------------------------
    Panels
    -------------------------------------------------------------------------- */
-const CUSTOMERS: [string, string][] = [
-  ['Halden & Co', '$12.4k'],
-  ['Northwind Traders', '$1.2M'],
-  ['Apex Freight', '$86k'],
-  ['Lumen Studio', '$22k'],
-  ['Orbit Foods', '$310k'],
-];
-
 const Card: React.FC<{h: number; accent?: boolean; col?: boolean; children: React.ReactNode}> = ({h, accent, col, children}) => (
   <div
     style={{
@@ -161,6 +157,7 @@ const Eyebrow: React.FC<{children: React.ReactNode}> = ({children}) => (
 );
 
 const CrmPanel: React.FC<{t: number; frame: number}> = ({t, frame}) => {
+  const {crm} = useCfg();
   const listOut = seg(t, 8.1, 8.7);
   const rec = seg(t, 8.3, 8.9);
   const oppIn = pop(frame, 9.0);
@@ -171,11 +168,11 @@ const CrmPanel: React.FC<{t: number; frame: number}> = ({t, frame}) => {
   const reached = stage < 0.02 ? 0 : stage < 0.98 ? 1 : 2;
   return (
     <>
-      <PanelTitle title="CRM" right={<Pill>Customers</Pill>} />
+      <PanelTitle title={crm.title} right={<Pill>{crm.pill}</Pill>} />
       <div style={{position: 'relative'}}>
         <div style={{opacity: 1 - listOut, transform: `translateY(${-30 * listOut}px)`, filter: `blur(${listOut * 8}px)`}}>
-          {CUSTOMERS.map(([name, val], i) => {
-            const sel = i === 1;
+          {crm.rows.map(([name, val], i) => {
+            const sel = i === crm.sel;
             return (
               <div
                 key={name}
@@ -201,25 +198,25 @@ const CrmPanel: React.FC<{t: number; frame: number}> = ({t, frame}) => {
 
         <div style={{position: 'absolute', inset: 0, opacity: rec, transform: `translateY(${(1 - rec) * 30}px)`}}>
           <Card h={128} accent>
-            <Avatar letter="N" active size={64} />
+            <Avatar letter={crm.anchor.name[0]} active size={64} />
             <div style={{flex: 1}}>
-              <div style={{fontSize: 30, fontWeight: 700}}>Northwind Traders</div>
-              <div style={{fontSize: 22, color: 'var(--ink-muted)'}}>Customer since 2022 · $1.2M lifetime</div>
+              <div style={{fontSize: 30, fontWeight: 700}}>{crm.anchor.name}</div>
+              <div style={{fontSize: 22, color: 'var(--ink-muted)'}}>{crm.anchor.sub}</div>
             </div>
-            <Pill tone="ok">Active</Pill>
+            <Pill tone="ok">{crm.anchor.pill}</Pill>
           </Card>
           <Link p={connA} />
           <div style={{opacity: oppIn, transform: `translateY(${(1 - oppIn) * 40}px)`}}>
             <Card h={168} col>
               <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div>
-                  <Eyebrow>Opportunity</Eyebrow>
-                  <div style={{fontSize: 28, fontWeight: 600}}>Annual supply contract</div>
+                  <Eyebrow>{crm.money.eyebrow}</Eyebrow>
+                  <div style={{fontSize: 28, fontWeight: 600}}>{crm.money.title}</div>
                 </div>
-                <div style={{fontSize: 36, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>$48,200</div>
+                <div style={{fontSize: 36, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>{crm.money.amount}</div>
               </div>
               <div style={{display: 'flex', gap: 8, width: '100%'}}>
-                {['Proposal', 'Negotiation', 'Won'].map((s, i) => {
+                {crm.money.stages.map((s, i) => {
                   const on = i <= reached;
                   return (
                     <div key={s} style={{flex: 1}}>
@@ -235,10 +232,10 @@ const CrmPanel: React.FC<{t: number; frame: number}> = ({t, frame}) => {
           <div style={{opacity: ordIn, transform: `translateY(${(1 - ordIn) * 40}px)`}}>
             <Card h={128} accent>
               <div style={{flex: 1}}>
-                <Eyebrow>Order</Eyebrow>
-                <div style={{fontSize: 30, fontWeight: 700}}>#1042 · 240 units</div>
+                <Eyebrow>{crm.order.eyebrow}</Eyebrow>
+                <div style={{fontSize: 30, fontWeight: 700}}>{crm.order.title}</div>
               </div>
-              <Pill tone="accent">Confirmed</Pill>
+              <Pill tone="accent">{crm.order.pill}</Pill>
             </Card>
           </div>
         </div>
@@ -271,22 +268,21 @@ const Kpi: React.FC<{label: string; value: string; delta?: string; flash: number
 const pulse = (t: number, a: number) => seg(t, a, a + 0.25) * (1 - 0.7 * seg(t, a + 0.25, a + 1.4));
 
 const DashPanel: React.FC<{t: number}> = ({t}) => {
+  const {dash} = useCfg();
   const k = seg(t, 17.1, 18.3);
-  const rev = 1280 + 48.2 * k;
-  const orders = 1041 + (t >= 17.1 ? 1 : 0);
-  const ful = 96 + 2.4 * k;
+  const [k0, k1, k2] = dash.kpis.map((x) => x.fmt(lerp(x.from, x.to, k)));
   const line = seg(t, 17.2, 19);
   const pts = [0.35, 0.42, 0.38, 0.5, 0.46, 0.58, 0.55, 0.66, 0.6, lerp(0.62, 0.86, line)];
   const path = pts.map((p, i) => `${i ? 'L' : 'M'}${(i * 808) / 9},${190 - p * 190}`).join(' ');
   return (
     <>
-      <PanelTitle title="Dashboard" right={<Pill tone="accent">Live</Pill>} />
+      <PanelTitle title={dash.title} right={<Pill tone="accent">{dash.pill}</Pill>} />
       <div style={{display: 'flex', gap: 20}}>
-        <Kpi w={394} label="Revenue" value={`$${(rev / 1000).toFixed(2)}M`} flash={pulse(t, 17.1)} />
-        <Kpi w={394} label="Orders" value={orders.toLocaleString('en-US')} flash={pulse(t, 17.1)} />
+        <Kpi w={394} label={dash.kpis[0].label} value={k0} flash={pulse(t, 17.1)} />
+        <Kpi w={394} label={dash.kpis[1].label} value={k1} flash={pulse(t, 17.1)} />
       </div>
       <div style={{marginTop: 20}}>
-        <Kpi w={808} label="On-time fulfilment" value={`${ful.toFixed(1)}%`} delta={k > 0.5 ? '+2.4' : undefined} flash={pulse(t, 17.1)} />
+        <Kpi w={808} label={dash.kpis[2].label} value={k2} delta={k > 0.5 ? dash.kpis[2].delta : undefined} flash={pulse(t, 17.1)} />
       </div>
       <svg width={808} height={200} style={{marginTop: 20, overflow: 'visible'}}>
         <path d={`${path} L808,190 L0,190 Z`} style={{fill: 'var(--accent-a08)'}} />
@@ -296,16 +292,15 @@ const DashPanel: React.FC<{t: number}> = ({t}) => {
   );
 };
 
-const BARS = [38, 52, 44, 61, 55, 68, 59, 72, 64];
-
 const AnaPanel: React.FC<{t: number}> = ({t}) => {
+  const {ana} = useCfg();
   const g = seg(t, 17.2, 18.6);
   const last = lerp(46, 96, g);
   return (
     <>
-      <PanelTitle title="Analytics" right={<Pill tone={g > 0.4 ? 'accent' : 'muted'}>{g > 0.4 ? '+12.4% wk' : 'Revenue / week'}</Pill>} />
+      <PanelTitle title={ana.title} right={<Pill tone={g > 0.4 ? 'accent' : 'muted'}>{g > 0.4 ? ana.badge : ana.legend}</Pill>} />
       <div style={{height: 420, display: 'flex', alignItems: 'flex-end', gap: 26, marginTop: 30, borderBottom: '1px solid var(--line)'}}>
-        {[...BARS, last].map((h, i) => (
+        {[...ana.bars, last].map((h, i) => (
           <div
             key={i}
             style={{
@@ -327,36 +322,29 @@ const AnaPanel: React.FC<{t: number}> = ({t}) => {
 };
 
 /* Ops: kanban with the new order arriving as a task and moving through stages */
-const COLS = ['Queued', 'In progress', 'Done'];
 const COL_W = 250;
 const COL_GAP = 29;
 const slotY = (i: number) => 46 + i * 118;
-const STATIC: {col: number; slot: number; title: string; sub: string}[] = [
-  {col: 0, slot: 1, title: 'Pack #1038', sub: 'Warehouse A'},
-  {col: 0, slot: 2, title: 'Invoice #1039', sub: 'Finance'},
-  {col: 1, slot: 1, title: 'Ship #1036', sub: 'Route 4'},
-  {col: 2, slot: 1, title: 'Deliver #1033', sub: 'Signed'},
-  {col: 2, slot: 2, title: 'Deliver #1034', sub: 'Signed'},
-];
 
 const OpsPanel: React.FC<{t: number}> = ({t}) => {
+  const {ops} = useCfg();
   const spawn = seg(t, 12.3, 12.9);
   const c1 = seg(t, 13.2, 13.9, inOut);
   const c2 = seg(t, 14.6, 15.3, inOut);
   const x = (c1 + c2) * (COL_W + COL_GAP);
   const done = c2 > 0.98;
-  const status = done ? 'Done' : c1 > 0.98 ? 'In progress' : 'Queued';
+  const status = done ? ops.cols[2] : c1 > 0.98 ? ops.cols[1] : ops.cols[0];
   const ontime = 96 + 2.4 * seg(t, 15.3, 16.3);
   return (
     <>
-      <PanelTitle title="Operations" right={<Pill tone="accent">{status}</Pill>} />
+      <PanelTitle title={ops.title} right={<Pill tone="accent">{status}</Pill>} />
       <div style={{position: 'relative', height: 500}}>
-        {COLS.map((c, i) => (
+        {ops.cols.map((c, i) => (
           <div key={c} style={{position: 'absolute', left: i * (COL_W + COL_GAP), top: 0, width: COL_W, fontSize: 22, color: 'var(--ink-muted)', fontWeight: 600}}>
             {c}
           </div>
         ))}
-        {STATIC.map((s) => (
+        {ops.cards.map((s) => (
           <div
             key={s.title}
             style={{
@@ -392,13 +380,13 @@ const OpsPanel: React.FC<{t: number}> = ({t}) => {
             transform: `scale(${lerp(0.9, 1, spawn)})`,
           }}
         >
-          <div style={{fontSize: 24, fontWeight: 700}}>Fulfil #1042</div>
-          <div style={{fontSize: 20, color: 'var(--accent-text)', marginTop: 4}}>{done ? '✓ Complete' : 'Northwind · 240'}</div>
+          <div style={{fontSize: 24, fontWeight: 700}}>{ops.task.title}</div>
+          <div style={{fontSize: 20, color: 'var(--accent-text)', marginTop: 4}}>{done ? ops.task.done : ops.task.sub}</div>
         </div>
       </div>
       <div style={{padding: '18px 22px', borderRadius: 18, background: 'var(--surface-elevated)', border: '1px solid var(--line-hair)'}}>
         <div style={{display: 'flex', justifyContent: 'space-between', fontSize: 22, color: 'var(--ink-muted)'}}>
-          <span>On-time delivery</span>
+          <span>{ops.metric}</span>
           <span style={{color: 'var(--ink)', fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>{ontime.toFixed(1)}%</span>
         </div>
         <div style={{height: 8, borderRadius: 4, background: 'var(--line)', marginTop: 12}}>
@@ -413,14 +401,14 @@ const OpsPanel: React.FC<{t: number}> = ({t}) => {
    Beat A/B — fragmented objects in screen space
    -------------------------------------------------------------------------- */
 const CHIPS = [
-  {name: 'Lead', sub: 'Inbound · New', x: 250, y: 560, a: 26, f: 0.31, p: 0.4, r: -3, d: 0.1},
-  {name: 'Invoice', sub: 'INV-2291 · Due', x: 800, y: 470, a: 22, f: 0.42, p: 2.1, r: 3, d: 0.4},
-  {name: 'Customer', sub: 'Northwind Traders', x: 560, y: 900, a: 24, f: 0.27, p: 1.2, r: -2, d: 0.7},
-  {name: 'Order', sub: '#1042 · Draft', x: 250, y: 1170, a: 28, f: 0.36, p: 3.3, r: 4, d: 1.0},
-  {name: 'Task', sub: 'Follow up · Today', x: 830, y: 1060, a: 20, f: 0.5, p: 0.9, r: -4, d: 1.3},
-  {name: 'Employee', sub: 'A. Rao · Sales', x: 290, y: 1470, a: 24, f: 0.33, p: 4.4, r: 2, d: 1.6},
-  {name: 'Project', sub: 'Rollout · 62%', x: 800, y: 1420, a: 26, f: 0.29, p: 5.1, r: -3, d: 1.9},
-  {name: 'Payment', sub: '$48,200 · Pending', x: 540, y: 1640, a: 22, f: 0.45, p: 2.7, r: 3, d: 2.2},
+  {x: 250, y: 560, a: 26, f: 0.31, p: 0.4, r: -3, d: 0.1},
+  {x: 800, y: 470, a: 22, f: 0.42, p: 2.1, r: 3, d: 0.4},
+  {x: 560, y: 900, a: 24, f: 0.27, p: 1.2, r: -2, d: 0.7},
+  {x: 250, y: 1170, a: 28, f: 0.36, p: 3.3, r: 4, d: 1.0},
+  {x: 830, y: 1060, a: 20, f: 0.5, p: 0.9, r: -4, d: 1.3},
+  {x: 290, y: 1470, a: 24, f: 0.33, p: 4.4, r: 2, d: 1.6},
+  {x: 800, y: 1420, a: 26, f: 0.29, p: 5.1, r: -3, d: 1.9},
+  {x: 540, y: 1640, a: 22, f: 0.45, p: 2.7, r: 3, d: 2.2},
 ];
 const CHIP_W = 300;
 const CHIP_H = 100;
@@ -444,6 +432,7 @@ const chipPos = (i: number, t: number): [number, number] => {
 };
 
 const Chips: React.FC<{t: number; frame: number}> = ({t, frame}) => {
+  const {chips} = useCfg();
   const sel = seg(t, 5.2, 5.5);
   const grow = seg(t, 7.0, 8.0, inOut);
   const others = 1 - seg(t, 6.4, 7.2);
@@ -478,6 +467,7 @@ const Chips: React.FC<{t: number; frame: number}> = ({t, frame}) => {
         })}
       </svg>
       {CHIPS.map((c, i) => {
+        const {name, sub} = chips[i];
         const isC = i === CUST;
         const p = pop(frame, c.d);
         const [x, y] = chipPos(i, t);
@@ -487,7 +477,7 @@ const Chips: React.FC<{t: number; frame: number}> = ({t, frame}) => {
         const on = isC && sel > 0.5;
         return (
           <div
-            key={c.name}
+            key={name}
             style={{
               position: 'absolute',
               left: x - CHIP_W / 2,
@@ -509,10 +499,10 @@ const Chips: React.FC<{t: number; frame: number}> = ({t, frame}) => {
               filter: !isC && others < 1 ? `blur(${(1 - others) * 6}px)` : undefined,
             }}
           >
-            <Avatar letter={c.name[0]} active={on} size={52} />
+            <Avatar letter={name[0]} active={on} size={52} />
             <div style={{minWidth: 0}}>
-              <div style={{fontSize: 28, fontWeight: 700, lineHeight: 1.1}}>{c.name}</div>
-              <div style={{fontSize: 19, color: 'var(--ink-muted)', whiteSpace: 'nowrap'}}>{c.sub}</div>
+              <div style={{fontSize: 28, fontWeight: 700, lineHeight: 1.1}}>{name}</div>
+              <div style={{fontSize: 19, color: 'var(--ink-muted)', whiteSpace: 'nowrap'}}>{sub}</div>
             </div>
             <div style={{marginLeft: 'auto', width: 10, height: 10, borderRadius: 5, background: flick ? 'var(--accent)' : 'var(--line)'}} />
           </div>
@@ -555,6 +545,7 @@ const BAR: [number, number] = [842, 330];
 
 const Flow: React.FC<{t: number}> = ({t}) => {
   const k1 = seg(t, 10.7, 12.2, inOut);
+  const {token} = useCfg();
   const p1 = quad(ORDER_CARD, [-100, -760], TASK_SLOT, k1);
   const legs = [
     {from: DONE_SLOT, c: [300, -200] as [number, number], to: DASH_TILE, a: 15.5, b: 17.0},
@@ -576,7 +567,7 @@ const Flow: React.FC<{t: number}> = ({t}) => {
           <g transform={`translate(${p1[0]} ${p1[1]}) scale(${lerp(1, 0.6, k1)})`} opacity={1 - seg(t, 12.2, 12.5)}>
             <rect x={-95} y={-34} width={190} height={68} rx={18} style={{fill: 'var(--accent)'}} />
             <text x={0} y={9} textAnchor="middle" fontSize={28} fontWeight={700} fontFamily={fontFamily} style={{fill: 'var(--accent-ink)'}}>
-              Order #1042
+              {token}
             </text>
           </g>
         </>
@@ -606,18 +597,9 @@ const Flow: React.FC<{t: number}> = ({t}) => {
 /* ----------------------------------------------------------------------------
    Captions
    -------------------------------------------------------------------------- */
-const CAPTIONS: {a: number; b: number; k: string; text: string}[] = [
-  {a: 0.5, b: 3.9, k: 'Right now', text: 'Your business is scattered.'},
-  {a: 4.3, b: 6.9, k: 'Select one', text: 'One record connects it all.'},
-  {a: 8.3, b: 10.9, k: 'CRM', text: 'Customer. Opportunity. Order.'},
-  {a: 12.4, b: 15.8, k: 'Operations', text: 'The order becomes work.'},
-  {a: 16.6, b: 19.4, k: 'Live', text: 'Every number updates itself.'},
-  {a: 19.9, b: 22.8, k: 'Together', text: 'One environment.'},
-];
-
 const Captions: React.FC<{t: number}> = ({t}) => (
   <>
-    {CAPTIONS.map((c) => {
+    {useCfg().captions.map((c) => {
       const inn = seg(t, c.a, c.a + 0.6);
       const out = seg(t, c.b - 0.4, c.b, inOut);
       const o = inn * (1 - out);
@@ -635,7 +617,14 @@ const Captions: React.FC<{t: number}> = ({t}) => (
 /* ----------------------------------------------------------------------------
    Composition
    -------------------------------------------------------------------------- */
-export const Trailer: React.FC = () => {
+export const Trailer: React.FC<{video?: VideoId}> = ({video = 'general'}) => (
+  <CfgCtx.Provider value={CONFIGS[video]}>
+    <Scene />
+  </CfgCtx.Provider>
+);
+
+const Scene: React.FC = () => {
+  const cfg = useCfg();
   const frame = useCurrentFrame();
   const t = frame / FPS;
 
@@ -705,7 +694,7 @@ export const Trailer: React.FC = () => {
           <Img src={staticFile('logo.svg')} style={{height: 40}} />
           <div style={{fontSize: 34, fontWeight: 700, letterSpacing: '-0.02em'}}>verity</div>
           <div style={{marginLeft: 'auto', display: 'flex', gap: 12}}>
-            {['CRM', 'Operations', 'Dashboard', 'Analytics'].map((n) => (
+            {cfg.tabs.map((n) => (
               <Pill key={n} tone="accent">{n}</Pill>
             ))}
           </div>
@@ -723,7 +712,7 @@ export const Trailer: React.FC = () => {
           <Img src={staticFile('logo.svg')} style={{height: 64}} />
           <div style={{fontSize: 72, fontWeight: 700, letterSpacing: '0.16em', color: 'var(--accent)'}}>VERITY</div>
         </div>
-        <div style={{fontSize: 30, color: 'var(--ink-muted)', marginTop: 26, opacity: outroC}}>Your business, operating as one. · theverityai.xyz</div>
+        <div style={{fontSize: 30, color: 'var(--ink-muted)', marginTop: 26, opacity: outroC}}>{cfg.outroSub}</div>
       </div>
     </AbsoluteFill>
   );
