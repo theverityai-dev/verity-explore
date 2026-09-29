@@ -43,24 +43,24 @@
      variables.css, now stated here so the hero does not depend on an
      @import chain). */
   --font-display: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --text-display: 90px;  --leading-display: 1.1;  --tracking-display: -2.25px;
-  --text-heading-lg: 64px; --tracking-heading-lg: -0.96px;
-  --text-heading: 44px;    --tracking-heading: -0.66px;
-  --text-heading-sm: 26px; --leading-heading-sm: 1.18; --tracking-heading-sm: -0.23px;
-  --text-subheading: 22px; --leading-subheading: 1.5;
-  --text-body-lg: 20px;    --leading-body-lg: 1.35;
-  --text-body: 17px;       --leading-body: 1.35;
-  --text-caption: 15px;    --leading-caption: 1.5;
+  --text-display: 88px;  --leading-display: 1.05; --tracking-display: -0.03em;
+  --text-heading-lg: 60px; --tracking-heading-lg: -0.025em;
+  --text-heading: 42px;    --tracking-heading: -0.02em;
+  --text-heading-sm: 24px; --leading-heading-sm: 1.25; --tracking-heading-sm: -0.012em;
+  --text-subheading: 20px; --leading-subheading: 1.45;
+  --text-body-lg: 18px;    --leading-body-lg: 1.5;
+  --text-body: 16px;       --leading-body: 1.6;
+  --text-caption: 14px;    --leading-caption: 1.5;
   --font-weight-regular: 400; --font-weight-w430: 430; --font-weight-w450: 450;
   --font-weight-w480: 480;    --font-weight-medium: 500;
   --gutter-legacy: 24px;
 }
 
 @media (max-width: 1080px) {
-  :root { --text-display: 64px; --tracking-display: -1.4px; --text-heading-lg: 44px; --text-heading: 34px; }
+  :root { --text-display: 60px; --text-heading-lg: 42px; --text-heading: 32px; }
 }
 @media (max-width: 720px) {
-  :root { --text-display: 44px; --tracking-display: -0.9px; --text-heading-lg: 34px; --text-heading: 28px; }
+  :root { --text-display: 42px; --text-heading-lg: 32px; --text-heading: 26px; --text-heading-sm: 21px; }
 }
 
 .skip {
@@ -234,7 +234,7 @@
 /* Eyebrows: the reference's small uppercase operational label. The hero keeps
    its chevron form. */
 .eyebrow:not(.hero-eyebrow) {
-  font-size: 10.5px; font-weight: 500; letter-spacing: 0.16em;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--ink-muted); gap: 10px;
 }
 .eyebrow:not(.hero-eyebrow)::after {
@@ -509,7 +509,7 @@
 .pf-foot-col { display: flex; flex-direction: column; gap: 10px; }
 .pf-foot-head {
   margin: 0 0 8px;
-  font-size: 10.5px; font-weight: 500; letter-spacing: 0.16em;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--ink-muted);
 }
 .pf-foot-col a {
@@ -645,3 +645,8 @@
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
+
+/* ---- Type rhythm: balanced headings, no orphans, calm small caps ---- */
+h1, h2, h3, .display, .h-lg, .h-md, .h1, .h2, .hero-headline { text-wrap: balance; }
+p, .body, .sub, .lede, .caption { text-wrap: pretty; }
+h3, h4 { letter-spacing: -0.015em; }

@@ -98,7 +98,7 @@
   padding: var(--spacing-28) var(--spacing-24);
   box-shadow: var(--elev-mid);
 }
-.cn-chain-record-eyebrow { font-size: 15px; font-weight: var(--font-weight-w450); color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+.cn-chain-record-eyebrow { font-size: 12px; font-weight: var(--font-weight-w450); color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.1em; margin: 0; }
 .cn-chain-record-id { font-family: var(--font-ui); font-size: var(--text-heading-sm); font-weight: 500; letter-spacing: -0.3px; color: var(--ink); margin: 6px 0 2px; }
 .cn-chain-record-customer { font-size: var(--text-body); color: var(--ink-body); margin: 0; }
 
@@ -111,7 +111,7 @@
   border-top: 1px solid var(--line);
 }
 .cn-chain-record-fields div { display: flex; flex-direction: column; gap: 2px; }
-.cn-chain-record-fields dt { margin: 0; font-size: 14px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.cn-chain-record-fields dt { margin: 0; font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
 .cn-chain-record-fields dd { margin: 0; font-size: var(--text-body); font-weight: 500; color: var(--ink); }
 
 .cn-chain-record-note { margin: var(--spacing-20) 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-muted); }

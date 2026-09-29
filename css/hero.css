@@ -176,7 +176,7 @@
   font-family: var(--font-ui);
   font-weight: 300;
   letter-spacing: -0.03em;
-  line-height: 1.04;
+  line-height: 1.1;
   color: var(--color-ink-black);
 }
 .hero-headline em {
@@ -630,7 +630,7 @@
   /* Headline is set as a device, not a shrunk desktop block: same inline
      dash, same 1.10 leading, measure fit to the viewport instead of a
      hand-tuned pixel width that forces single-word orphan lines. */
-  .hero-headline { max-width: 92vw; line-height: 1.10; }
+  .hero-headline { max-width: 92vw; line-height: 1.1; }
   .hero-ctas { flex-direction: column; width: 100%; max-width: 280px; }
   .hero-ctas .btn { width: 100%; }
 
