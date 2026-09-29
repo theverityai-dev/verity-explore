@@ -6,8 +6,8 @@
 
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join, dirname, relative, sep } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
   FORBIDDEN_CLAIMS, PRIMITIVES, WEDGE, MIN_PRIMITIVES_WITH_WEDGE,
 } from '../content/capabilities.js';
@@ -52,10 +52,10 @@ const hrefs = new Map();
 /* -------------------------------------------------------- per-page QA --- */
 
 for (const file of pages) {
-  const page = file.replace(root + '/', '');
+  const page = relative(root, file).split(sep).join('/');
   const html = await readFile(file, 'utf8');
   const canonicalPath =
-    '/' + page.replace(/index\.html$/, '').replace(/^explore\/$/, '');
+    '/' + page.replace(/index\.html$/, '');
 
   const title = html.match(/<title>([^<]*)<\/title>/)?.[1];
   const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1];
@@ -131,12 +131,12 @@ for (const [page, links] of hrefs) {
       if (!existsSync(join(root, href.slice(1)))) fail(page, `asset not found: ${href}`);
       continue;
     }
-    if (href === '/') continue; /* rewritten to the hub by vercel.json */
+    if (href === '/') continue; /* product landing, index.html */
     const target = join(root, href.slice(1), 'index.html');
     if (!existsSync(target)) fail(page, `dead internal link: ${href}`);
   }
-  const canonicalPath = '/' + page.replace(/index\.html$/, '').replace(/^explore\/$/, '');
-  if (!sitemap.includes(`<loc>https://explore.theverityai.xyz${canonicalPath}</loc>`)) {
+  const canonicalPath = '/' + page.replace(/index\.html$/, '');
+  if (!sitemap.includes(`<loc>https://theverityai.xyz${canonicalPath}</loc>`)) {
     fail(page, `not in sitemap.xml (expected ${canonicalPath})`);
   }
 }
@@ -154,7 +154,7 @@ async function checkPositioning() {
   const files = (await readdir(dir)).filter((f) => f.endsWith('.js') && f !== 'registry.js');
 
   for (const file of files) {
-    const biz = (await import(join(dir, file))).default;
+    const biz = (await import(pathToFileURL(join(dir, file)).href)).default;
     if (biz.status !== 'published') continue;
     const ids = biz.modules.map((m) => m.id);
     const usedWedge = ids.filter((id) => WEDGE.includes(id));

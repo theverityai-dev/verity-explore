@@ -1,36 +1,23 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
       "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
-      "destination": "/explore/index.html"
-    }
-  ],
-  "redirects": [
+      "destination": "https://theverityai.xyz/explore/",
+      "permanent": true
+    },
     {
-      "source": "/explore",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
-      "destination": "/",
+      "destination": "https://theverityai.xyz/:path*",
       "permanent": true
     },
     {
-      "source": "/businesses/:path*",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
-      "destination": "https://explore.theverityai.xyz/businesses/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/industries/:path*",
-      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
-      "destination": "https://explore.theverityai.xyz/industries/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/explore/:path*",
-      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
-      "destination": "https://explore.theverityai.xyz/",
+      "destination": "https://theverityai.xyz/:path*",
       "permanent": true
     }
   ]

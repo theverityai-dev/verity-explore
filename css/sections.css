@@ -623,3 +623,24 @@
 }
 
 .xp-note { color: var(--ink-faint); }
+
+/* Liquid Glass refraction (Chromium only, enabled by js/liquid-glass.js).
+   Thinner tint than the fallback so the displaced backdrop actually shows;
+   a pointer-tracked specular rim sits on the border via ::before. */
+.nav.lg-refract .nav-inner {
+  position: relative;
+  background: color-mix(in srgb, var(--surface-floating) 52%, transparent);
+  backdrop-filter: blur(6px) url(#lg-filter) saturate(170%) brightness(1.04);
+  border-color: transparent;
+}
+.nav.lg-refract.is-scrolled .nav-inner {
+  backdrop-filter: blur(9px) url(#lg-filter) saturate(190%) brightness(1.04);
+}
+.nav.lg-refract .nav-inner::before {
+  content: ""; position: absolute; inset: 0; padding: 1px; pointer-events: none;
+  background: linear-gradient(100deg,
+    var(--nav-border) 0%, var(--nav-specular) calc(var(--lg-x, 50%) - 14%),
+    var(--nav-specular) calc(var(--lg-x, 50%) + 4%), var(--nav-border) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}

@@ -74,9 +74,7 @@ for (const biz of businesses) {
 
 const written = [];
 
-/* The hub lives at /explore/index.html and is rewritten to the Explore host's
-   root by vercel.json. Its canonical is the root, so the physical path never
-   competes with it. */
+/* The hub lives at /explore/ on the single theverityai.xyz origin. */
 written.push(await write('explore/index.html', renderHub(publishedSlugs)));
 written.push(await write('industries/index.html', renderIndustriesIndex(publishedSlugs)));
 
@@ -136,7 +134,7 @@ ${industryCards}
     </ul>
 
     <div class="xp-cta" data-reveal>
-      <a class="btn btn--fill" href="${SITE.origin}/">Browse all ${businesses.length} business types
+      <a class="btn btn--fill" href="${SITE.origin}/explore/">Browse all ${businesses.length} business types
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11.5M8.5 1 12.8 5 8.5 9" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <p class="caption xp-note">Search by business type, or start from your industry.</p>
@@ -166,6 +164,7 @@ ${industryCards}
 
 const urls = [
   { loc: '/', priority: '1.0' },
+  { loc: '/explore/', priority: '0.9' },
   { loc: '/industries/', priority: '0.8' },
   ...Object.keys(INDUSTRIES).map((s) => ({ loc: `/industries/${s}/`, priority: '0.8' })),
   ...businesses.map((b) => ({ loc: `/businesses/${b.slug}/`, priority: '0.7' })),
