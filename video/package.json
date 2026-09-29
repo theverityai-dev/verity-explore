@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts VerityTrailer out/verity-trailer-9x16.mp4",
-    "still": "remotion still src/index.ts VerityTrailer"
+    "render:trailer": "remotion render src/index.ts MainTrailer renders/trailer/verity-main-trailer-16x9.mp4",
+    "render:reel-general": "remotion render src/index.ts Reel-General-9x16 renders/reels/verity-general-9x16.mp4",
+    "render:reel-retail": "remotion render src/index.ts Reel-Retail-9x16 renders/reels/retail-commerce-9x16.mp4",
+    "still": "remotion still src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.529",
     "@remotion/google-fonts": "^4.0.529",
+    "@remotion/paths": "^4.0.529",
     "@types/react": "^19.3.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",

@@ -1,12 +1,15 @@
 import {Composition} from 'remotion';
-import {Trailer} from './Trailer';
-import {DURATION, FPS} from './timeline';
+import {Reel} from './reels/general-9x16/Reel';
+import {DURATION as REEL_DURATION, FPS as REEL_FPS} from './shared/timeline';
+import {MainTrailer} from './trailer/MainTrailer';
+import {DURATION, FPS, H, W} from './trailer/data';
 
-const common = {durationInFrames: DURATION, fps: FPS, width: 1080, height: 1920, component: Trailer} as const;
+const reel = {durationInFrames: REEL_DURATION, fps: REEL_FPS, width: 1080, height: 1920, component: Reel} as const;
 
 export const Root = () => (
   <>
-    <Composition id="VerityTrailer" {...common} defaultProps={{video: 'general' as const}} />
-    <Composition id="RetailCommerce" {...common} defaultProps={{video: 'retail' as const}} />
+    <Composition id="MainTrailer" component={MainTrailer} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
+    <Composition id="Reel-General-9x16" {...reel} defaultProps={{video: 'general' as const}} />
+    <Composition id="Reel-Retail-9x16" {...reel} defaultProps={{video: 'retail' as const}} />
   </>
 );
