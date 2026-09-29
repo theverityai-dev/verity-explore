@@ -4,9 +4,9 @@
    bands stay dark in either theme.
    ========================================================================== */
 :root {
-  --accent-50:#eef0fd; --accent-100:#d7dbfa; --accent-200:#b0b7f5; --accent-300:#828cee;
-  --accent-400:#5e69e6; --accent-500:#4a56df; --accent-600:#3b44c4; --accent-700:#2f37a0;
-  --accent-800:#252c7c; --accent-900:#1c2260;
+  --accent-50:#eef6ff; --accent-100:#d9eaff; --accent-200:#b3d6ff; --accent-300:#80bbff;
+  --accent-400:#479dff; --accent-500:#0a84ff; --accent-600:#0068d6; --accent-700:#0050a8;
+  --accent-800:#003d80; --accent-900:#002a5a;
 
   --accent: var(--accent-500);
   --accent-ink: #ffffff;
@@ -47,14 +47,14 @@
 }
 
 :root[data-theme="dark"] {
-  --accent-ink:#061714; --accent-text: var(--accent-300);
-  --base:#0f1115; --base-alt:#12151a;
-  --surface:#16191f; --surface-elevated:#1c2027;
-  --surface-floating: rgba(38,43,52,0.82);
-  --ink:#f7f8fa; --ink-muted:#9aa1aa;
-  --ink-faint: rgba(247,248,250,0.5); --ink-body: rgba(247,248,250,0.64);
-  --line: rgba(247,248,250,0.14); --line-hair: rgba(247,248,250,0.08);
-  --grid-line: rgba(247,248,250,0.05);
+  --accent-ink:#ffffff; --accent-text: var(--accent-300);
+  --base:#121110; --base-alt:#17140f;
+  --surface:#1c1917; --surface-elevated:#221e1a;
+  --surface-floating: rgba(28,25,22,0.86);
+  --ink:#f7f6f4; --ink-muted:#9a958e;
+  --ink-faint: rgba(247,246,244,0.5); --ink-body: rgba(247,246,244,0.64);
+  --line: rgba(247,246,244,0.14); --line-hair: rgba(247,246,244,0.08);
+  --grid-line: rgba(247,246,244,0.05);
   --elev-low: 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(0,0,0,0.3);
   --elev-mid: 0 2px 6px rgba(0,0,0,0.35), 0 22px 48px rgba(0,0,0,0.5);
   --elev-high: 0 6px 14px rgba(0,0,0,0.4), 0 44px 100px rgba(0,0,0,0.6);
