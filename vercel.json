@@ -13,12 +13,6 @@
       "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
       "destination": "https://theverityai.xyz/:path*",
       "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.theverityai.xyz" }],
-      "destination": "https://theverityai.xyz/:path*",
-      "permanent": true
     }
   ]
 }
