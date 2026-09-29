@@ -48,13 +48,13 @@
 
 :root[data-theme="dark"] {
   --accent-ink:#ffffff; --accent-text: var(--accent-300);
-  --base:#121110; --base-alt:#17140f;
-  --surface:#1c1917; --surface-elevated:#221e1a;
-  --surface-floating: rgba(28,25,22,0.86);
-  --ink:#f7f6f4; --ink-muted:#9a958e;
-  --ink-faint: rgba(247,246,244,0.5); --ink-body: rgba(247,246,244,0.64);
-  --line: rgba(247,246,244,0.14); --line-hair: rgba(247,246,244,0.08);
-  --grid-line: rgba(247,246,244,0.05);
+  --base:#0b0f17; --base-alt:#0f141d;
+  --surface:#141a25; --surface-elevated:#1a2130;
+  --surface-floating: rgba(20,26,37,0.86);
+  --ink:#f4f7fb; --ink-muted:#8e9aae;
+  --ink-faint: rgba(244,247,251,0.5); --ink-body: rgba(244,247,251,0.64);
+  --line: rgba(244,247,251,0.14); --line-hair: rgba(244,247,251,0.08);
+  --grid-line: rgba(244,247,251,0.05);
   --elev-low: 0 1px 2px rgba(0,0,0,0.5), 0 1px 1px rgba(0,0,0,0.3);
   --elev-mid: 0 2px 6px rgba(0,0,0,0.35), 0 22px 48px rgba(0,0,0,0.5);
   --elev-high: 0 6px 14px rgba(0,0,0,0.4), 0 44px 100px rgba(0,0,0,0.6);
