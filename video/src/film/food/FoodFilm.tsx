@@ -46,8 +46,9 @@ const DOT = 40;
    -------------------------------------------------------------------------- */
 type Anchor = {bottom: number} | {top: number};
 type Line = {at: number; out: number; statement: string; support?: string; anchor: Anchor};
-/** Pass shots: bottom edge of the voice note (y 940), the late supplier message the line is about. */
-const ON_VOICE_NOTE: Anchor = {bottom: 1080 - 940};
+/** Pass shots: the text baseline, which the pass framing puts the voice note's bottom edge on (the late supplier
+ *  message the lines are about). */
+const ON_VOICE_NOTE: Anchor = {bottom: TEXT.bottom};
 /** Overview: the panel's bottom edge, which is the film's text baseline. */
 const ON_BASELINE: Anchor = {bottom: TEXT.bottom};
 /** Pushed workflows: statement cap line on the workflow title's cap line. */
@@ -58,7 +59,7 @@ const LINES: Line[] = [
   {at: 8.6, out: 12.6, statement: 'The day,\nunderstood while\nit is still running.', support: 'Orders, stock, people and money on one record.', anchor: ON_BASELINE},
   {at: 13.2, out: 19.4, statement: 'A shortage,\ncaught before\nit happens.', anchor: ON_TITLE},
   {at: 20.0, out: 25.2, statement: 'Labour, compared\nwith covers\nand revenue.', anchor: ON_TITLE},
-  {at: 26.2, out: 30.2, statement: `${TYPES.length} business types.`, anchor: ON_BASELINE},
+  {at: 26.0, out: 30.2, statement: `${TYPES.length} business types.`, anchor: ON_BASELINE},
 ];
 
 const Statement: React.FC<{t: number; line: Line}> = ({t, line}) => {
@@ -80,11 +81,27 @@ const Statement: React.FC<{t: number; line: Line}> = ({t, line}) => {
 const TICKETS = [
   {x: 1010, y: 200, h: 520, rot: -2.4, head: 'TABLE 4', time: '20:07', items: ['Prawn starter', 'Dal makhani ×2', 'Garlic naan ×3', 'Kulfi'], seed: 5},
   {x: 1340, y: 170, h: 600, rot: 1.6, head: 'TABLE 9', time: '20:12', items: ['Starter platter', 'Butter chicken', 'Paneer tikka', 'Biryani ×2', 'Raita', 'Gulab jamun ×4'], seed: 9},
-  {x: 1660, y: 215, h: 470, rot: -0.9, head: 'DELIVERY', time: '20:15', items: ['Biryani ×2', 'Raita', 'Soft drink ×2'], seed: 21},
+  // Framed as a paper edge at the right of frame: the crop falls before its text starts, never through a word.
+  {x: 1790, y: 215, h: 470, rot: -0.9, head: 'DELIVERY', time: '20:15', items: ['Biryani ×2', 'Raita', 'Soft drink ×2'], seed: 21},
 ];
 const TW = 280;
-/** Bounding box of ticket 2's barcode strip, the target of the match-cut. */
-const MATCH = {x: TICKETS[1].x - 100, y: TICKETS[1].y + TICKETS[1].h - 60, w: 200, h: 34};
+/** Voice note box in pass coordinates. */
+const VN = {x: 1010, y: 836, w: 560, h: 104};
+
+/** Camera framing for the pass: a close shot, not a wide one. Scales the pass by PASS_S, keeps the first ticket's left
+ *  edge on the product zone (x 870), and puts the voice note's bottom on the text baseline (y 984). The rail and the
+ *  ticket pins fall above the frame, so the tickets hang from outside it, and the third ticket bleeds off the right edge. */
+const PASS_S = 1.3;
+const PASS_DX = 870 - 870 * PASS_S;
+const PASS_DY = 1080 - TEXT.bottom - (VN.y + VN.h) * PASS_S;
+
+/** Bounding box of ticket 2's barcode strip on screen, the target of the match-cut. */
+const MATCH = {
+  x: (TICKETS[1].x - 100) * PASS_S + PASS_DX,
+  y: (TICKETS[1].y + TICKETS[1].h - 60) * PASS_S + PASS_DY,
+  w: 200 * PASS_S,
+  h: 34 * PASS_S,
+};
 
 const Ticket: React.FC<{k: number; t: number}> = ({k, t}) => {
   const c = TICKETS[k];
@@ -125,7 +142,7 @@ const Ticket: React.FC<{k: number; t: number}> = ({k, t}) => {
 const VoiceNote: React.FC<{t: number}> = ({t}) => {
   const o = seg(t, 1.2, 2.0);
   return (
-    <div style={{position: 'absolute', left: 1130, top: 836, width: 560, height: 104, boxSizing: 'border-box', padding: '0 28px', display: 'flex', alignItems: 'center', gap: 22, borderRadius: 30, background: 'rgba(28,36,52,0.9)', border: '1px solid rgba(255,255,255,0.08)', boxShadow: '0 24px 60px rgba(0,0,0,0.5)', opacity: o}}>
+    <div style={{position: 'absolute', left: VN.x, top: VN.y, width: VN.w, height: VN.h, boxSizing: 'border-box', padding: '0 28px', display: 'flex', alignItems: 'center', gap: 22, borderRadius: 30, background: 'rgba(28,36,52,0.9)', border: '1px solid rgba(255,255,255,0.08)', boxShadow: '0 24px 60px rgba(0,0,0,0.5)', opacity: o}}>
       <div style={{width: 56, height: 56, borderRadius: 28, background: 'rgba(255,255,255,0.12)', display: 'grid', placeItems: 'center', flex: 'none'}}>
         <div style={{width: 0, height: 0, borderTop: '11px solid transparent', borderBottom: '11px solid transparent', borderLeft: '18px solid #f4f7fb', marginLeft: 5}} />
       </div>
@@ -163,13 +180,15 @@ const Pass: React.FC<{t: number}> = ({t}) => {
   // Depth exit: the pass recedes and softens as the panel arrives from behind, rather than sliding off-frame.
   const exit = seg(t, 6.6, 8.2, smooth);
   return (
-    <div style={{position: 'absolute', inset: 0, opacity: 1 - exit, filter: exit > 0.02 ? `blur(${8 * exit}px)` : undefined, transform: `translateX(${-14 * drift}px) scale(${(1 + 0.025 * drift) * (1 - 0.06 * exit)})`, transformOrigin: '1300px 480px'}}>
-      <div style={{position: 'absolute', left: 860, top: 100, width: 960, height: 800, background: 'radial-gradient(ellipse at 50% 42%, rgba(255,236,205,0.10), transparent 66%)'}} />
-      <div style={{position: 'absolute', left: 900, top: 148, width: 940, height: 4, background: 'linear-gradient(90deg, transparent, rgba(210,216,226,0.5) 8%, rgba(210,216,226,0.5) 92%, transparent)', opacity: seg(t, 0.4, 1.2)}} />
-      {TICKETS.map((_, k) => (
-        <Ticket key={k} k={k} t={t} />
-      ))}
-      <VoiceNote t={t} />
+    <div style={{position: 'absolute', inset: 0, opacity: 1 - exit, filter: exit > 0.02 ? `blur(${8 * exit}px)` : undefined, transform: `translateX(${-14 * drift}px) scale(${(1 + 0.025 * drift) * (1 - 0.06 * exit)})`, transformOrigin: '1300px 540px'}}>
+      <div style={{position: 'absolute', inset: 0, transformOrigin: '0 0', transform: `translate(${PASS_DX}px, ${PASS_DY}px) scale(${PASS_S})`}}>
+        <div style={{position: 'absolute', left: 860, top: 100, width: 960, height: 800, background: 'radial-gradient(ellipse at 50% 42%, rgba(255,236,205,0.10), transparent 66%)'}} />
+        <div style={{position: 'absolute', left: 900, top: 148, width: 940, height: 4, background: 'linear-gradient(90deg, transparent, rgba(210,216,226,0.5) 8%, rgba(210,216,226,0.5) 92%, transparent)', opacity: seg(t, 0.4, 1.2)}} />
+        {TICKETS.map((_, k) => (
+          <Ticket key={k} k={k} t={t} />
+        ))}
+        <VoiceNote t={t} />
+      </div>
     </div>
   );
 };
@@ -188,7 +207,8 @@ const Panel: React.FC<{t: number}> = ({t}) => {
   const scale = lerp(lerp(hero, PUSH, push), 0.9, exit);
   const tilt = lerp(lerp(7, 3, rise), 0, push); // the hero tilt settles flat as the camera arrives
   const blur = 10 * (1 - rise) + 8 * exit;
-  const opacity = Math.min(1, rise * 1.4) * (1 - exit);
+  // The fade leads the pull-back, so a blurred, half-transparent panel never lingers as a grey slab.
+  const opacity = Math.min(1, rise * 1.4) * (1 - seg(t, T_EXIT, T_EXIT + 0.6, smooth));
 
   const a = 1 - seg(t, 13.75, 14.35);
   const b1 = seg(t, 13.9, 14.5) * (1 - seg(t, 19.4, 20.0));
@@ -369,8 +389,8 @@ const Names: React.FC<{t: number}> = ({t}) => {
   const out = seg(t, 30.1, 30.7, smooth);
   const rows = Math.ceil(TYPES.length / 2);
   // The last row sits on the same baseline as the statement "14 business types." (box bottoms differ by the
-  // 72px vs 42px descender offset, 6px).
-  const lastBottom = 1080 - TEXT.bottom - 6;
+  // 72px vs 50px descender offset, 5px). The list is set as a block that fills the product zone's height.
+  const lastBottom = 1080 - TEXT.bottom - 5;
   return (
     <div style={{position: 'absolute', inset: 0, opacity: 1 - out}}>
       {TYPES.map((n, i) => {
@@ -378,7 +398,7 @@ const Names: React.FC<{t: number}> = ({t}) => {
         const row = i % rows;
         const p = seg(t, 26.5 + i * 0.11, 27.3 + i * 0.11, glide);
         return (
-          <div key={n} style={{position: 'absolute', left: UI.x + col * 480, top: lastBottom - 42 - (rows - 1 - row) * 80, fontSize: 42, lineHeight: 1, fontWeight: 300, letterSpacing: '-0.02em', whiteSpace: 'nowrap', color: DK.ink, opacity: p, transform: `translateY(${(1 - p) * 18}px)`}}>
+          <div key={n} style={{position: 'absolute', left: UI.x + col * 540, top: lastBottom - 50 - (rows - 1 - row) * 92, fontSize: 50, lineHeight: 1, fontWeight: 300, letterSpacing: '-0.02em', whiteSpace: 'nowrap', color: DK.ink, opacity: p, transform: `translateY(${(1 - p) * 18}px)`}}>
             {n}
           </div>
         );
@@ -397,26 +417,28 @@ const Close: React.FC<{t: number}> = ({t}) => {
   const w = seg(t, 31.3, 32.0, glide);
   const s = seg(t, 31.7, 32.5, glide);
   const u = seg(t, 32.2, 32.8, glide);
-  const fade = 1 - seg(t, 33.9, 34.6, smooth);
-  // Brand moment: the only centred frame in the film, one lockup with lots of space. URL stays small.
+  // Clears before the hand-off ticket rises into the same centre spot.
+  const fade = 1 - seg(t, 33.0, 33.5, smooth);
+  // Brand moment: the only centred frame in the film, one lockup at a size that holds the frame. URL stays small.
   return (
     <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', opacity: fade}}>
-      <div style={{display: 'flex', alignItems: 'center', gap: 20}}>
-        {t >= 30.75 ? <Mark height={58} draw={draw} fill={fill} /> : <div style={{width: 46, height: 58}} />}
-        <div style={{fontSize: 64, fontWeight: 600, letterSpacing: '-0.04em', color: DK.ink, opacity: w, transform: `translateY(${(1 - w) * 14}px)`}}>verity</div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 26}}>
+        {t >= 30.75 ? <Mark height={80} draw={draw} fill={fill} /> : <div style={{width: 64, height: 80}} />}
+        <div style={{fontSize: 92, fontWeight: 600, letterSpacing: '-0.045em', color: DK.ink, opacity: w, transform: `translateY(${(1 - w) * 16}px)`}}>verity</div>
       </div>
-      <div style={{fontSize: 40, fontWeight: 300, letterSpacing: '-0.02em', color: DK.ink, marginTop: 36, opacity: s, transform: `translateY(${(1 - s) * 14}px)`}}>Food &amp; Hospitality</div>
-      <div style={{fontSize: 20, fontWeight: 400, letterSpacing: '0.02em', color: DK.muted, marginTop: 22, opacity: u}}>theverityai.xyz</div>
+      <div style={{fontSize: 52, fontWeight: 300, letterSpacing: '-0.025em', color: DK.ink, marginTop: 40, opacity: s, transform: `translateY(${(1 - s) * 16}px)`}}>Food &amp; Hospitality</div>
+      <div style={{fontSize: 22, fontWeight: 400, letterSpacing: '0.02em', color: DK.muted, marginTop: 26, opacity: u}}>theverityai.xyz</div>
     </div>
   );
 };
 
 const Handoff: React.FC<{t: number}> = ({t}) => {
-  if (t < 33.2) return null;
-  const p1 = seg(t, 33.2, 34.0, glide);
+  if (t < 33.3) return null;
+  // The ticket rises into the centre the lockup just vacated, then opens to full frame.
+  const p1 = seg(t, 33.3, 34.0, glide);
   const p2 = seg(t, 34.0, 35.0, smooth);
-  const y0 = lerp(1110, 330, p1);
-  const box = {x: lerp(1300, 0, p2), y: lerp(y0, 0, p2), w: lerp(300, 1920, p2), h: lerp(520, 1080, p2)};
+  const y0 = lerp(1110, (1080 - 520) / 2, p1);
+  const box = {x: lerp((1920 - 300) / 2, 0, p2), y: lerp(y0, 0, p2), w: lerp(300, 1920, p2), h: lerp(520, 1080, p2)};
   return (
     <div
       style={{

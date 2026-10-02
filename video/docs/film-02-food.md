@@ -26,7 +26,7 @@ pre-render audit). Applied to this film as a polish pass on 2026-10-02.
 | Time | Shot | Statement (left column) | On screen (right) |
 |---|---|---|---|
 | 0:00-1:30 | Match-cut in | none | Film 01's cream barcode contracts into the barcode strip of an order ticket |
-| 1:30-4:00 | The pass | "Service ends at eleven." | Three paper order tickets on a rail, a supplier voice note. Slow drift. |
+| 1:30-4:00 | The pass | "Service ends at eleven." | A close shot at 1.3x: two order tickets hang from a rail above the frame, a third shows as a paper edge at the right, and the supplier voice note sits on the text baseline. Slow drift. |
 | 4:00-7:00 | The problem | "The numbers should not arrive next month." | Same shot, nothing added |
 | 7:00-12:30 | The surface | "The day, understood while it is still running." / Orders, stock, people and money on one record. | The pass recedes into blur as the light glass panel arrives from behind, tilted 7° and settling to 3°: Revenue today ₹2.14 L, Average order ₹1,150, Prep stock 4 low, On shift 17, and the four attention rows |
 | 13:00-19:30 | A shortage | "A shortage, caught before it happens." (cap line on the workflow title) | The camera pushes in to 1.24x and the panel settles flat, bleeding off the right and bottom edges. "Prawns below par for tomorrow's covers" opens into the real five-step workflow |
@@ -55,6 +55,18 @@ Changes in the polish pass:
 - Micro text is now 17-19px. The "Live" label fades before the push crops the right edge.
 - Roster dot pitch went from 46 to 40, so the two empty seats stay inside the frame when pushed in.
 - The close is a centred lockup.
+
+Second audit (every second of the render), fixes:
+
+- **Pass scale:** the tickets were small and clustered top-right, reading as clip art. The pass is now framed as a close
+  shot (`PASS_S` 1.3): the tickets hang from above the frame, and the voice note sits on the text baseline beside the
+  statements. Ticket 3 shows only as a paper edge, so the crop never cuts through its text. The match-cut target follows
+  the framing.
+- **Panel exit:** the fade now leads the pull-back, so no blurred grey slab lingers behind "14 business types".
+- **Breadth:** names are now 50px on a 92px pitch with 540px columns, filling the product zone's height, with the last
+  row still on the statement's baseline. The statement enters at 26.0s so there is no empty beat.
+- **Close:** the lockup is larger (mark 80, wordmark 92, title 52). It clears by 33.5s, and the hand-off ticket rises into
+  the same centre spot instead of beside it.
 
 Known limits: the opening barcode is still slightly darkened by the vignette. Pending workflow steps are light grey by
 design. Film 01 has not been polished against this skill.
