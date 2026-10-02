@@ -6,6 +6,7 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render:trailer": "remotion render src/index.ts MainTrailer renders/trailer/verity-main-trailer-16x9.mp4",
+    "render:brag": "remotion render src/index.ts Brag-Verity-16x9 renders/brag/verity-brag-16x9.mp4 --crf=16",
     "render:reel-general": "remotion render src/index.ts Reel-General-9x16 renders/reels/verity-general-9x16.mp4",
     "render:reel-retail": "remotion render src/index.ts Reel-Retail-9x16 renders/reels/retail-commerce-9x16.mp4",
     "still": "remotion still src/index.ts",
