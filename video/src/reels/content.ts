@@ -3,6 +3,8 @@
 // @ts-ignore untyped site content
 import retailStores from '../../../content/businesses/retail-stores.js';
 // @ts-ignore untyped site content
+import restaurants from '../../../content/businesses/restaurants.js';
+// @ts-ignore untyped site content
 import {REGISTRY} from '../../../content/businesses/registry.js';
 
 export type Panel = {
@@ -18,6 +20,12 @@ export const RETAIL = {
   headline: retailStores.hero.headline as string,
   panel: retailStores.hero.panel as Panel,
   workflows: retailStores.workflows as Workflow[],
+};
+
+export const FOOD = {
+  headline: restaurants.hero.headline as string,
+  panel: restaurants.hero.panel as Panel,
+  workflows: restaurants.workflows as Workflow[],
 };
 
 /** Business-type names for one industry, in registry order. */

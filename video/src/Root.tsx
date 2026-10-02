@@ -3,6 +3,7 @@ import {Reel} from './reels/general-9x16/Reel';
 import {DURATION as REEL_DURATION, FPS as REEL_FPS} from './shared/timeline';
 import {BRAG_DURATION, BRAG_FPS, Brag} from './brag/Brag';
 import {FFPS, FH, FW} from './film/engine';
+import {FOOD_DURATION, FoodFilm} from './film/food/FoodFilm';
 import {FILM_DURATION, RetailFilm} from './film/retail/RetailFilm';
 import {RETAIL_DURATION, Retail} from './reels/retail/Retail';
 import {RFPS, RH, RW} from './reels/kit';
@@ -15,6 +16,7 @@ export const Root = () => (
   <>
     <Composition id="MainTrailer" component={MainTrailer} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
     <Composition id="Brag-Verity-16x9" component={Brag} durationInFrames={BRAG_DURATION} fps={BRAG_FPS} width={W} height={H} />
+    <Composition id="Film-02-Food-16x9" component={FoodFilm} durationInFrames={FOOD_DURATION} fps={FFPS} width={FW} height={FH} />
     <Composition id="Film-01-Retail-16x9" component={RetailFilm} durationInFrames={FILM_DURATION} fps={FFPS} width={FW} height={FH} />
     <Composition id="Reel-01-Retail-9x16" component={Retail} durationInFrames={RETAIL_DURATION} fps={RFPS} width={RW} height={RH} />
     <Composition id="Reel-General-9x16" {...reel} defaultProps={{video: 'general' as const}} />
