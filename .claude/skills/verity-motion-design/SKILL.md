@@ -5,6 +5,11 @@ description: Art-direction and motion-design layer for every Verity industry fil
 
 # verity-motion-design
 
+> **Precedence: LEGACY for new work.** All new Verity videos follow `verity-design-language` (bright daylight world,
+> ultra-light type with a blue payoff phrase, daylight glass). The dark-world rules below describe Film 01 (Retail),
+> Film 02 (Food) and the Adapt reel and apply only when maintaining those. Where the two disagree, `verity-design-language`
+> wins. The camera, easing and restraint principles in sections 3, 4 and 8 still apply.
+
 The standard every Verity industry film is held to. It sits on top of the code system in `video/src/film/`
 (`layout.ts` grid and materials, `engine.tsx` camera, grade and audio, `props.tsx`) and the content bridge
 `video/src/reels/content.ts`. Principles come from studying premium SaaS product films (see

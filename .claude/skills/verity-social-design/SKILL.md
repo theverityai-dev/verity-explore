@@ -5,6 +5,10 @@ description: Visual and design system for every Verity Instagram and Meta creati
 
 # verity-social-design
 
+> **Scope note:** `verity-design-language` (daylight world, blue payoff headline) now governs all new **video**. This skill's
+> dark-world and "accent is never a headline colour" rules are unchanged for static social until the daylight language is
+> explicitly extended to social.
+
 Films are cinematic motion (`verity-motion-design`). Social is editorial product communication. Both are the same brand:
 a dark world, light product UI, refined glass, Inter, and restraint. This skill is the visual authority for Verity
 social. Copy and marketing skills (`copywriting`, `social`, `ad-creative`, `ads`, `content-strategy`) may shape
