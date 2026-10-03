@@ -6,6 +6,7 @@
 !.claude/skills/
 .claude/skills/*
 !.claude/skills/verity-motion-design/
+!.claude/skills/verity-social-design/
 
 # Browser-automation scratch output
 .playwright-cli/
