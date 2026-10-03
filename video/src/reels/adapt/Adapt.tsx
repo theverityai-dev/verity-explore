@@ -1,42 +1,112 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {seg, track} from '../../shared/timeline';
-import {Cam, D, DURATION, FPS, Grade, H, L, Line, Mark, Obj3, TEXT_TOP, TEXT_X, W, WorldBase, fontFamily, glide, lerp, smooth} from './base';
+import {Cam, DURATION, FPS, DayGrade, L, Mark, Obj3, PaperBase, fontFamily, glide, lerp, smooth} from './base';
+import {Headline, Rule, Subline} from '../../brand/kit';
+import {DAY} from '../../brand/language';
 import {ARTEFACTS, Erp, idle} from './props';
 import {BlankBody, BuildBody, MapBody, PH, PW, ProposalBody, VPanel} from './panel';
 
 export {DURATION, FPS};
-export const ADAPT_W = W;
-export const ADAPT_H = H;
 
-/* Panel anchor (screen px). Text lives above it, the product surface below: one asymmetric column, one focal object. */
-const PCX = W / 2;
-const PCY = 1070; // panel centre in the surface group's own (design) coordinates
+export type Aspect = '8:9' | '9:16' | '16:9';
+
+type Ghost = {i: number; x: number; y: number; z: number; rz: number; ry: number};
+type Layout = {
+  w: number;
+  h: number;
+  /** the surface group: designed on a 900x1020 panel, scaled by PS and centred at (GROUP_CX, GROUP_CY) */
+  PS: number;
+  GROUP_CX: number;
+  GROUP_CY: number;
+  /** opening cluster: positions are scaled (xs, ys), shifted (yoff) and sized (k) per canvas */
+  cluster: {k: number; xs: number; ys: number; yoff: number};
+  /** the one pre-end-card line ("Pre-built software. / Pre-built workflow."): left, top, font px */
+  text: {x: number; y: number; px: number};
+  /** y of the lockup mark centre. Everything else on the end card is placed relative to it. */
+  endY: number;
+  ghosts: Ghost[];
+};
+
+/** All px values are for a 1080-unit short side. Panels keep the same design; only the fit changes. */
+export const LAYOUTS: Record<Aspect, Layout> = {
+  '8:9': {
+    w: 1080,
+    h: 1215,
+    PS: 0.86,
+    GROUP_CX: 540,
+    GROUP_CY: 672,
+    cluster: {k: 0.8, xs: 1, ys: 1, yoff: 0},
+    text: {x: 153, y: 74, px: 69},
+    endY: 397,
+    ghosts: [
+      {i: 0, x: -300, y: 560, z: -350, rz: -5, ry: -12}, // register, under the bottom edge
+      {i: 1, x: 260, y: 610, z: -420, rz: 3, ry: 10}, // sheet
+      {i: 2, x: -60, y: 680, z: -760, rz: -3, ry: -10}, // chat
+      {i: 5, x: 700, y: 200, z: -620, rz: 5, ry: 18}, // bill, right edge
+      {i: 6, x: -700, y: 160, z: -650, rz: -3, ry: -20}, // checklist, left edge
+      {i: 3, x: 600, y: -420, z: -720, rz: 8, ry: 14}, // slip, top right
+      {i: 4, x: -600, y: -420, z: -640, rz: -9, ry: -8}, // sticky, top left
+    ],
+  },
+  '9:16': {
+    w: 1080,
+    h: 1920,
+    PS: 1,
+    GROUP_CX: 540,
+    GROUP_CY: 1000,
+    cluster: {k: 1, xs: 1.2, ys: 1.5, yoff: 40},
+    text: {x: 90, y: 215, px: 88},
+    endY: 748,
+    ghosts: [
+      {i: 0, x: -300, y: 730, z: -350, rz: -5, ry: -12},
+      {i: 1, x: 270, y: 780, z: -420, rz: 3, ry: 10},
+      {i: 2, x: -40, y: 890, z: -760, rz: -3, ry: -10},
+      {i: 5, x: 500, y: 260, z: -620, rz: 5, ry: 18},
+      {i: 6, x: -520, y: 190, z: -650, rz: -3, ry: -20},
+      {i: 3, x: 450, y: -230, z: -720, rz: 8, ry: 14},
+      {i: 4, x: -480, y: -230, z: -640, rz: -9, ry: -8},
+    ],
+  },
+  '16:9': {
+    w: 1920,
+    h: 1080,
+    PS: 0.9,
+    GROUP_CX: 1250,
+    GROUP_CY: 540,
+    cluster: {k: 0.92, xs: 2.0, ys: 1.0, yoff: 0},
+    text: {x: 130, y: 400, px: 80},
+    endY: 328,
+    ghosts: [
+      {i: 0, x: -560, y: 150, z: -350, rz: -5, ry: -12},
+      {i: 1, x: -330, y: 360, z: -420, rz: 3, ry: 10},
+      {i: 2, x: -700, y: -240, z: -700, rz: -3, ry: -10},
+      {i: 6, x: -840, y: 230, z: -650, rz: -3, ry: -20},
+      {i: 4, x: -450, y: -330, z: -640, rz: -9, ry: -8},
+      {i: 5, x: 1220, y: 150, z: -620, rz: 5, ry: 18},
+      {i: 3, x: 1050, y: -330, z: -720, rz: 8, ry: 14},
+    ],
+  },
+};
+
+export const ADAPT_ASPECTS: Aspect[] = ['8:9', '9:16', '16:9'];
+
+/* Design-space anchors of the surface group (900x1020 panel centred here). */
+const PCX = 540;
+const PCY = 1070;
 const RIG_ORIGIN_Y = 700;
-/** The surface group is designed on a 900x1020 panel. In the 8:9 frame it is scaled by PS and centred at GROUP_CY,
- *  which leaves a 233px band at the top for the one piece of on-screen copy (and the end card re-centres everything). */
-const PS = 0.86;
-const GROUP_CY = 672;
-/** Where the panel collapses to: the logo tile of the end card, in real frame coordinates. */
-const TILE_RX = 398;
-const TILE_RY = 430;
 
 /* ---------------------------------------------------------------------------------------------------------------- */
-/* Ghosts: the old world, far behind the glass. They are why the glass reads as glass.                                */
-const GHOSTS: {i: number; x: number; y: number; z: number; rz: number; ry: number}[] = [
-  {i: 0, x: -300, y: 560, z: -350, rz: -5, ry: -12}, // register, under the bottom edge
-  {i: 1, x: 260, y: 610, z: -420, rz: 3, ry: 10}, // sheet
-  {i: 2, x: -60, y: 680, z: -760, rz: -3, ry: -10}, // chat
-  {i: 5, x: 700, y: 200, z: -620, rz: 5, ry: 18}, // bill, right edge
-  {i: 6, x: -700, y: 160, z: -650, rz: -3, ry: -20}, // checklist, left edge
-  {i: 3, x: 600, y: -420, z: -720, rz: 8, ry: 14}, // slip, top right
-  {i: 4, x: -600, y: -420, z: -640, rz: -9, ry: -8}, // sticky, top left
-];
-
-/* ---------------------------------------------------------------------------------------------------------------- */
-export const Adapt: React.FC = () => {
+export const Adapt: React.FC<{aspect: Aspect}> = ({aspect}) => {
   const frame = useCurrentFrame();
   const t = frame / FPS;
+  const LAY = LAYOUTS[aspect];
+  const {PS, GROUP_CX, GROUP_CY, ghosts: GHOSTS} = LAY;
+  const W = LAY.w;
+  const H = LAY.h;
+  const TILE_RX = W / 2 - 105; // mark centre of the lockup (mark 76px + gap + wordmark, centred on the canvas)
+  const TILE_RY = LAY.endY;
+  const u = W / 100;
 
   /* ---- camera, expressed as one push on the surface (rig) and a matching dolly on the ghosts ---- */
   const rig = track(
@@ -49,8 +119,8 @@ export const Adapt: React.FC = () => {
       [26.0, 1.045],
       [31.0, 1.0],
       [36.0, 1.04],
-      [40.0, 1.09],
-      [41.9, 1.0],
+      [38.8, 1.09],
+      [40.0, 1.0],
     ],
     smooth,
   );
@@ -60,9 +130,7 @@ export const Adapt: React.FC = () => {
   const cam1: Cam = {x: track(t, [[0, -45], [5.2, 45]], smooth), y: track(t, [[0, 30], [5.2, -20]], smooth), z: track(t, [[0, -340], [5.4, 190]], smooth)};
 
   /* ---- scene clocks ---- */
-  const light = seg(t, 41.4, 42.4, smooth);
-  const bloomR = lerp(-440, 1950, seg(t, 41.0, 42.5, smooth));
-  const ghostsOn = seg(t, 9.4, 10.8, glide) * (1 - seg(t, 40.6, 41.6));
+  const ghostsOn = seg(t, 9.4, 10.8, glide) * (1 - seg(t, 39.2, 40.2));
   const ghostDim = 1 - 0.65 * seg(t, 26.0, 27.0) + 0.65 * seg(t, 30.6, 31.6);
   const erpIn = seg(t, 5.6, 6.5, glide);
   const erpOut = seg(t, 8.9, 10.4, (n) => n);
@@ -73,16 +141,17 @@ export const Adapt: React.FC = () => {
   const panelOpacity = panelIn * (1 - 0.86 * seg(t, 25.8, 27.0, smooth) + 0.86 * seg(t, 30.4, 31.6, smooth));
   const panelScale = rig * lerp(0.94, 1, panelIn) * s6;
   const ry = lerp(-9, 0, seg(t, 9.3, 11.4, glide)) + track(t, [[35.8, 0], [37.0, -6], [39.6, 0]], smooth);
-  const collapse = seg(t, 41.0, 42.5, smooth);
-  const tileCx = PCX + (TILE_RX - W / 2) / PS;
+  const collapse = seg(t, 39.6, 41.0, smooth);
+  const tileCx = PCX + (TILE_RX - GROUP_CX) / PS;
   const tileCy = PCY + (TILE_RY - GROUP_CY) / PS;
   const tileSize = 112 / PS;
   const pw = lerp(PW, tileSize, collapse);
   const ph = lerp(PH, tileSize, collapse);
   const pcx = lerp(PCX, tileCx, collapse);
   const pcy = lerp(PCY, tileCy, collapse);
-  const bodyOpacity = (1 - seg(t, 41.0, 41.7)) * (1 - 0.88 * seg(t, 25.8, 27.0) + 0.88 * seg(t, 30.4, 31.6));
-  const markP = seg(t, 42.0, 42.7, glide);
+  const bodyOpacity = (1 - seg(t, 39.6, 40.3)) * (1 - 0.88 * seg(t, 25.8, 27.0) + 0.88 * seg(t, 30.4, 31.6));
+  const markP = seg(t, 40.3, 40.9, glide);
+  const glassOut = seg(t, 41.0, 41.5, smooth);
 
   const state = t < 14.0 ? 'New' : t < 34.7 ? 'Draft' : 'Live';
   const liveP = seg(t, 34.7, 35.0);
@@ -130,15 +199,14 @@ export const Adapt: React.FC = () => {
   const chainOut = seg(t, 30.5, 31.2, smooth);
 
   /* ---- S9 lockup ---- */
-  const lock = lerp(0.975, 1, seg(t, 42.0, 45, smooth));
   const reveal = (a: number, b: number, rise: number, blur: number): React.CSSProperties => {
     const p = seg(t, a, b, glide);
     return {opacity: Math.min(1, p * 1.4), transform: `translateY(${(1 - p) * rise}px) scale(${lerp(0.97, 1, p)})`, filter: p < 0.98 ? `blur(${(1 - p) * blur}px)` : undefined};
   };
 
   return (
-    <AbsoluteFill style={{fontFamily, fontFeatureSettings: '"cv02","cv03","cv04","ss03"', color: D.ink, overflow: 'hidden', background: D.base}}>
-      <WorldBase cam={ghostCam} />
+    <AbsoluteFill style={{fontFamily, fontFeatureSettings: '"cv02","cv03","cv04","ss03"', color: DAY.ink, overflow: 'hidden', background: DAY.paper}}>
+      <PaperBase t={t} />
 
       {/* ghosts */}
       {ghostsOn > 0.003 ? (
@@ -156,9 +224,9 @@ export const Adapt: React.FC = () => {
                 w={a.w}
                 h={a.h}
                 cam={ghostCam}
-                opacity={ghostsOn * ghostDim * 0.62}
+                opacity={ghostsOn * ghostDim * 0.78}
                 blur={9}
-                k={0.8}
+                k={LAY.cluster.k}
               >
                 {a.node}
               </Obj3>
@@ -174,11 +242,11 @@ export const Adapt: React.FC = () => {
             const id = idle(a, i, t);
             const appear = 0.25 + 0.75 * seg(t, 0, 0.9 + i * 0.12, glide);
             const e = seg(t, 5.0 + i * 0.05, 6.5 + i * 0.05, smooth);
-            const x = lerp(a.x + id.dx, 0, e);
-            const y = lerp(a.y + id.dy + (1 - appear) * 36, GROUP_CY - H / 2, e);
+            const x = lerp(a.x * LAY.cluster.xs + id.dx, GROUP_CX - W / 2, e);
+            const y = lerp(a.y * LAY.cluster.ys + LAY.cluster.yoff + id.dy + (1 - appear) * 36, GROUP_CY - H / 2, e);
             const z = lerp(a.z, -120, e);
             return (
-              <Obj3 key={a.key} x={x} y={y} z={z} rx={lerp(a.rx, 0, e)} ry={lerp(a.ry, 0, e)} rz={lerp(a.rz + id.drz, 0, e)} w={a.w} h={a.h} cam={cam1} opacity={appear * (1 - seg(e, 0.7, 1))} focus={90} dof={0.017} k={0.8}>
+              <Obj3 key={a.key} x={x} y={y} z={z} rx={lerp(a.rx, 0, e)} ry={lerp(a.ry, 0, e)} rz={lerp(a.rz + id.drz, 0, e)} w={a.w} h={a.h} cam={cam1} opacity={appear * (1 - seg(e, 0.7, 1))} focus={90} dof={0.017} k={LAY.cluster.k}>
                 {a.node}
               </Obj3>
             );
@@ -186,19 +254,8 @@ export const Adapt: React.FC = () => {
         </AbsoluteFill>
       ) : null}
 
-      {/* S9 light field */}
-      {t > 40.9 ? (
-        <AbsoluteFill
-          style={{
-            background: `radial-gradient(ellipse 60% 52% at 50% 44%, ${L.baseAlt}, ${L.base} 82%)`,
-            WebkitMaskImage: `radial-gradient(circle at 540px ${TILE_RY}px, #000 ${Math.max(0, bloomR)}px, transparent ${Math.max(1, bloomR + 440)}px)`,
-            maskImage: `radial-gradient(circle at 540px ${TILE_RY}px, #000 ${Math.max(0, bloomR)}px, transparent ${Math.max(1, bloomR + 440)}px)`,
-          }}
-        />
-      ) : null}
-
       {/* Surface group: ERP, panel, pricing cards, corner marks. Designed at 900x1020 and fitted to the 8:9 frame. */}
-      <div style={{position: 'absolute', inset: 0, transformOrigin: `${PCX}px ${PCY}px`, transform: `translate(0px, ${GROUP_CY - PCY}px) scale(${PS})`}}>
+      <div style={{position: 'absolute', inset: 0, transformOrigin: `${PCX}px ${PCY}px`, transform: `translate(${GROUP_CX - PCX}px, ${GROUP_CY - PCY}px) scale(${PS})`}}>
       {/* S2: the generic ERP */}
       {erpIn > 0.003 && erpOut < 0.999 ? (
         <div style={{position: 'absolute', left: PCX - PW / 2, top: PCY - PH / 2, width: PW, height: PH, opacity: erpIn, transform: `scale(${lerp(0.965, 1, erpIn)})`}}>
@@ -208,7 +265,7 @@ export const Adapt: React.FC = () => {
 
       {/* The Verity surface, under the camera rig */}
       <div style={{position: 'absolute', inset: 0, transformOrigin: `${PCX}px ${RIG_ORIGIN_Y}px`, transform: `scale(${panelScale})`}}>
-        <VPanel cx={pcx} cy={pcy} w={pw} h={ph} radius={lerp(30, 34, collapse)} ry={ry} opacity={panelOpacity} state={state} liveP={liveP} t={t} sweep={seg(t, 37.0, 39.4, smooth)} shadow={1 - light * 0.92} chromeOpacity={1 - seg(t, 41.0, 41.5)} bodyOpacity={bodyOpacity} markP={markP}>
+        <VPanel cx={pcx} cy={pcy} w={pw} h={ph} radius={lerp(30, 34, collapse)} ry={ry} opacity={panelOpacity} state={state} liveP={liveP} t={t} sweep={seg(t, 37.0, 39.4, smooth)} markH={76 / PS} glassOut={glassOut} chromeOpacity={1 - seg(t, 39.6, 40.1)} bodyOpacity={bodyOpacity} markP={markP}>
           {blankOp > 0.003 ? (
             <div style={{position: 'absolute', inset: 0, opacity: blankOp}}>
               <BlankBody u={t - 9.0} />
@@ -259,7 +316,7 @@ export const Adapt: React.FC = () => {
                   borderRadius: 22,
                   background: 'rgba(213,219,230,0.94)',
                   border: '1px solid rgba(143,155,179,0.8)',
-                  boxShadow: '0 30px 70px rgba(0,0,0,0.45)',
+                  boxShadow: '0 30px 70px rgba(60,90,130,0.20), 0 2px 6px rgba(60,90,130,0.12)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 24,
@@ -290,8 +347,8 @@ export const Adapt: React.FC = () => {
             return (
               <React.Fragment key={label as string}>
                 {idx > 0 ? (
-                  <div style={{position: 'absolute', left: 540 - 1, top: 790 + (idx - 1) * 176 + 118, width: 2, height: 58 * seg(t, 28.7 + idx * 0.7 - 0.25, 28.7 + idx * 0.7 + 0.2, smooth), background: 'rgba(244,247,251,0.45)', opacity: 1 - o}}>
-                    <div style={{position: 'absolute', bottom: -2, left: -6, width: 12, height: 12, borderRight: '2px solid rgba(244,247,251,0.6)', borderBottom: '2px solid rgba(244,247,251,0.6)', transform: 'rotate(45deg) translate(-2px,-2px)', opacity: seg(t, 28.7 + idx * 0.7, 28.7 + idx * 0.7 + 0.3)}} />
+                  <div style={{position: 'absolute', left: 540 - 1, top: 790 + (idx - 1) * 176 + 118, width: 2, height: 58 * seg(t, 28.7 + idx * 0.7 - 0.25, 28.7 + idx * 0.7 + 0.2, smooth), background: 'rgba(15,17,21,0.28)', opacity: 1 - o}}>
+                    <div style={{position: 'absolute', bottom: -2, left: -6, width: 12, height: 12, borderRight: '2px solid rgba(15,17,21,0.4)', borderBottom: '2px solid rgba(15,17,21,0.4)', transform: 'rotate(45deg) translate(-2px,-2px)', opacity: seg(t, 28.7 + idx * 0.7, 28.7 + idx * 0.7 + 0.3)}} />
                   </div>
                 ) : null}
                 <div
@@ -305,8 +362,8 @@ export const Adapt: React.FC = () => {
                     background: last ? 'rgba(250,251,253,0.94)' : 'rgba(250,251,253,0.84)',
                     backdropFilter: 'blur(26px) saturate(170%)',
                     WebkitBackdropFilter: 'blur(26px) saturate(170%)',
-                    border: `1px solid ${last ? L.a40 : 'rgba(255,255,255,0.55)'}`,
-                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95), 0 30px 70px rgba(0,0,0,0.45)',
+                    border: `1px solid ${last ? L.a40 : 'rgba(15,17,21,0.08)'}`,
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95), 0 30px 70px rgba(60,90,130,0.20), 0 2px 6px rgba(60,90,130,0.12)',
                     display: 'flex',
                     alignItems: 'center',
                     gap: 26,
@@ -330,32 +387,35 @@ export const Adapt: React.FC = () => {
       ) : null}
 
       {/* S8: registration marks, the tailor's tick marks around the finished surface */}
-      {t > 37.4 && t < 41.2 ? <RegMarks t={t} rig={rig} /> : null}
+      {t > 37.4 && t < 39.8 ? <RegMarks t={t} rig={rig} /> : null}
       </div>
 
       {/* ------------------------------ type ------------------------------ */}
       {/* The only on-screen copy before the end card is the script's own: "Pre-built software. Pre-built workflow."
-          Left edge = the surface's left edge (x 153), top band above the ERP. */}
-      <div style={{position: 'absolute', left: TEXT_X + 9, top: TEXT_TOP, width: 800}}>
-        <Line t={t} at={5.4} out={8.7}>Pre-built software.</Line>
-        <Line t={t} at={6.0} out={8.7} color={D.muted}>Pre-built workflow.</Line>
+          Both ink: blue is reserved for Verity's payoff. Left edge = the surface's left edge (x 153), top band above the ERP. */}
+      <div style={{position: 'absolute', left: LAY.text.x, top: LAY.text.y}}>
+        <Headline t={t} at={5.4} out={8.7} role="headlineSquare" sizeU={LAY.text.px / u} lines={[{text: 'Pre-built software.'}, {text: 'Pre-built workflow.'}]} />
       </div>
 
-      {/* S9 brand lockup, centred: a single-object frame */}
-      {t > 42.0 ? (
-        <AbsoluteFill style={{transform: `scale(${lock})`, transformOrigin: '540px 607px', color: L.ink}}>
-          <div style={{position: 'absolute', left: 488, top: TILE_RY - 50, fontSize: 100, fontWeight: 600, letterSpacing: '-0.045em', lineHeight: 1, ...reveal(42.35, 43.1, 8, 8)}}>verity</div>
-          <div style={{position: 'absolute', left: 0, right: 0, top: 530, textAlign: 'center', fontSize: 76, fontWeight: 300, letterSpacing: '-0.035em', lineHeight: 1.08, ...reveal(42.9, 43.8, 14, 5)}}>
-            Run your business
-            <br />
-            <span style={{color: L.muted}}>in your way.</span>
+      {/* End card, centred: the mark (the collapsed panel) + wordmark, the two-tone tagline, rule, subline, URL.
+          Mark centre (TILE_RX, TILE_RY) is where the panel collapses to; wordmark = 0.95 x mark height, gap = 0.4 x mark width. */}
+      {t > 40.8 ? (
+        <AbsoluteFill>
+          <div style={{position: 'absolute', left: W / 2 - 50.4, top: TILE_RY - 38, fontFamily: 'Inter', fontSize: 72, fontWeight: 200, letterSpacing: '-0.03em', lineHeight: 1, color: DAY.ink, ...reveal(41.3, 42.1, 8, 8)}}>verity</div>
+          <div style={{position: 'absolute', left: 0, right: 0, top: TILE_RY + 108}}>
+            <Headline t={t} at={41.7} role="headline" sizeU={90.7 / u} align="center" lines={[{text: 'Run your business'}, {text: 'in your way.', blue: true}]} />
           </div>
-          <div style={{position: 'absolute', left: 0, right: 0, top: 720, textAlign: 'center', fontSize: 30, fontWeight: 300, letterSpacing: '-0.01em', color: L.muted, ...reveal(43.5, 44.2, 10, 3)}}>Enterprise operations, built around how you work.</div>
-          <div style={{position: 'absolute', left: 0, right: 0, top: 800, textAlign: 'center', fontSize: 26, fontWeight: 400, letterSpacing: '0.04em', color: L.faint, ...reveal(43.9, 44.5, 6, 2)}}>verity.plotarmour.in</div>
+          <div style={{position: 'absolute', left: 0, right: 0, top: TILE_RY + 347}}>
+            <Rule t={t} at={42.6} widthU={32 / u} />
+          </div>
+          <div style={{position: 'absolute', left: 0, right: 0, top: TILE_RY + 385}}>
+            <Subline t={t} at={42.8} sizeU={22.7 / u} parts={[{text: 'Enterprise operations, built around how you work.'}]} />
+          </div>
+          <div style={{position: 'absolute', left: 0, right: 0, top: TILE_RY + 455, textAlign: 'center', fontFamily: 'Inter', fontSize: 20, fontWeight: 400, letterSpacing: '0.12em', color: DAY.inkMuted, ...reveal(43.3, 43.9, 6, 2)}}>verity.plotarmour.in</div>
         </AbsoluteFill>
       ) : null}
 
-      <Grade t={t} light={light} />
+      <DayGrade t={t} />
 
       {/* ------------------------------ sound ------------------------------ */}
       <Audio src={staticFile('brag/music.mp3')} volume={(f) => 0.32 * Math.min(1, f / FPS) * Math.min(1, (DURATION - f) / (FPS * 2))} />
@@ -377,20 +437,20 @@ const SFX = [
   {file: 'card-slide-3.ogg', at: 28.8, vol: 0.28},
   {file: 'click_003.ogg', at: 34.62, vol: 0.5},
   {file: 'impactGlass_medium_000.ogg', at: 34.8, vol: 0.4},
-  {file: 'subhit.wav', at: 41.4, vol: 0.2},
-  {file: 'outro-tone.wav', at: 42.3, vol: 0.5},
+  {file: 'subhit.wav', at: 40.3, vol: 0.2},
+  {file: 'outro-tone.wav', at: 41.2, vol: 0.5},
 ];
 
 /** Four corner ticks at 16px off the panel, drawn in over 0.9s. They follow the camera rig so they stay glued to the surface. */
 const RegMarks: React.FC<{t: number; rig: number}> = ({t, rig}) => {
-  const p = seg(t, 37.4, 38.4, smooth) * (1 - seg(t, 40.4, 41.1));
+  const p = seg(t, 37.4, 38.4, smooth) * (1 - seg(t, 39.0, 39.6));
   const s = rig * 1;
   const x0 = PCX - PW / 2 - 18;
   const x1 = PCX + PW / 2 + 18;
   const y0 = PCY - PH / 2 - 18;
   const y1 = PCY + PH / 2 + 18;
   const len = 34 * p;
-  const line: React.CSSProperties = {position: 'absolute', background: 'rgba(244,247,251,0.55)'};
+  const line: React.CSSProperties = {position: 'absolute', background: 'rgba(15,17,21,0.35)'};
   return (
     <div style={{position: 'absolute', inset: 0, transformOrigin: `${PCX}px ${RIG_ORIGIN_Y}px`, transform: `scale(${s})`, opacity: p}}>
       {[

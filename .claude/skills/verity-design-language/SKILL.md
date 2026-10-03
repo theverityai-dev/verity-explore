@@ -133,7 +133,9 @@ Calm, slow, expensive. Daylight moves; nothing flashes.
 - **Workflow path (paper world):** the blue line travels through the glass planes; each plane brightens as it passes.
 - **Transitions:** transform, do not cut. A glass card becomes the next scene's panel; the paper field blooms from the
   light source. A hard cut at most once per film.
-- **Ending:** every video ends on template C, blue lockup on paper, 1.2s minimum hold.
+- **Ending:** every video ends on the blue lockup on paper with at least 1.2s of hold. Template C (lockup alone) when the
+  piece has no tagline; when the script has one (the Adapt reel), the end card is the centred layout: lockup, then the
+  two-tone tagline, rule, tracked subline, URL, all settled with 1.2s to spare.
 - Easing: `glide` `bezier(0.22,1,0.36,1)` for arrivals, `smooth` `bezier(0.45,0,0.15,1)` for moves. No bounce, no spring
   overshoot.
 
@@ -146,8 +148,8 @@ Calm, slow, expensive. Daylight moves; nothing flashes.
 - Plain words. No marketing adjectives, no exclamation marks, no emoji, no jargon.
 - Numbers in UI cards ("+32%", "248", "128 orders") are **illustrative**. Never present them as results or customers.
   Claims such as "No implementation fee" are used only where the business has confirmed them.
-- Open item: ref 5 reads "Run business your way." (missing "your"), the script says "Run your business in your way."
-  Confirm the canonical tagline before the next end card.
+- **Canonical tagline: "Run your business in your way."** (confirmed). Ref 5's "Run business your way." is a typo in the
+  source image. Set it as "Run your business" in ink, "in your way." in blue.
 
 ## 10. Never
 

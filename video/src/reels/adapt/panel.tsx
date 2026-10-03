@@ -25,32 +25,37 @@ export const VPanel: React.FC<{
   liveP?: number;
   /** 0..1 position of the one specular sweep (undefined = none) */
   sweep?: number;
-  /** 0..1 how much of the heavy dark-world shadow to keep (the light end card wants almost none) */
-  shadow?: number;
+  /** 0..1 fades the glass itself (fill, rim, shadow) while the content on it, e.g. the mark, stays */
+  glassOut?: number;
   chromeOpacity?: number;
   bodyOpacity?: number;
   markP?: number;
+  /** mark height in panel units (screen mark height / group scale) */
+  markH?: number;
   t: number;
   children?: React.ReactNode;
-}> = ({cx, cy, w = PW, h = PH, radius = 30, rx = 0, ry = 0, opacity = 1, state, liveP = 0, sweep, shadow = 1, chromeOpacity = 1, bodyOpacity = 1, markP = 0, t, children}) => {
+}> = ({cx, cy, w = PW, h = PH, radius = 30, rx = 0, ry = 0, opacity = 1, state, liveP = 0, sweep, glassOut = 0, chromeOpacity = 1, bodyOpacity = 1, markP = 0, markH = 88, t, children}) => {
   if (opacity <= 0.003) return null;
+  const glassA = 1 - glassOut;
   return (
     <div style={{position: 'absolute', left: cx - w / 2, top: cy - h / 2, width: w, height: h, opacity, transform: `perspective(1900px) rotateX(${rx}deg) rotateY(${ry}deg)`}}>
+      {/* the glass: daylight frosted fill, hairline, cool soft shadows */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           borderRadius: radius,
-          overflow: 'hidden',
-          background: markP > 0.5 ? 'linear-gradient(160deg, rgba(255,255,255,0.98), rgba(255,255,255,0.84) 60%, rgba(243,245,249,0.94))' : 'rgba(250,251,253,0.95)',
-          backdropFilter: 'blur(30px) saturate(170%)',
-          WebkitBackdropFilter: 'blur(30px) saturate(170%)',
-          border: `1px solid ${lerp(0.55, 0.07, markP) > 0.3 ? 'rgba(255,255,255,0.55)' : 'rgba(15,17,21,0.07)'}`,
-          boxShadow: `inset 0 1px 0 rgba(255,255,255,0.95), 0 2px 6px rgba(0,0,0,${0.22 * shadow}), 0 44px 110px rgba(0,0,0,${0.5 * shadow}), 0 14px 34px rgba(15,17,21,${0.08 * (1 - shadow)})`,
+          background: 'rgba(255,255,255,0.86)',
+          backdropFilter: 'blur(26px) saturate(150%)',
+          WebkitBackdropFilter: 'blur(26px) saturate(150%)',
+          border: '1px solid rgba(15,17,21,0.09)',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.95), 0 2px 6px rgba(60,90,130,0.16), 0 40px 90px rgba(60,90,130,0.30)',
+          opacity: glassA,
         }}
-      >
+      />
+      <div style={{position: 'absolute', inset: 0, borderRadius: radius, overflow: 'hidden'}}>
         {/* the single diagonal sheen, upper left */}
-        <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 36%)', pointerEvents: 'none', opacity: 1 - markP * 0.6}} />
+        <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 36%)', pointerEvents: 'none', opacity: (1 - markP * 0.6) * glassA}} />
 
         {/* chrome */}
         <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: CHROME, opacity: chromeOpacity, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 34px', borderBottom: `1px solid ${L.line}`}}>
@@ -77,13 +82,13 @@ export const VPanel: React.FC<{
 
         {/* sweep */}
         {sweep !== undefined && sweep > 0 && sweep < 1 ? (
-          <div style={{position: 'absolute', top: -20, bottom: -20, width: '30%', left: `${lerp(-40, 120, sweep)}%`, transform: 'skewX(-18deg)', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)', opacity: Math.sin(Math.PI * sweep), pointerEvents: 'none'}} />
+          <div style={{position: 'absolute', top: -20, bottom: -20, width: '30%', left: `${lerp(-40, 120, sweep)}%`, transform: 'skewX(-18deg)', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent)', opacity: Math.sin(Math.PI * sweep), pointerEvents: 'none'}} />
         ) : null}
 
-        {/* mark, for the collapsed tile */}
+        {/* the mark: stays when the glass fades, and becomes the lockup's mark (88 here = 76px on screen) */}
         {markP > 0 ? (
           <div style={{position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', opacity: markP}}>
-            <Mark height={65} />
+            <Mark height={markH} />
           </div>
         ) : null}
       </div>

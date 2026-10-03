@@ -14,13 +14,13 @@ const paper = (extra: React.CSSProperties = {}): React.CSSProperties => ({
   background: PAPER,
   color: INK,
   borderRadius: 6,
-  boxShadow: '0 38px 80px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.4)',
+  boxShadow: '0 38px 80px rgba(60,90,130,0.25), 0 2px 4px rgba(60,90,130,0.14), inset 0 0 0 1px rgba(255,255,255,0.4)',
   ...extra,
 });
 
 /** Paper shading: a soft diagonal light falloff so every sheet reads as lit, not flat. */
 const Sheen: React.FC<{r?: number}> = ({r = 6}) => (
-  <div style={{position: 'absolute', inset: 0, borderRadius: r, pointerEvents: 'none', background: 'linear-gradient(118deg, rgba(255,255,255,0.32), transparent 38%, rgba(0,0,0,0.16) 100%)'}} />
+  <div style={{position: 'absolute', inset: 0, borderRadius: r, pointerEvents: 'none', background: 'linear-gradient(118deg, rgba(255,255,255,0.32), transparent 38%, rgba(60,90,130,0.07) 100%)'}} />
 );
 
 export const Register: React.FC = () => (
@@ -60,7 +60,7 @@ export const Sheet: React.FC = () => {
     ['Joshi Stores', '210', '35.0', 'Call karo'],
   ];
   return (
-    <div style={{width: 520, height: 372, borderRadius: 10, overflow: 'hidden', background: '#fff', boxShadow: '0 38px 80px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.3)', fontFamily: 'Arial, Helvetica, sans-serif', position: 'relative'}}>
+    <div style={{width: 520, height: 372, borderRadius: 10, overflow: 'hidden', background: '#fff', boxShadow: '0 38px 80px rgba(60,90,130,0.25), 0 2px 4px rgba(60,90,130,0.14)', fontFamily: 'Arial, Helvetica, sans-serif', position: 'relative'}}>
       <div style={{height: 40, background: '#217346', display: 'flex', alignItems: 'center', padding: '0 16px', gap: 8, color: '#fff', fontSize: 17}}>
         <span style={{opacity: 0.9}}>order_book_final_v3 (2).xlsx</span>
       </div>
@@ -112,7 +112,7 @@ export const Sheet: React.FC = () => {
 
 export const Chat: React.FC = () => {
   const bubble = (side: 'l' | 'r', text: string, time: string, ticks?: boolean): React.ReactNode => (
-    <div style={{alignSelf: side === 'l' ? 'flex-start' : 'flex-end', maxWidth: 300, padding: '12px 16px 10px', borderRadius: side === 'l' ? '4px 18px 18px 18px' : '18px 4px 18px 18px', background: side === 'l' ? '#ffffff' : '#d9fdd3', color: '#111', fontSize: 22, lineHeight: 1.25, boxShadow: '0 1px 1px rgba(0,0,0,0.13)', fontFamily: 'Arial, Helvetica, sans-serif'}}>
+    <div style={{alignSelf: side === 'l' ? 'flex-start' : 'flex-end', maxWidth: 300, padding: '12px 16px 10px', borderRadius: side === 'l' ? '4px 18px 18px 18px' : '18px 4px 18px 18px', background: side === 'l' ? '#ffffff' : '#d9fdd3', color: '#111', fontSize: 22, lineHeight: 1.25, boxShadow: '0 1px 1px rgba(60,90,130,0.06)', fontFamily: 'Arial, Helvetica, sans-serif'}}>
       {text}
       <div style={{textAlign: 'right', fontSize: 14, color: '#667781', marginTop: 4}}>
         {time} {ticks ? <span style={{color: '#53bdeb'}}>✓✓</span> : null}
@@ -120,7 +120,7 @@ export const Chat: React.FC = () => {
     </div>
   );
   return (
-    <div style={{width: 380, height: 440, borderRadius: 26, overflow: 'hidden', background: '#e8e0d2', boxShadow: '0 38px 80px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', fontFamily: 'Arial, Helvetica, sans-serif'}}>
+    <div style={{width: 380, height: 440, borderRadius: 26, overflow: 'hidden', background: '#e8e0d2', boxShadow: '0 38px 80px rgba(60,90,130,0.25), 0 2px 4px rgba(60,90,130,0.14)', display: 'flex', flexDirection: 'column', fontFamily: 'Arial, Helvetica, sans-serif'}}>
       <div style={{height: 64, background: '#1f2c34', display: 'flex', alignItems: 'center', gap: 12, padding: '0 18px', color: '#fff'}}>
         <div style={{width: 38, height: 38, borderRadius: 19, background: '#5a6b75'}} />
         <div>
@@ -151,13 +151,13 @@ export const Slip: React.FC = () => (
 );
 
 export const Sticky: React.FC = () => (
-  <div style={{width: 250, height: 250, padding: '28px 26px', background: 'linear-gradient(160deg, #f6e08a, #f0d56a)', boxShadow: '0 30px 60px rgba(0,0,0,0.5), 0 2px 3px rgba(0,0,0,0.25)', fontFamily: hand, fontSize: 44, lineHeight: '50px', color: '#3a2f0a', fontWeight: 600, position: 'relative'}}>
+  <div style={{width: 250, height: 250, padding: '28px 26px', background: 'linear-gradient(160deg, #f6e08a, #f0d56a)', boxShadow: '0 30px 60px rgba(60,90,130,0.23), 0 2px 3px rgba(60,90,130,0.11)', fontFamily: hand, fontSize: 44, lineHeight: '50px', color: '#3a2f0a', fontWeight: 600, position: 'relative'}}>
     Kal tak
     <br />
     stock check
     <br />
     karna!!
-    <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(118deg, rgba(255,255,255,0.28), transparent 40%, rgba(0,0,0,0.1))'}} />
+    <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(118deg, rgba(255,255,255,0.28), transparent 40%, rgba(60,90,130,0.05))'}} />
   </div>
 );
 
@@ -189,7 +189,7 @@ export const Bill: React.FC = () => (
 
 export const Checklist: React.FC = () => (
   <div style={{position: 'relative', width: 340, height: 440}}>
-    <div style={{position: 'absolute', inset: 0, borderRadius: 10, background: 'linear-gradient(150deg,#6b5a46,#4d3f30)', boxShadow: '0 38px 80px rgba(0,0,0,0.55)'}} />
+    <div style={{position: 'absolute', inset: 0, borderRadius: 10, background: 'linear-gradient(150deg,#6b5a46,#4d3f30)', boxShadow: '0 38px 80px rgba(60,90,130,0.25)'}} />
     <div style={paper({position: 'absolute', left: 20, right: 20, top: 44, bottom: 22, padding: '26px 22px'})}>
       {[
         ['Order lena', true],
@@ -205,7 +205,7 @@ export const Checklist: React.FC = () => (
       ))}
       <Sheen />
     </div>
-    <div style={{position: 'absolute', left: '50%', top: 14, width: 120, height: 46, marginLeft: -60, borderRadius: 8, background: 'linear-gradient(180deg,#d8dbe0,#8d929b)', boxShadow: '0 6px 12px rgba(0,0,0,0.4)'}} />
+    <div style={{position: 'absolute', left: '50%', top: 14, width: 120, height: 46, marginLeft: -60, borderRadius: 8, background: 'linear-gradient(180deg,#d8dbe0,#8d929b)', boxShadow: '0 6px 12px rgba(60,90,130,0.18)'}} />
   </div>
 );
 
@@ -231,7 +231,7 @@ export const Erp: React.FC<{t: number; at: number; drain?: number; w?: number; h
   const chrome = 1 - seg(drain, 0.05, 0.5, smooth);
   const font = 'Arial, Helvetica, sans-serif';
   return (
-    <div style={{width: w, height: h, background: `rgba(213,219,230,${chrome})`, border: '1px solid #8d9bb3', borderColor: `rgba(141,155,179,${chrome})`, borderRadius: 6, overflow: 'hidden', fontFamily: font, color: '#26334a', boxShadow: `0 44px 110px rgba(0,0,0,${0.5 * chrome}), 0 2px 6px rgba(0,0,0,${0.25 * chrome})`, position: 'relative'}}>
+    <div style={{width: w, height: h, background: `rgba(213,219,230,${chrome})`, border: '1px solid #8d9bb3', borderColor: `rgba(141,155,179,${chrome})`, borderRadius: 6, overflow: 'hidden', fontFamily: font, color: '#26334a', boxShadow: `0 44px 110px rgba(60,90,130,${0.22 * chrome}), 0 2px 6px rgba(60,90,130,${0.12 * chrome})`, position: 'relative'}}>
       <div style={{opacity: chrome, height: 78, background: 'linear-gradient(#41506b,#2f3c55)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 30px', fontSize: 25}}>
         <b style={{letterSpacing: '0.04em'}}>ERP SUITE ▪ v9.2</b>
         <span style={{fontSize: 19, opacity: 0.75}}>File &nbsp; Edit &nbsp; View &nbsp; Tools &nbsp; Help</span>

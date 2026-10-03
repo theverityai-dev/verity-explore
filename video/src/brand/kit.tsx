@@ -35,7 +35,7 @@ export const Lockup: React.FC<{markHeight: number; tone?: Tone; weight?: 200 | 3
 export type HeadlineLine = {text: string; blue?: boolean};
 
 /** The two-tone headline: ink setup, blue payoff (always last). Masked line rise with the blur clearing. */
-export const Headline: React.FC<{lines: HeadlineLine[]; t: number; at?: number; role?: 'headline' | 'headlineMinimal' | 'headlineSquare'; align?: 'left' | 'center'; sizeU?: number}> = ({lines, t, at = 0, role = 'headline', align = 'left', sizeU}) => {
+export const Headline: React.FC<{lines: HeadlineLine[]; t: number; at?: number; role?: 'headline' | 'headlineMinimal' | 'headlineSquare'; align?: 'left' | 'center'; sizeU?: number; out?: number}> = ({lines, t, at = 0, role = 'headline', align = 'left', sizeU, out}) => {
   const u = useU();
   const r = TYPE[role];
   const size = (sizeU ?? r.size) * u;
@@ -44,10 +44,11 @@ export const Headline: React.FC<{lines: HeadlineLine[]; t: number; at?: number; 
       {lines.map((l, i) => {
         const start = at + i * 0.18 + (l.blue ? MOTION.payoffDelay : 0);
         const p = prog(t, start, MOTION.textIn);
+        const o = out === undefined ? 0 : prog(t, out, 0.55);
         const pad = size * 0.16;
         return (
           <div key={i} style={{overflow: 'hidden', padding: `${pad}px 0`, margin: `${-pad}px 0`}}>
-            <div style={{fontSize: size, fontWeight: r.weight, letterSpacing: r.tracking, lineHeight: r.lineHeight, color: l.blue ? DAY.accent : DAY.ink, whiteSpace: 'nowrap', transform: `translateY(${(1 - p) * 108}%)`, opacity: Math.min(1, p * 2.4), filter: p < 0.97 ? `blur(${(1 - p) * 7}px)` : undefined}}>{l.text}</div>
+            <div style={{fontSize: size, fontWeight: r.weight, letterSpacing: r.tracking, lineHeight: r.lineHeight, color: l.blue ? DAY.accent : DAY.ink, whiteSpace: 'nowrap', transform: `translateY(${(1 - p) * 108 - o * 30}%)`, opacity: Math.min(1, p * 2.4) * (1 - o), filter: p < 0.97 || o > 0 ? `blur(${(1 - p) * 7 + o * 6}px)` : undefined}}>{l.text}</div>
           </div>
         );
       })}
@@ -56,21 +57,21 @@ export const Headline: React.FC<{lines: HeadlineLine[]; t: number; at?: number; 
 };
 
 /** Short hairline between headline and subline (centred layouts). Draws left to right. */
-export const Rule: React.FC<{t: number; at?: number; align?: 'left' | 'center'}> = ({t, at = 0, align = 'center'}) => {
+export const Rule: React.FC<{t: number; at?: number; align?: 'left' | 'center'; widthU?: number}> = ({t, at = 0, align = 'center', widthU = 3}) => {
   const u = useU();
   const p = prog(t, at, MOTION.ruleDraw);
-  return <div style={{width: 3 * u * p, height: 1.5, background: DAY.ink, margin: align === 'center' ? `0 auto` : 0, opacity: 0.85}} />;
+  return <div style={{width: widthU * u * p, height: 1.5, background: DAY.ink, margin: align === 'center' ? `0 auto` : 0, opacity: 0.85}} />;
 };
 
 export type SublinePart = {text: string; blue?: boolean};
 
 /** Wide-tracked fragment line. Tracking settles from +0.26em to +0.2em as it fades in. */
-export const Subline: React.FC<{parts: SublinePart[]; t: number; at?: number; align?: 'left' | 'center'}> = ({parts, t, at = 0, align = 'center'}) => {
+export const Subline: React.FC<{parts: SublinePart[]; t: number; at?: number; align?: 'left' | 'center'; sizeU?: number}> = ({parts, t, at = 0, align = 'center', sizeU}) => {
   const u = useU();
   const r = TYPE.subline;
   const p = prog(t, at, 1.1);
   return (
-    <div style={{textAlign: align, fontFamily: 'Inter', fontSize: r.size * u, fontWeight: r.weight, lineHeight: r.lineHeight, letterSpacing: `${0.26 - 0.06 * p}em`, color: DAY.ink, opacity: p * 0.9, transform: `translateY(${(1 - p) * 8}px)`}}>
+    <div style={{textAlign: align, fontFamily: 'Inter', fontSize: (sizeU ?? r.size) * u, fontWeight: r.weight, lineHeight: r.lineHeight, letterSpacing: `${0.26 - 0.06 * p}em`, color: DAY.ink, opacity: p * 0.9, transform: `translateY(${(1 - p) * 8}px)`}}>
       {parts.map((s, i) => (
         <span key={i} style={{color: s.blue ? DAY.accent : DAY.ink}}>
           {s.text}

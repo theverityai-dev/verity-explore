@@ -1,7 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, Easing, continueRender, delayRender, staticFile} from 'remotion';
+import {AbsoluteFill, Easing, continueRender, delayRender, staticFile, useVideoConfig} from 'remotion';
 import {seg} from '../../shared/timeline';
 import {DK} from '../../film/layout';
+import {DAY} from '../../brand/language';
 
 /** Fonts are bundled (public/fonts, from @fontsource) so the reel renders identically offline and in locked-down CI. */
 export const fontFamily = 'Inter';
@@ -65,6 +66,27 @@ export const L = {
 };
 export const ACCENT = '#0a84ff';
 
+/** Daylight paper world: the paper field (#fefefc) with only a whisper of corner falloff so white glass can read. */
+export const PaperBase: React.FC<{t: number}> = () => (
+  <AbsoluteFill style={{background: `radial-gradient(ellipse 95% 80% at 50% 42%, ${DAY.paper} 0%, #f8f9fa 60%, #eff2f5 100%)`}} />
+);
+
+/** Daylight grade: a faint warm sun wash from the top-left and very fine grain. No vignette, nothing dark. */
+export const DayGrade: React.FC<{t: number}> = ({t}) => {
+  const {width: cw, height: ch} = useVideoConfig();
+  return (
+  <AbsoluteFill style={{pointerEvents: 'none'}}>
+    <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 40% at 18% -6%, rgba(255,240,215,0.38), transparent 70%)'}} />
+    <svg width={cw} height={ch} style={{position: 'absolute', inset: 0, opacity: 0.035, mixBlendMode: 'overlay'}}>
+      <filter id="grain-day">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={Math.floor(t * 24) % 97} />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain-day)" />
+    </svg>
+  </AbsoluteFill>
+  );
+};
+
 /* -------------------------------------------------------------------------------------------------------------------
    Depth. A 3D camera without preserve-3d, so backdrop-filter glass keeps seeing the world behind it.
    Each object is projected by hand (position, scale, depth-of-field) and carries its own local tilt.
@@ -94,11 +116,12 @@ export const Obj3: React.FC<{
   children: React.ReactNode;
   style?: React.CSSProperties;
 }> = ({x = 0, y = 0, z = 0, rx = 0, ry = 0, rz = 0, w, h, cam, opacity = 1, dof = 0.022, focus = 60, maxBlur = 22, blur: fixedBlur, k = 1, children, style}) => {
+  const {width: cw, height: ch} = useVideoConfig();
   const zz = z + cam.z;
   if (zz > PERSP - 140 || opacity <= 0.003) return null;
   const s = PERSP / (PERSP - zz);
-  const px = W / 2 + (x - cam.x) * s;
-  const py = H / 2 + (y - cam.y) * s;
+  const px = cw / 2 + (x - cam.x) * s;
+  const py = ch / 2 + (y - cam.y) * s;
   const blur = fixedBlur ?? Math.min(maxBlur, Math.max(0, Math.abs(zz - focus) * dof - 1.2));
   return (
     <div
@@ -169,7 +192,7 @@ export const Line: React.FC<{
   color?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
-}> = ({t, at, out, size = HERO, weight = 300, color = D.ink, style, children}) => {
+}> = ({t, at, out, size = HERO, weight = 300, color = DAY.ink, style, children}) => {
   const p = seg(t, at, at + 0.95, glide);
   const o = out === undefined ? 0 : seg(t, out, out + 0.55, smooth);
   if (p <= 0 || o >= 1) return null;

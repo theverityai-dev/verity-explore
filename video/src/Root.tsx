@@ -18,7 +18,7 @@ import {FOOD_DURATION, FoodFilm} from './film/food/FoodFilm';
 import {FILM_DURATION, RetailFilm} from './film/retail/RetailFilm';
 import {RETAIL_DURATION, Retail} from './reels/retail/Retail';
 import {RFPS, RH, RW} from './reels/kit';
-import {Adapt, ADAPT_H, ADAPT_W, DURATION as ADAPT_DURATION, FPS as ADAPT_FPS} from './reels/adapt/Adapt';
+import {Adapt, ADAPT_ASPECTS, DURATION as ADAPT_DURATION, FPS as ADAPT_FPS, LAYOUTS as ADAPT_LAYOUTS} from './reels/adapt/Adapt';
 import {MainTrailer} from './trailer/MainTrailer';
 import {DURATION, FPS, H, W} from './trailer/data';
 
@@ -31,7 +31,9 @@ export const Root = () => (
     <Composition id="Film-02-Food-16x9" component={FoodFilm} durationInFrames={FOOD_DURATION} fps={FFPS} width={FW} height={FH} />
     <Composition id="Film-01-Retail-16x9" component={RetailFilm} durationInFrames={FILM_DURATION} fps={FFPS} width={FW} height={FH} />
     <Composition id="Reel-01-Retail-9x16" component={Retail} durationInFrames={RETAIL_DURATION} fps={RFPS} width={RW} height={RH} />
-    <Composition id="Reel-Adapt-9x16" component={Adapt} durationInFrames={ADAPT_DURATION} fps={ADAPT_FPS} width={ADAPT_W} height={ADAPT_H} />
+    {ADAPT_ASPECTS.map((a) => (
+      <Composition key={a} id={`Reel-Adapt-${a.replace(':', 'x')}`} component={Adapt} durationInFrames={ADAPT_DURATION} fps={ADAPT_FPS} width={ADAPT_LAYOUTS[a].w} height={ADAPT_LAYOUTS[a].h} defaultProps={{aspect: a}} />
+    ))}
     <Composition id="Reel-General-9x16" {...reel} defaultProps={{video: 'general' as const}} />
     <Composition id="Reel-Retail-9x16" {...reel} defaultProps={{video: 'retail' as const}} />
     <Composition id="Outro-16x9" component={OutroTest} durationInFrames={OUTRO_SECONDS * FFPS} fps={FFPS} width={FW} height={FH} defaultProps={{aspect: '16:9' as const}} />
