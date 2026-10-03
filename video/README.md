@@ -44,6 +44,10 @@ npm run typecheck
 
 ## Rules
 
+- **Design language:** every new video follows `.claude/skills/verity-design-language/SKILL.md` (daylight world,
+  ultra-light Inter, blue payoff phrase, daylight glass, hourglass lockup). Tokens and primitives are in `src/brand/`
+  (`language.ts`, `kit.tsx`); import them. `src/brand/proof.tsx` rebuilds reference templates B and C as a check.
+  Film 01, Film 02 and the Adapt reel are legacy (dark world) and are not re-skinned unless asked.
 - Light theme and blue accent only. Never hard-code a colour, use the CSS variables.
 - Every scene is a pure function of time `t` (seconds), so any frame renders identically.
 - New industry reels get their own folder under `src/reels/<slug>-9x16/` and their own composition id
