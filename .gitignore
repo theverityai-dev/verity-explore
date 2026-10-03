@@ -2,11 +2,7 @@
 .DS_Store
 
 # Local agent/editor config, except project skills that are versioned with the films
-.claude/*
-!.claude/skills/
-.claude/skills/*
-!.claude/skills/verity-motion-design/
-!.claude/skills/verity-social-design/
+
 
 # Browser-automation scratch output
 .playwright-cli/
