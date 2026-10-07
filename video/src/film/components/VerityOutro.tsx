@@ -40,7 +40,7 @@ const LAYOUT: Record<OutroAspect, {tile: number; word: number; gapLogo: number; 
 };
 
 /** The logomark on a small piece of light glass: the outro's only glass, and it barely announces itself. */
-const GlassTile: React.FC<{size: number}> = ({size}) => (
+export const GlassTile: React.FC<{size: number}> = ({size}) => (
   <div
     style={{
       width: size,
@@ -60,7 +60,7 @@ const GlassTile: React.FC<{size: number}> = ({size}) => (
 );
 
 /** Fade, slight rise, slight scale, and depth (blur clearing as it arrives). */
-const reveal = (t: number, a: number, b: number, rise: number, blur: number): React.CSSProperties => {
+export const reveal = (t: number, a: number, b: number, rise: number, blur: number): React.CSSProperties => {
   const p = seg(t, a, b, glide);
   return {
     opacity: Math.min(1, p * 1.4),

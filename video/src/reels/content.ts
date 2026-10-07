@@ -6,6 +6,11 @@ import retailStores from '../../../content/businesses/retail-stores.js';
 import restaurants from '../../../content/businesses/restaurants.js';
 // @ts-ignore untyped site content
 import {REGISTRY} from '../../../content/businesses/registry.js';
+// @ts-ignore untyped site content
+import {CAPABILITIES} from '../../../content/capabilities.js';
+
+/** Canonical capability names (content/capabilities.js), keyed by capability id. */
+export const CAPS = CAPABILITIES as Record<string, {name: string}>;
 
 export type Panel = {
   title: string;
@@ -20,6 +25,8 @@ export const RETAIL = {
   headline: retailStores.hero.headline as string,
   panel: retailStores.hero.panel as Panel,
   workflows: retailStores.workflows as Workflow[],
+  /** [the business's own words, the Verity record they map to] */
+  terminology: retailStores.terminology as [string, string][],
 };
 
 export const FOOD = {

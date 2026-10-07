@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=960" />
+    <title>Verity: Software ko adapt karna chahiye</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Inter"; src: url("fonts/InterVariable.woff2") format("woff2"); font-weight: 100 900; }
+      :root { --base:#F7F8FA; --alt:#F1F3F7; --ink:#0F1115; --mut:#6B7078; --body:rgba(15,17,21,.66); --line:#E6EAEE; --hair:#EDEFF3; --acc:#0A84FF; --accT:#0050A8; --accA:rgba(10,132,255,.10); }
+      body { margin:0; background:var(--base); color:var(--ink); font-family:"Inter", sans-serif; font-feature-settings:"cv02","cv03","cv04","ss03"; }
+      #root { position:relative; width:100%; height:100%; overflow:hidden; background:radial-gradient(ellipse 85% 75% at 60% 38%, #FFFFFF, var(--base) 72%); }
+      .abs { position:absolute; left:0; top:0; }
+      .h { position:absolute; font-weight:300; letter-spacing:-0.03em; line-height:1.05; color:var(--ink); white-space:nowrap; }
+      .h .w { display:inline-block; }
+      .lab { font-size:14px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); white-space:nowrap; }
+      .card { position:absolute; left:0; top:0; box-sizing:border-box; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 14px 34px rgba(15,17,21,.07); overflow:hidden; }
+      .node { width:200px; height:66px; }
+      .node .art, .node .step { position:absolute; left:14px; right:14px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; }
+      .node .art { flex-direction:row; align-items:center; gap:10px; font-size:15px; color:var(--body); }
+      .node .art i { width:22px; height:22px; border-radius:6px; background:var(--alt); border:1px solid var(--line); flex:none; }
+      .node .step { opacity:0; }
+      .node .t { position:relative; height:20px; font-size:16px; font-weight:500; letter-spacing:-0.01em; }
+      .node .t span { position:absolute; left:0; top:0; white-space:nowrap; }
+      .node .t .b { opacity:0; }
+      .node .m { font-size:13px; color:var(--mut); margin-top:3px; white-space:nowrap; }
+      .badge { position:absolute; right:10px; top:9px; font-size:11px; font-weight:500; color:var(--accT); background:var(--accA); border-radius:9px; padding:2px 8px; opacity:0; white-space:nowrap; }
+      .ghost { position:absolute; left:0; top:0; width:200px; height:66px; box-sizing:border-box; border-radius:14px; background:#fff; border:1px solid var(--line); opacity:0; }
+      .xnode { position:absolute; left:0; top:0; height:40px; padding:0 14px; display:flex; align-items:center; box-sizing:border-box; border-radius:10px; background:#fff; border:1px dashed #D4D9DF; font-size:13px; color:var(--mut); opacity:0; white-space:nowrap; }
+      svg { position:absolute; left:0; top:0; overflow:visible; }
+      .row { display:flex; align-items:center; height:44px; border-bottom:1px solid var(--hair); font-size:15px; font-variant-numeric:tabular-nums; }
+      .chip { position:absolute; width:147px; height:46px; box-sizing:border-box; border-radius:10px; border:1px solid var(--line); background:#fff; display:flex; align-items:center; padding:0 14px; font-size:15px; font-weight:500; }
+      .erpcell { position:absolute; width:253px; height:296px; box-sizing:border-box; background:#ECEEF1; border:1.5px solid #CDD2D8; }
+      .erpcell div { height:38px; display:flex; align-items:center; padding:0 14px; background:#E2E5E9; border-bottom:1.5px solid #CDD2D8; font-size:13px; font-weight:600; letter-spacing:.16em; color:#6A7078; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="960" data-duration="73">
+      <!-- B1 headline. Anchor: top-left safe corner (80, 80). -->
+      <div id="h1" class="h" style="left:80px; top:70px; font-size:72px;"><span class="w">Every</span> <span class="w">business</span><br /><span class="w">works</span> <span class="w">differently.</span></div>
+
+      <!-- B4 generic suite: rigid, grey, colder than everything else in the film. -->
+      <div id="erp" class="abs" style="width:840px; height:700px; border-radius:6px; background:#DDE0E4; box-shadow:0 40px 90px rgba(15,17,21,.18); opacity:0;">
+        <div style="height:44px; display:flex; align-items:center; gap:8px; padding:0 16px; background:#D2D6DB;"><i style="width:10px;height:10px;background:#9DA3AA;display:block"></i><i style="width:10px;height:10px;background:#9DA3AA;display:block"></i><span style="margin-left:10px; font-size:12px; font-weight:600; letter-spacing:.16em; color:#6A7078;">MODULES</span></div>
+        <div class="erpcell" style="left:16px; top:60px;"><div>SALES</div></div>
+        <div class="erpcell" style="left:285px; top:60px;"><div>INVENTORY</div></div>
+        <div class="erpcell" style="left:554px; top:60px;"><div>CRM</div></div>
+        <div class="erpcell" style="left:16px; top:372px;"><div>FINANCE</div></div>
+        <div class="erpcell" style="left:285px; top:372px;"><div>HR</div></div>
+        <div class="erpcell" style="left:554px; top:372px;"><div>REPORTS</div></div>
+      </div>
+
+      <!-- Window: the discovery card that grows into the Verity app (carrier). -->
+      <div id="win" class="card" style="opacity:0; border-radius:18px;">
+        <div id="disc" class="abs" style="width:380px; height:430px;">
+          <div class="lab" style="position:absolute; left:24px; top:24px; color:var(--ink);">Verity · Discovery</div>
+          <div id="q0" class="abs" style="left:24px; top:76px; width:330px;"><div class="qrow"></div></div>
+        </div>
+        <div id="app" class="abs" style="width:920px; height:650px; opacity:0;">
+          <div style="position:absolute; left:0; right:0; top:0; height:48px; display:flex; align-items:center; gap:10px; padding:0 20px; border-bottom:1px solid var(--line);">
+            <svg width="14" height="18" viewBox="0 0 24 30" style="position:relative"><path fill="#0A84FF" d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z"/><path fill="#0A84FF" d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z"/></svg>
+            <span class="lab" style="color:var(--ink); font-size:12px;">Verity / Orders desk</span>
+            <span style="flex:1"></span>
+            <span id="live" style="width:7px; height:7px; border-radius:4px; background:var(--acc); opacity:.25;"></span><span class="lab" style="font-size:12px;">Live</span>
+          </div>
+          <div style="position:absolute; left:240px; top:48px; bottom:0; width:1px; background:var(--line);"></div>
+          <div id="view" class="abs" style="left:264px; top:72px; width:632px;">
+            <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-size:28px; font-weight:400; letter-spacing:-0.02em;">Approvals</span><span id="pend" style="font-size:13px; color:var(--accT); background:var(--accA); border-radius:10px; padding:3px 10px;">2 pending</span></div>
+            <div class="row" style="margin-top:22px; color:var(--mut); font-size:12px; letter-spacing:.14em; height:34px;"><span style="width:130px">QUOTATION</span><span style="flex:1">CUSTOMER</span><span style="width:110px">VALUE</span><span style="width:120px">STATUS</span></div>
+            <div class="row r"><span style="width:130px">QTN-0418</span><span style="flex:1">Mehta Industries</span><span style="width:110px">₹4.86 L</span><span style="width:120px; position:relative;"><span class="s1" style="position:absolute; top:-9px; color:var(--mut)">Partner</span><span class="s2" style="position:absolute; top:-9px; color:var(--accT); opacity:0">Implementing</span></span></div>
+            <div class="row r"><span style="width:130px">QTN-0419</span><span style="flex:1">Sharma Builders</span><span style="width:110px">₹1.20 L</span><span style="width:120px; position:relative;"><span class="s1" style="position:absolute; top:-9px; color:var(--mut)">Owner</span><span class="s2" style="position:absolute; top:-9px; color:var(--accT); opacity:0">Implementing</span></span></div>
+            <div class="row r"><span style="width:130px">QTN-0420</span><span style="flex:1">Rao Exports</span><span style="width:110px">₹62,000</span><span style="width:120px; color:var(--mut)">Approved</span></div>
+            <div class="row r"><span style="width:130px">QTN-0421</span><span style="flex:1">Kapoor & Sons</span><span style="width:110px">₹2.75 L</span><span style="width:120px; color:var(--mut)">Approved</span></div>
+            <div id="hl" class="abs" style="left:-10px; top:90px; width:652px; height:44px; border-radius:8px; background:var(--accA); opacity:0;"></div>
+          </div>
+          <!-- B8: the generic module set, inside the app. -->
+          <div id="mods" class="abs" style="left:250px; top:58px; width:660px; height:580px; background:#fff; opacity:0;"></div>
+        </div>
+      </div>
+
+      <!-- The business's workflow. Its cards are the film's carrier. -->
+      <div id="flowG" class="abs" style="width:1080px; height:960px; z-index:5;">
+        <svg id="wires" width="1080" height="960"></svg>
+        <div id="gh" class="abs"></div>
+        <div id="xn" class="abs"></div>
+        <div id="cards" class="abs"></div>
+      </div>
+
+      <div id="toast" class="card" style="z-index:6; width:330px; height:64px; display:flex; align-items:center; gap:12px; padding:0 18px; opacity:0;"><span style="width:8px; height:8px; border-radius:4px; background:#9DA3AA;"></span><span style="font-size:15px; color:var(--ink);">No field for a second approver</span></div>
+
+      <!-- B4 headline: the two words trade places. Anchor: top-left safe corner. -->
+      <div id="h4" class="abs" style="left:80px; top:62px; width:900px; height:70px; font-size:56px; font-weight:300; letter-spacing:-0.03em; opacity:0;">
+        <span id="wB" class="abs" style="white-space:nowrap">Business</span>
+        <svg id="arr" width="70" height="20" style="left:255px; top:28px;"><path d="M4 10 H62 M50 2 L62 10 L50 18" fill="none" stroke="#6B7078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="wS" class="abs" style="white-space:nowrap">Software</span>
+      </div>
+
+      <div id="yr" class="abs" style="left:80px; top:800px; opacity:0;"><div class="lab">Since</div><div id="yrn" style="font-size:44px; font-weight:300; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; margin-top:4px;">2011</div></div>
+
+      <!-- Brand lockup (B5 arrival, then top-left furniture). -->
+      <div id="lock" class="abs" style="display:flex; align-items:center; gap:18px; opacity:0;">
+        <svg width="51" height="64" viewBox="0 0 24 30" style="position:relative"><path fill="#0A84FF" d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z"/><path fill="#0A84FF" d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z"/></svg>
+        <span style="font-size:72px; font-weight:600; letter-spacing:-0.045em; line-height:1;">verity</span>
+      </div>
+
+      <div id="h5" class="h" style="left:80px; top:330px; font-size:72px; opacity:0;"><span class="w">We start with</span><br /><span class="w">the business.</span></div>
+      <div id="h8" class="h" style="left:80px; top:118px; font-size:52px; opacity:0;"><span class="w">Only</span> <span class="w">what</span> <span class="w">your</span> <span class="w">business</span> <span class="w">needs.</span></div>
+
+      <!-- Proposal (B9). -->
+      <div id="prop" class="card" style="width:330px; height:520px; opacity:0; border-radius:18px;"></div>
+
+      <div id="h10" class="h" style="left:80px; top:250px; font-size:76px; opacity:0;"><span class="w">Software should not</span><br /><span class="w">decide how your</span><br /><span class="w">business works.</span></div>
+      <div id="h10b" class="abs" style="left:80px; top:640px; font-size:30px; font-weight:300; color:var(--mut); letter-spacing:-0.01em; opacity:0; white-space:nowrap;">It should be built around it.</div>
+
+      <!-- B11: the product, built around the workflow. -->
+      <div id="win2" class="card" style="left:80px; top:200px; width:920px; height:700px; border-radius:18px; opacity:0;">
+        <div style="position:absolute; left:0; right:0; top:0; height:48px; display:flex; align-items:center; gap:10px; padding:0 20px; border-bottom:1px solid var(--line);">
+          <svg width="14" height="18" viewBox="0 0 24 30" style="position:relative"><path fill="#0A84FF" d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z"/><path fill="#0A84FF" d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z"/></svg>
+          <span class="lab" style="color:var(--ink); font-size:12px;">Verity / Workflow</span><span style="flex:1"></span>
+          <span style="width:7px; height:7px; border-radius:4px; background:var(--acc);"></span><span class="lab" style="font-size:12px;">Live</span>
+        </div>
+        <div style="position:absolute; left:240px; top:48px; bottom:0; width:1px; background:var(--line);"></div>
+        <div id="nav2" class="abs" style="left:16px; top:72px; width:208px;"></div>
+      </div>
+
+      <!-- Outro (B12): the script's own words. -->
+      <div id="out" class="abs" style="width:1080px; height:960px; display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0;">
+        <div id="olock" style="display:flex; align-items:center; gap:20px;">
+          <svg width="56" height="70" viewBox="0 0 24 30" style="position:relative"><path fill="#0A84FF" d="M2.6 1.6h18.8a1.6 1.6 0 011.2 2.7L13.2 14a1.6 1.6 0 01-2.4 0L1.4 4.3A1.6 1.6 0 012.6 1.6z"/><path fill="#0A84FF" d="M10.8 16a1.6 1.6 0 012.4 0l9.4 9.7a1.6 1.6 0 01-1.2 2.7H2.6a1.6 1.6 0 01-1.2-2.7z"/></svg>
+          <span style="font-size:80px; font-weight:600; letter-spacing:-0.045em; line-height:1;">verity</span>
+        </div>
+        <div id="o1" style="margin-top:52px; font-size:44px; font-weight:300; letter-spacing:-0.03em;">Run your business <span style="color:var(--mut)">in your way.</span></div>
+        <div id="o2" style="margin-top:18px; font-size:22px; font-weight:300; color:var(--mut);">Enterprise operations, built around how you work.</div>
+        <div id="o3" style="margin-top:40px; font-size:16px; letter-spacing:.06em; color:rgba(15,17,21,.45);">verity.plotarmour.in</div>
+      </div>
+
+      <!-- Oversized cursor. -->
+      <svg id="cur" width="44" height="56" viewBox="0 0 22 28" style="z-index:10; opacity:0; filter:drop-shadow(0 6px 10px rgba(15,17,21,.25));"><path d="M2 2 L2 22 L7.2 17.4 L10.6 25.2 L14 23.8 L10.7 16.2 L17.6 16.2 Z" fill="#0F1115" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+
+    <script>
+      (function () {
+        const root = document.getElementById('root');
+        const $ = (id) => document.getElementById(id);
+        const mk = (parent, cls, html, style) => { const e = document.createElement('div'); if (cls) e.className = cls; if (html) e.innerHTML = html; if (style) e.setAttribute('style', style); parent.appendChild(e); return e; };
+
+        /* ---------- the workflow ---------- */
+        const IDS = ['request', 'review', 'approve', 'more', 'quote', 'order'];
+        const ART = {request: 'WhatsApp · Sharma ji', review: 'Site visit notes', approve: 'Approval · pending', more: 'Follow-up call', quote: 'Quotation · v3', order: 'Order register'};
+        const STEP = {request: ['Request', 'Enquiry on WhatsApp', 'Enquiries'], review: ['Review', 'Owner checks the site', 'Review'], approve: ['Approve', 'Above ₹5 L: partner', 'Approvals'], more: ['More info', 'Client asks again', 'More info'], quote: ['Quotation', 'v3 · 12 Mar', 'Quotations'], order: ['Order', 'PO received', 'Orders']};
+        const BADGE = {request: '40 a month', review: '3 people', approve: '2 approvers', more: '2 rounds', quote: 'v3', order: '9 open'};
+        const cards = {};
+        IDS.concat(['stock', 'price']).forEach((id) => {
+          const c = mk($('cards'), 'card node', '', '');
+          c.innerHTML = `<div class="art"><i></i><span>${ART[id] || (id === 'stock' ? 'Stock.xlsx' : 'Price list 2024')}</span></div>` +
+            (STEP[id] ? `<div class="step"><div class="t"><span class="a">${STEP[id][0]}</span><span class="b">${STEP[id][2]}</span></div><div class="m">${STEP[id][1]}</div></div><div class="badge">${BADGE[id]}</div>` : '');
+          cards[id] = c;
+        });
+        // Scatter (B1), centred flow (F1), right-column flow (F2), inside the product (F3). Card top-left corners.
+        const S = {request: [640, 300], review: [300, 330], approve: [720, 450], more: [560, 560], quote: [180, 600], order: [700, 680], stock: [420, 770], price: [780, 820]};
+        const F1 = {request: [470, 240], review: [470, 350], approve: [380, 470], more: [680, 470], quote: [470, 590], order: [470, 710]};
+        const F2 = {request: [680, 250], review: [680, 355], approve: [560, 470], more: [800, 470], quote: [680, 585], order: [680, 700]};
+        const F3 = {request: [560, 300], review: [560, 400], approve: [450, 510], more: [740, 510], quote: [560, 620], order: [560, 730]};
+        const EDGES = [['request', 'review'], ['review', 'approve'], ['review', 'more'], ['more', 'review', 1], ['approve', 'quote'], ['quote', 'order']];
+        const dOf = (L, e) => {
+          const [a, b, loop] = e;
+          if (loop) { const m = L[a], r = L[b]; return `M${m[0] + 100} ${m[1]} C${m[0] + 100} ${m[1] - 50} ${r[0] + 262} ${r[1] + 33} ${r[0] + 200} ${r[1] + 33}`; }
+          const x1 = L[a][0] + 100, y1 = L[a][1] + 66, x2 = L[b][0] + 100, y2 = L[b][1], k = (y2 - y1) * 0.5;
+          return `M${x1} ${y1} C${x1} ${y1 + k} ${x2} ${y2 - k} ${x2} ${y2}`;
+        };
+        const NS = 'http://www.w3.org/2000/svg';
+        const wires = EDGES.map((e) => { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', dOf(F1, e)); p.setAttribute('fill', 'none'); p.setAttribute('stroke', '#C9CED6'); p.setAttribute('stroke-width', '1.6'); p.setAttribute('stroke-linecap', 'round'); p.setAttribute('pathLength', '1'); p.setAttribute('stroke-dasharray', '1 1'); p.setAttribute('stroke-dashoffset', '1'); $('wires').appendChild(p); return p; });
+        const token = document.createElementNS(NS, 'circle'); token.setAttribute('r', '7'); token.setAttribute('fill', '#0A84FF'); token.setAttribute('opacity', '0'); $('wires').appendChild(token);
+
+        // B3 accumulations: stacked documents behind each step, and two steps that grew in over the years.
+        const ghosts = IDS.map((id) => [mk($('gh'), 'ghost'), mk($('gh'), 'ghost')]);
+        const XN = [['Partner sign-off', 150, 482, 'approve'], ['Dispatch', 490, 806, 'order']];
+        const xnodes = XN.map((x) => mk($('xn'), 'xnode', x[0]));
+        const xwire = XN.map(() => { const p = document.createElementNS(NS, 'path'); p.setAttribute('fill', 'none'); p.setAttribute('stroke', '#D4D9DF'); p.setAttribute('stroke-width', '1.4'); p.setAttribute('stroke-dasharray', '4 5'); p.setAttribute('opacity', '0'); $('wires').appendChild(p); return p; });
+        xwire[0].setAttribute('d', `M380 503 C330 503 330 502 ${150 + 150} 502`);
+        xwire[1].setAttribute('d', `M570 776 C570 790 560 796 560 806`);
+
+        // Discovery rows (B6) and module chips (B8).
+        const Q = [['How you work', '6 steps · 2 teams'], ['Where decisions happen', 'Review · Approve'], ['What can improve', 'More-info loop · 2 rounds'], ['What you actually need', '5 of 6 steps']];
+        $('q0').innerHTML = Q.map((q, i) => `<div class="qr" style="position:relative; height:78px; border-top:1px solid var(--hair);"><span class="qc" style="position:absolute; left:0; top:20px; width:20px; height:20px; border-radius:10px; border:1.5px solid #CDD2D8; box-sizing:border-box;"></span><span class="qf" style="position:absolute; left:0; top:20px; width:20px; height:20px; border-radius:10px; background:var(--acc); opacity:0;"></span><div style="position:absolute; left:34px; top:17px; font-size:18px; font-weight:400;">${q[0]}</div><div class="qa" style="position:absolute; left:34px; top:44px; font-size:14px; color:var(--mut); opacity:0;">${q[1]}</div></div>`).join('') +
+          `<div id="build" style="margin-top:22px; height:46px; border-radius:12px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:500; opacity:0;">Build workspace</div>`;
+        const MODS = ['Enquiries', 'CRM', 'Campaigns', 'Review', 'Payroll', 'Approvals', 'Assets', 'Helpdesk', 'Leads', 'Quotations', 'Timesheets', 'Projects', 'Expenses', 'Orders', 'Budgets', 'Fleet'];
+        const KEEP = new Set(['Enquiries', 'Review', 'Approvals', 'Quotations', 'Orders']);
+        mk($('mods'), 'lab', 'All modules · 16', 'position:absolute; left:14px; top:18px;');
+        const chips = MODS.map((n, i) => mk($('mods'), 'chip', (KEEP.has(n) ? '<span style="width:7px;height:7px;border-radius:4px;background:#0A84FF;margin-right:10px;flex:none"></span>' : '') + n, `left:${14 + (i % 4) * 159}px; top:${60 + Math.floor(i / 4) * 58}px;`));
+        const P = ['Requirement', 'Proposed solution', 'Approval', 'Implementation'];
+        $('prop').innerHTML = `<div class="lab" style="position:absolute; left:24px; top:24px; color:var(--ink);">Proposal · Mehta Industries</div>` +
+          P.map((p, i) => `<div class="pr" style="position:absolute; left:24px; right:24px; top:${78 + i * 74}px; height:74px; border-top:1px solid var(--hair);"><span style="position:absolute; left:0; top:24px; font-size:22px; font-weight:300; color:var(--mut); font-variant-numeric:tabular-nums;">0${i + 1}</span><span style="position:absolute; left:46px; top:27px; font-size:17px;">${p}</span><span class="pk" style="position:absolute; right:0; top:25px; width:22px; height:22px; border-radius:11px; background:var(--acc); opacity:0;"></span></div>`).join('') +
+          `<div id="appr" style="position:absolute; left:24px; right:24px; bottom:24px; height:50px; border-radius:12px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:500;">Approve proposal</div>` +
+          `<div id="apprd" style="position:absolute; left:24px; right:24px; bottom:24px; height:50px; border-radius:12px; background:var(--acc); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:500; opacity:0;">Approved</div>`;
+        $('nav2').innerHTML = ['Enquiries', 'Review', 'Approvals', 'Quotations', 'Orders'].map((n, i) => `<div style="height:42px; display:flex; align-items:center; padding:0 12px; border-radius:10px; margin-bottom:8px; font-size:15px; font-weight:500; ${i === 0 ? 'background:var(--accA);' : ''}">${n}</div>`).join('');
+
+        /* ---------- timeline ---------- */
+        const tl = gsap.timeline({paused: true});
+        const pos = (L, id) => ({x: L[id][0], y: L[id][1]});
+        const flowTo = (L, t, dur, ease, stagger = 0.05) => {
+          IDS.forEach((id, i) => tl.to(cards[id], {...pos(L, id), rotation: 0, duration: dur, ease}, t + i * stagger));
+          EDGES.forEach((e, i) => tl.to(wires[i], {attr: {d: dOf(L, e)}, duration: dur, ease}, t + 0.02));
+        };
+        const words = (sel, t, dy = 26) => tl.fromTo(`${sel} .w`, {y: dy, opacity: 0}, {y: 0, opacity: 1, duration: 0.8, ease: 'power4.out', stagger: 0.07}, t);
+
+        // Initial states (set on the timeline, never in CSS, so transforms never fight the tweens).
+        IDS.concat(['stock', 'price']).forEach((id, i) => tl.set(cards[id], {x: S[id][0] + 220, y: S[id][1], rotation: [-3, 2, -2, 3, -2, 2, -1, 2][i], opacity: 0}, 0));
+        tl.set('#win', {x: 80, y: 250, width: 380, height: 430}, 0);
+        tl.set('#lock', {x: 540 - 162, y: 480 - 32, scale: 0.82, transformOrigin: '50% 50%'}, 0);
+        tl.set('#cur', {x: 1120, y: 1000}, 0);
+        tl.set('#erp', {x: 260, y: 170}, 0);
+        tl.set('#toast', {x: 640, y: 780}, 0);
+        tl.set('#prop', {x: 1100, y: 250}, 0);
+        tl.set('#wS', {x: 330}, 0);
+        ghosts.forEach((g, i) => { const [x, y] = F1[IDS[i]]; tl.set(g[0], {x: x + 6, y: y + 6}, 0); tl.set(g[1], {x: x + 12, y: y + 12}, 0); });
+        xnodes.forEach((n, i) => tl.set(n, {x: XN[i][1], y: XN[i][2]}, 0));
+
+        /* B1 0-6: the business already runs on everything. Staged reveals drifting with the current (left). */
+        words('#h1', 0.4);
+        IDS.concat(['stock', 'price']).forEach((id, i) => tl.to(cards[id], {x: S[id][0], opacity: 1, duration: 1.1, ease: 'power4.out'}, 0.7 + i * 0.42));
+        tl.fromTo('#flowG', {x: 0}, {x: -26, duration: 6.1, ease: 'sine.inOut'}, 0);
+
+        /* B2 6-11: the artefacts become THIS business's way of working. */
+        tl.to('#h1', {x: -90, opacity: 0, duration: 0.6, ease: 'power4.in'}, 5.6);
+        tl.to('#flowG', {x: 0, duration: 1.4, ease: 'power3.inOut'}, 6.1);
+        flowTo(F1, 6.2, 1.4, 'power3.inOut');
+        ['stock', 'price'].forEach((id, i) => tl.to(cards[id], {x: '-=160', opacity: 0, duration: 0.7, ease: 'power4.in'}, 6.2 + i * 0.08));
+        IDS.forEach((id, i) => {
+          tl.to(cards[id].querySelector('.art'), {y: -12, opacity: 0, duration: 0.4, ease: 'power2.in'}, 7.1 + i * 0.05);
+          tl.fromTo(cards[id].querySelector('.step'), {y: 12, opacity: 0}, {y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'}, 7.35 + i * 0.05);
+        });
+        wires.forEach((w, i) => tl.to(w, {attr: {'stroke-dashoffset': 0}, duration: 0.7, ease: 'power2.inOut'}, 7.8 + i * 0.22));
+        // The way it flows: one enquiry walks the path.
+        const walk = (L, t0, t1) => {
+          const pts = ['request', 'review', 'approve', 'quote', 'order'].map((id) => [L[id][0] + 100, L[id][1] + 33]);
+          const o = {u: 0};
+          tl.set(token, {attr: {opacity: 1}}, t0);
+          tl.fromTo(o, {u: 0}, {u: 1, duration: t1 - t0, ease: 'power1.inOut', onUpdate: () => {
+            const f = o.u * (pts.length - 1), k = Math.min(pts.length - 2, Math.floor(f)), r = f - k;
+            token.setAttribute('cx', pts[k][0] + (pts[k + 1][0] - pts[k][0]) * r);
+            token.setAttribute('cy', pts[k][1] + (pts[k + 1][1] - pts[k][1]) * r);
+          }}, t0);
+          tl.set(token, {attr: {opacity: 0}}, t1);
+        };
+        walk(F1, 9.5, 11.0);
+        tl.to('#flowG', {scale: 1.04, transformOrigin: '570px 500px', duration: 2.0, ease: 'sine.inOut'}, 9.0);
+
+        /* B3 11-18: years. The camera pulls back as the system thickens: stacks, counts, new steps, the years. */
+        tl.to('#flowG', {scale: 0.88, transformOrigin: '570px 500px', duration: 5.6, ease: 'power2.inOut'}, 11.0);
+        ghosts.forEach((g, i) => { tl.to(g[0], {opacity: 1, duration: 0.5}, 12.2 + i * 0.12); tl.to(g[1], {opacity: 1, duration: 0.5}, 12.5 + i * 0.12); });
+        IDS.forEach((id, i) => tl.fromTo(cards[id].querySelector('.badge'), {y: 6, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: 'power3.out'}, 13.6 + i * 0.18));
+        xnodes.forEach((n, i) => { tl.fromTo(n, {opacity: 0, x: XN[i][1] + 30}, {opacity: 1, x: XN[i][1], duration: 0.7, ease: 'power4.out'}, 14.8 + i * 0.4); tl.to(xwire[i], {attr: {opacity: 1}, duration: 0.5}, 15.0 + i * 0.4); });
+        tl.fromTo('#yr', {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.7, ease: 'power3.out'}, 12.4);
+        const yo = {v: 2011};
+        tl.to(yo, {v: 2026, duration: 4.2, ease: 'power2.inOut', onUpdate: () => { $('yrn').textContent = yo.v >= 2025.6 ? 'Today' : String(Math.round(yo.v)); }}, 12.6);
+        tl.to('#flowG', {scale: 0.9, duration: 1.3, ease: 'sine.inOut'}, 16.7);
+
+        /* B4 18-25: generic software. It enters with the current and forces the workflow into its template. */
+        tl.to(['#gh', '#xn', '#yr'], {opacity: 0, duration: 0.5}, 18.0);
+        IDS.forEach((id) => tl.to(cards[id].querySelector('.badge'), {opacity: 0, duration: 0.4}, 18.0));
+        tl.to(xwire, {attr: {opacity: 0}, duration: 0.4}, 18.0);
+        tl.to('#flowG', {scale: 1, x: 0, duration: 1.0, ease: 'power3.inOut'}, 18.3);
+        tl.fromTo('#erp', {x: 400, opacity: 0}, {x: 120, opacity: 1, duration: 1.0, ease: 'power4.out'}, 18.4);
+        tl.fromTo('#h4', {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.8, ease: 'power4.out'}, 18.6);
+        wires.forEach((w) => tl.to(w, {attr: {"stroke-dashoffset": 0.6}, duration: 0.5, ease: "power2.in"}, 19.3));
+        tl.to("#wires", {opacity: 0, duration: 0.4}, 19.6);
+        const FORCE = {request: [152, 286, 0.86], review: [152, 346, 0.86], quote: [152, 406, 0.86], order: [420, 286, 0.86], more: [1060, 470, 0.86]};
+        Object.entries(FORCE).forEach(([id, [x, y, s]], i) => tl.to(cards[id], {x, y, scale: s, transformOrigin: '0 0', duration: 1.0, ease: 'power3.inOut'}, 19.5 + i * 0.09));
+        tl.to(cards.more, {opacity: 0, duration: 0.4}, 20.2);
+        // Cursor-led friction: drag Approve into Finance; it does not fit.
+        tl.to('#cur', {opacity: 1, duration: 0.01}, 20.4);
+        tl.to('#cur', {x: 520, y: 530, duration: 0.9, ease: 'power3.out'}, 20.4);
+        tl.to('#cur', {scale: 0.86, transformOrigin: '10% 10%', duration: 0.08, yoyo: true, repeat: 1}, 21.35);
+        tl.to([cards.approve, '#cur'], {x: '-=230', y: '+=110', duration: 0.95, ease: 'power3.inOut'}, 21.55);
+        tl.to(cards.approve, {scaleX: 0.7, scaleY: 0.86, transformOrigin: '0 0', duration: 0.25, ease: 'power2.out'}, 22.5);
+        tl.fromTo('#toast', {x: 760, opacity: 0}, {x: 600, opacity: 1, duration: 0.7, ease: 'power4.out'}, 22.95);
+        tl.to('#cur', {x: 1120, y: 1000, duration: 0.8, ease: 'power3.in'}, 23.1);
+        // The words trade places: Business -> Software becomes Software -> Business.
+        tl.to('#wB', {x: 330, duration: 0.9, ease: 'power3.inOut'}, 23.6);
+        tl.to('#wB', {y: 44, duration: 0.45, ease: 'power2.in'}, 23.6);
+        tl.to('#wB', {y: 0, duration: 0.45, ease: 'power2.out'}, 24.05);
+        tl.to('#wS', {x: 0, duration: 0.9, ease: 'power3.inOut'}, 23.6);
+        tl.to('#arr', {opacity: 0.2, duration: 0.3, yoyo: true, repeat: 1}, 23.7);
+
+        /* B5 25-30: leave that world (scale-burst), Verity arrives on the same sign, then the business returns. */
+        const burst = ['#erp', '#toast', '#h4', cards.request, cards.review, cards.quote, cards.order, cards.approve];
+        tl.to(burst, {scale: '*=1.9', opacity: 0, duration: 0.55, ease: 'power4.in', transformOrigin: '540px 480px'}, 24.85);
+        tl.to('#wires', {opacity: 0, duration: 0.4}, 24.85);
+        tl.fromTo('#lock', {scale: 0.82, opacity: 0}, {scale: 1, opacity: 1, duration: 0.9, ease: 'power4.out'}, 25.4);
+        tl.to('#lock', {x: 80, y: 80, scale: 0.42, transformOrigin: '0 0', duration: 1.0, ease: 'power3.inOut'}, 27.0);
+        words('#h5', 27.6);
+        IDS.forEach((id, i) => tl.set(cards[id], {x: F2[id][0] + 260, y: F2[id][1], scale: 1, scaleX: 1, scaleY: 1, rotation: 0, opacity: 0}, 26.0));
+        EDGES.forEach((e, i) => tl.set(wires[i], {attr: {d: dOf(F2, e), 'stroke-dashoffset': 1}}, 26.0));
+        tl.set('#wires', {opacity: 1}, 26.0);
+        IDS.forEach((id, i) => tl.to(cards[id], {x: F2[id][0], opacity: 1, duration: 1.0, ease: 'power4.out'}, 28.4 + i * 0.07));
+        wires.forEach((w, i) => tl.to(w, {attr: {'stroke-dashoffset': 0}, duration: 0.6, ease: 'power2.inOut'}, 29.0 + i * 0.12));
+
+        /* B6 30-38: understand first. Each question lights the part of the workflow it is about. */
+        tl.to('#h5', {x: -90, opacity: 0, duration: 0.55, ease: 'power4.in'}, 30.2);
+        tl.fromTo('#win', {y: 280, opacity: 0}, {y: 250, opacity: 1, duration: 0.8, ease: 'power4.out'}, 30.6);
+        const qr = Array.from(document.querySelectorAll('.qr'));
+        const lightUp = (ids, t) => ids.forEach((id) => tl.to(cards[id], {borderColor: '#0A84FF', duration: 0.4}, t));
+        const lightOff = (ids, t) => ids.forEach((id) => tl.to(cards[id], {borderColor: '#E6EAEE', duration: 0.4}, t));
+        const QT = [31.6, 33.4, 35.2, 37.0];
+        QT.forEach((t, i) => { tl.fromTo(qr[i].querySelector('.qf'), {scale: 0.4, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: 'back.out(1.6)'}, t); tl.fromTo(qr[i].querySelector('.qa'), {y: 6, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: 'power3.out'}, t + 0.2); });
+        walk(F2, 31.7, 33.2);
+        tl.to('#flowG', {scale: 1.045, transformOrigin: '780px 480px', duration: 6.0, ease: 'sine.inOut'}, 31.2);
+        tl.to('#flowG', {scale: 1, duration: 0.7, ease: 'power3.inOut'}, 37.6);
+        lightUp(['review', 'approve'], 33.5); lightOff(['review', 'approve'], 35.1);
+        lightUp(['more'], 35.3);
+        tl.to(wires[3], {attr: {stroke: '#0A84FF'}, duration: 0.4}, 35.3);
+        tl.to(cards.more.querySelector('.m'), {opacity: 0.4, duration: 0.3}, 35.6);
+        lightOff(['more'], 36.9); tl.to(wires[3], {attr: {stroke: '#C9CED6'}, duration: 0.4}, 36.9);
+        lightUp(['request', 'review', 'approve', 'quote', 'order'], 37.1);
+        tl.to(cards.more, {opacity: 0.45, duration: 0.4}, 37.1);
+        tl.fromTo('#build', {y: 8, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: 'power3.out'}, 37.3);
+
+        /* B7 38-44: the click builds it. The discovery card grows into the app; the steps file into its sidebar. */
+        tl.to('#cur', {opacity: 1, duration: 0.01}, 37.5);
+        tl.fromTo('#cur', {x: 700, y: 1000}, {x: 270, y: 640, duration: 0.8, ease: 'power3.out'}, 37.5);
+        tl.to('#cur', {scale: 0.86, transformOrigin: '10% 10%', duration: 0.08, yoyo: true, repeat: 1}, 38.3);
+        tl.to('#cur', {x: 700, y: 1000, opacity: 0, duration: 0.7, ease: 'power3.in'}, 38.6);
+        tl.to('#disc', {opacity: 0, duration: 0.35}, 38.45);
+        tl.to('#win', {x: 80, y: 230, width: 920, height: 650, duration: 1.0, ease: 'power3.inOut'}, 38.45);
+        tl.to('#app', {opacity: 1, duration: 0.5}, 39.0);
+        lightOff(['request', 'review', 'approve', 'quote', 'order'], 38.5);
+        tl.to(cards.more, {x: '-=140', opacity: 0, duration: 0.6, ease: 'power4.in'}, 38.6);
+        tl.to(wires, {attr: {'stroke-dashoffset': 1}, duration: 0.5, ease: 'power2.in'}, 38.6);
+        const NAV = ['request', 'review', 'approve', 'quote', 'order'];
+        NAV.forEach((id, i) => {
+          tl.to(cards[id], {x: 96, y: 302 + i * 50, width: 208, height: 42, duration: 1.0, ease: 'power3.inOut'}, 39.0 + i * 0.07);
+          tl.to(cards[id], {boxShadow: '0 0 0 rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)', duration: 0.5}, 39.6);
+          tl.to(cards[id].querySelector('.m'), {opacity: 0, duration: 0.3}, 39.0);
+          tl.to(cards[id].querySelector('.a'), {opacity: 0, duration: 0.4}, 40.2 + i * 0.1);
+          tl.to(cards[id].querySelector('.b'), {opacity: 1, duration: 0.4}, 40.2 + i * 0.1);
+        });
+        tl.to(cards.approve, {backgroundColor: 'rgba(10,132,255,0.10)', duration: 0.4}, 40.8);
+        tl.fromTo('#view .r', {y: 10, opacity: 0}, {y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.08}, 40.4);
+        tl.to('#hl', {opacity: 1, duration: 0.4}, 41.8);
+        tl.to('#hl', {y: 44, duration: 0.6, ease: 'power3.inOut'}, 42.8);
+
+        /* B8 44-49: only what this business needs. Sixteen generic modules; eleven leave. */
+        words('#h8', 44.0, 18);
+        tl.fromTo('#mods', {x: 40, opacity: 0}, {x: 0, opacity: 1, duration: 0.7, ease: 'power4.out'}, 44.2);
+        chips.forEach((c, i) => tl.fromTo(c, {y: 10, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: 'power3.out'}, 44.4 + i * 0.03));
+        chips.forEach((c, i) => { if (!KEEP.has(MODS[i])) tl.to(c, {scale: 0.92, opacity: 0, filter: 'blur(4px)', duration: 0.45, ease: 'power2.in'}, 45.6 + (i % 3) * 0.35); });
+        chips.forEach((c, i) => { if (KEEP.has(MODS[i])) { const k = ['Enquiries', 'Review', 'Approvals', 'Quotations', 'Orders'].indexOf(MODS[i]); tl.to(c, {x: (k % 3) * 159 - (i % 4) * 159, y: Math.floor(k / 3) * 58 - Math.floor(i / 4) * 58, borderColor: '#0A84FF', duration: 0.9, ease: 'power3.inOut'}, 46.9); } });
+        tl.to('#mods', {x: -60, opacity: 0, duration: 0.55, ease: 'power4.in'}, 48.3);
+        tl.to('#h8', {x: -80, opacity: 0, duration: 0.55, ease: 'power4.in'}, 48.4);
+
+        /* B9 49-56: requirement, proposal, approval, implementation. The app docks left; the proposal arrives. */
+        const s9 = 0.6, ox = 80, oy = 300;
+        tl.to('#win', {scale: s9, x: ox, y: oy, transformOrigin: '0 0', duration: 1.0, ease: 'power3.inOut'}, 48.9);
+        NAV.forEach((id, i) => tl.to(cards[id], {x: ox + (96 - 80) * s9, y: oy + (302 + i * 50 - 230) * s9, scale: s9, transformOrigin: '0 0', duration: 1.0, ease: 'power3.inOut'}, 48.9));
+        tl.to('#prop', {x: 650, opacity: 1, duration: 1.0, ease: 'power4.out'}, 49.2);
+        tl.to('#prop', {scale: 1.03, transformOrigin: '50% 50%', duration: 3.0, ease: 'sine.inOut'}, 50.2);
+        tl.to('#prop', {scale: 1, duration: 2.0, ease: 'sine.inOut'}, 53.6);
+        const pk = Array.from(document.querySelectorAll('.pk'));
+        [50.1, 51.0, 54.0, 55.3].forEach((t, i) => tl.fromTo(pk[i], {scale: 0.4, opacity: 0}, {scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.6)'}, t));
+        tl.to('#cur', {opacity: 1, duration: 0.01}, 51.9);
+        tl.fromTo('#cur', {x: 1100, y: 1000}, {x: 830, y: 718, duration: 0.9, ease: 'power3.out'}, 51.9);
+        tl.to('#cur', {scale: 0.86, transformOrigin: '10% 10%', duration: 0.08, yoyo: true, repeat: 1}, 52.95);
+        tl.to('#appr', {scale: 0.97, duration: 0.08, yoyo: true, repeat: 1, transformOrigin: '50% 50%'}, 52.95);
+        tl.to('#apprd', {opacity: 1, duration: 0.3}, 53.5);
+        tl.to('#cur', {x: 1100, y: 1000, opacity: 0, duration: 0.7, ease: 'power3.in'}, 53.6);
+        tl.to('#live', {opacity: 1, duration: 0.3}, 53.9);
+        tl.to('#view .s1', {opacity: 0, duration: 0.3, stagger: 0.25}, 54.1);
+        tl.to('#view .s2', {opacity: 1, duration: 0.4, stagger: 0.25}, 54.25);
+        tl.to('#pend', {opacity: 0.35, duration: 0.4}, 54.6);
+
+        /* B10 56-64: the belief. Upward: a conclusion rises above what came before. */
+        const lift = ['#win', '#prop', '#lock', ...NAV.map((id) => cards[id])];
+        tl.to(lift, {y: '-=150', opacity: 0, duration: 0.6, ease: 'power4.in'}, 55.75);
+        tl.fromTo('#h10 .w', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1.0, ease: 'power4.out', stagger: 0.09}, 56.3);
+        tl.set('#h10', {opacity: 1}, 56.3);
+        tl.fromTo('#h10', {scale: 1}, {scale: 1.035, transformOrigin: '0 50%', duration: 7.4, ease: 'sine.inOut'}, 56.3);
+        tl.fromTo('#h10b', {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.9, ease: 'power3.out'}, 60.6);
+
+        /* B11 64-70: the product, built around that way. The same workflow, unchanged, inside Verity. */
+        tl.to(['#h10', '#h10b'], {y: '-=150', opacity: 0, duration: 0.6, ease: 'power4.in'}, 63.7);
+        IDS.forEach((id) => {
+          tl.set(cards[id], {x: F3[id][0], y: F3[id][1] + 150, width: 200, height: 66, scale: 1, scaleX: 1, scaleY: 1, opacity: 0, backgroundColor: '#FFFFFF', borderColor: '#E6EAEE', boxShadow: '0 6px 16px rgba(15,17,21,.06)'}, 63.6);
+          tl.set(cards[id].querySelector('.m'), {opacity: 1}, 63.6);
+        });
+        EDGES.forEach((e, i) => tl.set(wires[i], {attr: {d: dOf(F3, e), 'stroke-dashoffset': 0, stroke: '#C9CED6'}}, 63.6));
+        tl.set('#wires', {y: 150, opacity: 0}, 63.6);
+        tl.fromTo("#win2", {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1.0, ease: 'power4.out'}, 64.25);
+        tl.to([...IDS.map((id) => cards[id]), '#wires'], {y: '-=150', opacity: 1, duration: 1.0, ease: 'power4.out'}, 64.25);
+        walk(F3, 65.4, 68.6);
+        tl.to('#flowG', {scale: 1.045, transformOrigin: '540px 520px', duration: 4.2, ease: 'sine.inOut'}, 65.2);
+        tl.to('#win2', {scale: 1.045, transformOrigin: '460px 320px', duration: 4.2, ease: 'sine.inOut'}, 65.2);
+        ['request', 'review', 'approve', 'quote', 'order'].forEach((id, i) => { const t = 65.4 + i * 0.8; tl.to(cards[id], {borderColor: '#0A84FF', duration: 0.25}, t); tl.to(cards[id], {borderColor: '#E6EAEE', duration: 0.5}, t + 0.6); });
+
+        /* B12 70-73: the brand, in the script's words. The product recedes; the lockup lands on the same sign. */
+        tl.to(['#win2', '#wires', ...IDS.map((id) => cards[id])], {scale: 0.86, opacity: 0, duration: 0.6, ease: 'power4.in', transformOrigin: '540px 520px'}, 69.4);
+        tl.fromTo('#out', {scale: 1.12, opacity: 0}, {scale: 1, opacity: 1, duration: 1.0, ease: 'power4.out', transformOrigin: '540px 480px'}, 69.95);
+        tl.fromTo(['#o1', '#o2', '#o3'], {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.25}, 70.5);
+
+        window.__timelines['main'] = tl;
+      })();
+    </script>
+  </body>
+</html>
