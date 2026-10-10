@@ -40,7 +40,7 @@ looking at rendered output. No adjectives.
    `300` at `-0.03em`, sized by fluid clamp. Body is `15px`. There is no bold
    text on the page. Emphasis is size and colour, never weight.
 
-8. **One accent, spent on state.** `#0FA894` appears on active dots, live
+8. **One accent, spent on state.** `#0A84FF` appears on active dots, live
    markers, focus rings and data marks. It never fills a decorative surface,
    and no hex literal exists outside the token block.
 

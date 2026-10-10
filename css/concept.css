@@ -203,7 +203,7 @@
 .cn-pillar-title { font-family: var(--font-ui); font-size: var(--text-subheading); font-weight: 500; letter-spacing: -0.2px; margin: 0 0 var(--spacing-12); }
 .cn-pillar-body { font-size: var(--text-body); line-height: var(--leading-body); margin: 0; }
 
-/* accent panel uses teal tint + border; text reverts to ink via sections.css */
+/* accent panel uses accent tint + border; text reverts to ink via sections.css */
 .cn-pillar.accent .cn-pillar-title,
 .cn-pillar.accent .cn-pillar-body { color: var(--ink); }
 

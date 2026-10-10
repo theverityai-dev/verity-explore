@@ -1,29 +1,35 @@
 # Verity Design System
 
-Extracted verbatim from the reference app (`verityexplore-main/src/styles.css`
-and `src/components/ui/*`). This is the objective contract. Adherence is
-binary, not aesthetic.
+Extracted from the reference app (`verityexplore-main/src/styles.css` and
+`src/components/ui/*`) and kept in step with `css/verity.css`, which is the
+source of truth for every token below. This is the objective contract.
+Adherence is binary, not aesthetic.
 
 ## 1. Colour
 
 One accent ramp drives the whole site. No brand colour is hardcoded outside
-the token block.
+the token block. The accent is Apple-system blue; the earlier teal
+(`#00D1B2`, then `#0FA894`) is retired everywhere.
+
+Ramp: `--accent-50 #EEF6FF`, `100 #D9EAFF`, `200 #B3D6FF`, `300 #80BBFF`,
+`400 #479DFF`, `500 #0A84FF`, `600 #0068D6`, `700 #0050A8`, `800 #003D80`,
+`900 #002A5A`.
 
 | Token | Light | Dark |
 |---|---|---|
-| `--accent-500` / `--accent` | `#0FA894` | same |
-| `--accent-text` | `--accent-700` `#0A7264` | `--accent-300` `#6ECABD` |
-| `--accent-ink` (text on solid accent) | `#FFFFFF` | `#061714` |
-| `--base` | `#F7F8FA` | `#0F1115` |
-| `--base-alt` | `#F1F3F7` | `#12151A` |
-| `--surface` | `#FFFFFF` | `#16191F` |
-| `--surface-elevated` | `#FFFFFF` | `#1C2027` |
-| `--ink` | `#0F1115` | `#F7F8FA` |
-| `--ink-muted` | `#6B7078` | `#9AA1AA` |
-| `--ink-body` | `rgba(15,17,21,.66)` | `rgba(247,248,250,.64)` |
-| `--line` | `#E6EAEE` | `rgba(247,248,250,.14)` |
-| `--line-hair` | `#EDEFF3` | `rgba(247,248,250,.08)` |
-| `--grid-line` | `rgba(15,17,21,.05)` | `rgba(247,248,250,.05)` |
+| `--accent-500` / `--accent` | `#0A84FF` | same |
+| `--accent-text` | `--accent-700` `#0050A8` | `--accent-300` `#80BBFF` |
+| `--accent-ink` (text on solid accent) | `#FFFFFF` | `#FFFFFF` |
+| `--base` | `#F7F8FA` | `#0B0F17` |
+| `--base-alt` | `#F1F3F7` | `#0F141D` |
+| `--surface` | `#FFFFFF` | `#141A25` |
+| `--surface-elevated` | `#FFFFFF` | `#1A2130` |
+| `--ink` | `#0F1115` | `#F4F7FB` |
+| `--ink-muted` | `#6B7078` | `#8E9AAE` |
+| `--ink-body` | `rgba(15,17,21,.66)` | `rgba(244,247,251,.64)` |
+| `--line` | `#E6EAEE` | `rgba(244,247,251,.14)` |
+| `--line-hair` | `#EDEFF3` | `rgba(244,247,251,.08)` |
+| `--grid-line` | `rgba(15,17,21,.05)` | `rgba(244,247,251,.05)` |
 
 Accent alphas exist as tokens only: `--accent-a08 / a14 / a24 / a40`.
 
@@ -40,7 +46,7 @@ Rules:
   `text-wrap: pretty`, `margin: 0`.
 - Heading sizes are fluid clamps, never fixed px:
   h2 range `clamp(30px,3.6vw,52px)` to `clamp(32px,4vw,58px)`, `line-height` 1.04–1.05.
-- `.label`: `10.5px / 500 / 0.16em tracking / uppercase / --ink-muted`.
+- `.label`: `11px / 500 / 0.12em tracking / uppercase / --ink-muted`.
   This is the site's connective tissue and is used freely, not rationed.
 - `.tnum` (`font-variant-numeric: tabular-nums`) on every animated or
   comparable number, so digits do not reflow.
@@ -69,12 +75,19 @@ Exactly three tones:
 
 ## 5. Surface (Panel)
 
-- `border-radius: 16px` (`rounded-2xl`), `1px solid --line`, `--surface` fill.
+- `border-radius: 16px` (`--r-panel`), `1px solid --line`, `--surface` fill.
+  The radius scale is the only set on the site: `--r-bar 2px`, `--r-focus 4px`,
+  `--r-control 8px`, `--r-inner 12px`, `--r-panel 16px`, `--r-pill 999px`.
 - Chrome bar: `44px` tall, `border-bottom --line`, `.label` title in `--ink`
   of the form `VERITY / OVERVIEW`, optional muted meta, optional `Live` marker.
 - `Live` marker is a `5px` accent dot running `v-breathe 3.2s ease-in-out infinite`.
-- Elevation is one of two: `--elev-mid` `0 14px 34px rgba(15,17,21,.07)` or
-  `--elev-high` `0 30px 70px rgba(15,17,21,.1)`.
+- Elevation is one of two on a panel: `--elev-mid`
+  `0 2px 4px rgba(15,17,21,.05), 0 18px 40px rgba(15,17,21,.09)` or
+  `--elev-high` `0 4px 8px rgba(15,17,21,.06), 0 36px 80px rgba(15,17,21,.13)`.
+  `--elev-low` is reserved for small controls.
+- Illustration is allowed only as a framed still (1px `--line` border,
+  `--r-panel` radius) where there is no product surface to show, e.g.
+  `.mig-figure` in Migration. It never stands in for a product panel.
 - Product surfaces are real DOM, never images.
 
 ## 6. Rules and lists
@@ -136,4 +149,4 @@ for sections 2, 7 and 8. Specifically, and only inside `#top`:
   place the accent is allowed to fill a surface.
 
 Everything in the hero still resolves through the colour tokens: the second
-teal that used to live here (`#00D1B2`) has been folded into `--accent`.
+accent that used to live here has been folded into `--accent`.

@@ -13,17 +13,27 @@
     "render:reel-01-retail": "remotion render src/index.ts Reel-01-Retail-9x16 renders/reels/01-retail-commerce-9x16.mp4 --crf=16",
     "render:reel-general": "remotion render src/index.ts Reel-General-9x16 renders/reels/verity-general-9x16.mp4",
     "render:reel-retail": "remotion render src/index.ts Reel-Retail-9x16 renders/reels/retail-commerce-9x16.mp4",
+    "render:ad-r01-h1": "remotion render src/index.ts Ad-R01-H1-9x16 renders/ads/R01/verity-meta-R01-H1-9x16-v1.mp4 --crf=16",
+    "render:ad-r08": "remotion render src/index.ts Ad-R08-Dependency-9x16 renders/ads/R08/verity-meta-R08-9x16-v1.mp4 --crf=16",
+    "render:ad-r09": "remotion render src/index.ts Ad-R09-WhatsApp-9x16 renders/ads/R09/verity-meta-R09-9x16-v1.mp4 --crf=16",
+    "render:ad-r10": "remotion render src/index.ts Ad-R10-Adapt-16x9 renders/ads/R10/verity-meta-R10-16x9-v2.mp4 --crf=16",
+    "render:ad-r07": "remotion render src/index.ts Ad-R07-ERP-9x16 renders/ads/R07/verity-meta-R07-9x16-v1.mp4 --crf=16 --gl=angle",
     "still": "remotion still src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.8.1",
     "@remotion/cli": "^4.0.529",
     "@remotion/google-fonts": "^4.0.529",
     "@remotion/paths": "^4.0.529",
+    "@remotion/three": "^4.0.529",
     "@types/react": "^19.3.0",
+    "@types/three": "^0.186.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "remotion": "^4.0.529",
+    "three": "^0.186.1",
     "typescript": "^7.0.2"
   }
 }
+

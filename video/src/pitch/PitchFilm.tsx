@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext, useContext, useEffect} from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Inter';
 import {inOut, outX, seg, track} from '../shared/timeline';
@@ -31,6 +31,9 @@ B.forEach((b, i) => {
 const GRID = 72;
 const MASK = 'radial-gradient(ellipse 75% 70% at 50% 50%, #000 30%, transparent 100%)';
 const lin = (n: number) => n;
+
+/** Theme comes from the site stylesheet (`:root[data-theme]`), so dark is the landing page's own dark tokens. */
+const DarkCtx = createContext(false);
 
 const rise = (p: number, dx = 0, dy = 0) => ({opacity: Math.min(1, p * 2), transform: `translate(${(1 - p) * dx}px, ${(1 - p) * dy}px)`});
 const enter = (t: number, at: number, dur = 0.8) => seg(t, at, at + dur, outX);
@@ -235,10 +238,10 @@ const S3: React.FC<{t: number}> = ({t}) => {
 const S4: React.FC<{t: number}> = ({t}) => (
   <>
     <div style={{position: 'absolute', left: 0, right: 0, top: 330, display: 'flex', justifyContent: 'center'}}>
-      <Mark height={190} draw={seg(t, 21.45, 22.3, inOut)} fill={seg(t, 22.1, 22.6)} />
+      <Mark height={190} draw={seg(t, 21.0, 21.8, inOut)} fill={seg(t, 21.6, 22.1)} />
     </div>
     <div style={{position: 'absolute', left: M, right: M, top: 600, display: 'flex', justifyContent: 'center'}}>
-      <Words text="A different approach." t={t} at={22.1} size={84} align="center" />
+      <Words text="A different approach." t={t} at={21.7} size={84} align="center" />
     </div>
   </>
 );
@@ -370,6 +373,7 @@ const S7: React.FC<{t: number}> = ({t}) => (
 
 /** 46-48 s. The same five step cards, now checked inside the Verity window. */
 const S8: React.FC<{t: number}> = ({t}) => {
+  const dark = useContext(DarkCtx);
   const toast = enter(t, 47.2, 0.5);
   return (
     <>
@@ -389,8 +393,9 @@ const S8: React.FC<{t: number}> = ({t}) => {
             alignItems: 'center',
             gap: 14,
             borderRadius: 14,
-            background: 'var(--ink)',
-            color: 'var(--base)',
+            background: dark ? 'var(--surface-elevated)' : 'var(--ink)',
+            color: dark ? 'var(--ink)' : 'var(--base)',
+            border: dark ? '1px solid var(--line)' : undefined,
             fontSize: 30,
             fontWeight: 500,
             ...rise(toast, 0, 16),
@@ -406,17 +411,17 @@ const S8: React.FC<{t: number}> = ({t}) => {
 
 /** 48-51 s. End card: the mark draws, the wordmark lands, then the line. */
 const S9: React.FC<{t: number}> = ({t}) => {
-  const word = seg(t, 49.0, 49.8, outX);
+  const word = seg(t, 48.6, 49.4, outX);
   return (
     <>
       <div style={{position: 'absolute', left: 0, right: 0, top: 300, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 28}}>
-        <Mark height={130} draw={seg(t, 48.5, 49.3, inOut)} fill={seg(t, 49.1, 49.6)} />
+        <Mark height={130} draw={seg(t, 48.0, 48.8, inOut)} fill={seg(t, 48.6, 49.1)} />
         <div style={{overflow: 'hidden', paddingBottom: 20, marginBottom: -20}}>
           <div style={{fontSize: 130, fontWeight: 600, letterSpacing: '-0.04em', lineHeight: 1, transform: `translateX(${(1 - word) * -50}px)`, opacity: word}}>verity</div>
         </div>
       </div>
       <div style={{position: 'absolute', left: M, right: M, top: 540, display: 'flex', justifyContent: 'center'}}>
-        <Words text="That is what Verity does." t={t} at={49.5} size={64} align="center" />
+        <Words text="That is what Verity does." t={t} at={49.1} size={64} align="center" />
       </div>
     </>
   );
@@ -424,10 +429,14 @@ const S9: React.FC<{t: number}> = ({t}) => {
 
 const SCENES: React.FC<{t: number}>[] = [S1, S2, S3, S4, S5, S6, S7, S8, S9];
 
-export const PitchFilm: React.FC = () => {
+export const PitchFilm: React.FC<{dark?: boolean}> = ({dark = false}) => {
   const t = useCurrentFrame() / FILM_FPS;
   const camX = track(t, PAN_KEYS);
+  // Set during render so the first painted frame already has the right tokens; restore on unmount for Studio.
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  useEffect(() => () => document.documentElement.setAttribute('data-theme', 'light'), []);
   return (
+    <DarkCtx.Provider value={dark}>
     <AbsoluteFill style={{background: 'var(--base)', fontFamily, fontFeatureSettings: '"cv02","cv03","cv04","ss03"', color: 'var(--ink)', overflow: 'hidden'}}>
       <AbsoluteFill
         style={{
@@ -454,5 +463,6 @@ export const PitchFilm: React.FC = () => {
         })}
       </div>
     </AbsoluteFill>
+    </DarkCtx.Provider>
   );
 };

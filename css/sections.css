@@ -490,7 +490,7 @@
 .band--dark .pf-own-item span { color: var(--ink-body); }
 .band--dark .pf-own-item { border-top-color: var(--line); }
 
-/* The final close: button is primary teal on light. */
+/* The final close: button is primary accent on light. */
 .pf-close-cta .btn--fill { background: var(--accent); color: var(--accent-ink); }
 .pf-close-cta .btn--fill:hover { background: var(--accent-600); }
 .pf-close-cta .btn--ghost { color: var(--ink); }

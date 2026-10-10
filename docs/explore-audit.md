@@ -45,7 +45,7 @@ hand-made, provided the generator emits markup that obeys it.
 
 `verity-overview.html` is a standalone reference mock of the actual product UI.
 It does not share the site's stylesheets; it defines its own token block and uses
-the older accent `#00D1B2` rather than the current `#0FA894`.
+the older accent `#00D1B2` (since moved to `#0A84FF`, now also in the mock).
 
 ## 3. Actual Verity capability inventory
 
