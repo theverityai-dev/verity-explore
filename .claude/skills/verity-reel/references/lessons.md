@@ -23,3 +23,11 @@
 | Every render failed with a JSON error after a scripted edit | PowerShell `Set-Content -Encoding UTF8` writes a BOM; `package.json` and the skill frontmatter then fail to parse | Write with `[System.IO.File]::WriteAllText(path, text, New-Object System.Text.UTF8Encoding($false))`, or check and strip the 3-byte BOM after any scripted edit |
 | A grey slab showed when the end card arrived | The closing sheet's fade overlapped the end card | Sheets and headlines finish leaving at least 0.2 s before the next layer lands |
 | Landscape reuse of portrait components | R07 to R09 parts are sized for 1080 wide | Landscape grid: text x 120 to 840, product zone x 880 to 1800, cap line y 250, objects 920 wide; see `video/src/ads/R10/parts.tsx` |
+## From the industry series (2026-10-12)
+
+| What went wrong | Cause | Fix, and where it lives |
+|---|---|---|
+| The recording's closing "Limited time offer." was missing from the transcript, and a 6 s offer section was missing from another | Whisper drops speech after pauses and at the file end | Check for audible sound after the last transcribed word (`volumedetect` on the tail), then re-transcribe just that stretch |
+| The music drop check reported a hit 2 s late | A wide search window picks the strongest onset, not the drop | Check a narrow window (+/- 0.8 s) around the intended moment |
+| A shared tail built on fixed offsets drifted from the real recordings | Each recording's pauses differ | Anchor every tail beat to that recording's own word times (`Anchors` in `video/src/ads/series/engine.tsx`) |
+| Dim ghost of the last cards under the end card | Layers exited as the end card faded in | Finish the last layers leaving at least 0.4 s before the end card starts |

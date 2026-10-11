@@ -151,7 +151,8 @@ export const Lattice: React.FC<{cols: number; rows: number; size?: number; gap?:
 export const MODULES = ['Workflows', 'Orders', 'People', 'Inventory', 'Reports and analytics'];
 
 /** The Verity workspace being built module by module. `built` modules are solid, the next is still a blueprint. */
-export const Workspace: React.FC<Placed & {built: number}> = ({x, y, w, h, ry = 0, rx = 0, blur, opacity = 1, built}) => {
+export const Workspace: React.FC<Placed & {built: number; modules?: string[]}> = ({x, y, w, h, ry = 0, rx = 0, blur, opacity = 1, built, modules}) => {
+  const mods = modules ?? MODULES;
   /** `built` may be fractional: module i is solid as built passes i + 1, and crossfades from its blueprint on the way. */
   const Tile: React.FC<{i: number; style?: React.CSSProperties}> = ({i, style}) => {
     const k = Math.min(1, Math.max(0, built - i));
@@ -168,10 +169,10 @@ export const Workspace: React.FC<Placed & {built: number}> = ({x, y, w, h, ry = 
           ...style,
         }}
       >
-        <div style={{padding: '20px 22px', fontSize: 26, fontWeight: 500, letterSpacing: '-0.015em', color: drafting ? 'var(--accent-text)' : 'rgba(15,17,21,0.35)'}}>{MODULES[i]}</div>
+        <div style={{padding: '20px 22px', fontSize: 26, fontWeight: 500, letterSpacing: '-0.015em', color: drafting ? 'var(--accent-text)' : 'rgba(15,17,21,0.35)'}}>{mods[i]}</div>
         {k > 0 ? (
           <div style={{position: 'absolute', inset: -2, borderRadius: 16, padding: '20px 22px', boxSizing: 'border-box', background: '#fff', border: `1px solid ${HAIR}`, boxShadow: '0 1px 2px rgba(15,17,21,0.05)', opacity: k, transform: `scale(${0.97 + 0.03 * k})`}}>
-            <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '-0.015em', color: 'var(--ink)'}}>{MODULES[i]}</div>
+            <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '-0.015em', color: 'var(--ink)'}}>{mods[i]}</div>
             <div style={{marginTop: 16, display: 'flex', flexDirection: 'column', gap: 10}}>
               {[0.82, 0.6, 0.7].map((f, j) => (
                 <div key={j} style={{height: 10, width: `${f * 100 * k}%`, borderRadius: 5, background: 'var(--line)'}} />
@@ -194,7 +195,7 @@ export const Workspace: React.FC<Placed & {built: number}> = ({x, y, w, h, ry = 
         <div style={{display: 'flex', height: h - 64}}>
           <div style={{width: 284, flex: 'none', borderRight: '1px solid var(--line)', padding: '24px 22px', boxSizing: 'border-box'}}>
             <div style={{fontSize: 18, fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-muted)', marginBottom: 18}}>Modules</div>
-            {MODULES.map((m, i) => {
+            {mods.map((m, i) => {
               const k = Math.min(1, Math.max(0, built - i));
               return (
                 <div key={m} style={{display: 'flex', alignItems: 'center', gap: 12, height: 46, fontSize: 20, color: `rgba(15,17,21,${0.38 + 0.62 * k})`, whiteSpace: 'nowrap'}}>

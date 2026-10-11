@@ -1,4 +1,4 @@
-﻿# IND: ten industry reels, one campaign
+# IND: ten industry reels, one campaign
 
 Ten 9:16 Verity Meta reels, one per industry, all in the format of the accepted R09 reel
 (`video/renders/ads/R09/verity-meta-R09-9x16-v1-bgm.mp4`). Each opens on a pain a specific business owner recognises
@@ -6,7 +6,7 @@ Ten 9:16 Verity Meta reels, one per industry, all in the format of the accepted 
 **identical** ending: Verity understands first and builds around the business, ₹5,000 Business Analysis Blueprint FREE,
 IIT/IIM-selected professionals, "Limited time offer.", one call to action.
 
-Status of the series: **brief**. No reel is built. Decisions are settled in `00-decisions.md`.
+Status of the series: **IND02, IND06, IND09 and IND10 built** (`IND0N/REPORT.md`; IND02, IND06 and IND09 on the shared engine `video/src/ads/series/`, IND10 standalone); IND01, IND03, IND04, IND05, IND07 and IND08 are at brief (no recordings yet). Decisions are settled in `00-decisions.md`.
 
 ## The ten
 
