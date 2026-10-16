@@ -1,181 +1,891 @@
 export default {
-  slug: 'repair-services',
-  status: 'published',
-  plural: 'repair services',
-  subject: 'repair service',
-
-  seo: {
-    title: 'AI business management software for repair services | Verity',
-    description:
-      'Verity gives repair services one system for first-visit fix rates, spare parts on the van, warranty claim recovery, technician routing and device history.',
-    keywords: [
-      'AI software for repair services',
-      'repair service management software',
-      'field service first visit fix rate software',
-      'warranty claim and spare parts tracking',
-    ],
+  "schema": 2,
+  "slug": "repair-services",
+  "status": "published",
+  "plural": "repair shops",
+  "subject": "repair shop",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Repair shop software: job cards, spare parts, warranty | Verity",
+    "description": "The 14 problems that cost a repair shop customers, from lost job cards and parts delays to repeat repairs and unclaimed devices, and the Verity screens that fix them.",
+    "keywords": [
+      "repair shop management software India",
+      "job card and repair tracking",
+      "spare parts stock for repair shops",
+      "repair warranty and re-repair tracking",
+      "service centre management"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for repair services',
-    headline: 'The second visit costs what the first one earned.',
-    lede:
-      'Field repair is decided by whether the technician arrives with the right part. Verity connects the fault, the part and the visit before the van leaves.',
-    note: 'Verity runs the service business. Manufacturer portals stay where they are.',
-    panel: {
-      title: 'Service',
-      meta: 'This week',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Jobs attended', value: '384', note: '11 technicians' },
-        { label: 'First-visit fix', value: '64%', note: 'target 85%' },
-        { label: 'Warranty claims unfiled', value: '58', note: 'value recoverable' },
-        { label: 'Van stock unreconciled', value: '9 vans', note: 'parts unaccounted' },
-      ],
-      rows: [
-        { name: '36% of jobs need a second visit', meta: 'Part not carried', active: true },
-        { name: '58 warranty claims unfiled', meta: 'Recovery windows closing', active: true },
-        { name: '9 vans with unreconciled parts', meta: 'Stock issued, not consumed or returned', active: true },
-        { name: '4 devices returned three times', meta: 'Fault not resolved', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own service business in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "workforce",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for repair services",
+    "headline": "Every device on your bench has a story. Verity keeps it from getting lost.",
+    "lede": "A repair shop lives on trust: the right device back to the right person, fixed properly, on the day you said. Job slips, spare parts, technicians and promises sit in notebooks and phone chats. Verity gives every job one record from drop-off to delivery.",
+    "oneLine": "One system that follows each device from the moment it arrives to the moment it leaves, and shows which jobs are late, which parts are missing and which customers are waiting.",
+    "note": "Built for a small counter with no time for data entry. The records come from the job slip you already write.",
+    "screen": "owner",
+    "screenNote": "devices, technicians, parts suppliers and branches"
+  },
+  "today": {
+    "heading": "Most repair shops fix well and track badly.",
+    "paragraphs": [
+      "A device arrives with a story: it fell, it got wet, it stopped last week. The details go on a paper slip or a message. By the time the technician opens it, some of that is already lost.",
+      "Parts come from several suppliers, and genuine ones are costly and slow. A job waits on a part nobody remembers ordering, and the customer keeps calling.",
+      "The technician knows the history. The counter knows the customer. When either is away, the other cannot answer a simple question."
+    ],
+    "stack": [
+      "Paper job slips",
+      "WhatsApp with customers and suppliers",
+      "Excel parts list",
+      "Billing software or a bill book",
+      "Technicians' own notes"
+    ],
+    "stackNote": "Each piece answers one question. None of them tells you which job is late, which part is missing or which customer is about to call again."
+  },
+  "painsHeading": "Where a repair shop loses time, money and trust.",
+  "painsLede": "These are the situations repair shop owners describe. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Intake",
+      "title": "Job intake details get lost",
+      "scene": "A phone arrives with a cracked screen and a dead battery. The slip says \"mobile, not working\". At pickup the customer says the back glass was not scratched when it came in.",
+      "cost": "Arguments you cannot settle, free repairs to avoid a bad review and a technician who guessed the fault.",
+      "fix": "Each job records the device, serial number, fault, accessories, a photo of its condition and the customer's signature or approval. Everyone sees the same intake record.",
+      "screen": "intake"
     },
-  },
-
-  overview: {
-    heading: 'The economics of a repair are decided before the technician arrives.',
-    paragraphs: [
-      'A repair service earns on a visit and loses on the next one. Sixty-four per cent first-visit fix against a target of eighty-five means a third of jobs are attended twice, and the second visit costs travel, technician time and a customer’s patience while producing no additional revenue. The cause is almost always that the technician did not have the part.',
-      'The second characteristic is that diagnosis happens away from stock. The fault is understood at the customer’s premises, and whether it can be fixed there depends on what was loaded into the van that morning against what the job was likely to need.',
-      'The third is warranty recovery. Much repair work is claimable against manufacturers, and fifty-eight unfiled claims is money already earned that is being lost to a filing window and a documentation requirement.',
-      'The fourth is van stock. Parts issued to technicians and neither consumed nor returned is inventory that has left the business without a transaction, and nine unreconciled vans is a persistent leak.',
-      'The fifth is device history. A device returning three times is a fault that was never actually diagnosed, and only a record against the device rather than the job shows the repetition.',
-      'Verity connects fault patterns to parts carried, tracks warranty claims to filing, and reconciles van stock against jobs.',
+    {
+      "area": "Customers",
+      "title": "Customers call to ask \"is it ready?\"",
+      "scene": "The phone rings every hour. Someone walks to the bench, finds the slip and calls back.",
+      "cost": "Counter time and technician interruptions, all to repeat a status the system could show.",
+      "fix": "Each job shows its stage and promised date. The counter answers from the record, and jobs due today are listed first.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Money",
+      "title": "Estimates change after approval",
+      "scene": "The customer approves a ₹1,800 screen replacement over the phone. The technician finds a second fault. The final bill is ₹3,200 and the customer says nobody told them.",
+      "cost": "Disputes at pickup, discounts to calm things down and a customer who does not come back.",
+      "fix": "Estimates are recorded with the approval time and who gave it. A change in cost needs a new approval, and the record shows the original and the revised amount.",
+      "screen": "intake"
+    },
+    {
+      "area": "Parts",
+      "title": "Spare parts are slow, costly and hard to trust",
+      "scene": "Genuine screens and boards are expensive, the supplier is out of stock and a cheaper copy is on offer. The customer is waiting.",
+      "cost": "A Toxics Link study of repair shops in five cities in 2026 found genuine parts costly and hard for small shops to source. An original iPhone 12 Pro screen was reported at around ₹35,000 against ₹8,000 for a first copy, which makes every part choice a margin and trust decision.",
+      "fix": "Each part has its supplier, cost, grade (genuine, compatible, salvaged) and lead time. A job waiting for a part shows the supplier and expected date, and the customer's choice of grade is recorded.",
+      "screen": "parts",
+      "source": {
+        "name": "The News Minute on the Toxics Link study, 22 Mar 2026",
+        "url": "https://www.thenewsminute.com/amp/story/telangana/why-hyderabads-it-household-repair-shops-have-become-bad-at-fixing-your-devices-study"
+      }
+    },
+    {
+      "area": "Parts",
+      "title": "Parts stock is guessed and leftover parts go missing",
+      "scene": "Common parts are kept in drawers. Some are ordered twice, some run out, and salvaged parts sit unlabelled.",
+      "cost": "Cash tied up in parts that do not move, repeat trips to the market and jobs delayed for a common part.",
+      "fix": "Parts are stock with a reorder point and use recorded against each job. Salvaged parts are recorded with their source device so they can be found and valued.",
+      "screen": "parts"
+    },
+    {
+      "area": "Technicians",
+      "title": "Technician work is not shared evenly",
+      "scene": "One technician is overloaded with phones. Another waits for appliance jobs. Complex jobs go to whoever is free, not whoever is best at them.",
+      "cost": "Slow turnaround, rework and an uneven pay for the same hours. The same study found that diagnostic tools are limited and training is mostly informal, so skill is uneven.",
+      "fix": "Each technician has skills and a workload. Jobs are assigned by skill, and rework is recorded against the job so quality is visible per technician.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Turnaround",
+      "title": "Old jobs sit and nobody owns them",
+      "scene": "A television has been on the shelf for 19 days, waiting for a part, then for a call, then for nobody in particular.",
+      "cost": "Customers who give up, bad reviews and shelf space blocked by jobs that are stuck.",
+      "fix": "Verity lists jobs by age and stage with an owner. Anything older than a limit you set is escalated to the manager with the reason it is waiting.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Warranty",
+      "title": "Repeat repairs and warranty claims on your own work",
+      "scene": "A customer returns after three weeks with the same fault. You offer a free repair but cannot tell whether it is the same fault, the same part or a new problem.",
+      "cost": "Free work that is never counted, a technician who is never told and a part supplier who is never challenged.",
+      "fix": "Each repair has a warranty period and links to the part used, the technician and the supplier. A returning device shows its history, and the cause is recorded.",
+      "screen": "warranty"
+    },
+    {
+      "area": "Money",
+      "title": "Brand warranty jobs are slow to be paid",
+      "scene": "As an authorised service partner you repair devices under brand warranty. The brand asks for photos and forms, and rejects some claims for incomplete documents.",
+      "cost": "Work done without payment, and claims rejected for missing proof. In one reported dispute the brand called a failure \"external damage\" based on photos shared over WhatsApp.",
+      "fix": "Each warranty job carries the proof the brand asks for, such as photos, serial number and dates. Verity lists claims pending, rejected and paid by brand.",
+      "screen": "warranty"
+    },
+    {
+      "area": "Customers",
+      "title": "Devices are left uncollected",
+      "scene": "Thirty devices on the shelf have been repaired and not collected. Some belong to customers who cannot be reached.",
+      "cost": "Storage space, liability for items you hold and money locked in the bill.",
+      "fix": "Jobs ready for collection are listed by days waiting. Verity creates a call task at set intervals and records the outcome, and the policy on unclaimed items is shown on the slip.",
+      "screen": "owner"
+    },
+    {
+      "area": "Money",
+      "title": "Pricing depends on who is at the counter",
+      "scene": "The same repair is quoted at ₹900 by one person and ₹1,200 by another. Discounts are given by anyone.",
+      "cost": "Inconsistent margins and customers who compare notes. Small shops also face thin margins because of price undercutting.",
+      "fix": "A price list for common repairs sits in the system. A quote below a floor needs approval, and discounts are recorded with a reason.",
+      "screen": "intake"
+    },
+    {
+      "area": "Customers",
+      "title": "Repeat customers and service contracts are not followed up",
+      "scene": "An office has an annual maintenance contract for fifteen computers. The renewal date passes, and a competitor gets the contract.",
+      "cost": "The most reliable income in the shop is lost for lack of a reminder.",
+      "fix": "Each contract is a record with devices, visit dates and renewal. Verity creates visit tasks and lists renewals coming up.",
+      "screen": "owner"
+    },
+    {
+      "area": "Compliance",
+      "title": "Customer data on devices is a risk",
+      "scene": "Phones and laptops hold photos, messages and bank apps. A technician copies data to test or keeps a password on a slip.",
+      "cost": "A complaint, a legal problem or a lost customer. India's data protection rules were notified in November 2025, with most duties applying over the next 12 to 18 months.",
+      "fix": "Intake records whether data was backed up, whether a password was shared and who had access. Passwords are not written on slips, and access to records is by role.",
+      "screen": "intake",
+      "source": {
+        "name": "AZB Partners on the DPDP framework",
+        "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+      }
+    },
+    {
+      "area": "Owner",
+      "title": "Several counters, no common view",
+      "scene": "The main shop, a collection point and a mall kiosk each keep their own slips. A device moved between them is hard to trace.",
+      "cost": "Lost devices, unclear responsibility and no way to compare branches.",
+      "fix": "Each counter is a location in one system. Transfers between them are recorded with who sent and who received, and jobs, parts and turnaround are comparable.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The first two figures come from one 2026 study described in a news report, which did not give the number of shops surveyed. The court example is a single district commission case. The portal date comes from a search result and was not opened.",
+  "facts": [
+    {
+      "figure": "5 cities",
+      "text": "Delhi, Hyderabad, Kolkata, Nagpur and Ranchi were covered by the 2026 Toxics Link study of electronics repair, which found genuine parts costly and hard for small shops to source and most small shops short of advanced diagnostic tools.",
+      "source": {
+        "name": "The News Minute, 2026",
+        "url": "https://www.thenewsminute.com/amp/story/telangana/why-hyderabads-it-household-repair-shops-have-become-bad-at-fixing-your-devices-study"
+      }
+    },
+    {
+      "figure": "₹35,000 and ₹8,000",
+      "text": "the reported price of an original iPhone 12 Pro screen and a first-copy alternative, showing how wide the choice between genuine and copy parts can be.",
+      "source": {
+        "name": "The News Minute, 2026",
+        "url": "https://www.thenewsminute.com/amp/story/telangana/why-hyderabads-it-household-repair-shops-have-become-bad-at-fixing-your-devices-study"
+      }
+    },
+    {
+      "figure": "₹70,200 and ₹40,000",
+      "text": "the refund and compensation ordered by the Ernakulam District Commission in a 2024 case against a manufacturer and its dealer, relying on a precedent that spare parts must be available beyond the warranty period.",
+      "source": {
+        "name": "LiveLaw, 2024",
+        "url": "https://www.livelaw.in/amp/consumer-cases/ernakulam-district-commission-samsung-india-deficiency-service-warranty-period-253026"
+      }
+    },
+    {
+      "figure": "December 2022",
+      "text": "the month the Right to Repair portal was launched by the consumer affairs ministry to put manuals and repair information in the open.",
+      "source": {
+        "name": "Outlook Business, 2022",
+        "url": "https://www.outlookbusiness.com/news/goyal-launches-right-to-repair-portal-new-premise-of-national-consumer-helpline-news-248019"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each for one job. Devices, technicians, suppliers and branches are set up in your own terms.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Repair / Today",
+      "meta": "All counters",
+      "heading": "The owner's morning view",
+      "caption": "Jobs due today, jobs stuck, parts waiting, devices uncollected and warranty claims pending on one screen, with the items that need a decision listed below.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Jobs open",
+              "value": "64",
+              "note": "3 counters"
+            },
+            {
+              "label": "Due today",
+              "value": "11",
+              "note": "promised"
+            },
+            {
+              "label": "Stuck over 7 days",
+              "value": "9",
+              "note": "jobs"
+            },
+            {
+              "label": "Uncollected",
+              "value": "27",
+              "note": "devices ready"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Jobs by stage"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Waiting for part",
+              "value": 31,
+              "display": "20"
+            },
+            {
+              "label": "On the bench",
+              "value": 44,
+              "display": "28"
+            },
+            {
+              "label": "Ready, not collected",
+              "value": 42,
+              "display": "27",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "9 jobs are older than 7 days. 5 are waiting for a part and 4 for customer approval.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Annual contract, Sharma Offices",
+              "meta": "Renewal in 12 days, 15 computers",
+              "tag": [
+                "Call",
+                "flag",
+                "Renewed",
+                "ok"
+              ]
+            },
+            {
+              "name": "Discount above limit",
+              "meta": "Counter 2, ₹800 off, reason recorded",
+              "tag": [
+                "Approve",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intake",
+      "title": "Job / J-4821",
+      "meta": "Intake",
+      "heading": "The record that starts every job",
+      "caption": "Everything about the device at drop-off, including condition, accessories, the fault as the customer describes it, the estimate and who approved it.",
+      "blocks": [
+        {
+          "type": "record",
+          "title": "Samsung A54, J-4821",
+          "sub": "Rahul Menon, 98XXXXXX21, dropped 14 Oct",
+          "fields": [
+            [
+              "Fault",
+              "No display after a fall"
+            ],
+            [
+              "Condition",
+              "Back glass scratched, photo taken"
+            ],
+            [
+              "Data",
+              "Backed up: no. Password shared: no"
+            ],
+            [
+              "Estimate",
+              "₹3,200"
+            ],
+            [
+              "Approved",
+              [
+                "By phone, 3:40 pm",
+                "flag",
+                "Revised ₹4,100 approved",
+                "ok"
+              ]
+            ],
+            [
+              "Promised",
+              "17 Oct"
+            ]
+          ],
+          "timeline": [
+            [
+              "14 Oct",
+              "Received at Counter 1, accessories: case only"
+            ],
+            [
+              "15 Oct",
+              "Display and battery fault found by Imran"
+            ],
+            [
+              "15 Oct",
+              "Revised estimate sent, customer approved at 6:10 pm"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jobs",
+      "title": "Jobs",
+      "meta": "Workshop",
+      "heading": "Jobs by stage and technician",
+      "caption": "Each job moves across the board with its technician and promised date. Late and stuck jobs are flagged, and the counter answers customers from here.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Waiting for part",
+              "cards": [
+                {
+                  "title": "J-4790, TV panel",
+                  "meta": "Part due 18 Oct, Supplier B",
+                  "tag": [
+                    "Late",
+                    "late",
+                    "Part arrived",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "J-4802, Laptop board",
+                  "meta": "Customer chose a compatible part",
+                  "tag": [
+                    "Waiting",
+                    "muted"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "On the bench",
+              "cards": [
+                {
+                  "title": "J-4821, Samsung A54",
+                  "meta": "Imran, due 17 Oct",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "J-4815, Washing machine",
+                  "meta": "Ravi, due today",
+                  "tag": [
+                    "Due today",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ready",
+              "cards": [
+                {
+                  "title": "J-4771, Printer",
+                  "meta": "Ready 8 days, 2 calls made",
+                  "tag": [
+                    "Uncollected",
+                    "flag",
+                    "Collected",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "title": "Parts",
+      "meta": "Stock and orders",
+      "heading": "Spare parts by grade, supplier and use",
+      "caption": "What is on the shelf, which supplier and grade it is, what jobs are waiting for it and what to order. Salvaged parts are recorded with their source.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Part",
+            "In stock",
+            "Grade",
+            "Waiting jobs",
+            "Action"
+          ],
+          "rows": [
+            [
+              "A54 display",
+              "2",
+              "Compatible",
+              "3",
+              [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Laptop charger 65 W",
+              "14",
+              "Genuine",
+              "0",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Washing machine pump",
+              "1",
+              "Salvaged",
+              "2",
+              [
+                "Order",
+                "late"
+              ]
+            ],
+            [
+              "TV panel 43 in",
+              "0",
+              "Genuine",
+              "1",
+              [
+                "Chase",
+                "late",
+                "ETA 18 Oct",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warranty",
+      "title": "Warranty",
+      "meta": "Your repairs and brand claims",
+      "heading": "Repeat repairs and brand claims",
+      "caption": "Returning devices linked to the earlier repair, part and technician, and brand warranty claims by status so none is forgotten.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Job",
+            "Device",
+            "Issue",
+            "Earlier repair",
+            "Status"
+          ],
+          "rows": [
+            [
+              "J-4830",
+              "Dell laptop",
+              "Same keyboard fault",
+              "J-4701, 21 days ago",
+              [
+                "Re-repair",
+                "late",
+                "Cause: supplier part",
+                "ok"
+              ]
+            ],
+            [
+              "J-4833",
+              "Samsung phone",
+              "Battery drains",
+              "J-4650, 90 days ago",
+              [
+                "Out of warranty",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Brand claim 7 jobs, Brand X",
+              "meta": "Photos missing on 2 jobs",
+              "tag": [
+                "Fix",
+                "flag",
+                "Filed",
+                "ok"
+              ]
+            },
+            {
+              "name": "Brand claim 4 jobs, Brand Y",
+              "meta": "₹18,400 pending 38 days",
+              "tag": [
+                "Chase",
+                "late"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Saturday, before and after.",
+  "dayLede": "The bench works the same way. What changes is that each job leaves a record that answers the question before it is asked.",
+  "day": [
+    {
+      "time": "10:00",
+      "before": "The counter checks slips to see what is due today.",
+      "after": "The Today screen lists the jobs due, stuck and waiting for approval."
+    },
+    {
+      "time": "11:30",
+      "before": "A customer insists the phone was not scratched when it came in.",
+      "after": "The intake photo and signature settle it in a minute."
+    },
+    {
+      "time": "1:00",
+      "before": "A technician stops to find a part. Nobody knows what is in stock.",
+      "after": "The part is on the shelf, with its grade and the jobs waiting for it."
+    },
+    {
+      "time": "3:00",
+      "before": "Customers call three times about the same job.",
+      "after": "The counter reads the stage and promised date, and the technician is not interrupted."
+    },
+    {
+      "time": "5:30",
+      "before": "A repeat repair arrives. Nobody remembers the first one.",
+      "after": "The earlier job, part, supplier and technician are on the record."
+    },
+    {
+      "time": "Month end",
+      "before": "The owner guesses which jobs and brands paid.",
+      "after": "Warranty claims, parts used and repeat repairs are on one report."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your counter and bench actually run, build Verity around it, bring your data in, then stay on to keep it working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at your counter and bench. Follow a job from drop-off to delivery, and map your slips, price list, parts sources and any brand warranty process.",
+        "you": "A few hours from you and your counter lead. A sample of recent job slips and your parts list.",
+        "get": "A written map of how jobs, parts and customers move today and the problems to fix first."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up device types and fault lists, job stages, technicians and skills, parts with reorder points and grades, suppliers, price floors, warranty periods and approvals.",
+        "you": "Check the stages and price list with your lead technician.",
+        "get": "A working Verity with your real jobs, parts and rules."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in open jobs, customers, parts stock and supplier details. Train the counter and technicians on real jobs.",
+        "you": "Your open job list and parts stock, in whatever form they exist. One hour per role.",
+        "get": "Your shop inside Verity and a team that has used it on live jobs."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune lists and reminders and handle new counters and brands.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the shop runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Jobs, visits, repairs', 'Work'],
-    ['Devices, appliances, serial numbers', 'Records'],
-    ['Spare parts, van stock, returns', 'Inventory'],
-    ['Technicians, routes, territories', 'People'],
-    ['Customers, warranty holders, contracts', 'Relationships'],
-    ['Warranty claims and recovery', 'Control'],
-    ['Manufacturers, distributors, principals', 'Suppliers'],
-  ],
-
-  challengesHeading: 'A visit without the part is a visit wasted.',
-  challengesLede:
-    'Repair difficulties come from diagnosing in one place and stocking in another.',
-  challenges: [
-    { problem: 'The technician arrives without the part', detail: 'The fault needs a component that was not carried and a second visit is scheduled.', outcome: 'Reported fault patterns inform van stock, and likely parts are checked before dispatch.' },
-    { problem: 'Warranty claims go unfiled', detail: 'Work is done under warranty and the claim is never submitted within its window.', outcome: 'Claims are raised at job close with documentation and a filing deadline.' },
-    { problem: 'Van stock is not reconciled', detail: 'Parts issued to technicians are neither consumed on jobs nor returned.', outcome: 'Van stock is reconciled against jobs, with unaccounted parts surfaced.' },
-    { problem: 'Repeat faults are not recognised', detail: 'The same device returns and each visit is treated as a new job.', outcome: 'Jobs attach to the device, so repetition and the previous diagnosis are visible.' },
-    { problem: 'Routing ignores parts and skills', detail: 'Jobs are allocated geographically without regard to who carries what.', outcome: 'Allocation considers technician skill, van stock and route together.' },
-    { problem: 'Chargeable and warranty work are confused', detail: 'Work outside warranty is done free because the boundary was not checked.', outcome: 'Warranty status is confirmed against the device before work is authorised.' },
-  ],
-
-  modulesLede: 'One system across jobs, parts, technicians and claims.',
-  modules: [
-    { id: 'work', title: 'Jobs, visits and repairs', line: 'Each job carries the device, reported fault, diagnosis, parts used, visit count, outcome and chargeable or warranty status.', why: 'The visit count is the measure the business lives on.', example: 'Thirty-six per cent of jobs requiring a second visit.' },
-    { id: 'inventory', title: 'Spare parts, van stock and returns', line: 'Parts are held centrally and on vans, issued to technicians, consumed against jobs and reconciled.', why: 'Parts on a van are inventory outside the building and need the same discipline.', example: 'Nine vans with unreconciled parts.' },
-    { id: 'records', title: 'Devices, serial numbers and history', line: 'Every device carries its model, serial, warranty state and complete repair history.', why: 'A repeat fault is only visible against the device, not the job.', example: 'Four devices returned three times.' },
-    { id: 'control', title: 'Warranty claims and recovery', line: 'One permission model and one audit trail, with claims carrying documentation, filing windows, submission and settlement.', why: 'Unfiled claims are earned money lost to a deadline.', example: 'Fifty-eight claims unfiled with windows closing.' },
-    { id: 'people', title: 'Technicians, skills and routes', line: 'Technicians carry skills, territories, van stock, jobs completed, first-visit fix rate and repeat rate.', why: 'Fix rate varies by technician and by what they carry.', example: 'First-visit fix rate by technician.' },
-    { id: 'relationships', title: 'Customers, warranty holders and contracts', line: 'Customers carry their devices, warranty entitlements, service contracts and history.', why: 'The warranty boundary decides who pays before work begins.', example: 'Warranty status confirmed before authorisation.' },
-    { id: 'logistics', title: 'Routing, dispatch and travel', line: 'Jobs are allocated across technicians by skill, location, van stock and route.', why: 'Routing that ignores parts produces efficient travel and wasted visits.', example: 'Allocation considering carried parts alongside location.' },
-    { id: 'intelligence', title: 'Fix rate, recovery and stock reporting', line: 'First-visit fix rates, repeat visits by cause, claim recovery, van stock variance and fault patterns by model come from the records.', why: 'Every major cost in the business is a measurable pattern.', example: 'Fault patterns by model informing van stock.' },
-    { id: 'ai', title: 'Ask the service a question', line: 'Verity AI answers from your own job, device, parts and claim records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about why second visits happen and which claims are unfiled.', example: '"Which parts most often cause a second visit?" returns them by model.' },
-    { id: 'suppliers', title: 'Manufacturers and parts supply', line: 'Suppliers carry parts availability, lead times, warranty terms and claim processes.', why: 'Claim rules and parts lead times both come from the manufacturer.', example: 'Claim windows and documentation by manufacturer.' },
-    { id: 'communication', title: 'Customer contact and scheduling', line: 'Visit confirmations, delay notifications and outcome communication attach to the job and device.', why: 'A second visit needs to be arranged, not assumed.', example: 'Second visit arranged and recorded against the job.' },
-    { id: 'orders', title: 'Chargeable work, quotations and invoicing', line: 'Chargeable repairs carry quotations, approvals and invoicing separately from warranty work.', why: 'Mixing chargeable and warranty work loses revenue on both sides.', example: 'Chargeable work approved before parts are fitted.' },
-  ],
-
-  workflowsHeading: 'Log, diagnose, dispatch, fix, claim.',
-  workflowsLede: 'These already happen. Recorded, second visits and unfiled claims both fall.',
-  workflows: [
-    { name: 'Job intake and triage', steps: ['Device and reported fault captured', 'Warranty status confirmed', 'Device history reviewed', 'Likely parts identified from fault patterns', 'Job scheduled with a suitable technician'], note: 'Matching the reported fault to historical parts usage is what raises first-visit fix.' },
-    { name: 'Dispatch and van stock', steps: ['Technician assigned by skill, route and stock', 'Required parts confirmed on the van or issued', 'Van stock updated on issue', 'Visit performed', 'Parts consumed recorded against the job'], note: 'Confirming the part is on the van is the difference between one visit and two.' },
-    { name: 'Repair and outcome', steps: ['Diagnosis recorded against the device', 'Repair completed or reason for incompletion captured', 'Chargeable work quoted and approved before fitting', 'Customer acknowledgement recorded', 'Second visit scheduled where needed'], note: 'Recording the reason for incompletion is what makes the pattern fixable.' },
-    { name: 'Warranty claim', steps: ['Claim raised at job close with the device and parts', 'Documentation attached against manufacturer requirements', 'Filing deadline tracked with an owner', 'Submitted and acknowledgement recorded', 'Settlement recorded against the claim'], note: 'Raising at job close is what stops the claim being lost to its window.' },
-    { name: 'Van reconciliation', steps: ['Issued stock compared with consumption on jobs', 'Returns recorded', 'Unaccounted parts surfaced per technician', 'Explanation or adjustment recorded', 'Van stock levels adjusted to fault patterns'], note: 'Reconciling regularly keeps van stock a working tool rather than a leak.' },
-  ],
-
-  ai: {
-    heading: 'Ask about fix rates and claims.',
-    lede: 'Verity AI reads the same job, device, parts and claim records the business creates as it works. It answers from your own service business, respects permissions, and can turn an answer into a stocking change or a claim filing.',
-    panelMeta: 'Grounded in your service records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which parts most often cause a second visit?',
-      'What is first-visit fix rate by technician and model?',
-      'Which warranty claims are unfiled and approaching their window?',
-      'Which vans have unaccounted parts?',
-      'Which devices have returned more than twice?',
-      'Which models generate the most repeat faults?',
-      'What is recovery value from warranty claims this quarter?',
-      'Which jobs were done free that were outside warranty?',
-      'Summarise fix rate and claim recovery.',
+    "bring": [
+      "Your job slip format and a week of slips",
+      "Your repair price list",
+      "Your parts list with suppliers",
+      "Your technician list with their strengths",
+      "Your brand warranty procedures if you have them"
     ],
+    "time": "About 6 to 9 hours of owner time across the four weeks, mostly in week 1. Your counter lead and lead technician need a few more.",
+    "after": "Nobody is hired to run Verity. Jobs, parts and promises are recorded as part of the work you already do, and the reports come from those records."
   },
-
-  automationHeading: 'Visits, claims and stock.',
-  automationLede: 'Each runs from the business’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A job is closed without completion', steps: ['Reason captured', 'Required part identified', 'Second visit scheduled with the part secured'] },
-    { trigger: 'Warranty work is completed', steps: ['Claim raised with documentation requirements', 'Filing deadline set with an owner', 'Submission and settlement recorded'] },
-    { trigger: 'A claim approaches its filing window', steps: ['Escalated with outstanding documentation', 'Owner assigned', 'Filing recorded'] },
-    { trigger: 'Van stock is unreconciled', steps: ['Variance surfaced per technician', 'Explanation requested', 'Adjustment recorded'] },
-    { trigger: 'A device returns for the same fault', steps: ['Previous diagnosis surfaced', 'Escalation to a senior technician raised', 'Root cause recorded'] },
+  "ai": {
+    "heading": "Ask your repair shop a question.",
+    "lede": "Verity AI reads your jobs, parts, technicians and warranty records. Ask in plain language, then turn the answer into tasks for the right person.",
+    "examples": [
+      {
+        "q": "Which jobs have been waiting more than a week, and why?",
+        "a": "Nine jobs. Five wait for parts and four for customer approval.",
+        "rows": [
+          [
+            "Waiting for parts",
+            "5"
+          ],
+          [
+            "Waiting for approval",
+            "4"
+          ]
+        ],
+        "action": "Create chase tasks for the counter and the buyer"
+      },
+      {
+        "q": "Which part has caused the most repeat repairs this quarter?",
+        "a": "Compatible display from Supplier B, with 6 returns out of 41 fitted.",
+        "rows": [
+          [
+            "Supplier B display",
+            "6 of 41"
+          ],
+          [
+            "Supplier A display",
+            "1 of 38"
+          ]
+        ],
+        "action": "Review the supplier with the owner"
+      },
+      {
+        "q": "How many repaired devices are still uncollected, and for how long?",
+        "a": "27 devices. Eight have waited over 14 days.",
+        "rows": [
+          [
+            "Over 14 days",
+            "8"
+          ],
+          [
+            "7 to 14 days",
+            "11"
+          ],
+          [
+            "Under 7 days",
+            "8"
+          ]
+        ],
+        "action": "Create call tasks for the oldest"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still make the calls. Verity makes sure the right person knows to.",
+  "automations": [
+    {
+      "when": "A job has no update for 3 days",
+      "then": [
+        "Flagged to the technician and counter",
+        "Reason recorded",
+        "Escalated to the manager at 7 days"
+      ]
+    },
+    {
+      "when": "A part is needed for a job and stock is zero",
+      "then": [
+        "Order drafted to the usual supplier",
+        "Job marked as waiting for part",
+        "Customer follow-up task created"
+      ]
+    },
+    {
+      "when": "A repaired device is not collected after 5 days",
+      "then": [
+        "Added to the uncollected list",
+        "Call task to the counter",
+        "Outcome recorded"
+      ]
+    },
+    {
+      "when": "A returning device matches an earlier repair",
+      "then": [
+        "Earlier job and part linked",
+        "Cause recorded",
+        "Supplier flagged if the part failed"
+      ]
+    },
+    {
+      "when": "A brand warranty job is closed",
+      "then": [
+        "Proof checklist shown",
+        "Claim filed task created",
+        "Payment chase task at 30 days"
+      ]
+    },
+    {
+      "when": "A service contract is 30 days from renewal",
+      "then": [
+        "Task to the account owner",
+        "Visit history attached",
+        "Outcome recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the business can see.',
-  intelligenceLede: 'Fix rates, recovery and stock from service records.',
-  intelligence: [
-    { area: 'Service', points: ['First-visit fix rate by technician and model', 'Second visits by cause', 'Repeat devices and faults', 'Jobs per technician per day'] },
-    { area: 'Parts', points: ['Parts causing second visits', 'Van stock against fault patterns', 'Unaccounted parts by technician', 'Supplier lead times'] },
-    { area: 'Recovery', points: ['Claims raised, filed and settled', 'Value recovered against work performed', 'Claims lost to windows', 'Documentation completeness'] },
-    { area: 'Commercial', points: ['Chargeable against warranty mix', 'Work done free outside warranty', 'Contract service coverage', 'Cost per completed repair'] },
+  "rules": {
+    "heading": "The rules a repair shop has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when a customer, a brand or an officer asks.",
+    "note": "Rules differ by product and state and they change. Confirm current requirements with your accountant and the relevant authority.",
+    "items": [
+      {
+        "name": "Spare parts and consumer complaints",
+        "what": "In 2024 the Ernakulam District Commission held a manufacturer and its dealer liable in a case that relied on the principle that spare parts must be available beyond the warranty period. The principle matters when customers complain about delays and refusals.",
+        "how": "Each job records the part requested, the supplier's answer and the dates, so you can show what was done and when.",
+        "source": {
+          "name": "LiveLaw",
+          "url": "https://www.livelaw.in/amp/consumer-cases/ernakulam-district-commission-samsung-india-deficiency-service-warranty-period-253026"
+        }
+      },
+      {
+        "name": "Right to Repair information",
+        "what": "The consumer affairs ministry launched a Right to Repair portal in December 2022 for manuals and repair information for phones, electronics, durables and vehicles. Availability depends on the brand.",
+        "how": "Where a brand shares manuals or part information, you can record it on the job and the part.",
+        "source": {
+          "name": "Outlook Business",
+          "url": "https://www.outlookbusiness.com/news/goyal-launches-right-to-repair-portal-new-premise-of-national-consumer-helpline-news-248019"
+        }
+      },
+      {
+        "name": "Customer data on devices",
+        "what": "Devices hold personal data. India's data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.",
+        "how": "Intake records whether data was backed up and who accessed the device, and access to customer records is by role.",
+        "source": {
+          "name": "AZB Partners",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Tax and disposal of replaced parts",
+        "what": "Repair services are taxed under GST, and disposal of replaced electronic parts can fall under waste rules. The rate and rules depend on the service and your registration.",
+        "how": "Parts and labour are separate lines on each job so your accountant starts from clean data."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "The counter should not see the owner's margins. A technician should not edit prices. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Where are jobs, parts and money stuck?",
+      "sees": "Jobs by age and stage, parts spend, repeat repairs, brand claims, uncollected devices and counters compared."
+    },
+    {
+      "role": "Counter staff",
+      "question": "What do I tell this customer?",
+      "sees": "Job stage and promised date, estimates to approve, devices ready and callbacks due."
+    },
+    {
+      "role": "Technician",
+      "question": "What is on my bench?",
+      "sees": "My jobs, parts waiting, estimates to raise and jobs returned for rework."
+    },
+    {
+      "role": "Parts buyer",
+      "question": "What do I order?",
+      "sees": "Parts below reorder, jobs waiting for parts, supplier rates and expected dates."
+    },
+    {
+      "role": "Accountant",
+      "question": "What came in and what is owed?",
+      "sees": "Collections by mode, supplier dues, brand claims pending and the parts and labour split."
+    }
   ],
-  intelligenceNote: 'Verity records the service operation. Manufacturer portals continue as they are.',
-
-  rolesHeading: 'One service business, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Owner', question: 'Are we fixing on the first visit?', focus: 'Fix rate by technician and model, second visit causes, claim recovery, cost per repair.' },
-    { role: 'Dispatcher', question: 'Who goes where with what?', focus: 'Job queue, technician skills and routes, van stock, parts required.' },
-    { role: 'Technician', question: 'What am I attending and is it under warranty?', focus: 'Assigned jobs, device history, warranty status, parts on the van.' },
-    { role: 'Claims administrator', question: 'What is recoverable?', focus: 'Claims raised, documentation outstanding, filing deadlines, settlements.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing software or bill book at the counter",
+      "Your parts suppliers and how you order",
+      "WhatsApp for talking to customers, sent by your team",
+      "Your accountant, who still prepares your returns"
+    ],
+    "not": [
+      "Take payments or run the billing counter",
+      "Diagnose faults or give technical advice",
+      "Send messages to customers on its own",
+      "File your returns or run your payroll"
+    ],
+    "migration": "We bring your open jobs, customers, parts list and supplier details across from the slips, sheets and chats you use now, in stages, so the counter never stops."
+  },
+  "faqHeading": "Questions repair shop owners ask.",
+  "faqs": [
+    [
+      "Will my technicians really use it?",
+      "It only works if recording takes seconds, so we set it up around the slip they already fill. We train at the bench on real jobs and give each person something back: a clear list of their jobs and the parts they are waiting for."
+    ],
+    [
+      "Does it replace my billing software?",
+      "No. Billing stays where it is. Verity records the job, parts and promises behind the bill, and we agree during setup how the bill details reach Verity."
+    ],
+    [
+      "Can it handle brand warranty work?",
+      "Yes. Each warranty job carries the proof the brand asks for and the claim status. Verity tracks what is filed, pending and paid, but it does not file claims on brand portals."
+    ],
+    [
+      "Can it message customers when the job is ready?",
+      "Not by itself. Verity lists the jobs ready and assigns the call or message, and your team sends it and records the outcome."
+    ],
+    [
+      "I have a main shop and two collection points. Can I see all of it?",
+      "Yes. Each counter is a location in one system. Transfers are recorded and you can compare turnaround and jobs per counter."
+    ],
+    [
+      "Can it tell me which supplier's parts fail most?",
+      "Yes. Because each repair links to the part and supplier, repeat repairs are shown by supplier and part grade."
+    ],
+    [
+      "Who can see customer information?",
+      "Only the people you allow. Access is set by role, and every change is recorded with who made it and when."
+    ],
+    [
+      "How long before I see results?",
+      "The list of old jobs, jobs waiting for parts and uncollected devices need only your existing records, so they are the first things we aim to have working. Repeat repair and supplier trends need a few weeks of recorded jobs."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of counters and what you want set up. Message us and we will give you a clear number after a short conversation about how your shop runs."
+    ]
   ],
-
-  useCasesHeading: 'What repair services use Verity for',
-  useCases: [
-    { name: 'Raising first-visit fix rates', body: 'Reported faults matched against historical parts usage by model, so the likely part is confirmed on the van before the technician is dispatched.' },
-    { name: 'Recovering warranty value', body: 'Claims raised at job close with documentation and a filing deadline, so earned recovery is not lost to a closing window.' },
-    { name: 'Reconciling van stock', body: 'Parts issued to technicians compared with consumption on jobs and returns, surfacing inventory that has left the business without a transaction.' },
-    { name: 'Recognising repeat faults', body: 'Jobs attached to the device rather than to a ticket, so a third return is escalated instead of being diagnosed again from scratch.' },
-    { name: 'Routing with stock in mind', body: 'Allocation considering skill, location and carried parts together, because efficient travel to a job you cannot complete is not efficient.' },
-    { name: 'Protecting the warranty boundary', body: 'Entitlement confirmed against the device before authorisation, so chargeable work is quoted rather than absorbed.' },
-    { name: 'Asking about the service', body: 'Plain-language questions across jobs, devices, parts and claims, with stocking changes and claim filing raised in the same step.' },
+  "related": [
+    "electronics-stores",
+    "auto-repair-shops",
+    "hardware-stores",
+    "cleaning-services",
+    "laundry-services",
+    "printing-businesses"
   ],
-
-  migration: 'Manufacturer portals continue and are mapped during implementation. Customers and devices with warranty status and repair history, parts catalogue and van stock, technician records and open claims are brought across.',
-
-  faqHeading: 'Questions repair services ask',
-  faqs: [
-    ['What can AI software do for a repair service?', 'Verity AI answers questions from your own job, device, parts and claim records: which parts most often cause a second visit, what first-visit fix rate is by technician and model, which warranty claims are unfiled and approaching their window, which vans have unaccounted parts. Each answer can become a stocking change or a claim filing.'],
-    ['Why is the first-visit fix rate the central measure?', 'Because a second visit consumes travel and technician time while producing no additional revenue. The cause is nearly always a missing part, which makes van stock and fault-pattern matching the levers that move the number.'],
-    ['How does it improve warranty recovery?', 'Claims are raised at job close with the device, parts and manufacturer documentation requirements attached, and their filing deadline is tracked with an owner, so claims reach submission rather than expiring.'],
-    ['Can it control van stock?', 'Parts issued to technicians are reconciled against consumption on jobs and returns, so unaccounted stock is surfaced per van rather than absorbed into a general inventory difference.'],
-    ['How does it spot repeat faults?', 'Every job attaches to the device by serial number, so a device returning a third time surfaces its previous diagnoses and can be escalated rather than re-diagnosed from the beginning.'],
-    ['Does it help with routing?', 'Allocation considers technician skill, territory and the parts actually on the van together, because sending the nearest technician without the required part still produces a second visit.'],
-    ['Does it replace manufacturer portals?', 'No. Manufacturer portals continue as they are. Verity holds the service operation around them — jobs, devices, parts, technicians, claims and chargeable work.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of device types, fault categories, warranty terms and van stock practice, configuration, migration of customers, devices and open jobs, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with your second visits.',
-  ctaLede: 'They are usually one part. Tell us how van stock is decided today.',
-
-  related: ['auto-repair-shops', 'electronics-stores', 'facility-management', 'cleaning-services', 'industrial-suppliers', 'laundry-services'],
+  "ctaHeading": "Find out which jobs are stuck.",
+  "ctaLede": "Tell us how your repair shop runs and we will show you the late jobs, missing parts and uncollected devices it would find, using your own numbers."
 };

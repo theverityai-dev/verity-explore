@@ -1,180 +1,976 @@
 export default {
-  slug: 'vocational-training-centres',
-  status: 'published',
-  plural: 'vocational training centres',
-  subject: 'vocational training centre',
-
-  seo: {
-    title: 'AI business software for vocational training centres | Verity',
-    description:
-      'Verity connects practical assessment records, equipment and consumable cost per trainee, trainer and assessor coverage, and funding audit evidence into one system.',
-    keywords: [
-      'AI software for vocational training centres',
-      'vocational training centre management software',
-      'practical assessment and workshop management',
-      'trade training equipment and consumables software',
-    ],
+  "schema": 2,
+  "slug": "vocational-training-centres",
+  "status": "published",
+  "plural": "vocational training centres",
+  "subject": "training centre",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Vocational training centre software: batches, fees, workshops | Verity",
+    "description": "The 14 problems that slow a vocational training centre, from batch fill and attendance to workshop stock and placement tracking, and the Verity screens that fix them.",
+    "keywords": [
+      "vocational training centre software India",
+      "training centre batch and fee management",
+      "workshop and consumables tracking",
+      "trainee attendance and placement tracking",
+      "skill centre management"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for vocational training',
-    headline: 'A trade is taught on equipment, and the equipment decides how many you can teach.',
-    lede:
-      'Vocational training is limited by workshop capacity, assessor availability and consumable cost per trainee. Verity holds all three against the trainee record.',
-    note: 'Verity runs the centre. Trade curricula and awarding-body portals stay where they are.',
-    panel: {
-      title: 'Centre',
-      meta: 'Current term',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Trainees in trades', value: '410', note: 'across 9 trades' },
-        { label: 'Workshop utilisation', value: '64%', note: 'against practical demand' },
-        { label: 'Assessments overdue', value: '73', note: 'practical, not written' },
-        { label: 'Assessors qualified', value: '11', note: '3 lapsing this term' },
-      ],
-      rows: [
-        { name: '73 practical assessments overdue', meta: 'Assessor availability the constraint', active: true },
-        { name: '3 assessor qualifications lapsing', meta: 'Trades affected: 4', active: true },
-        { name: 'Welding workshop at capacity, carpentry at 31%', meta: 'Intake mix not matching equipment', active: true },
-        { name: 'Consumable spend above budget in 2 trades', meta: 'Per-trainee cost unmeasured', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own centre in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for vocational training centres",
+    "headline": "You teach trades with real tools. Verity tracks the batches, the workshop and the jobs that follow.",
+    "lede": "A vocational centre runs on batches, trainers, workshop equipment and the promise of a job at the end. Fees, attendance, tool stock and placement are usually tracked in different registers. Verity brings them together so you can see which batches are healthy and which trainees are slipping.",
+    "oneLine": "One system that follows a trainee from enquiry to batch, to workshop, to certificate, to job, and shows where the centre is losing people and money.",
+    "note": "Built for a centre with a small office team. Records come from the registers and attendance sheets you already keep.",
+    "screen": "owner",
+    "screenNote": "trades, batches, trainers and workshops"
+  },
+  "today": {
+    "heading": "Most centres run well in the workshop and blind in the office.",
+    "paragraphs": [
+      "The training itself is visible: a batch of electricians wiring a board, a group learning to weld. What is not visible is the rest: which batches are below strength, who has stopped attending, which fees are overdue, how many rods and cables the practicals used, and which trainees found work.",
+      "The information sits in registers, an attendance machine, an accounts file and the trainers' own notes. The centre head and the counsellor are the only people who connect them.",
+      "Funded batches add paperwork and checks. Funds and approvals can depend on attendance and outcomes, and regulators have acted against centres whose records did not hold up."
+    ],
+    "stack": [
+      "Enquiry and admission register",
+      "Attendance sheets or biometric machine",
+      "Fee register or accounts software",
+      "Excel workshop stock sheet",
+      "WhatsApp groups with trainees and trainers"
+    ],
+    "stackNote": "Each record answers one question. None tells you which batch is at risk or which trainee is about to drop out."
+  },
+  "painsHeading": "Where a vocational centre loses trainees, money and time.",
+  "painsLede": "These are the situations centre owners describe. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Admissions",
+      "title": "Walk-in enquiries are not followed up",
+      "scene": "A young man enquires about the electrician course, hears the fee and says he will think. His number goes in a notebook. Nobody calls after two days.",
+      "cost": "Example arithmetic: if 100 enquiries a month become 18 admissions at ₹14,000, that is ₹2.5 lakh. Lifting conversion by five admissions is ₹70,000 a month from people who already walked in.",
+      "fix": "Every enquiry is a record with the trade asked about, the fee quoted, the follow-up date and an owner. Verity lists enquiries with no contact in three days and assigns the follow-up.",
+      "screen": "owner"
     },
-  },
-
-  overview: {
-    heading: 'The constraint is the workshop, and the bottleneck is the assessor.',
-    paragraphs: [
-      'A vocational training centre teaches trades on equipment. Capacity is not the number of seats in a classroom but the number of welding bays, machines or vehicle lifts, and an intake mix that does not match the equipment produces one workshop at capacity and another at thirty-one per cent in the same term.',
-      'The second characteristic is practical assessment. Competence in a trade is demonstrated by doing the task in front of a qualified assessor, which makes assessment a scheduling problem constrained by assessor availability rather than a marking task. Seventy-three overdue practical assessments is usually assessor capacity, not trainee readiness.',
-      'The third is assessor qualification itself. Assessors hold credentials that expire, and three lapsing at once removes assessment capacity across four trades at the same time.',
-      'The fourth is consumables. A trade trainee consumes material — metal, wood, wiring, vehicle parts — and consumable spend above budget without per-trainee measurement is a cost the centre cannot attribute or price.',
-      'The fifth is funding audit. Vocational programmes are frequently funded, and funders audit attendance, assessment evidence and completion.',
-      'Verity holds workshop capacity, assessor qualification and availability, consumable cost per trainee and audit evidence in one place.',
+    {
+      "area": "Batches",
+      "title": "Batches start below strength or do not fill",
+      "scene": "The welding batch needs 20 to be viable. It has 12 on the start date. The trainer is booked and the workshop is reserved.",
+      "cost": "A trainer paid for half-empty sessions, or a start date pushed back and trainees lost.",
+      "fix": "Each batch shows its target, confirmed admissions, fees paid and start date. Verity warns early when a batch is under strength so you can push enquiries, merge or move the date.",
+      "screen": "batches"
+    },
+    {
+      "area": "Fees",
+      "title": "Fee instalments go overdue and recovery is awkward",
+      "scene": "Trainees pay in instalments. A few stop paying in month two. The accountant notes it, but nobody follows up until the course ends.",
+      "cost": "Unrecovered fees, or certificates withheld in an argument after the course.",
+      "fix": "Each trainee has an instalment plan and balance. Overdue ones go on a list with the amount and age, and the follow-up is a task with an owner.",
+      "screen": "fees"
+    },
+    {
+      "area": "Funding",
+      "title": "Funded batches need records that match what was claimed",
+      "scene": "A scheme-funded batch depends on enrolment details, attendance and assessment records. Different people hold the pieces, and a gap is found at the time of the claim.",
+      "cost": "A delayed or reduced payment, and in the worst case action against the centre. In November 2025 the Skill Ministry blacklisted 178 training partners and centres under PMKVY after finding absentee students, fake documents and non-existent centres.",
+      "fix": "Each funded batch carries its enrolment, attendance and assessment records in one place. Verity flags a batch with missing items before a claim or inspection.",
+      "screen": "fees",
+      "source": {
+        "name": "Vision IAS, summarising Indian Express, 7 Nov 2025",
+        "url": "https://visionias.in/current-affairs/upsc-daily-news-summary/article/2025-11-07/the-indian-express/schemes-in-news/corruption-cloud-skill-ministry-blacklists-178-training-partners"
+      }
+    },
+    {
+      "area": "Attendance",
+      "title": "Attendance is recorded, but nobody acts on it",
+      "scene": "A biometric machine or sheet records who came. Nobody looks until the end of the month. A trainee absent for nine days is found when they ask for their certificate.",
+      "cost": "Dropouts that could have been prevented with a call in week one, and funded batches that fail attendance checks. For PMKVY partners, NSDC has required biometric attendance with full daily compliance.",
+      "fix": "Daily attendance is shown by batch and by trainee. Verity lists trainees absent three days in a row and creates a call task for the trainer or counsellor.",
+      "screen": "attendance",
+      "source": {
+        "name": "NSDC notice on AEBAS, 2022",
+        "url": "https://pmkvy.nsdcindia.org/photos/shares/products/cin1igRCHZRkkRs6pbuiTbXcd1A3VaD4Pdgta5mF.pdf"
+      }
+    },
+    {
+      "area": "Attendance",
+      "title": "Dropouts leave without anyone knowing why",
+      "scene": "A trainee stops coming. Some had a job offer, some a family issue, some did not like the batch timing. No reason is written down.",
+      "cost": "You cannot fix what you cannot see. If the same timing or trainer drives people away, the pattern stays hidden.",
+      "fix": "When a trainee leaves, the reason is recorded. Verity shows dropouts by batch, trainer and trade so patterns are visible.",
+      "screen": "attendance"
+    },
+    {
+      "area": "Trainers",
+      "title": "Trainers are booked, but their time is not tracked",
+      "scene": "A visiting trainer is paid per hour. The sessions he took are in his notebook. The office pays from his claim.",
+      "cost": "Overpayment, disputes and no view of which trainers are underused.",
+      "fix": "Sessions are recorded against each batch and trainer. Payouts are calculated from the hours recorded, and trainer load is visible by week.",
+      "screen": "batches"
+    },
+    {
+      "area": "Workshop",
+      "title": "Workshop machines sit idle, break or are unsafe",
+      "scene": "A lathe is down for two weeks because the repair was never raised. A safety check is overdue. Nobody tracks which machines are used and which are idle.",
+      "cost": "Trainees who cannot practise, a batch delayed and a safety risk.",
+      "fix": "Each machine is a record with its service history, next service date and issues raised. Verity lists machines overdue for checks and those out of use.",
+      "screen": "workshop"
+    },
+    {
+      "area": "Workshop",
+      "title": "Practical consumables are used by guesswork",
+      "scene": "Welding rods, wires, fabric, paint and cosmetics run out in the middle of a batch. Orders are placed when someone notices.",
+      "cost": "Practical sessions cancelled, rushed purchases at higher prices and waste that nobody measures.",
+      "fix": "Each consumable has a reorder point and usage recorded against the batch. Verity compares use per trainee across batches and drafts the order before the shelf is empty.",
+      "screen": "workshop"
+    },
+    {
+      "area": "Batches",
+      "title": "Workshop slots clash between batches",
+      "scene": "Two batches are booked into the same bay on the same afternoon. One is moved at the last minute.",
+      "cost": "Idle trainers, annoyed trainees and an uneven use of the workshop.",
+      "fix": "Workshop and bay slots are part of the schedule. Verity shows clashes before they happen and utilisation by bay.",
+      "screen": "batches"
+    },
+    {
+      "area": "Assessment",
+      "title": "Assessments and certificates are chased by phone",
+      "scene": "The assessment date depends on an outside body. Results arrive in a PDF. Certificates are ready, but trainees are not told.",
+      "cost": "Trainees who feel forgotten, delayed placements and an office that answers the same call twenty times a day.",
+      "fix": "Each trainee shows assessment date, result and certificate status. Verity lists ready certificates not yet collected and tasks the front desk to inform them.",
+      "screen": "placement"
+    },
+    {
+      "area": "Placement",
+      "title": "Placements are claimed but not tracked",
+      "scene": "Employers call the centre for candidates. Some trainees join, some do not, and nobody follows up after the first month.",
+      "cost": "A weaker pitch to the next batch and, for funded batches, outcome records that cannot be shown. A 2025 third-party evaluation found that 41.4 percent of short-term trainees reported higher income after training, but only centres that track outcomes can show their own number.",
+      "fix": "Employers, openings and trainee outcomes are records. Verity tracks who was offered, who joined, and who was still working after thirty and ninety days.",
+      "screen": "placement",
+      "source": {
+        "name": "The Logical Indian on PMKVY outcomes, 2025",
+        "url": "https://thelogicalindian.com/pmkvy-placement-data-job-outcomes-125907/"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Affiliation, inspections and approvals expire",
+      "scene": "Affiliation, safety certificates and the trainers' qualifications each have a date. They sit in a folder.",
+      "cost": "A suspended batch, a failed inspection or a rejected claim for a missing certificate.",
+      "fix": "Each approval and certificate is a record with expiry and an owner. Verity reminds ahead of time and keeps copies ready for an inspector.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "The head of the centre is the system",
+      "scene": "One person remembers which batch is weak, which fee is overdue, which machine is down and which employer to call.",
+      "cost": "The centre cannot add a second location or take a week off without things slipping.",
+      "fix": "Each morning Verity shows what needs a decision, each item with an owner. A second centre becomes a location in the same system with the same measures.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The first figure is from news coverage of a government action. The attendance figures are from NSDC notices for one scheme and were seen only in search result wording. The outcome figure comes from a 2025 third-party evaluation reported in the press and describes one scheme, not all vocational training.",
+  "facts": [
+    {
+      "figure": "178",
+      "text": "training partners and centres blacklisted under PMKVY in 2025. Uttar Pradesh had 59, Delhi 25, Madhya Pradesh 24 and Rajasthan 20. Irregularities included absentee students, fake documents and centres that existed only on paper.",
+      "source": {
+        "name": "Vision IAS summarising Indian Express, 2025",
+        "url": "https://visionias.in/current-affairs/upsc-daily-news-summary/article/2025-11-07/the-indian-express/schemes-in-news/corruption-cloud-skill-ministry-blacklists-178-training-partners"
+      }
+    },
+    {
+      "figure": "100%",
+      "text": "the daily biometric attendance compliance NSDC expected from PMKVY training partners using the Aadhaar Enabled Biometric Attendance System, under a 2022 notice.",
+      "source": {
+        "name": "NSDC notice, 2022",
+        "url": "https://pmkvy.nsdcindia.org/photos/shares/products/cin1igRCHZRkkRs6pbuiTbXcd1A3VaD4Pdgta5mF.pdf"
+      }
+    },
+    {
+      "figure": "70%",
+      "text": "the batch-level attendance on any one day up to day 20 that a 2021 NSDC notice tied to the first payment instalment, with a batch auto cancelled if it failed.",
+      "source": {
+        "name": "NSDC notice, 2021",
+        "url": "https://pmkvy.nsdcindia.org/photos/shares/products/cin1igRCHZRkkRs6pbuiTbXcd1A3VaD4Pdgta5mF.pdf"
+      }
+    },
+    {
+      "figure": "41.4%",
+      "text": "of short-term training candidates reported higher income after training and certification, in a 2025 third-party evaluation of PMKVY.",
+      "source": {
+        "name": "The Logical Indian, 2025",
+        "url": "https://thelogicalindian.com/pmkvy-placement-data-job-outcomes-125907/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each for one job. Trades, batches, trainers and workshops are set up in your own terms.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Centre / Today",
+      "meta": "All batches",
+      "heading": "The head of the centre's morning view",
+      "caption": "Enquiries to follow up, batches under strength, fees overdue, trainees at risk and workshop issues on one screen, with the items that need a decision listed below.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Running batches",
+              "value": "9",
+              "note": "6 trades"
+            },
+            {
+              "label": "Under strength",
+              "value": "2",
+              "note": "batches"
+            },
+            {
+              "label": "Fees overdue",
+              "value": "₹1.9 L",
+              "note": "23 trainees"
+            },
+            {
+              "label": "At risk",
+              "value": "14",
+              "note": "absent 3 days or more"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Enquiries this month by outcome"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Admitted",
+              "value": 18,
+              "display": "18"
+            },
+            {
+              "label": "Followed up",
+              "value": 41,
+              "display": "41"
+            },
+            {
+              "label": "No contact yet",
+              "value": 29,
+              "display": "29",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Welding batch W7 starts Monday with 12 of 20 admitted.",
+          "action": "Decide"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Fire safety certificate",
+              "meta": "Expires in 24 days, Workshop A",
+              "tag": [
+                "Assign",
+                "flag",
+                "Assigned",
+                "ok"
+              ]
+            },
+            {
+              "name": "CNC machine 2 service overdue",
+              "meta": "9 days past due",
+              "tag": [
+                "Raise",
+                "late"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "batches",
+      "title": "Batches",
+      "meta": "This week",
+      "heading": "Batches, trainers and workshop slots",
+      "caption": "Every batch with its strength, trainer and workshop slot. Under-strength batches and clashing slots are flagged before the start date.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Filling",
+              "cards": [
+                {
+                  "title": "Welding W7",
+                  "meta": "12 of 20 admitted, starts Mon",
+                  "tag": [
+                    "Push",
+                    "flag",
+                    "16 of 20",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Beauty B4",
+                  "meta": "8 of 15, starts 28 Oct",
+                  "tag": [
+                    "Open",
+                    "muted"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Running",
+              "cards": [
+                {
+                  "title": "Electrician E12",
+                  "meta": "Day 34, Trainer Raju, Bay 2",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Fitter F3",
+                  "meta": "Bay 2 clash on Thursday",
+                  "tag": [
+                    "Clash",
+                    "late",
+                    "Moved",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Assessment",
+              "cards": [
+                {
+                  "title": "Tailoring T9",
+                  "meta": "Assessment 22 Oct",
+                  "tag": [
+                    "Booked",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "title": "Fees",
+      "meta": "Overdue and funded batches",
+      "heading": "Fees and funded batch records",
+      "caption": "Instalments due by trainee, and the funded batch records that must be complete before a claim or inspection.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Trainee",
+            "Batch",
+            "Balance",
+            "Overdue",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Arun K.",
+              "E12",
+              "₹6,000",
+              "18 days",
+              [
+                "Call",
+                "late",
+                "Paid ₹3,000",
+                "ok"
+              ]
+            ],
+            [
+              "Sunita D.",
+              "B3",
+              "₹4,500",
+              "9 days",
+              [
+                "Message",
+                "flag"
+              ]
+            ],
+            [
+              "Imran S.",
+              "W6",
+              "₹8,000",
+              "31 days",
+              [
+                "Escalate",
+                "late"
+              ]
+            ],
+            [
+              "Meena R.",
+              "T9",
+              "₹2,000",
+              "Due Fri",
+              [
+                "Remind",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Funded batch E12 is missing 3 enrolment forms and 2 days of attendance proof.",
+          "action": "Complete"
+        }
+      ]
+    },
+    {
+      "id": "attendance",
+      "title": "Attendance",
+      "meta": "Last 7 days",
+      "heading": "Who is slipping before they leave",
+      "caption": "Attendance by batch and by trainee. Trainees absent for three days or more appear first, with a call task for the trainer or counsellor.",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Attendance by batch, last 7 days"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Electrician E12",
+              "value": 91,
+              "display": "91%"
+            },
+            {
+              "label": "Welding W6",
+              "value": 78,
+              "display": "78%"
+            },
+            {
+              "label": "Beauty B3",
+              "value": 84,
+              "display": "84%"
+            },
+            {
+              "label": "Fitter F3",
+              "value": 62,
+              "display": "62%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Imran S., Welding W6",
+              "meta": "Absent 5 days, no reason recorded",
+              "tag": [
+                "Call",
+                "late",
+                "Called",
+                "ok"
+              ]
+            },
+            {
+              "name": "Priti M., Fitter F3",
+              "meta": "Absent 3 days, joined a job offer?",
+              "tag": [
+                "Call",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workshop",
+      "title": "Workshop",
+      "meta": "Equipment and stock",
+      "heading": "Machines and consumables",
+      "caption": "Machine service dates and consumables against the batches that use them. Overdue checks and low stock are listed first.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "In stock or status",
+            "Next due",
+            "Used by",
+            "Action"
+          ],
+          "rows": [
+            [
+              "CNC machine 2",
+              "Out of use",
+              "Service overdue",
+              "F3",
+              [
+                "Raise",
+                "late",
+                "Raised",
+                "ok"
+              ]
+            ],
+            [
+              "Welding rod 3.15 mm",
+              "6 kg",
+              "Reorder at 10",
+              "W6, W7",
+              [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Wiring cable 2.5 mm",
+              "140 m",
+              "Reorder at 100",
+              "E12",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Fire extinguishers",
+              "Checked",
+              "In 24 days",
+              "All bays",
+              [
+                "Assign",
+                "flag"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "title": "Placement",
+      "meta": "Last two batches",
+      "heading": "Certificates and jobs after the course",
+      "caption": "Assessment, certificate and job status for each trainee, with employer follow-ups. It shows who joined, who is still working after a month and who needs help.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Trainee",
+            "Result",
+            "Certificate",
+            "Employer",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Ravi T.",
+              "Passed",
+              "Ready",
+              "Shree Auto",
+              [
+                "Joined, day 31",
+                "ok"
+              ]
+            ],
+            [
+              "Anil G.",
+              "Passed",
+              "Ready, not collected",
+              "None yet",
+              [
+                "Call",
+                "flag",
+                "Collected",
+                "ok"
+              ]
+            ],
+            [
+              "Neelam P.",
+              "Awaited",
+              "Pending",
+              "None yet",
+              [
+                "Wait",
+                "muted"
+              ]
+            ],
+            [
+              "Karan J.",
+              "Passed",
+              "Ready",
+              "Bharat Fabrication",
+              [
+                "Left day 12",
+                "late"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Two employers have openings for welders. Four trainees are unplaced.",
+          "action": "Match"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Tuesday, before and after.",
+  "dayLede": "The training works the same way. What changes is that every step leaves a record that chases for you.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "The head of the centre checks registers to see who is absent and which batch is thin.",
+      "after": "The Today screen shows batches under strength, trainees at risk and fees overdue."
+    },
+    {
+      "time": "11:00",
+      "before": "A walk-in leaves without a follow-up.",
+      "after": "The enquiry is recorded with the trade and fee quoted, and a follow-up is set for Thursday."
+    },
+    {
+      "time": "1:00",
+      "before": "A machine is found out of order during a practical.",
+      "after": "The service was flagged last week and the batch was moved to another bay."
+    },
+    {
+      "time": "3:00",
+      "before": "A trainee has been absent for a week and nobody knows.",
+      "after": "The call task went to the trainer on day three, and the reason is recorded."
+    },
+    {
+      "time": "5:00",
+      "before": "An employer calls for welders and the office searches for names.",
+      "after": "The placement screen lists trained welders with certificates ready and no job yet."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks which fees are recoverable and which batches are funded.",
+      "after": "The fees and batch records already show both."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your centre actually runs, build Verity around it, bring your data in, then stay on to keep it working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at your centre. Follow a trainee from enquiry to certificate and job, walk the workshop, and map the registers, attendance machine and accounts you use today.",
+        "you": "A few hours from you and your counsellor or office lead. Last two batches of records and your fee structure.",
+        "get": "A written map of how your batches, fees, workshop and placements run today and the problems to fix first."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up trades and batches, trainers and rates, workshop bays and machines, consumables with reorder points, fee plans, funded batch checklists and approvals.",
+        "you": "Check the batch templates, fee plans and consumable list with your trainers.",
+        "get": "A working Verity with your real trades, batches and rules."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in trainees, fee balances, machine and stock lists, trainer records and employer contacts. Train the office, trainers and workshop in-charge on real days.",
+        "you": "Your trainee list and fee balances, in whatever form they exist. One hour per role.",
+        "get": "Your centre inside Verity and a team that has used it on a live batch."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune lists and reminders and handle new trades, batches and locations.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the centre runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Trades, units, practical tasks', 'Work'],
-    ['Trainees, apprentices, cohorts', 'Relationships'],
-    ['Workshops, bays, machines', 'Locations'],
-    ['Consumables, materials, tooling', 'Inventory'],
-    ['Trainers, assessors, verifiers', 'People'],
-    ['Assessment, evidence, sign-off', 'Workflows'],
-    ['Awarding body, funding, audit', 'Control'],
-  ],
-
-  challengesHeading: 'Capacity is physical and assessment is a queue.',
-  challengesLede:
-    'Vocational difficulties come from teaching on equipment and certifying by observation.',
-  challenges: [
-    { problem: 'Intake mix does not match workshop capacity', detail: 'One trade is oversubscribed while another workshop sits idle.', outcome: 'Intake is planned against workshop capacity per trade, so the mix is a decision.' },
-    { problem: 'Practical assessments queue behind assessors', detail: 'Trainees are ready and the assessor is not available, and completion slips.', outcome: 'Assessment demand and assessor availability are visible together, so the queue is managed.' },
-    { problem: 'Assessor qualifications lapse without warning', detail: 'Credentials expire and assessment capacity disappears across several trades at once.', outcome: 'Assessor credentials carry expiry with renewal raised in advance.' },
-    { problem: 'Consumable cost per trainee is unknown', detail: 'Materials are bought centrally and spent by trade without attribution.', outcome: 'Consumables are recorded against trades and cohorts, giving cost per trainee.' },
-    { problem: 'Equipment downtime is unplanned', detail: 'A machine out of service removes practical capacity mid-term.', outcome: 'Equipment condition and servicing are tracked against workshop capacity.' },
-    { problem: 'Funding audits require evidence made months earlier', detail: 'Attendance, assessment and completion evidence is assembled after the fact.', outcome: 'Audit requirements are completed during delivery and reportable at any point.' },
-  ],
-
-  modulesLede: 'One system across workshops, assessment, materials and funding.',
-  modules: [
-    { id: 'locations', title: 'Workshops, bays and machines', line: 'Each workshop carries its bays, machines, safe capacity and servicing state, with practical sessions booked against it.', why: 'Capacity in a trade is physical, and it is what limits intake.', example: 'Welding at capacity while carpentry runs at thirty-one per cent.' },
-    { id: 'workflows', title: 'Practical assessment and sign-off', line: 'Assessment demand, assessor allocation, observation records, evidence and sign-off run as one tracked sequence.', why: 'Competence is certified by observation, which makes assessment a scheduling constraint.', example: 'Seventy-three practical assessments overdue on assessor availability.' },
-    { id: 'people', title: 'Trainers, assessors and verifiers', line: 'Staff carry trade coverage, assessor credentials with expiry, and availability against assessment demand.', why: 'Assessment capacity is a credentialled subset of staff, not all staff.', example: 'Three assessor credentials lapsing, affecting four trades.' },
-    { id: 'inventory', title: 'Consumables, materials and tooling', line: 'Materials are recorded against trades, cohorts and practical tasks, with cost attributed per trainee.', why: 'Trade training consumes material, and unattributed spend cannot be priced.', example: 'Consumable spend above budget in two trades.' },
-    { id: 'work', title: 'Trades, units and practical tasks', line: 'Each trade is structured into units and practical tasks with equipment, material and assessment requirements attached.', why: 'A unit that needs a machine and an assessor is a different planning object from a lecture.', example: 'Practical task demand by workshop for the coming term.' },
-    { id: 'control', title: 'Awarding body, funding and audit evidence', line: 'One permission model and one audit trail, with awarding-body and funding requirements as reportable states.', why: 'Funded vocational delivery is audited on records made at the time.', example: 'Audit evidence completeness by funded programme.' },
-    { id: 'relationships', title: 'Trainees, employers and apprenticeships', line: 'Trainees carry attendance, units completed, assessments and employer placement where apprenticeships apply.', why: 'Apprenticeship trainees have an employer as well as a centre.', example: 'Apprentices with employer sign-off outstanding.' },
-    { id: 'intelligence', title: 'Capacity, assessment and cost reporting', line: 'Workshop utilisation, assessment queues, assessor coverage, consumable cost per trainee and audit completeness come from the records.', why: 'The centre is constrained by capacity and cost, and both are recordable.', example: 'Consumable cost per trainee by trade.' },
-    { id: 'ai', title: 'Ask the centre a question', line: 'Verity AI answers from your own trainee, workshop, assessment and materials records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about capacity and the assessment queue.', example: '"Which assessments are waiting on which assessors?" returns the queue by trade.' },
-    { id: 'records', title: 'Evidence, observation records and certificates', line: 'Observation records, photographs of practical work, evidence and certificates attach to the trainee and unit.', why: 'Practical competence is evidenced by what the assessor recorded.', example: 'Evidence complete per unit before certification.' },
-    { id: 'communication', title: 'Trainee and employer contact', line: 'Attendance follow-up, assessment scheduling and employer contact attach to the record they concern.', why: 'Scheduling assessment is a contact activity with a deadline.', example: 'Assessment slot offers recorded against trainees.' },
-  ],
-
-  workflowsHeading: 'Plan intake, run practicals, assess, evidence, certify.',
-  workflowsLede: 'These already happen. Recorded, capacity and cost become manageable.',
-  workflows: [
-    { name: 'Intake planning against capacity', steps: ['Workshop capacity established per trade', 'Practical demand per trainee calculated', 'Intake targets set by trade against capacity', 'Enrolment tracked against the target', 'Mix adjusted before the term starts'], note: 'The intake mix, not total intake, is what leaves one workshop idle.' },
-    { name: 'Practical delivery', steps: ['Sessions booked against workshop and machines', 'Consumables recorded against the session', 'Attendance captured against funding conditions', 'Equipment issues raised as they occur', 'Progress recorded per unit'], note: 'Recording materials at the session is what produces cost per trainee.' },
-    { name: 'Assessment scheduling', steps: ['Trainees ready for assessment identified per unit', 'Assessor availability matched by trade and credential', 'Slots allocated and trainees notified', 'Observation conducted and evidence recorded', 'Sign-off completed'], note: 'The queue is assessor-limited, so it is managed by matching credential to demand.' },
-    { name: 'Assessor credential management', steps: ['Credentials recorded with expiry and trade scope', 'Renewals raised in advance of lapse', 'Assessment capacity projected by trade', 'Cover arranged where capacity would fall', 'Updated credentials recorded'], note: 'Several lapses at once is how a centre loses assessment capacity without noticing.' },
-    { name: 'Funding and awarding-body audit', steps: ['Requirements mapped per programme', 'Attendance, evidence and completion recorded during delivery', 'Completeness reported', 'Gaps raised with owners', 'Submission assembled from records'], note: 'Funders audit records made at the time, not summaries made afterwards.' },
-  ],
-
-  ai: {
-    heading: 'Ask about capacity and the assessment queue.',
-    lede: 'Verity AI reads the same trainee, workshop, assessment and materials records the centre creates as it works. It answers from your own centre, respects permissions, and can turn an answer into a schedule or a task.',
-    panelMeta: 'Grounded in your centre records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which assessments are overdue and which assessor are they waiting on?',
-      'Which assessor credentials lapse this term and which trades do they cover?',
-      'What is workshop utilisation by trade?',
-      'What is consumable cost per trainee by trade?',
-      'Which trainees are ready for assessment but unscheduled?',
-      'Which equipment is out of service and what capacity does that remove?',
-      'Which funded trainees are at risk on attendance conditions?',
-      'Which apprentices have employer sign-off outstanding?',
-      'Summarise capacity, assessment and audit position.',
+    "bring": [
+      "Your trades, fees and instalment plans",
+      "Current trainee list with balances",
+      "Trainer list with hourly rates",
+      "Machine and consumables lists",
+      "Your approvals and affiliation papers with dates"
     ],
+    "time": "About 8 to 11 hours of owner time across the four weeks, mostly in week 1. Your office lead and workshop in-charge need a few more.",
+    "after": "Nobody is hired to run Verity. Attendance, fees and workshop use are recorded as part of the work you already do, and the reports come from those records."
   },
-
-  automationHeading: 'Capacity, credentials and evidence.',
-  automationLede: 'Each runs from the centre’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'An assessor credential approaches expiry', steps: ['Flagged with trades and assessment demand affected', 'Renewal assigned', 'Capacity projection updated'] },
-    { trigger: 'A trainee becomes ready for practical assessment', steps: ['Added to the queue for the unit', 'Matched to a credentialled assessor', 'Slot offered and recorded'] },
-    { trigger: 'Consumable use exceeds the trade budget', steps: ['Flagged with cost per trainee', 'Owner assigned for review', 'Outcome recorded against the trade'] },
-    { trigger: 'Equipment goes out of service', steps: ['Workshop capacity reduced', 'Affected sessions flagged', 'Servicing task assigned'] },
-    { trigger: 'Attendance falls below a funding condition', steps: ['Trainee and programme flagged', 'Intervention assigned', 'Compliance position updated'] },
+  "ai": {
+    "heading": "Ask your centre a question.",
+    "lede": "Verity AI reads your batches, attendance, fees, workshop and placement records. Ask in plain language, then turn the answer into tasks for the right person.",
+    "examples": [
+      {
+        "q": "Which trainees have missed three days in a row?",
+        "a": "Fourteen trainees across five batches. Welding W6 has five of them.",
+        "rows": [
+          [
+            "Welding W6",
+            "5"
+          ],
+          [
+            "Fitter F3",
+            "4"
+          ],
+          [
+            "Beauty B3",
+            "3"
+          ],
+          [
+            "Electrician E12",
+            "2"
+          ]
+        ],
+        "action": "Create call tasks for each trainer"
+      },
+      {
+        "q": "Which batches may not reach their start strength?",
+        "a": "Welding W7 has 12 of 20 and starts Monday. Beauty B4 has 8 of 15 and starts 28 October.",
+        "rows": [
+          [
+            "Welding W7",
+            "12 of 20"
+          ],
+          [
+            "Beauty B4",
+            "8 of 15"
+          ]
+        ],
+        "action": "Assign follow-ups to the open enquiries"
+      },
+      {
+        "q": "Which trainees passed but have no job yet?",
+        "a": "Nine trainees passed in the last two batches and have no employer recorded. Four are welders.",
+        "rows": [
+          [
+            "Welders",
+            "4"
+          ],
+          [
+            "Electricians",
+            "3"
+          ],
+          [
+            "Tailors",
+            "2"
+          ]
+        ],
+        "action": "Send the list to the placement owner"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still make the calls. Verity makes sure the right person knows to.",
+  "automations": [
+    {
+      "when": "An enquiry has no contact in 3 days",
+      "then": [
+        "Added to the follow-up list",
+        "Task to the counsellor",
+        "Outcome recorded: admitted, thinking or not interested"
+      ]
+    },
+    {
+      "when": "A trainee is absent for 3 days",
+      "then": [
+        "Flagged to the trainer",
+        "Call task created",
+        "Reason recorded when reached"
+      ]
+    },
+    {
+      "when": "A batch is a week from start and under 70 percent strength",
+      "then": [
+        "Flagged to the centre head",
+        "Open enquiries listed",
+        "Decision recorded: go ahead, merge or postpone"
+      ]
+    },
+    {
+      "when": "A fee instalment is overdue by 7 days",
+      "then": [
+        "Added to the overdue list",
+        "Task to the office owner",
+        "Payment or promise recorded"
+      ]
+    },
+    {
+      "when": "Stock falls below a reorder point",
+      "then": [
+        "Checked against the next batches",
+        "Order drafted",
+        "Receipt recorded"
+      ]
+    },
+    {
+      "when": "An approval, certificate or machine service is 30 days from due",
+      "then": [
+        "Task to the owner of the item",
+        "Reminder repeated weekly",
+        "Completion attached"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the centre can see.',
-  intelligenceLede: 'Capacity, queue and cost from delivery records.',
-  intelligence: [
-    { area: 'Capacity', points: ['Workshop utilisation by trade', 'Practical demand against bays and machines', 'Equipment availability and servicing', 'Intake mix against capacity'] },
-    { area: 'Assessment', points: ['Assessment queue by unit and trade', 'Assessor coverage and credential expiry', 'Time from readiness to assessment', 'Sign-off and evidence completeness'] },
-    { area: 'Cost', points: ['Consumable cost per trainee by trade', 'Material spend against budget', 'Tooling and equipment cost by workshop', 'Cost per completion'] },
-    { area: 'Compliance', points: ['Attendance against funding conditions', 'Audit evidence completeness', 'Awarding-body requirements by programme', 'Exceptions and closure'] },
+  "rules": {
+    "heading": "The rules a vocational centre has to keep up with.",
+    "lede": "Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when an inspector or sponsor asks.",
+    "note": "Rules differ by scheme, state and awarding body, and they change. Confirm current requirements with your affiliating body or the scheme documents.",
+    "items": [
+      {
+        "name": "Biometric attendance for funded batches",
+        "what": "For PMKVY training partners, NSDC notices have required attendance through the Aadhaar Enabled Biometric Attendance System, with full daily compliance, and tied payments to attendance checks early in a batch. Other schemes have their own rules.",
+        "how": "Attendance is shown by batch and trainee, with absences flagged and the record kept for each batch.",
+        "source": {
+          "name": "NSDC notice, 2022",
+          "url": "https://pmkvy.nsdcindia.org/photos/shares/products/cin1igRCHZRkkRs6pbuiTbXcd1A3VaD4Pdgta5mF.pdf"
+        }
+      },
+      {
+        "name": "Records that must stand up to inspection",
+        "what": "In 2025 the ministry blacklisted 178 partners and centres after finding absentee students, fake documents and centres that existed only on paper. Centres can expect checks on whether trainees, trainers and premises are real and documented.",
+        "how": "Each funded batch keeps its enrolment, attendance and assessment records together with who recorded what and when.",
+        "source": {
+          "name": "Vision IAS summarising Indian Express",
+          "url": "https://visionias.in/current-affairs/upsc-daily-news-summary/article/2025-11-07/the-indian-express/schemes-in-news/corruption-cloud-skill-ministry-blacklists-178-training-partners"
+        }
+      },
+      {
+        "name": "Trainee data and consent",
+        "what": "Names, phone numbers, identity details and photographs of trainees are personal data. India's data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.",
+        "how": "Trainee data sits in one permissioned place, with who viewed or changed it recorded.",
+        "source": {
+          "name": "AZB Partners",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Affiliation, safety and trainer qualifications",
+        "what": "Centres usually hold an affiliation or approval, safety certificates for the workshop and trainers with the right qualifications, each with its own date. Details depend on the trade and the body.",
+        "how": "Each is a record with an expiry and an owner, linked to the batches that depend on it."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "Trainers should not see the accounts. The office should not edit trainer pay. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Centre head",
+      "question": "Which batches and fees need my decision?",
+      "sees": "Batches under strength, fees overdue, trainees at risk, approvals due and placements by trade."
+    },
+    {
+      "role": "Counsellor",
+      "question": "Who should I call today?",
+      "sees": "Enquiries to follow up, admissions this week, trainees with pending instalments and reasons for dropouts."
+    },
+    {
+      "role": "Trainer",
+      "question": "How is my batch doing?",
+      "sees": "Attendance and absent trainees, sessions to record, practical consumables and assessment dates."
+    },
+    {
+      "role": "Workshop in-charge",
+      "question": "What do I need ready?",
+      "sees": "Machine service dates, bay schedule, consumables low and safety checks."
+    },
+    {
+      "role": "Accountant",
+      "question": "What came in and what is owed?",
+      "sees": "Fee collections and balances, trainer payouts, funded batch claims and purchase orders."
+    }
   ],
-  intelligenceNote: 'Verity records the centre’s operations. Trade curricula and awarding-body portals continue as they are.',
-
-  rolesHeading: 'One centre, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Centre head', question: 'Is capacity matched to intake?', focus: 'Workshop utilisation by trade, assessment queue, assessor coverage, cost per completion.' },
-    { role: 'Workshop supervisor', question: 'Can I run this term’s practicals?', focus: 'Bay and machine availability, equipment servicing, consumables, session bookings.' },
-    { role: 'Assessor', question: 'Who am I assessing and against what?', focus: 'Assessment queue by unit, evidence requirements, observation records, sign-off outstanding.' },
-    { role: 'Compliance', question: 'Are we audit-ready?', focus: 'Attendance against funding conditions, evidence completeness, awarding-body requirements, exceptions.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your attendance machine, which still captures arrival",
+      "Your awarding body and scheme portals, where you upload and register",
+      "Your accounts software or accountant for the books",
+      "WhatsApp for talking to trainees, sent by your team"
+    ],
+    "not": [
+      "Run the biometric device or the scheme portals",
+      "Send messages to trainees on its own",
+      "Give trainee certificates or run assessments",
+      "Give legal or tax advice"
+    ],
+    "migration": "We bring your trainee list, fee balances, trainers, machines and stock across from the registers and sheets you use now, in stages, so batches keep running while it happens."
+  },
+  "faqHeading": "Questions centre owners ask.",
+  "faqs": [
+    [
+      "Will my trainers and office staff actually use it?",
+      "It only works if recording takes seconds, so we set it up around the registers they already keep. We train during real batches and give each role something back: a call list, a batch view or a stock reminder."
+    ],
+    [
+      "Does Verity run the attendance machine or the scheme portal?",
+      "No. Your biometric device and the government portals stay as they are. We agree during setup how attendance details reach Verity so it can flag absentees and keep batch records together."
+    ],
+    [
+      "Can it handle funded and self-paying batches together?",
+      "Yes. Each batch has its own fee plan or funding checklist, and you see both on one screen."
+    ],
+    [
+      "Can it send messages to my trainees?",
+      "Not by itself. Verity lists who to call or message and assigns the task, and your team sends it and records the outcome."
+    ],
+    [
+      "I have two centres. Can I compare them?",
+      "Yes. Each centre is a location in one system, and batches, fees, attendance and placements can be compared side by side."
+    ],
+    [
+      "Does it replace my accounts software?",
+      "No. It keeps fee balances and instalments by trainee and gives your accountant cleaner records. The books stay where they are."
+    ],
+    [
+      "Who can see trainee information?",
+      "Only the people you allow. Access is set by role, and every change is recorded with who made it and when."
+    ],
+    [
+      "How long before I see results?",
+      "Enquiry follow-up, fees overdue and absent trainee lists need only your existing records, so they are the first things we aim to have working. Placement and dropout trends become reliable after a batch or two."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of centres and what you want set up. Message us and we will give you a clear number after a short conversation about how your centre runs."
+    ]
   ],
-
-  useCasesHeading: 'What vocational training centres use Verity for',
-  useCases: [
-    { name: 'Intake matched to workshop capacity', body: 'Practical capacity established per trade so the intake mix is planned rather than discovered when one workshop sits idle.' },
-    { name: 'Managing the assessment queue', body: 'Assessment demand and credentialled assessor availability held together, so overdue assessments are scheduled rather than accumulated.' },
-    { name: 'Assessor credential tracking', body: 'Credentials with expiry and trade scope, with renewals raised before assessment capacity disappears.' },
-    { name: 'Consumable cost per trainee', body: 'Materials recorded against trades and cohorts, making the real cost of a trade place visible.' },
-    { name: 'Equipment availability as capacity', body: 'Machine condition and servicing tracked against the practical sessions that depend on them.' },
-    { name: 'Funding audit evidence', body: 'Attendance, assessment and completion evidence created during delivery and reportable at any point.' },
-    { name: 'Asking about the constraint', body: 'Plain-language questions across capacity, assessment, cost and compliance, with tasks raised in the same step.' },
+  "related": [
+    "skill-training-institutes",
+    "coaching-institutes",
+    "language-institutes",
+    "music-schools",
+    "dance-academies",
+    "colleges"
   ],
-
-  migration: 'Trade curricula and awarding-body portals continue and are mapped during implementation. Trainees, units, workshop and equipment records, assessor credentials, assessment history and funding requirements are brought across.',
-
-  faqHeading: 'Questions vocational training centres ask',
-  faqs: [
-    ['What can AI software do for a vocational training centre?', 'Verity AI answers questions from your own trainee, workshop, assessment and materials records: which assessments are overdue and on which assessor, which credentials lapse this term, what workshop utilisation is by trade, what consumables cost per trainee. Each answer can become a schedule or an assigned task.'],
-    ['Why is workshop capacity treated as the constraint?', 'Because a trade is taught on equipment. The number of bays, machines or lifts sets how many trainees can be trained, and an intake mix that ignores it leaves one workshop oversubscribed and another idle in the same term.'],
-    ['How does assessment scheduling work?', 'Trainees ready for assessment form a queue per unit, and assessors are matched by credential and trade. Holding demand and credentialled availability together is what turns an overdue list into a schedule.'],
-    ['Why track assessor credentials?', 'Assessment capacity comes from credentialled staff, not all staff. Several credentials lapsing at once removes capacity across multiple trades simultaneously, which is why expiry is tracked with renewal raised in advance.'],
-    ['Can it measure consumable cost per trainee?', 'Materials are recorded against trades, cohorts and practical tasks as they are used, which produces cost per trainee and cost per completion by trade.'],
-    ['Does it handle funding audits?', 'Attendance, assessment evidence and completion are recorded during delivery against the conditions each funded programme carries, with completeness reportable at any point.'],
-    ['What about apprentices with employers?', 'Apprentice trainees carry the employer alongside the centre record, with employer sign-off tracked as part of completion.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of trades, workshop capacity, assessor credentials and funding requirements, configuration, migration, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the assessment queue.',
-  ctaLede: 'It is usually assessor capacity, not trainee readiness. Tell us how assessment is scheduled today.',
-
-  related: ['skill-training-institutes', 'coaching-institutes', 'colleges', 'manufacturers', 'contractors', 'universities'],
+  "ctaHeading": "Start with the trainees who have stopped coming.",
+  "ctaLede": "Tell us how your centre runs and we will show you the at-risk trainees, thin batches and overdue fees it would find, using your own numbers."
 };

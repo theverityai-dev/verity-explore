@@ -1,5 +1,19 @@
 # Business pages rebuild: task plan
 
+> **CURRENT PLAN (2026-10-16, supersedes section 4 and 5 below).** The user said: "forget multiple parallel agents, plan out all 123 phase wise and do it linearly". No subagents. One session does the work, one business at a time, in the phases below. Run `node scripts/check-content.mjs --all | grep -c '^ok'` to see progress (target 123).
+>
+> **How pages are produced now.** Every page is generated from its markdown draft: `docs/drafts/<slug>.md` (researched, human-readable, has a Research log) then `node scripts/draft-to-js.mjs <slug>` writes `content/businesses/<slug>.js`, then `node scripts/check-content.mjs <slug>` must print `ok`. Draft format = `docs/drafts/cafes.md` (exact headings: SEO, Hero, How it runs today, Pains, Facts, Screens with ```json blocks, Day before and after, How we work, Verity AI examples, Automations, Rules and paperwork, Roles, Alongside, FAQ, Related and CTA; bullets use the `key: value` and `a | b` forms the parser reads). Fix problems in the DRAFT and re-run the converter; do not hand-edit generated JS.
+>
+> **Phase 0, tooling: DONE.** Renderer, CSS, JS playback, validator, exporter, converter (`scripts/draft-to-js.mjs`, roundtrip-tested with `--roundtrip`).
+> **Phase 1, drafts for businesses that had none: 111 of 123 DONE** (drafts exist for all but the 11 below; exported drafts for pages first written as JS).
+> **Phase 2, convert researched drafts to JS: DONE** (59 converted, 2026-10-16, commit 629c57e). 111 pages pass check-content, site build and QA pass.
+> **Phase 3, the last 11 businesses, one at a time (research, write draft, convert, check, commit every 2 or 3):**
+> exporters, vocational-training-centres, repair-services, printing-businesses, tailors, saas-companies, startups, cybersecurity-companies, data-companies, gaming-studios, creator-businesses. Per business: 3 or more WebSearch queries (India context: pain points, sourced stats, laws and recent changes), verify figures by WebFetch, write the draft with a Research log, convert, check.
+> **Phase 4, review pass over all 123:** (a) read the "Assumptions and unverified" section of each draft and remove or soften anything marked unverified from the page text (known items: marketing-agencies pain 8 "48% delivery dissatisfaction" non-Indian survey; software-agencies pain 2 Enterprise DNA sentence; financial-advisors pain 6 source line "details not verified here"; insurance-agencies related slug travel-agencies check; hostels is written for private and PG hostels); (b) spot-check source URLs; (c) jargon and phrase-overlap warnings from `node scripts/qa.mjs`; (d) browser check at 1440 and 390 widths; (e) confirm process hour estimates (8 to 14 owner hours) with the Verity team; (f) the advertising-agencies "vendors" screen has no pain pointing to it (warning only).
+> **Phase 5, motion and video (user rule: every site and page gets motion graphics):** per-industry Remotion videos from page data plus optional scroll-driven demos; see section 8.
+> **Commit often** (user: "keep commiting"): `git add businesses industries content css docs explore index.html js lib scripts sitemap.xml robots.txt` then commit; never add the unrelated `video/` and `RAW CLIPS/` changes. If `.git/index.lock` is stale, remove it.
+
+
 Single source of truth so any session can finish this work. Last updated 2026-10-16.
 
 ## 1. Why this exists
