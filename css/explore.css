@@ -513,3 +513,45 @@ main .h-lg { font-size: clamp(28px, 3vw, 40px); line-height: 1.14; letter-spacin
   .xs-bar i, .is-in .xs-bar i { transform: none; transition: none; }
   .xs-tag { transition: none; }
 }
+
+/* =============================================================================
+   FILM BAND AND PINNED SCREEN WALKTHROUGH
+   ========================================================================== */
+.bz-film { display: grid; gap: 32px; align-items: center; }
+.bz-film-copy .h-md { margin-top: 14px; max-width: 20ch; }
+.bz-film-copy .body-copy { margin-top: 16px; max-width: 44ch; }
+.bz-film-note { margin-top: 18px; color: var(--ink-muted); max-width: 46ch; }
+.bz-film-frame {
+  margin: 0; overflow: hidden; background: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--r-panel); box-shadow: var(--elev-mid);
+}
+.bz-film-frame video { display: block; width: 100%; height: auto; }
+.bz-film--v .bz-film-frame { max-width: 320px; justify-self: center; }
+@media (min-width: 900px) {
+  .bz-film { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 72px; }
+  .bz-film--v { grid-template-columns: minmax(0, 1fr) 340px; }
+}
+
+/* Pinned walkthrough: the screens stack in one sticky stage and the scroll picks
+   which one shows. Without JS, or on small screens, they simply stay a list. */
+.bz-screens.is-pinned { display: block; }
+.bz-pin { position: relative; }
+.bz-pin-stage { position: sticky; top: 84px; height: var(--stage-h); display: grid; align-items: center; }
+.bz-screens.is-pinned .bz-screen {
+  grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: opacity 480ms cubic-bezier(.22,.61,.36,1), transform 480ms cubic-bezier(.22,.61,.36,1), visibility 0s linear 480ms;
+}
+.bz-screens.is-pinned .bz-screen.is-active { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.bz-screens.is-pinned .bz-screen .bz-screen-copy { order: 0; opacity: 1; transform: none; }
+.bz-pin-nav { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 4px; }
+.bz-pin-count { margin-right: 12px; font-size: 11px; letter-spacing: 0.14em; color: var(--ink-muted); }
+.bz-pin-dot { width: 28px; height: 28px; display: grid; place-items: center; border-radius: var(--r-pill); }
+.bz-pin-dot i {
+  width: 7px; height: 7px; border-radius: var(--r-pill); background: var(--line);
+  transition: background-color 240ms cubic-bezier(.22,.61,.36,1), transform 240ms cubic-bezier(.22,.61,.36,1);
+}
+.bz-pin-dot:hover i { background: var(--ink-muted); }
+.bz-pin-dot.is-on i { background: var(--accent); transform: scale(1.5); }
+@media (prefers-reduced-motion: reduce) {
+  .bz-screens.is-pinned .bz-screen { transition: none; }
+}

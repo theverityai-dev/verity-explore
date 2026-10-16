@@ -28,11 +28,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=79">
-<link rel="stylesheet" href="/css/verity.css?v=79">
-<link rel="stylesheet" href="/css/sections.css?v=79">
-<link rel="stylesheet" href="/css/motion.css?v=79">
-<link rel="stylesheet" href="/css/explore.css?v=79">
+<link rel="stylesheet" href="/css/base.css?v=80">
+<link rel="stylesheet" href="/css/verity.css?v=80">
+<link rel="stylesheet" href="/css/sections.css?v=80">
+<link rel="stylesheet" href="/css/motion.css?v=80">
+<link rel="stylesheet" href="/css/explore.css?v=80">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Manufacturing & B2B","item":"https://theverityai.xyz/industries/manufacturing-b2b/"},{"@type":"ListItem","position":4,"name":"Wholesalers","item":"https://theverityai.xyz/businesses/wholesalers/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Wholesalers","description":"The 14 leaks in a wholesale business: udhaar to retailers, rate slabs, aging stock, supplier dues and godown errors, and the Verity screens that put each one in front of you.","url":"https://theverityai.xyz/businesses/wholesalers/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My salesmen and munim are not used to computers. Will it work?","acceptedAnswer":{"@type":"Answer","text":"The screens use your words: retailer, line, bill, godown. Entry is built to be short, and we train at the counter and the godown with real orders. Salesmen also get something back, which is their own dues and collections list, so they have a reason to use it."}},{"@type":"Question","name":"Does Verity replace Tally or my billing software?","acceptedAnswer":{"@type":"Answer","text":"No. Your accounting software keeps doing the books and the bills. Verity holds the orders, dues, stock ageing and rates around it, and we agree during setup how the data reaches Verity."}},{"@type":"Question","name":"Can it chase retailers for money?","acceptedAnswer":{"@type":"Answer","text":"It does not message them by itself. It builds the collection list, gives each late bill to a named person, and records the promise and the result. Your people make the call or send the message."}},{"@type":"Question","name":"I have three godowns and a shop. Can I see them together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each godown is a location in one system. Stock, ageing and dispatches roll up for you, and a transfer between godowns is recorded so stock does not appear or vanish."}},{"@type":"Question","name":"Can I set different rates for different retailers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Slabs can differ by quantity, retailer group or an agreed special rate, each with a floor. Anything under the floor waits for approval, and the approved rate is kept on the record."}},{"@type":"Question","name":"Does it track daily market rates for me?","acceptedAnswer":{"@type":"Answer","text":"No. Someone on your team enters the day’s market rate for the lines you care about, which takes a few minutes. Verity then compares it with your holding cost and flags the lines that are under water."}},{"@type":"Question","name":"Who can see my dues and my margins?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Salesmen see their own routes, the godown sees picks and stock but not buying rates, and you see everything. Each change is recorded with who made it and when."}},{"@type":"Question","name":"How long before I see anything useful?","acceptedAnswer":{"@type":"Answer","text":"The dues-by-age list and stock ageing need only your ledger and stock register, so we aim to have them working first. Margin by retailer and line becomes reliable after a month or two of recorded orders."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of godowns, users and what you want set up. Message us and after a short conversation about how you trade, we will give you a clear number."}}]}</script>
@@ -112,6 +112,22 @@
   </div>
       <p class="caption x-panel-note">Illustrative screen with sample figures. Yours is set up with your own retailers, godowns, rates and suppliers.</p>
     </div>
+  </div>
+</section>
+
+<section class="section" id="watch" aria-labelledby="watch-heading">
+  <div class="shell bz-film bz-film--v">
+    <div class="bz-film-copy" data-reveal>
+      <p class="label">Watch</p>
+      <h2 id="watch-heading" class="h-md">Orders, stock and dues for a wholesaler</h2>
+      <p class="body-copy">A short film of the kind of day a wholesale business owner has, and what changes when the records connect.</p>
+      <p class="caption bz-film-note">56 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+    </div>
+    <figure class="bz-film-frame" data-reveal>
+      <video controls preload="none" playsinline poster="/assets/video/ad-wholesalers.jpg" aria-label="Orders, stock and dues for a wholesaler">
+        <source src="/assets/video/ad-wholesalers.mp4" type="video/mp4">
+      </video>
+    </figure>
   </div>
 </section>
 
@@ -286,7 +302,7 @@
     <p class="label">What you will actually see</p>
     <h2 id="screens-heading" class="h-lg">The screens a wholesaler would open every day.</h2>
     <p class="lede x-lede">Six views, each for one job, set up in your own terms: retailers, lines, godowns, salesmen and routes.</p>
-  </div><div class="bz-screens"><article class="bz-screen" id="screen-owner">
+  </div><div class="bz-screens" data-pin><article class="bz-screen" id="screen-owner">
             <div class="bz-screen-copy" data-reveal>
               <p class="label">Screen 1 of 6</p>
               <h3 class="h-md bz-screen-h">The owner’s morning view</h3>
@@ -760,8 +776,8 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=79"></script>
-<script src="/js/ui.js?v=79"></script>
-<script src="/js/screens.js?v=79"></script>
+<script src="/js/motion.js?v=80"></script>
+<script src="/js/ui.js?v=80"></script>
+<script src="/js/screens.js?v=80"></script>
 </body>
 </html>
