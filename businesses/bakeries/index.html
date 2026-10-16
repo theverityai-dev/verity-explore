@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Food & Hospitality","item":"https://theverityai.xyz/industries/food-hospitality/"},{"@type":"ListItem","position":4,"name":"Bakeries","item":"https://theverityai.xyz/businesses/bakeries/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Bakeries","description":"Fifteen ways a bakery loses money, from unsold bakes and lost cake orders to flour and butter price swings, and the Verity screens that fix each one.","url":"https://theverityai.xyz/businesses/bakeries/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My bakers start at 4 am. Will they really use a screen?","acceptedAnswer":{"@type":"Answer","text":"Only if it saves them effort. They see the bake plan and cake details on one screen, and recording a bake and leftovers takes a few taps. We train at their station, during a night shift."}},{"@type":"Question","name":"Does Verity take cake orders from customers online?","acceptedAnswer":{"@type":"Answer","text":"No. Customers keep ordering by call, message or your usual channel. Your counter enters the order, and from then on Verity tracks it through the kitchen to pickup and payment."}},{"@type":"Question","name":"Can it tell me how much to bake?","acceptedAnswer":{"@type":"Answer","text":"It shows how each item sold and was left over, by day and hour, and suggests a quantity. Your head baker decides, because they know about weather, holidays and local events that numbers miss."}},{"@type":"Question","name":"We make some things in-house and buy others. Can both be tracked?","acceptedAnswer":{"@type":"Answer","text":"Yes. Made items have recipes and ingredient use. Bought items are tracked as stock with a purchase rate. Both show margin and sell-through the same way."}},{"@type":"Question","name":"I only have one shop with a small kitchen. Is this too big?","acceptedAnswer":{"@type":"Answer","text":"A single-shop bakery has the same leftovers and price swings. We set up only what you need, in the same four weeks, with fewer screens in daily use."}},{"@type":"Question","name":"Can I see my outlets and central kitchen together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each outlet and the kitchen is a location. You see what was sent, received, sold and returned, and the gap, per outlet and per item."}},{"@type":"Question","name":"Who can see my recipes and costs?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Recipes and costs can be limited to you and your head baker, and the counter sees only what it sells. Every change is recorded with who made it and when."}},{"@type":"Question","name":"How soon will it be useful?","acceptedAnswer":{"@type":"Answer","text":"Order tracking, unpaid balances and expiry lists need only your existing orders and stock, so we aim to have them first. Bake advice becomes reliable after a few weeks of recorded sales and leftovers."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of outlets, people and what you want set up. Message us and we will give you a clear number after a short conversation about how your bakery runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in food and hospitality</h2>
       <p class="body-copy">Kitchen, counter and stock moving together.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality"><source src="/assets/video/film-food-hospitality.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality">
-        <source src="/assets/video/film-food-hospitality.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -808,8 +808,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

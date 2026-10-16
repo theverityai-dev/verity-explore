@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Manufacturing & B2B","item":"https://theverityai.xyz/industries/manufacturing-b2b/"},{"@type":"ListItem","position":4,"name":"Manufacturers","item":"https://theverityai.xyz/businesses/manufacturers/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Manufacturers","description":"The 14 problems that make factory orders late and margins thin, what each costs, and the Verity screens that fix them: jobs, materials, rejects, machines and dues.","url":"https://theverityai.xyz/businesses/manufacturers/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will my supervisors and operators actually use it?","acceptedAnswer":{"@type":"Answer","text":"It only works if the job is recorded, so we keep entries short and put them where people already write: the job card, the issue slip, the inspection sheet. We train at the machine with real jobs, and the supervisor gets something back: a plan that does not change under him without a reason."}},{"@type":"Question","name":"We already have an ERP. Why add this?","acceptedAnswer":{"@type":"Answer","text":"Many factories have an ERP that nobody enjoys using, or one that only handles accounts. We can take data from it during setup and see what is still missing. If your current system already does the job, we will say so."}},{"@type":"Question","name":"Can it connect to my machines?","acceptedAnswer":{"@type":"Answer","text":"No. Output, downtime and rejects are entered by the operator or supervisor in a few fields. We keep the entries short so they are done at the machine or at the end of the shift."}},{"@type":"Question","name":"Does it do my accounts and invoices?","acceptedAnswer":{"@type":"Answer","text":"No. Your accounting package keeps doing that. Verity records the job, the dispatch and the dues, and tells accounts which invoice is waiting."}},{"@type":"Question","name":"We run job work for others as well as our own products. Is that a problem?","acceptedAnswer":{"@type":"Answer","text":"No. A job can be our own product or a customer’s material kept separately, with its own stock and challans, so the two are never mixed."}},{"@type":"Question","name":"Can I see two plants together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each plant is a location in one system. Output, rejects, stock and dues compare side by side, and stock can be moved between plants against a recorded transfer."}},{"@type":"Question","name":"Who can see my costs and margins?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Access is set by role, so the floor, stores, accounts and you each see what they need, and every change is recorded with who made it and when."}},{"@type":"Question","name":"How long before we see something useful?","acceptedAnswer":{"@type":"Answer","text":"The material shortage list and overdue dues need only your existing stock and invoice data, so they are the first things we aim to have working. Margin by job and reject trends become reliable after a few weeks of recorded jobs."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of plants, users and how much you want set up. Message us and we will give you a clear number after a short conversation about how your factory runs."}}]}</script>
@@ -121,13 +122,9 @@
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">The factory floor, in one picture</h2>
       <p class="body-copy">A short film of the kind of day a factory owner has, and what changes when the records connect.</p>
-      <p class="caption bz-film-note">56 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">56 seconds. It starts silent: press the speaker for the voiceover. An illustrative film, so the scenes are examples, not customer results.</p>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/ad-manufacturers.jpg" aria-label="The factory floor, in one picture">
-        <source src="/assets/video/ad-manufacturers.mp4" type="video/mp4">
-      </video>
-    </figure>
+    <figure class="bz-vp" data-vp data-audio data-reveal><video muted playsinline controls loop preload="metadata" poster="/assets/video/ad-manufacturers.jpg" aria-label="The factory floor, in one picture"><source src="/assets/video/ad-manufacturers.mp4" type="video/mp4"></video></figure>
   </div>
 </section>
 
@@ -776,8 +773,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

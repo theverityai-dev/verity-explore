@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Retail & Commerce","item":"https://theverityai.xyz/industries/retail-commerce/"},{"@type":"ListItem","position":4,"name":"Supermarkets","item":"https://theverityai.xyz/businesses/supermarkets/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Supermarkets","description":"The 14 problems that eat a supermarket’s thin margin, what each costs, and the Verity screens that fix them: expiry, shrinkage, shelf gaps, supplier deals and more.","url":"https://theverityai.xyz/businesses/supermarkets/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"We have thousands of products. Is that too much to load?","acceptedAnswer":{"@type":"Answer","text":"No. We start from your product master, usually an export from your billing system. We load it by section, check a sample against the shelf, and add batch and expiry information where the product needs it."}},{"@type":"Question","name":"Does Verity replace our billing system?","acceptedAnswer":{"@type":"Answer","text":"No. Your billing system keeps ringing up sales. We agree during setup how its sales reach Verity, and Verity gives you the picture around them: expiry, write-offs, suppliers, shelves and shifts."}},{"@type":"Question","name":"Will the floor staff really record all this?","acceptedAnswer":{"@type":"Answer","text":"Only what happens at points they already touch: the dock count, the shelf round and the write-off. We train on real shifts and keep each entry to a few taps. The lists they receive replace the checks they remember today."}},{"@type":"Question","name":"Can Verity track expiry for every item?","acceptedAnswer":{"@type":"Answer","text":"It tracks the batch and expiry date you record at receiving, so it works as well as the receiving habit. We start with the categories where expiry hurts most, such as dairy, bakery and packaged foods, and widen from there."}},{"@type":"Question","name":"Can you show me theft or staff loss?","acceptedAnswer":{"@type":"Answer","text":"Verity shows where stock does not match the book, and where voids, overrides and staff purchases stand out by cashier and shift. It gives you facts. It does not accuse anyone."}},{"@type":"Question","name":"We have four stores. Can I compare them?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each store is a location in one system with the same measures, so waste, shrinkage, shelf gaps and margin can be compared, with transfers between stores recorded as movements."}},{"@type":"Question","name":"Who can see supplier rates and margins?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Access is set by role, so floor staff can see tasks and stock but not costs, and every change is recorded with who made it and when."}},{"@type":"Question","name":"Will it message our suppliers or customers?","acceptedAnswer":{"@type":"Answer","text":"Not by itself. Verity drafts the order or credit note task and assigns it to a person, who sends it. The outcome is then recorded."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of stores, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your supermarket runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in retail and commerce</h2>
       <p class="body-copy">Shelf counts, billing and stock, shown the way a store lives them.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-retail-commerce.jpg" aria-label="Verity in retail and commerce"><source src="/assets/video/film-retail-commerce.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-retail-commerce.jpg" aria-label="Verity in retail and commerce">
-        <source src="/assets/video/film-retail-commerce.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -784,8 +784,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+/* =============================================================================
+   FILM PLAYER AND FULL-SCREEN SCROLL SCENE
+
+   Tokens only, apart from the keywords black and white, which are the film
+   frame and the controls drawn over it and so do not follow the page theme.
+   ========================================================================== */
+.bz-vp { position: relative; margin: 0; overflow: hidden; background: black; border: 1px solid var(--line); border-radius: var(--r-panel); box-shadow: var(--elev-mid); }
+.bz-vp video { display: block; width: 100%; height: auto; }
+.bz-film--v .bz-vp { max-width: 320px; justify-self: center; }
+
+/* Custom controls replace the native ones once the script has built them. */
+.bz-vp-ui {
+  position: absolute; left: 12px; right: 12px; bottom: 12px;
+  display: flex; align-items: center; gap: 10px; padding: 7px 10px 7px 7px;
+  color: white; border-radius: var(--r-pill);
+  background: color-mix(in srgb, black 58%, transparent);
+  backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid color-mix(in srgb, white 14%, transparent);
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 240ms cubic-bezier(.22,.61,.36,1), transform 240ms cubic-bezier(.22,.61,.36,1);
+}
+.bz-vp:hover .bz-vp-ui, .bz-vp:focus-within .bz-vp-ui, .bz-vp:not(.is-playing) .bz-vp-ui { opacity: 1; transform: none; }
+.bz-vp-btn { flex: none; width: 32px; height: 32px; display: grid; place-items: center; border-radius: var(--r-pill); color: white; background: var(--accent); transition: background-color 200ms; }
+.bz-vp-btn:hover { background: var(--accent-600); }
+.bz-vp-btn--mute { background: color-mix(in srgb, white 16%, transparent); }
+.bz-vp-btn--mute:hover { background: color-mix(in srgb, white 28%, transparent); }
+.bz-vp-track { position: relative; flex: 1; min-width: 40px; height: 22px; cursor: pointer; touch-action: none; }
+.bz-vp-track::before { content: ''; position: absolute; left: 0; right: 0; top: 10px; height: 3px; border-radius: var(--r-bar); background: color-mix(in srgb, white 24%, transparent); }
+.bz-vp-track i { position: absolute; left: 0; right: 0; top: 10px; height: 3px; border-radius: var(--r-bar); background: white; transform-origin: left; transform: scaleX(0); }
+.bz-vp-time { flex: none; font-size: 11px; color: color-mix(in srgb, white 78%, transparent); min-width: 66px; text-align: right; }
+.bz-film--v .bz-vp-time { display: none; }
+
+/* Landscape films: a stacked section by default, a full-screen scroll scene when
+   the script marks it .is-scrub (wide, tall, motion allowed). */
+.bz-scrub { background: var(--base-alt); padding-block: clamp(72px, 9vw, 112px); }
+.bz-scrub-cap { margin-bottom: 36px; }
+.bz-scrub-cap .h-md { margin-top: 14px; max-width: 22ch; }
+.bz-scrub-cap .body-copy { margin-top: 16px; max-width: 48ch; }
+.bz-scrub-bar { display: none; }
+.bz-vp--wide { max-width: 1100px; margin-inline: auto; }
+
+.bz-scrub.is-scrub { padding: 0; background: black; }
+.bz-scrub.is-scrub .bz-scrub-track { height: 260vh; }
+.bz-scrub.is-scrub .bz-scrub-stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.bz-scrub.is-scrub .bz-scrub-frame { position: absolute; inset: 0; max-width: none; padding: 0; }
+.bz-scrub.is-scrub .bz-vp--wide { position: absolute; inset: 0; max-width: none; border: 0; border-radius: 0; box-shadow: none; margin: 0; }
+.bz-scrub.is-scrub .bz-vp--wide video { width: 100%; height: 100%; object-fit: contain; }
+.bz-scrub.is-scrub .bz-vp-ui { display: none; }
+.bz-scrub.is-scrub .bz-scrub-cap {
+  position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; margin: 0; padding-block: 120px 56px;
+  color: white; pointer-events: none; opacity: var(--cap, 1);
+  background: linear-gradient(to top, color-mix(in srgb, black 82%, transparent), transparent);
+}
+.bz-scrub.is-scrub .bz-scrub-cap .label, .bz-scrub.is-scrub .bz-scrub-cap .body-copy, .bz-scrub.is-scrub .bz-scrub-cap .bz-film-note { color: color-mix(in srgb, white 78%, transparent); }
+.bz-scrub.is-scrub .bz-scrub-cap .h-md { color: white; }
+.bz-scrub.is-scrub .bz-scrub-bar { display: block; position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 3px; background: color-mix(in srgb, white 16%, transparent); }
+.bz-scrub.is-scrub .bz-scrub-bar i { display: block; height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+@media (prefers-reduced-motion: reduce) { .bz-vp-ui { transition: none; } }

@@ -22,8 +22,9 @@ export const INDUSTRY_FILMS = {
 };
 
 export const BUSINESS_ADS = {
-  restaurants: { name: 'ad-restaurants', title: 'Kitchen, staff and billing in sync', seconds: 52 },
-  manufacturers: { name: 'ad-manufacturers', title: 'The factory floor, in one picture', seconds: 56 },
-  wholesalers: { name: 'ad-wholesalers', title: 'Orders, stock and dues for a wholesaler', seconds: 56 },
-  'facility-management': { name: 'ad-facility-management', title: 'Sites, staff and tickets for facility teams', seconds: 62 },
+  /* These four carry a voiceover (and music), so they keep their audio track. */
+  restaurants: { name: 'ad-restaurants', title: 'Kitchen, staff and billing in sync', seconds: 52, audio: true },
+  manufacturers: { name: 'ad-manufacturers', title: 'The factory floor, in one picture', seconds: 56, audio: true },
+  wholesalers: { name: 'ad-wholesalers', title: 'Orders, stock and dues for a wholesaler', seconds: 56, audio: true },
+  'facility-management': { name: 'ad-facility-management', title: 'Sites, staff and tickets for facility teams', seconds: 62, audio: true },
 };

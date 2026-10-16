@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Food & Hospitality","item":"https://theverityai.xyz/industries/food-hospitality/"},{"@type":"ListItem","position":4,"name":"Bars & Lounges","item":"https://theverityai.xyz/businesses/bars-and-lounges/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Bars & Lounges","description":"The leaks in a bar, from pegs poured but never billed to lapsed excise dates and late-night rosters, what each costs, and the Verity screens that fix them.","url":"https://theverityai.xyz/businesses/bars-and-lounges/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My bartenders are slammed at peak. Will they actually record breakage and voids?","acceptedAnswer":{"@type":"Answer","text":"Only if it takes seconds, so we set it up as two taps with a reason and keep the list of reasons short. Counts happen before opening and after close, not mid-rush, and we train during a real night, not in a classroom."}},{"@type":"Question","name":"Does Verity replace my billing system?","acceptedAnswer":{"@type":"Answer","text":"No. Your billing system keeps taking orders and payments. We agree during setup how bills reach Verity, which then does the stock, supplier, staff and licence work around them."}},{"@type":"Question","name":"Does it file my excise returns or renew my licence?","acceptedAnswer":{"@type":"Answer","text":"No. Your team or adviser files. Verity keeps the licence, its papers, the dates and the stock records in one place and tells the right person in time."}},{"@type":"Question","name":"Can it take table reservations or sell tickets for events?","acceptedAnswer":{"@type":"Answer","text":"No. If guests book or buy online today, that tool keeps working. Verity makes sure every enquiry has an owner and a next step, and your team replies to the guest."}},{"@type":"Question","name":"How would it catch over-pouring?","acceptedAnswer":{"@type":"Answer","text":"It compares pegs billed with the bottle usage from your counts, per shift and per brand. A person or shift whose usage keeps running above sales is flagged. It does not watch anyone; it shows where the numbers do not tie."}},{"@type":"Question","name":"I run one small bar with five staff. Is this too much?","acceptedAnswer":{"@type":"Answer","text":"A five-person bar has the same leaks and less time to notice them. We set up only what you need, in the same four weeks, and leave out what you do not."}},{"@type":"Question","name":"I have two bars and a rooftop. Can I see them together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each is a location in one system, with sales, variance, voids, labour and licence dates side by side. Stock can be moved between them against a recorded transfer."}},{"@type":"Question","name":"Who can see my data?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Access is set by role, so bartenders, managers and your accountant each see what they need, and every change is recorded with who made it and when."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of outlets, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your bar runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in food and hospitality</h2>
       <p class="body-copy">Kitchen, counter and stock moving together.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality"><source src="/assets/video/film-food-hospitality.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality">
-        <source src="/assets/video/film-food-hospitality.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -812,8 +812,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

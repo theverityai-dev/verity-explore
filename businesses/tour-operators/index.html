@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Food & Hospitality","item":"https://theverityai.xyz/industries/food-hospitality/"},{"@type":"ListItem","position":4,"name":"Tour Operators","item":"https://theverityai.xyz/businesses/tour-operators/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Tour Operators","description":"The 14 problems that sink a tour operator’s margin: unconfirmed suppliers, rooming lists, payment gaps, clashing guides and permits, and the Verity screens that fix each one.","url":"https://theverityai.xyz/businesses/tour-operators/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will my ground team and guides use it from the road?","acceptedAnswer":{"@type":"Answer","text":"Guides and tour managers need only a few things: the manifest, tomorrow’s services and a place to log changes and expenses. We set those up with them and test on a live departure. Where signal is poor, the office can enter what the guide reports by phone."}},{"@type":"Question","name":"We run both fixed departures and custom tours. Can it handle both?","acceptedAnswer":{"@type":"Answer","text":"Yes. A fixed departure has seats sold against capacity and many guests. A custom tour is one party with its own services. Both are departures with guests, services, suppliers and payments, and setup covers each type you run."}},{"@type":"Question","name":"Does Verity sell tours or take guest bookings online?","acceptedAnswer":{"@type":"Answer","text":"No. Your sales team and website keep doing that. Verity holds the booking once it exists and runs the departure behind it."}},{"@type":"Question","name":"Can it manage inbound tours with overseas agents?","acceptedAnswer":{"@type":"Answer","text":"Yes. Agents are clients with their own bookings, due dates and balances in the contract currency, so receivables by agent and age are visible. Your team still handles the conversations."}},{"@type":"Question","name":"How does it deal with changes on the road?","acceptedAnswer":{"@type":"Answer","text":"The guide or ground manager logs the change once. The office sees it at once, tomorrow’s affected services are listed, and the extra cost lands on the departure for later review."}},{"@type":"Question","name":"Who can see guest passports and medical notes?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Access is set by role, so the guide sees the manifest for his own group, accounts see payments and not medical notes, and every change is recorded with who made it and when."}},{"@type":"Question","name":"Will it work out departure costs the way I do?","acceptedAnswer":{"@type":"Answer","text":"It uses your own cost-sheet lines and shows quoted against actual for each. We set these up in week 2 and test them against a past departure before go-live."}},{"@type":"Question","name":"Can I see several offices or destinations together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each office or destination is a location in one system, and departures, dues and margins can be compared side by side."}},{"@type":"Question","name":"How long before I see results?","acceptedAnswer":{"@type":"Answer","text":"The unconfirmed-services list and the room-block release warnings only need your upcoming departures, so we aim to have them working first. Margin trends become reliable after a few departures are fully recorded."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of offices, staff and tour types you want set up. Message us and we will give you a clear number after a short conversation about how your operation runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in food and hospitality</h2>
       <p class="body-copy">Kitchen, counter and stock moving together.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality"><source src="/assets/video/film-food-hospitality.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality">
-        <source src="/assets/video/film-food-hospitality.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -795,8 +795,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

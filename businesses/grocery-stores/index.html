@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Retail & Commerce","item":"https://theverityai.xyz/industries/retail-commerce/"},{"@type":"ListItem","position":4,"name":"Grocery Stores","item":"https://theverityai.xyz/businesses/grocery-stores/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Grocery Stores","description":"The 14 problems that squeeze a neighbourhood grocery store, what each costs, and the Verity screens that fix them: udhaar balances, expiry, distributor schemes, home delivery.","url":"https://theverityai.xyz/businesses/grocery-stores/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My shop is small and I do not have time at the computer. Will this work?","acceptedAnswer":{"@type":"Answer","text":"It is built for that. Most entries are a few taps at the moment the thing happens: a sale on credit, a delivery received, an order taken. We train you at the counter in short sessions, not in a classroom."}},{"@type":"Question","name":"Does Verity replace my billing app or khata app?","acceptedAnswer":{"@type":"Answer","text":"It can take over the khata from a notebook or an app, because balances and payments are records on the customer. Your billing app keeps ringing up sales, and we agree during setup how its sales reach Verity."}},{"@type":"Question","name":"Can Verity send reminders to my credit customers?","acceptedAnswer":{"@type":"Answer","text":"Not by itself. It builds the collection list and assigns the reminder to a person, who calls or messages. What the customer says is recorded next to the balance."}},{"@type":"Question","name":"How do loose items like dal and sugar work?","acceptedAnswer":{"@type":"Answer","text":"Each sack is a stock lot with its weight. Sales by weight reduce it. Verity shows what should be left against what you have, and the gap per item per week."}},{"@type":"Question","name":"Do I need barcodes or new machines?","acceptedAnswer":{"@type":"Answer","text":"Verity does not run a billing counter or scan barcodes. We work with the way you record sales today, and agree during setup how that data reaches Verity."}},{"@type":"Question","name":"Can I see what my helpers and delivery boys are doing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tasks, home orders and cash handed in are recorded against each person. Access is set by role, so a delivery person sees their own route and not your credit book."}},{"@type":"Question","name":"Who can see my customers’ balances?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Credit balances are visible to the owner and the people you name. Every view and change is recorded with who and when."}},{"@type":"Question","name":"I have a second shop. Can I see both?","acceptedAnswer":{"@type":"Answer","text":"You can. Each shop is a location, and a customer who buys at both is one person. Stock, credit and sales are compared, and transfers between shops are recorded."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of shops, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your shop runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in retail and commerce</h2>
       <p class="body-copy">Shelf counts, billing and stock, shown the way a store lives them.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-retail-commerce.jpg" aria-label="Verity in retail and commerce"><source src="/assets/video/film-retail-commerce.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-retail-commerce.jpg" aria-label="Verity in retail and commerce">
-        <source src="/assets/video/film-retail-commerce.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -776,8 +776,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>

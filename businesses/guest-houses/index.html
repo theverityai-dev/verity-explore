@@ -28,11 +28,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css?v=80">
-<link rel="stylesheet" href="/css/verity.css?v=80">
-<link rel="stylesheet" href="/css/sections.css?v=80">
-<link rel="stylesheet" href="/css/motion.css?v=80">
-<link rel="stylesheet" href="/css/explore.css?v=80">
+<link rel="stylesheet" href="/css/base.css?v=81">
+<link rel="stylesheet" href="/css/verity.css?v=81">
+<link rel="stylesheet" href="/css/sections.css?v=81">
+<link rel="stylesheet" href="/css/motion.css?v=81">
+<link rel="stylesheet" href="/css/explore.css?v=81">
+<link rel="stylesheet" href="/css/video.css?v=81">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Explore","item":"https://theverityai.xyz/explore/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://theverityai.xyz/industries/"},{"@type":"ListItem","position":3,"name":"Food & Hospitality","item":"https://theverityai.xyz/industries/food-hospitality/"},{"@type":"ListItem","position":4,"name":"Guest Houses","item":"https://theverityai.xyz/businesses/guest-houses/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Verity for Guest Houses","description":"Room availability, OTA commission, guest ID records, housekeeping and long-stay dues in a guest house, what each costs, and the Verity screens that fix them.","url":"https://theverityai.xyz/businesses/guest-houses/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Verity","url":"https://theverityai.xyz"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"I have eight rooms and two staff. Is this too much?","acceptedAnswer":{"@type":"Answer","text":"A small house has the same leaks and less time to notice them. We set up only what you need, in the same four weeks, and leave out what you do not."}},{"@type":"Question","name":"Does Verity replace my booking diary or my OTA tools?","acceptedAnswer":{"@type":"Answer","text":"No. Your portals keep taking bookings and you keep managing rates there. Verity records where each booking came from and at what rate, so you can see what each source leaves, and keeps room status and dues in one place."}},{"@type":"Question","name":"Can it stop double bookings?","acceptedAnswer":{"@type":"Answer","text":"It gives your team one board with every booking and hold, so the clash shows before the guest arrives. It does not change availability on the portals; your team updates them, and we agree during setup which record is the source of truth."}},{"@type":"Question","name":"Will my housekeeping staff actually update room status?","acceptedAnswer":{"@type":"Answer","text":"Only if it takes a few seconds, so we set it up as one tap on a phone or a screen at the desk. If your staff do not carry phones, the caretaker updates rooms from a printed sheet at the end of each round."}},{"@type":"Question","name":"Can it file the foreign guest form for me?","acceptedAnswer":{"@type":"Answer","text":"No. Your team files it on the government portal. Verity shows which arrivals have a form due, how many hours are left, and records when it is done."}},{"@type":"Question","name":"How does it help with long-stay guests who delay paying?","acceptedAnswer":{"@type":"Answer","text":"Each long stay has a record with rate, advance, extras and a running balance. Verity lists balances past due and creates a follow-up task for you. You still make the bill in your usual way."}},{"@type":"Question","name":"Can it keep my guests' ID safe?","acceptedAnswer":{"@type":"Answer","text":"ID details are kept on the guest record, and access is limited by role. Every view and change is recorded with who made it and when. It replaces photos in phone galleries and chats."}},{"@type":"Question","name":"I have two guest houses in different areas. Can I see them together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each is a location in one system, with rooms, sources, dues, faults and licences side by side. Guests are the same people across both."}},{"@type":"Question","name":"Who can see my data?","acceptedAnswer":{"@type":"Answer","text":"Only the people you allow. Access is set by role, so the desk, housekeeping and your accountant each see what they need, and every change is recorded with who made it and when."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number of rooms, properties and what you want set up. Message us and we will give you a clear number after a short conversation about how your guest house runs."}}]}</script>
@@ -115,19 +116,18 @@
   </div>
 </section>
 
-<section class="section" id="watch" aria-labelledby="watch-heading">
-  <div class="shell bz-film">
-    <div class="bz-film-copy" data-reveal>
+<section class="bz-scrub" id="watch" aria-labelledby="watch-heading" data-scrub>
+  <div class="bz-scrub-track">
+    <div class="bz-scrub-stage">
+      <div class="shell bz-scrub-cap">
       <p class="label">Watch</p>
       <h2 id="watch-heading" class="h-md">Verity in food and hospitality</h2>
       <p class="body-copy">Kitchen, counter and stock moving together.</p>
-      <p class="caption bz-film-note">35 seconds, with sound. An illustrative film: the scenes are examples, not customer results.</p>
+      <p class="caption bz-film-note">35 seconds, no sound. An illustrative film, so the scenes are examples, not customer results.</p>
+      </div>
+      <div class="shell bz-scrub-frame"><figure class="bz-vp bz-vp--wide" data-vp><video muted playsinline controls preload="auto" poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality"><source src="/assets/video/film-food-hospitality.mp4" type="video/mp4"></video></figure></div>
+      <div class="bz-scrub-bar" aria-hidden="true"><i></i></div>
     </div>
-    <figure class="bz-film-frame" data-reveal>
-      <video controls preload="none" playsinline poster="/assets/video/film-food-hospitality.jpg" aria-label="Verity in food and hospitality">
-        <source src="/assets/video/film-food-hospitality.mp4" type="video/mp4">
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -795,8 +795,9 @@
     <p class="caption">© 2026 Verity · The business operating system</p>
   </div>
 </footer>
-<script src="/js/motion.js?v=80"></script>
-<script src="/js/ui.js?v=80"></script>
-<script src="/js/screens.js?v=80"></script>
+<script src="/js/motion.js?v=81"></script>
+<script src="/js/ui.js?v=81"></script>
+<script src="/js/screens.js?v=81"></script>
+<script src="/js/video.js?v=81"></script>
 </body>
 </html>
