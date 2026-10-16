@@ -1,181 +1,954 @@
 export default {
-  slug: 'printing-businesses',
-  status: 'published',
-  plural: 'printing businesses',
-  subject: 'printing business',
-
-  seo: {
-    title: 'AI business management software for printing businesses | Verity',
-    description:
-      'Verity gives printing businesses one system for many small jobs at once, proof approval before print, reprint cost and cause, turnaround promises and corporate account work.',
-    keywords: [
-      'AI software for printing businesses',
-      'print shop management software',
-      'proof approval and reprint tracking software',
-      'print job turnaround and costing software',
-    ],
+  "schema": 2,
+  "slug": "printing-businesses",
+  "status": "published",
+  "plural": "printing businesses",
+  "subject": "printing business",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Printing business software: job costing, paper stock, dues | Verity",
+    "description": "The 14 problems that eat a printer's margin, from wrong quotes and paper prices to artwork errors, reprints and unpaid bills, and the Verity screens that fix them.",
+    "keywords": [
+      "printing press management software India",
+      "print job costing and quoting",
+      "paper stock tracking for printers",
+      "print job tracking and artwork approval",
+      "printing press receivables"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for printing businesses',
-    headline: 'Ninety live jobs, four machines, and one customer who says they approved it.',
-    lede:
-      'A print business runs many small jobs against short promises. Verity keeps every job, its approved proof and its due date in one place.',
-    note: 'Verity runs the shop. Design software and machines stay where they are.',
-    panel: {
-      title: 'Shop',
-      meta: 'Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Live jobs', value: '92', note: '4 machines' },
-        { label: 'Jobs due today', value: '27', note: '6 not started' },
-        { label: 'Reprints this month', value: '31', note: '₹58,000 absorbed' },
-        { label: 'Proofs awaiting approval', value: '18', note: 'average age 1.9 days' },
-      ],
-      rows: [
-        { name: '18 proofs unapproved with due dates approaching', meta: 'Promise made, clock running', active: true },
-        { name: '31 reprints this month', meta: '19 from unapproved changes', active: true },
-        { name: '6 jobs due today not started', meta: 'Machine time not reserved', active: true },
-        { name: '4 corporate accounts past payment terms', meta: 'Repeat work continuing', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own shop in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "orders",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for printing businesses",
+    "headline": "You print the job once. Verity makes sure you are paid for it once, too.",
+    "lede": "A press makes money on the quote, the paper, the makeready and the first sheet that comes out right. Each of those is guessed, scribbled or remembered. Verity gives every job one record from quotation to delivery and payment, so you see which jobs earn and which only keep the machines busy.",
+    "oneLine": "One system that follows each print job through quote, artwork, press, finishing, delivery and payment, and shows what it really cost and what is still owed.",
+    "note": "Built for a press where the owner and foreman hold everything in their heads. Records come from the job ticket you already use.",
+    "screen": "owner",
+    "screenNote": "customers, machines, paper and vendors"
+  },
+  "today": {
+    "heading": "Most printers know the job. Few know what it earned.",
+    "paragraphs": [
+      "A job begins with a quote written from memory, passes through artwork, plates, press and finishing, often with a vendor for binding or lamination, and ends with a delivery challan and an invoice. Each step is usually on a different piece of paper.",
+      "Paper is the biggest cost and it moves. In 2021 printers' associations reported kraft paper rising from ₹22.50 to ₹39.50 a kilogram in about five months. A quote written last month can already be wrong.",
+      "The owner or the foreman knows which job is where, which customer is slow to pay and which machine is acting up. When either is away, the shop cannot answer a simple question."
+    ],
+    "stack": [
+      "Job ticket book",
+      "Excel or a notebook for quotes",
+      "WhatsApp with customers for artwork",
+      "Paper stock register",
+      "Billing software or a bill book"
+    ],
+    "stackNote": "Each piece answers one question. None of them says which jobs lose money, which paper is running low or which customer owes the most."
+  },
+  "painsHeading": "Where a printing business loses margin and time.",
+  "painsLede": "These are the situations press owners describe. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Quoting",
+      "title": "Quotes are guessed and the real cost is found later",
+      "scene": "A customer wants 5,000 brochures by Friday. The quote comes from last year's similar job. Paper, plates, makeready, outsourced finishing and delivery are not added up.",
+      "cost": "Example arithmetic: on a ₹40,000 job, missing ₹3,500 of finishing and ₹2,000 of extra paper cuts the margin by nearly 14 points. A few such jobs a month erase a good week.",
+      "fix": "Each quote is built from a costing sheet with paper, plates, ink, makeready, labour, outsourced work and delivery. After the job, the quote and the actual cost are compared.",
+      "screen": "costing"
     },
-  },
-
-  overview: {
-    heading: 'Many small jobs, short promises, and a proof that decides who pays for the mistake.',
-    paragraphs: [
-      'A printing business runs a large number of low-value jobs simultaneously against short turnarounds. Ninety-two live jobs on four machines is a scheduling problem where the constraint is not capacity in total but which job can be on which machine at which hour, and twenty-seven due today with six not started is how a promise gets broken.',
-      'The second characteristic is the proof. A printed job is produced from a file the customer supplied and approved, and thirty-one reprints in a month — nineteen of them from changes that were never approved in writing — is the cost of an approval process that lives in conversation rather than in a record.',
-      'The third is that reprints are absorbed rather than charged. Fifty-eight thousand in a month is machine time, substrate and labour spent twice on work billed once, and its cause distribution is what makes it reducible.',
-      'The fourth is the turnaround promise. Small print work is bought on speed, and eighteen proofs sitting unapproved while their due dates approach means the shop will be late for reasons that originated with the customer but will be blamed on the shop.',
-      'The fifth is corporate repeat work, which is the profitable half of most print shops and carries account terms, repeat specifications and payment behaviour.',
-      'Verity holds every job with its approved proof, its machine and its due date, and records reprints with their cause.',
+    {
+      "area": "Paper",
+      "title": "Paper prices move between the quote and the purchase",
+      "scene": "The quote was given on Monday at last month's rate. The mill raised prices on Wednesday. The job ran on Thursday.",
+      "cost": "In 2021 the All-India Federation of Master Printers reported kraft paper rising from ₹22.50 to ₹39.50 per kg in five months and held a Black Day protest over raw material costs. Prices eased in late 2025, but a single month in 2025 still saw rises of ₹2 to ₹6 per kg in some grades.",
+      "fix": "Paper has a current purchase rate and a rate history. Quotes use the current rate and show when it was set, so a quote older than your limit is flagged before the job starts.",
+      "screen": "paper",
+      "source": {
+        "name": "PrintWeek on the AIFMP Black Day, 22 March 2021",
+        "url": "https://www.printweek.in/news/printers-mark-22-march-as-black-day-to-protest-price-rise-54365?amp=1"
+      }
+    },
+    {
+      "area": "Artwork",
+      "title": "Artwork approvals live in chats and the wrong version prints",
+      "scene": "The customer sends three versions on WhatsApp. They approve \"the second one\" by voice note. The press runs the first.",
+      "cost": "A full reprint, usually at your cost, and a customer who is angry and in a hurry.",
+      "fix": "Each job holds its artwork versions with the approval, who gave it and when. The press cannot start until the approved version is attached.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Rework",
+      "title": "Reprints and who pays for them",
+      "scene": "A job comes back with a colour mismatch. Nobody is sure whether the file, the plate or the press was at fault.",
+      "cost": "Paper, ink and machine time spent twice, with no record of the cause. The same mistake repeats.",
+      "fix": "A reprint is a record linked to the original job with its cause (file, plate, press, finishing, customer change) and cost. Verity shows reprints by cause and by operator.",
+      "screen": "costing"
+    },
+    {
+      "area": "Jobs",
+      "title": "Nobody knows where a job is",
+      "scene": "A customer calls to ask whether the invitation cards are ready. Someone walks to the press, then to the binding table, then calls back.",
+      "cost": "Staff time on status checks and a customer who feels uninformed.",
+      "fix": "Each job shows its stage, machine, due date and who has it. The counter answers from the record.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Scheduling",
+      "title": "Press time is booked by shouting",
+      "scene": "A rush job pushes ahead of the planned runs. One machine runs late into the night while another sits idle. Festive and election seasons make it worse.",
+      "cost": "Overtime, missed deliveries and uneven machine use.",
+      "fix": "Jobs are scheduled by machine and day. Verity shows load per machine, clashes and which jobs a rush job will push, so the choice is made with the cost in view.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Machines",
+      "title": "Machine breakdowns and maintenance are not recorded",
+      "scene": "The press stops mid-run. Nobody can say when it was last serviced or how often it fails.",
+      "cost": "Lost days and late jobs. One review of Indian digital printers noted that breakdowns cause long losses of productivity and damage customer relations because of late delivery. The review is old, but the problem remains.",
+      "fix": "Each machine has a service history, due dates and breakdown records with downtime. Verity lists overdue servicing and shows which machine loses the most hours.",
+      "screen": "owner",
+      "source": {
+        "name": "Papermart digital printing review, about 2009",
+        "url": "https://papermart.in/digital-printing-transforming-business/"
+      }
+    },
+    {
+      "area": "Paper",
+      "title": "Paper stock is counted by eye",
+      "scene": "Sheets of different sizes and GSM sit in stacks. A job needs 40 reams of one size and finds 22. Offcuts pile up unrecorded.",
+      "cost": "Rush orders at a higher price, delayed jobs and capital locked in stock that does not move.",
+      "fix": "Paper is stock by size, GSM and brand with a reorder point. Use is recorded against each job, and Verity checks stock against the coming week's jobs.",
+      "screen": "paper"
+    },
+    {
+      "area": "Wastage",
+      "title": "Wastage and consumables are not measured",
+      "scene": "Plates, ink and chemicals are issued on request. Spoilage sheets are thrown away. Nobody knows what a typical job wastes.",
+      "cost": "Cost creeping up with no explanation, and quotes that assume less waste than the shop really has.",
+      "fix": "Each job records sheets issued and sheets delivered. Verity shows wastage per job, machine and operator, and the actual figure feeds back into future quotes.",
+      "screen": "costing"
+    },
+    {
+      "area": "Vendors",
+      "title": "Outsourced work loses track",
+      "scene": "Binding, lamination, die-cutting and foil are done by vendors. A job waits at a vendor for six days and nobody knew it was there.",
+      "cost": "Late deliveries, vendor bills that do not match what was sent and lost items.",
+      "fix": "Each outsourced step records what was sent, to whom, the promised date and the bill. Verity lists items past their return date and compares vendor bills with the agreed rate.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Delivery",
+      "title": "Deliveries do not match invoices",
+      "scene": "A delivery goes in two parts. The challan says 5,000, the customer counts 4,800 and the invoice says 5,000.",
+      "cost": "Short-receipt claims, reduced payments and arguments with no record to settle them.",
+      "fix": "Each delivery records quantities by challan and who received them. The invoice is checked against deliveries and shortfalls are flagged.",
+      "screen": "dues"
+    },
+    {
+      "area": "Money",
+      "title": "Customers pay late and chasing is by memory",
+      "scene": "Some customers pay in 60 days. A few have not paid for 120. The owner remembers the biggest, and the rest drift.",
+      "cost": "Cash tied up in unpaid bills and a printing machine that is idle because the paper supplier needs payment first.",
+      "fix": "Each invoice has a due date and an owner. Overdue ones are listed by amount and age, with a task to the person who knows the customer and the outcome recorded.",
+      "screen": "dues"
+    },
+    {
+      "area": "Jobs",
+      "title": "Repeat jobs start from zero",
+      "scene": "A regular customer wants last year's catalogue again with small changes. The file, paper, colours and finish are not recorded anywhere you can find.",
+      "cost": "Hours spent reconstructing what the first job was, and a mismatch the customer notices.",
+      "fix": "Each job keeps its specification, files, approvals and costs. A repeat order starts from the old job with changes marked.",
+      "screen": "costing"
+    },
+    {
+      "area": "Owner",
+      "title": "The owner and the foreman are the system",
+      "scene": "One person knows which jobs are late, which customers owe money, which machines are tired and which paper is low.",
+      "cost": "The press cannot grow past what two people can hold in their heads, and a week away means slipping deliveries.",
+      "fix": "Each morning Verity shows what needs a decision, each item with an owner. A second unit or a job-work partner becomes a location in the same system.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "One figure is from 2021 and another from an undated review that appears to be from about 2009, so they show the nature of the problems rather than today's numbers. The industry size comes from a market research firm and is not traced to a census. The 2025 price figure was seen only in search result wording because the page returned an error.",
+  "facts": [
+    {
+      "figure": "₹22.50 to ₹39.50",
+      "text": "the rise in local kraft paper prices per kilogram between October 2020 and March 2021, as reported by the All-India Federation of Master Printers ahead of a Black Day protest.",
+      "source": {
+        "name": "PrintWeek, 2021",
+        "url": "https://www.printweek.in/news/printers-mark-22-march-as-black-day-to-protest-price-rise-54365?amp=1"
+      }
+    },
+    {
+      "figure": "₹2 to ₹6 per kg",
+      "text": "the size of rises reported in some uncoated offset paper grades in a single monthly update in August 2025, showing that paper prices still move month to month.",
+      "source": {
+        "name": "Indian Printer & Publisher, 2025",
+        "url": "https://indianprinterpublisher.com/?p=94135"
+      }
+    },
+    {
+      "figure": "About 250,000",
+      "text": "the number of printers in India according to a market research estimate, in an industry described as highly fragmented.",
+      "source": {
+        "name": "Ken Research, 2025",
+        "url": "https://www.kenresearch.com/industry-reports/india-printing-industry-market"
+      }
+    },
+    {
+      "figure": "300 impressions",
+      "text": "the point below which a review put the cross-over from digital to offset printing in India, against above 2,000 in the US, showing how short runs shape the economics. The review is undated and appears to be from about 2009.",
+      "source": {
+        "name": "Papermart, about 2009",
+        "url": "https://papermart.in/digital-printing-transforming-business/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each for one job. Customers, machines, paper and vendors are set up in your own terms.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Press / Today",
+      "meta": "All units",
+      "heading": "The owner's morning view",
+      "caption": "Jobs due today, jobs stuck, machine load, paper running low and dues on one screen, with the items that need a decision listed below.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Jobs open",
+              "value": "37",
+              "note": "3 machines"
+            },
+            {
+              "label": "Due today",
+              "value": "6",
+              "note": "deliveries"
+            },
+            {
+              "label": "Late",
+              "value": "4",
+              "note": "jobs"
+            },
+            {
+              "label": "Overdue dues",
+              "value": "₹4.2 L",
+              "note": "9 invoices"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Machine load this week"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Offset 4 colour",
+              "value": 95,
+              "display": "95%"
+            },
+            {
+              "label": "Digital press",
+              "value": 61,
+              "display": "61%"
+            },
+            {
+              "label": "Cutting and folding",
+              "value": 82,
+              "display": "82%"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Offset 4 colour is overdue for servicing by 12 days and has stopped twice this month.",
+          "action": "Plan"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Art paper 130 GSM 23x36",
+              "meta": "Stock covers 3 days of booked jobs",
+              "tag": [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            },
+            {
+              "name": "Customer approval for Job 5127",
+              "meta": "Waiting 2 days, press time booked",
+              "tag": [
+                "Chase",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jobs",
+      "title": "Jobs",
+      "meta": "By stage",
+      "heading": "Jobs from artwork to delivery",
+      "caption": "Each job moves across the board with its stage, machine and due date. Artwork approval is a gate, so the wrong version cannot reach the press.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Artwork",
+              "cards": [
+                {
+                  "title": "J-5127 Brochure, Asha Textiles",
+                  "meta": "Version 3 sent, awaiting approval",
+                  "tag": [
+                    "Waiting",
+                    "flag",
+                    "Approved v3",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "J-5131 Wedding cards",
+                  "meta": "Proof due Friday",
+                  "tag": [
+                    "Due",
+                    "muted"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "On press",
+              "cards": [
+                {
+                  "title": "J-5120 Catalogue, Metro Furniture",
+                  "meta": "Offset 4 colour, due Thu",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "J-5118 Labels",
+                  "meta": "Colour mismatch, reprint",
+                  "tag": [
+                    "Reprint",
+                    "late",
+                    "Fixed",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Finishing and delivery",
+              "cards": [
+                {
+                  "title": "J-5109 Diaries",
+                  "meta": "At binder since 6 Oct",
+                  "tag": [
+                    "Late",
+                    "late",
+                    "Back",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "costing",
+      "title": "Job / J-5120",
+      "meta": "Costing",
+      "heading": "What a job really costs and earns",
+      "caption": "The quote beside the actual cost for each job, including paper, plates, makeready, wastage, outsourced work and any reprint. The job's specification is kept for repeat orders.",
+      "blocks": [
+        {
+          "type": "record",
+          "title": "Catalogue, Metro Furniture, J-5120",
+          "sub": "2,000 copies, 48 pages, repeat of J-4410",
+          "fields": [
+            [
+              "Quoted price",
+              "₹86,000"
+            ],
+            [
+              "Paper",
+              "₹31,400"
+            ],
+            [
+              "Plates and ink",
+              "₹9,200"
+            ],
+            [
+              "Outsourced binding",
+              "₹12,500"
+            ],
+            [
+              "Wastage",
+              [
+                "6.8%",
+                "flag",
+                "Quote assumed 4%",
+                "late"
+              ]
+            ],
+            [
+              "Margin",
+              [
+                "14.1%",
+                "flag",
+                "11.2% actual",
+                "late"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "Sep 2025",
+              "Original job J-4410, paper 130 GSM art, matte lamination"
+            ],
+            [
+              "12 Oct",
+              "Quote built from J-4410 with new paper rate"
+            ],
+            [
+              "15 Oct",
+              "Spoilage 6.8%, quote assumed 4%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paper",
+      "title": "Paper",
+      "meta": "Stock and orders",
+      "heading": "Paper stock by size and weight",
+      "caption": "Paper by size, GSM and brand, against the jobs booked this week. Current purchase rates sit beside the rate a quote used.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Paper",
+            "In stock",
+            "Needed this week",
+            "Rate now",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Art paper 130 GSM 23x36",
+              "18 reams",
+              "26 reams",
+              "₹92 per kg",
+              [
+                "Order",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Maplitho 70 GSM 25x36",
+              "62 reams",
+              "30 reams",
+              "₹68 per kg",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Duplex board 300 GSM",
+              "9 sheets bundles",
+              "5 bundles",
+              "₹74 per kg",
+              [
+                "Reorder soon",
+                "flag"
+              ]
+            ],
+            [
+              "Kraft 120 GSM roll",
+              "2 rolls",
+              "3 rolls",
+              "₹54 per kg",
+              [
+                "Order",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Three open quotes use paper rates more than 20 days old.",
+          "action": "Recheck"
+        }
+      ]
+    },
+    {
+      "id": "vendors",
+      "title": "Vendors",
+      "meta": "What is out of the shop",
+      "heading": "Outsourced work and vendor bills",
+      "caption": "Everything sent out for binding, lamination or die-cutting, with the promised return date and the bill against the agreed rate.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Job",
+            "Vendor",
+            "Sent",
+            "Due back",
+            "Status"
+          ],
+          "rows": [
+            [
+              "J-5109 Diaries",
+              "City Binders",
+              "6 Oct",
+              "12 Oct",
+              [
+                "6 days late",
+                "late",
+                "Back",
+                "ok"
+              ]
+            ],
+            [
+              "J-5122 Boxes",
+              "Shree Die Cutting",
+              "13 Oct",
+              "17 Oct",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "J-5114 Cards",
+              "Star Lamination",
+              "10 Oct",
+              "13 Oct",
+              [
+                "Chase",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "City Binders billed ₹14.80 per copy. The agreed rate is ₹12.50.",
+          "action": "Query"
+        }
+      ]
+    },
+    {
+      "id": "dues",
+      "title": "Dues",
+      "meta": "Receivables",
+      "heading": "Deliveries and unpaid invoices",
+      "caption": "Deliveries checked against invoices, and unpaid bills by age. Overdue ones are listed with a task for the person who knows the customer.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Invoice",
+            "Amount",
+            "Age",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Asha Textiles",
+              "INV-2201",
+              "₹1.4 L",
+              "74 days",
+              [
+                "Call",
+                "late",
+                "Promised 20 Oct",
+                "ok"
+              ]
+            ],
+            [
+              "Metro Furniture",
+              "INV-2218",
+              "₹86,000",
+              "31 days",
+              [
+                "Remind",
+                "flag"
+              ]
+            ],
+            [
+              "Greenleaf Schools",
+              "INV-2189",
+              "₹1.9 L",
+              "98 days",
+              [
+                "Escalate",
+                "late"
+              ]
+            ],
+            [
+              "Local publisher",
+              "INV-2230",
+              "₹48,000",
+              "12 days",
+              [
+                "Not due",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Delivery for J-5101 shows 4,800 received against 5,000 invoiced.",
+          "action": "Resolve"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Thursday, before and after.",
+  "dayLede": "The press runs the same way. What changes is that each job leaves a record that chases for you.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "The owner checks the job ticket book and asks the foreman what is late.",
+      "after": "The Today screen lists jobs due, jobs late and machines overdue for servicing."
+    },
+    {
+      "time": "11:00",
+      "before": "A customer asks for a quote on the phone and the price comes from memory.",
+      "after": "The quote is built from a costing sheet with today's paper rate and last year's wastage on the same job."
+    },
+    {
+      "time": "1:00",
+      "before": "The press starts on the wrong artwork version.",
+      "after": "The job cannot start until the approved version is attached."
+    },
+    {
+      "time": "3:30",
+      "before": "A vendor's bill is paid without checking the rate.",
+      "after": "The bill is compared with the agreed rate and the difference is flagged."
+    },
+    {
+      "time": "6:00",
+      "before": "A customer says only 4,800 copies arrived.",
+      "after": "The challan and the receiving signature show what was delivered and when."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks which jobs made money. Nobody knows.",
+      "after": "The costing report shows each job's quote against its actual cost."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your press actually runs, build Verity around it, bring your data in, then stay on to keep it working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at your press. Follow a job from quote to payment, and map your job tickets, quote sheets, paper register and billing.",
+        "you": "A few hours from you and your foreman. A sample of recent job tickets and quotes and your paper list.",
+        "get": "A written map of how your jobs, paper, machines and bills run today and the problems to fix first."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up customers, job stages, machines and their schedule, paper by size and weight, costing sheets, vendors and agreed rates, approvals and dues rules.",
+        "you": "Check the costing sheet fields and job stages with your foreman.",
+        "get": "A working Verity with your real machines, paper and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in open jobs, paper stock, customers, vendors and unpaid invoices. Train the counter, the foreman and the finishing team on live jobs.",
+        "you": "Your open job list and your unpaid bills, in whatever form they exist. One hour per role.",
+        "get": "Your press inside Verity and a team that has used it on real jobs."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune quotes and lists and handle new machines or units.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the press runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Jobs, orders, repeats', 'Work'],
-    ['Proofs, approvals, files', 'Records'],
-    ['Machines, presses, finishing', 'Locations'],
-    ['Paper, ink, finishing materials', 'Inventory'],
-    ['Walk-in customers, corporate accounts', 'Relationships'],
-    ['Due dates, turnaround, collection', 'Workflows'],
-    ['Operators, designers, counter staff', 'People'],
-  ],
-
-  challengesHeading: 'Many jobs, short promises, and disputed approvals.',
-  challengesLede:
-    'Printing difficulties come from volume of small work against fixed machine hours.',
-  challenges: [
-    { problem: 'Approval lives in conversation', detail: 'A customer says they approved a change and there is nothing showing what was approved.', outcome: 'Proofs carry versions, approver and date, and the job is bound to the approved one.' },
-    { problem: 'Reprints are absorbed without a cause', detail: 'Work is redone free and the reason is never aggregated.', outcome: 'Reprints carry cause, cost and responsibility, so the pattern is addressable.' },
-    { problem: 'Due dates are promised without machine time', detail: 'A turnaround is agreed at the counter without checking the schedule.', outcome: 'Promises are made against machine availability, so the date is real.' },
-    { problem: 'Jobs stall on customer approval', detail: 'A proof waits while the due date approaches and the shop takes the blame.', outcome: 'Proof age is tracked against the due date with the customer chased.' },
-    { problem: 'Small job costing is guessed', detail: 'Setup, material and finishing on a low-value job are estimated by habit.', outcome: 'Actual consumption is recorded so job types can be priced from real cost.' },
-    { problem: 'Corporate repeat work is re-specified each time', detail: 'A recurring job is quoted and set up again from scratch.', outcome: 'Repeat specifications and previous actuals sit against the account.' },
-  ],
-
-  modulesLede: 'One system across jobs, proofs, machines and accounts.',
-  modules: [
-    { id: 'work', title: 'Jobs, orders and repeats', line: 'Each job carries its specification, quantity, material, finishing, machine, due date, approved proof and cost.', why: 'A print shop is a set of many small jobs and each needs a complete record.', example: 'Ninety-two live jobs across four machines.' },
-    { id: 'records', title: 'Proofs, approvals and files', line: 'Proofs carry version, issue, approver, approval date and the job bound to them.', why: 'The approved proof is what settles who pays for a reprint.', example: 'Nineteen reprints from changes never approved in writing.' },
-    { id: 'workflows', title: 'Due dates, scheduling and collection', line: 'Jobs are scheduled to machines with due dates, progress and collection tracked.', why: 'Turnaround is what small print work is bought on.', example: 'Twenty-seven jobs due today with six not started.' },
-    { id: 'locations', title: 'Machines, presses and finishing', line: 'Each machine carries its capabilities, capacity, current queue and service state.', why: 'A promise is only real if a machine can take the job in time.', example: 'Machine queue against jobs due tomorrow.' },
-    { id: 'inventory', title: 'Paper, ink and finishing materials', line: 'Materials are held by type and size, consumed against jobs, with wastage recorded.', why: 'Material consumed on small jobs is the cost most often guessed.', example: 'Actual material consumption per job type.' },
-    { id: 'relationships', title: 'Walk-in customers and corporate accounts', line: 'Accounts carry repeat specifications, previous jobs, pricing, terms and payment behaviour.', why: 'Repeat corporate work is the profitable half and should not be re-specified.', example: 'Four corporate accounts past payment terms with work continuing.' },
-    { id: 'intelligence', title: 'Turnaround, reprint and margin reporting', line: 'Due date adherence, reprint rate by cause, machine utilisation, material consumption and job margin come from the records.', why: 'The shop’s losses are reprints and unpriced small jobs, and both are measurable.', example: 'Reprint cost by cause and responsibility.' },
-    { id: 'ai', title: 'Ask the shop a question', line: 'Verity AI answers from your own job, proof, machine and account records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about what is due, what is unapproved and what is being reprinted.', example: '"Which proofs are unapproved with due dates this week?" returns them with customers.' },
-    { id: 'people', title: 'Operators, designers and counter staff', line: 'Staff carry jobs handled, proofs issued, reprints attributed and throughput.', why: 'Reprint causes attribute to people as well as processes.', example: 'Reprint rate by operator and job type.' },
-    { id: 'communication', title: 'Customer contact and proof chasing', line: 'Proof issue, approval chasing and collection notices attach to the job and customer.', why: 'An unapproved proof needs chasing before it costs a due date.', example: 'Proof chase recorded against the job.' },
-    { id: 'orders', title: 'Quotations, pricing and invoicing', line: 'Quotations carry specification and price, with actual cost compared at close.', why: 'Small jobs priced by habit lose money invisibly.', example: 'Quoted against actual cost by job type.' },
-    { id: 'control', title: 'Reprints, discounts and authority', line: 'One permission model and one audit trail covering reprint acceptance, discounts and write-offs.', why: 'A free reprint is a commercial decision and should be a recorded one.', example: 'Reprints authorised with reason and cost.' },
-  ],
-
-  workflowsHeading: 'Quote, proof, approve, print, deliver.',
-  workflowsLede: 'These already happen. Recorded, reprints and late jobs both fall.',
-  workflows: [
-    { name: 'Order and promise', steps: ['Specification and quantity captured', 'Material and machine identified', 'Machine availability checked', 'Due date promised against the schedule', 'Job created with its proof requirement'], note: 'Promising against machine availability is what makes the date keepable.' },
-    { name: 'Proof and approval', steps: ['Proof produced and issued to the customer', 'Approval requested with a deadline', 'Age tracked against the due date', 'Approval recorded with person and date', 'Job bound to the approved version'], note: 'Binding the job to the approved version is what settles a later dispute.' },
-    { name: 'Production', steps: ['Job scheduled to a machine', 'Material issued and consumed', 'Output and wastage recorded', 'Finishing completed', 'Job checked against the approved proof'], note: 'Checking against the approved proof before delivery prevents the expensive reprint.' },
-    { name: 'Reprint handling', steps: ['Reprint raised against the original job', 'Cause identified and recorded', 'Responsibility assigned', 'Cost captured', 'Authority applied where absorbed'], note: 'The recorded cause is the only route to reducing the rate.' },
-    { name: 'Corporate repeat', steps: ['Previous specification retrieved from the account', 'Quantity and any changes confirmed', 'Previous actual cost applied to pricing', 'Job scheduled', 'Account terms and payment position checked'], note: 'Pricing a repeat from previous actuals is more accurate than re-estimating it.' },
-  ],
-
-  ai: {
-    heading: 'Ask about due dates and reprints.',
-    lede: 'Verity AI reads the same job, proof, machine and account records the shop creates as it works. It answers from your own shop, respects permissions, and can turn an answer into a chase or a schedule change.',
-    panelMeta: 'Grounded in your shop records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which proofs are unapproved with due dates this week?',
-      'Which jobs due today have not started?',
-      'What did reprints cost this month and why?',
-      'What is machine utilisation against jobs promised?',
-      'Which job types are quoted below their actual cost?',
-      'Which corporate accounts are past payment terms?',
-      'Which operators have the highest reprint rate?',
-      'What is due date adherence by job type?',
-      'Summarise the shop’s load and reprint position.',
+    "bring": [
+      "Your last month of job tickets",
+      "Your quote sheets and rate card",
+      "Your paper list with sizes and current rates",
+      "Your list of machines with service dates",
+      "Your unpaid invoices and vendor list"
     ],
+    "time": "About 7 to 10 hours of owner time across the four weeks, mostly in week 1. Your foreman and counter lead need a few more.",
+    "after": "Nobody is hired to run Verity. Jobs, paper and deliveries are recorded as part of the work you already do, and the reports come from those records."
   },
-
-  automationHeading: 'Proofs, promises and reprints.',
-  automationLede: 'Each runs from the shop’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A proof is unapproved as its due date approaches', steps: ['Customer chased with the proof attached', 'Due date risk flagged', 'Revised promise recorded if needed'] },
-    { trigger: 'A job due today has not started', steps: ['Machine queue checked', 'Priority or reschedule decided', 'Customer informed where the date will move'] },
-    { trigger: 'A reprint is raised', steps: ['Original job linked', 'Cause and responsibility recorded', 'Cost attributed and pattern updated'] },
-    { trigger: 'Actual job cost exceeds the quotation', steps: ['Variance recorded by job type', 'Pricing basis flagged', 'Future quoting updated'] },
-    { trigger: 'A corporate account passes payment terms', steps: ['Flagged with work in progress', 'Decision on continuing work raised', 'Collection contact assigned'] },
+  "ai": {
+    "heading": "Ask your press a question.",
+    "lede": "Verity AI reads your jobs, costs, paper, vendors and dues. Ask in plain language, then turn the answer into tasks for the right person.",
+    "examples": [
+      {
+        "q": "Which jobs earned less than their quote this month, and why?",
+        "a": "Seven jobs. Wastage above plan caused four, outsourced work above the agreed rate caused two and a reprint caused one.",
+        "rows": [
+          [
+            "Wastage above plan",
+            "4 jobs"
+          ],
+          [
+            "Vendor over rate",
+            "2 jobs"
+          ],
+          [
+            "Reprint",
+            "1 job"
+          ]
+        ],
+        "action": "Create a review task for the foreman"
+      },
+      {
+        "q": "Which open quotes use paper rates older than 20 days?",
+        "a": "Three open quotes worth ₹2.1 lakh. The art paper rate has risen since they were built.",
+        "rows": [
+          [
+            "Art paper quotes",
+            "2"
+          ],
+          [
+            "Kraft quotes",
+            "1"
+          ]
+        ],
+        "action": "Ask the counter to re-quote"
+      },
+      {
+        "q": "Which customers have the oldest unpaid invoices?",
+        "a": "Greenleaf Schools at 98 days for ₹1.9 lakh and Asha Textiles at 74 days for ₹1.4 lakh.",
+        "rows": [
+          [
+            "Greenleaf Schools",
+            "98 days"
+          ],
+          [
+            "Asha Textiles",
+            "74 days"
+          ]
+        ],
+        "action": "Assign calls to the account owners"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still make the calls. Verity makes sure the right person knows to.",
+  "automations": [
+    {
+      "when": "A quote is older than 20 days or paper rates changed",
+      "then": [
+        "Flagged against the quote",
+        "Task to the counter to re-quote",
+        "Outcome recorded"
+      ]
+    },
+    {
+      "when": "A job is ready to start without approved artwork",
+      "then": [
+        "Press start blocked",
+        "Task to the customer owner",
+        "Approval recorded with who gave it"
+      ]
+    },
+    {
+      "when": "An outsourced item is past its due back date",
+      "then": [
+        "Added to the vendor list",
+        "Task to chase",
+        "Delay recorded against the vendor"
+      ]
+    },
+    {
+      "when": "Paper stock falls below the need for booked jobs",
+      "then": [
+        "Order drafted to the usual supplier",
+        "Job dates checked",
+        "Receipt recorded"
+      ]
+    },
+    {
+      "when": "A delivery is short or disputed",
+      "then": [
+        "Linked to the job and invoice",
+        "Task to the account owner",
+        "Resolution recorded"
+      ]
+    },
+    {
+      "when": "An invoice is 30 days past due",
+      "then": [
+        "Added to the overdue list",
+        "Task to the account owner",
+        "Promise or payment recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the shop can see.',
-  intelligenceLede: 'Turnaround, reprints and margin from job records.',
-  intelligence: [
-    { area: 'Turnaround', points: ['Due date adherence by job type', 'Jobs at risk before the date', 'Proof approval times by customer', 'Collection and delivery performance'] },
-    { area: 'Quality', points: ['Reprint rate by cause', 'Reprints by operator and job type', 'Cost absorbed against recharged', 'Approval disputes'] },
-    { area: 'Capacity', points: ['Machine utilisation and queue', 'Jobs promised against available hours', 'Finishing bottlenecks', 'Setup time by job type'] },
-    { area: 'Commercial', points: ['Quoted against actual cost', 'Margin by job type and account', 'Corporate repeat volumes', 'Payment behaviour by account'] },
+  "rules": {
+    "heading": "The rules a printing business has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when a customer, an officer or your accountant asks.",
+    "note": "Rules differ by product, state and customer type, and they change. Confirm current requirements with your accountant and the relevant authority.",
+    "items": [
+      {
+        "name": "Customer artwork and permissions",
+        "what": "Customers supply logos, photos and text, and a job can involve content you do not own. Printers are generally expected to take the customer's confirmation that they have the right to use it.",
+        "how": "Each job records who supplied the artwork and their approval, so you can show what you were told."
+      },
+      {
+        "name": "Customer data and consent",
+        "what": "Names, phone numbers and addresses on wedding cards, forms and invoices are personal data. India's data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.",
+        "how": "Customer data sits in one permissioned place, with who viewed or changed it recorded.",
+        "source": {
+          "name": "AZB Partners",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Tax on printing and job work",
+        "what": "GST treatment can differ between printing as a service and printing as a sale of goods, and job work for another business has its own paperwork.",
+        "how": "Paper, printing and outsourced work are separate lines on each job so your accountant starts from clean data."
+      },
+      {
+        "name": "Safety, fire and local permits",
+        "what": "Presses use solvents, inks and heavy machines, and local authorities may ask for fire, pollution and factory approvals depending on size.",
+        "how": "Each permit is a record with an expiry and an owner, linked to the unit it covers."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "The counter should not see your margins. The press operator should not edit prices. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Which jobs and customers earn, and which do not?",
+      "sees": "Job margins, paper rate changes, machine load, dues by customer and vendor bills against rates."
+    },
+    {
+      "role": "Counter or sales",
+      "question": "Where is my customer's job?",
+      "sees": "Quotes, artwork approvals, job stages, promised dates and callbacks due."
+    },
+    {
+      "role": "Foreman",
+      "question": "What runs on which machine today?",
+      "sees": "Machine schedule, jobs by stage, breakdowns, servicing due and wastage."
+    },
+    {
+      "role": "Stores keeper",
+      "question": "What paper do we have and need?",
+      "sees": "Paper by size and weight, reorder list, issues to jobs and offcuts."
+    },
+    {
+      "role": "Accountant",
+      "question": "What did we bill and what is owed?",
+      "sees": "Invoices and dues by age, vendor bills, delivery checks and the paper, printing and outsourced split."
+    }
   ],
-  intelligenceNote: 'Verity records the shop’s operations. Design software and machines continue as they are.',
-
-  rolesHeading: 'One shop, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Owner', question: 'What are reprints costing?', focus: 'Reprint rate and causes, margin by job type, machine utilisation, account payment behaviour.' },
-    { role: 'Production controller', question: 'What runs on which machine?', focus: 'Machine queues, jobs due, approved proofs, material availability.' },
-    { role: 'Counter staff', question: 'What can I promise?', focus: 'Machine availability, due dates, proof status, customer history.' },
-    { role: 'Operator', question: 'What am I printing?', focus: 'Job queue, approved proof, material issued, output and wastage.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing software or bill book at the counter",
+      "Your paper suppliers and how you order",
+      "Your design and prepress tools",
+      "Your accountant, who still prepares your returns"
+    ],
+    "not": [
+      "Run your presses or design tools",
+      "Take online orders or payments from customers",
+      "Send messages to customers on its own",
+      "File your returns or run your payroll"
+    ],
+    "migration": "We bring your open jobs, paper list, customers, vendors and unpaid invoices across from the ticket books, sheets and chats you use now, in stages, so the press keeps running while it happens."
+  },
+  "faqHeading": "Questions printing business owners ask.",
+  "faqs": [
+    [
+      "Will my foreman and operators actually use it?",
+      "It only works if recording takes seconds, so we set it up around the job ticket they already use. We train at the press on real jobs and give each role something back: a clear list of what is on their machine and what is waiting."
+    ],
+    [
+      "Does Verity replace my design software or billing?",
+      "No. Prepress tools and billing stay as they are. Verity records the job, costs and approvals behind them, and we agree during setup how invoice details reach Verity."
+    ],
+    [
+      "Can it help me quote faster?",
+      "Yes. Quotes are built from a costing sheet with current paper rates and your own wastage history. Verity does not set your price, it shows what the job will cost."
+    ],
+    [
+      "Can it handle jobs sent to outside vendors?",
+      "Yes. Each outsourced step records what was sent, to whom, the due date and the bill against the agreed rate."
+    ],
+    [
+      "I run two units. Can I see both together?",
+      "Yes. Each unit is a location in one system. Jobs, machine load, paper and dues can be compared side by side."
+    ],
+    [
+      "Does it track which machine causes the most delay?",
+      "Yes. Breakdowns and downtime are recorded per machine, and servicing due dates are listed."
+    ],
+    [
+      "Who can see my prices and margins?",
+      "Only the people you allow. Access is set by role, and every change is recorded with who made it and when."
+    ],
+    [
+      "How long before I see results?",
+      "The paper stock list, the open jobs board and the unpaid bills list need only your existing records, so they are the first things we aim to have working. Margin by job becomes reliable after a few weeks of costed jobs."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of units and what you want set up. Message us and we will give you a clear number after a short conversation about how your press runs."
+    ]
   ],
-
-  useCasesHeading: 'What printing businesses use Verity for',
-  useCases: [
-    { name: 'Binding jobs to approved proofs', body: 'Proof versions with approver and date attached to the job, which is what settles a reprint dispute instead of a conversation nobody can evidence.' },
-    { name: 'Reducing reprints', body: 'Every reprint carrying its cause, cost and responsibility, turning an absorbed monthly total into a specific and reducible pattern.' },
-    { name: 'Promising real dates', body: 'Turnaround agreed against machine availability rather than at the counter, so the date the customer is given is one the shop can meet.' },
-    { name: 'Chasing proofs before they cost a date', body: 'Proof age tracked against the due date with the customer chased, so a delay that originated with the customer does not become the shop’s failure.' },
-    { name: 'Costing small jobs properly', body: 'Actual material, setup and finishing recorded per job, so job types can be priced from real cost rather than habit.' },
-    { name: 'Serving corporate repeats', body: 'Previous specifications and actual costs held against the account, so a recurring job is priced and set up from what it really took.' },
-    { name: 'Asking about the shop', body: 'Plain-language questions across jobs, proofs, machines and accounts, with chases and schedule changes raised in the same step.' },
+  "related": [
+    "packaging-companies",
+    "advertising-agencies",
+    "content-agencies",
+    "gift-shops",
+    "bookstores",
+    "repair-services"
   ],
-
-  migration: 'Design software and machines continue and are mapped during implementation. Customers and corporate accounts with repeat specifications, live jobs, proof and approval history, material stock and pricing are brought across.',
-
-  faqHeading: 'Questions printing businesses ask',
-  faqs: [
-    ['What can AI software do for a printing business?', 'Verity AI answers questions from your own job, proof, machine and account records: which proofs are unapproved with due dates this week, which jobs due today have not started, what reprints cost and why, which job types are quoted below actual cost. Each answer can become a chase or a schedule change.'],
-    ['How does it help with proof approvals?', 'Proofs carry versions, the person who approved and the date, and the job is bound to the approved version. That converts an approval that lived in conversation into a record that settles who pays when something is wrong.'],
-    ['Why record reprint causes?', 'Because a monthly reprint total is not actionable. Cause, responsibility and cost per reprint show whether the problem is unapproved changes, setup errors, material or a particular job type, and each has a different fix.'],
-    ['Can it make due dates realistic?', 'Promises are made against machine availability rather than at the counter, and jobs due that have not started are surfaced while there is still time to reprioritise or inform the customer.'],
-    ['How does it cost small jobs?', 'Actual material, setup, run and finishing are recorded per job, so job types accumulate real cost data and can be priced from it instead of from habit.'],
-    ['Does it handle repeat corporate work?', 'Accounts carry previous specifications and the actual cost of previous runs, so a repeat is set up and priced from what it really took rather than re-estimated each time.'],
-    ['Does it replace our design software?', 'No. Design software and machines continue as they are. Verity holds the shop around them — jobs, proofs, schedules, materials, reprints and accounts.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of job types, machine capabilities, proof process and account structures, configuration, migration of accounts and live jobs, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the reprints.',
-  ctaLede: 'Most of them trace to an approval nobody recorded. Tell us how proofs are approved today.',
-
-  related: ['packaging-companies', 'design-agencies', 'advertising-agencies', 'content-agencies', 'repair-services', 'tailors'],
+  "ctaHeading": "Find out which jobs really make money.",
+  "ctaLede": "Tell us how your press runs and we will show you the stale quotes, late jobs and unpaid bills it would find, using your own numbers."
 };
