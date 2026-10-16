@@ -33,7 +33,7 @@ Not found: a verified central 2025 rule on school bus GPS; the official school c
 ## SEO
 
 - title: School management software for Indian schools | Verity
-- description: Fee dues, attendance, bus routes, timetables, staff and UDISE records in one place. The 14 leaks a school office fights every term, and the screens that close them.
+- description: Fee dues, attendance, bus routes, timetables, staff and UDISE records in one place. The 15 leaks a school office fights every term, and the screens that close them.
 - keywords: school management software India; school fee dues tracking; school bus route and attendance; school timetable and substitute teacher; UDISE and board records
 - plural: schools
 - subject: school

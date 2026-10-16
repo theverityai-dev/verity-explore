@@ -29,7 +29,7 @@ Not found: AICTE official 2025 intake and occupancy; faculty-student norm figure
 ## SEO
 
 - title: College management software for Indian colleges | Verity
-- description: Admissions funnel, fee instalments, attendance, exam records and faculty load in one place. The 14 gaps a college office fights each semester, and the screens that close them.
+- description: Admissions funnel, fee instalments, attendance, exam records and faculty load in one place. The 15 gaps a college office fights each semester, and the screens that close them.
 - keywords: college management software India; college admissions enquiry tracking; college fee instalment tracking; student attendance and exam records; faculty workload and timetable
 - plural: colleges
 - subject: college
