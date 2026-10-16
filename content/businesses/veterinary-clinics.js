@@ -913,7 +913,7 @@ export default {
       },
       {
         "name": "Records of medicines and consent",
-        "what": "Keep purchase and supply records for medicines as your licence conditions require, and keep records of owner consent for procedures. The exact rules for veterinary prescription medicines were not verified here.",
+        "what": "Keep purchase and supply records for medicines as your licence conditions require, and keep records of owner consent for procedures. The exact rules for veterinary prescription medicines differ, so check yours with your veterinary council or authority.",
         "how": "Batch-level receipts and use are recorded against the animal, and consent is a dated record."
       }
     ]

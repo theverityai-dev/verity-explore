@@ -74,7 +74,7 @@ Lede: These are the situations founders, delivery heads and project managers des
 ### 2. Nobody sees the budget burning
 - area: Fixed price
 - scene: A project has a 1,000-hour budget. Developers log time on Fridays. The project manager sees the total at month end and finds it at 880 hours with half the features done.
-- cost: By the time it is visible, little can be done. A trade guide for agencies says that by the time a fixed-price project is noticed running hot, it is usually well past the middle with much still to deliver.
+- cost: By the time it is visible, little can be done.
 - fix: Hours are logged against the project and scope item as work happens. Verity shows hours used against the budget next to the share of scope delivered, so a project that is burning faster than it delivers is flagged weekly to the delivery head.
 - screen: budget
 

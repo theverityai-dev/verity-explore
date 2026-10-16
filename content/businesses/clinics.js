@@ -187,7 +187,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The no-show range is from a systematic review of studies that are mostly outside India and from 2003 to 2016, so use it as a guide, not an Indian average. The ABDM figures are as reported in a trade news article in July 2026. The retention period in the NMC draft was a proposal, and its final status is unverified.",
+  "factsNote": "The no-show range is from a systematic review of studies that are mostly outside India and from 2003 to 2016, so use it as a guide, not an Indian average. The ABDM figures are as reported in a trade news article in July 2026. The retention period in the NMC draft was a proposal, and its final status is not confirmed.",
   "facts": [
     {
       "figure": "12 to 42%",

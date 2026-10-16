@@ -157,7 +157,7 @@ Lede: These are the situations press owners describe. For each one: what it look
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: One figure is from 2021 and another from an undated review that appears to be from about 2009, so they show the nature of the problems rather than today's numbers. The industry size comes from a market research firm and is not traced to a census. The 2025 price figure was seen only in search result wording because the page returned an error.
+Note: One figure is from 2021 and another from an undated review that appears to be from about 2009, so they show the nature of the problems rather than today's numbers. The industry size comes from a market research firm and is not traced to a census. The 2025 price figure could not be checked against the original page.
 
 - **₹22.50 to ₹39.50**: the rise in local kraft paper prices per kilogram between October 2020 and March 2021, as reported by the All-India Federation of Master Printers ahead of a Black Day protest. (PrintWeek, 2021: https://www.printweek.in/news/printers-mark-22-march-as-black-day-to-protest-price-rise-54365?amp=1)
 - **₹2 to ₹6 per kg**: the size of rises reported in some uncoated offset paper grades in a single monthly update in August 2025, showing that paper prices still move month to month. (Indian Printer & Publisher, 2025: https://indianprinterpublisher.com/?p=94135)
@@ -404,7 +404,7 @@ Heading: Questions printing business owners ask.
 ## Assumptions and unverified
 
 - All names, job numbers, rates and process hours are illustrations for the Verity team to confirm.
-- The 2025 paper price figure was seen only in search result wording. The page returned an error.
+- The 2025 paper price figure could not be checked against the original page. The page returned an error.
 - The industry size comes from a market research firm and is not traced to a census. Other sources give different counts.
 - The digital to offset cross-over and the breakdown remark come from a review that appears to be from about 2009 and are shown with that caveat.
 - No sourced figure was found for makeready, wastage or quote margin errors at small presses, for receivables, or for GST on job work, so those pains use labelled example arithmetic or none.

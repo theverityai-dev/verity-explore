@@ -184,7 +184,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "One figure is from 2021 and another from an undated review that appears to be from about 2009, so they show the nature of the problems rather than today's numbers. The industry size comes from a market research firm and is not traced to a census. The 2025 price figure was seen only in search result wording because the page returned an error.",
+  "factsNote": "One figure is from 2021 and another from an undated review that appears to be from about 2009, so they show the nature of the problems rather than today's numbers. The industry size comes from a market research firm and is not traced to a census. The 2025 price figure could not be checked against the original page.",
   "facts": [
     {
       "figure": "₹22.50 to ₹39.50",

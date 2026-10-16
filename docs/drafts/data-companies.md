@@ -157,7 +157,7 @@ Lede: These are the situations data firm owners and delivery heads describe. For
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: Industry size figures vary widely between sources and none is used. The first figure is a commercial page, the pay figures are from one reported firm, and the workforce figure was seen in search result wording only. They describe the sector, not what your firm will see.
+Note: Industry size figures vary widely between sources and none is used. The first figure is a commercial page, the pay figures are from one reported firm, and the workforce figure could not be checked against the original page. They describe the sector, not what your firm will see.
 
 - **About 35%**: India's share of the global data annotation market, according to one industry page, which also projects the global market at USD 5.3 billion or more by 2028. (HanDigital, 2026: https://www.handigital.com/?p=10449)
 - **₹10,000 to ₹15,000**: the monthly pay reported for annotators at one firm, with strict targets and software monitoring of speed and accuracy. (ThePrint, 2026: https://theprint.in/ground-reports/ai-is-creating-lakhs-of-low-paying-jobs-in-gurugram-noida-it-is-indias-new-bpo/3030288/)

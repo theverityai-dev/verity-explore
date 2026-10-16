@@ -154,7 +154,7 @@ Lede: These are the situations owners, franchisees and regional managers describ
 
 Heading: The figures behind fast food’s thin margin.
 Lede: From published sources, with the source named under each. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The attrition and rent statements come from a 2013 trade article and are indications, not current measures. The ICRA wording is taken from search results of its December 2025 summary, whose slides we could not open in full. The oil rule is from a government site.
+Note: The attrition and rent statements come from a 2013 trade article and are indications, not current measures. The ICRA wording is from a summary of its December 2025 report that could not be checked in full. The oil rule is from a government site.
 
 - **25%**: is the Total Polar Compounds limit FSSAI has fixed for frying oil, beyond which it shall not be used. Operators have had to monitor frying oil quality since 1 July 2018. (Eat Right India, FSSAI, 2018 rule: https://eatrightindia.gov.in/ruco)
 - **20 to 25%**: is the industry attrition rate cited for restaurant staff in a trade article, with availability of trained staff described as low. The article is dated, so treat it as an indication. (Restaurant India, Issues and Challenges by Restaurant Industry, 2013: https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121)

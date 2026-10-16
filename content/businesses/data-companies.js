@@ -185,7 +185,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "Industry size figures vary widely between sources and none is used. The first figure is a commercial page, the pay figures are from one reported firm, and the workforce figure was seen in search result wording only. They describe the sector, not what your firm will see.",
+  "factsNote": "Industry size figures vary widely between sources and none is used. The first figure is a commercial page, the pay figures are from one reported firm, and the workforce figure could not be checked against the original page. They describe the sector, not what your firm will see.",
   "facts": [
     {
       "figure": "About 35%",

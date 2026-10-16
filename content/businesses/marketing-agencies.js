@@ -117,7 +117,7 @@ export default {
       "area": "Reporting",
       "title": "The client sees results late and asks why",
       "scene": "A client messages on the 18th asking how the campaign is doing. The account manager has to log in to three platforms to answer. The answer arrives next morning.",
-      "cost": "Slow answers feel like hiding something, and trust is a large part of why clients stay. One survey quoted in trade press says a campaign's delivery, not budget, is the main reason clients leave, though that survey is not Indian.",
+      "cost": "Slow answers feel like hiding something, and trust is a large part of why clients stay.",
       "fix": "Ask Verity AI a plain question about a client's campaigns and it answers from the records and figures you have entered. The account manager can reply in minutes with the source on screen.",
       "screen": "reporting"
     },

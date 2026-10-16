@@ -156,7 +156,7 @@ Lede: These are the situations repair shop owners describe. For each one: what i
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The first two figures come from one 2026 study described in a news report, which did not give the number of shops surveyed. The court example is a single district commission case. The portal date comes from a search result and was not opened.
+Note: The first two figures come from one 2026 study described in a news report, which did not give the number of shops surveyed. The court example is a single district commission case. The portal date could not be checked against the original page.
 
 - **5 cities**: Delhi, Hyderabad, Kolkata, Nagpur and Ranchi were covered by the 2026 Toxics Link study of electronics repair, which found genuine parts costly and hard for small shops to source and most small shops short of advanced diagnostic tools. (The News Minute, 2026: https://www.thenewsminute.com/amp/story/telangana/why-hyderabads-it-household-repair-shops-have-become-bad-at-fixing-your-devices-study)
 - **₹35,000 and ₹8,000**: the reported price of an original iPhone 12 Pro screen and a first-copy alternative, showing how wide the choice between genuine and copy parts can be. (The News Minute, 2026: https://www.thenewsminute.com/amp/story/telangana/why-hyderabads-it-household-repair-shops-have-become-bad-at-fixing-your-devices-study)

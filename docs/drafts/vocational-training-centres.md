@@ -157,7 +157,7 @@ Lede: These are the situations centre owners describe. For each one: what it loo
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The first figure is from news coverage of a government action. The attendance figures are from NSDC notices for one scheme and were seen only in search result wording. The outcome figure comes from a 2025 third-party evaluation reported in the press and describes one scheme, not all vocational training.
+Note: The first figure is from news coverage of a government action. The attendance figures are from NSDC notices for one scheme and could not be checked against the original notices. The outcome figure comes from a 2025 third-party evaluation reported in the press and describes one scheme, not all vocational training.
 
 - **178**: training partners and centres blacklisted under PMKVY in 2025. Uttar Pradesh had 59, Delhi 25, Madhya Pradesh 24 and Rajasthan 20. Irregularities included absentee students, fake documents and centres that existed only on paper. (Vision IAS summarising Indian Express, 2025: https://visionias.in/current-affairs/upsc-daily-news-summary/article/2025-11-07/the-indian-express/schemes-in-news/corruption-cloud-skill-ministry-blacklists-178-training-partners)
 - **100%**: the daily biometric attendance compliance NSDC expected from PMKVY training partners using the Aadhaar Enabled Biometric Attendance System, under a 2022 notice. (NSDC notice, 2022: https://pmkvy.nsdcindia.org/photos/shares/products/cin1igRCHZRkkRs6pbuiTbXcd1A3VaD4Pdgta5mF.pdf)
@@ -403,8 +403,8 @@ Heading: Questions centre owners ask.
 ## Assumptions and unverified
 
 - All names, fees, batch numbers and process hours are illustrations for the Verity team to confirm.
-- The attendance rules come from NSDC notices for PMKVY seen only in search result wording. The PDF was not opened, and rules may have changed. The page tells readers to check their own scheme.
-- The 41.4 percent income figure was seen only in search result wording of a press report of a 2025 evaluation.
+- The attendance rules come from NSDC notices for PMKVY not checked against the original page. The PDF was not opened, and rules may have changed. The page tells readers to check their own scheme.
+- The 41.4 percent income figure could not be checked against the original page of a press report of a 2025 evaluation.
 - The 30, 40 and 30 payment split seen in a search result was not found in a fetched source, so it is not used. The 70 percent placement target had no official source and is not used.
 - No sourced figure was found for enquiry-to-admission conversion, fee defaults or dropouts at private vocational centres, so those pains use labelled example arithmetic.
 - This page is for private and scheme-linked vocational centres. A government ITI has different approval rules and is not specifically covered.

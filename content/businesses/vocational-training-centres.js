@@ -186,7 +186,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The first figure is from news coverage of a government action. The attendance figures are from NSDC notices for one scheme and were seen only in search result wording. The outcome figure comes from a 2025 third-party evaluation reported in the press and describes one scheme, not all vocational training.",
+  "factsNote": "The first figure is from news coverage of a government action. The attendance figures are from NSDC notices for one scheme and could not be checked against the original notices. The outcome figure comes from a 2025 third-party evaluation reported in the press and describes one scheme, not all vocational training.",
   "facts": [
     {
       "figure": "178",

@@ -157,7 +157,7 @@ Lede: These are the situations SaaS founders and customer success leads describe
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The churn figures are from a software vendor's blog and range widely by customer size. The Nasscom figure is from FY2020, so it is old, and the AI figure was seen only in search result wording because the source page had an expired certificate. They show the scale of the issues, not what your company will see.
+Note: The churn figures are from a software vendor's blog and range widely by customer size. The Nasscom figure is from FY2020, so it is old, and the AI figure could not be checked against the original page. They show the scale of the issues, not what your company will see.
 
 - **4.9%**: average annual churn for B2B SaaS in 2025 by one vendor's benchmark, with a quoted range of 3.5 to 5 percent a year. (Vena Solutions, 2025: https://www.venasolutions.com/blog/saas-churn-rate)
 - **30% to 58%**: annual churn for SMB-focused SaaS in the same benchmark, against 10 percent or less for enterprise SaaS. (Vena Solutions, 2025: https://www.venasolutions.com/blog/saas-churn-rate)

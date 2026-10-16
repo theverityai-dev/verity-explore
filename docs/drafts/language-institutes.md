@@ -165,7 +165,7 @@ Lede: These are the situations owners, coordinators and teachers describe again 
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The Goethe-Institut figures are from its own press release, which is promotional, and the wording was taken from search results because the page could not be fetched. IELTS fees are the exam body's 2026 list and change. No source on dropout rates in private institutes was found.
+Note: The Goethe-Institut figures are from its own press release, which is promotional, and the original page could not be checked. IELTS fees are the exam body's 2026 list and change. No source on dropout rates in private institutes was found.
 
 - **₹19,000**: the IELTS Academic or General Training fee listed by IDP India for 2026. Cancelling less than 9 days before the test carries a 25% charge. (IDP IELTS India, test fee page, 2026: https://ieltsidpindia.com/information/test-fee)
 - **192,000**: exam participations the Goethe-Institut recorded in India in the past year, with about 25,000 course participations. (Goethe-Institut press release, January 2026: https://www.goethe.de/de/uun/prs/pma/27200206.html)

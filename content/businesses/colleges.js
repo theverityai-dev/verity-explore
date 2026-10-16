@@ -199,7 +199,7 @@ export default {
       "figure": "45,473",
       "text": "registered colleges in India in the AISHE 2021-22 survey, of which about 65.3% of the responding colleges were private unaided.",
       "source": {
-        "name": "Ministry of Education, AISHE 2021-22, as summarised in search results",
+        "name": "Ministry of Education, AISHE 2021-22, (secondary summary)",
         "url": "https://education.gov.in/sites/upload_files/mhrd/files/statistics-new/AISHE%20Book_2021-22_4.pdf"
       }
     },

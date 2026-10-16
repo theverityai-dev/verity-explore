@@ -182,7 +182,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The first two figures come from one 2026 study described in a news report, which did not give the number of shops surveyed. The court example is a single district commission case. The portal date comes from a search result and was not opened.",
+  "factsNote": "The first two figures come from one 2026 study described in a news report, which did not give the number of shops surveyed. The court example is a single district commission case. The portal date could not be checked against the original page.",
   "facts": [
     {
       "figure": "5 cities",

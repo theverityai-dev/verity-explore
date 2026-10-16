@@ -165,7 +165,7 @@ Lede: These are the situations clinic doctors, managers and receptionists descri
 
 Heading: The numbers that make these problems worth fixing.
 Lede: From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.
-Note: The no-show range is from a systematic review of studies that are mostly outside India and from 2003 to 2016, so use it as a guide, not an Indian average. The ABDM figures are as reported in a trade news article in July 2026. The retention period in the NMC draft was a proposal, and its final status is unverified.
+Note: The no-show range is from a systematic review of studies that are mostly outside India and from 2003 to 2016, so use it as a guide, not an Indian average. The ABDM figures are as reported in a trade news article in July 2026. The retention period in the NMC draft was a proposal, and its final status is not confirmed.
 
 - **12 to 42%**: the no-show range reported for outpatient clinics in a 2024 systematic review, with some clinics near 50 percent. (Health Science Reports via PMC, 2024: https://pmc.ncbi.nlm.nih.gov/articles/PMC11231932/)
 - **2.72 lakh**: health facilities in India that had adopted ABDM-enabled software by July 2026, with more than 93 crore ABHA numbers created. (Indian Pharma Post, 2026: https://www.indianpharmapost.com/policy/lite/ayushman-bharat-digital-mission-crosses-9395-crore-abha-ids-20877)

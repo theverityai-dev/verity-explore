@@ -192,7 +192,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The 70% figure is from a credit rating report about one listed chain for fiscal 2024. The FY26 result is one chain's. The Vector Consulting Group figures were reported in the trade press and we have not seen the study itself. The shrinkage figures are from a 2024 press report read from search results, and the page itself would not load when we tried to verify it, so treat them as indicative.",
+  "factsNote": "The 70% figure is from a credit rating report about one listed chain for fiscal 2024. The FY26 result is one chain's. The Vector Consulting Group figures were reported in the trade press and we have not seen the study itself. The shrinkage figures are from a 2024 press report and could not be checked against the original page, so treat them as indicative.",
   "facts": [
     {
       "figure": "Over 70%",

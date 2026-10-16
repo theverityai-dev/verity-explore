@@ -181,7 +181,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The Goethe-Institut figures are from its own press release, which is promotional, and the wording was taken from search results because the page could not be fetched. IELTS fees are the exam body's 2026 list and change. No source on dropout rates in private institutes was found.",
+  "factsNote": "The Goethe-Institut figures are from its own press release, which is promotional, and the original page could not be checked. IELTS fees are the exam body's 2026 list and change. No source on dropout rates in private institutes was found.",
   "facts": [
     {
       "figure": "₹19,000",

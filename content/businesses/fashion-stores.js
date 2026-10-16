@@ -203,7 +203,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The Vector Consulting Group figures come through a trade press report, and we have not seen the study. The shrinkage figures are from a 2024 press report that we could read only from search results. The return-rate figure is from a software vendor's own report, so treat it as a benchmark. The GST threshold is from press and tax-advisory commentary, so confirm it with your accountant.",
+  "factsNote": "The Vector Consulting Group figures come through a trade press report, and we have not seen the study. The shrinkage figures are from a 2024 press report that we could not check against the original. The return-rate figure is from a software vendor's own report, so treat it as a benchmark. The GST threshold is from press and tax-advisory commentary, so confirm it with your accountant.",
   "facts": [
     {
       "figure": "24%",

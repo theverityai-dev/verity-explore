@@ -181,7 +181,7 @@ export default {
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
   "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
-  "factsNote": "The churn figures are from a software vendor's blog and range widely by customer size. The Nasscom figure is from FY2020, so it is old, and the AI figure was seen only in search result wording because the source page had an expired certificate. They show the scale of the issues, not what your company will see.",
+  "factsNote": "The churn figures are from a software vendor's blog and range widely by customer size. The Nasscom figure is from FY2020, so it is old, and the AI figure could not be checked against the original page. They show the scale of the issues, not what your company will see.",
   "facts": [
     {
       "figure": "4.9%",
