@@ -1,181 +1,994 @@
 export default {
-  slug: 'cybersecurity-companies',
-  status: 'published',
-  plural: 'cybersecurity companies',
-  subject: 'cybersecurity company',
-
-  seo: {
-    title: 'AI business management software for cybersecurity companies | Verity',
-    description:
-      'Verity gives cybersecurity companies one system for the findings pipeline, remediation commitments, analyst time and evidence for client audits.',
-    keywords: [
-      'AI software for cybersecurity companies',
-      'security services company management software',
-      'findings and remediation tracking software',
-      'security engagement and evidence management',
-    ],
+  "schema": 2,
+  "slug": "cybersecurity-companies",
+  "status": "published",
+  "plural": "cybersecurity firms",
+  "subject": "cybersecurity company",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Cybersecurity firm software: engagements, findings, retests | Verity",
+    "description": "The 14 problems that slow a security services firm, from scoping and consultant planning to findings that never get retested, and the Verity screens that fix them.",
+    "keywords": [
+      "cybersecurity company management software India",
+      "pentest engagement and findings tracking",
+      "security consultant utilisation",
+      "remediation and retest tracking",
+      "incident response retainer tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for cybersecurity companies',
-    headline: 'You found it in March. It is October and nobody can say whether it was fixed.',
-    lede:
-      'A security business is judged on what happened to its findings. Verity tracks every one from discovery to verified remediation, per client.',
-    note: 'Verity runs the company. Scanners, monitoring and analysis tooling stay where they are.',
-    panel: {
-      title: 'Practice',
-      meta: 'Current position',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Open findings', value: '1,340', note: '46 clients' },
-        { label: 'Past remediation commitment', value: '218', note: 'critical and high' },
-        { label: 'Analyst time on triage', value: '61%', note: 'rest on assessment' },
-        { label: 'Evidence requests this quarter', value: '19', note: 'client audits' },
-      ],
-      rows: [
-        { name: '218 findings past their agreed remediation date', meta: 'Client-owned, unescalated', active: true },
-        { name: '61% of analyst hours spent on triage', meta: 'False positive load unmeasured', active: true },
-        { name: '4 clients cannot be given evidence for an audit', meta: 'Records across several tools', active: true },
-        { name: '9 engagements delivered above scoped hours', meta: 'Fixed fee, extra testing', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own practice in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for cybersecurity companies",
+    "headline": "You find the problems in other companies. Verity makes sure none slip through in yours.",
+    "lede": "A security services firm sells expert time and trust. The time is booked across engagements and the trust depends on findings being tracked, reports being right and client data being handled with care. Scope, findings, retests and retainers sit in separate tools. Verity ties them to each client engagement.",
+    "oneLine": "One system that follows each engagement from scope to report to retest, shows who is booked where and keeps every finding and retainer hour accounted for.",
+    "note": "Built for a firm of ten to a few hundred with consultants who dislike admin. Records come from the engagement work itself.",
+    "screen": "owner",
+    "screenNote": "clients, consultants, engagements and retainers"
+  },
+  "today": {
+    "heading": "Most security firms are good at finding issues and loose at tracking them.",
+    "paragraphs": [
+      "An engagement starts with a scope in an email or a statement of work. By the time the test runs, the scope has moved, the client's contact has changed and test accounts are late.",
+      "Findings live in the consultant's notes and a report template. Their status after delivery, meaning who fixed what and what was retested, is held in the client's tracker or nobody's.",
+      "The market is short of skilled people. A 2026 DSCI and SANS report found that 73 percent of enterprises and 68 percent of providers say skilled candidates are in limited supply, and 84 percent of organisations need one to six months to fill a security role."
+    ],
+    "stack": [
+      "Statements of work in email",
+      "Spreadsheet of consultant bookings",
+      "Findings in a reporting tool or document templates",
+      "Ticket tool for retainers",
+      "Timesheet sheet and an accounting package"
+    ],
+    "stackNote": "Each tool is good at one job. None tells you whether a finding was fixed, who is free next month or whether a retainer is about to run out of hours."
+  },
+  "painsHeading": "Where a security firm loses margin and trust.",
+  "painsLede": "These are the situations security firm owners and delivery heads describe. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Engagements",
+      "title": "Scope is agreed in email and drifts",
+      "scene": "A test is sold for one web application and three APIs. During the test the client adds a mobile app and a staging environment, verbally.",
+      "cost": "Unpaid days, an over-run test and a report that is hard to defend when the client says the extra work was included.",
+      "fix": "Each engagement records its scope, exclusions, days sold and approved changes. A change creates a change request with days and price, and the engagement shows days sold against days used.",
+      "screen": "engagements"
     },
-  },
-
-  overview: {
-    heading: 'The finding is the product, and its fate is what the client pays for.',
-    paragraphs: [
-      'A cybersecurity company produces findings. Whether the business is testing, monitoring or advisory, the deliverable is a set of identified issues with severities and agreed remediation expectations. Two hundred and eighteen findings past their agreed date, unescalated, is the company failing at the part of the job that happens after the report.',
-      'The second characteristic is that remediation usually belongs to the client. The security company found it and cannot fix it, which makes tracking, escalation and evidence the actual service rather than an administrative extra.',
-      'The third is analyst economics. Sixty-one per cent of analyst hours spent on triage rather than assessment is the cost structure of the business, and the false positive load driving it is measurable and reducible per client and per source.',
-      'The fourth is evidence. Clients undergo their own audits and ask their security provider to produce the record — what was found, when, what was recommended, what was done. Four clients whose evidence sits across several tools is four difficult conversations.',
-      'The fifth is engagement scope. Fixed-fee testing that expands during delivery is margin lost quietly, and nine engagements above scoped hours is a pattern rather than an accident.',
-      'Verity holds findings through their full life, ages remediation commitments against owners, and keeps the evidence a client audit will ask for.',
+    {
+      "area": "Sales",
+      "title": "Quotes are priced on gut feel",
+      "scene": "A senior consultant estimates ten days from experience. Last time a similar test took fifteen.",
+      "cost": "Fixed-price tests that lose money and discounts given without knowing what the work really cost.",
+      "fix": "Each engagement keeps estimated and actual days by activity. Verity shows how past tests of the same type ran, so the next quote starts from data.",
+      "screen": "owner"
+    },
+    {
+      "area": "People",
+      "title": "Consultants are double-booked or idle",
+      "scene": "The best web tester is booked on two engagements in the same week while two juniors are free. Nobody saw it until Monday.",
+      "cost": "Delays, overtime and idle people, in a market where skilled candidates are hard to find. In 2026, 84 percent of organisations reported taking one to six months to fill a security role.",
+      "fix": "Consultants have skills, certifications and bookings. Verity shows load by week, clashes and who is free for a new engagement by skill.",
+      "screen": "staffing",
+      "source": {
+        "name": "DSCI-SANS Indian Cyber Security Skilling Landscape report, 1 May 2026",
+        "url": "https://www.dsci.in/content/indian-cyber-security-skilling-landscape-2025-2026"
+      }
+    },
+    {
+      "area": "Engagements",
+      "title": "Tests wait on the client",
+      "scene": "The test window opens on Monday. VPN access, test accounts and a contact for questions arrive on Thursday.",
+      "cost": "Days lost, a test squeezed to fit the old deadline and a lower quality report.",
+      "fix": "Each engagement has a list of what the client must provide, with dates. Verity warns before the start if items are missing and records delay so it can be charged or explained.",
+      "screen": "engagements"
+    },
+    {
+      "area": "Findings",
+      "title": "Findings are tracked in documents, not as items",
+      "scene": "Forty findings from a test sit in a document. Three months later the client asks which are still open. Someone searches old emails.",
+      "cost": "Hours spent answering a simple question and a client who thinks you do not follow up.",
+      "fix": "Each finding is a record with severity, affected asset, owner on the client side, status and dates. Verity shows open findings by client, severity and age.",
+      "screen": "findings"
+    },
+    {
+      "area": "Reports",
+      "title": "Report review is a bottleneck",
+      "scene": "Three reports wait for a senior reviewer who is also testing. Versions go back and forth by email.",
+      "cost": "Late deliveries that delay the client's own audit, and errors that slip through a rushed review.",
+      "fix": "Each report moves through draft, review and release with an owner and a due date. Verity shows the review queue and flags reports waiting more than a set time.",
+      "screen": "engagements"
+    },
+    {
+      "area": "Findings",
+      "title": "Retests are forgotten or done for free",
+      "scene": "The client says critical issues are fixed. A retest is promised but not scheduled, then asked for at the last moment before an audit.",
+      "cost": "Unplanned work, unpaid days and a client who is not sure the fix is real.",
+      "fix": "A fix claim creates a retest task with an owner and a date. The retest is an item on the engagement with days and price, and the finding closes only after a retest result is recorded.",
+      "screen": "findings"
+    },
+    {
+      "area": "Security",
+      "title": "Client data and evidence are handled loosely",
+      "scene": "Screenshots, credentials and extracts from a client system sit in a consultant's laptop folder and a shared drive.",
+      "cost": "A security firm that leaks client data loses its reputation. Clients also ask how evidence is stored and when it is destroyed.",
+      "fix": "Evidence is attached to the engagement with access limited to the team and a retention date. Verity records who viewed or changed it and lists evidence due for deletion.",
+      "screen": "compliance"
+    },
+    {
+      "area": "Retainers",
+      "title": "Retainer and incident response hours burn unseen",
+      "scene": "A client buys 100 hours of incident response support for a year. Ad hoc calls use hours that nobody logs, and the client is surprised at the invoice.",
+      "cost": "Unbilled hours, disputes and renewals missed because nobody saw the balance.",
+      "fix": "Each retainer shows hours bought, used and remaining, with each request logged against it. Verity warns at 80 percent and lists retainers near renewal.",
+      "screen": "retainers"
+    },
+    {
+      "area": "Retainers",
+      "title": "After-hours incidents are handled by whoever picks up",
+      "scene": "A client calls at midnight with a suspected incident. The on-call roster is in a chat group. The first person who answers takes it, whether or not they have the skills.",
+      "cost": "Slow response, the wrong people on the job and a client who counts the hours to first reply.",
+      "fix": "The on-call roster, response times promised and incident records sit in one place. Verity shows who is on call and records time to first response and handover steps.",
+      "screen": "retainers"
+    },
+    {
+      "area": "Compliance",
+      "title": "Certifications and empanelment lapse",
+      "scene": "A consultant's certification expires the week a client's tender needs it. The firm's own empanelment renewal is in someone's calendar.",
+      "cost": "A tender that cannot be bid, or a client's audit that finds the firm out of compliance. Regulated buyers such as banks and insurers are the main group that asks for empanelled auditors.",
+      "fix": "Each person's certifications and the firm's empanelments and registrations are records with expiry dates. Verity reminds ahead of time and lists engagements that depend on them.",
+      "screen": "compliance",
+      "source": {
+        "name": "Cybersecify on who needs empanelled pentest vendors",
+        "url": "https://cybersecify.com/blog/who-needs-cert-in-empanelled-pentest-vendor/"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Billing misses time and milestones",
+      "scene": "Fixed-price milestones, time-and-materials hours and retainer overage are tracked in three places. An invoice goes out late or short.",
+      "cost": "Unbilled work and cash that arrives weeks after it should.",
+      "fix": "Each engagement shows milestones, hours worked and what has been invoiced. Verity lists work done but not invoiced and invoices overdue with a task for the account owner. Billing stays in your accounts software.",
+      "screen": "owner"
+    },
+    {
+      "area": "Compliance",
+      "title": "The firm has its own reporting duties",
+      "scene": "As a company handling client data, the firm itself is bound by incident reporting and log retention rules. Nobody has written down who does what.",
+      "cost": "A fine or an embarrassing gap after an incident. The CERT-In directions require reporting within six hours of noticing a qualifying incident and keeping at least 180 days of logs in India.",
+      "fix": "The firm's own incident steps, owners and log retention checks are tasks with dates. Verity records what happened and when during an incident.",
+      "screen": "compliance",
+      "source": {
+        "name": "AM Legals, CERT-In compliance guide",
+        "url": "https://amlegals.com/cert-in-compliance-guide-2025/"
+      }
+    },
+    {
+      "area": "People",
+      "title": "Knowledge walks out with the consultant",
+      "scene": "A senior tester leaves. His scripts, tricks and client notes were on his laptop and in his head.",
+      "cost": "Slower tests, repeated mistakes and a junior team that starts from zero.",
+      "fix": "Methods, checklists, past findings categories and client notes are records the whole team can search, with access by role. A handover lists what the leaver owned.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The talent figures are from a 2026 report by DSCI and SANS. The CERT-In rules are from a law firm's guide because the official text was not read, and the guide does not state the issue date. They show the pressures on the sector, not what your firm will see.",
+  "facts": [
+    {
+      "figure": "73% and 68%",
+      "text": "of enterprises and cybersecurity providers say skilled cybersecurity candidates are in limited supply.",
+      "source": {
+        "name": "DSCI and SANS, 2026",
+        "url": "https://www.dsci.in/content/indian-cyber-security-skilling-landscape-2025-2026"
+      }
+    },
+    {
+      "figure": "84%",
+      "text": "of organisations need one to six months to fill a cybersecurity role, with only 3 percent filling one in under a month.",
+      "source": {
+        "name": "DSCI and SANS, 2026",
+        "url": "https://www.dsci.in/content/indian-cyber-security-skilling-landscape-2025-2026"
+      }
+    },
+    {
+      "figure": "6 hours",
+      "text": "the reporting window the CERT-In Directions set for qualifying cyber incidents, counted from when the organisation notices or is notified.",
+      "source": {
+        "name": "AM Legals, 2025",
+        "url": "https://amlegals.com/cert-in-compliance-guide-2025/"
+      }
+    },
+    {
+      "figure": "180 days",
+      "text": "the minimum period for which security logs must be retained in India under the same Directions.",
+      "source": {
+        "name": "AM Legals, 2025",
+        "url": "https://amlegals.com/cert-in-compliance-guide-2025/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each for one job. Clients, consultants, engagements and retainers are set up in your own terms.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Firm / This week",
+      "meta": "All engagements",
+      "heading": "The managing partner's weekly view",
+      "caption": "Engagements running, consultants free, findings open, retainer hours and work not yet invoiced on one screen, with the items that need a decision listed below.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Engagements",
+              "value": "18",
+              "note": "6 starting"
+            },
+            {
+              "label": "Consultants free",
+              "value": "3",
+              "note": "next 2 weeks"
+            },
+            {
+              "label": "Open criticals",
+              "value": "7",
+              "note": "across 5 clients"
+            },
+            {
+              "label": "Not yet invoiced",
+              "value": "₹14.8 L",
+              "note": "work done"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Estimated against actual days, last 6 tests"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Web application",
+              "value": 118,
+              "display": "118%"
+            },
+            {
+              "label": "Mobile application",
+              "value": 96,
+              "display": "96%"
+            },
+            {
+              "label": "Network",
+              "value": 104,
+              "display": "104%"
+            },
+            {
+              "label": "Cloud review",
+              "value": 140,
+              "display": "140%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Cloud reviews have run 40 percent over estimate in the last three engagements.",
+          "action": "Reprice"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Certification for two consultants",
+              "meta": "Expires 14 Nov, tender needs both",
+              "tag": [
+                "Renew",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            },
+            {
+              "name": "Retainer, Asha Bank",
+              "meta": "84 of 100 hours used, renews in 40 days",
+              "tag": [
+                "Talk",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engagements",
+      "title": "Engagements",
+      "meta": "By stage",
+      "heading": "Engagements from scope to report",
+      "caption": "Each engagement moves across the board with its scope, days sold and days used, client dependencies and report status. Delays caused by the client are recorded.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Scoping",
+              "cards": [
+                {
+                  "title": "E-306 Mobile app, Greenleaf Bank",
+                  "meta": "Scope in draft, 12 days",
+                  "tag": [
+                    "Awaiting client",
+                    "flag",
+                    "Signed",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "E-310 Cloud review, Acme Foods",
+                  "meta": "Estimate 8 days",
+                  "tag": [
+                    "Quote",
+                    "muted"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Testing",
+              "cards": [
+                {
+                  "title": "E-298 Web app and APIs, Beta Pay",
+                  "meta": "Day 7 of 10, VPN access late 3 days",
+                  "tag": [
+                    "Delayed",
+                    "late",
+                    "Noted",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "E-301 Network, Delta Telecom",
+                  "meta": "Day 3 of 9",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Report and retest",
+              "cards": [
+                {
+                  "title": "E-290 Report, Gamma Retail",
+                  "meta": "In review 4 days",
+                  "tag": [
+                    "Review",
+                    "flag",
+                    "Released",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "E-285 Retest, Zenith Insurance",
+                  "meta": "Promised for Friday",
+                  "tag": [
+                    "Book",
+                    "late"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "findings",
+      "title": "Findings",
+      "meta": "Open items by client",
+      "heading": "Findings from first report to retest",
+      "caption": "Every finding with severity, asset, client owner and status, from first report to retest. The client can ask what is open and the answer is one filter away.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Finding",
+            "Client",
+            "Severity",
+            "Age",
+            "Status"
+          ],
+          "rows": [
+            [
+              "SQL injection in login",
+              "Beta Pay",
+              "Critical",
+              "9 days",
+              [
+                "Fix claimed",
+                "flag",
+                "Retest booked",
+                "ok"
+              ]
+            ],
+            [
+              "Weak TLS configuration",
+              "Delta Telecom",
+              "Medium",
+              "41 days",
+              [
+                "Open",
+                "late"
+              ]
+            ],
+            [
+              "Missing rate limiting",
+              "Gamma Retail",
+              "High",
+              "21 days",
+              [
+                "Retested, closed",
+                "ok"
+              ]
+            ],
+            [
+              "Exposed storage bucket",
+              "Acme Foods",
+              "Critical",
+              "3 days",
+              [
+                "Open",
+                "late",
+                "Fix claimed",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "7 critical findings are open across 5 clients, the oldest 33 days.",
+          "action": "Review"
+        }
+      ]
+    },
+    {
+      "id": "staffing",
+      "title": "Staffing",
+      "meta": "Next 4 weeks",
+      "heading": "Who is booked where, by skill",
+      "caption": "Consultants by skill and certification with load by week. Clashes, idle time and who can take a new engagement are visible before the week starts.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Consultant",
+            "Skills",
+            "Week 1",
+            "Week 2",
+            "Week 3"
+          ],
+          "rows": [
+            [
+              "Anil",
+              "Web, API",
+              [
+                "100%",
+                "ok"
+              ],
+              [
+                "130%",
+                "late",
+                "100%",
+                "ok"
+              ],
+              [
+                "60%",
+                "muted"
+              ]
+            ],
+            [
+              "Priya",
+              "Cloud, network",
+              [
+                "80%",
+                "ok"
+              ],
+              [
+                "80%",
+                "ok"
+              ],
+              [
+                "100%",
+                "ok"
+              ]
+            ],
+            [
+              "Imran",
+              "Mobile",
+              [
+                "40%",
+                "muted"
+              ],
+              [
+                "40%",
+                "muted"
+              ],
+              [
+                "40%",
+                "muted"
+              ]
+            ],
+            [
+              "Sneha",
+              "Web",
+              [
+                "100%",
+                "ok"
+              ],
+              [
+                "100%",
+                "ok"
+              ],
+              [
+                "20%",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Anil is booked at 130 percent in week 2. Imran has 60 percent free and mobile skills.",
+          "action": "Rebalance"
+        }
+      ]
+    },
+    {
+      "id": "retainers",
+      "title": "Retainers",
+      "meta": "Hours and response",
+      "heading": "Retainers, hours and on-call",
+      "caption": "Retainer hours bought, used and left, requests logged against them and the on-call roster. Time to first response is recorded for every incident.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client",
+            "Hours",
+            "Used",
+            "Renewal",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Asha Bank",
+              "100",
+              "84",
+              "40 days",
+              [
+                "Talk",
+                "flag"
+              ]
+            ],
+            [
+              "Zenith Insurance",
+              "60",
+              "22",
+              "5 months",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Delta Telecom",
+              "120",
+              "119",
+              "12 days",
+              [
+                "Over",
+                "late",
+                "Quote extra",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "On call this week",
+              "meta": "Priya, then Sneha from Thursday",
+              "tag": [
+                "Set",
+                "ok"
+              ]
+            },
+            {
+              "name": "Incident I-47, Asha Bank",
+              "meta": "First response in 22 minutes",
+              "tag": [
+                "Closed",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance",
+      "meta": "Firm and people",
+      "heading": "Certifications, evidence and the firm's own duties",
+      "caption": "Certifications and empanelments with expiry, evidence kept for each engagement with retention dates, and the firm's own incident and log tasks.",
+      "blocks": [
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Two consultant certifications expire 14 Nov",
+              "meta": "Booked for exam 8 Nov",
+              "done": false
+            },
+            {
+              "text": "Empanelment renewal",
+              "meta": "Due in 70 days, managing partner",
+              "done": false
+            },
+            {
+              "text": "Evidence for E-285 deleted per policy",
+              "meta": "Done 10 Oct",
+              "done": true
+            },
+            {
+              "text": "Quarterly log retention check",
+              "meta": "Done 1 Oct, 180 days kept in India",
+              "done": true
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Evidence from three closed engagements is past its retention date.",
+          "action": "Review"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Thursday, before and after.",
+  "dayLede": "The firm works the same way. What changes is that engagements, findings and promises leave a record that chases for you.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "The delivery head checks a sheet and three chats to see who is free.",
+      "after": "The week screen shows consultant load, engagements starting and clients that owe access."
+    },
+    {
+      "time": "11:00",
+      "before": "A client asks which findings are still open. Someone searches old reports.",
+      "after": "The open findings list for that client is filtered and sent in a minute."
+    },
+    {
+      "time": "1:00",
+      "before": "A test starts and VPN access is not ready. Nobody records the delay.",
+      "after": "The client dependency is overdue, the delay is logged and the days are protected."
+    },
+    {
+      "time": "3:30",
+      "before": "A retainer runs past its hours without anyone noticing.",
+      "after": "A warning at 80 percent went to the account owner two weeks ago."
+    },
+    {
+      "time": "5:30",
+      "before": "A tender needs two certifications that expired last week.",
+      "after": "The renewal was on the list and booked six weeks earlier."
+    },
+    {
+      "time": "Month end",
+      "before": "Finance asks which work is not yet invoiced.",
+      "after": "The list shows the engagements and milestones done and not billed."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your engagements actually run, build Verity around them, bring your data in, then stay on to keep it working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day with your delivery head, a consultant and the person who invoices. Follow an engagement from quote to report to retest, and map your tools for scoping, findings, time and billing.",
+        "you": "A few hours from you and your delivery head. Two recent engagements with their statements of work, reports and timesheets.",
+        "get": "A written map of how engagements, findings, staffing and retainers run today and the problems to fix first."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up engagement types and stages, scope and change request fields, findings records with severities, consultant skills and certifications, retainers and on-call rules, evidence retention and approvals.",
+        "you": "Check the stages, severities and retention rules with your delivery head and a consultant.",
+        "get": "A working Verity with your real engagement types, people and rules."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in clients, open engagements, consultants and certifications, open findings and retainers. Train managers, consultants and the finance owner on live engagements.",
+        "you": "Your list of active engagements and open findings, in whatever form they exist. One hour per role.",
+        "get": "Your firm inside Verity and a team that has used it on a real engagement."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune lists and reminders and handle new offices and service lines.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the firm runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Engagements, assessments, monitoring', 'Work'],
-    ['Findings, severities, remediation', 'Records'],
-    ['Clients, environments, assets', 'Relationships'],
-    ['Triage, assessment, verification', 'Workflows'],
-    ['Analysts, testers, consultants', 'People'],
-    ['Evidence, reports, attestations', 'Control'],
-    ['Scope, hours, commercial terms', 'Orders'],
-  ],
-
-  challengesHeading: 'Findings that outlive the report that contained them.',
-  challengesLede:
-    'Security company difficulties come from owning the discovery and not the fix.',
-  challenges: [
-    { problem: 'Findings are delivered and then untracked', detail: 'The report is issued and what happened next lives in client email.', outcome: 'Every finding carries state, owner, commitment date and verification.' },
-    { problem: 'Remediation commitments pass without escalation', detail: 'Agreed dates expire and nobody raises it until a review.', outcome: 'Commitments age with escalation at threshold to a named client contact.' },
-    { problem: 'Triage load is unmeasured', detail: 'Analyst hours disappear into noise without attribution by source or client.', outcome: 'Time is attributed to triage against assessment by source and client.' },
-    { problem: 'Audit evidence has to be assembled', detail: 'A client audit request requires collecting history from several systems.', outcome: 'Finding history, reports and verification are retained as one record per client.' },
-    { problem: 'Fixed-fee engagements expand', detail: 'Additional testing is performed within an agreed fee.', outcome: 'Scope and delivered hours are compared per engagement with variance visible.' },
-    { problem: 'Repeat findings are not recognised', detail: 'The same issue is found again in the next assessment without reference to the last.', outcome: 'Findings link across assessments, so recurrence is visible and reportable.' },
-  ],
-
-  modulesLede: 'One system across findings, engagements, clients and evidence.',
-  modules: [
-    { id: 'records', title: 'Findings, severities and remediation', line: 'Each finding carries client, asset, severity, discovery date, recommendation, owner, commitment date, state and verification.', why: 'The finding is the product and its state is what the client is paying to have managed.', example: 'Two hundred and eighteen findings past their commitment date.' },
-    { id: 'workflows', title: 'Triage, assessment and verification', line: 'Alerts and candidate issues move through triage, assessment, reporting and verification with time recorded at each stage.', why: 'The ratio between triage and assessment is the practice’s cost structure.', example: 'Sixty-one per cent of analyst hours on triage.' },
-    { id: 'work', title: 'Engagements, assessments and monitoring', line: 'Each engagement carries scope, hours, deliverables, schedule and the findings it produced.', why: 'Scope and delivery have to be compared to protect fixed-fee margin.', example: 'Nine engagements delivered above scoped hours.' },
-    { id: 'relationships', title: 'Clients, environments and assets', line: 'Clients carry their environments, assets, findings history, commitments and contacts.', why: 'Escalation needs a named person on the client side, not an address.', example: 'Open findings by client with named owners.' },
-    { id: 'control', title: 'Evidence, reports and attestations', line: 'One permission model and one audit trail, with reports, evidence and verification retained per client and finding.', why: 'Clients pass their own audits using what their security provider can produce.', example: 'Evidence assembled for a client audit from one record.' },
-    { id: 'people', title: 'Analysts, testers and consultants', line: 'Staff carry skills, certifications, engagement assignments, hours by activity and findings produced.', why: 'Certification currency and utilisation are both operational facts.', example: 'Analyst hours by activity and engagement.' },
-    { id: 'intelligence', title: 'Findings, remediation and utilisation reporting', line: 'Finding volumes by severity, remediation ageing and closure, triage ratios, recurrence and engagement margin come from the records.', why: 'The practice is measured on what happens to findings and on analyst utilisation.', example: 'Remediation closure rate by client and severity.' },
-    { id: 'ai', title: 'Ask the practice a question', line: 'Verity AI answers from your own finding, engagement, client and time records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about what is overdue and what keeps recurring.', example: '"Which findings are past commitment?" returns them by client and severity.' },
-    { id: 'communication', title: 'Client escalation and reporting', line: 'Escalations, status updates and report delivery attach to the finding and client.', why: 'An escalation that is not recorded did not happen as far as an audit is concerned.', example: 'Escalation history against an overdue finding.' },
-    { id: 'orders', title: 'Scope, hours and commercial terms', line: 'Engagements carry scoped hours, delivered hours, retainers and out-of-scope work with a billing state.', why: 'Additional testing performed inside a fixed fee is unpriced work.', example: 'Delivered against scoped hours by engagement.' },
-    { id: 'schedule', title: 'Engagement scheduling and capacity', line: 'Engagements are planned against analyst availability, certifications and client windows.', why: 'Testing windows are client-constrained and capacity is skill-specific.', example: 'Engagements scheduled against certified analyst availability.' },
-    { id: 'locations', title: 'Environments and in-scope systems', line: 'Client environments and in-scope systems are recorded with their boundaries.', why: 'Scope boundaries are what separate authorised work from unauthorised work.', example: 'In-scope systems recorded per engagement.' },
-  ],
-
-  workflowsHeading: 'Scope, assess, report, track, verify.',
-  workflowsLede: 'These already happen. Recorded, the findings pipeline stops ending at the report.',
-  workflows: [
-    { name: 'Engagement setup', steps: ['Scope and in-scope systems agreed and recorded', 'Hours and deliverables defined', 'Analysts assigned by skill and certification', 'Client windows and authorisations confirmed', 'Engagement opened'], note: 'Recording scope boundaries is what keeps the work authorised.' },
-    { name: 'Triage and assessment', steps: ['Candidate issues received or discovered', 'Triaged with time recorded', 'Assessed for validity and severity', 'False positives recorded against their source', 'Confirmed findings created'], note: 'Recording false positives against their source is what reduces future triage load.' },
-    { name: 'Reporting and commitment', steps: ['Findings compiled into the deliverable', 'Severities and recommendations confirmed', 'Report issued to the client', 'Remediation owners and dates agreed', 'Commitments recorded per finding'], note: 'A commitment without a named owner and a date is not a commitment.' },
-    { name: 'Remediation tracking', steps: ['Commitment dates monitored', 'Approaching and overdue findings escalated', 'Client response recorded', 'Remediation evidence received', 'Verification performed and state closed'], note: 'Verification, not the client’s word, is what closes a finding.' },
-    { name: 'Audit evidence', steps: ['Client audit request received', 'Findings, reports and verification retrieved for the period', 'Evidence assembled', 'Provided with an audit trail', 'Request recorded against the client'], note: 'Assembling from one record is the difference between hours and days.' },
-  ],
-
-  ai: {
-    heading: 'Ask about findings and remediation.',
-    lede: 'Verity AI reads the same finding, engagement, client and time records the practice creates as it works. It answers from your own practice, respects permissions, and can turn an answer into an escalation or a scope conversation.',
-    panelMeta: 'Grounded in your practice records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which findings are past their remediation commitment?',
-      'Which clients have the most overdue critical findings?',
-      'How much analyst time went to triage against assessment?',
-      'Which sources produce the most false positives?',
-      'Which findings have recurred across assessments?',
-      'Which engagements were delivered above scoped hours?',
-      'What is remediation closure rate by client and severity?',
-      'Which analyst certifications expire this quarter?',
-      'Summarise findings and remediation position by client.',
+    "bring": [
+      "A list of active engagements with scope and days",
+      "Consultant list with skills and certifications",
+      "Open findings by client",
+      "Retainers with hours and dates",
+      "Your evidence and retention policy"
     ],
+    "time": "About 8 to 11 hours of owner time across the four weeks, mostly in week 1. Your delivery head and finance owner need a few more.",
+    "after": "Nobody is hired to run Verity. Engagements, findings and hours are recorded as part of the work you already do, and the reports come from those records."
   },
-
-  automationHeading: 'Commitments, triage and scope.',
-  automationLede: 'Each runs from the practice’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A remediation commitment approaches its date', steps: ['Client owner notified with the finding', 'Escalation raised if unanswered', 'Response recorded'] },
-    { trigger: 'A finding passes its commitment date', steps: ['Escalated by severity to the named client contact', 'Ageing recorded', 'Extension or closure captured'] },
-    { trigger: 'A finding recurs across assessments', steps: ['Linked to the previous occurrence', 'Recurrence flagged in reporting', 'Root cause conversation raised'] },
-    { trigger: 'Delivered hours exceed scoped hours', steps: ['Variance flagged on the engagement', 'Scope or billing conversation raised', 'Outcome recorded'] },
-    { trigger: 'An analyst certification approaches expiry', steps: ['Affected engagements flagged', 'Renewal assigned', 'Availability updated'] },
+  "ai": {
+    "heading": "Ask your firm a question.",
+    "lede": "Verity AI reads your engagements, findings, consultants, retainers and compliance records. Ask in plain language, then turn the answer into tasks for the right person.",
+    "examples": [
+      {
+        "q": "Which critical findings have been open for more than 14 days, and for whom?",
+        "a": "Four critical findings across three clients. The oldest is 33 days, for Acme Foods.",
+        "rows": [
+          [
+            "Acme Foods",
+            "33 days"
+          ],
+          [
+            "Beta Pay",
+            "21 days"
+          ],
+          [
+            "Delta Telecom",
+            "16 days"
+          ]
+        ],
+        "action": "Create follow-up tasks for each client owner"
+      },
+      {
+        "q": "Which consultant is booked above 100 percent in the next three weeks?",
+        "a": "Anil in week 2 at 130 percent. Imran has 60 percent free and the mobile skill needed for E-306.",
+        "rows": [
+          [
+            "Anil, week 2",
+            "130%"
+          ],
+          [
+            "Imran, free",
+            "60%"
+          ]
+        ],
+        "action": "Propose a rebalance to the delivery head"
+      },
+      {
+        "q": "Which retainers will run out of hours before renewal?",
+        "a": "Delta Telecom has used 119 of 120 hours with 12 days to renewal, and Asha Bank is at 84 of 100 with 40 days left.",
+        "rows": [
+          [
+            "Delta Telecom",
+            "119 of 120"
+          ],
+          [
+            "Asha Bank",
+            "84 of 100"
+          ]
+        ],
+        "action": "Ask the account owners to quote extra hours"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still do the testing and the talking. Verity makes sure the right person knows to.",
+  "automations": [
+    {
+      "when": "An engagement is 5 days from start and the client has not provided access",
+      "then": [
+        "Flagged to the delivery head",
+        "Client contact task created",
+        "Delay recorded if the start moves"
+      ]
+    },
+    {
+      "when": "A client claims a finding is fixed",
+      "then": [
+        "Retest task created with an owner and a date",
+        "Retest days added to the engagement",
+        "Finding closed only on a recorded retest result"
+      ]
+    },
+    {
+      "when": "A report waits for review for more than 3 days",
+      "then": [
+        "Flagged to the reviewer and the delivery head",
+        "Reassigned if needed",
+        "Release date recorded"
+      ]
+    },
+    {
+      "when": "A retainer reaches 80 percent of its hours",
+      "then": [
+        "Warning to the account owner",
+        "Renewal and extra hours quote task created",
+        "Outcome recorded"
+      ]
+    },
+    {
+      "when": "A certification or empanelment is 60 days from expiry",
+      "then": [
+        "Task to the owner",
+        "Exam or renewal date recorded",
+        "Engagements that depend on it listed"
+      ]
+    },
+    {
+      "when": "Evidence passes its retention date",
+      "then": [
+        "Listed for review",
+        "Deletion task to the engagement owner",
+        "Completion recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the practice can see.',
-  intelligenceLede: 'Findings, remediation and utilisation from working records.',
-  intelligence: [
-    { area: 'Findings', points: ['Volume by severity and client', 'Discovery sources', 'Recurrence across assessments', 'Verification completion'] },
-    { area: 'Remediation', points: ['Commitments met and missed', 'Ageing by severity and client', 'Escalation history', 'Closure rates over time'] },
-    { area: 'Practice', points: ['Analyst hours by activity', 'Triage against assessment ratio', 'False positives by source', 'Utilisation and certification currency'] },
-    { area: 'Commercial', points: ['Scoped against delivered hours', 'Engagement margin', 'Retainer consumption', 'Out-of-scope work billed'] },
+  "rules": {
+    "heading": "The rules a cybersecurity company has to keep up with.",
+    "lede": "Verity does not give legal advice, does not test or scan any system and does not file anything for you. It keeps the records these rules and your clients' requirements depend on in order.",
+    "note": "Rules and client requirements differ by sector and contract, and they change. Confirm current requirements with your lawyer and the relevant authority.",
+    "items": [
+      {
+        "name": "CERT-In incident reporting and log retention",
+        "what": "The CERT-In Directions require qualifying cyber incidents to be reported within six hours of the organisation noticing or being notified, and at least 180 days of security logs to be kept in India. They cover body corporates, data centres, cloud and VPN providers, so a security firm handling client data should assume they apply to its own systems.",
+        "how": "The firm's own incident steps, owners and log retention checks are tasks with dates, and an incident record shows what happened and when.",
+        "source": {
+          "name": "AM Legals",
+          "url": "https://amlegals.com/cert-in-compliance-guide-2025/"
+        }
+      },
+      {
+        "name": "Empanelled auditors for regulated clients",
+        "what": "Regulated buyers such as banks, insurers, telecom and government tenders are the main group that asks for CERT-In empanelled auditors. Many software buyers do not need them.",
+        "how": "The firm's empanelment and each consultant's certifications are records with expiry dates, linked to the engagements that need them.",
+        "source": {
+          "name": "Cybersecify",
+          "url": "https://cybersecify.com/blog/who-needs-cert-in-empanelled-pentest-vendor/"
+        }
+      },
+      {
+        "name": "Personal data in client systems",
+        "what": "Testing may expose personal data. India's data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.",
+        "how": "Evidence is attached to the engagement with limited access, who viewed it recorded and a retention date.",
+        "source": {
+          "name": "AZB Partners",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Contractual confidentiality and rules of engagement",
+        "what": "Each client contract sets what may be tested, when and how data is handled. Working outside it can be a breach of contract or worse.",
+        "how": "Scope, exclusions, test windows and approvals are recorded on the engagement and changes need a recorded approval."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A consultant should not see other clients' evidence. Finance should not see findings. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Managing partner",
+      "question": "Where do we make money and where are the risks?",
+      "sees": "Engagements by margin, work not invoiced, retainers, certifications due and open criticals by client."
+    },
+    {
+      "role": "Delivery head",
+      "question": "Who is doing what and what is late?",
+      "sees": "Consultant load, engagements by stage, client dependencies, report queue and retests due."
+    },
+    {
+      "role": "Consultant",
+      "question": "What is mine this week?",
+      "sees": "My engagements, scope and client dependencies, evidence I own and findings to write up."
+    },
+    {
+      "role": "Account manager",
+      "question": "What does my client need to know?",
+      "sees": "Open findings, retainer hours, renewals and promises made to the client."
+    },
+    {
+      "role": "Finance owner",
+      "question": "What is done and not billed?",
+      "sees": "Milestones, hours worked, retainer overage and invoices overdue."
+    }
   ],
-  intelligenceNote: 'Verity records the practice’s operations. Scanners, monitoring and analysis tooling continue as they are.',
-
-  rolesHeading: 'One practice, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Founder', question: 'Is the practice delivering and earning?', focus: 'Remediation closure by client, engagement margin, analyst utilisation, triage load.' },
-    { role: 'Practice lead', question: 'What is overdue and unescalated?', focus: 'Commitment ageing by severity, escalations outstanding, engagement schedule, analyst capacity.' },
-    { role: 'Analyst', question: 'What am I assessing?', focus: 'Triage queue, assigned assessments, finding history for the client, verification tasks.' },
-    { role: 'Client manager', question: 'What does this client need to see?', focus: 'Open findings, commitments, escalation history, audit evidence, scope position.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your testing and scanning tools",
+      "Your reporting templates and findings tools if you like them",
+      "Your accounts software and accountant",
+      "Your ticket or chat tools for client calls"
+    ],
+    "not": [
+      "Test, scan or monitor any system",
+      "Store client credentials or secrets for testing",
+      "Send messages to clients on its own",
+      "Give legal, audit or security advice"
+    ],
+    "migration": "We bring your clients, engagements, consultants, open findings and retainers across from the documents, sheets and tools you use now, in stages, so engagements keep running while it happens."
+  },
+  "faqHeading": "Questions security firm owners ask.",
+  "faqs": [
+    [
+      "My consultants hate admin. Will they use it?",
+      "It only works if recording takes seconds, so we set it up around the notes and templates they already use. They get a clear view of their week, the scope they were sold and what the client owes them."
+    ],
+    [
+      "Can it replace my findings or reporting tool?",
+      "It can hold findings, severity and status, and it tracks retests and follow-ups. If you prefer a specialist reporting tool, we agree during setup how findings reach Verity so status and retests are tracked in one place."
+    ],
+    [
+      "Does it run or monitor tests?",
+      "No. Verity does not scan or test any system. It records engagements, findings, people and hours."
+    ],
+    [
+      "Can it hold client evidence safely?",
+      "It attaches evidence to the engagement with access limited by role and a retention date, and it records who viewed or changed it. It does not replace your own security controls and it is not a place to store client credentials."
+    ],
+    [
+      "Can it help with the CERT-In reporting rules?",
+      "It records your own incident steps, owners and log checks as tasks with dates. It does not report on your behalf and it does not give legal advice."
+    ],
+    [
+      "Can I see utilisation across offices?",
+      "Yes. Each office is a location in one system, and consultants, engagements and margins can be compared side by side."
+    ],
+    [
+      "Can it send reports to clients?",
+      "Not by itself. It tracks report review and release, and your team sends the report and records the date."
+    ],
+    [
+      "Who can see what?",
+      "Only the people you allow. Access is set by role and by engagement, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of users and what you want set up. Message us and we will give you a clear number after a short conversation about how your firm runs."
+    ]
   ],
-
-  useCasesHeading: 'What cybersecurity companies use Verity for',
-  useCases: [
-    { name: 'Tracking findings past the report', body: 'Every finding carrying state, client owner, commitment date and verification, so the service continues after the deliverable is issued.' },
-    { name: 'Escalating overdue remediation', body: 'Commitments ageing with escalation to a named client contact, which is the part of the job most often left to a quarterly review.' },
-    { name: 'Measuring triage load', body: 'Analyst time attributed to triage against assessment with false positives recorded by source, making the practice’s cost structure visible and reducible.' },
-    { name: 'Producing audit evidence', body: 'Findings, reports, escalations and verification retained per client, so an audit request is answered from one record.' },
-    { name: 'Protecting fixed-fee margin', body: 'Scoped against delivered hours per engagement, so expanding testing becomes a scope conversation rather than absorbed work.' },
-    { name: 'Recognising recurrence', body: 'Findings linked across assessments, so an issue found again is reported as recurrence rather than as a new discovery.' },
-    { name: 'Asking about the practice', body: 'Plain-language questions across findings, remediation, analyst time and engagements, with escalations raised in the same step.' },
+  "related": [
+    "it-services-companies",
+    "software-agencies",
+    "data-companies",
+    "ai-companies",
+    "saas-companies",
+    "consulting-firms"
   ],
-
-  migration: 'Scanners, monitoring and analysis tooling continue and are mapped during implementation. Clients and environments, open findings with severities and commitments, engagement history, report archives and analyst records are brought across.',
-
-  faqHeading: 'Questions cybersecurity companies ask',
-  faqs: [
-    ['What can AI software do for a cybersecurity company?', 'Verity AI answers questions from your own finding, engagement, client and time records: which findings are past their remediation commitment, which clients have the most overdue critical issues, how much analyst time went to triage, which findings have recurred. Each answer can become an escalation or a scope conversation.'],
-    ['Why track findings after the report?', 'Because the client is paying for issues to be resolved, not for a document. The security company usually cannot perform the fix, which makes tracking, escalation and verification the actual service rather than an administrative extra.'],
-    ['How does it help with analyst economics?', 'Time is attributed to triage against assessment, and false positives are recorded against the source that produced them. That turns a general sense of noise into a measurable load that can be reduced per client and per source.'],
-    ['Can it produce audit evidence?', 'Findings, reports, escalation history and verification are retained per client and finding, so when a client’s own audit asks what was found and what was done, the answer is assembled from one record rather than several tools.'],
-    ['Does it protect engagement margin?', 'Scoped hours and delivered hours are compared per engagement, so testing that expands during delivery surfaces as a scope or billing conversation instead of being absorbed inside a fixed fee.'],
-    ['Does it replace our scanners and tooling?', 'No. Scanners, monitoring platforms and analysis tooling continue as they are. Verity holds the practice around them — findings, engagements, clients, commitments, evidence and analyst time.'],
-    ['How does it handle recurrence?', 'Findings link across assessments for the same client and asset, so an issue that reappears is visible as recurrence, which changes both the report and the conversation about root cause.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of engagement types, finding severities, commitment practice and evidence requirements, configuration, migration of clients and open findings, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with findings past their date.',
-  ctaLede: 'That is the part of the service that continues after the report. Tell us how remediation is tracked today.',
-
-  related: ['it-services-companies', 'data-companies', 'saas-companies', 'software-agencies', 'consulting-firms', 'ai-companies'],
+  "ctaHeading": "Find out which findings are still open.",
+  "ctaLede": "Tell us how your firm runs and we will show you the clashing bookings, open critical findings and retainers near their limit it would find, using your own numbers."
 };
