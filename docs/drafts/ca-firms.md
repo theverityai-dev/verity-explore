@@ -136,8 +136,8 @@ Lede: These are the situations partners and managers of CA practices describe ag
 
 ### 10. Fees billed late and work done on assurances
 - area: Money
-- scene: A client's annual retainer and tax filing are billed after the return is filed. An audit client gets the report before the fee is settled.
-- cost: Cash tied up in receivables and little leverage after the work is done. Example arithmetic: ₹22 lakh outstanding over 90 days is cash the firm has lent without interest.
+- scene: A client's annual retainer and tax return work are billed after the return is filed. An audit client gets the report before the fee is settled.
+- cost: Cash tied up in receivables and little pull after the work is done. Example arithmetic: ₹22 lakh outstanding over 90 days is cash the firm has lent without interest.
 - fix: Each assignment has its fee terms and invoice dates. Verity raises invoice tasks at the agreed stage, ages unpaid invoices by client and shows the partner the follow-up list with reminders noted. The firm bills and collects; Verity tracks it.
 - screen: fees
 

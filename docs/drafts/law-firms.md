@@ -3,7 +3,7 @@ slug: law-firms
 name: Law Firms
 industry: Professional Services
 status: researched
-checked: 16 October 2026
+checked: 15 October 2026
 ---
 
 # Law Firms
