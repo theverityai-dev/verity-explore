@@ -1,539 +1,936 @@
 export default {
-  slug: 'saas-companies',
-  status: 'published',
-  plural: 'SaaS companies',
-  subject: 'SaaS business',
-
-  seo: {
-    title: 'AI business management software for SaaS companies | Verity',
-    description:
-      'Verity connects onboarding, support load against plan, renewal risk, expansion, contract terms and collections into one operational system for SaaS businesses.',
-    keywords: [
-      'AI software for SaaS companies',
-      'SaaS operations management software',
-      'customer onboarding and renewal risk tracking',
-      'support load and account profitability software',
-    ],
+  "schema": 2,
+  "slug": "saas-companies",
+  "status": "published",
+  "plural": "SaaS companies",
+  "subject": "SaaS company",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "SaaS company operations software: renewals, support, roadmap | Verity",
+    "description": "The 14 problems that drain a SaaS company, from at-risk accounts and missed renewals to support SLAs and promises beyond the roadmap, and the Verity screens that fix them.",
+    "keywords": [
+      "SaaS company operations software India",
+      "customer success and renewal tracking",
+      "support ticket SLA tracking",
+      "feature request tracking by account",
+      "SaaS metrics and compliance evidence"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for SaaS',
-    headline: 'You instrument the product beautifully and run the company on four disconnected tools.',
-    lede:
-      'Onboarding, support load, renewal risk, contract terms and collections all live apart. Verity puts the customer’s whole commercial and operational history on one record.',
-    note: 'Verity runs the company around the product. Your product analytics stay where they are.',
-    panel: {
-      title: 'Accounts',
-      meta: 'All customers · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active accounts', value: '186', note: '₹14.2 Cr ARR' },
-        { label: 'Renewals in 90 days', value: '38', note: '9 flagged at risk' },
-        { label: 'Onboarding overdue', value: '11', note: 'past target go-live' },
-        { label: 'Support above plan', value: '14 accounts', note: 'cost exceeds fee' },
-      ],
-      rows: [
-        { name: '9 renewals at risk inside 90 days', meta: 'Low onboarding completion and high ticket volume', active: true },
-        { name: '11 accounts past their target go-live date', meta: 'Strongest predictor of first-year churn', active: true },
-        { name: '14 accounts where support cost exceeds their fee', meta: 'Concentrated in one plan tier', active: true },
-        { name: 'Expansion opportunities unworked', meta: '23 accounts at usage limits', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own accounts in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for SaaS companies",
+    "headline": "Your product ships every week. Your customers leave one quiet month at a time.",
+    "lede": "A SaaS company grows on renewals, not on the launch. The signals that a customer is slipping are spread across the support inbox, the billing system, the product dashboard and the founders' memory. Verity ties each customer, ticket, request, renewal and promise into one record so you can act before the cancellation email.",
+    "oneLine": "One system that shows every account, what they asked for, what they were promised, when they renew and whether they are at risk.",
+    "note": "Built for a team that already lives in a product tool, a support tool and a billing tool. Verity does not replace them. It joins what they know about each customer.",
+    "screen": "owner",
+    "screenNote": "accounts, plans, tickets and releases"
   },
-
-  overview: {
-    heading: 'The product is measured continuously. The business around it is not.',
-    paragraphs: [
-      'A SaaS company knows more about its product than almost any other kind of business knows about anything. Events, funnels, cohorts and feature adoption are instrumented carefully. What is usually not instrumented is the company: how long onboarding actually takes, which accounts consume support far beyond their fee, which renewals are at risk and why, and what was actually promised in the contract that sales closed.',
-      'Onboarding is the clearest example. Time to first value is the strongest predictor of first-year retention, and it is delivered as a project by a team using a checklist in a document. Eleven accounts past their target go-live is eleven renewals already compromised, and the renewal conversation is eleven months away.',
-      'Support load is the second. Every SaaS business has accounts that consume several times the support their plan assumes, and the cost is absorbed into a general support budget rather than attributed to the account. Fourteen accounts costing more to serve than they pay is a pricing decision that cannot be made without the number.',
-      'The third is that renewal risk is knowable from operational signals — onboarding completion, support volume and sentiment, sponsor changes, unworked expansion — and those signals live in four different tools.',
-      'The fourth is that contract terms and what sales actually promised diverge, and the difference surfaces during a renewal negotiation.',
-      'Verity holds the account, its contract, its onboarding, its support history and its renewal position on one record.',
+  "today": {
+    "heading": "Most SaaS teams can tell you their sign-ups. Few can tell you which customers are about to leave.",
+    "paragraphs": [
+      "Each tool sees one slice. Billing knows who paid, support knows who complained, the product knows who logged in and sales knows what was promised. Nobody sees the same customer at once.",
+      "Customer success is often the founders and one or two people. The renewal date sits in a spreadsheet, the contract in an email and the open request in a chat.",
+      "Industry benchmarks show how much the customer mix matters. One vendor reports average annual churn of 4.9 percent for B2B SaaS, but 30 to 58 percent for SMB SaaS, so a company selling to small businesses has to watch its accounts far more closely."
     ],
+    "stack": [
+      "Product analytics",
+      "Support inbox or helpdesk",
+      "Billing or subscription tool",
+      "Spreadsheet of renewals",
+      "Founders' memory and chat groups"
+    ],
+    "stackNote": "Each tool is good at its job. None of them says which accounts are at risk, what they were promised or what is waiting for them."
   },
-
-  terminology: [
-    ['Accounts, subscriptions, plans', 'Records'],
-    ['Onboarding, implementation, training', 'Work'],
-    ['Customers, sponsors, users', 'Relationships'],
-    ['Support tickets, escalations, requests', 'Workflows'],
-    ['Customer success, support, implementation', 'People'],
-    ['Renewals, expansion, churn', 'Intelligence'],
-    ['Regions, segments, tiers', 'Locations'],
+  "painsHeading": "Where a SaaS company loses customers and time.",
+  "painsLede": "These are the situations SaaS founders and customer success leads describe. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Customers",
+      "title": "At-risk accounts are invisible until they cancel",
+      "scene": "A customer's logins have halved, two tickets are open and the champion left the company. Each fact sits in a different tool, and nobody puts them together.",
+      "cost": "Example arithmetic: with 200 customers at ₹60,000 a year, losing 10 more than planned is ₹6 lakh of yearly recurring revenue, usually found at the renewal.",
+      "fix": "Each account has a record that collects its plan, usage notes, open tickets, requests and contacts. You mark accounts at risk with a reason, and Verity lists them by revenue and renewal date.",
+      "screen": "accounts"
+    },
+    {
+      "area": "Renewals",
+      "title": "Renewals are chased late or not at all",
+      "scene": "A contract renews in three weeks. Nobody has talked to the customer since onboarding, and the price uplift was never discussed.",
+      "cost": "Surprise cancellations, discounts given in a rush and renewals at the old price when a rise was due.",
+      "fix": "Each contract has a renewal date, a value and an owner. Verity lists renewals in the next 90 days with a task at 60 and 30 days, and records the outcome.",
+      "screen": "renewals"
+    },
+    {
+      "area": "Onboarding",
+      "title": "Onboarding stalls and the customer never goes live",
+      "scene": "A customer signs, attends one kickoff and does not set up the integration. A month later they are paying and not using it.",
+      "cost": "A customer who sees no value and cancels at the first renewal, however good the product is.",
+      "fix": "Each new account has an onboarding checklist with an owner and dates. Verity flags accounts that have not reached each step on time and records why.",
+      "screen": "accounts"
+    },
+    {
+      "area": "Support",
+      "title": "Support tickets breach the promise and nobody notices",
+      "scene": "A customer on a premium plan has waited 30 hours for a reply to a problem. The helpdesk shows the ticket, but nobody has the plan or the promised response time next to it.",
+      "cost": "An unhappy paying customer and a support team that works the loudest tickets rather than the most important ones.",
+      "fix": "Each ticket is linked to its account and plan, and the promised response time is on it. Verity warns before a breach and lists tickets over the limit by account value.",
+      "screen": "support"
+    },
+    {
+      "area": "Support",
+      "title": "The same bug is reported again and again",
+      "scene": "Six customers report the same export failure on different days. Each is answered one by one and nobody connects them to a single fix.",
+      "cost": "Support hours repeated, an engineer interrupted six times and customers who feel ignored.",
+      "fix": "Tickets that describe the same problem are linked to one issue. Verity shows how many customers and how much revenue an issue touches, so it is prioritised by impact.",
+      "screen": "support"
+    },
+    {
+      "area": "Product",
+      "title": "Feature requests are scattered and unweighted",
+      "scene": "Requests arrive in calls, emails and chats. The loudest customer wins, and the roadmap follows the last conversation.",
+      "cost": "Features built for one account and a product that drifts, while a request from ten customers waits.",
+      "fix": "Each request is a record linked to the accounts that asked and their revenue. Verity ranks requests by number of accounts and value, and records the decision and the reason.",
+      "screen": "requests"
+    },
+    {
+      "area": "Product",
+      "title": "Sales promises outrun the roadmap",
+      "scene": "A salesperson tells a prospect a feature \"is coming next quarter\". It is in nobody's plan. After signing, the customer asks for it.",
+      "cost": "A customer who feels misled, a founder in an awkward call and an unplanned scramble for an engineer.",
+      "fix": "Promises made in a deal are recorded against the account and linked to a roadmap item or marked as not planned. Verity lists promises due and promises without a plan.",
+      "screen": "requests"
+    },
+    {
+      "area": "Support",
+      "title": "Incidents are fixed but customers are not told or credited",
+      "scene": "An outage lasts three hours. Engineers fix it and move on. Some customers are told, some are not, and credits are promised on a call and forgotten.",
+      "cost": "Lost trust and disputes over invoices months later.",
+      "fix": "Each incident is a record with the affected accounts, the updates sent, the cause and any credit promised. Verity lists credits owed and accounts not yet informed.",
+      "screen": "support"
+    },
+    {
+      "area": "Money",
+      "title": "Failed payments and unpaid invoices are chased by hand",
+      "scene": "A card fails, a UPI mandate expires or a company pays late. The billing tool records the failure and nobody in customer success knows.",
+      "cost": "Revenue that is owed but not collected, and customers who lapse by accident rather than by choice.",
+      "fix": "Overdue invoices and failed payments are tasks on the account with an owner and a history of contacts. Verity lists them by amount and age. Billing stays in your billing tool.",
+      "screen": "renewals"
+    },
+    {
+      "area": "Money",
+      "title": "Payments from foreign customers need their own tracking",
+      "scene": "Much of the revenue comes from overseas customers paying in dollars. Invoices, payment dates and bank credits have to be matched by someone.",
+      "cost": "A missed payment that is noticed late, and paperwork the bank asks for months afterwards. Nasscom reported that about 75 percent of India's SaaS revenue came from global sales in FY2020, so this is the norm for many Indian SaaS companies.",
+      "fix": "Foreign-currency invoices are recorded against the account with their dates. Verity shows what is outstanding, what has been realised and the days since the invoice, so the finance owner can follow up and keep bank records straight.",
+      "screen": "renewals",
+      "source": {
+        "name": "The News Minute on Nasscom, FY2020 data",
+        "url": "https://www.thenewsminute.com/atom/indias-saas-industry-achieved-35-billion-revenue-fy2020-nasscom-129351"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Security questionnaires and compliance evidence take weeks",
+      "scene": "A large prospect sends a 200-question security questionnaire. The answers live in different people's heads, and evidence for policies is in a folder nobody has opened for a year.",
+      "cost": "A deal that stalls for weeks while engineers and founders hunt for answers.",
+      "fix": "Policies, certificates, past answers and evidence are records with owners and dates. Verity lists what is due for review and keeps past questionnaire answers ready to reuse.",
+      "screen": "compliance"
+    },
+    {
+      "area": "Customers",
+      "title": "Expansion is left to chance",
+      "scene": "A customer hits the seat limit and keeps using the product with extra people. Nobody notices until the next renewal.",
+      "cost": "Revenue that could have been earned a year earlier, and a customer who might have been happy to pay more.",
+      "fix": "Usage notes and plan limits sit on the account. Verity lists accounts near their limits and gives the account owner a task to talk about the next plan.",
+      "screen": "accounts"
+    },
+    {
+      "area": "Owner",
+      "title": "Business numbers are assembled by hand each month",
+      "scene": "At month end someone exports billing data, adds a spreadsheet of cancellations and works out recurring revenue, churn and net retention. The numbers differ depending on who did it.",
+      "cost": "Hours of founder time and decisions based on a number that nobody fully trusts. Benchmarks for churn differ widely by customer size, so your own number matters more than an industry one.",
+      "fix": "Accounts, plans, contracts and cancellations are records, so recurring revenue, churn and expansion are calculated from them the same way each time.",
+      "screen": "owner",
+      "source": {
+        "name": "Vena Solutions, Sept 2025",
+        "url": "https://www.venasolutions.com/blog/saas-churn-rate"
+      }
+    },
+    {
+      "area": "Owner",
+      "title": "The founders are the system",
+      "scene": "One founder remembers which customers are fragile, which promises are pending and which renewals matter. When they travel, nothing moves.",
+      "cost": "The company cannot add customer success staff, or a second product line, without losing context.",
+      "fix": "Each morning Verity shows what needs a decision, each item with an owner. A second product or region becomes a location in the same system.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'Operational signals that predict revenue, sitting in separate tools.',
-  challengesLede:
-    'SaaS difficulties come from company operations being far less instrumented than the product.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The churn figures are from a software vendor's blog and range widely by customer size. The Nasscom figure is from FY2020, so it is old, and the AI figure was seen only in search result wording because the source page had an expired certificate. They show the scale of the issues, not what your company will see.",
+  "facts": [
     {
-      problem: 'Onboarding runs long and nobody owns the date',
-      detail:
-        'Implementation is delivered from a checklist, target go-live dates slip, and the connection to first-year churn is understood in principle and not tracked in practice.',
-      outcome:
-        'Onboarding is work with milestones, owners and a target date, so overdue accounts surface while intervention is possible.',
+      "figure": "4.9%",
+      "text": "average annual churn for B2B SaaS in 2025 by one vendor's benchmark, with a quoted range of 3.5 to 5 percent a year.",
+      "source": {
+        "name": "Vena Solutions, 2025",
+        "url": "https://www.venasolutions.com/blog/saas-churn-rate"
+      }
     },
     {
-      problem: 'Support cost is not attributed to accounts',
-      detail:
-        'Ticket volume is measured in aggregate, so accounts consuming several times their plan’s assumption are invisible.',
-      outcome:
-        'Support effort is recorded against the account, so cost to serve against fee is a number per account.',
+      "figure": "30% to 58%",
+      "text": "annual churn for SMB-focused SaaS in the same benchmark, against 10 percent or less for enterprise SaaS.",
+      "source": {
+        "name": "Vena Solutions, 2025",
+        "url": "https://www.venasolutions.com/blog/saas-churn-rate"
+      }
     },
     {
-      problem: 'Renewal risk is assessed at renewal',
-      detail:
-        'The signals that predict churn exist months earlier, in onboarding completion, support volume and sponsor changes, and are reviewed at the renewal date.',
-      outcome:
-        'Risk indicators aggregate on the account continuously, so renewals are worked by risk rather than by date.',
+      "figure": "75%",
+      "text": "of India's SaaS industry revenue that came from global sales in FY2020, according to Nasscom.",
+      "source": {
+        "name": "The News Minute, 2020",
+        "url": "https://www.thenewsminute.com/atom/indias-saas-industry-achieved-35-billion-revenue-fy2020-nasscom-129351"
+      }
     },
     {
-      problem: 'Expansion opportunities go unworked',
-      detail:
-        'Accounts at usage limits or with adjacent needs are identified by product data and never turned into assigned work.',
-      outcome:
-        'Expansion signals become tasks assigned to an owner with the account history attached.',
-    },
-    {
-      problem: 'What sales promised is not what the contract says',
-      detail:
-        'Commitments made during a sales process are honoured by delivery and never recorded, and they resurface at renewal.',
-      outcome:
-        'Contract terms and any commitments made are recorded on the account and visible to whoever delivers.',
-    },
-    {
-      problem: 'Collections are chased inconsistently',
-      detail:
-        'Subscription invoices go unpaid while service continues, and follow-up depends on who notices.',
-      outcome:
-        'Balances age on the account with contact history and a consistent policy applied.',
-    },
+      "figure": "About 92%",
+      "text": "of surveyed Indian SaaS startups had added AI features in the past year, in a Bessemer survey reported by IndiaAI, which adds more to build, support and explain.",
+      "source": {
+        "name": "IndiaAI, 2024",
+        "url": "https://indiaai.gov.in/article/90-of-early-stage-indian-software-startups-introduced-ai-features-in-the-past-year-bessemer"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system for the company around the product.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each for one job. Accounts, plans, tickets and releases are set up in your own terms.",
+  "screens": [
     {
-      id: 'records',
-      title: 'Accounts, subscriptions and contract terms',
-      line:
-        'Each account is a record with its plan, contract terms, commitments made, renewal date, value and history.',
-      why:
-        'The contract and the commitments around it are the only definition of what the company owes the customer.',
-      example:
-        'A commitment made during the sales process, recorded and visible to the implementation team.',
+      "id": "owner",
+      "title": "Company / This week",
+      "meta": "All accounts",
+      "heading": "The founder's weekly view",
+      "caption": "Recurring revenue, accounts at risk, renewals coming, tickets over limit and promises due on one screen, with the items that need a decision listed below.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Recurring revenue",
+              "value": "₹18.6 L",
+              "note": "per month"
+            },
+            {
+              "label": "At risk",
+              "value": "11",
+              "note": "accounts, ₹1.9 L a month"
+            },
+            {
+              "label": "Renewals, 60 days",
+              "value": "24",
+              "note": "₹6.4 L a month"
+            },
+            {
+              "label": "Tickets over limit",
+              "value": "3",
+              "note": "premium plan"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Revenue by account size"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Enterprise",
+              "value": 48,
+              "display": "48%"
+            },
+            {
+              "label": "Mid-market",
+              "value": 34,
+              "display": "34%"
+            },
+            {
+              "label": "SMB",
+              "value": 18,
+              "display": "18%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Three promises made in deals are due this month with no roadmap item.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Security questionnaire for Acme Corp",
+              "meta": "Due Friday, 62 of 140 answered",
+              "tag": [
+                "Assign",
+                "flag",
+                "Assigned",
+                "ok"
+              ]
+            },
+            {
+              "name": "Outage credit for Beta Labs",
+              "meta": "Promised on a call, 12 Oct",
+              "tag": [
+                "Owed",
+                "late"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'work',
-      title: 'Onboarding, implementation and training',
-      line:
-        'Onboarding is work with milestones, owners, a target go-live date, dependencies and a state.',
-      why:
-        'Time to first value is the strongest retention lever a SaaS business has, and it is usually run from a document.',
-      example:
-        'Eleven accounts past target go-live, each showing the milestone it is stuck at and who owns it.',
+      "id": "accounts",
+      "title": "Accounts",
+      "meta": "By risk and renewal",
+      "heading": "Every customer in one record and one list",
+      "caption": "Plan, usage notes, open tickets, onboarding stage and renewal date for each account. At-risk accounts are listed first by revenue.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Account",
+            "Plan",
+            "Renewal",
+            "Health",
+            "Next step"
+          ],
+          "rows": [
+            [
+              "Acme Corp",
+              "Enterprise",
+              "14 Dec",
+              [
+                "At risk",
+                "late",
+                "Call booked",
+                "ok"
+              ],
+              "Exec review"
+            ],
+            [
+              "Beta Labs",
+              "Mid-market",
+              "2 Nov",
+              [
+                "Credit owed",
+                "flag"
+              ],
+              "Apply credit"
+            ],
+            [
+              "Gamma Retail",
+              "SMB",
+              "28 Oct",
+              [
+                "Not onboarded",
+                "late"
+              ],
+              "Setup call"
+            ],
+            [
+              "Delta Foods",
+              "Mid-market",
+              "19 Jan",
+              [
+                "Healthy",
+                "ok"
+              ],
+              "Upsell, near seat limit"
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Support tickets, escalations and requests',
-      line:
-        'Support is workflow with priority, effort, owner and resolution, recorded against the account.',
-      why:
-        'Support effort per account is the missing half of account profitability.',
-      example:
-        'Fourteen accounts where recorded support effort costs more than the account pays.',
+      "id": "renewals",
+      "title": "Renewals",
+      "meta": "Next 90 days",
+      "heading": "Renewals, payments and foreign receivables",
+      "caption": "Renewals with owners and outcomes, failed or late payments and foreign-currency invoices outstanding with days since sent.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "In 30 days",
+              "cards": [
+                {
+                  "title": "Gamma Retail, ₹48,000",
+                  "meta": "Owner Ritu, not onboarded",
+                  "tag": [
+                    "Risk",
+                    "late"
+                  ]
+                },
+                {
+                  "title": "Beta Labs, ₹3.2 L",
+                  "meta": "Owner Karan, credit owed",
+                  "tag": [
+                    "Talk",
+                    "flag",
+                    "Renewed",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "30 to 60 days",
+              "cards": [
+                {
+                  "title": "Acme Corp, ₹14 L",
+                  "meta": "Owner Meera, uplift 8%",
+                  "tag": [
+                    "Plan",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Payments to chase",
+              "cards": [
+                {
+                  "title": "Foxtail Inc, $4,200",
+                  "meta": "Invoice 61 days old, USD",
+                  "tag": [
+                    "Chase",
+                    "late",
+                    "Paid",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Zenith Co, ₹36,000",
+                  "meta": "Card failed twice",
+                  "tag": [
+                    "Retry",
+                    "flag"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Customers, sponsors and users',
-      line:
-        'Accounts carry their sponsors, contacts, sentiment, escalation history and communications.',
-      why:
-        'A sponsor leaving is one of the strongest churn predictors and is usually noticed at renewal.',
-      example:
-        'A sponsor change recorded against the account, raising a relationship task immediately.',
+      "id": "support",
+      "title": "Support",
+      "meta": "By account value",
+      "heading": "Tickets, SLAs and incidents",
+      "caption": "Tickets with the plan and the promised response time, issues linked to the customers they touch, and incidents with credits owed.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Ticket",
+            "Account",
+            "Plan",
+            "Age",
+            "Status"
+          ],
+          "rows": [
+            [
+              "T-8812 Export fails",
+              "Acme Corp",
+              "Enterprise",
+              "30 h",
+              [
+                "Over SLA",
+                "late",
+                "Answered",
+                "ok"
+              ]
+            ],
+            [
+              "T-8820 Login error",
+              "Delta Foods",
+              "Mid-market",
+              "6 h",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "T-8824 Export fails",
+              "Beta Labs",
+              "Mid-market",
+              "4 h",
+              [
+                "Linked to issue 311",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Issue 311 (export fails) affects 9 accounts and ₹3.1 L a month. 6 tickets are linked.",
+          "action": "Prioritise"
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Customer success, support and implementation',
-      line:
-        'The team is modelled once, and every onboarding milestone, ticket and renewal carries who owns it.',
-      why:
-        'Retention outcomes vary by the person delivering onboarding and by support responsiveness.',
-      example:
-        'Retention among accounts onboarded by each implementation owner.',
+      "id": "requests",
+      "title": "Requests",
+      "meta": "By accounts and revenue",
+      "heading": "Requests and promises against the roadmap",
+      "caption": "Feature requests ranked by how many accounts asked and how much revenue they hold, and promises made in deals matched to the roadmap.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Request",
+            "Accounts",
+            "Revenue",
+            "Roadmap",
+            "Decision"
+          ],
+          "rows": [
+            [
+              "Bulk export to Excel",
+              "9",
+              "₹3.1 L",
+              "Q4",
+              [
+                "Planned",
+                "ok"
+              ]
+            ],
+            [
+              "Role-based access",
+              "7",
+              "₹5.4 L",
+              "None",
+              [
+                "Decide",
+                "late",
+                "Planned Q1",
+                "ok"
+              ]
+            ],
+            [
+              "Hindi interface",
+              "4",
+              "₹0.9 L",
+              "None",
+              [
+                "Backlog",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Promise to Acme Corp: SSO by December",
+              "meta": "Made by Karan, 3 Sep",
+              "tag": [
+                "No plan",
+                "late",
+                "Scoped",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'intelligence',
-      title: 'Retention, cost-to-serve and renewal reporting',
-      line:
-        'Onboarding time to value, support cost per account, renewal risk, expansion signals, churn reasons and collections come from the operational records.',
-      why:
-        'Product analytics tell you what users do. This tells you what the company earns and spends serving them.',
-      example:
-        'Cost to serve against fee by plan tier, which frequently changes pricing.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the account base a question',
-      line:
-        'Verity AI answers from your own account, onboarding, support and renewal records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking cross onboarding, support and commerce, which is exactly what separate tools prevent.',
-      example:
-        '"Which renewals inside ninety days are at risk and why?" returns nine with the signals named.',
-    },
-    {
-      id: 'communication',
-      title: 'Account history in one place',
-      line:
-        'Escalations, commitments, updates and reviews attach to the account they concern.',
-      why:
-        'A renewal negotiation is conducted against a year of history that currently lives in several inboxes.',
-      example:
-        'Every escalation and its resolution, visible before the renewal conversation.',
-    },
-    {
-      id: 'control',
-      title: 'Discounts, terms and access',
-      line:
-        'One permission model and one audit trail, with discounts, term exceptions and credits recorded.',
-      why:
-        'Discounting to close and crediting to retain both erode realised revenue quietly.',
-      example:
-        'A retention credit recorded as an approval with the account’s support history attached.',
-    },
-    {
-      id: 'locations',
-      title: 'Regions, segments and tiers',
-      line:
-        'Segments and regions roll into the business, with accounts and reporting following the same structure.',
-      why:
-        'Cost to serve and retention vary sharply by segment, and only identical recording makes them comparable.',
-      example:
-        'Retention and cost to serve by plan tier and segment.',
-    },
+      "id": "compliance",
+      "title": "Compliance",
+      "meta": "Policies and questionnaires",
+      "heading": "Security evidence and questionnaires",
+      "caption": "Policies, certificates and past answers with owners and review dates, and open customer questionnaires with what is still unanswered.",
+      "blocks": [
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Information security policy reviewed",
+              "meta": "Due 30 Nov, Ritu",
+              "done": false
+            },
+            {
+              "text": "Access review, quarterly",
+              "meta": "Done 2 Oct",
+              "done": true
+            },
+            {
+              "text": "Penetration test report",
+              "meta": "Valid until Feb",
+              "done": true
+            },
+            {
+              "text": "Data processing terms for new customers",
+              "meta": "Template updated",
+              "done": true
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Questionnaire for Acme Corp has 78 of 140 answers still open, due Friday.",
+          "action": "Assign"
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'The customer lifecycle as records.',
-  workflowsLede:
-    'These already happen across several tools. On one record they become a lifecycle.',
-  workflows: [
+  "dayHeading": "The same Wednesday, before and after.",
+  "dayLede": "The product ships the same way. What changes is that every customer signal ends up in the same record.",
+  "day": [
     {
-      name: 'Close to onboarding',
-      steps: [
-        'Account created with plan, contract terms and commitments made',
-        'Onboarding project opened with milestones and a target go-live',
-        'Owner assigned and dependencies on the customer identified',
-        'Progress tracked against the target date',
-        'Go-live recorded and time to value measured',
-      ],
-      note:
-        'Recording what sales committed is what stops delivery discovering it at the first review.',
+      "time": "9:30",
+      "before": "The founder skims email and three dashboards to see what is wrong.",
+      "after": "The week screen lists at-risk accounts, renewals due and tickets over limit."
     },
     {
-      name: 'Support and cost to serve',
-      steps: [
-        'Tickets recorded against the account with effort',
-        'Escalations raised and resolved with causes recorded',
-        'Effort aggregated as cost to serve',
-        'Accounts above their plan assumption flagged',
-        'Pricing or scope conversation raised at renewal',
-      ],
-      note:
-        'Support effort per account is the number that turns account profitability from a guess into a decision.',
+      "time": "11:00",
+      "before": "A premium customer waits a day and a half for an answer.",
+      "after": "A warning came at 20 hours with the plan and the promised time on the ticket."
     },
     {
-      name: 'Renewal risk',
-      steps: [
-        'Risk signals aggregated — onboarding completion, support volume, sentiment, sponsor change',
-        'Accounts scored ahead of their renewal date',
-        'Intervention assigned by risk rather than by date',
-        'Outcome recorded with the reason either way',
-        'Churn reasons aggregated for the product and go-to-market teams',
-      ],
-      note:
-        'Working renewals by risk rather than by date order is what makes the same effort retain more revenue.',
+      "time": "1:00",
+      "before": "Sales promises a feature to close a deal.",
+      "after": "The promise is recorded against the account and shown against the roadmap."
     },
     {
-      name: 'Expansion',
-      steps: [
-        'Usage or need signal identified against the account',
-        'Opportunity created with an owner',
-        'Account history and support position attached',
-        'Conversation held and outcome recorded',
-        'Contract updated where expansion closes',
-      ],
-      note:
-        'An expansion signal that does not become assigned work is a report nobody acts on.',
+      "time": "3:30",
+      "before": "A security questionnaire arrives and engineers drop what they are doing.",
+      "after": "Past answers and evidence are in one place, and the open ones are assigned."
     },
     {
-      name: 'Sponsor change',
-      steps: [
-        'Sponsor change recorded against the account',
-        'Relationship task raised immediately',
-        'New sponsor briefed with the account history',
-        'Risk position updated',
-        'Outcome recorded ahead of renewal',
-      ],
-      note:
-        'A sponsor leaving is one of the strongest churn predictors and is usually discovered too late.',
+      "time": "5:30",
+      "before": "A foreign customer's invoice is two months old and nobody noticed.",
+      "after": "The invoice was on the chase list at 30 days with a task for the finance owner."
     },
     {
-      name: 'Collections',
-      steps: [
-        'Subscription invoices raised on the contract schedule',
-        'Balances aged from the due date',
-        'Follow-up assigned with account history attached',
-        'Policy applied consistently at thresholds',
-        'Payment recorded and the position updated',
-      ],
-      note:
-        'Consistent policy is easier to apply and easier to defend than case-by-case decisions.',
-    },
+      "time": "Month end",
+      "before": "Someone builds the churn and revenue numbers by hand.",
+      "after": "The numbers come from the account records the same way every month."
+    }
   ],
-
-  ai: {
-    heading: 'Ask what the product data cannot tell you.',
-    lede:
-      'Verity AI reads the same account, onboarding, support and renewal records the company creates as it operates. It answers from your own business, respects permissions, and can turn an answer into assigned work.',
-    panelMeta: 'Grounded in your account records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which renewals inside ninety days are at risk, and on what signals?',
-      'Which accounts are past their target go-live date?',
-      'Which accounts cost more to serve than they pay?',
-      'Where have sponsors changed without a relationship task raised?',
-      'Which expansion signals are unworked?',
-      'What is time to first value by segment and implementation owner?',
-      'What reasons were recorded for churn this year?',
-      'Which balances are outstanding while service continues?',
-      'Summarise renewal risk and cost to serve.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your customers, support and releases actually flow, build Verity around that, bring your data in, then stay on to keep it working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day with your founders, customer success and support leads. Follow a customer from sale to renewal, and map your billing, support, product and planning tools.",
+        "you": "A few hours from you and your customer success lead. A list of customers with plans and renewal dates, and a sample of tickets and requests.",
+        "get": "A written map of how accounts, tickets, requests and renewals run today and the problems to fix first."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up accounts and plans, renewal and onboarding stages, support rules and promised response times, issue and request records, compliance evidence and approvals.",
+        "you": "Check the stages, plan limits and response times with your support lead.",
+        "get": "A working Verity with your real customers and rules."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in accounts, contracts, open tickets, requests and promises, and past questionnaire answers. Train sales, success, support and product on live accounts.",
+        "you": "Your customer list and open requests, in whatever form they exist. One hour per role.",
+        "get": "Your customers inside Verity and a team that has used it on real renewals."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune lists and reminders and handle new plans, products and regions.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the company runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Customer list with plan, value and renewal date",
+      "Open tickets and known issues",
+      "Feature requests and promises made in deals",
+      "Your response time promises by plan",
+      "Your security policies and past questionnaire answers"
+    ],
+    "time": "About 8 to 11 hours of owner time across the four weeks, mostly in week 1. Your customer success and support leads need a few more.",
+    "after": "Nobody is hired to run Verity. Accounts, tickets and promises are recorded as part of the work you already do, and the reports come from those records."
   },
-
-  automationHeading: 'The signals that predict revenue.',
-  automationLede:
-    'Each runs from the account records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your company a question.",
+    "lede": "Verity AI reads your accounts, renewals, tickets, requests and compliance records. Ask in plain language, then turn the answer into tasks for the right person.",
+    "examples": [
+      {
+        "q": "Which accounts renewing in the next 60 days are at risk?",
+        "a": "Eleven accounts worth ₹1.9 lakh a month. Four have an open ticket over limit and three were never fully onboarded.",
+        "rows": [
+          [
+            "Open ticket over limit",
+            "4"
+          ],
+          [
+            "Not onboarded",
+            "3"
+          ],
+          [
+            "Champion left",
+            "2"
+          ],
+          [
+            "Other",
+            "2"
+          ]
+        ],
+        "action": "Create save-plan tasks for each account owner"
+      },
+      {
+        "q": "Which requests do the most revenue depend on?",
+        "a": "Role-based access, asked by 7 accounts worth ₹5.4 lakh a month, has no roadmap item.",
+        "rows": [
+          [
+            "Role-based access",
+            "₹5.4 L"
+          ],
+          [
+            "Bulk export",
+            "₹3.1 L"
+          ],
+          [
+            "Hindi interface",
+            "₹0.9 L"
+          ]
+        ],
+        "action": "Add to the next planning review"
+      },
+      {
+        "q": "Which promises made in deals have no plan behind them?",
+        "a": "Three, including SSO for Acme Corp by December.",
+        "rows": [
+          [
+            "SSO, Acme Corp",
+            "due Dec"
+          ],
+          [
+            "Audit log, Beta Labs",
+            "due Nov"
+          ],
+          [
+            "Custom report, Delta Foods",
+            "due Nov"
+          ]
+        ],
+        "action": "Assign to the product lead"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still do the talking. Verity makes sure the right person knows to.",
+  "automations": [
     {
-      trigger: 'An onboarding milestone passes its date',
-      steps: [
-        'Account flagged with the milestone and dependency',
-        'Owner notified with the target go-live attached',
-        'Escalated as the go-live date approaches',
-      ],
+      "when": "A renewal is 60 days away",
+      "then": [
+        "Added to the renewals list with the account's health",
+        "Task to the account owner",
+        "Outcome recorded: renewed, at risk or lost"
+      ]
     },
     {
-      trigger: 'Support effort on an account exceeds its plan assumption',
-      steps: [
-        'Cost to serve calculated against the fee',
-        'Account flagged for review ahead of renewal',
-        'Pricing or scope decision recorded',
-      ],
+      "when": "A ticket is close to its promised response time",
+      "then": [
+        "Warning to the support owner",
+        "Escalated to the lead at the limit",
+        "Breach recorded with the reason"
+      ]
     },
     {
-      trigger: 'A renewal approaches',
-      steps: [
-        'Risk signals aggregated on the account',
-        'Priority set by risk rather than date',
-        'Intervention assigned with the account history attached',
-      ],
+      "when": "Several tickets describe the same problem",
+      "then": [
+        "Linked to one issue",
+        "Accounts and revenue affected shown",
+        "Task to the product owner"
+      ]
     },
     {
-      trigger: 'A sponsor change is recorded',
-      steps: [
-        'Relationship task raised immediately',
-        'Account history prepared for the new sponsor',
-        'Risk position updated ahead of renewal',
-      ],
+      "when": "A promise is made in a deal",
+      "then": [
+        "Recorded against the account",
+        "Matched to a roadmap item or marked unplanned",
+        "Task to the product lead at 30 days"
+      ]
     },
     {
-      trigger: 'An expansion signal is identified',
-      steps: [
-        'Opportunity created with an owner',
-        'Account support and onboarding history attached',
-        'Outcome recorded against the account',
-      ],
+      "when": "An invoice is overdue or a payment fails",
+      "then": [
+        "Added to the chase list with the amount and age",
+        "Task to the account owner or finance",
+        "Outcome recorded"
+      ]
     },
     {
-      trigger: 'A subscription balance passes its terms',
-      steps: [
-        'Balance aged with account history attached',
-        'Follow-up assigned',
-        'Policy applied consistently at the threshold',
-      ],
-    },
+      "when": "A policy or certificate is 30 days from review",
+      "then": [
+        "Task to the owner",
+        "Reminder repeated weekly",
+        "Evidence attached when done"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the leadership team can actually see.',
-  intelligenceLede:
-    'The company’s own operations, instrumented like the product already is.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a SaaS company has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules and your customers' requirements depend on in order.",
+    "note": "Rules and customer requirements differ by market and contract, and they change. Confirm current requirements with your lawyer, your bank and your accountant.",
+    "items": [
+      {
+        "name": "Customer personal data",
+        "what": "Your product may hold personal data about your customers' users. India's data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.",
+        "how": "Customer and contact records sit in one permissioned place, with who viewed or changed them recorded.",
+        "source": {
+          "name": "AZB Partners",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Foreign payments and bank records",
+        "what": "Export proceeds generally have to be received within a period set by the RBI. A November 2025 amendment raised it from nine to fifteen months. Whether and how it applies to a particular software service depends on the transaction, so confirm with your bank.",
+        "how": "Foreign-currency invoices carry their dates and what has been received, so the finance owner has the facts ready.",
+        "source": {
+          "name": "Taxguru on the RBI amendment",
+          "url": "https://taxguru.in/rbi/rbi-extends-export-proceeds-realisation-timeline.html"
+        }
+      },
+      {
+        "name": "Security commitments in contracts",
+        "what": "Enterprise customers often require security policies, access reviews and evidence of testing, and may audit you against what you promised.",
+        "how": "Policies, reviews and test reports are records with owners and dates, so evidence is ready when a customer asks."
+      },
+      {
+        "name": "Contract terms, credits and service levels",
+        "what": "Contracts may promise response times, uptime and credits for outages. Missing them can lead to disputes.",
+        "how": "Promised terms sit on the account and are compared with tickets and incidents, so credits owed are visible."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "Support should not see contract prices. Sales should not edit roadmap decisions. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Onboarding',
-      points: [
-        'Time to first value by segment and owner',
-        'Accounts past target go-live',
-        'Milestone completion and blockers',
-        'Correlation between onboarding and first-year retention',
-      ],
+      "role": "Founder",
+      "question": "Which customers and promises need my attention?",
+      "sees": "Revenue, at-risk accounts, renewals, promises without a plan, tickets over limit and compliance due."
     },
     {
-      area: 'Cost to serve',
-      points: [
-        'Support effort per account and per plan tier',
-        'Accounts costing more than they pay',
-        'Escalation volume and causes',
-        'Cost to serve by segment',
-      ],
+      "role": "Customer success manager",
+      "question": "Which of my accounts need a call?",
+      "sees": "Accounts by health and renewal, onboarding steps, expansion signals and open credits."
     },
     {
-      area: 'Retention',
-      points: [
-        'Renewal risk by account with signals',
-        'Renewal and churn rates by cohort',
-        'Churn reasons recorded',
-        'Sponsor changes and their outcomes',
-      ],
+      "role": "Support lead",
+      "question": "What is about to breach?",
+      "sees": "Tickets by plan and age, linked issues, incidents and credits owed."
     },
     {
-      area: 'Growth',
-      points: [
-        'Expansion signals and their conversion',
-        'Contract value movement by account',
-        'Commitments made during sales',
-        'Discounting and its effect on realised revenue',
-      ],
+      "role": "Product lead",
+      "question": "What should we build or fix next?",
+      "sees": "Requests ranked by accounts and revenue, promises due and issues by customers affected."
     },
     {
-      area: 'Cash',
-      points: [
-        'Invoices raised against contract schedules',
-        'Balances outstanding with ageing',
-        'Credits issued and their reasons',
-        'Collection outcomes by account',
-      ],
-    },
+      "role": "Finance owner",
+      "question": "What is owed and what has been realised?",
+      "sees": "Overdue invoices, failed payments, foreign receivables and renewals by value."
+    }
   ],
-  intelligenceNote:
-    'Verity records the company’s operations. Product analytics, usage instrumentation and the application itself stay where they are.',
-
-  rolesHeading: 'One account base, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
-  roles: [
-    {
-      role: 'Founder or CEO',
-      question: 'Which revenue is at risk and which accounts cost too much?',
-      focus: 'Renewal risk, cost to serve by tier, churn reasons, expansion conversion, realised revenue after discounts.',
-    },
-    {
-      role: 'Customer success lead',
-      question: 'Who needs intervention now?',
-      focus: 'Risk signals by account, onboarding overdue, sponsor changes, escalations open.',
-    },
-    {
-      role: 'Implementation',
-      question: 'Which onboardings are behind?',
-      focus: 'Milestones by account, customer dependencies, target go-live dates, blockers.',
-    },
-    {
-      role: 'Support lead',
-      question: 'Where is the load coming from?',
-      focus: 'Ticket volume and effort by account, escalation causes, accounts above plan assumption.',
-    },
-    {
-      role: 'Finance',
-      question: 'What is billed and what is collected?',
-      focus: 'Contract schedules, balances ageing, credits issued, realised revenue against contracted.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your product analytics and engineering tools",
+      "Your helpdesk or support inbox",
+      "Your billing and subscription tool",
+      "Your accountant, who still prepares your returns"
+    ],
+    "not": [
+      "Bill customers or process payments",
+      "Host or monitor your product",
+      "Send messages to customers on its own",
+      "Give legal, security or tax advice"
+    ],
+    "migration": "We bring your customer list, contracts, open tickets, requests and promises across from the tools and spreadsheets you use now, in stages, so support and renewals keep moving while it happens."
+  },
+  "faqHeading": "Questions SaaS founders ask.",
+  "faqs": [
+    [
+      "I already have a helpdesk, a CRM and a billing tool. Why another system?",
+      "Verity does not replace them. It holds the account record that joins what they each know: plan, tickets, requests, promises, renewals and compliance, so someone can see the whole customer."
+    ],
+    [
+      "Does it connect to my billing tool?",
+      "We agree during setup how renewal dates, plans and overdue invoices reach Verity. Billing stays in your billing tool, and Verity does not take payments or send invoices."
+    ],
+    [
+      "Can it tell me which customers will churn?",
+      "It does not predict. It shows the signals you decide matter, such as open tickets, no onboarding or a missing contact, and lists accounts by revenue and renewal date so people can act."
+    ],
+    [
+      "Can it send emails to my customers?",
+      "Not by itself. Verity assigns the follow-up to a named person and records the outcome. Your team writes and sends the message."
+    ],
+    [
+      "We sell to customers abroad. Does it help with that?",
+      "Yes. Foreign-currency invoices are recorded against the account with their dates, and what is outstanding is on the finance owner's list. Verity does not move money or file anything."
+    ],
+    [
+      "Can I use it to answer security questionnaires?",
+      "Yes. Policies, certificates and past answers are kept as records with owners, so you can reuse answers and see what is open. It does not certify you against any standard."
+    ],
+    [
+      "Who can see customer information?",
+      "Only the people you allow. Access is set by role, and every change is recorded with who made it and when."
+    ],
+    [
+      "How long before I see results?",
+      "The renewals list, at-risk accounts and tickets over limit need only your existing records, so they are the first things we aim to have working. Request and promise trends become reliable after a few weeks of use."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of users and what you want set up. Message us and we will give you a clear number after a short conversation about how your company runs."
+    ]
   ],
-
-  useCasesHeading: 'What SaaS companies use Verity for',
-  useCases: [
-    {
-      name: 'Onboarding as tracked work',
-      body: 'Implementation with milestones, owners and target go-live dates, since time to first value is the strongest retention lever and is usually run from a document.',
-    },
-    {
-      name: 'Cost to serve per account',
-      body: 'Support effort recorded against the account, producing the missing half of account profitability and the basis for tier pricing.',
-    },
-    {
-      name: 'Risk-based renewal management',
-      body: 'Churn signals aggregating on the account continuously, so renewals are worked by risk rather than by date order.',
-    },
-    {
-      name: 'Sponsor change response',
-      body: 'A sponsor departure raising an immediate relationship task rather than being discovered during the renewal.',
-    },
-    {
-      name: 'Expansion as assigned work',
-      body: 'Usage and need signals becoming owned opportunities with account history attached rather than a report nobody acts on.',
-    },
-    {
-      name: 'Sales commitments on the record',
-      body: 'What was promised during the sales process recorded on the account, so delivery does not discover it at the first review.',
-    },
-    {
-      name: 'Consistent collections',
-      body: 'Subscription balances aged with a policy applied consistently rather than case by case while service continues.',
-    },
-    {
-      name: 'Asking about the account base',
-      body: 'Plain-language questions across onboarding, support, renewal and cash, with interventions assigned in the same step.',
-    },
+  "related": [
+    "software-agencies",
+    "startups",
+    "app-developers",
+    "it-services-companies",
+    "ecommerce-businesses",
+    "edtech-companies"
   ],
-
-  migration:
-    'Your product analytics, application, billing and support tooling continue to run and are mapped during implementation. Accounts, contracts, renewal dates, onboarding projects and open balances are brought across, and Verity is introduced as the operational layer around the product.',
-
-  faqHeading: 'Questions SaaS teams ask',
-  faqs: [
-    [
-      'Does Verity replace our product analytics or support tooling?',
-      'No. Product analytics, your application and your support desk continue and are mapped during implementation. Verity records the company around the product — accounts, contracts, onboarding, cost to serve, renewal risk, expansion and collections.',
-    ],
-    [
-      'What can AI software do for a SaaS company?',
-      'Verity AI answers questions from your own account, onboarding, support and renewal records: which renewals inside ninety days are at risk and why, which accounts are past target go-live, which cost more to serve than they pay, where sponsors changed without anyone responding. Each answer can become assigned work.',
-    ],
-    [
-      'Why treat onboarding as a project?',
-      'Time to first value is the strongest predictor of first-year retention, and onboarding is usually delivered from a checklist in a document. As work with milestones, owners and a target go-live, an account running late is visible while intervention still changes the outcome — eleven months before the renewal.',
-    ],
-    [
-      'How does it measure cost to serve?',
-      'Support effort is recorded against the account rather than only in aggregate, so accounts consuming several times their plan’s assumption are identified with the cost quantified — which is the basis for a pricing or scope conversation at renewal.',
-    ],
-    [
-      'Can it predict renewal risk?',
-      'It aggregates the operational signals that already predict churn — onboarding completion, support volume and escalations, sentiment, sponsor changes, unworked expansion — onto the account continuously, so renewals can be prioritised by risk rather than worked in date order.',
-    ],
-    [
-      'Does it capture what sales promised?',
-      'Commitments made during the sales process are recorded on the account alongside the contract terms, so the implementation and success teams see them before the customer raises them.',
-    ],
-    [
-      'Can it handle collections?',
-      'Subscription balances age from the due date with account history attached and a consistent policy applied at thresholds, rather than follow-up depending on who happens to notice.',
-    ],
-    [
-      'Is it useful for an early-stage company?',
-      'A twenty-account company has the same onboarding, support-load and renewal-signal problems and less capacity to run four separate tools around them.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of the customer lifecycle, configuration of plans and onboarding milestones, migration of accounts, contracts and renewal dates, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with onboarding or cost to serve.',
-  ctaLede:
-    'One decides next year’s retention and the other decides whether your pricing works. Tell us which you can measure today.',
-
-  related: ['software-agencies', 'startups', 'it-services-companies', 'ecommerce-businesses', 'data-companies', 'consulting-firms'],
+  "ctaHeading": "See which customers are slipping before they tell you.",
+  "ctaLede": "Tell us how your company runs and we will show you the at-risk accounts, late renewals and unplanned promises it would find, using your own numbers."
 };
