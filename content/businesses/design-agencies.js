@@ -1,181 +1,643 @@
 export default {
+  schema: 2,
   slug: 'design-agencies',
   status: 'published',
   plural: 'design agencies',
   subject: 'design agency',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for design agencies | Verity',
+    title: 'Design agency management software for Indian studios | Verity',
     description:
-      'Verity connects revision rounds against allowance, asset handover and licensing, speculative pitch cost, designer capacity and project margin into one system.',
+      'The 13 problems that drain a design studio: endless revisions, lost feedback, unpaid pitches, licence gaps, idle designers. What each costs, and the screens that fix them.',
     keywords: [
-      'AI software for design agencies',
-      'design studio management software',
-      'revision round and asset licensing tracking',
-      'designer capacity and project margin software',
+      'design agency management software India',
+      'design studio revision tracking',
+      'creative agency project margin software',
+      'design studio client approval tracking',
+      'design asset licence tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'schedule', 'workforce', 'ai'],
 
   hero: {
     eyebrow: 'Verity for design agencies',
-    headline: 'The third round was free. So were the fourth and the fifth.',
+    headline: 'The work is good. The project still lost money. Verity shows you where the hours went.',
     lede:
-      'Design work is priced in rounds and delivered in as many as it takes. Verity counts the rounds, records what was licensed and costs the pitch.',
-    note: 'Verity runs the studio. Design tools and asset storage stay where they are.',
-    panel: {
-      title: 'Studio',
-      meta: 'This quarter',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active projects', value: '24', note: '₹1.9 Cr contracted' },
-        { label: 'Rounds over allowance', value: '31 deliverables', note: 'unbilled revision effort' },
-        { label: 'Assets unlicensed', value: '18', note: 'used beyond agreed scope' },
-        { label: 'Pitch effort', value: '460 hours', note: 'this quarter' },
-      ],
-      rows: [
-        { name: '31 deliverables past their agreed revision allowance', meta: 'Roughly 210 unbilled hours', active: true },
-        { name: '18 assets in use beyond the licensed scope', meta: 'Stock and font licences', active: true },
-        { name: '460 hours of pitch effort this quarter', meta: 'Against two wins', active: true },
-        { name: 'Handover files not delivered on closed projects', meta: '6 projects · final payment held', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own studio in this shape.',
-    },
+      'A design studio sells hours of thought, and most of them leak in places nobody writes down: a fifth round of changes nobody charged for, feedback buried in a chat, a pitch that took a week and won nothing. Verity keeps the brief, the rounds, the approvals, the licences and the hours on one record per project.',
+    oneLine:
+      'One system that shows, for every project, what was quoted, what was used, who has to approve next, and whether the studio is making money on it.',
+    note: 'Designers keep working in the tools they love. Verity does not replace them. It keeps the business side of each project in one place.',
+    screen: 'studio',
+    screenNote: 'projects, designers, clients and invoices',
   },
 
-  overview: {
-    heading: 'The work is priced in rounds and delivered in as many as the client needs.',
+  today: {
+    heading: 'The design is organised. The business around it is held together by chat threads.',
     paragraphs: [
-      'A design agency quotes a project with an assumed number of revision rounds and then delivers as many as it takes to get an approval. Every round beyond the allowance is unbilled creative effort, and it is given because the alternative is an argument about something subjective. Thirty-one deliverables past allowance is roughly two hundred and ten hours of a studio’s capacity.',
-      'The second characteristic is licensing. Design work incorporates fonts, stock and third-party assets under licences with defined scope, and work regularly ends up used beyond that scope. Eighteen assets in use beyond their licence is a liability the agency created on the client’s behalf.',
-      'The third is speculative pitching. Studios produce real creative work to win projects, and four hundred and sixty hours of pitch effort against two wins is a cost that never appears against the projects it produced.',
-      'The fourth is handover. A project is not finished until working files, assets and licences reach the client, and unhanded-over projects hold final payments.',
-      'The fifth is that capacity is people and creative work is not interchangeable across them.',
-      'Verity counts rounds, records licences and their scope, costs the pitch and tracks handover to closure.',
+      'Inside a design tool, everything is tidy: layers, artboards, versions. Outside it, the studio runs on a client WhatsApp group, a shared drive with folders named by whoever created them, a timesheet someone fills on Friday from memory, and a quote that was a PDF three months ago.',
+      'So the questions that decide whether a studio makes money have no single answer. Which round of changes are we on? Did the client approve the logo, or did someone just say it looked fine on a call? Which designer is free next week? Who owns the font that went into the final files, and for how long is the stock image licensed?',
+      'The studio founder usually answers these from memory, between creative reviews. It works while there are six projects. At fifteen, work still gets done but margin, deadlines and ownership of the final files quietly get worse.',
     ],
+    stack: ['Client WhatsApp groups', 'Shared drive and design files', 'Spreadsheet timesheet', 'Quote and invoice PDFs', 'Email threads', 'Founder’s memory'],
+    stackNote: 'Each tool is fine at its own job. Nothing ties a feedback message to a round, a round to hours, or hours to a margin.',
   },
 
-  terminology: [
-    ['Projects, deliverables, rounds', 'Work'],
-    ['Clients, stakeholders, approvers', 'Relationships'],
-    ['Assets, fonts, stock, licences', 'Records'],
-    ['Designers, art directors, producers', 'People'],
-    ['Scope, approvals, handover', 'Workflows'],
-    ['Suppliers, illustrators, photographers', 'Suppliers'],
-    ['Studios, teams', 'Locations'],
+  painsHeading: 'Where a design studio actually loses money and time.',
+  painsLede:
+    'These are the situations studio founders describe. For each one: what it looks like on an ordinary week, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Scope',
+      title: 'Revision rounds run past what was quoted',
+      scene:
+        'The quote said two rounds of changes. The client is now on round five, each one small, each one polite. Nobody wants to be the person who raises it, so the designer just does it.',
+      cost:
+        'Example arithmetic: a ₹1.5 lakh brand identity quoted at 60 hours that takes 95 has lost about ₹55,000 of time at a ₹1,500 hourly cost rate, and the studio never saw the line item.',
+      fix:
+        'Each project record holds the rounds included in the quote. Every client feedback is logged as a numbered round. When the count passes the allowance, the project manager gets a flag with the hours used so far, so the extra work is quoted or agreed rather than absorbed.',
+      screen: 'project',
+    },
+    {
+      area: 'Scope',
+      title: 'Feedback is scattered across chats, calls and email',
+      scene:
+        'Changes arrive as a voice note, a screenshot with a red circle, a line in an email and something said on a call. The designer works from whichever she saw last. Two weeks later nobody can say what was actually asked for.',
+      cost:
+        'Rework, missed changes and arguments about who said what. A studio that cannot show what was requested cannot show it did what was asked.',
+      fix:
+        'Feedback is attached to the project as a round, with the sender, the date, the list of changes and the files. The designer works from one checklist per round, and ticks off each change as it is done.',
+      screen: 'project',
+    },
+    {
+      area: 'Clients',
+      title: 'Approvals are verbal, and projects stall waiting for them',
+      scene:
+        'The client said “looks good” on a call, then goes quiet for ten days. The launch date was theirs, but the delay lands on the studio. When the invoice goes out, they say they never approved the final.',
+      cost:
+        'Idle designers, a project that stays open on the books, and a delayed final payment tied to a sign-off that was never recorded.',
+      fix:
+        'Each deliverable has an approval state: with studio, with client, approved, or changes requested. Anything waiting on the client longer than your set number of days appears on a list with a reminder task for the account manager, and the approval is recorded with who gave it and when.',
+      screen: 'approvals',
+    },
+    {
+      area: 'Pitches',
+      title: 'Unpaid pitches eat a week and win nothing',
+      scene:
+        'A prospect asks for “just a few ideas” before they decide. Two designers spend three days on concepts. The prospect picks another studio, or never replies.',
+      cost:
+        'Example arithmetic: three pitches a month at 24 designer hours each, at a ₹1,500 cost per hour, is ₹1.08 lakh of unpaid work every month. Few studios know the number or how many converted.',
+      fix:
+        'A pitch is a record with the prospect, the hours spent and the outcome. Over a few months the pipeline screen shows hours spent per pitch won, so the studio can decide which pitches to decline, charge a pitch fee for, or limit to a fixed number of hours.',
+      screen: 'pipeline',
+    },
+    {
+      area: 'Clients',
+      title: 'Enquiries and proposals go cold',
+      scene:
+        'A referral sends a message on Monday. The proposal is promised for Thursday and goes out the following Tuesday. The client has already spoken to two others.',
+      cost:
+        'The best leads in a design studio are referrals, and they are the ones who expect a fast, clear reply. A slow reply is read as a slow studio.',
+      fix:
+        'Every enquiry becomes a record with an owner and a next step. Proposals past their promised date, and sent proposals with no reply after your set interval, appear on the pipeline list as tasks for the person who owns them.',
+      screen: 'pipeline',
+    },
+    {
+      area: 'Licences',
+      title: 'Stock images, fonts and music licences are forgotten',
+      scene:
+        'The designer bought a licensed font for one project, then used it on the next. A stock image was licensed for web only and ended up on a hoarding. The licence on a music track expired last month and the video is still live.',
+      cost:
+        'A claim from the rights holder, a forced takedown, or an unplanned cost when a client’s lawyer asks where the licence is. Rarely large, always unpleasant, and fully avoidable.',
+      fix:
+        'Every licensed asset is a record: what it is, who bought it, for which project, which uses and territory, and until when. Final deliverables list the licences they depend on. Licences about to expire, or used beyond their listed use, show up on a screen.',
+      screen: 'licences',
+    },
+    {
+      area: 'Handover',
+      title: 'Nobody can say what the client owns when the project ends',
+      scene:
+        'The client asks for the source files two years later. The designer has left. The agreement said “all rights” on one page and “licence to use” on another. The final files are on someone’s laptop.',
+      cost:
+        'Disputes over ownership, or a studio forced to rebuild old work for free. Under Indian copyright law, a transfer of rights generally has to be in writing and signed, so what was agreed on a call does not settle it.',
+      fix:
+        'Each project keeps its signed agreement, the list of deliverables handed over, the date, and who received them. Source files and final exports are attached to the project record, not to a designer’s laptop.',
+      screen: 'project',
+      source: {
+        name: 'Bhatt & Joshi Associates, on assignment under the Copyright Act',
+        url: 'https://bhattandjoshiassociates.com/copyright-assignment-licensing-in-india-key-clauses-term-limits-enforcement/',
+      },
+    },
+    {
+      area: 'People',
+      title: 'One designer is overbooked while another has nothing',
+      scene:
+        'The senior designer is on four projects and every one is late. A junior has a free week that nobody planned for, because no one can see who is on what.',
+      cost:
+        'Missed deadlines on one side and paid idle time on the other. The studio hires more people when it may only need to spread the work.',
+      fix:
+        'Each project assigns designers by week. The capacity screen shows booked hours against available hours for each designer, and flags anyone over their limit, so work is moved before the deadline is missed.',
+      screen: 'capacity',
+    },
+    {
+      area: 'Money',
+      title: 'You find out a project lost money after it is over',
+      scene:
+        'The quote was ₹2.4 lakh. Hours were logged on Fridays from memory, expenses sit in a different sheet, and a freelancer’s invoice arrives a month later. By then the project is closed.',
+      cost:
+        'Pricing stays a guess, the same loss-making kind of project gets taken again, and the studio cannot tell its best clients from its most expensive ones.',
+      fix:
+        'Quoted fee, hours logged, freelancer cost and expenses sit on the same project. A running margin shows while the work is live, and a project that crosses 80 percent of its budget before reaching the final stage is flagged.',
+      screen: 'studio',
+    },
+    {
+      area: 'Money',
+      title: 'Milestone invoices are raised late, and paid later',
+      scene:
+        'The second milestone was due after concept approval. The approval happened on the 3rd, the invoice went out on the 19th, and payment came in the following month. Meanwhile salaries were paid on time.',
+      cost:
+        'A studio funds its clients’ delays. Under the MSMED Act, payments to micro and small suppliers are due within a written term not exceeding 45 days, but the studio has to have invoiced on time and be able to show it.',
+      fix:
+        'Each milestone is tied to a deliverable state. When the approval is recorded, a task is created to raise the invoice. Overdue invoices appear by client with age, and the follow-up call is a task with an owner.',
+      screen: 'pipeline',
+      source: {
+        name: 'Taxmann, on MSMED Act section 15 and section 43B(h)',
+        url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/',
+      },
+    },
+    {
+      area: 'Clients',
+      title: 'Retainer clients quietly use more than they pay for',
+      scene:
+        'A monthly retainer covers 40 hours of social and campaign design. Small requests keep arriving by message, and the real usage is 65 hours. The retainer has not been repriced in two years.',
+      cost:
+        'Example arithmetic: 25 extra hours a month at a ₹1,500 cost per hour is ₹37,500 a month, or ₹4.5 lakh a year, given away on one client.',
+      fix:
+        'A retainer is a record with its monthly hours and scope. Every request is logged against it, and the balance is visible to the account manager. When usage crosses the monthly allowance, the account manager is prompted to raise it with the client.',
+      screen: 'capacity',
+    },
+    {
+      area: 'People',
+      title: 'Freelancers hold files, briefs and know-how that leave with them',
+      scene:
+        'A freelance illustrator did half the identity work. The files are on a personal drive, the brief was a voice note, and the invoice arrives without a reference to any project.',
+      cost:
+        'Lost files, unclear rights over what the freelancer produced, and invoices that cannot be matched to a project’s cost.',
+      fix:
+        'Freelancers are recorded as people with their rate, projects and agreement. Their files are attached to the project record and their invoices are matched to a project, so cost and ownership are clear.',
+      screen: 'capacity',
+    },
+    {
+      area: 'Owner',
+      title: 'Past work and brand knowledge cannot be found',
+      scene:
+        'A returning client asks for the layout used for their brochure last year. The designer who made it has moved on. Someone searches four folders and three chat threads and rebuilds it.',
+      cost:
+        'The same work done twice, and a client who wonders why a studio they have worked with for three years has no memory of them.',
+      fix:
+        'Every client keeps a history: projects, rounds, approved files, brand notes and licences used. Anyone on the team opens the client and sees what was done, when, and by whom. Verity AI can answer a question about it in plain words.',
+      screen: 'studio',
+    },
   ],
 
-  challengesHeading: 'Subjective approval, defined allowance.',
-  challengesLede:
-    'Design agency difficulties come from an approval process with no natural end and a fee that assumed one.',
-  challenges: [
-    { problem: 'Revision rounds exceed the allowance uncounted', detail: 'The fourth round happens because arguing about it is worse than doing it, and the effort disappears.', outcome: 'Rounds are counted per deliverable against the agreed allowance, so exceeding it raises a decision.' },
-    { problem: 'Licences are exceeded on the client’s behalf', detail: 'Fonts, stock and third-party assets are used beyond the scope their licence covers.', outcome: 'Licences and their scope are recorded against the asset and the project, so exceedance is visible.' },
-    { problem: 'Pitch effort is never costed', detail: 'Real creative work is produced speculatively and does not appear against the projects it wins.', outcome: 'Pitches are work with recorded effort, compared against the projects they produced.' },
-    { problem: 'Handover holds final payment', detail: 'Working files, assets and licences are delivered when someone remembers, and the final invoice waits.', outcome: 'Handover is a checklist with an owner, tracked against the payment it releases.' },
-    { problem: 'Approvers multiply', detail: 'A deliverable is approved by one stakeholder and reopened by another, producing rounds nobody agreed.', outcome: 'Approvers are recorded per deliverable, so an unagreed approver becomes a scope conversation.' },
-    { problem: 'Capacity is not interchangeable', detail: 'Creative work is allocated to whoever is free rather than to whoever suits it, and rework follows.', outcome: 'Designers carry skills and current load, so allocation matches capability as well as availability.' },
+  factsHeading: 'The numbers behind these problems.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '52%',
+      text: 'of projects completed in the 12 months before the survey had scope creep or uncontrolled changes, in a project management survey of organisations worldwide. It is across all project types, not only design.',
+      source: { name: 'PMI Pulse of the Profession, as reported in PM Network', year: '2018', url: 'https://www.pmi.org/learning/library/scope-creep-rising-11308' },
+    },
+    {
+      figure: '45 days',
+      text: 'is the longest credit period a buyer can agree in writing with a micro or small supplier under the MSMED Act. With no written agreement, payment is due within 15 days. Many small studios qualify as micro or small enterprises.',
+      source: { name: 'Taxmann, on MSMED Act section 15 and section 43B(h)', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+    },
+    {
+      figure: '₹21,583.7 crore',
+      text: 'was pending on the MSME Samadhaan portal for delayed payments to micro and small enterprises, from its launch in October 2017 to 22 July 2024, according to a Lok Sabha answer.',
+      source: { name: 'Lok Sabha Unstarred Question 564', year: '2024', url: 'https://eparlib.sansad.in/bitstream/123456789/2981078/1/AU564_7pNiYg.pdf' },
+    },
+    {
+      figure: '5 years',
+      text: 'is the period an assignment of copyright is deemed to last if the written deed does not state one, and it is presumed to cover India only if no territory is stated. An assignment must be in writing and signed.',
+      source: { name: 'Bhatt & Joshi Associates, on Copyright Act section 19', url: 'https://bhattandjoshiassociates.com/copyright-assignment-licensing-in-india-key-clauses-term-limits-enforcement/' },
+    },
+  ],
+  factsNote:
+    'The scope creep figure is a general project management survey, not a design-only one, and is from 2018. The Samadhaan figure covers all micro and small enterprise sectors. The copyright points are a law firm’s summary, not legal advice.',
+
+  screensHeading: 'The screens a studio would use every week.',
+  screensLede: 'Six views, each built for one job. Names and stages are set up in your studio’s own words.',
+  screens: [
+    {
+      id: 'studio',
+      title: 'Studio / This week',
+      meta: 'All live projects',
+      heading: 'The founder’s Monday view',
+      caption:
+        'Live projects with their running margin, who is waiting on whom, designer load, and money owed. This replaces the Monday catch-up where everyone reports from memory.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Live projects', value: '14', note: '3 waiting on client' },
+            { label: 'Revision flags', value: '4', note: 'past quoted rounds' },
+            { label: 'Designer load', value: '86%', note: 'booked this week' },
+            { label: 'Invoices overdue', value: '₹4.8 L', note: '3 clients' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Project', 'Quoted', 'Hours used', 'Margin', 'Status'],
+          rows: [
+            ['Kavya Foods rebrand', '₹3.2 L', '88 of 100', '31%', ['On track', 'ok']],
+            ['Aarav Realty brochure', '₹1.1 L', '52 of 40', '-6%', ['Over budget', 'late', 'Quoted extra', 'ok']],
+            ['Nila Cafe packaging', '₹1.8 L', '47 of 70', '38%', ['On track', 'ok']],
+            ['Zest Fitness app UI', '₹4.5 L', '120 of 130', '22%', ['Watch', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Aarav Realty is on round 5 of 2 quoted. 12 hours unbilled so far.', action: 'Open project' },
+      ],
+    },
+    {
+      id: 'project',
+      title: 'Project',
+      meta: 'Record',
+      heading: 'One record for each project, from brief to handover',
+      caption:
+        'The quote, the rounds of feedback, the hours, the files and the licences for one project, in one place. A new designer can pick it up without asking five people.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Aarav Realty brochure',
+          sub: 'Client: Aarav Realty. Lead: Isha. Due 28 October',
+          fields: [
+            ['Quote', '₹1.1 lakh, 2 rounds included'],
+            ['Rounds used', ['5 of 2', 'late', 'Extra quoted', 'ok']],
+            ['Hours', '52 of 40 quoted'],
+            ['Approval', ['With client 6 days', 'flag', 'Approved', 'ok']],
+            ['Licences', '3 images, 1 font'],
+            ['Agreement', 'Signed 2 Sep, copy attached'],
+          ],
+          timeline: [
+            ['14 Oct', 'Round 5: cover image and price table changes, 7 items'],
+            ['9 Oct', 'Round 4: client sent 9 changes by voice note, logged as list'],
+            ['2 Oct', 'Round 3: layout reordered, 11 hours'],
+            ['Note', 'Client prefers calls. Confirm each call in writing the same day.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'approvals',
+      title: 'Approvals',
+      meta: 'Waiting on client',
+      heading: 'What is stuck, and with whom',
+      caption:
+        'Every deliverable by approval state. Anything waiting on the client past your set number of days is flagged, with a reminder task for the account manager.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'With studio',
+              cards: [
+                { title: 'Zest Fitness onboarding flow', meta: 'Designer: Kabir. Due Thu', tag: ['In progress', 'info'] },
+                { title: 'Kavya Foods label set', meta: 'Designer: Meera. Due Fri', tag: ['In progress', 'info'] },
+              ],
+            },
+            {
+              name: 'With client',
+              cards: [
+                { title: 'Aarav Realty brochure v5', meta: 'Sent 6 days ago', tag: ['Chase', 'late', 'Approved', 'ok'] },
+                { title: 'Nila Cafe menu cards', meta: 'Sent 2 days ago', tag: ['Waiting', 'flag'] },
+              ],
+            },
+            {
+              name: 'Approved',
+              cards: [
+                { title: 'Kavya Foods logo final', meta: 'Approved by Rohan K., 11 Oct', tag: ['Invoice due', 'flag', 'Invoiced', 'ok'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'capacity',
+      title: 'Capacity and retainers',
+      meta: 'Next two weeks',
+      heading: 'Who is free, who is overloaded, which retainer is overspent',
+      caption:
+        'Booked hours against available hours for designers and freelancers, and retainer usage against the monthly allowance. It shows the problem a week before it becomes a late project.',
+      blocks: [
+        { type: 'title', text: 'Booked against available hours, next week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Isha (art director)', value: 100, display: '100%', tone: 'late' },
+            { label: 'Meera', value: 82, display: '82%' },
+            { label: 'Kabir', value: 64, display: '64%' },
+            { label: 'Tanvi (junior)', value: 30, display: '30%', tone: 'muted' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Retainer', 'Monthly hours', 'Used', 'Balance', 'Status'],
+          rows: [
+            ['Zest Fitness social', '40', '65', '-25', ['Over', 'late', 'Discussed', 'ok']],
+            ['Kavya Foods campaigns', '30', '24', '6', ['On track', 'ok']],
+            ['Orion Clinics collateral', '20', '19', '1', ['Near limit', 'flag']],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'licences',
+      title: 'Licences',
+      meta: 'Fonts, images, music',
+      heading: 'Every licensed asset, and what it is allowed to do',
+      caption:
+        'What was bought, for which project, with which permitted use, and until when. Anything used outside its terms or about to expire is flagged before a rights holder writes in.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Asset', 'Project', 'Licensed for', 'Expires', 'Status'],
+          rows: [
+            ['Typeface Sora Pro', 'Kavya Foods rebrand', 'Print and web, 1 client', 'Perpetual', ['OK', 'ok']],
+            ['Stock photo set (6)', 'Aarav Realty brochure', 'Print up to 10,000', '30 Nov', ['Ends soon', 'flag']],
+            ['Music track "Bright Day"', 'Nila Cafe reel', 'Social, 12 months', '2 Nov', ['Expiring', 'late', 'Renewed', 'ok']],
+            ['Icon pack', 'Zest Fitness app UI', 'Digital, unlimited', 'Perpetual', ['OK', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Stock photo set is licensed for print up to 10,000 copies. The client has asked for a 25,000 run.', action: 'Review licence' },
+      ],
+    },
+    {
+      id: 'pipeline',
+      title: 'Pipeline and payments',
+      meta: 'Proposals and invoices',
+      heading: 'New work coming in and money coming back',
+      caption:
+        'Enquiries, pitches with the hours spent on them, proposals awaiting a reply, and milestone invoices by age. One list for the founder instead of three.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Prospect', 'Stage', 'Value', 'Pitch hours', 'Next step'],
+          rows: [
+            ['Orion Clinics', 'Proposal sent 9 days ago', '₹6.5 L', '8', ['Follow up', 'late', 'Replied', 'ok']],
+            ['Banyan Textiles', 'Pitch in progress', '₹3.0 L', '22', ['Cap at 24 h', 'flag']],
+            ['Tara Jewels', 'New enquiry', '₹2.2 L', '0', ['Reply today', 'flag', 'Called', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Kavya Foods, milestone 2', meta: '₹1.6 lakh, due 12 days ago', tag: ['Overdue', 'late', 'Paid', 'ok'] },
+            { name: 'Zest Fitness, milestone 3', meta: '₹1.35 lakh, approval recorded 11 Oct', tag: ['Raise invoice', 'flag', 'Invoiced', 'ok'] },
+          ],
+        },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across rounds, licences, pitching and handover.',
-  modules: [
-    { id: 'work', title: 'Projects, deliverables and rounds', line: 'Each deliverable is work with a client, an agreed round allowance, recorded rounds, effort and an approval state.', why: 'The round is the unit of pricing and the unit of overrun.', example: 'Thirty-one deliverables past allowance, quantified in hours.' },
-    { id: 'records', title: 'Assets, fonts and licences', line: 'Assets carry their licence, scope, expiry and the projects they are used in.', why: 'A licence exceeded on a client project is a liability the agency created.', example: 'Eighteen assets in use beyond their licensed scope.' },
-    { id: 'workflows', title: 'Scope, approvals and handover', line: 'Scope changes, approvals, additional rounds and handover move through defined steps with recorded decisions.', why: 'Approval is subjective and needs a recorded approver to have any boundary.', example: 'A deliverable approved by a stakeholder and reopened by another, raised as scope.' },
-    { id: 'people', title: 'Designers, art directors and producers', line: 'Staff carry skills, availability and current load, with effort recorded against deliverables and pitches.', why: 'Creative capacity is not interchangeable and mismatched allocation produces rework.', example: 'Allocation matched to capability rather than to whoever is free.' },
-    { id: 'relationships', title: 'Clients, stakeholders and approvers', line: 'Clients carry their projects, agreed allowances, approvers, revision behaviour and balances.', why: 'Revision behaviour is a client attribute and belongs in the next quote.', example: 'A client averaging five rounds against a three-round allowance.' },
-    { id: 'suppliers', title: 'Illustrators, photographers and specialists', line: 'External contributors carry their engagements, costs, licences granted and reliability.', why: 'Commissioned work carries its own licensing scope that must reach the client.', example: 'Commissioned illustration licence scope recorded and handed over.' },
-    { id: 'intelligence', title: 'Rounds, licensing and pitch reporting', line: 'Rounds against allowance, unbilled revision effort, licence exposure, pitch cost against wins, capacity and project margin come from the records.', why: 'A studio’s margin is decided by rounds and pitching, and neither is usually counted.', example: 'Unbilled revision effort by client and by quarter.' },
-    { id: 'ai', title: 'Ask the studio a question', line: 'Verity AI answers from your own project, round, asset and pitch records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about rounds consumed and licences exceeded.', example: '"Which deliverables are past their round allowance?" returns thirty-one with the effort quantified.' },
-    { id: 'communication', title: 'Feedback on the deliverable', line: 'Feedback, approvals and change requests attach to the deliverable and round they concern.', why: 'Feedback scattered across email is why the next round misses something and becomes another round.', example: 'All feedback for a round in one place before the revision starts.' },
-    { id: 'control', title: 'Allowance, licensing and approvals', line: 'One permission model and one audit trail, with additional rounds and licence purchases recorded.', why: 'Both decisions are made by producers under deadline.', example: 'An additional round approved with its cost recorded against the client.' },
-    { id: 'orders', title: 'Fees, additional rounds and licence costs', line: 'Project fees, additional round charges and licence purchases are recorded against the project.', why: 'Licence cost and additional rounds are the two recoverable items most often absorbed.', example: 'Licence cost recovered against the project that required it.' },
-    { id: 'locations', title: 'Studios and teams', line: 'Teams roll into the agency with projects, capacity and reporting following the same structure.', why: 'Round consumption and margin vary by team and discipline.', example: 'Rounds per deliverable by team and project type.' },
+  dayHeading: 'The same Wednesday in a studio, before and after.',
+  dayLede: 'The creative work does not change. What changes is that each message, round and hour lands on the project, so nobody reconstructs it later.',
+  day: [
+    {
+      time: 'Morning',
+      before: 'The account manager scrolls through six client chats to find out which changes are still pending.',
+      after: 'The project screen lists open changes for each round. She starts from the checklist, not from the chats.',
+    },
+    {
+      time: 'Late morning',
+      before: 'A client sends a fifth round of feedback by voice note. The designer does it without saying anything.',
+      after: 'The round is logged and the project flags that it is past the two quoted. The account manager raises the extra with the client the same day.',
+    },
+    {
+      time: 'Midday',
+      before: 'A prospect asks for a few concepts. You say yes because it is easier than saying no.',
+      after: 'You see this studio has spent 70 pitch hours this quarter and won one. You offer a paid concept round instead.',
+    },
+    {
+      time: 'Afternoon',
+      before: 'The art director finds out on Thursday that three projects all need her on Friday.',
+      after: 'The capacity screen showed her at 100 percent on Monday. A junior picked up two tasks before anything slipped.',
+    },
+    {
+      time: 'Evening',
+      before: 'A client approved the final over a call. Nobody raises the invoice for two weeks.',
+      after: 'The approval is recorded, and a task to raise the milestone invoice lands on finance the same evening.',
+    },
+    {
+      time: 'Month end',
+      before: 'You discover from the books that two projects lost money.',
+      after: 'Both were flagged at 80 percent of budget. One was repriced, one was closed with an extra charge agreed.',
+    },
   ],
 
-  workflowsHeading: 'Brief, round, approve, hand over.',
-  workflowsLede: 'These already happen. Counted, the studio stops giving away its capacity.',
-  workflows: [
-    { name: 'Project setup', steps: ['Scope agreed with deliverables and round allowance', 'Approvers named per deliverable', 'Licensing requirements identified', 'Team allocated by skill and availability', 'Fee and additional-round basis recorded'], note: 'Naming the approvers at the start is what gives a subjective process a boundary.' },
-    { name: 'Round cycle', steps: ['Deliverable produced and submitted with the round counted', 'Feedback collected in one place', 'Revision produced addressing consolidated feedback', 'Round count compared against allowance', 'Additional rounds raised as a decision — charged or absorbed'], note: 'Consolidating feedback before revising is what keeps the round count from doubling.' },
-    { name: 'Licensing', steps: ['Assets identified with licence and scope', 'Licence purchased or confirmed for the intended use', 'Scope recorded against the project', 'Usage beyond scope flagged', 'Licence documentation included at handover'], note: 'A licence exceeded is a liability created on the client’s behalf and rarely noticed until it matters.' },
-    { name: 'Pitch', steps: ['Pitch recorded with team, effort and any third-party cost', 'Work produced and submitted', 'Outcome recorded — won, lost, no decision', 'Cost compared against the project won', 'Participation decisions informed by the pattern'], note: 'Speculative creative work is real cost and is almost never set against what it produced.' },
-    { name: 'Handover and closure', steps: ['Handover checklist created — files, assets, licences, guidelines', 'Items delivered and recorded', 'Client confirmation received', 'Final invoice released', 'Project closed with learnings recorded'], note: 'Unhanded-over projects hold final payments and stay open in everyone’s head.' },
-  ],
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how a project moves through your studio, from brief to handover, then build Verity around it and stay on to make it work.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you and your lead designer or account manager. Follow two live projects from brief to final files, and see where feedback, hours and approvals are kept today.',
+        you: 'Two to three hours of your time and an hour from the account manager. Access to a recent quote, a timesheet, and the folders and chats of two projects.',
+        get: 'A written map of how a project runs in your studio, your service lines, rates, stages, and the five problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your project stages, quoted rounds, hour budgets, approval states, retainer rules, licence records and invoice milestones. Build the screens around your own words.',
+        you: 'Check the setup with your lead designer. Tell us where a stage or a rule is wrong.',
+        get: 'A working Verity with your clients, designers and project types, ready for your live projects.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your client list, open projects, retainers and licence records from your sheets, and attach the key files and agreements. Train designers in short sessions on their own projects.',
+        you: 'Your client sheet, current quotes and a list of live projects. Thirty minutes with each designer.',
+        get: 'Every live project inside Verity with its rounds, hours and approvals, and a team that has logged a real round.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month of projects with you, tune the flags, and handle changes as your service lines change.',
+        you: 'A short monthly review of margin, pitches and overdue invoices.',
+        get: 'A system that follows how the studio sells and delivers, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Two or three recent quotes or proposals',
+      'Your client list, even if it is a sheet or a phone book',
+      'The timesheet or hours tracker you use now, if any',
+      'Your standard client agreement and any freelancer agreement',
+      'Your list of licensed fonts, stock accounts and music subscriptions',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. The account manager needs a few more, and each designer about half an hour.',
+    after: 'Nobody is hired to run Verity. Rounds, hours and approvals are logged as the work happens, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask what the rounds cost.',
-    lede: 'Verity AI reads the same project, round, asset and pitch records the studio creates as it works. It answers across projects, respects permissions, and can turn an answer into scope decisions.',
-    panelMeta: 'Grounded in your studio records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which deliverables are past their agreed round allowance?',
-      'Which assets are in use beyond their licensed scope?',
-      'What did pitching cost this quarter against what it won?',
-      'Which clients consume the most rounds?',
-      'Which projects have handover outstanding and payment held?',
-      'What is margin by project and project type?',
-      'Where is capacity mismatched to the work assigned?',
-      'Which deliverables were reopened by an unagreed approver?',
-      'Summarise round consumption and licence exposure.',
+    heading: 'Ask the studio a question and get an answer.',
+    lede:
+      'Verity AI reads your own project, client, hours and invoice records. Ask in plain words, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which live projects have gone past their quoted revision rounds?',
+        a: 'Four projects. Aarav Realty is the worst, on round 5 of 2, with 12 unbilled hours.',
+        rows: [['Aarav Realty brochure', '5 of 2'], ['Zest Fitness app UI', '4 of 3'], ['Orion Clinics collateral', '3 of 2'], ['Nila Cafe menu', '3 of 2']],
+        action: 'Create a task for each account manager to quote the extra rounds',
+      },
+      {
+        q: 'How many pitch hours did we spend this quarter, and how many did we win?',
+        a: '74 pitch hours across 6 pitches. One was won, worth ₹3.2 lakh.',
+        rows: [['Pitches', '6'], ['Pitch hours', '74'], ['Won', '1'], ['Lost or no reply', '5']],
+      },
+      {
+        q: 'Which licences expire in the next 30 days and which live projects use them?',
+        a: 'Two. The music track on the Nila Cafe reel ends on 2 November, and the stock photo set on the Aarav Realty brochure ends on 30 November.',
+        action: 'Raise renewal tasks for both',
+      },
     ],
   },
 
-  automationHeading: 'Rounds and licences.',
-  automationLede: 'Each runs from the studio’s own records at the point the condition is met.',
+  automationHeading: 'The chasing nobody has time for.',
+  automationLede: 'Set once, then they run from your project records. Staff still talk to clients; Verity makes sure the right person knows to.',
   automations: [
-    { trigger: 'A round is submitted', steps: ['Counted against the deliverable allowance', 'Overage flagged with effort quantified', 'Charge or absorb decision raised'] },
-    { trigger: 'An asset is used beyond its licence scope', steps: ['Exposure flagged against the project', 'Licence extension or replacement assigned', 'Cost recovered where recoverable'] },
-    { trigger: 'A pitch concludes', steps: ['Effort and cost totalled', 'Outcome recorded', 'Cost compared with the project won'] },
-    { trigger: 'A project completes', steps: ['Handover checklist created with an owner', 'Items tracked to delivery', 'Final invoice released on confirmation'] },
-    { trigger: 'A deliverable is reopened by a new approver', steps: ['Flagged as an unagreed approver', 'Scope conversation assigned', 'Decision recorded'] },
+    {
+      when: 'Client feedback arrives',
+      then: ['Logged as the next numbered round', 'Compared with the rounds quoted', 'Flag to the account manager if over'],
+    },
+    {
+      when: 'A deliverable is sent for approval',
+      then: ['State changes to with client', 'Reminder task after your set number of days', 'Approval recorded with name and date'],
+    },
+    {
+      when: 'A deliverable is approved',
+      then: ['Milestone invoice task created for finance', 'Next stage opened for the designer', 'Project margin updated'],
+    },
+    {
+      when: 'Project hours reach 80 percent of budget',
+      then: ['Flag on the project lead', 'Remaining stages listed', 'Decision recorded: reprice, trim or absorb'],
+    },
+    {
+      when: 'A licence is within 30 days of expiry',
+      then: ['Listed with the projects that use it', 'Task to renew or retire the asset', 'Outcome recorded on the licence'],
+    },
+    {
+      when: 'A proposal has had no reply for a week',
+      then: ['Listed on the pipeline screen', 'Follow-up task to the proposal owner', 'Outcome recorded: won, lost or waiting'],
+    },
   ],
 
-  intelligenceHeading: 'What the studio can see.',
-  intelligenceLede: 'Rounds, licences and pitch cost from the work itself.',
-  intelligence: [
-    { area: 'Rounds', points: ['Rounds per deliverable against allowance', 'Unbilled revision effort by client', 'Rounds charged against absorbed', 'Round count by project type and team'] },
-    { area: 'Licensing', points: ['Assets and licence scope by project', 'Usage beyond scope', 'Licence cost recovered against absorbed', 'Documentation handed over'] },
-    { area: 'New business', points: ['Pitch effort and cost by pitch', 'Win rate and value won', 'Cost against income won', 'Senior and creative time consumed'] },
-    { area: 'Capacity', points: ['Load by designer and discipline', 'Allocation against capability', 'Rework attributable to mismatch', 'Utilisation by team'] },
-    { area: 'Commercial', points: ['Margin by project and type', 'Client revision behaviour', 'Handover outstanding and payment held', 'Additional rounds recovered'] },
-  ],
-  intelligenceNote: 'Verity records the studio. Design tools and asset storage continue as they are.',
+  rules: {
+    heading: 'The rules a design studio has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your adviser is not rebuilding them from chat threads.',
+    items: [
+      {
+        name: 'Copyright assignment and licences',
+        what: 'Under the Copyright Act, an assignment of copyright has to be in writing and signed. If the deed does not state a period it is generally treated as five years, and if it states no territory it is presumed to cover India. Third-party fonts, images and music carry their own licence terms.',
+        how: 'The signed agreement, the list of what was handed over, and every third-party licence sit on the project record, with dates and permitted uses.',
+        source: { name: 'Bhatt & Joshi Associates', url: 'https://bhattandjoshiassociates.com/copyright-assignment-licensing-in-india-key-clauses-term-limits-enforcement/' },
+      },
+      {
+        name: 'Timely payment of micro and small suppliers',
+        what: 'The MSMED Act sets payment within the agreed written term, not more than 45 days, or 15 days with no written agreement. Section 43B(h) of the Income Tax Act, from assessment year 2024-25, links a buyer’s tax deduction to paying micro and small suppliers on time. This matters to you both as a supplier owed money and as a buyer of freelancer services if they are micro or small enterprises.',
+        how: 'Invoice dates, agreed credit terms and payment dates are recorded for client invoices and for freelancer and vendor bills, so ageing is visible.',
+        source: { name: 'Taxmann', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+      },
+      {
+        name: 'GST on design services',
+        what: 'Design services are generally charged GST at 18 percent. Work for a client outside India, paid in foreign currency, may qualify as an export of services, which is generally zero rated under a Letter of Undertaking. Check the current rate and conditions before invoicing.',
+        how: 'Each invoice records the client, place and type of service, so your accountant can separate domestic and export work at month end.',
+        source: { name: 'Taxaj guide on GST for graphic design', url: 'https://www.taxaj.com/learn/gst-applicability-tax-rates-on-graphic-design-services/' },
+      },
+      {
+        name: 'Client and personal data',
+        what: 'Client contact details, staff details and any end-customer data in a project are personal data. India’s data protection rules are being phased in, so keep access narrow and know where data sits.',
+        how: 'Client data lives in one permissioned place, and who viewed or changed a record is logged, instead of sitting in personal chat apps.',
+      },
+    ],
+    note: 'Rules change and differ by case. Confirm current requirements with your accountant or lawyer. Verity does not file anything.',
+  },
 
-  rolesHeading: 'One studio, three views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Everyone sees the same project, through their own window.',
+  rolesLede: 'A junior designer does not need to see what the studio earns on a project. A finance person does not need the design files. Each role opens on what it needs.',
   roles: [
-    { role: 'Founder', question: 'Where is the studio giving work away?', focus: 'Rounds against allowance, unbilled revision effort, pitch cost against wins, project margin.' },
-    { role: 'Producer', question: 'What is over and what is outstanding?', focus: 'Round counts, feedback consolidation, licences, handover checklists, capacity.' },
-    { role: 'Designer', question: 'What am I working on and against what feedback?', focus: 'Assigned deliverables, consolidated feedback, round position, assets and licences.' },
+    { role: 'Founder', question: 'Which projects make money, and which do not?', sees: 'Margin per project and client, designer load, pitch hours against wins, overdue invoices.' },
+    { role: 'Account manager', question: 'What is the client waiting on from us, and us from them?', sees: 'Rounds against the quote, approvals pending, retainer balances, next milestone to invoice.' },
+    { role: 'Designer', question: 'What exactly am I changing, and by when?', sees: 'The checklist for the current round, the brief, files, licences for assets used, and their own load.' },
+    { role: 'Finance', question: 'What can I invoice, and what is late?', sees: 'Approved milestones awaiting invoice, ageing by client, freelancer bills linked to projects.' },
+    { role: 'Freelancer', question: 'What have I been asked to do?', sees: 'Only the projects they are on, with the brief and the files for their part.' },
   ],
 
-  useCasesHeading: 'What design agencies use Verity for',
-  useCases: [
-    { name: 'Round counting', body: 'Rounds counted per deliverable against the agreed allowance, so a fourth round is a decision rather than a habit.' },
-    { name: 'Licence scope tracking', body: 'Fonts, stock and commissioned assets recorded with their licence scope, so usage beyond it is visible before it matters.' },
-    { name: 'Feedback consolidation', body: 'All feedback on a round in one place before revision starts, which is what keeps a round from becoming two.' },
-    { name: 'Pitch costing', body: 'Speculative creative effort recorded and compared against the projects it won.' },
-    { name: 'Handover to closure', body: 'Files, assets, licences and guidelines as a checklist tracked against the final payment it releases.' },
-    { name: 'Approver boundaries', body: 'Approvers named per deliverable, so a deliverable reopened by someone new is a scope conversation.' },
-    { name: 'Capability-based allocation', body: 'Designers carrying skills and load, so work is matched rather than assigned to whoever is free.' },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your design tools and cloud storage. Files stay where designers work; the project record points to the final versions.',
+      'Your client WhatsApp groups. Feedback is logged on the project by the account manager.',
+      'Your accounting software and your accountant, who still prepares returns.',
+      'Your proposal and contract templates, which are attached to the project.',
+    ],
+    not: [
+      'Replace your design software or host your design files as a design tool.',
+      'Send messages to clients on its own.',
+      'File your GST returns or run your payroll.',
+      'Give legal advice on contracts or licences.',
+    ],
+    migration:
+      'We bring your clients, live projects, retainers and licence lists across from your sheets and folders in stages, so projects keep moving while it happens.',
+  },
 
-  migration: 'Design tools, asset storage and accounting continue and are mapped during implementation. Clients, active projects with allowances, asset licences and pitches in progress are brought across.',
-
-  faqHeading: 'Questions studios ask',
+  faqHeading: 'Questions studio founders ask.',
   faqs: [
-    ['What can AI software do for a design agency?', 'Verity AI answers questions from your own project, round, asset and pitch records: which deliverables are past their round allowance, which assets are used beyond licence, what pitching cost against what it won, which clients consume the most rounds. Each answer can become a scope decision.'],
-    ['Why count revision rounds?', 'Because approval is subjective and rounds have no natural end, while the fee assumed a number. Counting them per deliverable is what turns a fourth round from an absorbed cost into a decision that can be charged or deliberately given.'],
-    ['How does licence tracking help?', 'Fonts, stock and commissioned assets carry licences with a defined scope. Work regularly ends up used beyond it, which is a liability created on the client’s behalf — visible only if the scope is recorded against the project.'],
-    ['Does it cost pitching?', 'Pitches are work with recorded effort and third-party cost, compared against the projects they won. Speculative creative work is real studio capacity and is almost never set against what it produced.'],
-    ['Why does handover matter?', 'A project is not finished until working files, assets and licences reach the client, and unhanded-over projects hold final payments while staying open in everyone’s head.'],
-    ['Can it stop unagreed approvers?', 'Approvers are named per deliverable at setup, so a deliverable reopened by a stakeholder nobody agreed becomes a scope conversation rather than another free round.'],
-    ['Does Verity replace our design tools?', 'No. Design software and asset storage continue and are mapped during implementation. Verity holds projects, rounds, licences, pitches, handover and the commercial record.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of project types, round allowances and licensing practice, configuration, migration of clients and live projects, then an ongoing operations partnership.'],
+    [
+      'Will my designers actually use it?',
+      'Designers only touch what concerns them: the checklist for the current round, their hours, and their projects. We keep it to a few clicks and train on a live project, not in a classroom. They also get something back: a clear list instead of a stack of chat messages.',
+    ],
+    [
+      'Does Verity replace Figma, Adobe or my drive?',
+      'No. Designers keep working in their tools and your files stay where they are. Verity keeps the business side of each project: the quote, rounds, hours, approvals, licences and invoices, with a pointer to the final files.',
+    ],
+    [
+      'Can it track revision rounds without annoying my clients?',
+      'Clients do not need to use Verity. Your account manager logs feedback as a round when it arrives, from whichever channel it came on. The client sees the same polite process, and you get the numbers.',
+    ],
+    [
+      'We are a small studio with eight people. Is this too much?',
+      'The leaks are the same at eight people, with less spare time to notice them. We set up only what you need, and the four weeks run the same way.',
+    ],
+    [
+      'Can it handle freelancers and agencies we subcontract to?',
+      'Yes. Freelancers are recorded with their rate and agreement, linked to the projects they work on, and see only those projects. Their bills are matched to a project, so project margin includes them.',
+    ],
+    [
+      'Does it track image, font and music licences?',
+      'It records them as assets with the project, permitted use, territory and expiry, and flags the ones about to end or used beyond their terms. It does not check licence terms against the law, so keep your own copies of what was bought.',
+    ],
+    [
+      'Who can see my client data and my margins?',
+      'Only the people you allow. Access is set by role, so designers, account managers, finance and freelancers each see only what they need, and every change is recorded with who made it and when.',
+    ],
+    [
+      'How long before I see something useful?',
+      'The revision flag, approval list and capacity view need only your live projects and quotes, so they are the first things we aim to have working. Margin and pitch conversion become reliable after a few weeks of logged hours.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the size of your team and what you want set up. Message us and we will give you a clear number after a short conversation about how your studio runs.',
+    ],
   ],
 
-  ctaHeading: 'Start by counting the rounds.',
-  ctaLede: 'It is where studio capacity goes and almost nobody has the number. Tell us how projects are scoped today.',
+  related: ['advertising-agencies', 'marketing-agencies', 'content-agencies', 'web-development-agencies', 'architecture-firms', 'photographers'],
 
-  related: ['marketing-agencies', 'content-agencies', 'advertising-agencies', 'pr-agencies', 'software-agencies', 'interior-designers'],
+  ctaHeading: 'Start with the projects that are quietly over budget.',
+  ctaLede:
+    'Tell us how your studio runs and we will show you the revision flags, the stuck approvals and the idle designer hours it would find, using your own numbers.',
 };

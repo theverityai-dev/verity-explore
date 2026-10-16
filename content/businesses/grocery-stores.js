@@ -1,567 +1,663 @@
 export default {
+  schema: 2,
   slug: 'grocery-stores',
   status: 'published',
   plural: 'grocery stores',
   subject: 'grocery store',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for grocery stores | Verity',
+    title: 'Grocery store software: credit khata, stock, deliveries | Verity',
     description:
-      'Verity connects daily stock, customer credit, home delivery, local suppliers and takings into one system built for a shop the owner runs personally.',
+      'The 14 problems that squeeze a neighbourhood grocery store, what each costs, and the Verity screens that fix them: udhaar balances, expiry, distributor schemes, home delivery.',
     keywords: [
-      'AI software for grocery stores',
-      'grocery store management software',
-      'kirana store billing and khata software',
-      'customer credit tracking for shops',
-      'local grocery inventory software',
+      'grocery store management software India',
+      'kirana store credit khata tracking',
+      'grocery stock and expiry management',
+      'kirana home delivery tracking',
+      'grocery distributor scheme tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'logistics', 'workforce', 'ai'],
 
   hero: {
     eyebrow: 'Verity for grocery stores',
-    headline: 'The khata is the most important record in the shop and the least protected.',
+    headline: 'You know every customer by name. You do not know who owes you what.',
     lede:
-      'Credit to regulars, daily deliveries, loose stock and local suppliers all run on memory and a notebook. Verity holds them as records without asking anyone to become an administrator.',
-    note: 'Sized for a shop the owner runs personally, not for a chain.',
-    panel: {
-      title: 'Shop',
-      meta: 'Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Takings today', value: '₹48,600', note: '164 bills' },
-        { label: 'Credit outstanding', value: '₹2.14 L', note: 'across 78 households' },
-        { label: 'Beyond 30 days', value: '₹64,000', note: '19 households' },
-        { label: 'Delivery orders', value: '23', note: '6 not yet dispatched' },
-      ],
-      rows: [
-        { name: '19 households past 30 days on credit', meta: 'Oldest ₹8,400 · since July', active: true },
-        { name: '6 delivery orders still undispatched', meta: 'Two promised before 12:00', active: true },
-        { name: 'Staples below reorder before the weekend', meta: '9 lines · local supplier delivers Friday', active: true },
-        { name: 'Loose stock variance on two items', meta: 'Since last weighing check', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own shop in this shape.',
-    },
+      'A neighbourhood grocery runs on trust, credit and memory. That works until the credit balance is bigger than you thought, the shelf is full of items nobody is buying, and a delivery boy has the wrong address. Verity writes down what you already carry in your head, so it stays accurate when you are not there.',
+    oneLine:
+      'One system for your credit customers, your shelves, your distributors and your home deliveries, kept up to date as you work.',
+    note: 'Built for a shop where the owner is also at the counter. Records come from the sale, the delivery and the stock check you already do.',
+    screen: 'owner',
+    screenNote: 'customers, distributors, delivery boys and shelves',
   },
 
-  overview: {
-    heading: 'A grocery store runs on trust, and trust is not a record.',
+  today: {
+    heading: 'Most grocers are good with people and guess at everything else.',
     paragraphs: [
-      'The economics of a neighbourhood grocery are simple and unforgiving. Margins are thin, volumes are steady, and the business depends almost entirely on households that come back every week. What makes it different from larger retail is that a substantial part of the trade is on credit, extended personally, tracked in a notebook, and settled monthly on the basis of what both sides remember.',
-      'That credit book is the single most valuable and most fragile asset in the shop. It represents real money owed by people the owner knows personally, which is exactly what makes chasing it uncomfortable and inconsistent. A household that has quietly drifted from settling monthly to settling every third month is usually noticed long after the exposure has grown.',
-      'The second difference is loose stock. Grains, pulses, oils and produce are bought in bulk and sold by weight, so the relationship between what was purchased and what was sold is never exact. Some of the gap is legitimate and some is not, and without recorded movement there is no way to tell which.',
-      'The third is delivery. Home delivery is now a routine part of a neighbourhood shop and is coordinated entirely by phone. Orders taken verbally, dispatched by whoever is free, and confirmed by nobody.',
-      'Verity holds the household, the credit position, the stock, the delivery and the supplier as records created in the ordinary course of the day. The shop does not acquire an administrator; the day it already works produces the picture.',
+      'Your regulars are your business. You know which family buys which atta, who pays on the first of the month and who needs a reminder. That is real knowledge, and it lives in your head and in a notebook. If you are ill for a week, or a new boy joins, it is gone.',
+      'The same goes for stock. The distributor’s salesman visits, you order by feel, and half of it moves while the rest sits. Expiry dates are checked when someone has a spare moment. Credit given on the notebook is added up when you have time.',
+      'There are about 13 million kirana stores in India, and the pressure is rising. Quick-commerce apps now deliver groceries in minutes in many cities. The shops that keep their regulars are the ones who know them best, and that needs a record.',
     ],
+    stack: ['Credit notebook or khata app', 'Billing app or manual slips', 'Distributor salesman’s order slip', 'WhatsApp for home orders', 'The owner’s memory'],
+    stackNote: 'Each piece works for its own job. None of them know about each other, and you are the glue.',
   },
 
-  terminology: [
-    ['Staples, loose stock, packaged goods', 'Inventory'],
-    ['Bills, delivery orders, returns', 'Orders'],
-    ['Households, regulars, credit customers', 'Relationships'],
-    ['Local suppliers, mandi, distributors', 'Suppliers'],
-    ['Shop staff, delivery boys', 'People'],
-    ['Credit limits, settlements, write-offs', 'Workflows'],
-    ['Shop floor, godown, delivery route', 'Locations'],
-  ],
-
-  challengesHeading: 'The problems are personal, which is why they persist.',
-  challengesLede:
-    'Almost every difficulty in a grocery store involves someone the owner knows, which makes it easier to postpone than to address.',
-  challenges: [
-    {
-      problem: 'The credit book is memory with a notebook attached',
-      detail:
-        'What a household owes, how long it has been owed and what was already said about it live in one book and one head.',
-      outcome:
-        'Credit sits on the household record with automatic ageing and the history of every conversation, so settlement follows the record rather than the recollection.',
-    },
-    {
-      problem: 'Exposure grows without anyone deciding it should',
-      detail:
-        'A household that settled monthly begins settling quarterly. Nobody made a decision to extend more credit; it simply happened.',
-      outcome:
-        'Balances are aged against terms, so a household drifting past its usual settlement pattern surfaces while the amount is still small.',
-    },
-    {
-      problem: 'Loose stock never reconciles',
-      detail:
-        'Bulk purchases sold by weight produce a gap between what was bought and what was billed, and no way to separate legitimate loss from the rest.',
-      outcome:
-        'Purchase, sale and recorded wastage are all movements against the item, so the unexplained portion is isolated rather than assumed.',
-    },
-    {
-      problem: 'Delivery orders are taken and lost',
-      detail:
-        'An order phoned in during a rush is remembered by one person, dispatched by another, and confirmed by nobody.',
-      outcome:
-        'A delivery is work with a household, a promised time, an owner and a state, so an undispatched order is visible before the promise is broken.',
-    },
-    {
-      problem: 'Reordering happens after the shortage',
-      detail:
-        'Staples run out on a Saturday because the local supplier delivers on Friday and nobody checked on Thursday.',
-      outcome:
-        'Reorder points are checked against movement and against supplier delivery days, so the check happens when it can still change the outcome.',
-    },
-    {
-      problem: 'Nobody is available to maintain a system',
-      detail:
-        'The owner is behind the counter. Any software that requires separate data entry will be abandoned within a month.',
-      outcome:
-        'The records that produce the reporting are created by billing the sale and receiving the delivery, which the shop does anyway.',
-    },
-  ],
-
-  modulesLede:
-    'One system, sized for a shop without an office. These are the parts a grocery store works with.',
-  modules: [
-    {
-      id: 'relationships',
-      title: 'Households and their credit',
-      line:
-        'Each household is a record with its purchase history, credit balance, ageing, settlement pattern and the history of every conversation about it.',
-      why:
-        'The credit book is the shop’s largest asset and its most informal record. Making it a record is the single highest-value change available.',
-      example:
-        'A household that settled on the first of every month until June and has now reached two lakh across three months is visible as a pattern, not as a shock.',
-    },
-    {
-      id: 'inventory',
-      title: 'Packaged and loose stock',
-      line:
-        'Stock is held with supplier, cost and reorder point, and moves as it is received, sold, weighed out, returned or written off.',
-      why:
-        'Loose stock is where a grocery store’s unexplained loss lives, and it is only separable from legitimate wastage if both are recorded.',
-      example:
-        'Fifty kilos received, forty-six billed, two recorded as spillage. The remaining two kilos are the number worth looking at.',
-    },
-    {
-      id: 'orders',
-      title: 'Bills, delivery orders and returns',
-      line:
-        'Transactions record their lines, the household, the staff member and the stock they moved; delivery orders carry a promised time and a state.',
-      why:
-        'Delivery is now routine and is the part of a grocery business most often coordinated entirely by memory.',
-      example:
-        'Twenty-three delivery orders today, six undispatched, two of them promised before noon and visible as such.',
-    },
-    {
-      id: 'work',
-      title: 'Deliveries, follow-ups and daily tasks',
-      line:
-        'Deliveries, credit follow-ups and opening or closing checks are work with an owner, a due time and a state.',
-      why:
-        'The things that go wrong in a small shop are things that did not happen, and nothing that is not a record can be seen not to have happened.',
-      example:
-        'A credit follow-up assigned rather than intended is the difference between a settled account and an awkward conversation next quarter.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Local suppliers and distributors',
-      line:
-        'Suppliers are relationships with their delivery days, orders, price movement and outstanding balances.',
-      why:
-        'Grocery purchasing is frequent, informal and unexamined, so price creep on staples passes through to a thin margin unnoticed.',
-      example:
-        'A staple whose cost has moved three times this year, against a retail price that has moved once.',
-    },
-    {
-      id: 'people',
-      title: 'Shop staff and delivery riders',
-      line:
-        'Staff are modelled once, and every bill, delivery, credit entry and stock adjustment carries who made it.',
-      why:
-        'A small team still needs attribution, particularly on credit entries and stock adjustments.',
-      example:
-        'Deliveries completed and credit collected by person, from the day’s own records.',
-    },
-    {
-      id: 'workflows',
-      title: 'Credit limits, settlements and write-offs',
-      line:
-        'Extending credit beyond a limit, writing off a balance and adjusting stock move through approval steps with a recorded reason.',
-      why:
-        'These are decisions the owner makes under social pressure at the counter, and a record protects the decision rather than second-guessing it.',
-      example:
-        'Credit beyond a household’s usual limit becomes a deliberate, recorded decision rather than a drift.',
-    },
-    {
-      id: 'records',
-      title: 'Bills, agreements and settlement history',
-      line:
-        'Documents and settlement history attach to the household or supplier they concern.',
-      why:
-        'A disputed balance is settled by what was billed and what was paid, not by two memories of the same month.',
-      example:
-        'A household queries a figure. The bills and the payments against them are on one record.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reporting from the day’s own records',
-      line:
-        'Takings, credit ageing, stock movement, delivery completion and supplier cost movement come from the transactions themselves.',
-      why:
-        'A grocery owner usually knows the day’s takings and the rough size of the credit book, and nothing more precise.',
-      example:
-        'Credit outstanding by ageing band, current, rather than estimated at the end of a bad month.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the shop a question',
-      line:
-        'Verity AI answers from your own household, stock, delivery and supplier records, only shows what the person asking can see, and can create assigned follow-ups.',
-      why:
-        'The owner’s real questions are asked while the shop is open, and need an answer rather than a report to prepare.',
-      example:
-        '"Which households are past thirty days and by how much?" returns nineteen, and one instruction assigns the follow-ups.',
-    },
-    {
-      id: 'communication',
-      title: 'What was said about a balance',
-      line:
-        'Notes, reminders and activity attach to the household or order they concern.',
-      why:
-        'Credit conversations are the ones most easily forgotten and most awkward to repeat unnecessarily.',
-      example:
-        'A note that a household asked for time until the tenth sits on their record, so nobody chases them on the fifth.',
-    },
-    {
-      id: 'control',
-      title: 'Who can extend credit and adjust stock',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Credit entries and stock adjustments are the two places a small shop loses money quietly.',
-      example:
-        'Staff can bill and record deliveries; extending credit past a limit requires the owner, and the record shows it.',
-    },
-  ],
-
-  workflowsHeading: 'The day the shop already works.',
-  workflowsLede:
-    'None of these ask for extra data entry. They are what billing, delivering and receiving already produce.',
-  workflows: [
-    {
-      name: 'Sale on credit',
-      steps: [
-        'Bill recorded against the household',
-        'Stock deducted as the sale completes',
-        'Balance added to the household’s credit position',
-        'Approval raised if the balance passes the agreed limit',
-        'Ageing updated automatically from the bill date',
-      ],
-      note:
-        'Credit becomes a position with an age rather than a line in a notebook.',
-    },
-    {
-      name: 'Monthly settlement',
-      steps: [
-        'Households due for settlement identified by pattern',
-        'Statement assembled from the bills of the period',
-        'Follow-up assigned with the previous conversation attached',
-        'Payment received and applied against the bills',
-        'Remaining balance and ageing updated',
-      ],
-      note:
-        'Chasing works from a record of what was already said, which makes the conversation shorter and less awkward.',
-    },
-    {
-      name: 'Home delivery',
-      steps: [
-        'Order taken and recorded against the household',
-        'Promised time set on the order',
-        'Items picked and stock deducted',
-        'Delivery assigned to a rider',
-        'Completion or failure recorded against the order',
-        'Payment or credit applied to the household',
-      ],
-      note:
-        'An order with a promised time and an owner cannot be quietly forgotten in a rush.',
-    },
-    {
-      name: 'Loose stock reconciliation',
-      steps: [
-        'Bulk purchase recorded with weight and cost',
-        'Sales by weight deducted as they are billed',
-        'Spillage and wastage recorded as movement with a reason',
-        'Remaining gap isolated as unexplained',
-        'Pattern by item reviewed over time',
-      ],
-      note:
-        'Legitimate loss and unexplained loss stop being the same number.',
-    },
-    {
-      name: 'Replenishment against delivery days',
-      steps: [
-        'Reorder points checked against recent movement',
-        'Shortfalls matched to each supplier’s delivery day',
-        'Order placed in time for the next delivery',
-        'Receipt checked against the order',
-        'Cost movement compared with current selling price',
-      ],
-      note:
-        'Checking on Thursday for a Friday delivery is what prevents a Saturday shortage.',
-    },
-    {
-      name: 'Household gone quiet',
-      steps: [
-        'Households whose purchase frequency has dropped identified',
-        'Purchase history and any credit dispute reviewed',
-        'Follow-up assigned',
-        'Outcome recorded on the household record',
-      ],
-      note:
-        'A regular household lost to a competitor is expensive and rarely noticed at the time.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask the shop, not the notebook.',
-    lede:
-      'Verity AI reads the same household, stock, delivery and supplier records the day produces. It answers from your own shop, only shows what the person asking can see, and can turn the answer into follow-ups.',
-    panelMeta: 'Grounded in your shop records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which households are past thirty days, and by how much?',
-      'How much credit is outstanding in total, and how is it ageing?',
-      'Which households have changed from monthly to quarterly settlement?',
-      'Which delivery orders are still undispatched?',
-      'Which staples will run out before the next supplier delivery?',
-      'Which loose items have the largest unexplained gap this month?',
-      'Which regular households have stopped buying?',
-      'Which supplier costs have risen without a price change on our side?',
-      'Summarise today’s takings and credit position.',
-    ],
-  },
-
-  automationHeading: 'The follow-ups nobody enjoys making.',
-  automationLede:
-    'Each runs from the shop’s own records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A household balance passes its usual settlement period',
-      steps: [
-        'Balance aged on the household record',
-        'Follow-up assigned with the previous conversation attached',
-        'Escalated to the owner past the second threshold',
-      ],
-    },
-    {
-      trigger: 'Credit would exceed the agreed limit',
-      steps: [
-        'Sale held at the approval step',
-        'Owner notified with the balance and ageing attached',
-        'Decision recorded against the household',
-      ],
-    },
-    {
-      trigger: 'A delivery order passes its promised time',
-      steps: [
-        'Order flagged as overdue',
-        'Assignment task raised for whoever is free',
-        'Outcome recorded against the order',
-      ],
-    },
-    {
-      trigger: 'A staple falls below reorder before a delivery day',
-      steps: [
-        'Shortfall flagged against the supplier’s next delivery',
-        'Order raised in time to be included',
-        'Receipt checked against the order',
-      ],
-    },
-    {
-      trigger: 'Loose stock variance passes tolerance',
-      steps: [
-        'Gap isolated from recorded wastage',
-        'Check task raised against the item',
-        'Pattern surfaced if it repeats',
-      ],
-    },
-    {
-      trigger: 'A regular household goes quiet',
-      steps: [
-        'Household flagged after a defined period without a bill',
-        'Follow-up assigned',
-        'Outcome recorded on the record',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the owner can see without leaving the counter.',
-  intelligenceLede:
-    'All of it comes from billing, delivering and receiving, which the shop does anyway.',
-  intelligence: [
+  painsHeading: 'Where a grocery store actually loses money.',
+  painsLede:
+    'These are the situations grocers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
       area: 'Credit',
-      points: [
-        'Outstanding by household with ageing bands',
-        'Households drifting past their settlement pattern',
-        'Exposure against agreed limits',
-        'Collection outcomes and write-offs',
-      ],
+      title: 'Udhaar grows quietly and nobody sees the total',
+      scene:
+        'Twenty-five families buy on credit. Each balance is in the notebook, on a different page, in a different hand. Nobody has ever added them all up, and two old balances have not moved in a year.',
+      cost:
+        'Example arithmetic: 25 families with an average ₹4,000 balance is ₹1 lakh of your cash sitting in other people’s kitchens, with no interest and some risk.',
+      fix:
+        'Credit sales and payments are recorded against each customer. Verity shows every balance, how old it is and who has crossed the limit you set, with a total at the top.',
+      screen: 'udhaar',
     },
     {
-      area: 'Takings',
-      points: [
-        'Daily and weekly takings',
-        'Cash against credit sales',
-        'Average bill value',
-        'Comparison against the same period historically',
-      ],
+      area: 'Credit',
+      title: 'Reminders are awkward, so they are put off',
+      scene:
+        'You know a customer is behind. Asking face to face is uncomfortable, and the shop is busy. The balance rises another month.',
+      cost:
+        'Cash that could pay your distributor ends up on someone else’s credit. Old balances are the hardest to recover.',
+      fix:
+        'Balances past the age you choose appear as a collection list with the customer, the amount and the last payment. The task goes to the person you pick, and what the customer said is written next to it.',
+      screen: 'udhaar',
     },
     {
       area: 'Stock',
-      points: [
-        'Lines below reorder against supplier delivery days',
-        'Loose stock gap between purchase, sale and wastage',
-        'Slow-moving packaged goods',
-        'Cost movement on staples',
+      title: 'Ordering by feel leaves some shelves full and others empty',
+      scene:
+        'The distributor’s salesman arrives on Tuesday. You order what you remember is low. By Saturday the biscuit rack is empty and the pulse shelf has a month of stock.',
+      cost:
+        'A missed sale is a customer who buys the item at the next shop, and may buy the rest of the basket there too.',
+      fix:
+        'Every sale reduces stock. Before the salesman comes, Verity lists what has sold fast, what is nearly out, and what is already overstocked, so the order matches use.',
+      screen: 'stock',
+    },
+    {
+      area: 'Stock',
+      title: 'Packs near expiry are found too late',
+      scene:
+        'A tin of ghee, a carton of biscuits or a pack of noodles reaches its best-before date at the back of the shelf. It is found when a customer notices, and now it is a complaint.',
+      cost:
+        'Expired packs are a loss and a risk to your name. FSSAI rules apply to your shop even if it is small.',
+      fix:
+        'Expiry dates are recorded for items with a short life. Verity lists the ones within 30 days, so you can move them to the front, give them a small offer or return them to the distributor in time.',
+      screen: 'stock',
+    },
+    {
+      area: 'Stock',
+      title: 'Loose items lose weight and money before they are sold',
+      scene:
+        'Sugar, dal, rice and spices are sold by weight from sacks. Spillage, moisture, weighing a little extra and repacking all eat into it. You only see the loss when a sack is finished early.',
+      cost:
+        'Loose staples carry some of your best margin. One source for kirana owners notes that loose grains, pulses and spices are where a grocer earns most, so leakage here hurts most.',
+      fix:
+        'Each sack is a stock lot with its weight. Sales by weight reduce it, and Verity shows what should be left against what is, with the gap per item per week.',
+      screen: 'stock',
+      source: {
+        name: 'OkCredit, kirana store guide (a vendor of khata software)',
+        url: 'https://okcredit.in/blog/how-to-open-a-kirana-store/',
+      },
+    },
+    {
+      area: 'Distributors',
+      title: 'Distributor schemes and free goods are agreed by word of mouth',
+      scene:
+        'A company salesman says, “Buy 20 cartons and get 2 free.” The goods come, but the free two do not. A month later nobody remembers the promise.',
+      cost:
+        'Example arithmetic: two free cartons worth ₹900 each, missed once a month, is about ₹21,600 a year.',
+      fix:
+        'Each scheme is recorded with the distributor, the item, the quantity and the benefit. When the delivery is received, Verity checks the free goods or credit and flags anything missing.',
+      screen: 'distributors',
+    },
+    {
+      area: 'Distributors',
+      title: 'Delivery quantities and prices differ from the bill',
+      scene:
+        'The bill says 12 cartons and the van unloaded 11. The price of a popular oil is ₹6 higher than last time. The driver is in a hurry.',
+      cost:
+        'You pay for goods that did not arrive, or at a price that changed without notice.',
+      fix:
+        'Goods are received against the order and the counted quantity. Verity compares order, receipt and bill, and flags any quantity or rate difference before you pay.',
+      screen: 'distributors',
+    },
+    {
+      area: 'Distributors',
+      title: 'Prices move and your shelf prices do not',
+      scene:
+        'Oil and flour rates go up in the market. You are still selling at last month’s price. Margins on staples are thin to begin with, and a rise of a few rupees on a fast mover changes the month.',
+      cost:
+        'You keep selling at a loss, or at a margin much thinner than you think, for days before anyone notices.',
+      fix:
+        'Each purchase records the cost. Verity shows the margin per item based on the latest cost and flags lines where the margin has fallen below the floor you set.',
+      screen: 'distributors',
+    },
+    {
+      area: 'Orders and delivery',
+      title: 'Home orders on phone and WhatsApp get lost or delayed',
+      scene:
+        'A customer messages a list at 7 pm. The staff member is busy, the message scrolls up, and the order is packed at 9. The customer has already ordered from an app.',
+      cost:
+        'A survey of nearly 50 kirana owners by a software vendor found that about 80 percent felt they needed to adopt online operations to win back lost business. Slow home service is one reason.',
+      fix:
+        'Each home order your team receives is entered as an order with the customer, items, address and delivery person. Verity lists open orders by time, so none is forgotten, and records when each is delivered.',
+      screen: 'deliveries',
+      source: {
+        name: 'Indian Retailer, on a Kiko Live survey of nearly 50 kirana owners, December 2024',
+        url: 'https://www.indianretailer.com/news/kirana-stores-india-turn-digitalisation-amid-rising-quick-commerce-competition',
+      },
+    },
+    {
+      area: 'Orders and delivery',
+      title: 'Delivery boys carry cash and no record',
+      scene:
+        'A boy delivers six orders on a scooter and collects cash on some. At the end of the day the money is a little short, and nobody can say which order.',
+      cost:
+        'Cash gaps and arguments, and no way to know which deliveries were late or went wrong.',
+      fix:
+        'Each delivery is assigned to a person with the amount due and the payment mode. When the order is closed, Verity compares the cash handed in with the cash due for that person that day.',
+      screen: 'deliveries',
+    },
+    {
+      area: 'Customers',
+      title: 'Regulars slip away to quick commerce and nobody notices',
+      scene:
+        'The family on the second floor used to order every week. They have not for six weeks. You assume they are travelling. They have found an app that delivers in ten minutes.',
+      cost:
+        'A regular household can be worth a lakh or more a year. Losing a few changes the shop’s year.',
+      fix:
+        'Each customer’s usual order gap and basket are recorded. Verity lists those who are overdue, what they used to buy and the last bill, and assigns a call or a visit to someone on staff.',
+      screen: 'customers',
+    },
+    {
+      area: 'Staff',
+      title: 'Only the owner knows prices, credit limits and who is trustworthy',
+      scene:
+        'A helper gives a discount the owner would not. Another extends credit to someone who owes a lot already. When the owner is away, the rules are guesses.',
+      cost:
+        'Discounts and credit given without the owner’s say, and a shop that cannot function well without the owner at the counter.',
+      fix:
+        'Credit limits and discount limits are set per customer and role. A sale above the limit waits for the owner’s approval on the phone, with the reason shown.',
+      screen: 'owner',
+    },
+    {
+      area: 'Money',
+      title: 'UPI, cash and card at the end of the day do not match the sales',
+      scene:
+        'The drawer, the UPI app and the card machine all show different figures. A missed bill, a wrong amount or a free item could each explain the gap, and you have no way to tell.',
+      cost:
+        'A few hundred rupees a day unexplained is lakhs in a year, and you cannot trust your own books.',
+      fix:
+        'Sales and collections are compared by payment mode at close. Verity names the bills that do not tie, and the close is recorded with who counted.',
+      screen: 'owner',
+    },
+    {
+      area: 'Compliance',
+      title: 'Registrations, scale stamping and tax thresholds are easy to miss',
+      scene:
+        'The FSSAI registration, the weighing scale’s Legal Metrology stamp and the GST turnover threshold are each on a different calendar in a different drawer.',
+      cost:
+        'An inspector can fine a shop for an unstamped scale, and crossing a GST threshold without registering has its own penalties. Check the current amounts with your adviser.',
+      fix:
+        'Each licence, registration and stamp is recorded with its due date. Verity shows what is due and assigns the task to a named person, and turnover to date is shown against thresholds so you are not surprised.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '13 million',
+      text: 'kirana stores operate in India, generating more than $800 billion in annual revenue, according to the press coverage of a 2024 kirana digitalisation survey.',
+      source: {
+        name: 'Indian Retailer',
+        year: '2024',
+        url: 'https://www.indianretailer.com/news/kirana-stores-india-turn-digitalisation-amid-rising-quick-commerce-competition',
+      },
+    },
+    {
+      figure: '80%',
+      text: 'of nearly 50 kirana owners surveyed said they needed to move online to win back lost business, and 84% already used some digital tools. A small sample from a software vendor.',
+      source: {
+        name: 'Indian Retailer, on a Kiko Live survey',
+        year: '2024',
+        url: 'https://www.indianretailer.com/news/kirana-stores-india-turn-digitalisation-amid-rising-quick-commerce-competition',
+      },
+    },
+    {
+      figure: '₹40 lakh',
+      text: 'is the usual GST registration threshold for shops selling only goods, and ₹20 lakh in some special-category states. Inter-state sales need registration whatever the turnover.',
+      source: {
+        name: 'OkCredit, kirana store guide',
+        year: '2026',
+        url: 'https://okcredit.in/blog/how-to-open-a-kirana-store/',
+      },
+    },
+    {
+      figure: '₹1.5 crore',
+      text: 'is the new ceiling for FSSAI basic registration from 1 April 2026, replacing the earlier ₹12 lakh. State licences cover ₹1.5 to ₹50 crore.',
+      source: {
+        name: 'Mondaq, on the FSSAI Amendment Regulations 2026',
+        year: '2026',
+        url: 'https://www.mondaq.com/india/food-and-drugs-law/1801924/fssai-raises-turnover-limits-for-food-business-registration-and-licensing',
+      },
+    },
+  ],
+  factsNote:
+    'The survey is from a vendor of software for kirana stores and covers a small group of owners. The GST figure comes from a vendor guide and should be checked with your accountant. They show the scale of the problem, not what your shop will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each built for one job. Names and terms are set up in your shop’s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Shop / Today',
+      meta: 'Shop: Sharma General Store',
+      heading: 'The owner’s morning view',
+      caption:
+        'Yesterday’s sales, credit outstanding, stock about to run out, open home orders and anything waiting for your say, on one screen. It replaces the notebook and the end-of-day count.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹48,600', note: '112 bills' },
+            { label: 'Udhaar outstanding', value: '₹1,12,400', note: '27 customers' },
+            { label: 'Open home orders', value: '6', note: '2 past 1 hour' },
+            { label: 'Expiring in 30 days', value: '19', note: 'lines to move' },
+          ],
+        },
+        { type: 'title', text: 'Udhaar by age' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Under 30 days', value: 52, display: '₹58,000' },
+            { label: '30 to 60 days', value: 31, display: '₹35,400' },
+            { label: 'Over 60 days', value: 19, display: '₹19,000', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'UPI, cash and card are ₹320 below bills. 2 bills unmatched.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Discount of ₹150 on an order', meta: 'Asked by Ravi for a regular. Over his limit.', tag: ['Approve?', 'flag', 'Approved', 'ok'] },
+            { name: 'Weighing scale stamp due', meta: 'Due 28 November', tag: ['Book', 'flag', 'Booked', 'ok'] },
+          ],
+        },
       ],
     },
     {
-      area: 'Households',
-      points: [
-        'Purchase frequency and basket value',
-        'Regulars whose frequency has dropped',
-        'Credit versus cash behaviour',
-        'Delivery usage by household',
+      id: 'udhaar',
+      title: 'Udhaar',
+      meta: 'Credit customers',
+      heading: 'Who owes what, and for how long',
+      caption:
+        'Every credit customer with their balance, limit, age of the oldest dues and last payment. Reminders are tasks for a named person, with the customer’s reply written next to them.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Customer', 'Balance', 'Limit', 'Oldest', 'Status'],
+          rows: [
+            ['Gupta family', '₹7,800', '₹6,000', '74 days', ['Over limit', 'late', 'Promised Friday', 'info']],
+            ['Mrs Kulkarni', '₹3,200', '₹5,000', '12 days', ['OK', 'ok']],
+            ['Jain flat 304', '₹5,400', '₹5,000', '48 days', ['Remind', 'flag', 'Paid ₹2,000', 'ok']],
+            ['Raju, chai stall', '₹9,600', '₹8,000', '61 days', ['Remind', 'late']],
+          ],
+        },
+        { type: 'alert', text: '4 customers are over their limit. Together they owe ₹26,000.', action: 'Assign reminders' },
       ],
     },
     {
-      area: 'Delivery',
-      points: [
-        'Orders taken, dispatched and completed',
-        'Orders past their promised time',
-        'Delivery volume by rider',
-        'Failed deliveries and their reasons',
+      id: 'stock',
+      title: 'Stock',
+      meta: 'Shelves, sacks and expiry',
+      heading: 'What to order, what to move and what is going bad',
+      caption:
+        'Fast sellers about to run out, slow lines tying up cash, loose sacks against what should be left, and packs close to their date.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'In stock', 'Sells / week', 'Expiry', 'Status'],
+          rows: [
+            ['Atta 5 kg', '6', '22', 'n/a', ['Order today', 'late', 'Ordered', 'ok']],
+            ['Biscuit family pack', '40', '11', '18 days', ['Move to front', 'flag', 'Moved', 'ok']],
+            ['Toor dal, loose (sack)', '31 kg', '52 kg', 'n/a', ['3.5 kg short', 'flag']],
+            ['Ghee 1 L', '9', '3', '24 days', ['Offer', 'flag', 'Offered', 'info']],
+            ['Detergent 1 kg', '28', '2', '9 months', ['Slow', 'muted']],
+          ],
+        },
+        { type: 'alert', text: 'Sugar sack was 50 kg a week ago. Sales account for 41 kg, 6 kg is left. 3 kg unexplained.', action: 'Check' },
       ],
     },
     {
-      area: 'Suppliers',
-      points: [
-        'Cost movement on repeat purchases',
-        'Delivery reliability against expected days',
-        'Short deliveries and returns',
-        'Outstanding payable',
+      id: 'distributors',
+      title: 'Distributors',
+      meta: 'Orders, schemes and prices',
+      heading: 'What was ordered, what came, and what you were promised',
+      caption:
+        'Each order with its receipt and bill, any free goods or credit you were promised, and the cost of each item against last time.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Distributor', 'Ordered', 'Received', 'Scheme', 'Status'],
+          rows: [
+            ['Shree Agencies', '20', '20', '2 free', ['Free goods missing', 'late', 'Received', 'ok']],
+            ['Ram Traders', '12', '11', 'None', ['Short 1', 'flag', 'Credit note', 'ok']],
+            ['Hindustan Oils', '30', '30', 'None', ['Rate +₹6', 'flag']],
+            ['Metro Cash and Carry', '8', '8', 'None', ['Matched', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Cooking oil cost rose ₹6 a litre. Your margin on the 1 L pack is now 3%.', action: 'Reprice' },
+      ],
+    },
+    {
+      id: 'deliveries',
+      title: 'Home orders',
+      meta: 'Today',
+      heading: 'Every home order, from message to doorstep',
+      caption:
+        'Each order is written down as it arrives, assigned to a packer and a delivery person, and closed when it is delivered. Cash collected is matched to the person.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'To pack',
+              cards: [
+                { title: 'Mrs Kulkarni, flat 402', meta: '18 items, ₹1,240. Ordered 7:05 pm', tag: ['Late', 'late', 'Packing', 'info'] },
+                { title: 'Jain flat 304', meta: '9 items, ₹610. Ordered 7:20 pm', tag: ['New', 'flag', 'Packing', 'info'] },
+              ],
+            },
+            {
+              name: 'Out for delivery',
+              cards: [
+                { title: 'Gupta family', meta: 'Sunil, scooter. Cash on delivery ₹980', tag: ['On the way', 'info', 'Delivered', 'ok'] },
+              ],
+            },
+          ],
+        },
+        { type: 'alert', text: 'Sunil handed in ₹4,200 against ₹4,620 due today. One order, ₹420, not accounted for.', action: 'Check' },
+      ],
+    },
+    {
+      id: 'customers',
+      title: 'Customers',
+      meta: 'Regulars and overdue',
+      heading: 'Your regulars, and who has gone quiet',
+      caption:
+        'Customers ordered by their yearly spend and how overdue they are against their own pattern, with what they used to buy so the call is a useful one.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Customer', 'Last order', 'Usual gap', 'Spend, 12 mo', 'Status'],
+          rows: [
+            ['Dr Menon, flat 201', '2 Sep', '1 wk', '₹84,000', ['Call today', 'late', 'Ordered', 'ok']],
+            ['Iyer family', '10 Sep', '10 days', '₹61,500', ['Call today', 'flag']],
+            ['Parekh family', '28 Aug', '2 wks', '₹47,200', ['Message', 'flag', 'Ordered', 'ok']],
+            ['Mrs Thomas', '5 Sep', '2 wks', '₹32,800', ['Message', 'flag']],
+          ],
+        },
+        { type: 'alert', text: '12 regular households are past their usual gap. 5 spent over ₹40,000 last year.', action: 'Assign all' },
       ],
     },
   ],
-  intelligenceNote:
-    'The shop does not acquire an administrator. Recording the bill and the delivery is what produces all of this.',
 
-  rolesHeading: 'A small shop still has different jobs.',
+  dayHeading: 'The same Wednesday, before and after.',
+  dayLede: 'Your shop does not change. What changes is that the knowledge in your head is written down and does some of the chasing.',
+  day: [
+    {
+      time: '8:00',
+      before: 'You open the shop and try to remember what is low, and who has not paid.',
+      after: 'The Today screen lists five items to order, four customers over their limit and six home orders for the morning.',
+    },
+    {
+      time: '10:30',
+      before: 'The distributor’s salesman visits and you order from memory.',
+      after: 'You order from a list of fast sellers, slow lines and expiring packs, and note the free-goods scheme he offers.',
+    },
+    {
+      time: '1:00',
+      before: 'A van unloads. The bill says 12 cartons and 11 are carried in.',
+      after: 'The count against the order is entered at the door. The short carton is flagged for a credit note.',
+    },
+    {
+      time: '5:00',
+      before: 'A regular has not been in for two months and you only just realised.',
+      after: 'She appeared on the overdue list at three weeks and your helper phoned her.',
+    },
+    {
+      time: '7:30',
+      before: 'A WhatsApp order is packed late and the customer has already ordered from an app.',
+      after: 'The order is on the home orders board, assigned and timed. It leaves within the half hour.',
+    },
+    {
+      time: '9:30',
+      before: 'You count cash and UPI against the slips. It is off by ₹320 and you are tired.',
+      after: 'Verity shows the two bills that do not tie, and you fix them in a minute.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you in four weeks, around the shop’s hours.',
+    lede:
+      'There is no login and a manual. We learn how your shop runs, build Verity around it, bring your credit and stock lists across, and stay on while it settles in.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a morning and an evening at the shop. Watch a distributor delivery, a few credit sales, a home order and the end-of-day count, and note where each number lives.',
+        you: 'Two hours of your time, in the quiet hours. Your credit notebook, your distributor list and your billing slips.',
+        get: 'A written map of your shop: items, distributors and schemes, credit customers, delivery people and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your item list, loose-item lots, credit limits, discount limits, delivery roles and reorder points, and build the screens above in your terms.',
+        you: 'Check the setup with your senior helper. Tell us where a rule or a name is wrong.',
+        get: 'A working Verity with your real items, customers and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your credit balances, customer phone numbers, item list and opening stock. Train you and your helpers at the counter and the stockroom, in short sessions.',
+        you: 'Your notebook pages, photographed or copied into any sheet. Half an hour with each helper.',
+        get: 'Your customers, balances and stock inside Verity, and a team that has run a home order and an end-of-day close.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month with you, tune the limits and alerts, and handle changes when you add a second counter or a delivery person.',
+        you: 'A short monthly look at the numbers.',
+        get: 'A system that keeps matching the shop, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your credit notebook or khata app export',
+      'Your item list with buying and selling prices, even if rough',
+      'Distributor names, phone numbers and the schemes you know about',
+      'Your regular customers’ names and numbers',
+      'Your helpers’ and delivery boys’ names, hours and pay arrangement',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in the first week and in short blocks. Your senior helper needs a few more.',
+    after: 'Nobody is hired to run Verity. Sales, receipts, credit entries and orders are recorded as part of the work already done, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your shop a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own sales, credit, stock and order records. Ask in plain language, then turn the answer into tasks for your people.',
+    examples: [
+      {
+        q: 'Who owes me more than 60 days of udhaar?',
+        a: '5 customers owe ₹19,000 between them for more than 60 days. The largest is ₹9,600.',
+        rows: [['Raju, chai stall', '₹9,600'], ['Gupta family', '₹4,800'], ['Flat 112', '₹2,400'], ['Others (2)', '₹2,200']],
+        action: 'Create reminder tasks for each',
+      },
+      {
+        q: 'Which items are selling slower than before?',
+        a: 'Detergent 1 kg and two brands of tea are down by more than half over the last two months, and together hold ₹14,000 of stock.',
+        rows: [['Detergent 1 kg', '-62%'], ['Tea 250 g, brand A', '-55%'], ['Tea 250 g, brand B', '-51%']],
+      },
+      {
+        q: 'Which regulars have not ordered in three weeks?',
+        a: '12 households are past three weeks. Together they spent ₹4.8 lakh with you in the last year.',
+        action: 'Assign a call to each household',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede:
+    'Set once, then they run from your records. Your people still make the calls and messages. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'A credit customer goes over their limit',
+      then: ['Held for your approval on further credit', 'Listed with the customer’s history', 'Reminder task to the person you choose'],
+    },
+    {
+      when: 'A credit balance is 45 days old',
+      then: ['Added to the collection list', 'Task to call or visit', 'Reply recorded: paid, promised or disputed'],
+    },
+    {
+      when: 'An item falls below its reorder level',
+      then: ['Added to the next distributor order', 'Order drafted for your approval', 'Stock updated when goods are received'],
+    },
+    {
+      when: 'A pack is 30 days from expiry',
+      then: ['Listed on the move-first shelf list', 'Task to bring forward or offer', 'Returned or written off if unsold'],
+    },
+    {
+      when: 'A home order is received',
+      then: ['Entered with items and address', 'Assigned to a packer and a delivery person', 'Cash due matched when it is closed'],
+    },
+    {
+      when: 'A distributor delivery differs from the order',
+      then: ['Flagged by item and quantity', 'Credit note task opened', 'Bill held back from payment'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a grocery store has to keep up with.',
+    lede:
+      'Verity does not give legal or tax advice and does not file anything for you. It keeps the dates and records these rules depend on in one place, so nothing is missed.',
+    items: [
+      {
+        name: 'FSSAI registration or licence',
+        what: 'A shop selling packaged and loose food needs an FSSAI registration or licence, based on turnover. From 1 April 2026 basic registration generally covers turnover up to ₹1.5 crore, a state licence ₹1.5 to ₹50 crore.',
+        how: 'The registration number, category and any reminders are recorded, and expiry checks on packs are tasks with a name and a tick.',
+        source: {
+          name: 'Mondaq, FSSAI raises turnover limits',
+          url: 'https://www.mondaq.com/india/food-and-drugs-law/1801924/fssai-raises-turnover-limits-for-food-business-registration-and-licensing',
+        },
+      },
+      {
+        name: 'Weighing scales and the Legal Metrology rules',
+        what: 'Scales used in trade generally need Legal Metrology verification and stamping, with periodic re-verification set by your state. Packaged goods must not be sold above the printed MRP.',
+        how: 'Each scale and its next verification date are recorded with a reminder. A new lot with a changed MRP is flagged so the shelf price is corrected.',
+        source: {
+          name: 'OkCredit, kirana store guide',
+          url: 'https://okcredit.in/blog/how-to-open-a-kirana-store/',
+        },
+      },
+      {
+        name: 'GST thresholds and rates',
+        what: 'A shop selling only goods generally has to register once turnover crosses ₹40 lakh, or ₹20 lakh in some states. Inter-state supply needs registration whatever the turnover. Rates depend on the product. Your accountant prepares the returns.',
+        how: 'Turnover to date is shown against your threshold, and purchases and sales show the split by tax rate.',
+      },
+      {
+        name: 'Customer and staff data',
+        what: 'Customer phone numbers and addresses are personal data. The DPDP Rules, 2025 were notified in November 2025, and most business duties start on 13 May 2027.',
+        how: 'Customer details sit in one place with a record of who viewed or changed them, instead of in a notebook or a delivery boy’s phone.',
+        source: {
+          name: 'S.S. Rana & Co. on the DPDP Rules',
+          url: 'https://ssrana.in/articles/meity-notifies-final-digital-personal-data-protection-rules-2025/',
+        },
+      },
+    ],
+    note: 'Rules, thresholds and rates change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
   rolesLede:
-    'Everyone works from the same records, and each role opens on what they actually need.',
+    'A delivery boy does not need to see anyone’s credit balance. A helper does not need your buying prices. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'How much is out, and with whom?',
-      focus: 'Credit outstanding and ageing, takings, stock below reorder, supplier costs, households gone quiet.',
-    },
-    {
-      role: 'Counter staff',
-      question: 'What does this household owe?',
-      focus: 'Household balance and limit, purchase history, open delivery orders, availability.',
-    },
-    {
-      role: 'Delivery rider',
-      question: 'What am I taking out and to whom?',
-      focus: 'Assigned delivery orders, promised times, payment or credit to collect, completion to record.',
-    },
-    {
-      role: 'Whoever orders stock',
-      question: 'What has to go on the next order?',
-      focus: 'Reorder shortfalls against delivery days, movement by line, supplier prices and reliability.',
-    },
+    { role: 'Owner', question: 'Is the shop earning, and who owes me?', sees: 'Sales, margin by item, udhaar by age, distributor schemes, stock and cash match.' },
+    { role: 'Senior helper', question: 'What needs doing today?', sees: 'Orders to place, packs to move, home orders open and credit reminders assigned.' },
+    { role: 'Counter helper', question: 'Can this customer take more credit?', sees: 'Customer limit and balance, stock at hand and today’s sales.' },
+    { role: 'Delivery person', question: 'What is on my route?', sees: 'Their assigned orders, addresses, amounts due and the cash they hold.' },
+    { role: 'Accountant', question: 'What do I need for month end?', sees: 'Sales and purchases by tax rate, collections by mode, distributor bills and credit outstanding.' },
   ],
 
-  useCasesHeading: 'What grocery stores use Verity for',
-  useCases: [
-    {
-      name: 'Credit book as a record',
-      body: 'Household balances with automatic ageing and the history of every conversation, so settlement follows the record rather than two memories.',
-    },
-    {
-      name: 'Exposure control',
-      body: 'Credit aged against each household’s usual settlement pattern, so drift surfaces while the amount is still small.',
-    },
-    {
-      name: 'Loose stock reconciliation',
-      body: 'Purchase, sale by weight and recorded wastage as movements, so the unexplained gap is isolated rather than assumed.',
-    },
-    {
-      name: 'Home delivery coordination',
-      body: 'Delivery orders as work with a household, a promised time, an owner and a state, so nothing is lost in a rush.',
-    },
-    {
-      name: 'Replenishment against delivery days',
-      body: 'Reorder checks timed to each supplier’s delivery day, so the shortage is prevented rather than discovered.',
-    },
-    {
-      name: 'Household retention',
-      body: 'Purchase frequency on the household record, so a regular who has stopped coming is visible while it is still recoverable.',
-    },
-    {
-      name: 'Margin on staples',
-      body: 'Supplier cost movement compared against selling price per line, on a margin too thin to absorb an unnoticed increase.',
-    },
-    {
-      name: 'Credit and adjustment control',
-      body: 'Extending credit beyond a limit and adjusting stock as approvals with reasons and attribution.',
-    },
-    {
-      name: 'Asking the shop questions',
-      body: 'Plain-language questions across credit, stock, delivery and suppliers, with follow-ups assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing app or slips at the counter. We agree during setup how sales reach Verity.',
+      'Your khata app or notebook, until we have moved the balances across.',
+      'WhatsApp for home orders. Your staff read the message and enter the order.',
+      'Your accountant, who still prepares your GST returns.',
+    ],
+    not: [
+      'Take home orders from customers online.',
+      'Send reminders to customers on its own.',
+      'Collect payments or manage UPI for you.',
+      'File tax returns or run your payroll.',
+    ],
+    migration:
+      'We bring your credit balances, customer list, item list and opening stock across from the notebook, sheets or apps you use now, in stages, so the shop keeps trading while it happens.',
+  },
 
-  migration:
-    'The billing software, the credit notebook and the supplier list are mapped during implementation. Household balances, stock and supplier terms are brought across, and Verity is set up to fit the way the shop already runs its day rather than requiring a new routine.',
-
-  faqHeading: 'Questions shop owners ask',
+  faqHeading: 'Questions grocery store owners ask.',
   faqs: [
     [
-      'What can AI software do for a grocery store?',
-      'Verity AI answers questions from your own records: which households are past thirty days and by how much, which staples will run out before the next supplier delivery, which delivery orders are still undispatched, which regulars have stopped buying. Each answer can become a follow-up assigned to someone.',
+      'My shop is small and I do not have time at the computer. Will this work?',
+      'It is built for that. Most entries are a few taps at the moment the thing happens: a sale on credit, a delivery received, an order taken. We train you at the counter in short sessions, not in a classroom.',
     ],
     [
-      'Can Verity replace the credit notebook?',
-      'That is the main thing it does here. Credit sits on the household record with automatic ageing and the history of every conversation about it, so a disputed balance resolves to the bills and the payments rather than to two recollections of the same month.',
+      'Does Verity replace my billing app or khata app?',
+      'It can take over the khata from a notebook or an app, because balances and payments are records on the customer. Your billing app keeps ringing up sales, and we agree during setup how its sales reach Verity.',
     ],
     [
-      'Do we need someone to maintain it?',
-      'No, and the shop should not need one. The records that produce the reporting are created by billing the sale, receiving the delivery and dispatching the order — which the shop does anyway. There is no separate data-entry job.',
+      'Can Verity send reminders to my credit customers?',
+      'Not by itself. It builds the collection list and assigns the reminder to a person, who calls or messages. What the customer says is recorded next to the balance.',
     ],
     [
-      'Can it handle loose stock sold by weight?',
-      'Yes. Bulk purchase, sale by weight and recorded spillage are all movements against the item, so the gap between what was bought and what was billed separates into legitimate wastage and an unexplained remainder you can actually investigate.',
+      'How do loose items like dal and sugar work?',
+      'Each sack is a stock lot with its weight. Sales by weight reduce it. Verity shows what should be left against what you have, and the gap per item per week.',
     ],
     [
-      'Does it manage home delivery?',
-      'Delivery orders are work with a household, a promised time, an assigned rider and a state, so an order taken during a rush is visible until it is completed rather than remembered by one person.',
+      'Do I need barcodes or new machines?',
+      'Verity does not run a billing counter or scan barcodes. We work with the way you record sales today, and agree during setup how that data reaches Verity.',
     ],
     [
-      'Does Verity replace our billing software?',
-      'No. Your billing setup is mapped during implementation and continues to work. Verity is the operational layer over it — credit, stock movement, deliveries, suppliers and the reporting across them.',
+      'Can I see what my helpers and delivery boys are doing?',
+      'Yes. Tasks, home orders and cash handed in are recorded against each person. Access is set by role, so a delivery person sees their own route and not your credit book.',
     ],
     [
-      'Can we control who extends credit?',
-      'Yes. Verity has one permission model across every record, so staff can bill and record deliveries while extending credit past an agreed limit requires the owner, and the decision is on the record.',
+      'Who can see my customers’ balances?',
+      'Only the people you allow. Credit balances are visible to the owner and the people you name. Every view and change is recorded with who and when.',
     ],
     [
-      'Is this only for larger shops?',
-      'No. The credit book, the loose stock gap and the delivery coordination are problems a single-counter shop has as acutely as a large one, and with less capacity to absorb them.',
+      'I have a second shop. Can I see both?',
+      'You can. Each shop is a location, and a customer who buys at both is one person. Stock, credit and sales are compared, and transfers between shops are recorded.',
     ],
     [
-      'How long does it take to set up?',
-      'About four weeks: discovery and mapping of how the shop actually runs, configuration, migration of household balances, stock and suppliers, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of shops, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your shop runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the credit book.',
-  ctaLede:
-    'It is the largest amount of money in the shop and the least protected record in it. Tell us how yours is kept today and we will show you what it looks like in Verity.',
+  related: ['convenience-stores', 'supermarkets', 'retail-stores', 'bakeries', 'distributors', 'wholesalers'],
 
-  related: ['supermarkets', 'convenience-stores', 'retail-stores', 'bakeries', 'pet-stores', 'hardware-stores'],
+  ctaHeading: 'Start with the udhaar nobody has added up.',
+  ctaLede:
+    'Tell us how your shop runs and we will show you the credit total, the packs near expiry and the regulars who went quiet, using your own numbers.',
 };

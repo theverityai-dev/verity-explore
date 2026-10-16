@@ -1,180 +1,684 @@
 export default {
+  schema: 2,
   slug: 'physiotherapy-clinics',
   status: 'published',
   plural: 'physiotherapy clinics',
-  subject: 'physiotherapy practice',
+  subject: 'physiotherapy clinic',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for physiotherapy clinics | Verity',
+    title: 'Physiotherapy clinic management software for India | Verity',
     description:
-      'Verity connects courses of treatment, attendance adherence, third-party funding approvals, room and equipment utilisation and outcome recording into one system.',
+      'The 14 problems that drain a physio clinic: patients who stop mid-course, unused session packs, home visits, equipment and referrals, and the Verity screens that fix them.',
     keywords: [
-      'AI software for physiotherapy clinics',
-      'physiotherapy practice management software',
-      'course of treatment and attendance tracking',
-      'insurance approval and utilisation software',
+      'physiotherapy clinic software India',
+      'physio session package tracking',
+      'home physiotherapy visit scheduling',
+      'physiotherapy patient dropout follow-up',
+      'physiotherapy referral tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'schedule', 'workforce', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for physiotherapy practices',
-    headline: 'A course of eight sessions delivered as five is not a discount. It is an outcome that did not happen.',
+    eyebrow: 'Verity for physiotherapy clinics',
+    headline: 'Six sessions in, the pain eased, and the patient quietly stopped. The other four sessions were never delivered.',
     lede:
-      'Physiotherapy works over a course, and courses stop early. Verity tracks adherence, the funding approvals behind it and the capacity it consumes.',
-    note: 'Verity runs the practice. Clinical notes stay in your existing system.',
-    panel: {
-      title: 'Practice',
-      meta: 'This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sessions delivered', value: '820', note: 'across 4 therapists' },
-        { label: 'Courses incomplete', value: '64', note: 'stopped before plan' },
-        { label: 'Approvals pending', value: '19', note: 'third-party funded' },
-        { label: 'Room utilisation', value: '68%', note: 'of available hours' },
-      ],
-      rows: [
-        { name: '64 courses stopped before the planned session count', meta: 'Outcome and revenue both incomplete', active: true },
-        { name: '19 funded patients awaiting approval', meta: 'Treatment delayed or delivered at risk', active: true },
-        { name: 'Two therapists below 55% utilisation', meta: 'While the waitlist runs two weeks', active: true },
-        { name: 'Cancellations concentrated in one slot pattern', meta: 'Early morning · repeatedly unfilled', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own practice in this shape.',
-    },
+      'A physiotherapy clinic earns across a course of visits, and the course is only completed when someone notices a patient has gone quiet. Home visits, referrals, packages and progress notes live in separate places. Verity brings them together and tells your team who to call.',
+    oneLine:
+      'One system that knows every patient’s course, every session left, every therapist’s day, every referral and every machine, and shows you what needs attention.',
+    note: 'Verity records what your therapists prescribe and observe. It does not advise on treatment or replace clinical judgement.',
+    screen: 'owner',
+    screenNote: 'therapists, rooms, home visits and packs',
   },
 
-  overview: {
-    heading: 'The unit is a course, not an appointment.',
+  today: {
+    heading: 'A physiotherapy clinic sells recovery, one session at a time.',
     paragraphs: [
-      'Physiotherapy works through a planned course of sessions, and both the clinical outcome and the revenue depend on the patient completing it. A course planned at eight sessions and delivered as five is not a smaller sale — it is an outcome that did not happen and a patient who may conclude that physiotherapy did not work.',
-      'Sixty-four incomplete courses is therefore the most important number in the practice, and it is invisible in an appointment diary that shows only what was booked.',
-      'The second characteristic is third-party funding. Insurance, employer and scheme funding require approval before or during treatment, and nineteen patients awaiting approval means treatment either delayed or delivered at the practice’s risk.',
-      'The third is utilisation. Rooms and therapists are the capacity, and two therapists below fifty-five percent while the waitlist runs two weeks is a scheduling failure rather than a demand shortfall.',
-      'The fourth is cancellation patterns. Slots that repeatedly cancel and go unfilled are a schedulable problem once they are visible as a pattern rather than as individual events.',
-      'Verity tracks courses against plan, approvals against treatment, and utilisation against the waitlist.',
+      'The first assessment is straightforward. The real work is the course after it: ten sessions over five weeks for a frozen shoulder, a long programme after a knee replacement, a fortnight of exercises after a sports injury. Patients feel better in session four and wonder if they need the rest. Some leave. Some come back three months later with the same problem.',
+      'Information is spread thinly. Assessment notes are in a file or on a tablet. Pain scores and movement measures are on a sheet the therapist keeps. The exercise handout went out on a printout. The session pack is a card in the patient’s wallet. Referring doctors rarely hear back. Home visits are planned in a WhatsApp group. Machines are used and serviced on trust.',
+      'Everyone is busy, and everyone is treating a patient. Nobody is watching the whole course, so the signs that a patient is slipping away, or that a therapist is overbooked, or that a referral source has gone quiet, show up late or not at all.',
     ],
+    stack: ['Assessment forms or a basic app', 'Session cards and a register', 'WhatsApp for home visits', 'Printed exercise sheets', 'Therapists’ memory'],
+    stackNote: 'Each is fine for its small job. None of them can tell you who stopped coming this fortnight.',
   },
 
-  terminology: [
-    ['Courses, sessions, treatment plans', 'Work'],
-    ['Patients, referrers, funders', 'Relationships'],
-    ['Approvals, authorisations, claims', 'Workflows'],
-    ['Therapists, rooms, equipment', 'Workforce'],
-    ['Assessments, outcomes, notes', 'Records'],
-    ['Clinics, rooms, gym area', 'Locations'],
-    ['Session fees, packages, funded rates', 'Control'],
+  painsHeading: 'Where a physiotherapy clinic loses patients and money.',
+  painsLede:
+    'These are the situations physiotherapists and clinic owners describe. For each: what it looks like, what it costs, and what Verity does. Verity records what your therapists decide and never advises on treatment.',
+  pains: [
+    {
+      area: 'Patients',
+      title: 'Patients stop when the pain eases, with the course unfinished',
+      scene:
+        'A man with a lower back strain has done five of eight planned sessions. He feels fine and says he will call if it returns. Two months later he is back with the same pain and the earlier work has to be repeated.',
+      cost:
+        'Example arithmetic: 30 patients a month who leave with three sessions undelivered at ₹600 each is ₹54,000 of planned work a month. Published accounts of Indian physiotherapy settings describe non-adherence as a central problem, driven by cost, family duties and access.',
+      fix:
+        'The therapist records how many sessions the plan needs. Verity shows courses with sessions left and no visit in a set number of days, and gives the desk a call task for each. The outcome is recorded so the next call knows what was said.',
+      screen: 'followups',
+      source: {
+        name: 'Sociocultural factors affecting patient adherence in physiotherapy settings in India (World Physiotherapy congress proceeding)',
+        url: 'https://world.physio/congress-proceeding/sociocultural-factors-affecting-patient-adherence-physiotherapy-settings-india',
+      },
+    },
+    {
+      area: 'Patients',
+      title: 'Session packs are bought and then lost, argued over or left unused',
+      scene:
+        'A patient buys a pack of ten. Four visits later nobody is sure how many remain. The card is in an old bag. A relative asks if the remaining sessions can be used for her mother.',
+      cost:
+        'Unused packs are work the clinic is owed, and a source of arguments when the count differs. Packs with no end date make revenue hard to plan.',
+      fix:
+        'A pack is a record with sessions bought, sessions used, the person it belongs to and an end date. Every visit reduces it. Verity lists packs about to lapse and the desk can rebook while the patient still cares.',
+      screen: 'packages',
+    },
+    {
+      area: 'Time and rooms',
+      title: 'No-shows and late cancellations break the therapist’s day',
+      scene:
+        'The 6 pm patient does not turn up and the therapist waits twenty minutes. Two others cancelled an hour before. Evenings are packed and mornings are thin.',
+      cost:
+        'A therapist on salary or on a per-session fee with no patient in front of them. Because the same patients repeat the pattern, the loss is predictable but never measured.',
+      fix:
+        'Each no-show and cancellation is recorded on the patient. Verity shows repeat cases, empty slots with a waiting list for earlier dates, and the hours that stay empty week after week.',
+      screen: 'owner',
+    },
+    {
+      area: 'Time and rooms',
+      title: 'Treatment rooms, tables and machines are unevenly used',
+      scene:
+        'The traction table has a queue on Monday mornings. The shockwave unit was used twice in a month. One therapist is double-booked while another has a gap.',
+      cost:
+        'A machine that is bought and rarely used is a poor purchase. Overbooked therapists rush, and empty ones cost wages.',
+      fix:
+        'Visits are recorded with therapist, room and equipment used. Verity shows utilisation by therapist, room and machine, and which ones earn their cost.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Time and rooms',
+      title: 'Home visits are planned over WhatsApp',
+      scene:
+        'Six home patients across the city, two therapists, one two-wheeler each. A last-minute cancellation leaves a therapist forty minutes from the next patient. Travel is not paid for, so it is not counted.',
+      cost:
+        'Hours of travel with no billing, missed visits when a message is not seen, and patients unsure who is coming.',
+      fix:
+        'Home visits are scheduled records with address area, therapist, time window and status. Verity shows each therapist’s day in order, flags gaps and overlaps and records travel time next to billable time.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Clinical records',
+      title: 'Progress is argued from memory, not from measurements',
+      scene:
+        'A patient says the shoulder is no better. The therapist remembers it improving. The pain scores and range-of-movement readings are on three different sheets, and the last two are missing.',
+      cost:
+        'Hard to show a patient or a referring doctor what has changed. Insurers and corporate clients increasingly ask for progress evidence.',
+      fix:
+        'Your therapist records pain score, movement and function measures at each review, using the scales you already use. Verity shows them as a trend on the patient record. It records what is entered and makes no clinical judgement.',
+      screen: 'patient',
+    },
+    {
+      area: 'Clinical records',
+      title: 'The home exercise plan is a printout that cannot be checked',
+      scene:
+        'The patient is given a sheet of exercises. At the next visit nobody knows which ones were advised, which were changed, or what the patient actually did.',
+      cost:
+        'The follow-up becomes a second assessment, and time is lost re-establishing where the patient is.',
+      fix:
+        'The exercises advised, the changes made and the patient’s own report at each visit are recorded on the patient record. The next therapist opens it and sees what was set last time.',
+      screen: 'patient',
+    },
+    {
+      area: 'Referrals',
+      title: 'Referring doctors send patients and never hear back',
+      scene:
+        'An orthopaedic surgeon sends post-operative knee patients. Nobody tells him how they progressed. After a few months he sends fewer.',
+      cost:
+        'Referrals are the cheapest patients a clinic gets, and the least tracked. A silent source dries up without anyone noticing.',
+      fix:
+        'Each patient has a referral source on record. Verity shows referrals by doctor over time, and creates a task to send a short progress summary at set points. Your therapist writes it; Verity makes sure it is sent.',
+      screen: 'followups',
+    },
+    {
+      area: 'Money',
+      title: 'Insurance, accident and corporate claims wait in a file',
+      scene:
+        'A post-surgery patient has an insurance-backed course. A company covers a tie-up for its staff. A road accident claim needs session records. Each has its own forms and its own follow-up.',
+      cost:
+        'Money owed and not chased. Claims lapse when papers are missing or late.',
+      fix:
+        'A claim is a record with the patient, payer, amount, documents needed and state. Verity lists those unpaid past their usual period and tasks the person who sends them.',
+      screen: 'packages',
+    },
+    {
+      area: 'Stock',
+      title: 'Consumables and machines are used until they fail',
+      scene:
+        'Electrode pads, gel, kinesiology tape and resistance bands run out on a busy day. The ultrasound unit’s annual check is overdue. A TENS unit has a loose lead nobody has reported.',
+      cost:
+        'A therapist improvising with a poor substitute, a machine out of use at a bad time, and emergency purchases at higher prices.',
+      fix:
+        'Each consumable has a reorder level and usual supplier. Each machine has a service date and a vendor. Verity warns ahead and drafts the order for you to approve.',
+      screen: 'stock',
+    },
+    {
+      area: 'People',
+      title: 'Part-time therapists are paid per session, and patients follow therapists',
+      scene:
+        'Three therapists are on different fee arrangements: a monthly salary, a share of fees, a per-session rate. Totals are added up by hand each month. When a favourite therapist leaves, her patients go with her.',
+      cost:
+        'Hours of owner time, mistakes that make people feel unfairly paid, and revenue that walks out of the door.',
+      fix:
+        'Sessions are recorded against the therapist who gave them, and Verity builds the statement from your arrangement. The patient relationship belongs to the clinic’s record, and a handover list is ready on the day someone resigns.',
+      screen: 'staff',
+    },
+    {
+      area: 'Records',
+      title: 'Consent, privacy and who may see what are matters of habit',
+      scene:
+        'Consent for dry needling or manual therapy is verbal. A female patient prefers a female therapist and this is not noted anywhere. Case notes are on a tablet that several people share.',
+      cost:
+        'A dispute or complaint is hard to answer when the record is thin. Health data is sensitive.',
+      fix:
+        'Consent, preferences and notes sit on the record, and the therapist cannot close a procedure without the consent marked on file. Access follows role, and each view is logged.',
+      screen: 'patient',
+    },
+    {
+      area: 'Money',
+      title: 'Takings do not match sessions delivered',
+      scene:
+        'The desk takes cash, UPI and card. A session was billed at pack rate for one patient and full rate for another. At closing the day is off by ₹1,200.',
+      cost:
+        'Small gaps compound, and the owner cannot trust the figures.',
+      fix:
+        'Every session is a record with its rate, pack use and payment mode. Verity compares the day’s sessions with the day’s payments and shows the exact visit that does not tie.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'Corporate camps, a second centre and the owner’s own patients',
+      scene:
+        'The owner treats patients all day, runs an ergonomic camp for an IT company on Saturdays, and has opened a second centre. Information comes by message at night. Nobody has the whole picture.',
+      cost:
+        'No fair comparison between centres or camps, and decisions made late.',
+      fix:
+        'Centres and camps are locations or jobs in one system, with a patient seen at both shown once. Revenue, sessions per therapist and dropout rates compare side by side.',
+      screen: 'owner',
+    },
   ],
 
-  challengesHeading: 'Courses that stop and capacity that idles.',
-  challengesLede:
-    'Physiotherapy difficulties come from treatment delivered over time to patients who stop coming.',
-  challenges: [
-    { problem: 'Courses stop before their planned end', detail: 'A patient feels better, or gets busy, and stops attending; the outcome and the remaining revenue both disappear.', outcome: 'Courses carry a planned session count and an adherence state, so early stopping is visible and contactable.' },
-    { problem: 'Funding approvals lag treatment', detail: 'Treatment is delayed waiting for authorisation, or delivered before it and at risk of non-payment.', outcome: 'Approvals are tracked as steps against the course with their state and age.' },
-    { problem: 'Capacity idles beside a waitlist', detail: 'Some therapists are under-utilised while patients wait, because scheduling is per therapist rather than per practice.', outcome: 'Utilisation and waitlist sit in one view, so unfilled capacity is matched to waiting patients.' },
-    { problem: 'Cancellations cluster in patterns', detail: 'Particular slots cancel repeatedly and go unfilled, and each is treated as an individual event.', outcome: 'Cancellations are recorded with slot and reason, so patterns become schedulable.' },
-    { problem: 'Outcomes are not recorded against courses', detail: 'Whether a course achieved what it planned is a clinical judgement that never becomes practice data.', outcome: 'Outcome measures attach to the course, so completion and result can be compared.' },
-    { problem: 'Equipment and room use is unmanaged', detail: 'Treatment requiring specific equipment competes for it without a booking view.', outcome: 'Rooms and equipment are bookable resources with utilisation recorded.' },
+  factsHeading: 'The numbers behind these problems.',
+  factsLede: 'From published sources, with the source named under each figure. Your clinic’s own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '0.36',
+      text: 'practising physiotherapists per 10,000 people in India, about 52,000 in all, according to the national association’s profile with World Physiotherapy. Patients are many and therapists are few, which means each therapist’s time is valuable.',
+      source: { name: 'World Physiotherapy, India profile (Indian Association of Physiotherapists)', year: '2024', url: 'https://world.physio/membership/india' },
+    },
+    {
+      figure: '16 to 23%',
+      text: 'of patients in a record review of about 16,800 people with low back pain across 76 private centres in 18 states, depending on the year from 2019 to 2023. It describes clinic patients and not the general population.',
+      source: { name: 'Prevalence, trends and correlates of low back pain in India (PMC)', year: '2025', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12136540/' },
+    },
+    {
+      figure: '57%',
+      text: 'lifetime prevalence of low back pain in one adult survey around Pune. It was presented as a conference abstract and is a single local study.',
+      source: { name: 'ISPOR 2019 abstract, low back pain among the Indian population', year: '2019', url: 'https://www.ispor.org/heor-resources/presentations-database/presentation/euro2019-3120/95433' },
+    },
+    {
+      figure: '6 states',
+      text: 'have physiotherapy councils (Maharashtra, Gujarat, Haryana, Delhi, Tamil Nadu and Odisha), while the national commission for allied health professions has been passed but is described as yet to come into existence.',
+      source: { name: 'World Physiotherapy, India profile', url: 'https://world.physio/membership/india' },
+    },
+  ],
+  factsNote:
+    'The ratio of therapists is an association estimate with no precise date on the page, and other sources give different totals. The back pain figures come from a records review and a conference abstract. They show the scale of the need, not what your clinic will see. The regulatory position may have moved since the page was written.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each for one job. Names and terms are set in your clinic’s own words.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Clinic / Today',
+      meta: 'Centre: Andheri',
+      heading: 'The owner’s morning view',
+      caption:
+        'Sessions, empty slots, patients who have gone quiet and machines that need attention, with the items that need a decision below. This replaces the nightly message.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sessions today', value: '34', note: '3 no-shows' },
+            { label: 'Therapist use', value: '74%', note: 'of booked hours' },
+            { label: 'Gone quiet', value: '26', note: 'courses unfinished' },
+            { label: 'Packs ending', value: '11', note: 'within 30 days' },
+          ],
+        },
+        { type: 'title', text: 'Therapist use this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Ritu', value: 92, display: '92%' },
+            { label: 'Aman', value: 86, display: '86%' },
+            { label: 'Sana (part-time)', value: 58, display: '58%', tone: 'muted' },
+            { label: 'Karan (home visits)', value: 66, display: '66%' },
+          ],
+        },
+        { type: 'alert', text: 'Cash and UPI differ from sessions by ₹1,200. 2 visits unmatched.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: '6 pm Tuesday slot empty', meta: '4 patients waiting for an earlier date', tag: ['Open', 'flag', 'Filled', 'ok'] },
+            { name: 'Ultrasound unit service', meta: 'Due 5 November', tag: ['Due', 'late', 'Booked', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'patient',
+      title: 'Patient',
+      meta: 'Record',
+      heading: 'One record for every patient',
+      caption:
+        'Assessment, measures, exercises advised, consent, sessions and payments for one person. The therapist sees the last visit at a glance and the trend over the course.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Mohan Deshpande',
+          sub: 'Referred by Dr Phadke (orthopaedics). Therapist: Ritu',
+          fields: [
+            ['Condition', 'Post knee replacement, left'],
+            ['Plan', '16 sessions over 8 weeks'],
+            ['Sessions done', '9 of 16'],
+            ['Pain score', '6 to 3 (0 to 10)'],
+            ['Consent', ['On file', 'ok']],
+            ['Status', ['Missed 2 weeks', 'late', 'Booked 20 Oct', 'ok']],
+          ],
+          timeline: [
+            ['28 Sep', 'Session 9. Knee flexion 105 degrees. Exercises changed.'],
+            ['14 Sep', 'Session 6. Pain score 4. Walking aid reduced.'],
+            ['25 Aug', 'First assessment. Plan and consent agreed.'],
+            ['Note', 'Lives on the third floor. Prefers evening slots.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'followups',
+      title: 'Follow-ups and referrals',
+      meta: 'Who to call',
+      heading: 'The list that brings patients back',
+      caption:
+        'Courses with sessions left and no recent visit, and referring doctors waiting for a progress note. A call is a task on the desk’s screen and the outcome is recorded.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Patient', 'Sessions left', 'Last visit', 'Therapist', 'Status'],
+          rows: [
+            ['Mohan Deshpande', '7 of 16', '28 Sep', 'Ritu', ['Call today', 'late', 'Booked', 'ok']],
+            ['Asha Kulkarni', '4 of 10', '1 Oct', 'Aman', ['Call today', 'flag', 'Declined', 'muted']],
+            ['Vikram Shah', '5 of 8', '30 Sep', 'Ritu', ['Call', 'flag', 'Booked', 'ok']],
+            ['Pooja Iyer', '3 of 10', '3 Oct', 'Sana', ['Message', 'flag']],
+            ['Referral: Dr Phadke', 'Progress note due', '12 patients', 'Owner', ['Send', 'flag', 'Sent', 'ok']],
+          ],
+        },
+        { type: 'alert', text: '26 courses have sessions left and no visit in 14 days. 9 have more than half the sessions undelivered.', action: 'Assign all' },
+      ],
+    },
+    {
+      id: 'packages',
+      title: 'Packs and claims',
+      meta: 'Sessions owed, money owed',
+      heading: 'Session packs and claims with a clear balance',
+      caption:
+        'Every pack with sessions left and an end date, and every insurer or company claim waiting for payment. Balances about to lapse are listed so the desk can rebook them.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Packs ending soon',
+              cards: [
+                { title: 'Asha Kulkarni, pack of 10', meta: '4 left, ends 30 Oct', tag: ['Rebook', 'late'] },
+                { title: 'Rohan Patil, pack of 12', meta: '5 left, ends 12 Nov', tag: ['Rebook', 'flag', 'Booked', 'ok'] },
+              ],
+            },
+            {
+              name: 'Claims waiting',
+              cards: [
+                { title: 'Mohan Deshpande, insurer', meta: '₹14,400 sent 22 Sep, 24 days', tag: ['Chase', 'late', 'Paid', 'ok'] },
+                { title: 'TechWorks staff scheme', meta: '₹38,000 for September', tag: ['Sent', 'info'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'schedule',
+      title: 'Day plan',
+      meta: 'Rooms and home visits',
+      heading: 'Each therapist’s day, in order',
+      caption:
+        'Clinic sessions, home visits, rooms and machines on one day view. Gaps, overlaps and travel time are visible before the day starts.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Time', 'Patient', 'Where', 'Therapist', 'Status'],
+          rows: [
+            ['9:00', 'Mohan Deshpande', 'Room 2, traction table', 'Ritu', ['Booked', 'info']],
+            ['10:30', 'Home visit, Powai', 'Home, 25 min away', 'Karan', ['Confirmed', 'ok']],
+            ['12:00', 'Home visit, Bandra', 'Home, 40 min away', 'Karan', ['Needs gap', 'flag', 'Moved 12:30', 'ok']],
+            ['6:00 pm', 'Asha Kulkarni', 'Room 1', 'Aman', ['No-show last time', 'late']],
+          ],
+        },
+        { type: 'title', text: 'Machine use this month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Traction table', value: 88, display: '88%' },
+            { label: 'Ultrasound', value: 61, display: '61%' },
+            { label: 'Shockwave unit', value: 9, display: '9%', tone: 'muted' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Consumables and machines',
+      meta: 'Stock and service',
+      heading: 'What is on the shelf and what needs service',
+      caption:
+        'Consumables against use, and machines against their service dates. Usage comes from the sessions recorded, so nobody counts by eye.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'In stock', 'Used / week', 'Expires', 'Status'],
+          rows: [
+            ['Electrode pads (pack)', '4', '3', 'Jun 2027', ['Reorder', 'flag', 'Ordered', 'ok']],
+            ['Ultrasound gel 5 L', '2', '1', 'Jan 2028', ['OK', 'ok']],
+            ['Kinesiology tape rolls', '9', '6', 'None', ['Short soon', 'flag']],
+            ['Resistance bands set', '12', '2', 'None', ['OK', 'ok']],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Ultrasound unit, annual check', meta: 'Due 5 Nov', done: false },
+            { text: 'TENS unit lead replaced', meta: 'Reported 2 Oct', done: true },
+            { text: 'Treatment table inspection', meta: 'Due Dec', done: false },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'staff',
+      title: 'Therapists',
+      meta: 'This month',
+      heading: 'A scorecard and statement everyone sees the same way',
+      caption:
+        'Sessions, course completion and no-shows for each therapist, with the amount due from your arrangement. The therapist sees their own, so month end stops being an argument.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Therapist', 'Sessions', 'Courses finished', 'No-show rate', 'Amount due'],
+          rows: [
+            ['Ritu', '212', '81%', '6%', 'Salary'],
+            ['Aman', '188', '74%', '9%', 'Salary'],
+            ['Sana (part-time)', '64', '52%', '14%', '₹38,400'],
+            ['Karan (home visits)', '96', '68%', '5%', '₹57,600'],
+          ],
+        },
+        { type: 'title', text: 'Courses finished' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Ritu', value: 81, display: '81%' },
+            { label: 'Aman', value: 74, display: '74%' },
+            { label: 'Karan', value: 68, display: '68%' },
+            { label: 'Sana', value: 52, display: '52%', tone: 'muted' },
+          ],
+        },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across courses, approvals, capacity and outcomes.',
-  modules: [
-    { id: 'work', title: 'Courses, sessions and plans', line: 'A course is work with a patient, a planned session count, a therapist, attendance and a completion state.', why: 'The course is the unit of both outcome and revenue.', example: 'Sixty-four courses stopped before their planned session count.' },
-    { id: 'workflows', title: 'Approvals, authorisations and claims', line: 'Funder approvals, extensions and claims move through defined steps with states and ages.', why: 'Treatment delivered without approval is treatment at the practice’s risk.', example: 'Nineteen funded patients awaiting approval with treatment pending.' },
-    { id: 'workforce', title: 'Therapists, rooms and equipment', line: 'Therapist, room and equipment availability is recorded against sessions and utilisation measured.', why: 'Capacity is the constraint and it idles unevenly.', example: 'Two therapists below fifty-five percent while the waitlist runs two weeks.' },
-    { id: 'relationships', title: 'Patients, referrers and funders', line: 'Patients carry their courses, attendance, funders, referrer and contact history; referrers carry their volume.', why: 'Referrer relationships supply the practice and are rarely tracked.', example: 'Referral volume by source and its conversion into courses.' },
-    { id: 'records', title: 'Assessments and outcome measures', line: 'Initial assessment, outcome measures and discharge attach to the course.', why: 'Course completion and outcome together are what the practice can actually demonstrate.', example: 'Outcome measures compared between completed and incomplete courses.' },
-    { id: 'people', title: 'Therapists and reception', line: 'Staff are modelled once, with sessions, courses and outcomes attributed.', why: 'Adherence and completion vary by therapist and are worth understanding.', example: 'Course completion rate by therapist.' },
-    { id: 'intelligence', title: 'Adherence, utilisation and funding reporting', line: 'Course completion, attendance adherence, approval turnaround, utilisation against waitlist and cancellation patterns come from the records.', why: 'The practice’s clinical and commercial questions are the same question: did the course complete.', example: 'Completion rate by condition, therapist and funder.' },
-    { id: 'ai', title: 'Ask the practice a question', line: 'Verity AI answers from your own course, appointment, approval and capacity records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about courses stopping and capacity idling.', example: '"Which courses stopped early?" returns sixty-four with contact assigned.' },
-    { id: 'communication', title: 'Patient contact recorded', line: 'Reminders, follow-ups and funder correspondence attach to the course or patient.', why: 'A patient who stopped attending is contactable for a short window.', example: 'A follow-up recorded, so the next call knows what was said.' },
-    { id: 'control', title: 'Who can discount and extend', line: 'One permission model and one audit trail across every record.', why: 'Session discounting and course extension are both commercial decisions made clinically.', example: 'A course extension recorded with its funding basis.' },
-    { id: 'locations', title: 'Clinics, rooms and gym area', line: 'Locations carry their own capacity, equipment and utilisation.', why: 'Rehabilitation space is a shared resource with its own constraints.', example: 'Gym area utilisation against session types requiring it.' },
-    { id: 'orders', title: 'Session fees, packages and funded rates', line: 'Fees, packages and funded rates are recorded against the course and patient.', why: 'A course part-delivered is part-billed and part-unearned.', example: 'Package balances against sessions delivered.' },
+  dayHeading: 'The same Monday, before and after.',
+  dayLede: 'The therapy is unchanged. The difference is that each visit leaves a record, and the record chases.',
+  day: [
+    {
+      time: '8:30',
+      before: 'You open up and check a messages group for home visits. One therapist did not see the change.',
+      after: 'Each therapist’s day shows on the Today screen with home visits in order and gaps flagged.',
+    },
+    {
+      time: '10:00',
+      before: 'A patient with sessions unused for two weeks is only remembered when she calls.',
+      after: 'She was on the quiet list on day ten and the desk called her last week.',
+    },
+    {
+      time: '1:00',
+      before: 'A surgeon asks how his three patients are doing. You have to piece it together.',
+      after: 'A short progress summary is on each record, and the surgeon’s note went out on Friday.',
+    },
+    {
+      time: '4:30',
+      before: 'Electrode pads run out mid-session and a therapist uses a poor substitute.',
+      after: 'The reorder was flagged two days earlier and the box is on the shelf.',
+    },
+    {
+      time: '8:30',
+      before: 'You count cash and UPI and the total is off by ₹1,200.',
+      after: 'Verity names the two sessions that do not tie. You correct them in a minute.',
+    },
+    {
+      time: 'Month end',
+      before: 'You work out each part-time therapist’s share by hand and one disagrees.',
+      after: 'Statements are ready on the 1st and each therapist sees the same figures.',
+    },
   ],
 
-  workflowsHeading: 'Assess, plan, deliver, complete.',
-  workflowsLede: 'These already happen. Recorded as a course, early stopping becomes visible.',
-  workflows: [
-    { name: 'Assessment to course plan', steps: ['Assessment recorded with condition and objectives', 'Course planned with session count and interval', 'Funder identified and approval requirements checked', 'Sessions scheduled against therapist and room', 'Plan agreed with the patient and recorded'], note: 'A planned session count is what makes non-completion measurable.' },
-    { name: 'Attendance and adherence', steps: ['Sessions delivered and attendance recorded', 'Missed sessions flagged against the plan', 'Contact assigned when attendance lapses', 'Reason recorded — improvement, cost, time, dissatisfaction', 'Plan adjusted or discharge recorded'], note: 'A patient who stopped is reachable briefly, and only if someone knows they stopped.' },
-    { name: 'Funding approval', steps: ['Funder and scheme recorded at assessment', 'Authorisation requested with clinical justification', 'Approval state tracked with an age', 'Treatment released or risk accepted deliberately', 'Claim submitted and settlement tracked'], note: 'Delivering ahead of approval should be a recorded decision rather than an assumption.' },
-    { name: 'Capacity and waitlist', steps: ['Utilisation measured by therapist, room and slot', 'Waitlist maintained with requirements', 'Unfilled capacity matched to waiting patients', 'Cancellations offered to the waitlist', 'Pattern reviewed for recurring unfilled slots'], note: 'Idle capacity beside a waitlist is a scheduling problem with an immediate fix.' },
-    { name: 'Discharge and outcome', steps: ['Course completion assessed against plan', 'Outcome measures recorded', 'Discharge or extension decided', 'Referrer informed where appropriate', 'Completion and outcome aggregated for reporting'], note: 'Completion and outcome together are the practice’s actual product.' },
-  ],
+  approach: {
+    heading: 'We set it up with you, over four weeks.',
+    lede:
+      'No login and a handbook. We learn how your clinic works, build Verity around it, bring your patients across, and stay on afterwards.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a day at the clinic. Follow a patient from the first assessment to the last session, watch how home visits are planned, and see how packs, notes and fees are kept today.',
+        you: 'A few hours of yours and your senior therapist’s. Access to the patient register, pack cards, referral list and payment book.',
+        get: 'A written map of your clinic: therapists, rooms, machines, session types and price list, plus the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your session types and packs, plan templates, review measures, referral sources, home-visit areas, consumables, machines and service dates, therapist arrangements and centres.',
+        you: 'Review the setup with your senior therapist and correct anything that does not match how you work.',
+        get: 'A working Verity with your real session types, rooms and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in patient lists, running courses, packs with sessions left, referrals, claims and stock from your registers and sheets. Train therapists and the desk at their own stations in short sessions.',
+        you: 'Your patient list and any history you have, in whatever form. One hour per role.',
+        get: 'Your patients, packs and stock inside Verity, and a team that has used it on real sessions.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first weeks with you, tune the quiet-patient rules and alerts, and handle changes when you add a therapist, a machine or a centre.',
+        you: 'A short monthly review.',
+        get: 'A system that keeps matching how the clinic runs, with someone accountable for it.',
+      },
+    ],
+    bring: [
+      'Your session types, durations and prices, including packs',
+      'Your patient list, even if it is a register',
+      'Running courses with sessions already used',
+      'Referring doctors and companies you work with',
+      'Therapist pay or share arrangements',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your senior therapist needs a few more.',
+    after: 'You do not need to hire anyone to run Verity. Sessions, measures and packs are recorded as part of the visit already happening.',
+  },
 
   ai: {
-    heading: 'Ask which courses stopped.',
-    lede: 'Verity AI reads the same course, appointment, approval and capacity records the practice creates as it works. It answers from your own practice, respects permissions, and can turn an answer into contact and scheduling.',
-    panelMeta: 'Grounded in your practice records',
-    note: 'Verity AI only returns what the person asking has permission to see. It does not provide clinical advice.',
-    questions: [
-      'Which courses stopped before their planned session count?',
-      'Which funded patients are awaiting approval?',
-      'Which therapists are under-utilised while the waitlist grows?',
-      'Which slots cancel repeatedly and go unfilled?',
-      'What is course completion rate by condition and therapist?',
-      'Which referrers send the most patients and how do their courses complete?',
-      'What is room and equipment utilisation?',
-      'Which packages have unused sessions?',
-      'Summarise adherence and capacity.',
+    heading: 'Ask your clinic a question. Get an answer from your own records.',
+    lede:
+      'Verity AI reads your patient, session, pack, referral and stock records and answers in plain words. It respects who may see what and can create tasks. It does not give clinical advice.',
+    examples: [
+      {
+        q: 'Which patients have sessions left but have not visited in two weeks?',
+        a: '26 patients. 9 have more than half their sessions left, and 6 came through one orthopaedic surgeon.',
+        rows: [['Ritu’s patients', '10'], ['Aman’s patients', '9'], ['Sana’s patients', '5'], ['Karan’s patients', '2']],
+        action: 'Create call tasks for the desk',
+      },
+      {
+        q: 'Which referring doctors have sent us fewer patients this quarter?',
+        a: 'Dr Phadke fell from 14 referrals to 6. His progress notes were last sent in July.',
+        rows: [['Dr Phadke', '14 to 6'], ['Dr Naik', '9 to 9'], ['Dr Joshi', '4 to 7']],
+      },
+      {
+        q: 'Which machine is used least?',
+        a: 'The shockwave unit, used on 9 percent of sessions this month. The traction table is at 88 percent.',
+        action: 'Flag for the monthly review',
+      },
     ],
   },
 
-  automationHeading: 'Courses and capacity.',
-  automationLede: 'Each runs from the practice’s own records at the point the condition is met.',
+  automationHeading: 'The follow-ups that fall between sessions.',
+  automationLede: 'Set once, run from your records. Staff still call and message. Verity makes sure the right person knows to.',
   automations: [
-    { trigger: 'A patient misses sessions against the plan', steps: ['Course flagged with sessions remaining', 'Contact assigned with history attached', 'Reason and outcome recorded'] },
-    { trigger: 'A funding approval is outstanding', steps: ['Aged against the treatment start', 'Chase assigned to administration', 'Risk decision raised if treatment proceeds'] },
-    { trigger: 'A session is cancelled', steps: ['Slot offered to the waitlist', 'Reason recorded', 'Pattern surfaced if the slot repeats'] },
-    { trigger: 'Utilisation falls below threshold', steps: ['Therapist and slot flagged', 'Waitlist matched to the availability', 'Outcome recorded'] },
-    { trigger: 'A course completes or is discharged', steps: ['Outcome measures recorded', 'Referrer informed where appropriate', 'Completion aggregated for reporting'] },
+    {
+      when: 'A patient with sessions left does not visit for 10 days',
+      then: ['Added to the quiet list with the last note', 'Call task for the desk', 'Outcome recorded: booked, declined or unreachable'],
+    },
+    {
+      when: 'A pack has 30 days left',
+      then: ['Balance flagged on the patient', 'Task to rebook the remaining sessions', 'Expiry recorded if unused'],
+    },
+    {
+      when: 'A referred patient reaches a review point',
+      then: ['Progress summary task for the therapist', 'Reminder to the owner if unsent', 'Referral source updated'],
+    },
+    {
+      when: 'A session is completed',
+      then: ['Pack reduced or payment recorded', 'Measures added to the trend', 'Therapist credited for the session'],
+    },
+    {
+      when: 'A consumable reaches its reorder level',
+      then: ['Checked against the next week’s sessions', 'Order drafted to the usual supplier', 'Stock updated when delivery is recorded'],
+    },
+    {
+      when: 'A machine is 30 days from service',
+      then: ['Task to the clinic manager', 'Vendor and last service shown', 'Next date set when the visit is logged'],
+    },
   ],
 
-  intelligenceHeading: 'What the practice can see.',
-  intelligenceLede: 'Adherence, funding and capacity from the practice’s own records.',
-  intelligence: [
-    { area: 'Adherence', points: ['Courses completed against planned sessions', 'Early stopping and recorded reasons', 'Attendance by patient and therapist', 'Re-engagement outcomes'] },
-    { area: 'Funding', points: ['Approvals pending and their age', 'Treatment delivered ahead of approval', 'Claims submitted and settled', 'Funder mix and rates'] },
-    { area: 'Capacity', points: ['Utilisation by therapist, room and slot', 'Waitlist length and matching', 'Cancellation patterns by slot', 'Unfilled capacity by period'] },
-    { area: 'Outcomes', points: ['Outcome measures by condition', 'Completion against outcome', 'Discharge reasons', 'Referrer feedback'] },
-  ],
-  intelligenceNote: 'Verity records the practice around treatment. Clinical notes and assessments remain in your existing clinical system.',
+  rules: {
+    heading: 'The rules a physiotherapy clinic works under.',
+    lede: 'Verity does not give legal or clinical advice and files nothing for you. It keeps the records these rules depend on in order, so you are not piecing them together from sheets and chat.',
+    items: [
+      {
+        name: 'Registration of physiotherapists',
+        what: 'Registration is generally required to practise. The Allied and Healthcare Professions Act, 2021 provides for a national commission and a physiotherapy council, but a profile of the national association describes it as not yet in existence, and only some states have councils. The position may have changed.',
+        how: 'Each therapist’s registration number, state and renewal date sit on their record, with a reminder task before renewal.',
+        source: { name: 'World Physiotherapy, India profile', url: 'https://world.physio/membership/india' },
+      },
+      {
+        name: 'Patient records, consent and requests for copies',
+        what: 'Clinics are generally expected to keep treatment records and consent and to give patients their records on request. The exact period and format depend on state rules and the professional body you follow.',
+        how: 'Notes, measures, consent and payments are on one record, so a full set can be produced quickly, with access logged.',
+      },
+      {
+        name: 'Sharps and bio-medical waste',
+        what: 'Under the Bio-Medical Waste Management Rules, 2016, a healthcare facility that generates waste, such as needles from dry needling, generally needs authorisation from the State Pollution Control Board and must follow the prescribed handling.',
+        how: 'A daily waste checklist with a named person and a searchable history.',
+        source: { name: 'Central Pollution Control Board, bio-medical waste', url: 'https://cpcb.nic.in/bio-medical/' },
+      },
+      {
+        name: 'Patient data protection',
+        what: 'India’s Digital Personal Data Protection Rules were notified on 13 November 2025. The main duties on notice and consent are expected to start on 13 May 2027.',
+        how: 'Patient data sits in one permissioned place, with a log of who saw or changed it, rather than in tablets and chat groups.',
+        source: { name: 'AZB Partners on the DPDP framework', url: 'https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/' },
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your professional body, state authorities or adviser.',
+  },
 
-  rolesHeading: 'One practice, three views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Each person opens the clinic through their own view.',
+  rolesLede: 'A part-time therapist does not need to see the clinic’s takings. The desk does not need clinical notes. Access follows the job.',
   roles: [
-    { role: 'Practice owner', question: 'Are courses completing?', focus: 'Completion rate by therapist and condition, early stopping reasons, utilisation against waitlist, funder mix.' },
-    { role: 'Therapist', question: 'Where is this patient in their course?', focus: 'Course plan and sessions remaining, attendance, outcome measures, approvals in place.' },
-    { role: 'Reception and administration', question: 'What needs chasing or filling?', focus: 'Lapsed attendance, approvals pending, cancelled slots and waitlist, package balances.' },
+    { role: 'Owner', question: 'Are patients finishing their courses and are rooms earning?', sees: 'Dropout, pack balances, referrals, therapist scorecards, machine use and every centre side by side.' },
+    { role: 'Senior therapist', question: 'Who needs my attention this week?', sees: 'Patients with stalled progress, measures trending the wrong way, home-visit plan and the team’s load.' },
+    { role: 'Therapist', question: 'What did I do with this patient last time?', sees: 'History, measures, exercises advised, consent, the day plan and their own statement.' },
+    { role: 'Front desk', question: 'Who do I call today?', sees: 'Quiet patients, packs ending, empty slots, claims to chase and the day’s payments.' },
+    { role: 'Accountant', question: 'What came in and what is owed?', sees: 'Takings by mode, pack liabilities, claim status, supplier payables and therapist shares.' },
   ],
 
-  useCasesHeading: 'What physiotherapy practices use Verity for',
-  useCases: [
-    { name: 'Course completion', body: 'Planned session counts with adherence states, so a course that stopped early is visible while the patient is still reachable.' },
-    { name: 'Funding approval tracking', body: 'Authorisations as steps with an age, so treatment is not delayed unnecessarily or delivered unknowingly at risk.' },
-    { name: 'Capacity against waitlist', body: 'Utilisation and waitlist in one view, so idle therapist time is matched to patients already waiting.' },
-    { name: 'Cancellation patterns', body: 'Cancellations recorded with slot and reason, turning repeated individual events into a schedulable pattern.' },
-    { name: 'Outcome recording', body: 'Outcome measures attached to the course, so completion and result can be compared and demonstrated.' },
-    { name: 'Referrer relationships', body: 'Referral sources with volume and course completion, since referrers supply the practice.' },
-    { name: 'Asking about courses', body: 'Plain-language questions across adherence, approvals, capacity and outcomes, with contact assigned in the same step.' },
-  ],
+  alongside: {
+    heading: 'What changes and what stays.',
+    keep: [
+      'Any exercise-prescription or video tool your therapists use. We agree how its records reach Verity during setup.',
+      'How patients book today, whether by phone, a page or the desk. Verity records the visit.',
+      'WhatsApp with patients and home-visit therapists. Staff send; Verity says who and when.',
+      'Your accountant, who still prepares returns and pays staff.',
+    ],
+    not: [
+      'Take patient bookings online.',
+      'Send messages to patients on its own.',
+      'Prescribe exercise or advise on treatment.',
+      'Run payroll or file returns.',
+    ],
+    migration:
+      'We bring patient lists, running courses, packs, referrals and stock across from registers and sheets in stages, so the clinic keeps treating through the change.',
+  },
 
-  migration: 'Clinical notes and assessment systems continue and are mapped during implementation. Patients, active courses with plans, funders, therapists and the waitlist are brought across.',
-
-  faqHeading: 'Questions physiotherapy practices ask',
+  faqHeading: 'Questions physiotherapists ask.',
   faqs: [
-    ['Does Verity hold clinical notes?', 'No. Clinical notes and assessments remain in your existing system and are mapped during implementation. Verity runs the practice around them — courses, adherence, approvals, capacity and outcomes.'],
-    ['What can AI software do for a physiotherapy practice?', 'Verity AI answers questions from your own course, appointment, approval and capacity records: which courses stopped early, which funded patients await approval, which therapists are idle while the waitlist grows, which slots cancel repeatedly. Each answer can become contact or scheduling.'],
-    ['Why treat the course as the unit?', 'Because both the clinical outcome and the revenue depend on completion. An eight-session course delivered as five is an outcome that did not happen, and an appointment diary shows only what was booked.'],
-    ['How does it help with funding approvals?', 'Authorisations are steps with a state and an age against the course, so treatment is neither delayed unnecessarily nor delivered at the practice’s risk without that being a recorded decision.'],
-    ['Can it improve utilisation?', 'Utilisation and the waitlist sit in one view, so under-used therapist and room time is matched against patients already waiting rather than existing beside them unnoticed.'],
-    ['Does it record outcomes?', 'Outcome measures attach to the course alongside completion, so the practice can compare results and demonstrate them to referrers and funders.'],
-    ['Can it track referrers?', 'Referral sources carry their volume and the completion rates of the courses they generate, which is more useful than volume alone.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of course structures, funder requirements and capacity, configuration, migration of patients and active courses, then an ongoing operations partnership.'],
+    [
+      'Does Verity advise on treatment or tell my therapists what to do?',
+      'No. Your therapists decide assessment and treatment. Verity records what they decide, tracks courses and sessions and tells your team what is waiting.',
+    ],
+    [
+      'We use an exercise-prescription tool. Do we have to stop?',
+      'No. Keep it if your therapists like it. During setup we agree how the information Verity needs, such as exercises advised and sessions done, reaches the patient record.',
+    ],
+    [
+      'Can it handle home visits?',
+      'Yes. A home visit is a scheduled record with an area, time window and therapist. You see each therapist’s day in order, with travel time shown next to treatment time.',
+    ],
+    [
+      'Can it contact patients who stopped coming?',
+      'Not by itself. It builds the quiet list and gives each call to a named person on your team. They call or message, and the result is recorded.',
+    ],
+    [
+      'How does it deal with session packs?',
+      'A pack records sessions bought and used, who it belongs to and when it ends. Each visit reduces it, and you see packs about to lapse.',
+    ],
+    [
+      'I run one room with two therapists. Is this too much?',
+      'A small clinic has the same unfinished courses with less time to notice them. We set up only what you need in the same four weeks.',
+    ],
+    [
+      'Can I track the doctors who refer patients to me?',
+      'Yes. Each patient has a referral source on record, and you see referrals over time by doctor along with whether a progress note was sent.',
+    ],
+    [
+      'Who can see patient data?',
+      'Only the people you allow. Access is by role, so the desk, therapists, part-timers and your accountant see what they need. Every view and change is logged with the person and time.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of centres, therapists and what you want set up. Message us and after a short conversation about how your clinic runs we will give you a clear number.',
+    ],
   ],
 
-  ctaHeading: 'Start with the courses that stopped.',
-  ctaLede: 'They are outcomes that did not happen and patients still reachable. Tell us how courses are tracked today.',
+  related: ['clinics', 'hospitals', 'dental-clinics', 'yoga-studios', 'gyms', 'mental-wellness-practices'],
 
-  related: ['clinics', 'dermatology-clinics', 'mental-wellness-practices', 'gyms', 'fitness-studios', 'dental-clinics'],
+  ctaHeading: 'Start with the patients who stopped mid-course.',
+  ctaLede:
+    'Tell us how your clinic runs and we will show you the quiet patients, unused packs and empty hours it would find, using your own numbers.',
 };

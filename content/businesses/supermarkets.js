@@ -1,574 +1,706 @@
 export default {
+  schema: 2,
   slug: 'supermarkets',
   status: 'published',
   plural: 'supermarkets',
   subject: 'supermarket',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for supermarkets | Verity',
+    title: 'Supermarket management software: expiry, shrinkage, margin | Verity',
     description:
-      'Verity connects perishable stock, shrinkage, category performance, supplier schemes, shift cover and multi-store rollup into one operational system.',
+      'The 14 problems that eat a supermarket’s thin margin, what each costs, and the Verity screens that fix them: expiry, shrinkage, shelf gaps, supplier deals and more.',
     keywords: [
-      'AI software for supermarkets',
-      'supermarket management software',
-      'perishable inventory and shrinkage control',
-      'category management software',
-      'supermarket chain operations software',
+      'supermarket management software India',
+      'supermarket expiry and shrinkage control',
+      'supermarket supplier margin tracking',
+      'planogram and shelf compliance tracking',
+      'multi-store supermarket operations software',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'logistics', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for supermarkets',
-    headline: 'Thousands of lines, single-digit margin, and a third of it perishes.',
+    headline: 'On a margin this thin, small leaks decide the year. Verity finds them aisle by aisle.',
     lede:
-      'A supermarket is decided by shrinkage, availability and category mix, and all three are invisible in a system that only records the sale. Verity records the movement.',
-    note: 'Runs alongside your existing billing and weighing setup.',
-    panel: {
-      title: 'Store',
-      meta: 'Store 1 · This week',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sales this week', value: '₹38.4 L', note: '9,140 baskets' },
-        { label: 'Shrinkage', value: '2.1%', note: 'against 1.4% target' },
-        { label: 'Availability', value: '94.2%', note: 'of listed lines on shelf' },
-        { label: 'Near expiry', value: '₹1.9 L', note: 'under 5 days' },
-      ],
-      rows: [
-        { name: 'Dairy shrinkage double the store average', meta: 'Four weeks running · cold chain query', active: true },
-        { name: '186 listed lines not on shelf', meta: '31 are top-100 sellers', active: true },
-        { name: '₹1.9 L expiring within five days', meta: 'No markdown applied yet', active: true },
-        { name: 'Scheme claim unfiled against a principal', meta: '₹2.4 L · window closes Friday', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own store in this shape.',
-    },
+      'A supermarket earns a few paise on every rupee of sales. Expired packs, goods lost between the dock and the till, shelves that are empty while the back room is full, and supplier deals nobody tracked each take a slice. Verity connects stock, suppliers, shelves and staff so you can see where the slice goes.',
+    oneLine:
+      'One system that shows each aisle’s stock, each supplier’s deal, each batch’s expiry and each shift’s work, store by store.',
+    note: 'Built for a floor that has no spare hands. Records come from the receiving dock, the shelf round and the stock count, which already happen.',
+    screen: 'owner',
+    screenNote: 'aisles, suppliers, shifts and stores',
   },
 
-  overview: {
-    heading: 'A supermarket is a shrinkage problem with a checkout attached.',
+  today: {
+    heading: 'The store is open, busy and stocked. Whether it is profitable is another question.',
     paragraphs: [
-      'Supermarkets run thousands of lines at single-digit margins, and a meaningful share of what they buy is perishable. The three numbers that decide the year are shrinkage, on-shelf availability and category mix. None of them are visible in a system that records only the sale — because all three are about what happened to stock between the delivery bay and the till.',
-      'Shrinkage is the clearest example. Goods leave without being sold: damage, spoilage, short delivery, miscounted receipt, theft, weighing error, giveaway. Each has a different cause and a different fix, and in most stores they arrive as a single unexplained figure at stocktake — by which point the cause is months old and untraceable.',
-      'Availability is the second. A listed line that is not on the shelf is a sale the store already paid to be able to make: the space, the listing, the promotion. Stores rarely count these, because an absent item leaves no transaction.',
-      'The third is that supermarket economics run on the supply side. Scheme support, damage allowances and promotional funding from principals are a real part of margin, and they are claimed from documents and transactions that must be matched. Unclaimed support is money the store has already earned and does not collect.',
-      'Verity records the movement rather than only the sale, holds the principal agreements alongside the transactions they apply to, and puts stores, staff and categories on one structure so the group view is the same records.',
+      'The sales number arrives every evening. What is hidden is the cost around it: how many packs expired this month, how much of the fresh section was written off, what was lost between the receiving dock and the shelf, and whether the promotional deal a supplier promised was ever credited.',
+      'The knowledge is spread across people. The category manager knows which supplier is late. The receiving clerk knows the dock count was short. The floor supervisor knows the end-cap has been empty since morning. None of it is written anywhere the store head can see at once.',
+      'Listed chains show how thin the margin is. Avenue Supermarts, which runs DMart, reported an EBITDA margin of 7.9 percent on ₹57,790 crore of standalone revenue in FY25, and independent supermarkets generally earn less. At that scale, a point of waste is a point of profit.',
     ],
+    stack: ['Billing system at the counters', 'Purchase and GRN registers', 'Excel stock and expiry sheets', 'WhatsApp groups with suppliers and staff', 'Supplier schemes in emails and files'],
+    stackNote: 'Each system answers its own question. Nobody joins them, so nobody sees the whole cost of a product.',
   },
 
-  terminology: [
-    ['Lines, categories, planograms', 'Inventory'],
-    ['Baskets, transactions, returns', 'Orders'],
-    ['Principals, distributors, schemes', 'Suppliers'],
-    ['Shrinkage, markdown, write-off', 'Workflows'],
-    ['Shift staff, section leads, cashiers', 'People'],
-    ['Loyalty customers, account holders', 'Relationships'],
-    ['Stores, cold rooms, back-of-house', 'Locations'],
+  painsHeading: 'Where a supermarket actually loses money.',
+  painsLede:
+    'These are the situations store heads and category managers describe. For each: what it looks like on a normal day, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Stock',
+      title: 'Packs expire on the shelf and in the back room',
+      scene:
+        'A carton of biscuits with six weeks to expiry sits behind newer stock in the back room. By the time someone finds it, it has to be written off. Nobody can say who last checked that aisle.',
+      cost:
+        'Example arithmetic: ₹25,000 of near-expiry packs written off each week in a store is ₹13 lakh a year, usually without a claim on the supplier.',
+      fix:
+        'Receiving records the batch and expiry date for each lot. Verity lists lots by days to expiry, tells the aisle owner which items to pull forward, mark down or return, and records the outcome for each.',
+      screen: 'expiry',
+    },
+    {
+      area: 'Stock',
+      title: 'Fresh produce, dairy and bakery are written off with no reason recorded',
+      scene:
+        'At closing the fresh section is cleared. Some of it spoiled, some was over-ordered, some was damaged in handling. The write-off is one number and the reason is lost.',
+      cost:
+        'Fresh is the section where waste is highest. One Indian accounting firm puts shrinkage for organised retail at 1 to 3 percent of net sales, with grocery at the higher end.',
+      fix:
+        'Every write-off is entered with a reason: expired, damaged, spoiled, theft suspected or sampling. Verity totals by reason, section and shift so the fix goes to the right cause.',
+      screen: 'expiry',
+      source: {
+        name: 'Patron Accounting, stock audit for retail and FMCG',
+        url: 'https://www.patronaccounting.com/blog/stock-audit-retail-fmcg-perishables-expiry-shrinkage',
+      },
+    },
+    {
+      area: 'Stock',
+      title: 'Shelves are empty while the back room is full',
+      scene:
+        'A customer finds the shelf bare for a fast-moving brand. The stock is in the back room, and no one was assigned to refill. The customer picks a rival brand or leaves.',
+      cost:
+        'A survey of 100 large organised chains found that 91 percent leak revenue at the shelf. A gap on the shelf for a top item is a sale lost every few minutes.',
+      fix:
+        'The shelf round is a task with a list per aisle: items to refill, with stock in the back room shown beside each. A refill is recorded, and gaps that repeat are flagged to the category owner.',
+      screen: 'shelf',
+      source: {
+        name: 'Vector Consulting Group, The Ticking Shelf, reported by Indian Retailer, 2026',
+        url: 'https://indianretailer.com/article/retail-business/retail/91-pc-organised-retail-stores-india-are-losing-revenue-shelf',
+      },
+    },
+    {
+      area: 'Stock',
+      title: 'The shelf does not match the planogram',
+      scene:
+        'The head office wants the new range at eye level. The floor has put it low, because that is where there was space. A supplier pays for an end-cap and finds it covered by something else.',
+      cost:
+        'Space is the most valuable thing you sell. Wrong placement costs sales and risks the display fees a supplier paid.',
+      fix:
+        'Each aisle has its intended layout recorded. A supervisor’s round checks the shelf against it with a tick and a photo note, and the exceptions go to the category owner with a due date.',
+      screen: 'shelf',
+    },
+    {
+      area: 'Stock',
+      title: 'Stock disappears between the dock, the shelf and the till',
+      scene:
+        'Cases are signed for, but a few cartons never reach the shelf. Some items leave through the back door. Some are scanned wrong at the counter. The count shows a gap and no one can place it.',
+      cost:
+        'Trent reported shrinkage at 0.41 percent of sales in FY24, and the Retailers Association of India has said up to 0.5 percent is manageable. In a supermarket with a 5 percent margin, a point of shrinkage is a fifth of the profit.',
+      fix:
+        'Receiving, transfers, write-offs and sales are all recorded movements. Cycle counts by aisle are compared with the book, and each gap is listed with item, quantity, value, aisle and the shift when it fell.',
+      screen: 'owner',
+      source: {
+        name: 'Economic Times piece reprinted by Third Eyesight, June 2024',
+        url: 'https://www.thirdeyesight.in/?p=6499',
+      },
+    },
+    {
+      area: 'Suppliers',
+      title: 'Supplier schemes, rebates and listing fees are not tracked',
+      scene:
+        'A supplier agrees a 3 percent scheme if you hit a volume target. The target is hit in October. The credit note never arrives because no one remembers the deal. Listing fees are paid for items that were then delisted.',
+      cost:
+        'Example arithmetic: a 3 percent scheme on ₹40 lakh of quarterly purchases is ₹1.2 lakh. Missed once a quarter across ten suppliers, it is real money.',
+      fix:
+        'Each deal is recorded with its supplier, product, target and period. Verity compares purchases with the target as the quarter runs and lists the credit notes due, so the claim is raised on time.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Deliveries arrive short, late or at the wrong price',
+      scene:
+        'Twenty cartons are ordered and eighteen arrive. The invoice carries last month’s rate. The dock is busy, so the receiving clerk signs and moves on.',
+      cost:
+        'You pay for goods you did not get, or at a price you did not agree, and the correction takes weeks of calls.',
+      fix:
+        'The purchase order is checked at the dock against counted quantity and agreed rate. Verity flags any difference before the invoice is cleared for payment and opens a debit note task.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Slow-moving items hold space and cash',
+      scene:
+        'A product launched with a big listing push now sells two packs a week. It still has a full facing, and the supplier has stopped talking about returns.',
+      cost:
+        'Space and cash used by a slow item are taken from a fast one. Distributor returns policies are often time-bound, so waiting costs the right to return.',
+      fix:
+        'Each product shows sales speed, margin and space used. Verity ranks the weakest lines per category, with the supplier’s return terms beside them, so the decision is made while it can be returned.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Pricing',
+      title: 'Prices differ between the shelf, the system and the supplier’s latest MRP',
+      scene:
+        'A new lot has a higher MRP. The shelf tag shows the old one, the billing system has the old one, and a customer notices a mismatch at the counter. Or the reverse: a lot with a lower MRP is billed at the old price.',
+      cost:
+        'Packaged goods must not be sold above the printed MRP. A mismatch is a complaint, a possible Legal Metrology penalty and a loss of trust at the counter.',
+      fix:
+        'Each lot’s MRP is recorded at receiving. Verity flags every product where the MRP changed and lists the shelf tags and billing prices to update, with a tick when each is done.',
+      screen: 'expiry',
+      source: {
+        name: 'Lok Sabha reply on Legal Metrology (Packaged Commodities) Rules, 2025',
+        url: 'https://fcainfoweb.nic.in/PMS/writereaddata/2025_LS_B_4362.pdf',
+      },
+    },
+    {
+      area: 'Staff',
+      title: 'Shifts, absences and tasks are decided on the day',
+      scene:
+        'Two cashiers call in sick on a Saturday. The aisle refill round is skipped. Floor staff do not know who is covering the fresh counter, so it is covered by whoever is nearby.',
+      cost:
+        'Long queues, empty shelves and overtime paid at short notice. Frontline retail in India sees heavy staff turnover, so new people are always learning.',
+      fix:
+        'The roster, attendance and availability sit in one place. Verity shows gaps by section and shift in advance, and assigns tasks like the refill round, the expiry check and the clean-up to a named person.',
+      screen: 'staff',
+    },
+    {
+      area: 'Staff',
+      title: 'Loss prevention depends on who happens to be watching',
+      scene:
+        'A staff purchase goes through without a bill. A damaged item is “taken home”. A cashier gives a friend discounts. Nothing can be proved after the fact.',
+      cost:
+        'Internal loss is hard to price, but it is part of every shrinkage figure and it damages team trust when handled badly.',
+      fix:
+        'Voids, returns, price overrides and staff purchases are recorded with the person who made them. Verity highlights unusual patterns by cashier and shift and routes them to the store head with the facts.',
+      screen: 'staff',
+    },
+    {
+      area: 'Money',
+      title: 'Cash, card and UPI collections do not tie with the day’s sales',
+      scene:
+        'Six counters, three shifts. At end of day, collections differ from sales by a few thousand rupees. Was it a wrong tender, a refund, or a missed bill? The cash room is working late again.',
+      cost:
+        'A few thousand rupees of unexplained gap every week, and hours of the cash-room team’s time.',
+      fix:
+        'Each counter’s sales and collections are compared by mode and by shift. Verity points to the counter and the bills that do not tie, and the close is recorded with who counted.',
+      screen: 'owner',
+    },
+    {
+      area: 'Compliance',
+      title: 'Food safety licences, temperature logs and hygiene checks are on paper',
+      scene:
+        'The FSSAI licence is renewed on time, but the cold chain log for the dairy chiller is filled in once a day by memory. An inspection arrives and the records do not hold up.',
+      cost:
+        'Notices, penalties and, in the worst case, stock seized or a licence suspended. Revised FSSAI turnover bands apply from 1 April 2026, so the licence category may have changed.',
+      fix:
+        'The licence, expiry date and hygiene checks are recorded with a due date. Chiller and freezer readings, cleaning rounds and pest control visits are tasks with a person, a time and a tick.',
+      screen: 'expiry',
+      source: {
+        name: 'Mondaq, FSSAI raises turnover limits for registration and licensing, 2026',
+        url: 'https://www.mondaq.com/india/food-and-drugs-law/1801924/fssai-raises-turnover-limits-for-food-business-registration-and-licensing',
+      },
+    },
+    {
+      area: 'Owner',
+      title: 'The store head works from instinct, because the numbers arrive late',
+      scene:
+        'Margin by category arrives in the second week of the next month. Weekly decisions on promotions, space and ordering are made from sales alone.',
+      cost:
+        'A promotion that sells well but earns nothing goes on for weeks. A profitable aisle is starved of space.',
+      fix:
+        'Sales, cost, write-offs and scheme credits are combined into margin by category and aisle each day. Verity AI answers questions like “which category lost margin this week” from your own records.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'More stores, more variation, and no fair comparison',
+      scene:
+        'Store two has more write-offs than store one. Is it the staff, the catchment, the ordering or the layout? The two stores use different sheets, so nobody can answer.',
+      cost:
+        'Good practice stays in one store and mistakes repeat in another. Head office hears about problems when they have grown.',
+      fix:
+        'Each store is a location in one system, with the same measures for waste, shrinkage, shelf gaps and margin. Transfers between stores are recorded movements.',
+      screen: 'locations',
+    },
   ],
 
-  challengesHeading: 'Small percentages on large volumes.',
-  challengesLede:
-    'A supermarket does not lose money in single events. It loses it in fractions of a percent, repeated across thousands of lines.',
-  challenges: [
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
     {
-      problem: 'Shrinkage arrives as one unexplained number',
-      detail:
-        'Stocktake produces a figure. It does not say how much was spoilage, how much was short delivery and how much walked out, so nothing specific can be fixed.',
-      outcome:
-        'Every loss is a recorded movement with a reason and a location, so shrinkage decomposes into causes that can each be acted on.',
+      figure: '7.9%',
+      text: 'EBITDA margin at Avenue Supermarts (DMart) in FY25, down from 8.3%, on ₹57,790 crore of standalone revenue. Most supermarkets earn less.',
+      source: {
+        name: 'FilingReader, on Avenue Supermarts FY25 results',
+        year: '2025',
+        url: 'https://filingreader.com/news-wire/mumbai/2025-05-05/avenue-supermarts-fy25-revenue-jumps-167-store-count-rises',
+      },
     },
     {
-      problem: 'Out-of-shelf is never counted',
-      detail:
-        'A listed line missing from the shelf makes no transaction, so the lost sale leaves no trace anywhere in the system.',
-      outcome:
-        'Listed lines are checked against stock on hand, so availability becomes a measured percentage rather than an assumption.',
+      figure: '91%',
+      text: 'of 100 large organised retail chains in India say they leak revenue at the shelf. About 65% say they lack strong processes to keep inventory fresh.',
+      source: {
+        name: 'Vector Consulting Group, via Indian Retailer',
+        year: '2026',
+        url: 'https://indianretailer.com/article/retail-business/retail/91-pc-organised-retail-stores-india-are-losing-revenue-shelf',
+      },
     },
     {
-      problem: 'Perishables are marked down too late',
-      detail:
-        'Short-dated stock is noticed on the day it expires, when the only remaining option is to throw it away at full cost.',
-      outcome:
-        'Expiry sits on the batch, so near-dated stock surfaces by value and location while markdown can still recover most of the cost.',
+      figure: '1 to 3%',
+      text: 'of net sales is lost to shrinkage in organised retail in India, according to one accounting firm, with grocery and FMCG at the higher end.',
+      source: {
+        name: 'Patron Accounting',
+        year: '2026',
+        url: 'https://www.patronaccounting.com/blog/stock-audit-retail-fmcg-perishables-expiry-shrinkage',
+      },
     },
     {
-      problem: 'Scheme support goes unclaimed',
-      detail:
-        'Promotional funding, damage allowances and slab-based support are reconstructed from memory at the end of a window and partially claimed.',
-      outcome:
-        'Scheme terms are recorded against the purchases they apply to, so the claim is assembled from records before the window closes.',
-    },
-    {
-      problem: 'Category performance is guessed',
-      detail:
-        'Shelf space is allocated by habit and by whichever supplier pushed hardest, not by return per unit of space.',
-      outcome:
-        'Sales, margin and turnover by category come from the same records, so space decisions have numbers behind them.',
-    },
-    {
-      problem: 'Every store counts differently',
-      detail:
-        'Each site reports shrinkage, availability and wastage in its own format, so the chain view is a monthly reconciliation exercise.',
-      outcome:
-        'Stores are locations rolling into the business, so comparison is the same records rather than five submissions.',
+      figure: '₹1.5 crore',
+      text: 'is the new top of the FSSAI basic registration band from 1 April 2026. State licences cover ₹1.5 to ₹50 crore of turnover, central licences above ₹50 crore.',
+      source: {
+        name: 'Mondaq, on the FSSAI Amendment Regulations 2026',
+        year: '2026',
+        url: 'https://www.mondaq.com/india/food-and-drugs-law/1801924/fssai-raises-turnover-limits-for-food-business-registration-and-licensing',
+      },
     },
   ],
+  factsNote:
+    'The shrinkage range comes from an accounting firm’s blog, not a regulator. The survey covers large chains. DMart’s margin is shown to illustrate how thin the business is, not as a target for any one store.',
 
-  modulesLede:
-    'One system across stock movement, supply, staff and reporting. These are the parts a supermarket works with.',
-  modules: [
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each built for one job. Aisle names, sections and terms are set up in your supermarket’s own language.',
+  screens: [
     {
-      id: 'inventory',
-      title: 'Movement, not just stock on hand',
-      line:
-        'Stock is held with batch, expiry, cost, category and location, and every movement — receipt, sale, markdown, damage, spoilage, transfer, write-off — is recorded with its reason.',
-      why:
-        'The stock figure matters less than the movement behind it. Shrinkage, availability and wastage are all questions about movement.',
-      example:
-        'Dairy shrinkage running at double the store average for four weeks points at a cold chain problem, which a single stocktake figure never would.',
+      id: 'owner',
+      title: 'Supermarket / Today',
+      meta: 'Store: Whitefield',
+      heading: 'The store head’s morning view',
+      caption:
+        'Yesterday’s sales, margin by category, write-offs, shrinkage and the items waiting for a decision. It replaces the evening report and the walk-round to find the problem.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹14.8 lakh', note: '2,310 bills' },
+            { label: 'Write-offs', value: '₹31,400', note: '2.1% of sales' },
+            { label: 'Near expiry', value: '184', note: 'lots under 15 days' },
+            { label: 'Shelf gaps', value: '27', note: 'on the morning round' },
+          ],
+        },
+        { type: 'title', text: 'Write-offs by reason, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Expired', value: 62, display: '₹1.1 lakh', tone: 'muted' },
+            { label: 'Spoiled (fresh)', value: 46, display: '₹82,000' },
+            { label: 'Damaged', value: 22, display: '₹39,000' },
+            { label: 'Unexplained', value: 14, display: '₹24,000' },
+          ],
+        },
+        { type: 'alert', text: 'Counter 4 collections are ₹1,850 below sales. 5 bills do not tie.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Dairy chiller 2 above 6°C at 7 am', meta: 'Logged by Raju. Check compressor.', tag: ['Open', 'flag', 'Fixed', 'ok'] },
+            { name: 'Cleaning scheme credit note due', meta: 'Quarter target met, ₹86,000', tag: ['Raise', 'late', 'Raised', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'expiry',
+      title: 'Expiry and write-offs',
+      meta: 'By batch and aisle',
+      heading: 'What is about to expire, and what has been written off',
+      caption:
+        'Every lot with its expiry date and days left, the action chosen and who owns it. Write-offs carry a reason and roll up by section and supplier return terms.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Lot', 'Qty', 'Days left', 'Action'],
+          rows: [
+            ['Tea 500 g', 'B2291', '48', '9', ['Mark down', 'late', 'Done', 'ok']],
+            ['Biscuit cream 200 g', 'B1874', '120', '14', ['Pull forward', 'flag', 'Done', 'ok']],
+            ['Curd 400 g', 'D0932', '36', '3', ['Write off today', 'late']],
+            ['Pasta 500 g', 'B2105', '60', '21', ['Return to supplier', 'info', 'Credit note', 'ok']],
+            ['Chocolate box 250 g', 'B2310', '84', '40', ['New MRP', 'flag', 'Updated', 'ok']],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Dairy chiller 1 reading', meta: '4°C, 7:10 am, Raju', done: true },
+            { text: 'Frozen freezer 3 reading', meta: 'Due 11:00 am', done: false },
+            { text: 'Bakery cleaning round', meta: 'Due 2:00 pm', done: false },
+            { text: 'FSSAI licence on display and in date', meta: 'Next due: March', done: true },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'shelf',
+      title: 'Shelf round',
+      meta: 'Aisle 6, snacks and beverages',
+      heading: 'The shelf round that records itself',
+      caption:
+        'The refill list per aisle, with back-room stock beside each item, plus a check against the intended layout. Gaps that repeat go to the category owner.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Shelf', 'Back room', 'Planogram', 'Status'],
+          rows: [
+            ['Potato chips 90 g', '0', '48', 'Eye level', ['Refill', 'late', 'Done', 'ok']],
+            ['Cola 2 L', '4', '96', 'Lower', ['Refill soon', 'flag']],
+            ['Energy drink 250 ml', '12', '0', 'End cap', ['Wrong spot', 'flag', 'Moved', 'ok']],
+            ['Namkeen 400 g', '18', '30', 'Eye level', ['OK', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Potato chips shelf empty on 3 of the last 5 rounds. Back room is full.', action: 'Tell category owner' },
+      ],
     },
     {
       id: 'suppliers',
-      title: 'Principals, schemes and claims',
-      line:
-        'Suppliers are relationships with their purchase orders, delivery performance, scheme terms, claims and outstanding balances.',
-      why:
-        'A significant share of supermarket margin arrives from the supply side, and it is claimed rather than earned automatically.',
-      example:
-        'A scheme worth two and a half lakh is assembled from the purchases it applies to, before the claim window closes on Friday.',
+      title: 'Suppliers',
+      meta: 'Orders, receipts, schemes',
+      heading: 'What you ordered, what arrived and what the supplier owes you',
+      caption:
+        'Dock counts against orders, agreed rates against invoice rates, scheme targets against purchases, and return terms beside slow lines.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Supplier', 'Ordered', 'Received', 'Rate', 'Status'],
+          rows: [
+            ['Sahyadri Foods', '20', '18', 'As agreed', ['Short 2', 'late', 'Debit note', 'ok']],
+            ['Patel Beverages', '60', '60', '+2% vs PO', ['Rate query', 'flag', 'Corrected', 'ok']],
+            ['Nirmal Dairy', '80', '80', 'As agreed', ['Matched', 'ok']],
+            ['Kumar Household', '40', '40', 'As agreed', ['Matched', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Kumar Household, 3% quarter scheme', meta: '₹38.6 of ₹40 lakh target, 12 days left', tag: ['On track', 'info'] },
+            { name: 'Pasta, weakest in category', meta: '2 packs a week. Return window ends 20 Nov.', tag: ['Decide', 'flag', 'Return', 'ok'] },
+          ],
+        },
+      ],
     },
     {
-      id: 'orders',
-      title: 'Baskets, returns and replenishment orders',
-      line:
-        'Transactions record their lines, the till, the staff member and the stock they moved; purchase orders record what was asked for against what arrived.',
-      why:
-        'Matching what was ordered to what was received is where short deliveries stop being absorbed as shrinkage.',
-      example:
-        'A delivery two cases short is recorded against the order rather than discovered as an unexplained variance at count.',
-    },
-    {
-      id: 'workflows',
-      title: 'Markdown, write-off and adjustment',
-      line:
-        'Markdowns, write-offs, stock adjustments and returns to supplier move through defined approval steps with a reason on the record.',
-      why:
-        'These are the routine decisions that decide shrinkage, and they are the ones most often made without any record of why.',
-      example:
-        'A markdown on near-dated stock is an approval with the expiry and value attached, so the recovery can be compared with the alternative.',
-    },
-    {
-      id: 'people',
-      title: 'Shift staff, section leads and cashiers',
-      line:
-        'Staff are modelled once, and every adjustment, markdown, void and count carries the person who made it.',
-      why:
-        'Attribution is not about blame. It is the only way to tell a training problem from a process problem from a genuine loss.',
-      example:
-        'Voids and price overrides by till and operator, from the transactions themselves.',
-    },
-    {
-      id: 'workforce',
-      title: 'Shift cover against trading pattern',
-      line:
-        'Assignment, attendance and availability stay connected to the shifts and sections they covered.',
-      why:
-        'A supermarket’s labour cost is fixed against a trading pattern that is not, and cover gaps show up as queues and unfilled shelves.',
-      example:
-        'Hours worked against baskets processed by hour, so staffing is set against what the same day actually did.',
-    },
-    {
-      id: 'records',
-      title: 'Agreements, certificates and delivery documents',
-      line:
-        'Documents attach to the supplier, batch or transaction they belong to, with the same permissions as every other record.',
-      why:
-        'Scheme circulars, cold chain records and delivery notes are the evidence behind claims and compliance, and they are needed after the fact.',
-      example:
-        'A claim disputed by a principal resolves to the circular it was raised under and the deliveries it covers.',
+      id: 'staff',
+      title: 'Shifts and loss alerts',
+      meta: 'Today and this week',
+      heading: 'Who is working where, and what looks unusual',
+      caption:
+        'Roster by section, tasks assigned to named people, and voids, overrides and staff purchases highlighted by cashier and shift for the store head.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Section', 'Needed', 'Present', 'Gap', 'Cover'],
+          rows: [
+            ['Billing counters', '6', '5', '1', ['Asked Seema', 'flag', 'Covered', 'ok']],
+            ['Fresh', '3', '3', '0', 'None needed'],
+            ['Receiving dock', '2', '1', '1', ['Open', 'late', 'Covered', 'ok']],
+            ['Floor refill', '4', '4', '0', 'None needed'],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Counter 4, 14 voids this week', meta: 'Chain average is 4', tag: ['Review', 'flag', 'Reviewed', 'ok'] },
+            { name: 'Staff purchases without bill', meta: '2 on Saturday evening shift', tag: ['Review', 'late'] },
+          ],
+        },
+      ],
     },
     {
       id: 'locations',
-      title: 'Stores, cold rooms and back-of-house',
-      line:
-        'Locations roll into the business, with stock, permissions and reporting following the same structure.',
-      why:
-        'Loss frequently happens between locations — bay to back-of-house, back-of-house to shelf — and is invisible unless those are distinct.',
-      example:
-        'Stock recorded into the cold room and not onto the shelf is a movement gap with a location attached.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Category and loss reporting',
-      line:
-        'Shrinkage by cause and category, availability, wastage, margin, scheme recovery and store comparison come from the operational records.',
-      why:
-        'These are weekly decisions taken against monthly information in most chains, which is the wrong cadence entirely.',
-      example:
-        'Shrinkage decomposed by cause and category, current, rather than a single figure at the next stocktake.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the store a question',
-      line:
-        'Verity AI answers from your own stock movement, supplier and transaction records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The useful questions cross movement, category and supplier at once, which is exactly what no single report covers.',
-      example:
-        '"Which categories have shrinkage above target, and what is the biggest cause in each?" returns three, with the follow-ups assigned to section leads.',
-    },
-    {
-      id: 'control',
-      title: 'Who can adjust, void and mark down',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'The ability to change a price or adjust stock is distributed across a large shift workforce, which is exactly why it needs a trail.',
-      example:
-        'Every adjustment carries the person, the reason and the time, and thresholds route the larger ones for approval.',
-    },
-    {
-      id: 'relationships',
-      title: 'Loyalty customers and accounts',
-      line:
-        'Customers are records with their purchase history, basket composition and any credit position.',
-      why:
-        'Basket behaviour is what tells a supermarket which categories are pulling the trip and which are riding along.',
-      example:
-        'Customers whose weekly shop stopped after a category went out of stock repeatedly are a measurable group.',
+      title: 'Stores',
+      meta: 'All stores compared',
+      heading: 'Every store measured the same way',
+      caption:
+        'Waste, shrinkage, shelf gaps and margin for each store, so good practice spreads and a problem is visible in days, not at the next review.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Store', 'Sales, 7 days', 'Write-offs', 'Shrink', 'Shelf gaps'],
+          rows: [
+            ['Whitefield', '₹1.02 crore', '2.1%', '0.6%', '27'],
+            ['Koramangala', '₹88 lakh', '1.4%', '0.3%', '11'],
+            ['HSR Layout', '₹71 lakh', '3.0%', '1.2%', '34'],
+          ],
+        },
+        { type: 'title', text: 'Write-offs, share of sales' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Koramangala', value: 47, display: '1.4%' },
+            { label: 'Whitefield', value: 70, display: '2.1%' },
+            { label: 'HSR Layout', value: 100, display: '3.0%', tone: 'muted' },
+          ],
+        },
+      ],
     },
   ],
 
-  workflowsHeading: 'The movements that decide the margin.',
-  workflowsLede:
-    'These already happen in your store. Recorded as states rather than as events nobody logs, they become the numbers that matter.',
-  workflows: [
+  dayHeading: 'The same Saturday, before and after.',
+  dayLede: 'The work on the floor does not change. What changes is that each task leaves a record, and the record does the chasing.',
+  day: [
     {
-      name: 'Delivery to shelf',
-      steps: [
-        'Purchase order raised against the principal or distributor',
-        'Delivery received and counted against the order',
-        'Short or damaged quantity recorded against the supplier',
-        'Stock taken in with batch, expiry and cost',
-        'Movement to back-of-house and then to shelf recorded',
-        'Scheme terms attached to the purchase',
-      ],
-      note:
-        'Recording short delivery at the bay stops it becoming an unexplained variance at stocktake.',
+      time: '7:30',
+      before: 'The store head walks the aisles looking for problems and finds a warm chiller by luck.',
+      after: 'The Today screen lists the chiller, 184 near-expiry lots and 27 shelf gaps. Each has an owner.',
     },
     {
-      name: 'Near-expiry and markdown',
-      steps: [
-        'Batches inside the expiry window flagged by value and location',
-        'Markdown proposed against the remaining shelf life',
-        'Approval applied where the markdown exceeds the threshold',
-        'Price change recorded against the batch',
-        'Recovery compared against the write-off it avoided',
-      ],
-      note:
-        'Markdown becomes a recovery decision taken early rather than a disposal decision taken late.',
+      time: '10:00',
+      before: 'A truck of beverages arrives. The clerk signs for 60 cartons without a full count.',
+      after: 'The count is entered at the dock against the order. A rate difference is flagged before the invoice is cleared.',
     },
     {
-      name: 'Shrinkage investigation',
-      steps: [
-        'Count variance raised against a category or location',
-        'Recorded movements for the period reviewed by reason',
-        'Unexplained portion isolated from known loss',
-        'Cause investigated with the location and shift attached',
-        'Action raised against the process or the training gap',
-      ],
-      note:
-        'The point is separating what is explained from what is not. Only the second needs investigating.',
+      time: '1:00',
+      before: 'A customer asks for a brand that is out. It is in the back room, and nobody was told.',
+      after: 'The refill round put it on the list at 11. The shelf was filled before the lunch rush.',
     },
     {
-      name: 'Availability check',
-      steps: [
-        'Listed lines compared against stock on hand',
-        'Gaps ranked by sales rank and category',
-        'Replenishment raised for lines held in back-of-house',
-        'Purchase raised for lines genuinely out of stock',
-        'Availability recorded as a measured percentage',
-      ],
-      note:
-        'A top-100 line missing from the shelf is a different problem from a slow line missing, and ranking makes that visible.',
+      time: '4:00',
+      before: 'A supplier asks for the scheme target status. Someone digs through emails.',
+      after: 'The deal shows ₹38.6 lakh of the ₹40 lakh target with twelve days left, ready to push.',
     },
     {
-      name: 'Scheme claim',
-      steps: [
-        'Scheme terms recorded against the principal at purchase',
-        'Qualifying purchases and sales matched to the terms',
-        'Claim assembled with the supporting documents attached',
-        'Approval routed and the claim filed before the window',
-        'Settlement recorded against the principal balance',
-      ],
-      note:
-        'The claim is built from records that already exist rather than reconstructed at the deadline.',
+      time: '10:00 pm',
+      before: 'The cash room is ₹1,850 off and stays late to find it.',
+      after: 'Verity names counter 4 and five bills. It is resolved in ten minutes.',
     },
     {
-      name: 'Category review',
-      steps: [
-        'Sales, margin and turnover pulled by category',
-        'Shrinkage and wastage compared across categories',
-        'Return per unit of shelf space calculated',
-        'Space and range decisions raised with owners',
-        'Decisions recorded against the categories',
-      ],
-      note:
-        'Shelf space stops being allocated by habit and by supplier pressure.',
+      time: 'Month end',
+      before: 'Write-offs arrive as one number. Nobody can say if it is expiry, fresh or theft.',
+      after: 'Write-offs are split by reason, section and supplier return terms, with claims already raised.',
     },
   ],
+
+  approach: {
+    heading: 'We set it up with you in four weeks.',
+    lede:
+      'No login and a manual. We learn how your supermarket works from the dock to the counter, set Verity up around it, move your data in, and stay on while it settles.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend time at the dock, in the fresh section, on the floor and in the cash room. Map how a pack moves from the supplier to the shelf to the customer, and where each number is kept.',
+        you: 'Two to three hours for you and the store head. Access to purchase registers, billing reports and expiry sheets.',
+        get: 'A written map of your supermarket: sections, aisles, suppliers and deals, roles, and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your sections, aisles, intended layouts, suppliers and deal terms, expiry alerts, write-off reasons, rosters and store locations.',
+        you: 'Check the setup with the store head and category owners. Tell us where a rule is wrong.',
+        get: 'A working Verity with your real aisles, suppliers and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Load your product master, opening stock with batches, supplier details and open deals. Train the dock, the floor, the fresh counter and the cash room on real shifts.',
+        you: 'Product master and supplier lists in whatever form they exist. About an hour with each team.',
+        get: 'Your products, batches, suppliers and rosters inside Verity, and a team that has run a dock receipt, a shelf round and a close.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on. Review the first month of write-offs and shelf gaps with you, tune the alert days and flags, and add stores or sections as you grow.',
+        you: 'A monthly review of the numbers with the store head.',
+        get: 'A system that keeps pace with the store, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your product master with cost, MRP and supplier',
+      'Opening stock by aisle, with expiry dates where you have them',
+      'Supplier deals, schemes and return terms',
+      'Section layout or planogram, even a sketch',
+      'Your roster pattern and your shrinkage and write-off history',
+    ],
+    time: 'About 9 to 12 hours of your own time across the four weeks, mostly in week 1. The store head and category owners need a few more, and the dock lead about two.',
+    after: 'Nobody is hired to run Verity. Receiving, shelf rounds, write-offs and counts are recorded as part of the work already done, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask where the percentage went.',
+    heading: 'Ask your supermarket a question. Get an answer, not a report to build.',
     lede:
-      'Verity AI reads the same movement, supplier and transaction records the store runs on. It answers from your own stores rather than from generic knowledge, and it can turn the answer into work assigned to the section that owns it.',
-    panelMeta: 'Grounded in your store records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which categories have shrinkage above target, and what is the largest cause in each?',
-      'Which listed lines are not on shelf, and how many are top-100 sellers?',
-      'What is expiring within five days, and where?',
-      'Which principals have unclaimed scheme support this window?',
-      'Which suppliers delivered short this month?',
-      'How does this store compare with the others on wastage?',
-      'Which categories return the most per unit of shelf space?',
-      'How did labour hours track against baskets by hour on Saturday?',
-      'Summarise this week’s loss and availability position.',
+      'Verity AI reads your own stock, supplier, shelf and staff records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which categories lost margin this week, and why?',
+        a: 'Dairy and snacks lost the most. Dairy write-offs rose to 4.1% of sales, and snacks sold on a promotion at cost.',
+        rows: [['Dairy', '-1.8 pts'], ['Snacks', '-1.2 pts'], ['Staples', '+0.3 pts'], ['Beverages', '0.0 pts']],
+        action: 'Create review tasks for the category owners',
+      },
+      {
+        q: 'Which lots will expire in the next 10 days, and which can still be returned?',
+        a: '63 lots expire within 10 days, worth ₹1.9 lakh at cost. 21 of them are still inside the supplier’s return window.',
+        action: 'Create return tasks for the 21 lots',
+      },
+      {
+        q: 'Which counter has the most voids and overrides this month?',
+        a: 'Counter 4, with 61 voids against a store average of 17. Most fall on the evening shift.',
+        rows: [['Counter 4', '61'], ['Counter 2', '19'], ['Counter 1', '14'], ['Counter 3', '9']],
+      },
     ],
   },
 
-  automationHeading: 'The checks that have to happen daily.',
+  automationHeading: 'The checks nobody has time to remember.',
   automationLede:
-    'Each runs from the movement records at the point the condition is met.',
+    'Set once, then they run from your records. Staff still do the work. Verity makes sure the right person is told and the outcome is written down.',
   automations: [
     {
-      trigger: 'A batch enters its expiry window',
-      steps: [
-        'Batch flagged with value, location and remaining shelf life',
-        'Markdown task raised for the section lead',
-        'Approval routed where the markdown exceeds threshold',
-        'Outcome recorded against the batch',
-      ],
+      when: 'A lot is 15 days from expiry',
+      then: ['Listed for the aisle owner', 'Action chosen: pull forward, mark down or return', 'Outcome recorded against the lot'],
     },
     {
-      trigger: 'A delivery is received short or damaged',
-      steps: [
-        'Variance recorded against the purchase order',
-        'Claim or return raised against the supplier',
-        'Supplier delivery record updated',
-      ],
+      when: 'A delivery is counted at the dock',
+      then: ['Compared with order and agreed rate', 'Difference flagged to the buyer', 'Invoice held back from payment until cleared'],
     },
     {
-      trigger: 'A listed line has no stock on hand',
-      steps: [
-        'Availability gap flagged with the line’s sales rank',
-        'Replenishment task raised if stock is in back-of-house',
-        'Purchase raised if it is genuinely out',
-      ],
+      when: 'A product’s MRP changes on a new lot',
+      then: ['Flagged on the product', 'Task to update shelf tag and billing price', 'Tick recorded when done'],
     },
     {
-      trigger: 'Category shrinkage passes its threshold',
-      steps: [
-        'Exception raised with the recorded causes attached',
-        'Investigation assigned to the section lead',
-        'Action recorded against the category',
-      ],
+      when: 'The shelf round finds a gap with stock in the back room',
+      then: ['Refill task to the floor team', 'Time of refill recorded', 'Repeat gaps flagged to the category owner'],
     },
     {
-      trigger: 'A scheme window approaches its close',
-      steps: [
-        'Qualifying purchases matched against the terms',
-        'Claim assembled with documents attached',
-        'Filing task assigned with the deadline',
-      ],
+      when: 'A chiller reading is outside the safe range',
+      then: ['Alert to the store head', 'Task for the maintenance contact', 'Affected lots listed for checking'],
     },
     {
-      trigger: 'An adjustment exceeds the threshold',
-      steps: [
-        'Adjustment held at the approval step',
-        'Routed with the reason and the person attached',
-        'Decision recorded against the stock record',
-      ],
+      when: 'A supplier quarter scheme is within 14 days of its end',
+      then: ['Purchases compared with target', 'Buyer told how much is left to reach it', 'Credit note task opened if met'],
     },
   ],
 
-  intelligenceHeading: 'What the chain can actually see.',
-  intelligenceLede:
-    'Loss, availability and category performance drawn from recorded movement.',
-  intelligence: [
-    {
-      area: 'Loss',
-      points: [
-        'Shrinkage by category, cause and location',
-        'Wastage and expiry write-off by value',
-        'Short and damaged deliveries by supplier',
-        'Unexplained variance against recorded loss',
-      ],
-    },
-    {
-      area: 'Availability',
-      points: [
-        'On-shelf availability against listed range',
-        'Gaps weighted by sales rank',
-        'Replenishment lag from back-of-house to shelf',
-        'Out-of-stock frequency by line',
-      ],
-    },
-    {
-      area: 'Category',
-      points: [
-        'Sales, margin and turnover by category',
-        'Return per unit of shelf space',
-        'Range performance against space allocated',
-        'Basket composition and attachment',
-      ],
-    },
-    {
-      area: 'Supply',
-      points: [
-        'Delivery reliability and fill rate by supplier',
-        'Cost movement on repeat purchases',
-        'Scheme support earned, claimed and settled',
-        'Outstanding payable by principal',
-      ],
-    },
-    {
-      area: 'People',
-      points: [
-        'Hours worked against baskets by hour',
-        'Voids, overrides and adjustments by operator',
-        'Attendance against shift plan',
-        'Section coverage during peak periods',
-      ],
-    },
-    {
-      area: 'Stores',
-      points: [
-        'Store comparison on shrinkage and availability',
-        'Sales per square foot by store',
-        'Transfers between stores',
-        'Exceptions raised and time to close',
-      ],
-    },
-  ],
-  intelligenceNote:
-    'All of this comes from movements the store already makes. The difference is that the movement carries a reason and a location.',
+  rules: {
+    heading: 'The rules a supermarket has to keep up with.',
+    lede:
+      'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your team is not rebuilding them when an inspector asks.',
+    items: [
+      {
+        name: 'FSSAI registration or licence',
+        what: 'A food business needs registration or a licence based on turnover and activity. From 1 April 2026 the bands are generally registration up to ₹1.5 crore, a state licence from ₹1.5 to ₹50 crore, and a central licence above ₹50 crore. Some activities need a central licence whatever the turnover.',
+        how: 'The licence number, category and expiry are recorded with a reminder. Hygiene rounds and cold chain readings are tasks with a person and a tick.',
+        source: {
+          name: 'Mondaq, FSSAI raises turnover limits for registration and licensing',
+          url: 'https://www.mondaq.com/india/food-and-drugs-law/1801924/fssai-raises-turnover-limits-for-food-business-registration-and-licensing',
+        },
+      },
+      {
+        name: 'MRP and the Legal Metrology rules',
+        what: 'Packaged goods generally must not be sold above the printed MRP, and the MRP includes all taxes. State Legal Metrology departments inspect and penalise. Check current penalties with your adviser.',
+        how: 'Each lot’s MRP is recorded at receiving, and a change triggers a task to update the shelf tag and billing price.',
+        source: {
+          name: 'Lok Sabha reply on Legal Metrology (Packaged Commodities) Rules, 2025',
+          url: 'https://fcainfoweb.nic.in/PMS/writereaddata/2025_LS_B_4362.pdf',
+        },
+      },
+      {
+        name: 'GST rates by product',
+        what: 'Packaged food and household goods are taxed at rates that depend on the product. Rates can change when the GST Council revises them. Your accountant prepares and files the returns.',
+        how: 'Each product record holds its tax rate with a history, and sales and purchases show the split by rate for month end.',
+      },
+      {
+        name: 'Customer and staff data',
+        what: 'Loyalty phone numbers and CCTV or access data are personal data. Under the DPDP Rules, 2025, most duties for businesses start on 13 May 2027.',
+        how: 'Personal data sits in one permissioned place with a log of who saw or changed it.',
+        source: {
+          name: 'S.S. Rana & Co. on the DPDP Rules',
+          url: 'https://ssrana.in/articles/meity-notifies-final-digital-personal-data-protection-rules-2025/',
+        },
+      },
+    ],
+    note: 'Rules, thresholds and rates change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
 
-  rolesHeading: 'One store, five different urgencies.',
+  rolesHeading: 'Everyone sees the same records, through their own window.',
   rolesLede:
-    'Everyone works from the same records, and each role opens on the question they need answered.',
+    'A refill associate should not see supplier rates. The category owner should not see staff pay. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner or chain head',
-      question: 'Where is the percentage going?',
-      focus: 'Shrinkage by store and category, availability, margin, scheme recovery, store comparison.',
-    },
-    {
-      role: 'Store manager',
-      question: 'What is wrong on the floor today?',
-      focus: 'Availability gaps by sales rank, near-expiry stock, shift cover, approvals pending.',
-    },
-    {
-      role: 'Section lead',
-      question: 'What is my category losing?',
-      focus: 'Shrinkage and wastage in section, markdowns due, replenishment outstanding, delivery variances.',
-    },
-    {
-      role: 'Buyer',
-      question: 'What am I earning from the supply side?',
-      focus: 'Cost movement, fill rate by supplier, scheme terms and claims, range performance.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is owed and what is claimable?',
-      focus: 'Supplier payables, scheme claims outstanding, write-offs approved, daily takings.',
-    },
+    { role: 'Owner or director', question: 'Which stores and categories earn, and which leak?', sees: 'Margin by category and store, write-offs, shrinkage, supplier deals and cash.' },
+    { role: 'Store head', question: 'What needs a decision this morning?', sees: 'Near-expiry lots, shelf gaps, shift gaps, approvals waiting and cash match.' },
+    { role: 'Category owner', question: 'Is my aisle stocked, priced and moving?', sees: 'Sales speed, margin, shelf gaps, supplier deals and slow lines for their categories.' },
+    { role: 'Receiving and stores', question: 'What came in, what is short?', sees: 'Purchase orders, dock counts, batches, transfers and counts by aisle.' },
+    { role: 'Accountant', question: 'What do I owe and what am I owed?', sees: 'Supplier invoices against receipts, credit notes due, collections by mode and the tax split.' },
   ],
 
-  useCasesHeading: 'What supermarkets use Verity for',
-  useCases: [
-    {
-      name: 'Shrinkage decomposition',
-      body: 'Every loss recorded as a movement with a reason and a location, so the stocktake figure separates into causes that can each be fixed.',
-    },
-    {
-      name: 'Perishable and expiry management',
-      body: 'Expiry on the batch, so near-dated stock surfaces by value and location while markdown can still recover most of the cost.',
-    },
-    {
-      name: 'On-shelf availability',
-      body: 'Listed range checked against stock on hand, with gaps weighted by sales rank, turning an invisible lost sale into a measured percentage.',
-    },
-    {
-      name: 'Delivery variance control',
-      body: 'Short and damaged deliveries recorded against the purchase order at the bay rather than absorbed as unexplained shrinkage.',
-    },
-    {
-      name: 'Scheme and claim recovery',
-      body: 'Scheme terms recorded against qualifying purchases, so the claim is assembled from records before the window closes.',
-    },
-    {
-      name: 'Category and space decisions',
-      body: 'Sales, margin, turnover and loss by category, so shelf space is allocated on return rather than on supplier pressure.',
-    },
-    {
-      name: 'Shift cover against trading pattern',
-      body: 'Hours worked set against baskets processed by hour, so staffing follows what the day actually does.',
-    },
-    {
-      name: 'Adjustment and override control',
-      body: 'Price overrides, voids and stock adjustments carried as approvals with reasons and attribution.',
-    },
-    {
-      name: 'Multi-store comparison',
-      body: 'Stores as locations rolling into the chain, so shrinkage and availability are directly comparable without reformatting.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing system at the counters. We agree during setup how its sales reach Verity.',
+      'Your accounting software and your accountant, who still prepares your returns.',
+      'Your supplier relationships and the ordering you do today, now with receipts and deals recorded.',
+      'WhatsApp groups for the team. Tasks and alerts from Verity sit alongside them.',
+    ],
+    not: [
+      'Ring up sales at the counters.',
+      'Scan barcodes or read shelf labels for you.',
+      'Take online orders or deliveries from customers.',
+      'File tax returns or run your payroll.',
+    ],
+    migration:
+      'We bring your product master, opening stock, supplier details and deals across from the registers and sheets you use now, in stages, so the store trades normally while it happens.',
+  },
 
-  migration:
-    'Your billing, weighing and accounting setup is mapped during implementation and continues to run. Stock, batches, suppliers, scheme terms and open balances are brought across, and Verity is introduced as the movement and operational layer over them.',
-
-  faqHeading: 'Questions supermarket operators ask',
+  faqHeading: 'Questions supermarket owners ask.',
   faqs: [
     [
-      'What can AI software do for a supermarket?',
-      'Verity AI answers questions from your own movement, supplier and transaction records: which categories have shrinkage above target and what is causing it, which listed lines are not on shelf, what is expiring within five days and where, which principals have unclaimed scheme support. Each answer can become work assigned to the section that owns it.',
+      'We have thousands of products. Is that too much to load?',
+      'No. We start from your product master, usually an export from your billing system. We load it by section, check a sample against the shelf, and add batch and expiry information where the product needs it.',
     ],
     [
-      'Can Verity help reduce shrinkage?',
-      'It makes shrinkage explainable, which is the precondition for reducing it. Every loss is a recorded movement with a reason and a location — spoilage, damage, short delivery, adjustment — so the stocktake figure separates into causes rather than arriving as one unexplained number.',
+      'Does Verity replace our billing system?',
+      'No. Your billing system keeps ringing up sales. We agree during setup how its sales reach Verity, and Verity gives you the picture around them: expiry, write-offs, suppliers, shelves and shifts.',
     ],
     [
-      'Does it handle perishables and expiry?',
-      'Yes. Expiry sits on the batch, so stock inside its expiry window surfaces by value and location with the remaining shelf life. Markdown becomes a recovery decision taken early rather than a disposal taken on the day.',
+      'Will the floor staff really record all this?',
+      'Only what happens at points they already touch: the dock count, the shelf round and the write-off. We train on real shifts and keep each entry to a few taps. The lists they receive replace the checks they remember today.',
     ],
     [
-      'Can it measure on-shelf availability?',
-      'Listed lines are compared against stock on hand and the gaps are weighted by sales rank, so a top-100 line missing from the shelf is distinguishable from a slow line missing. An absent item makes no transaction, which is why it otherwise goes uncounted.',
+      'Can Verity track expiry for every item?',
+      'It tracks the batch and expiry date you record at receiving, so it works as well as the receiving habit. We start with the categories where expiry hurts most, such as dairy, bakery and packaged foods, and widen from there.',
     ],
     [
-      'Does Verity handle supplier schemes and claims?',
-      'Scheme terms are recorded against the purchases they apply to, with the supporting circular attached, so a claim is assembled from records before the window closes rather than reconstructed from memory afterwards.',
+      'Can you show me theft or staff loss?',
+      'Verity shows where stock does not match the book, and where voids, overrides and staff purchases stand out by cashier and shift. It gives you facts. It does not accuse anyone.',
     ],
     [
-      'Does it replace our billing or weighing systems?',
-      'No. Those are mapped during implementation and continue to run. Verity is the operational layer over them — stock movement, suppliers, approvals, staffing and the reporting across all of it.',
+      'We have four stores. Can I compare them?',
+      'Yes. Each store is a location in one system with the same measures, so waste, shrinkage, shelf gaps and margin can be compared, with transfers between stores recorded as movements.',
     ],
     [
-      'Can it work across a chain of stores?',
-      'Yes. Stores, cold rooms and back-of-house are locations rolling into the business, with permissions and reporting following the same structure, so shrinkage and availability are directly comparable across sites.',
+      'Who can see supplier rates and margins?',
+      'Only the people you allow. Access is set by role, so floor staff can see tasks and stock but not costs, and every change is recorded with who made it and when.',
     ],
     [
-      'How does it help with staffing?',
-      'Shifts and attendance are records connected to the periods they covered, so hours worked can be set against baskets processed by hour rather than against a fixed template.',
+      'Will it message our suppliers or customers?',
+      'Not by itself. Verity drafts the order or credit note task and assigns it to a person, who sends it. The outcome is then recorded.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the store actually runs, configuration, migration of stock, suppliers and scheme terms, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of stores, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your supermarket runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the shrinkage you cannot explain.',
-  ctaLede:
-    'Most stores can say what the figure is and not what caused it. Tell us how yours is counted today and we will show you what explaining it looks like.',
+  related: ['grocery-stores', 'convenience-stores', 'department-stores', 'retail-stores', 'distributors', 'wholesalers'],
 
-  related: ['grocery-stores', 'retail-stores', 'convenience-stores', 'department-stores', 'distributors', 'wholesalers'],
+  ctaHeading: 'Start with what expires on your shelves.',
+  ctaLede:
+    'Tell us how your supermarket runs and we will show you the near-expiry lots, shelf gaps and supplier credits it would find, using your own numbers.',
 };

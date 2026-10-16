@@ -1,568 +1,648 @@
 export default {
+  schema: 2,
   slug: 'salons',
   status: 'published',
   plural: 'salons',
   subject: 'salon',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for salons | Verity',
+    title: 'Salon management software for Indian salons | Verity',
     description:
-      'Verity connects clients, stylists, service history, retail stock and daily takings into one system, so repeat business and staff time stop being invisible.',
+      'See the 14 problems that quietly drain a salon, what each costs, and the exact Verity screens that fix them: lapsed regulars, empty chairs, colour waste, commissions and more.',
     keywords: [
-      'AI software for salons',
-      'salon management software',
-      'salon client and stylist management',
-      'beauty salon business software',
-      'salon retail stock and reporting',
+      'salon management software India',
+      'salon client retention software',
+      'salon inventory and colour stock tracking',
+      'salon staff commission tracking',
+      'multi-branch salon software',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for salons',
-    headline: 'You know your regulars by face. The business does not know them at all.',
+    headline: 'Your regulars stop coming and nobody notices. Verity makes sure you do.',
     lede:
-      'A salon lives on repeat custom and staff time, and neither is recorded anywhere the owner can look at. Verity keeps clients, stylists, services and retail stock on one system that does not need an administrator.',
-    note: 'Built to run without anyone whose job is maintaining a system.',
-    panel: {
-      title: 'Salon',
-      meta: 'Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Takings today', value: '₹64,200', note: '38 services' },
-        { label: 'Chair utilisation', value: '71%', note: 'of staffed hours' },
-        { label: 'Clients gone quiet', value: '112', note: 'no visit in 90 days' },
-        { label: 'Retail low', value: '6', note: 'lines below reorder' },
-      ],
-      rows: [
-        { name: '112 regular clients have not visited in 90 days', meta: 'Previously visiting every 5–7 weeks', active: true },
-        { name: 'Two stylists at 40% utilisation this week', meta: 'While two others are fully booked', active: true },
-        { name: 'Colour stock short for weekend bookings', meta: 'Two shades · supplier delivers Thursday', active: true },
-        { name: 'Retail products sold without being deducted', meta: '9 items · count mismatch', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own salon in this shape.',
-    },
+      'A salon earns from two things: full chairs and clients who come back. Both leak every week, quietly, because the information sits in a diary, a billing machine and your stylists’ heads. Verity puts it in one place that tells you what to do today.',
+    oneLine:
+      'One system that knows every client, every chair, every tube of colour and every rupee, and tells you what needs your attention before it costs you.',
+    note: 'No new staff needed to run it. The records come from the bill you already make for every visit.',
+    screen: 'owner',
+    screenNote: 'stylists, services, prices and branches',
   },
 
-  overview: {
-    heading: 'The economics are simple. The record-keeping is what fails.',
+  today: {
+    heading: 'Most salons run well on the floor and blind in the office.',
     paragraphs: [
-      'A salon makes money in two ways: filling staffed hours with services, and selling retail products alongside them. Both depend on clients coming back. A client who visited every six weeks and has not been in for three months is a real, measurable loss, and in most salons nobody knows it happened because the client history is in a diary and a set of memories.',
-      'The second economic fact is that an unfilled hour is gone permanently. Two stylists at forty percent utilisation while two others are fully booked is a scheduling problem worth real money, and it is invisible unless someone is recording who did what and when.',
-      'The third is retail. Products sold alongside services are a genuinely profitable line that almost no salon manages properly, because counting them is nobody’s job. Stock is checked when something runs out, sold without being deducted, and reordered late.',
-      'What a salon almost never has is a person whose job is to maintain a system. That is the constraint any software here has to respect. Verity holds clients, staff, services, stock and takings as connected records created in the ordinary course of the day, so the owner gets a picture without anyone having to keep one.',
+      'The work itself is visible: chairs are full on Saturday, the bridal booking goes well, the colour comes out right. What is not visible is everything around it. Which regular last visited in April. Which stylist sat idle for three hours on Tuesday. How many tubes of a shade were used, and how many were sold or wasted. What a stylist is really owed this month.',
+      'That information exists, but in pieces: an appointment diary or app, a billing machine or notebook, a stock register that is updated when someone remembers, and a lot of memory. The owner is usually also working the floor, so the system that connects the pieces is you, between clients.',
+      'The result is not a crisis. It is a slow leak across lapsed clients, unused hours, wasted product and small discounts, and it only shows up when the month’s takings feel lower than they should.',
     ],
+    stack: ['Appointment diary or app', 'Billing machine or notebook', 'WhatsApp groups', 'Excel stock sheet', 'Stylists’ memory'],
+    stackNote: 'Each of these works for its own job. None of them talk to each other, which is the problem.',
   },
 
-  terminology: [
-    ['Clients, regulars, walk-ins', 'Relationships'],
-    ['Services, treatments, packages', 'Work'],
-    ['Stylists, therapists, assistants', 'People'],
-    ['Colour, consumables, retail products', 'Inventory'],
-    ['Chairs, rooms, shifts', 'Workforce'],
-    ['Product suppliers, brand distributors', 'Suppliers'],
-    ['Branches, floors, stations', 'Locations'],
-  ],
-
-  challengesHeading: 'Everything that leaks, leaks quietly.',
-  challengesLede:
-    'A salon rarely has a crisis. It has a slow drift in retention, utilisation and stock that nobody measures.',
-  challenges: [
+  painsHeading: 'Where a salon actually loses money.',
+  painsLede:
+    'These are the situations salon owners describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Repeat custom is not measured',
-      detail:
-        'The business knows its regulars by face and does not know when one stops coming. A client lost in March is noticed, if at all, in September.',
-      outcome:
-        'Visit history sits on the client record, so clients whose interval has lapsed become a list rather than a gradual absence.',
+      area: 'Clients',
+      title: 'Regulars drift away and nobody notices',
+      scene:
+        'A client who came every five weeks for two years has not been in since June. The stylist assumes she is travelling. The front desk does not know she exists as a pattern. She is now going to a salon near her office.',
+      cost:
+        'Example arithmetic: 100 regulars who spend ₹2,400 a visit and come 8 times a year are worth about ₹19 lakh a year. Losing even a quarter quietly is ₹4.8 lakh, and you never see the line item.',
+      fix:
+        'Every visit is recorded against the client, so Verity learns each person’s usual gap. When someone passes it, they appear on a list with their stylist, last service and spend, and a follow-up task goes to the stylist who knows them.',
+      screen: 'lapsed',
     },
     {
-      problem: 'Staff time is booked, not analysed',
-      detail:
-        'Utilisation, no-shows and idle hours are absorbed as part of the day rather than recorded as a number.',
-      outcome:
-        'Services are work recorded against a stylist and a period, so utilisation is comparable across staff and across weeks.',
+      area: 'Clients',
+      title: 'New clients come once and never return',
+      scene:
+        'Walk-ins and offer-led first visits fill the diary. After the discount visit, most never book again, and the salon never finds out why or who they were.',
+      cost:
+        'You paid to acquire them (offer, ad or discount) and earned nothing from the second visit onward. Published benchmarks suggest only about half of new clients return for a second visit.',
+      fix:
+        'First-time clients are tagged as new. Verity lists those who have not returned within your window, shows what they had done, and assigns a follow-up to the stylist who served them, so a second visit is chased while it is still likely.',
+      screen: 'lapsed',
     },
     {
-      problem: 'Retail stock is a side business nobody runs',
-      detail:
-        'Products sell without being deducted, are counted only when something runs out, and are reordered too late to matter.',
-      outcome:
-        'Retail and consumables are stock with levels and reorder points, deducted as they are sold or used.',
+      area: 'Clients',
+      title: 'What a stylist knows about a client lives only in that stylist’s head',
+      scene:
+        'The colour formula, the sensitivity to a product, the way she likes her fringe cut. When the usual stylist is on leave, the next one starts from zero and the client notices.',
+      cost:
+        'Redo work, an unhappy client, and a real safety risk when an allergy or past reaction is not known to the person holding the brush.',
+      fix:
+        'Formulas, patch-test results, allergies, preferences and photos sit on the client record, visible to whoever takes the appointment, with permission rules on who can edit.',
+      screen: 'client',
     },
     {
-      problem: 'Client preferences live in a stylist’s head',
-      detail:
-        'The colour formula, the sensitivity, the way they like it finished — all known by one person, and lost when that person is off or leaves.',
-      outcome:
-        'Preferences and service history are on the client record, so any stylist picking up the appointment has the context.',
+      area: 'Staff',
+      title: 'When a stylist leaves, the clients leave with them',
+      scene:
+        'The client list is in her phone, the formulas are in her notebook, and the relationship was hers. She joins the salon down the road and half her regulars follow within a month.',
+      cost:
+        'Staff turnover in Indian salons is commonly reported as very high, and each exit can take a chunk of revenue with it.',
+      fix:
+        'The client relationship is recorded in the salon’s system, not on a personal phone: full history, formulas and spend belong to the business. Clients can be reassigned in one step and the handover list is ready the day someone resigns.',
+      screen: 'client',
     },
     {
-      problem: 'The owner is the system',
-      detail:
-        'Everything operational depends on one person noticing things — stock, bookings, staff, follow-ups — and that person is usually also working the floor.',
-      outcome:
-        'Records created in the ordinary course of the day produce the picture, so it does not depend on the owner’s attention.',
+      area: 'Chairs and time',
+      title: 'Empty hours that nobody can see',
+      scene:
+        'Two stylists are fully booked on Saturday while two others sit at 40 percent. Tuesday afternoons are quiet every week and you are paying full wages for them anyway.',
+      cost:
+        'An unfilled staffed hour is gone for good. Because it is never written down as a number, it is never managed.',
+      fix:
+        'Services are recorded against each stylist and shift, so utilisation per stylist, day and hour is a live number. The pattern shows which slots to fill with offers, and which shifts to trim or move.',
+      screen: 'owner',
     },
     {
-      problem: 'A second branch doubles the confusion',
-      detail:
-        'Two locations with two diaries and two stock cupboards mean no comparable numbers and no shared client history.',
-      outcome:
-        'Branches are locations rolling into the business, so clients, stock and performance are the same records across both.',
-    },
-  ],
-
-  modulesLede:
-    'One system, sized for a business without an administrator. These are the parts a salon works with.',
-  modules: [
-    {
-      id: 'relationships',
-      title: 'Clients and their history',
-      line:
-        'Each client is a record with their visit history, services taken, stylist preference, formulas, sensitivities and spend.',
-      why:
-        'Repeat custom is the whole business, and it is the thing least likely to be written down anywhere the owner can query.',
-      example:
-        'A client who came every five weeks for two years and has not been in since June is on a list, with the stylist who usually sees them.',
+      area: 'Chairs and time',
+      title: 'No-shows and last-minute cancellations',
+      scene:
+        'The 4 pm bridal trial does not turn up. The 6 pm client cancels at 5:45. The same few people do it again and again, but each time it is treated as a one-off.',
+      cost:
+        'A blocked chair, a stylist on the clock and no revenue. Vendor surveys put the no-show rate for salons without reminders near one in five appointments.',
+      fix:
+        'No-shows and late cancellations are recorded on the client, so repeat offenders are visible. Verity creates a reminder task for the front desk the day before, and you can set a rule such as a confirmation call for anyone with two earlier no-shows.',
+      screen: 'owner',
     },
     {
-      id: 'work',
-      title: 'Services and treatments',
-      line:
-        'Each service is work with a client, a stylist, a duration and a value, recorded as it is delivered.',
-      why:
-        'The service record is what connects the client, the staff member, the time and the money. Without it, none of those can be analysed.',
-      example:
-        'Thirty-eight services today, by stylist and by type, is the same data that produces both utilisation and client history.',
+      area: 'Stock',
+      title: 'Colour used by guesswork, wasted by habit',
+      scene:
+        'Stylists mix extra “just in case”, the bowl is thrown away, and nobody weighs what a service really used. Tubes vanish faster than services delivered would explain.',
+      cost:
+        'Colour and treatment products are one of the biggest costs after wages. Industry waste reports show large amounts of unused colour being discarded; overuse quietly raises the cost of every service.',
+      fix:
+        'Each service records the products used. Verity compares usage per stylist and per service type with what was sold, so overuse shows up as a number and you can set a standard quantity per service.',
+      screen: 'stock',
+      source: {
+        name: 'Green Circle Salons, Circle of Impact report, 2023 (via Circular Online)',
+        url: 'https://www.circularonline.co.uk/news/impact-report-salons-generate-397kg-of-waste-per-minute/',
+      },
     },
     {
-      id: 'people',
-      title: 'Stylists, therapists and assistants',
-      line:
-        'Staff are modelled once, and every service, sale and client interaction shows who delivered it.',
-      why:
-        'Salon performance varies enormously by individual, and rewarding or supporting people fairly requires knowing what each actually did.',
-      example:
-        'Services delivered, retail sold and rebooking rate by stylist, from the records created during the day.',
+      area: 'Stock',
+      title: 'The shade you need on Saturday is out of stock on Friday',
+      scene:
+        'The stock register is checked when something runs out. The supplier delivers Thursday, but the order went in Wednesday night because nobody noticed earlier.',
+      cost:
+        'A client turned away or a service done with a substitute. Lost revenue and a lost relationship in one afternoon.',
+      fix:
+        'Stock has a reorder point per item. Verity checks the next week’s bookings against what is on the shelf and flags shortages while there is still time for the supplier to deliver.',
+      screen: 'stock',
     },
     {
-      id: 'workforce',
-      title: 'Shifts, chairs and utilisation',
-      line:
-        'Assignment, attendance and availability stay connected to the services they covered.',
-      why:
-        'An unfilled staffed hour is the salon’s most common loss and its least visible one.',
-      example:
-        'Two stylists at forty percent while two are fully booked is a scheduling decision waiting to be made.',
+      area: 'Stock',
+      title: 'Retail sells, but nobody knows the margin',
+      scene:
+        'Shampoo, serums and styling products leave the shelf at the till. Some are billed, some are gifted, some are “borrowed”. The count never matches.',
+      cost:
+        'Retail is one of the highest-margin lines in a salon, and it is the one with the least tracking. Shrinkage hides inside it.',
+      fix:
+        'Retail sales are recorded against the client and the stylist, and deducted from stock as they happen. A monthly count shows exactly which items do not match and by how much.',
+      screen: 'stock',
     },
     {
-      id: 'inventory',
-      title: 'Colour, consumables and retail',
-      line:
-        'Stock is held with supplier, cost and reorder point, deducted as it is used in services or sold to clients.',
-      why:
-        'Consumables determine whether the weekend’s bookings can be delivered, and retail is margin that is currently leaking.',
-      example:
-        'Two colour shades short against Saturday’s bookings, flagged while Thursday’s delivery can still cover it.',
+      area: 'Staff',
+      title: 'Commission is calculated by hand, and argued about',
+      scene:
+        'At month end, someone adds up each stylist’s services and retail from the book, applies different slabs, and gets it wrong for at least one person. Trust takes a knock.',
+      cost:
+        'Hours of owner or accountant time every month, plus the cost of a good stylist who feels short-changed and starts looking elsewhere.',
+      fix:
+        'Because every service and sale is recorded against the stylist who delivered it, Verity builds a monthly commission statement from your own slabs. The stylist can see the same breakdown, so there is nothing to dispute.',
+      screen: 'staff',
     },
     {
-      id: 'suppliers',
-      title: 'Product suppliers and brands',
-      line:
-        'Suppliers are relationships with their orders, prices, delivery history and outstanding balances.',
-      why:
-        'Salon purchasing is small, frequent and unexamined, and price movement passes through unnoticed.',
-      example:
-        'The distributor’s prices on a core line have moved twice this year, visible from the purchase records.',
+      area: 'Money',
+      title: 'Discounts and packages leak margin at the counter',
+      scene:
+        'A regular gets “a little off”. A manager approves a free service verbally. Prepaid packages are redeemed from a paper card, and nobody knows how many sessions are still owed.',
+      cost:
+        'Small discretionary decisions are where a thin-margin business loses its margin. Unused package balances are also a liability sitting on your books.',
+      fix:
+        'Discounts above a limit need a one-tap approval with a reason. Package sessions are deducted on every redemption, and Verity lists balances about to expire so they can be used rather than lost or argued about.',
+      screen: 'packages',
     },
     {
-      id: 'intelligence',
-      title: 'Reports from the day itself',
-      line:
-        'Takings, utilisation, retention, retail attachment, stock consumption and staff performance come from the service records.',
-      why:
-        'A salon owner usually knows the day’s takings and nothing else, because everything else would need someone to compile it.',
-      example:
-        'Rebooking rate by stylist, current, without anyone running a report.',
+      area: 'Money',
+      title: 'Takings do not reconcile with services delivered',
+      scene:
+        'At closing, cash, card and UPI are counted against the bill book, and the numbers are off by a few hundred rupees. Nobody can say whether it is a missed bill, a free service or an error.',
+      cost:
+        'Small daily gaps compound. More importantly, the owner cannot trust the numbers they are looking at.',
+      fix:
+        'Every service is a record with a value and a payment mode. Verity compares the day’s services with the day’s payments by mode, and flags a mismatch with the exact visit that does not tie.',
+      screen: 'owner',
     },
     {
-      id: 'ai',
-      title: 'Ask the salon a question',
-      line:
-        'Verity AI answers from your own client, service, staff and stock records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The owner’s real questions are asked at the end of a long day and need an answer rather than a report to build.',
-      example:
-        '"Which regulars have not been in for ninety days?" returns a hundred and twelve, and one instruction assigns follow-ups to the stylists who usually see them.',
+      area: 'Owner',
+      title: 'You are the system',
+      scene:
+        'You remember which stock is low, which stylist is struggling, which client is overdue. You are also on the floor. When you are on leave, things slide.',
+      cost:
+        'The business cannot grow past what one person can hold in their head, and the owner can never fully step away.',
+      fix:
+        'Each morning Verity shows a short list of what needs a decision, each item with an owner. The routine moves from your memory to the system, and the manager can run it on days you are not there.',
+      screen: 'owner',
     },
     {
-      id: 'communication',
-      title: 'Notes that stay with the client',
-      line:
-        'Notes, notifications and activity attach to the client or service they concern.',
-      why:
-        'Salon context is passed verbally and lost the moment the stylist who holds it is unavailable.',
-      example:
-        'A note about a client’s reaction to a product is on their record, where the next stylist will see it.',
-    },
-    {
-      id: 'workflows',
-      title: 'Discounts, packages and write-offs',
-      line:
-        'Discounts beyond a threshold, package redemptions and stock write-offs move through defined steps with a recorded decision.',
-      why:
-        'Small discretionary decisions made at the counter are where a thin-margin business loses its margin.',
-      example:
-        'A discount above the manager’s threshold is an approval with a reason rather than a decision nobody sees.',
-    },
-    {
-      id: 'locations',
-      title: 'Branches and stations',
-      line:
-        'Locations roll into the business, with stock, permissions and reporting following the same structure.',
-      why:
-        'A second branch is where salon record-keeping usually collapses, because nothing is comparable.',
-      example:
-        'Takings, utilisation and retention by branch, from the same records rather than two diaries.',
-    },
-    {
-      id: 'records',
-      title: 'Service history and formulas',
-      line:
-        'Service details, formulas and product used attach to the client record with the same permissions as everything else.',
-      why:
-        'The formula is the salon’s intellectual property about that client, and it currently lives on a card or in a memory.',
-      example:
-        'A client returning after eight months has their last formula on record, available to whoever takes the appointment.',
+      area: 'Owner',
+      title: 'A second branch doubles the confusion',
+      scene:
+        'Two diaries, two stock cupboards, two sets of takings sheets sent over WhatsApp each night. A client who visits both is two different people in your records.',
+      cost:
+        'No fair comparison between branches, stock sitting idle in one while the other runs out, and weeks of delay before a problem is visible.',
+      fix:
+        'Branches are locations in one system. A client is one person across both. Takings, utilisation and retention are comparable side by side, and stock can be moved between branches against a recorded transfer.',
+      screen: 'owner',
     },
   ],
 
-  workflowsHeading: 'The day, recorded as it is worked.',
-  workflowsLede:
-    'None of these ask anyone to do extra data entry. They are the records the day already produces.',
-  workflows: [
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
     {
-      name: 'Client visit',
-      steps: [
-        'Client identified or created at arrival',
-        'Service recorded against the client and the stylist',
-        'Products used deducted from consumable stock',
-        'Retail sale recorded and deducted from retail stock',
-        'Payment recorded and the visit closed',
-        'Visit joins the client history and updates their interval',
-      ],
-      note:
-        'One sequence produces the client record, the utilisation number, the stock movement and the day’s takings.',
+      figure: '52%',
+      text: 'of hair salon clients in Australia rebook within 24 hours of a visit. For beauty salons it is 43%. The rest depend on the client remembering to book.',
+      source: { name: 'Kitomba benchmark', year: 'Q4 2020 data', url: 'https://www.kitomba.com/blog/industry-insights-rebooking-rates-for-the-hair-and-beauty-industry-and-how-to-improve-yours/' },
     },
     {
-      name: 'Lapsed client follow-up',
-      steps: [
-        'Clients past their usual visit interval identified',
-        'Grouped by the stylist who usually sees them',
-        'Follow-up assigned with the client’s history attached',
-        'Outcome recorded — rebooked, declined or unreachable',
-        'Interval reset once they return',
-      ],
-      note:
-        'This is the single highest-value list a salon can work, and almost none can produce it today.',
+      figure: '~1 in 2',
+      text: 'new spa and salon clients come back for a second visit, according to one retention benchmark.',
+      source: { name: 'JeriCommerce retention statistics', url: 'https://blog.jericommerce.com/resources/spas-salons-medspas-retention-statistics' },
     },
     {
-      name: 'Consumable replenishment',
-      steps: [
-        'Stock falls below reorder point through recorded usage',
-        'Requirement checked against the coming week’s bookings',
-        'Order raised against the supplier',
-        'Delivery received and stock updated',
-      ],
-      note:
-        'Reordering follows usage rather than following someone noticing an empty tube.',
+      figure: '50 to 100%',
+      text: 'yearly staff turnover reported for the Indian salon industry, with clients often following a stylist who leaves.',
+      source: { name: 'Entrepreneur India', url: 'https://india.entrepreneur.com/lifestyle/meet-these-two-makeover-masters-of-beauty-and-wellness/294262' },
     },
     {
-      name: 'Retail sale and stock',
-      steps: [
-        'Product sold alongside a service and recorded against the client',
-        'Stock deducted as the product leaves the shelf',
-        'Attachment rate recorded against the stylist',
-        'Reorder raised when the line falls below its point',
-      ],
-      note:
-        'Retail stops being an untracked side business and becomes a measurable margin line.',
-    },
-    {
-      name: 'Roster and utilisation review',
-      steps: [
-        'Staffed hours compared with services delivered',
-        'Utilisation compared across stylists and days',
-        'Gaps identified against demand patterns',
-        'Roster adjusted for the coming period',
-      ],
-      note:
-        'Scheduling becomes a decision informed by the same weekday last month rather than by habit.',
-    },
-    {
-      name: 'Package sale and redemption',
-      steps: [
-        'Package sold and recorded against the client with its balance',
-        'Redemptions deducted as services are delivered',
-        'Expiry and unused balance visible on the record',
-        'Follow-up assigned where a package is going unused',
-      ],
-      note:
-        'Prepaid packages become a tracked liability rather than an argument at the counter.',
+      figure: '5%',
+      text: 'GST on salon and beauty services from 22 September 2025, without input tax credit. It was 18% with credit before, so cost tracking now matters more.',
+      source: { name: 'Business Today, citing CBIC', year: '2025', url: 'https://www.businesstoday.in/amp/india/story/gst-rate-cut-salon-visits-gyms-yoga-classes-to-get-cheaper-from-sept-22-says-cbic-494193-2025-09-16' },
     },
   ],
+  factsNote:
+    'Several benchmark figures come from software vendors and from other countries, and one is undated. They show the scale of the problem, not what your salon will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each built for one job. Names, columns and terms are set up in your salon’s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Salon / Today',
+      meta: 'Branch: Indiranagar',
+      heading: 'The owner’s morning view',
+      caption:
+        'Takings, chair use, lapsed regulars and low stock on one screen, with the items that need a decision listed below. This replaces the daily WhatsApp summary and the mental checklist.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Takings today', value: '₹64,200', note: '38 services' },
+            { label: 'Chair use', value: '71%', note: 'of staffed hours' },
+            { label: 'Lapsed regulars', value: '112', note: 'past usual gap' },
+            { label: 'Stock low', value: '6', note: 'lines below reorder' },
+          ],
+        },
+        { type: 'title', text: 'Chair use by stylist, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Meera', value: 92, display: '92%' },
+            { label: 'Rohit', value: 88, display: '88%' },
+            { label: 'Anita', value: 41, display: '41%' },
+            { label: 'Kabir', value: 38, display: '38%' },
+          ],
+        },
+        { type: 'alert', text: 'Cash and UPI do not tie to services by ₹420. 2 visits unmatched.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Lapsed regulars assigned', meta: 'Follow-ups sent to the usual stylists', tag: ['Open', 'flag', 'Assigned', 'ok'] },
+            { name: 'Weekend colour shortage', meta: 'Two shades short, supplier delivers Thursday', tag: ['Order', 'flag', 'Ordered', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'client',
+      title: 'Client',
+      meta: 'Record',
+      heading: 'One record for every client',
+      caption:
+        'Everything a stylist needs before the client sits down: last formula, sensitivities, preferred stylist, package balance and every visit. Owned by the salon, not by one stylist.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Priya Nair',
+          sub: 'Regular since March 2023. Usual stylist: Meera',
+          fields: [
+            ['Usual gap', 'Every 5 weeks'],
+            ['Last visit', '14 June'],
+            ['Spend, 12 months', '₹31,400'],
+            ['Allergy', ['Ammonia sensitive', 'flag']],
+            ['Package', '3 of 6 sessions left'],
+            ['Status', ['Overdue', 'late', 'Booked 22 Oct', 'ok']],
+          ],
+          timeline: [
+            ['14 Jun', 'Root touch-up, 6.3 + 7.1 at 1:1, 35 min'],
+            ['10 May', 'Haircut and blow dry'],
+            ['2 Apr', 'Global colour, patch test clear'],
+            ['Note', 'Prefers a short fringe. Dislikes strong fragrance.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'lapsed',
+      title: 'Win-back list',
+      meta: 'Clients past their usual gap',
+      heading: 'The list that brings clients back',
+      caption:
+        'Clients ordered by how much they were worth and how overdue they are, grouped by the stylist who knows them. A follow-up call or message is a task on the stylist’s own screen, and the outcome is recorded.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Client', 'Last visit', 'Usual gap', 'Stylist', 'Status'],
+          rows: [
+            ['Priya Nair', '14 Jun', '5 wks', 'Meera', ['Call today', 'late', 'Booked', 'ok']],
+            ['Sana Khan', '2 Jul', '6 wks', 'Meera', ['Call today', 'flag', 'Booked', 'ok']],
+            ['Ritu Menon', '20 Jun', '4 wks', 'Rohit', ['Call today', 'flag', 'Declined', 'muted']],
+            ['Neha Rao', '9 Jul', '7 wks', 'Anita', ['Message', 'flag']],
+            ['Divya Shah', '27 Jun', '5 wks', 'Kabir', ['Message', 'flag']],
+          ],
+        },
+        { type: 'alert', text: '112 clients are past their usual gap. 31 have spent over ₹20,000 in the last year.', action: 'Assign all' },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock',
+      meta: 'Colour, treatments and retail',
+      heading: 'Colour and retail stock, against next week’s bookings',
+      caption:
+        'What is on the shelf, how fast it is used, what the coming bookings need, and what to order. Usage comes from the services recorded, so nobody counts tubes by eye.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'In stock', 'Used / week', 'Needed Sat', 'Status'],
+          rows: [
+            ['Colour 6.3 (60 ml)', '2', '9', '4', ['Short', 'late', 'Ordered', 'ok']],
+            ['Developer 20 vol', '5', '11', '4', ['Reorder', 'flag']],
+            ['Keratin mask 500 ml', '6', '3', '1', ['OK', 'ok']],
+            ['Serum, retail', '9', '6', '2', ['Reorder soon', 'flag']],
+            ['Shampoo 250 ml, retail', '14', '8', '3', ['OK', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Retail count mismatch: 9 items sold but not deducted this month, ₹6,300 at cost.', action: 'Check count' },
+      ],
+    },
+    {
+      id: 'staff',
+      title: 'Stylists',
+      meta: 'This month',
+      heading: 'A scorecard everyone can see the same way',
+      caption:
+        'Services, rebooking, retail sold and commission for each stylist, calculated from the records of the month. The stylist sees their own, so month end stops being an argument.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Stylist', 'Chair use', 'Rebook', 'Retail', 'Commission'],
+          rows: [
+            ['Meera', '92%', '68%', '₹14,200', '₹38,400'],
+            ['Rohit', '88%', '61%', '₹9,800', '₹33,100'],
+            ['Anita', '41%', '35%', '₹2,100', '₹14,900'],
+            ['Kabir', '38%', '29%', '₹1,600', '₹12,300'],
+          ],
+        },
+        { type: 'title', text: 'Rebooking rate' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Meera', value: 68, display: '68%' },
+            { label: 'Rohit', value: 61, display: '61%' },
+            { label: 'Anita', value: 35, display: '35%', tone: 'muted' },
+            { label: 'Kabir', value: 29, display: '29%', tone: 'muted' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'packages',
+      title: 'Packages and approvals',
+      meta: 'Needs a decision',
+      heading: 'Discounts and packages with a paper trail',
+      caption:
+        'Anything above the limit you set waits for a one-tap approval with a reason attached. Package balances show what is owed to clients and what is about to expire.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Waiting for approval',
+              cards: [
+                { title: '25% off bridal package', meta: 'Asked by front desk. Reason: referral', tag: ['Approve?', 'flag', 'Approved', 'ok'] },
+                { title: 'Free keratin add-on', meta: 'Asked by Anita. Reason: service redo', tag: ['Approve?', 'flag', 'Approved', 'ok'] },
+              ],
+            },
+            {
+              name: 'Packages ending soon',
+              cards: [
+                { title: 'Sana Khan, facial x6', meta: '2 sessions left, ends 30 Oct', tag: ['Call', 'late'] },
+                { title: 'Ritu Menon, hair spa x4', meta: '1 session left, ends 12 Nov', tag: ['Call', 'flag'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+
+  dayHeading: 'The same Tuesday, before and after.',
+  dayLede: 'What changes is not the work. It is that the work leaves a record, and the record does the chasing.',
+  day: [
+    {
+      time: '9:30',
+      before: 'You open the shop and check the diary. You remember a shade is low but not which one.',
+      after: 'You open the Today screen. Six items need a decision. The low shade is already on an order.',
+    },
+    {
+      time: '11:00',
+      before: 'A regular books after four months. You find out she was going elsewhere.',
+      after: 'She was flagged at week six, Meera called, and she rebooked before she drifted.',
+    },
+    {
+      time: '1:00',
+      before: 'A stylist uses an unusual amount of colour. Nobody knows until the stock is counted.',
+      after: 'Colour used per service is recorded. The overuse shows against that stylist that afternoon.',
+    },
+    {
+      time: '4:30',
+      before: 'A client wants a discount. The front desk calls you on the floor.',
+      after: 'It lands as a one-tap approval on your phone with the reason attached.',
+    },
+    {
+      time: '8:30',
+      before: 'You count cash and UPI against the bill book. It is off by ₹400.',
+      after: 'Verity shows the two visits that do not tie. You fix it in a minute.',
+    },
+    {
+      time: 'Month end',
+      before: 'Commission is added up by hand and one stylist disputes it.',
+      after: 'The statement is ready on the 1st, and every stylist sees the same breakdown.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your salon actually runs, build Verity around it, move your data in, then stay on to make sure it keeps working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you and your manager for a day. Walk the floor, see how a client moves from arrival to payment, and map how stock, staff and bills are tracked today.',
+        you: 'Two to three hours of your time and your manager’s. Access to your current diary, bill book and stock sheet.',
+        get: 'A written map of your salon: services and price list, stylists and shifts, the stock list and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your services, stylists, commission slabs, stock items, reorder points, approval limits and branches, and build the screens above around your terms.',
+        you: 'Check the setup with your manager. Tell us where we got a rule wrong.',
+        get: 'A working Verity with your salon’s real services, staff and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your client list, visit history, formulas, packages and stock from the sheets and apps you use. Train reception and stylists on the floor, not in a classroom.',
+        you: 'Your client list and any history you have, in whatever form it exists. One hour with each role.',
+        get: 'Your clients, history and stock inside Verity, and a team that has used it on real bills.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first weeks with you, tune the lists and rules, and handle changes as the salon changes.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps matching how the salon runs, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your services and price list',
+      'Your client list, even if it is a phone book or diary',
+      'Your stock list with supplier names and costs',
+      'Your commission and incentive rules, as you apply them today',
+      'Your stylists’ shifts and weekly offs',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your manager needs a few more.',
+    after: 'Nobody is hired to run Verity. Visits are recorded as part of the bill you already make, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask at the end of the day, not at the end of the year.',
+    heading: 'Ask your salon a question. Get an answer, not a report to build.',
     lede:
-      'Verity AI reads the same client, service, staff and stock records the salon creates as it works. It answers from your own salon, only shows what the person asking can see, and can turn an answer into follow-ups assigned to the right stylist.',
-    panelMeta: 'Grounded in your salon records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which regular clients have not visited in ninety days?',
-      'What was chair utilisation by stylist this week?',
-      'Which stylists have the highest rebooking rate?',
-      'Which retail lines are below reorder point?',
-      'Which consumables fall short against this weekend’s bookings?',
-      'How did this month’s takings compare with the same month last year?',
-      'Which clients have unused package balances?',
-      'What is the retail attachment rate by stylist?',
-      'Summarise the salon’s performance this month.',
+      'Verity AI reads your own client, service, staff and stock records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which regulars have not visited in 90 days?',
+        a: '112 clients are past 90 days. 31 of them spent over ₹20,000 last year.',
+        rows: [['Meera’s clients', '41'], ['Rohit’s clients', '33'], ['Anita’s clients', '22'], ['Kabir’s clients', '16']],
+        action: 'Create follow-up tasks for each stylist',
+      },
+      {
+        q: 'Which stylist has the best rebooking rate this month?',
+        a: 'Meera, at 68%, followed by Rohit at 61%. Anita and Kabir are below 40%.',
+        rows: [['Meera', '68%'], ['Rohit', '61%'], ['Anita', '35%'], ['Kabir', '29%']],
+      },
+      {
+        q: 'Will we have enough colour for this weekend’s bookings?',
+        a: 'Two shades fall short: 6.3 by 2 tubes and 7.1 by 1. The supplier delivers Thursday, which covers Saturday.',
+        action: 'Raise the order today',
+      },
     ],
   },
 
   automationHeading: 'The follow-ups nobody has time to make.',
-  automationLede:
-    'These run from the salon’s own records at the point the condition is met.',
+  automationLede: 'Set once, then they run from your records. Staff still make the calls and messages, Verity makes sure the right person knows to.',
   automations: [
     {
-      trigger: 'A client passes their usual visit interval',
-      steps: [
-        'Client flagged as lapsed with their history attached',
-        'Follow-up assigned to the stylist who usually sees them',
-        'Outcome recorded against the client',
-      ],
+      when: 'A client passes their usual gap',
+      then: ['Added to the win-back list with history', 'Task assigned to their usual stylist', 'Outcome recorded: booked, declined or unreachable'],
     },
     {
-      trigger: 'A service is completed',
-      steps: [
-        'Consumables used deducted from stock',
-        'Service recorded against client and stylist',
-        'Client history and visit interval updated',
-      ],
+      when: 'A new client has not returned in 30 days',
+      then: ['Flagged with what they had done', 'Task to the stylist who served them', 'Interval starts once they return'],
     },
     {
-      trigger: 'Stock falls below its reorder point',
-      steps: [
-        'Requirement checked against upcoming bookings',
-        'Order raised against the supplier',
-        'Delivery checked and stock updated on receipt',
-      ],
+      when: 'A service is completed',
+      then: ['Products used deducted from stock', 'Visit added to the client’s history', 'Commission credited to the stylist'],
     },
     {
-      trigger: 'A discount exceeds the threshold',
-      steps: [
-        'Transaction held at the approval step',
-        'Routed to the manager with the reason attached',
-        'Decision recorded against the service',
-      ],
+      when: 'Stock falls below its reorder point',
+      then: ['Checked against next week’s bookings', 'Order drafted to the supplier', 'Stock updated when delivery is received'],
     },
     {
-      trigger: 'A package goes unused past a defined period',
-      steps: [
-        'Balance flagged against the client',
-        'Follow-up assigned to rebook',
-        'Expiry recorded if it lapses',
-      ],
+      when: 'A discount is above your limit',
+      then: ['Held for approval', 'Routed to you with the reason', 'Decision recorded against the bill'],
     },
     {
-      trigger: 'A stylist’s utilisation falls below the threshold',
-      steps: [
-        'Gap flagged against the roster period',
-        'Roster review task created for the manager',
-        'Adjustment recorded for the next period',
-      ],
+      when: 'A package has 30 days left',
+      then: ['Balance flagged on the client', 'Task to rebook the remaining sessions', 'Expiry recorded if unused'],
     },
   ],
 
-  intelligenceHeading: 'What the owner can see without compiling anything.',
-  intelligenceLede:
-    'All of it comes from the records the day already produces.',
-  intelligence: [
-    {
-      area: 'Revenue',
-      points: [
-        'Takings by day, week and branch',
-        'Service revenue against retail revenue',
-        'Average spend per client visit',
-        'Comparison against the same period last year',
-      ],
-    },
-    {
-      area: 'Clients',
-      points: [
-        'Visit frequency and interval per client',
-        'Clients lapsed past their usual interval',
-        'New clients and their return rate',
-        'Highest-value clients by spend',
-      ],
-    },
-    {
-      area: 'Staff',
-      points: [
-        'Utilisation against staffed hours',
-        'Services delivered by type and stylist',
-        'Rebooking rate per stylist',
-        'Retail attachment rate per stylist',
-      ],
-    },
-    {
-      area: 'Stock',
-      points: [
-        'Consumable usage against services delivered',
-        'Retail stock levels and movement',
-        'Lines below reorder point',
-        'Supplier price movement over time',
-      ],
-    },
-    {
-      area: 'Services',
-      points: [
-        'Volume and revenue by service type',
-        'Service duration against booked time',
-        'Discounting patterns by service',
-        'Package sales and redemption',
-      ],
-    },
-    {
-      area: 'Operations',
-      points: [
-        'No-shows and cancellations',
-        'Approvals awaiting a decision',
-        'Stock count mismatches',
-        'Branch comparison across the business',
-      ],
-    },
-  ],
-  intelligenceNote:
-    'None of this requires separate data entry. It comes from recording the visit, which the salon does anyway.',
+  rules: {
+    heading: 'The rules a salon has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your accountant is not rebuilding them from a bill book.',
+    items: [
+      {
+        name: 'GST on salon services and products',
+        what: 'Salon and beauty services moved to 5% without input tax credit from 22 September 2025. Products sold over the counter are taxed at their own goods rates.',
+        how: 'Services and product sales are separate lines on each visit, so the split your accountant needs is already clean at month end.',
+        source: { name: 'Business Today, citing CBIC', url: 'https://www.businesstoday.in/amp/india/story/gst-rate-cut-salon-visits-gyms-yoga-classes-to-get-cheaper-from-sept-22-says-cbic-494193-2025-09-16' },
+      },
+      {
+        name: 'Client data and consent',
+        what: 'Phone numbers, photos and health details about clients are personal data. India’s data protection rules were notified in November 2025, and most duties start to apply over the following 12 to 18 months.',
+        how: 'Client data sits in one permissioned place, with who viewed or changed it recorded, instead of in personal phones and photo galleries.',
+        source: { name: 'AZB Partners on the DPDP framework', url: 'https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/' },
+      },
+      {
+        name: 'Patch tests and allergy records',
+        what: 'Chemical services should be preceded by a patch test and a record of any reaction. If a reaction happens, you need to show what was done and what was used.',
+        how: 'Patch-test results, product batches used and any reaction are kept on the client record and visible to whoever treats them next.',
+      },
+      {
+        name: 'Staff records under state shop rules',
+        what: 'Most states require records of working hours, weekly offs and leave under their Shops and Establishments rules. Details differ by state, so check your own.',
+        how: 'Shifts, attendance and leave are recorded against each person, so the register exists without a separate notebook.',
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
 
-  rolesHeading: 'A small team still needs different views.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they actually need.',
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A stylist should not see everyone’s pay. Reception should not edit stock costs. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'Is the salon growing or drifting?',
-      focus: 'Takings against last year, client retention, utilisation, retail attachment, branch comparison.',
-    },
-    {
-      role: 'Salon manager',
-      question: 'What needs sorting this week?',
-      focus: 'Roster gaps, consumables short, lapsed clients to follow up, approvals pending.',
-    },
-    {
-      role: 'Stylist',
-      question: 'What do I need to know about this client?',
-      focus: 'Visit history, formulas and preferences, packages held, their usual interval.',
-    },
-    {
-      role: 'Reception',
-      question: 'Who is coming and what is outstanding?',
-      focus: 'Today’s bookings, clients due a rebook, package balances, payments outstanding.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What came in and what is owed?',
-      focus: 'Daily takings, supplier payables, discounts and write-offs, package liability.',
-    },
+    { role: 'Owner', question: 'Is the salon growing or drifting?', sees: 'Takings against last year, retention, chair use, retail attachment, and every branch side by side.' },
+    { role: 'Manager', question: 'What needs sorting this week?', sees: 'Roster gaps, stock short for the weekend, win-back list, approvals waiting.' },
+    { role: 'Stylist', question: 'What should I know about this client?', sees: 'History, formulas, allergies, package balance, and their own scorecard and commission.' },
+    { role: 'Reception', question: 'Who is coming and what is pending?', sees: 'Today’s schedule, clients due to rebook, package balances, payments pending.' },
+    { role: 'Accountant', question: 'What came in and what is owed?', sees: 'Daily takings by mode, supplier payables, discounts and write-offs, GST split.' },
   ],
 
-  useCasesHeading: 'What salons use Verity for',
-  useCases: [
-    {
-      name: 'Client retention',
-      body: 'Visit intervals held per client, so a regular who has stopped coming becomes a worked list rather than a gradual absence.',
-    },
-    {
-      name: 'Chair and staff utilisation',
-      body: 'Services recorded against staffed hours, so the unfilled time that quietly costs the most becomes a number.',
-    },
-    {
-      name: 'Consumable and colour stock',
-      body: 'Usage deducted as services are delivered, with reorder driven by the coming week’s bookings rather than by an empty shelf.',
-    },
-    {
-      name: 'Retail as a managed line',
-      body: 'Products deducted at sale with attachment rate by stylist, turning retail from an untracked sideline into measurable margin.',
-    },
-    {
-      name: 'Formulas and preferences',
-      body: 'Service history, formulas and sensitivities on the client record, available to whoever takes the appointment.',
-    },
-    {
-      name: 'Package tracking',
-      body: 'Prepaid packages with balances, redemptions and expiry on the client record instead of on a card.',
-    },
-    {
-      name: 'Discount control',
-      body: 'Discounts beyond a threshold as approvals with reasons, so margin decisions at the counter are visible.',
-    },
-    {
-      name: 'Multi-branch comparison',
-      body: 'Branches as locations with shared client records, so performance is comparable and a client is the same person at either site.',
-    },
-    {
-      name: 'Asking the salon questions',
-      body: 'Plain-language questions across clients, staff, stock and takings, with follow-ups assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your online booking app or diary, if you use one. We map it during setup.',
+      'Your billing machine or app. We record the visit and payment from it.',
+      'WhatsApp for talking to clients. Staff send the messages; Verity tells them who and when.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Take bookings from clients online.',
+      'Send messages to clients on its own.',
+      'File your returns or run your payroll.',
+      'Replace your accountant.',
+    ],
+    migration:
+      'We bring your client list, history and stock across from the spreadsheets, apps or notebooks you use now, in stages, so the salon keeps running while it happens.',
+  },
 
-  migration:
-    'The appointment book, the client cards, the stock cupboard list and whatever billing you use today are mapped during implementation. Client history and stock are brought across, and Verity is set up to fit the way the salon already runs its day.',
-
-  faqHeading: 'Questions salon owners ask',
+  faqHeading: 'Questions salon owners ask.',
   faqs: [
     [
-      'What can AI software do for a salon?',
-      'Verity AI answers questions from your own client, service, staff and stock records. You can ask which regulars have not visited in ninety days, what utilisation looked like by stylist this week, which retail lines are below reorder, or which clients have unused packages — and turn the answer into follow-ups assigned to the right stylist.',
+      'Will my stylists actually use it?',
+      'It only works if the visit is recorded, so we set it up so that recording takes seconds and sits where they already work. We train on the floor with real bills, not in a classroom, and stylists get something back: their own scorecard and commission, visible and unarguable.',
     ],
     [
-      'Can Verity track client visit history?',
-      'Yes. Each client is a record with their visits, services, stylist preference, formulas, sensitivities and spend, and their usual interval is derived from the history. That is what makes a lapsed regular a list entry rather than an eventual realisation.',
+      'Does Verity take client bookings?',
+      'No. If you use an online booking app or a diary, it keeps doing that job and we map it during setup. Verity records the visit and gives you the picture around it.',
     ],
     [
-      'Does it handle retail and colour stock?',
-      'Consumables and retail products are stock with supplier, cost and reorder point, deducted as they are used in services or sold to clients. Replenishment can be checked against the coming week’s bookings rather than against a visual check.',
+      'Can it send WhatsApp messages to my clients?',
+      'Not by itself. Verity builds the win-back list and assigns the follow-up to the right person, and your team sends the message or makes the call. The outcome is then recorded.',
     ],
     [
-      'Do we need someone to maintain the system?',
-      'No, and that is a deliberate design point. The records that produce the reporting are created by recording the visit — client, service, stylist, products, payment — which the salon does anyway. There is no separate data-entry job.',
+      'I only have 4 chairs. Is this too much for me?',
+      'A four-chair salon has the same leaks, with less spare time to notice them. We set up only what you need, and the 4-week process is the same.',
     ],
     [
-      'Can it show which stylists are performing?',
-      'Services delivered, utilisation against staffed hours, rebooking rate and retail attachment are all recorded per stylist, so performance can be discussed against numbers rather than impressions.',
+      'Can I see all my branches together?',
+      'Yes. Each branch is a location in one system. A client is the same person across branches, and takings, chair use, retention and stock can be compared side by side.',
     ],
     [
-      'Does Verity book client appointments?',
-      'Verity records services as work against clients and stylists and shows the day’s schedule and utilisation. It is not a client-facing booking tool. If you run one, it is mapped during implementation and continues to work alongside Verity.',
+      'Who can see my client data?',
+      'Only the people you allow. Access is set by role, so reception, stylists, managers and your accountant each see what they need, and every change is recorded with who made it and when.',
     ],
     [
-      'Does it work across two or three branches?',
-      'Yes. Branches are locations that roll into the business with shared client records, so a client is the same person at either site and takings, utilisation and retention are directly comparable.',
+      'Will it calculate commission the way I do?',
+      'It uses the slabs you give us, including retail incentives and different rates per stylist or service. We set these up in week 2 and check them against a past month before go-live.',
     ],
     [
-      'Is it suitable for a small salon with four chairs?',
-      'A four-chair salon has the same three leaks — lapsed clients, unfilled hours and untracked retail — and less capacity to notice them. That is exactly the case Verity is sized for.',
+      'How long before I see results?',
+      'The win-back list and stock shortage warnings need only your existing client and stock data, so they are the first things we aim to have working. Utilisation and rebooking trends become reliable after a few weeks of recorded visits.',
     ],
     [
-      'How long does it take to set up?',
-      'About four weeks: discovery and mapping of how the salon actually runs its day, configuration, migration of client history and stock, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of branches, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your salon runs.',
     ],
   ],
+
+  related: ['spas', 'gyms', 'fitness-studios', 'yoga-studios', 'beauty-stores', 'cosmetics-stores'],
 
   ctaHeading: 'Start with the regulars who stopped coming.',
   ctaLede:
-    'It is usually the fastest money in a salon, and almost no salon can produce the list today. Tell us how yours runs and we will show you.',
-
-  related: ['spas', 'gyms', 'fitness-studios', 'yoga-studios', 'beauty-stores', 'cosmetics-stores'],
+    'Tell us how your salon runs and we will show you the lapsed-client list, the stock shortages and the empty hours it would find, using your own numbers.',
 };

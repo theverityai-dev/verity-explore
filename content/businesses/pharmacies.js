@@ -1,554 +1,639 @@
 export default {
+  schema: 2,
   slug: 'pharmacies',
   status: 'published',
   plural: 'pharmacies',
   subject: 'pharmacy',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for pharmacies | Verity',
+    title: 'Pharmacy management software: expiry, H1 register, stock | Verity',
     description:
-      'Verity connects batch and expiry control, substitution, near-expiry returns, refill patterns, credit accounts and supplier schemes into one operational system.',
+      'The 14 problems that cost a pharmacy money and compliance risk, and the Verity screens that fix them: expiry losses, H1 register, refills, distributor prices, store stock.',
     keywords: [
-      'AI software for pharmacies',
-      'pharmacy management software',
-      'batch expiry and returns tracking',
-      'pharmacy inventory and refill software',
-      'chemist shop billing and credit software',
+      'pharmacy management software India',
+      'medical store expiry tracking',
+      'schedule H1 register software',
+      'chemist stock and batch tracking',
+      'multi-store pharmacy inventory',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for pharmacies',
-    headline: 'Thousands of batches, each with a date, and a return window that closes before it.',
+    headline: 'Expired stock, missing registers, lost refills. Verity catches them before they cost you.',
     lede:
-      'A pharmacy’s margin is decided by what it returns in time and what it stocks against actual demand. Verity tracks both at batch level, alongside the refill patterns nobody counts.',
-    note: 'Verity runs the shop. Prescription validity and dispensing remain your pharmacist’s responsibility.',
-    panel: {
-      title: 'Pharmacy',
-      meta: 'All counters · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sales', value: '₹18.4 L', note: '4,120 bills' },
-        { label: 'Expiring 90 days', value: '₹2.8 L', note: '640 units' },
-        { label: 'Returnable now', value: '₹1.9 L', note: 'inside supplier windows' },
-        { label: 'Credit outstanding', value: '₹4.6 L', note: '82 accounts' },
-      ],
-      rows: [
-        { name: '₹1.9 L returnable with windows closing in 30 days', meta: 'Four distributors', active: true },
-        { name: '38 chronic patients past their expected refill date', meta: 'Regular monthly buyers', active: true },
-        { name: 'Fast-moving items out of stock at two counters', meta: 'Substituted or lost', active: true },
-        { name: 'Scheme claim unfiled against a distributor', meta: '₹64,000 · window closes Friday', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own pharmacy in this shape.',
-    },
+      'A pharmacy carries thousands of products with batch numbers and expiry dates, sells under strict record-keeping rules, and competes with online prices. Almost all of that is tracked by memory and paper. Verity puts stock, batches, registers, patients and distributors in one place.',
+    oneLine:
+      'One system that knows every batch, every expiry date, every regulated sale and every regular patient, and tells you what to act on today.',
+    note: 'It works alongside your billing software. It does not replace the counter.',
+    screen: 'owner',
+    screenNote: 'stores, distributors and product list',
   },
 
-  overview: {
-    heading: 'A pharmacy sells thousands of items whose value expires on a date.',
+  today: {
+    heading: 'A pharmacy is a stock business with a legal register attached.',
     paragraphs: [
-      'The stock problem in a pharmacy is unlike other retail. Items are identified by batch, each batch carries an expiry date, and a batch that passes its date is a total loss. The only thing that makes carrying that breadth affordable is that most of it can be returned to the distributor within a window — and that window closes well before the expiry date. A pharmacy that discovers short-dated stock at expiry has already lost the money it could have recovered.',
-      'The second distinctive pressure is that much of the demand is chronic and therefore predictable. A patient on long-term medication buys the same items on roughly the same cycle. That makes them the most forecastable customers in retail and the least tracked: a chronic patient who has not returned is either well, gone elsewhere, or has stopped taking their medication, and the pharmacy knows none of the three because nobody counts refills.',
-      'The third is substitution. When an item is out of stock, the sale is either substituted or lost, and neither outcome leaves a record of the original demand. So the stocking decision that caused it never gets corrected.',
-      'The fourth is credit. Pharmacies extend credit to households and to institutions, and the exposure grows quietly against thin margins.',
-      'Verity holds the batch, its expiry and return eligibility, the refill pattern, the substitution and the credit position as one set of records.',
+      'The margin is in buying well and selling before the date on the strip. Every product has a batch and an expiry. A medicine that expires on the shelf is a direct loss, and one that runs out sends a regular patient to the next shop.',
+      'Alongside that sits the paperwork: prescriptions for certain schedules, a separate register for Schedule H1 drugs, a registered pharmacist on the premises, and an inspector who can ask for any of it. Most shops keep this in notebooks beside the counter.',
+      'On top of both, online pharmacies are competing on price, so the owner has less margin to waste and less time to notice leaks.',
     ],
+    stack: ['Billing software', 'Handwritten H1 register', 'Distributor bills in files', 'WhatsApp with distributors', 'Owner’s memory of expiries'],
+    stackNote: 'Each tracks one piece. Nothing tells you which batches expire next month or whether the register is complete.',
   },
 
-  terminology: [
-    ['Items, batches, expiry, schedules', 'Inventory'],
-    ['Bills, returns, substitutions', 'Orders'],
-    ['Patients, households, institutions', 'Relationships'],
-    ['Distributors, schemes, return windows', 'Suppliers'],
-    ['Pharmacists, counter staff', 'People'],
-    ['Credit limits, returns approval, write-offs', 'Workflows'],
-    ['Counters, stores, branches', 'Locations'],
+  painsHeading: 'Where a pharmacy loses money and takes risk.',
+  painsLede:
+    'These are situations chemists describe. For each: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Stock',
+      title: 'Medicines expire on the shelf',
+      scene:
+        'A slow-moving injection from a distributor scheme is bought in bulk. Nobody notices it is six weeks from expiry until a sweep of the shelf, or until it is too late to return.',
+      cost:
+        'A direct write-off of stock bought and paid for. One vendor puts expiry at 8 to 12 percent of inventory value for multi-store chains, which is a marketing figure, but the direction is real.',
+      fix:
+        'Every purchase records batch and expiry. Verity lists what expires in 30, 60 and 90 days by value, sorted by what can still be returned, discounted or moved to a busier store.',
+      screen: 'expiry',
+      source: { name: 'Commmerce, expiry loss in multi-store pharma (vendor)', url: 'https://commmerce.com/blog/multi-store-pharma-inventory-sync-cut-medicine-expiry-loss-60-percent-india/' },
+    },
+    {
+      area: 'Stock',
+      title: 'Fast movers run out while slow movers pile up',
+      scene:
+        'The best-selling paracetamol and the patient’s regular thyroid tablet are out on a Monday. A shelf of rarely asked products sits untouched.',
+      cost:
+        'A lost sale today, a patient who may switch shops, and cash locked in stock that does not sell.',
+      fix:
+        'Reorder points are set per product from actual sales. Verity flags items below their level and items with no movement in 90 days, so buying follows demand.',
+      screen: 'owner',
+    },
+    {
+      area: 'Stock',
+      title: 'Near-expiry returns and credit notes get forgotten',
+      scene:
+        'A distributor accepts returns within a window. The bundle is packed late, the credit note is promised and never chased, and the claim is quietly dropped.',
+      cost:
+        'Returns that should have been refunded become write-offs, and credit notes you are owed sit unclaimed.',
+      fix:
+        'A return is a record with the batch, the distributor, the date and the expected credit. Verity tracks it to the credit note and lists the ones overdue.',
+      screen: 'expiry',
+    },
+    {
+      area: 'Stock',
+      title: 'A recalled or flagged batch cannot be traced quickly',
+      scene:
+        'A batch is flagged as substandard. You have to work out whether you stocked it, how much remains, and who bought it.',
+      cost:
+        'Selling a flagged batch is a patient-safety risk and a regulatory one, and manual tracing is slow.',
+      fix:
+        'Because stock and sales are recorded by batch, one search shows whether the batch was bought, what is left on shelves and which sales it went into.',
+      screen: 'expiry',
+    },
+    {
+      area: 'Compliance',
+      title: 'The Schedule H1 register has gaps',
+      scene:
+        'The H1 register is a notebook. Entries are written at the end of the day from memory, with a missing prescriber name or an illegible patient name.',
+      cost:
+        'The rules require the supply to be recorded at the time of supply, with prescriber, patient, drug and quantity, kept for three years and open to inspection. An incomplete register is a compliance failure.',
+      fix:
+        'H1 drugs are flagged in stock. At sale, the entry cannot close without prescriber, patient and quantity, and the register is searchable and printable for an inspector.',
+      screen: 'register',
+      source: { name: 'Parliament of India document on Schedule H1', url: 'https://eparlib.nic.in/bitstream/123456789/647575/1/146840.pdf' },
+    },
+    {
+      area: 'Compliance',
+      title: 'Prescriptions are not captured for Schedule H and X sales',
+      scene:
+        'A regular asks for a Schedule H tablet without a prescription and the counter staff sell it to avoid an argument. Nobody can later show what was sold to whom.',
+      cost:
+        'Sales of prescription drugs without prescription are the very thing inspectors and complaints look for. Licence action is the worst case.',
+      fix:
+        'Regulated products need a prescription reference at sale. Verity records it, flags exceptions to the pharmacist-in-charge, and shows a monthly exceptions report.',
+      screen: 'register',
+    },
+    {
+      area: 'Compliance',
+      title: 'Licences, pharmacist registration and inspections live in a drawer',
+      scene:
+        'The drug licence, the pharmacist’s registration and the premises papers are in a folder. A renewal date is remembered, or not.',
+      cost:
+        'A lapse can mean penalty or closure, and an inspection with missing paperwork is a bad day.',
+      fix:
+        'Licences and registrations are records with expiry dates and owners. Verity reminds well in advance and keeps copies where inspectors can be shown them.',
+      screen: 'owner',
+    },
+    {
+      area: 'Patients',
+      title: 'Regular patients on monthly medicines stop coming and nobody notices',
+      scene:
+        'A patient who has bought blood pressure tablets every month since 2022 has not come for two months. The shop does not know.',
+      cost:
+        'A repeat patient is worth far more than a single sale. And a missed refill may be a health risk for them.',
+      fix:
+        'Chronic patient purchases are recorded against the patient. Verity predicts the next refill date and lists those overdue, with a follow-up task for the counter team.',
+      screen: 'refills',
+    },
+    {
+      area: 'Patients',
+      title: 'Credit accounts and home deliveries are tracked on paper',
+      scene:
+        'Regular customers buy on credit and the ledger is a notebook. Home deliveries are noted on a slip, and a delivery boy forgets one.',
+      cost:
+        'Unrecovered dues, disputes about what was delivered, and unhappy elderly customers.',
+      fix:
+        'Each credit customer has a balance and ageing. Each delivery is a task with a person, a time and a confirmation, and the balance updates as payments are recorded.',
+      screen: 'refills',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Distributor prices and schemes are impossible to compare',
+      scene:
+        'Three distributors quote different rates and schemes for the same molecule. The owner buys from whoever called last.',
+      cost:
+        'Margin is lost on every purchase made at the wrong rate, and no one can see which distributor is really cheapest after schemes.',
+      fix:
+        'Purchase rates and schemes are recorded per product and distributor. Verity shows the effective cost after scheme and ranks distributors for what you actually buy.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Distributor payables and scheme claims are tracked by memory',
+      scene:
+        'Bills pile up, dues are paid when a distributor calls, and promised scheme benefits are never claimed.',
+      cost:
+        'Missed early-payment discounts, strained supply relationships, and scheme benefits that vanish.',
+      fix:
+        'Each bill is a payable with a due date and any scheme attached. Verity lists what is due this week and what scheme benefits are still unclaimed.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Money',
+      title: 'Margin erodes through discounts and online price pressure',
+      scene:
+        'Customers show an app price and ask for a discount. Counter staff agree to retain the sale. Nobody sees the effect on margin by product.',
+      cost:
+        'Online pharmacies are competing on price, and some industry groups say they sell at a loss. Matching that without seeing margin gives away profit.',
+      fix:
+        'Discounts above a limit need approval, and Verity shows margin by product and by discount, so you decide where to match and where to hold.',
+      screen: 'owner',
+      source: { name: 'Free Press Journal, Mumbai chemists and e-pharmacies', url: 'https://www.freepressjournal.in/amp/mumbai/mumbai-chemists-on-brink-as-e-pharmacies-trigger-business-crisis-nationwide-protest-planned' },
+    },
+    {
+      area: 'Stock',
+      title: 'Stock counts never match the book',
+      scene:
+        'The system says 12 strips, the shelf holds 9. Some items are gifted, some mis-billed, some simply misplaced.',
+      cost:
+        'Unexplained shrinkage and a stock value nobody trusts when it is time to reorder or value inventory.',
+      fix:
+        'Cycle counts are tasks by shelf or category. Verity shows variance per item and per counter staff member, and you correct the cause rather than the number.',
+      screen: 'expiry',
+    },
+    {
+      area: 'Owner',
+      title: 'Several stores, stock stuck in the wrong one',
+      scene:
+        'Store A has twelve strips of a medicine that will expire. Store B is out of it. Nobody knows, and the transfer never happens.',
+      cost:
+        'Both an expiry write-off in one store and a lost sale in the other, from the same product.',
+      fix:
+        'Stores are locations in one system. Verity matches near-expiry stock in one with demand in another and records the transfer between stores.',
+      screen: 'transfers',
+    },
   ],
 
-  challengesHeading: 'The money is lost on dates.',
-  challengesLede:
-    'Almost every pharmacy loss is a date that passed — a return window, an expiry, a refill, a credit term.',
-  challenges: [
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede: 'From published sources, named under each figure. Your own numbers will differ, and showing you yours is Verity’s first job.',
+  facts: [
     {
-      problem: 'Return windows close before anyone looks',
-      detail:
-        'Stock is returnable to the distributor for a limited period that varies by supplier, and it is tracked in one person’s memory across dozens of them.',
-      outcome:
-        'Return eligibility sits on the batch against the distributor’s terms, so returnable value and closing windows are current.',
+      figure: '3 years',
+      text: 'is how long the Schedule H1 register must be kept, recording prescriber, patient, drug and quantity at the time of supply.',
+      source: { name: 'Parliament of India document', url: 'https://eparlib.nic.in/bitstream/123456789/647575/1/146840.pdf' },
     },
     {
-      problem: 'Expiry is discovered at the shelf',
-      detail:
-        'Short-dated stock is found during a manual check, usually after the return window has already closed.',
-      outcome:
-        'Expiry sits on the batch, so exposure surfaces by value and counter while a return is still possible.',
+      figure: '~10%',
+      text: 'of the market is claimed by online players, according to a Mumbai chemists’ association, which accuses them of selling at a loss.',
+      source: { name: 'Free Press Journal', url: 'https://www.freepressjournal.in/amp/mumbai/mumbai-chemists-on-brink-as-e-pharmacies-trigger-business-crisis-nationwide-protest-planned' },
     },
     {
-      problem: 'Chronic patients stop returning and nobody notices',
-      detail:
-        'A patient buying the same medication monthly for two years stops, and the pharmacy has no way of knowing.',
-      outcome:
-        'Refill cycles are derived from purchase history, so patients past their expected refill become a list.',
+      figure: '30% to under 10%',
+      text: 'is the fall in e-pharmacy operating losses forecast from FY2023 to the next fiscal, showing how heavily online competition has been funded.',
+      source: { name: 'CRISIL Ratings', year: '2024', url: 'https://integraliq.crisil.com/content/crisilratings/en/home/newsroom/press-releases/2024/12/operating-losses-of-e-pharmacies-seen-falling-below-10percent-next-fiscal.html' },
     },
     {
-      problem: 'Out-of-stock demand leaves no record',
-      detail:
-        'An item is unavailable, the sale is substituted or lost, and the original demand never informs the next order.',
-      outcome:
-        'Unfulfilled requests and substitutions are recorded, so stocking decisions are corrected by evidence.',
-    },
-    {
-      problem: 'Credit grows quietly against thin margins',
-      detail:
-        'Household and institutional credit accumulates without ageing, and the exposure is sized only when cash is short.',
-      outcome:
-        'Balances age automatically on the account with the contact history attached.',
-    },
-    {
-      problem: 'Scheme support is left unclaimed',
-      detail:
-        'Distributor schemes and margins are claimed from purchases within windows nobody assembles in time.',
-      outcome:
-        'Scheme terms are recorded against the purchases they apply to, so claims are built from records.',
+      figure: '8 to 12%',
+      text: 'of inventory value is lost to expiry in multi-store pharma chains, by one vendor’s estimate.',
+      source: { name: 'Commmerce (vendor)', url: 'https://commmerce.com/blog/multi-store-pharma-inventory-sync-cut-medicine-expiry-loss-60-percent-india/' },
     },
   ],
+  factsNote:
+    'One figure is a vendor estimate and one is a trade association claim. They show the direction and scale of the pressure, not what your pharmacy will see.',
 
-  modulesLede:
-    'One system across batches, expiry, refills, credit and distributors.',
-  modules: [
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each for one job. Products, stores and distributors are set up in your own terms.',
+  screens: [
     {
-      id: 'inventory',
-      title: 'Items, batches and expiry',
-      line:
-        'Stock is held per batch with expiry, distributor, cost, schedule classification, counter and return eligibility.',
-      why:
-        'The batch is the unit that expires and the unit that can be returned, so it is the only useful unit of stock here.',
-      example:
-        'One point nine lakh of returnable stock with windows closing inside thirty days, by distributor.',
+      id: 'owner',
+      title: 'Pharmacy / Today',
+      meta: 'All stores',
+      heading: 'The owner’s morning view',
+      caption:
+        'Sales, expiring stock, refills due and low stock in one place, with the exceptions that need a decision listed beneath.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹2.4 L', note: '3 stores' },
+            { label: 'Expiring in 60 days', value: '₹48,600', note: 'at cost' },
+            { label: 'Refills due', value: '63', note: 'patients' },
+            { label: 'Below reorder', value: '41', note: 'products' },
+          ],
+        },
+        { type: 'title', text: 'Margin by category, this month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Generics', value: 34, display: '34%' },
+            { label: 'Branded Rx', value: 21, display: '21%' },
+            { label: 'OTC and wellness', value: 29, display: '29%' },
+            { label: 'Surgical', value: 18, display: '18%', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: '2 H1 entries yesterday are missing a prescriber name.', action: 'Complete' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Pharmacist licence renewal', meta: 'Due in 26 days, Anil Verma', tag: ['Assign', 'flag', 'Assigned', 'ok'] },
+            { name: 'Discount above limit', meta: '2 approvals pending', tag: ['Review', 'flag'] },
+          ],
+        },
+      ],
     },
     {
-      id: 'orders',
-      title: 'Bills, substitutions and returns',
-      line:
-        'Transactions record their items and batches, the customer, the counter, any substitution made and any request that could not be filled.',
-      why:
-        'Recording what could not be supplied is the only way an out-of-stock ever improves the next order.',
-      example:
-        'Fast-moving items out of stock at two counters, with the substitutions and lost requests counted.',
+      id: 'expiry',
+      title: 'Expiry and returns',
+      meta: 'Next 90 days',
+      heading: 'Expiry and returns, with a deadline on each',
+      caption:
+        'Batches nearing expiry, sorted by value and by how long you can still return, discount or transfer them.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Medicine', 'Batch', 'Expires', 'Qty', 'Value', 'Action'],
+          rows: [
+            ['Inj. Pantoprazole', 'PT2407', '12 Nov', '40', '₹6,400', ['Return', 'late', 'Returned', 'ok']],
+            ['Metformin 500', 'MF8812', '30 Nov', '220', '₹2,860', ['Move to Store B', 'flag']],
+            ['Cough syrup 100 ml', 'CS3320', '18 Dec', '65', '₹3,900', ['Discount', 'flag']],
+            ['Amoxicillin 500', 'AX1190', '9 Jan', '120', '₹4,320', ['Watch', 'muted']],
+          ],
+        },
+        { type: 'alert', text: 'Credit note for 14 Sept return from Medico Distributors is 12 days overdue.', action: 'Chase' },
+      ],
     },
     {
-      id: 'relationships',
-      title: 'Patients, households and institutions',
-      line:
-        'Customers are records with their purchase history, derived refill cycles, credit position and contact history.',
-      why:
-        'Chronic demand is the most predictable revenue in retail pharmacy and the least managed.',
-      example:
-        'Thirty-eight regular monthly buyers past their expected refill date.',
+      id: 'register',
+      title: 'Registers',
+      meta: 'Schedule H1 and H',
+      heading: 'A register that cannot be left incomplete',
+      caption:
+        'Regulated products need a prescriber, a patient and a quantity before the sale closes. The register is searchable and can be shown to an inspector at any time.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Date', 'Drug', 'Patient', 'Prescriber', 'Qty', 'Entry'],
+          rows: [
+            ['14 Oct', 'Alprazolam 0.25', 'R. Iyer', 'Dr. Sharma', '10', ['Complete', 'ok']],
+            ['14 Oct', 'Tramadol 50', 'S. Banerjee', 'Dr. Rao', '10', ['Complete', 'ok']],
+            ['14 Oct', 'Clonazepam 0.5', 'A. Khan', '', '10', ['No prescriber', 'late', 'Fixed', 'ok']],
+            ['13 Oct', 'Levofloxacin 750', 'M. Das', 'Dr. Nair', '5', ['Complete', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Prescription-only sales without a prescription reference this month: 3, each assigned to the pharmacist-in-charge.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'refills',
+      title: 'Patients',
+      meta: 'Refills and credit',
+      heading: 'Regular patients, refills and credit in one list',
+      caption:
+        'Patients on monthly medicines with their next refill date, and credit balances with their ageing. A follow-up is a task for a named person.',
+      blocks: [
+        {
+          type: 'list',
+          items: [
+            { name: 'Kamla Devi', meta: 'Amlodipine 5, last bought 8 Sep, due 8 Oct', tag: ['Call', 'late', 'Refilled', 'ok'] },
+            { name: 'R. Subramanian', meta: 'Thyroxine 75, last bought 15 Sep, due 15 Oct', tag: ['Due today', 'flag'] },
+            { name: 'Meena Joshi', meta: 'Metformin 500, last bought 20 Sep, due 20 Oct', tag: ['Due soon', 'muted'] },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Credit customer', 'Balance', 'Oldest bill', 'Status'],
+          rows: [
+            ['Gupta family', '₹4,820', '34 days', ['Remind', 'flag', 'Paid ₹2,000', 'ok']],
+            ['Suresh Nursing Home', '₹21,400', '52 days', ['Escalate', 'late']],
+          ],
+        },
+      ],
     },
     {
       id: 'suppliers',
-      title: 'Distributors, schemes and return terms',
-      line:
-        'Suppliers are relationships with their orders, delivery reliability, return windows, scheme terms, claims and balances.',
-      why:
-        'Return terms and scheme support are where pharmacy margin is actually decided.',
-      example:
-        'A scheme worth sixty-four thousand assembled from qualifying purchases before Friday.',
+      title: 'Distributors',
+      meta: 'Prices and dues',
+      heading: 'The real cost of what you buy',
+      caption:
+        'Price and scheme from each distributor for the same product, with what you owe and when.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Product', 'Medico', 'Apex', 'Sri Ram', 'Best'],
+          rows: [
+            ['Atorvastatin 10', '₹54.0', '₹52.5', '₹53.2', ['Apex', 'ok']],
+            ['Pantoprazole 40', '₹88.0', '₹86.0', '₹84.5', ['Sri Ram', 'ok']],
+            ['Telmisartan 40', '₹71.0', '₹74.0', '₹72.0', ['Medico', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Medico Distributors', meta: '₹1.4 L due 20 Oct. 2% early-payment discount if paid by 17 Oct', tag: ['Pay early', 'flag'] },
+            { name: 'Apex Pharma', meta: 'Scheme on 12 products still unclaimed', tag: ['Claim', 'flag'] },
+          ],
+        },
+      ],
     },
     {
-      id: 'workflows',
-      title: 'Credit, returns and write-offs',
-      line:
-        'Credit beyond limit, returns to distributor, expiry write-offs and adjustments move through approval steps with recorded reasons.',
-      why:
-        'These are frequent, time-bound decisions taken at a busy counter, and they decide the year.',
-      example:
-        'A return raised against a distributor inside its window, approved and matched to the credit note received.',
-    },
-    {
-      id: 'people',
-      title: 'Pharmacists and counter staff',
-      line:
-        'Staff are modelled once, and every bill, substitution, credit entry and adjustment carries who made it.',
-      why:
-        'Substitution decisions and credit entries both need attribution in a business with regulated stock.',
-      example:
-        'Substitutions by item and staff member, from the transactions themselves.',
-    },
-    {
-      id: 'records',
-      title: 'Purchase documents and scheme circulars',
-      line:
-        'Invoices, scheme circulars, credit notes and distributor agreements attach to the supplier or transaction they belong to.',
-      why:
-        'Claims and returns are settled by documents that must be produced within a window.',
-      example:
-        'A disputed claim resolved by the circular it was raised under and the purchases it covers.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Expiry, refill and margin reporting',
-      line:
-        'Expiry exposure and returnable value, refill adherence, substitution rates, scheme recovery, credit ageing and counter comparison come from the operational records.',
-      why:
-        'Every important pharmacy number is date-bound, and monthly reporting arrives after the dates have passed.',
-      example:
-        'Returnable value with closing windows, current rather than reconstructed at a stock check.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the pharmacy a question',
-      line:
-        'Verity AI answers from your own batch, sales, customer and distributor records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking are about dates and about specific customers, both laborious to look up manually.',
-      example:
-        '"What is returnable with windows closing this month?" returns the list by distributor, with returns raised.',
-    },
-    {
-      id: 'control',
-      title: 'Who can adjust, discount and extend credit',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Regulated stock and extended credit both need attribution on every movement.',
-      example:
-        'Every stock adjustment and credit extension carries the person, the reason and the time.',
-    },
-    {
-      id: 'locations',
-      title: 'Counters, stores and branches',
-      line:
-        'Locations roll into the business, with batch-level stock, permissions and reporting following the same structure.',
-      why:
-        'Branches hold different batches with different expiry, and transfers between them are how near-expiry stock gets used.',
-      example:
-        'Near-expiry stock at one branch matched against demand at another.',
-    },
-    {
-      id: 'communication',
-      title: 'Refill reminders and account notes',
-      line:
-        'Notes, reminders and activity attach to the customer or account they concern.',
-      why:
-        'A refill conversation is useful only if the pharmacy knows what was already said and when.',
-      example:
-        'A note that a patient changed medication, so no reminder is sent for the old one.',
+      id: 'transfers',
+      title: 'Stores',
+      meta: 'Transfers',
+      heading: 'Stock in the right store',
+      caption:
+        'Near-expiry stock in one store matched with demand in another, as a recorded transfer instead of a phone call.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Suggested',
+              cards: [
+                { title: 'Metformin 500, 220 tabs', meta: 'Store A to Store B', tag: ['Approve', 'flag', 'Approved', 'ok'] },
+              ],
+            },
+            {
+              name: 'In transit',
+              cards: [{ title: 'Insulin glargine, 6 pens', meta: 'Store C to Store A', tag: ['On the way', 'muted'] }],
+            },
+            {
+              name: 'Received',
+              cards: [{ title: 'ORS, 80 sachets', meta: 'Store B to Store C', tag: ['Done', 'ok'] }],
+            },
+          ],
+        },
+      ],
     },
   ],
 
-  workflowsHeading: 'Dates, batches and the people who come back.',
-  workflowsLede:
-    'These already happen. Recorded at batch level, the recoverable money becomes visible in time.',
-  workflows: [
+  dayHeading: 'The same Monday, before and after.',
+  dayLede: 'The counter works the same way. What changes is that it leaves records that chase for you.',
+  day: [
     {
-      name: 'Purchase to shelf',
-      steps: [
-        'Order raised against the distributor',
-        'Delivery received and checked item by item',
-        'Each batch recorded with expiry, cost and counter',
-        'Scheme and return terms attached to the purchase',
-        'Return eligibility window calculated per batch',
-      ],
-      note:
-        'Capturing expiry and return terms at receipt is what makes recovery possible months later.',
+      time: '9:00',
+      before: 'You open the shop and hope nothing has expired over the weekend.',
+      after: 'The Today screen shows what expires this month, what is below reorder and which refills are due.',
     },
     {
-      name: 'Near-expiry return',
-      steps: [
-        'Batches approaching their return window identified by distributor',
-        'Movement history reviewed to decide return or transfer',
-        'Return raised and approved against the distributor terms',
-        'Stock dispatched and the return recorded',
-        'Credit note received and applied to the balance',
-      ],
-      note:
-        'The window closes before the expiry date, which is why late discovery costs full value.',
+      time: '11:00',
+      before: 'A distributor calls with a scheme. You buy without knowing what you already hold.',
+      after: 'You see stock on hand, expiry and the effective cost against other distributors before you decide.',
     },
     {
-      name: 'Refill follow-up',
-      steps: [
-        'Refill cycle derived from a customer’s purchase history',
-        'Customers past their expected refill identified',
-        'Contact history checked to avoid duplicate reminders',
-        'Follow-up assigned to the counter that serves them',
-        'Outcome recorded on the customer record',
-      ],
-      note:
-        'Chronic buyers are the most predictable revenue a pharmacy has, and the least followed up.',
+      time: '2:00',
+      before: 'A regulated sale is written in the notebook later, with details missing.',
+      after: 'The sale cannot close without prescriber, patient and quantity.',
     },
     {
-      name: 'Out-of-stock and substitution',
-      steps: [
-        'Requested item found unavailable',
-        'Substitution offered and recorded, or the request logged as unfilled',
-        'Availability checked at other branches',
-        'Demand recorded against the original item',
-        'Reorder informed by unfilled demand rather than by sales alone',
-      ],
-      note:
-        'Sales data alone systematically understates demand for items you keep running out of.',
+      time: '5:00',
+      before: 'A regular patient is overdue for her medicine. Nobody notices.',
+      after: 'She is on the refill list and a staff member calls her.',
     },
     {
-      name: 'Credit and collection',
-      steps: [
-        'Credit sale recorded against the household or institution',
-        'Approval raised where it exceeds the agreed limit',
-        'Balance aged automatically from the bill date',
-        'Collection follow-up assigned as terms pass',
-        'Payment applied and the position updated',
-      ],
-      note:
-        'Ageing from the bill date is what stops institutional credit growing unnoticed.',
+      time: '8:30',
+      before: 'You count cash and match it with the billing report by hand.',
+      after: 'The day’s sales by payment mode are compared with collections and the gap is named.',
     },
     {
-      name: 'Scheme claim',
-      steps: [
-        'Scheme terms recorded against purchases at receipt',
-        'Qualifying purchases matched to the terms',
-        'Claim assembled with the circular attached',
-        'Approval routed and the claim filed before the window',
-        'Settlement recorded against the distributor',
-      ],
-      note:
-        'The records exist; assembling them by hand at the deadline is what loses the claim.',
+      time: 'Month end',
+      before: 'You write off expired stock you did not know about.',
+      after: 'Most of it was returned, discounted or transferred earlier, and the rest is recorded.',
     },
   ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'Nobody hands you a login. We learn how your counter, store room and registers actually work, build Verity around that, bring your data in, then stay to keep it working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend time at your counter and in your store room. Follow a medicine from distributor bill to patient, and map your billing software, registers and how returns and credit notes are handled.',
+        you: 'A few hours from you and your pharmacist-in-charge. Your product list with batches, recent distributor bills and the current registers.',
+        get: 'A written map of how the pharmacy runs and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up products with batch and expiry fields, reorder levels, regulated-product flags and register rules, distributors, stores, approval limits and refill rules.',
+        you: 'Your pharmacist checks the register fields and regulated product list. Your manager checks the reorder levels.',
+        get: 'A working Verity with your products, rules and registers.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in stock with batch and expiry, distributors, patients and credit balances. Train counter staff and the pharmacist on real days.',
+        you: 'An opening stock count by batch where possible, and one hour per role.',
+        get: 'Your stock and patients inside Verity and a team that has used it on real sales.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Review the first weeks with you, tune reorder levels and alerts, and handle new stores and changes in rules.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps matching how the pharmacy runs, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your product list with strengths and pack sizes',
+      'Stock on hand with batch and expiry, as far as you have it',
+      'Recent distributor bills and scheme details',
+      'Your H1 and other registers as they are kept today',
+      'Patient and credit customer lists',
+    ],
+    time: 'About 8 to 10 hours of owner time over four weeks, plus your pharmacist’s and counter staff’s time, mostly in weeks 1 and 2.',
+    after: 'Nobody is hired to run Verity. Batch, expiry and register details are captured at the counter and at receipt, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask about dates and about people.',
+    heading: 'Ask the pharmacy a question.',
     lede:
-      'Verity AI reads the same batch, sales, customer and distributor records the pharmacy creates as it trades. It answers from your own shop, respects permissions, and can turn an answer into returns and follow-ups.',
-    panelMeta: 'Grounded in your pharmacy records',
-    note: 'Verity AI only returns what the person asking has permission to see. It does not provide clinical or dispensing advice.',
-    questions: [
-      'What is returnable now, and which windows close within thirty days?',
-      'What is expiring within ninety days, and at which counter?',
-      'Which regular customers are past their expected refill date?',
-      'Which items were requested and could not be supplied this month?',
-      'Which distributors have unclaimed scheme support?',
-      'What is outstanding on credit accounts, and for how long?',
-      'Which near-expiry batches could be transferred to a branch that will use them?',
-      'Which items are we substituting most often?',
-      'Summarise expiry exposure and returnable value.',
+      'Verity AI reads your stock, batches, registers, patients and distributor records. Ask in plain language, then turn the answer into a task.',
+    examples: [
+      {
+        q: 'What expires in the next 60 days and can still be returned?',
+        a: '₹48,600 at cost expires in 60 days. ₹21,200 is still within distributor return windows.',
+        rows: [['Returnable', '₹21,200'], ['Move to another store', '₹9,800'], ['Discount', '₹17,600']],
+        action: 'Create return tasks for each distributor',
+      },
+      {
+        q: 'Which patients have not refilled their regular medicine?',
+        a: '63 patients are past their usual refill date. 14 are over two weeks late.',
+        rows: [['Over 2 weeks late', '14'], ['1 to 2 weeks late', '22'], ['Under a week late', '27']],
+        action: 'Assign calls to the counter team',
+      },
+      {
+        q: 'Was batch MF8812 of Metformin sold from any of our stores?',
+        a: '220 tablets remain in Store A. 340 were sold from Stores A and B between 2 and 14 October.',
+      },
     ],
   },
 
-  automationHeading: 'The windows that close quietly.',
-  automationLede:
-    'Each runs from the batch and customer records at the point the condition is met.',
+  automationHeading: 'The checks nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. People still do the work. Verity makes sure the right person knows to.',
   automations: [
     {
-      trigger: 'A batch approaches its return window',
-      steps: [
-        'Batch flagged with value, counter and closing date',
-        'Return or transfer decision assigned',
-        'Return raised, dispatched and the credit tracked',
-      ],
+      when: 'A batch is 90 days from expiry',
+      then: ['Listed with value and return window', 'Task to return, discount or transfer', 'Outcome recorded'],
     },
     {
-      trigger: 'A batch approaches expiry with no return eligibility',
-      steps: [
-        'Batch flagged with value and remaining life',
-        'Transfer or write-off decision raised',
-        'Outcome recorded against the batch',
-      ],
+      when: 'A regulated product is sold without a prescription reference',
+      then: ['Sale flagged to the pharmacist-in-charge', 'Reason recorded', 'Included in the monthly exceptions report'],
     },
     {
-      trigger: 'A customer passes their expected refill date',
-      steps: [
-        'Customer flagged with their purchase pattern',
-        'Contact history checked for prior reminders',
-        'Follow-up assigned to the serving counter',
-      ],
+      when: 'A patient passes their usual refill date',
+      then: ['Added to the refill list', 'Task to a named staff member', 'Outcome recorded: refilled, switched or unreachable'],
     },
     {
-      trigger: 'A requested item cannot be supplied',
-      steps: [
-        'Unfilled request recorded against the item',
-        'Availability checked at other branches',
-        'Reorder informed by the recorded demand',
-      ],
+      when: 'A product falls below its reorder level',
+      then: ['Checked against recent sales', 'Order drafted to the best-priced distributor', 'Receipt compared with the order'],
     },
     {
-      trigger: 'A credit balance passes its terms',
-      steps: [
-        'Balance aged on the account record',
-        'Collection follow-up assigned',
-        'Escalated to the owner past the second threshold',
-      ],
+      when: 'A distributor return has no credit note after 15 days',
+      then: ['Flagged against the distributor', 'Task to chase', 'Credit recorded when received'],
     },
     {
-      trigger: 'A scheme window approaches its close',
-      steps: [
-        'Qualifying purchases matched to the terms',
-        'Claim assembled with the circular attached',
-        'Filing task assigned with the deadline',
-      ],
+      when: 'A licence or registration is 60 days from expiry',
+      then: ['Task created for the owner of the document', 'Reminder repeated weekly', 'New copy attached when received'],
     },
   ],
 
-  intelligenceHeading: 'What the owner can see about dates and demand.',
-  intelligenceLede:
-    'Drawn from batch-level records the pharmacy creates as it trades.',
-  intelligence: [
-    {
-      area: 'Expiry',
-      points: [
-        'Value expiring in thirty, sixty and ninety days',
-        'Returnable value with closing windows by distributor',
-        'Write-offs taken and their value',
-        'Expiry concentration by category and counter',
-      ],
-    },
-    {
-      area: 'Demand',
-      points: [
-        'Items requested and not supplied',
-        'Substitution rate by item',
-        'Movement by item and category',
-        'Cover in days against recent movement',
-      ],
-    },
-    {
-      area: 'Customers',
-      points: [
-        'Refill cycles and adherence to them',
-        'Customers past their expected refill',
-        'Purchase value by household and institution',
-        'Credit position and ageing',
-      ],
-    },
-    {
-      area: 'Distributors',
-      points: [
-        'Scheme support earned, claimed and settled',
-        'Return volume and credit notes received',
-        'Delivery reliability and fill rate',
-        'Outstanding payable',
-      ],
-    },
-    {
-      area: 'Counters',
-      points: [
-        'Sales and margin by counter and branch',
-        'Substitutions and adjustments by staff member',
-        'Near-expiry stock by location',
-        'Transfers between branches',
-      ],
-    },
-  ],
-  intelligenceNote:
-    'Verity records the commercial and stock operation. Prescription validity, dispensing decisions and clinical judgement remain with the pharmacist.',
+  rules: {
+    heading: 'The rules a pharmacy has to keep up with.',
+    lede: 'Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order.',
+    items: [
+      {
+        name: 'Schedule H1 register',
+        what: 'Supply of an H1 drug is recorded in a separate register at the time of supply, with the prescriber’s name and address, the patient’s name, the drug and the quantity, kept for three years and open to inspection.',
+        how: 'H1 products are flagged. A sale cannot close without these fields, and the register can be searched and printed.',
+        source: { name: 'Parliament of India document on Schedule H1', url: 'https://eparlib.nic.in/bitstream/123456789/647575/1/146840.pdf' },
+      },
+      {
+        name: 'Schedule H and X prescriptions',
+        what: 'Schedule H drugs are sold on a registered medical practitioner’s prescription. Schedule X generally needs a prescription in duplicate, with one copy kept.',
+        how: 'A prescription reference is required at sale, and exceptions go to the pharmacist-in-charge.',
+        source: { name: 'Journal of Global Health, 2020', url: 'https://www.jogha.org/documents/issue202001/jogh-10-010302.htm' },
+      },
+      {
+        name: 'Registered pharmacist and licences',
+        what: 'A registered pharmacist must be on the premises, and the drug licence must be valid and displayed.',
+        how: 'Pharmacist registration and licence details are records with expiry dates and owners, with reminders.',
+      },
+      {
+        name: 'Proposed CCTV at medical stores',
+        what: 'A September 2026 draft amendment proposes mandatory CCTV to monitor Schedule H, H1 and X sales. It is reported as proposed, not in force.',
+        how: 'If it becomes law, Verity’s regulated-sale records give you a matching trail to compare against footage. We will confirm what applies when it is notified.',
+        source: { name: 'The South First, draft GSR 791(E)', url: 'https://thesouthfirst.com/health/cctv-cameras-proposed-at-medical-stores-to-monitor-sale-of-prescription-drugs/' },
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your drug control authority or advisor.',
+  },
 
-  rolesHeading: 'One pharmacy, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each opens on what they need.',
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'Counter staff should not see margins. The distributor should not see your patients. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'What am I about to lose to a date?',
-      focus: 'Returnable value and closing windows, expiry exposure, scheme recovery, credit ageing.',
-    },
-    {
-      role: 'Pharmacist in charge',
-      question: 'What is short and what is expiring?',
-      focus: 'Items below cover, unfilled requests, near-expiry batches, transfers available.',
-    },
-    {
-      role: 'Counter staff',
-      question: 'What does this customer usually buy?',
-      focus: 'Purchase history and refill pattern, credit position, availability and substitutes.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is owed and what is claimable?',
-      focus: 'Credit balances and ageing, distributor payables, scheme claims outstanding, credit notes received.',
-    },
+    { role: 'Owner', question: 'Where is stock and margin going?', sees: 'Expiry exposure, margin by category, distributor prices, approvals and all stores side by side.' },
+    { role: 'Pharmacist-in-charge', question: 'Are we compliant today?', sees: 'Registers, regulated-sale exceptions, licence expiries and batch traceability.' },
+    { role: 'Counter staff', question: 'What do I need for this patient?', sees: 'Stock and batch, prescription prompts, the patient’s refills and credit balance.' },
+    { role: 'Purchase manager', question: 'What do we order and from whom?', sees: 'Reorder list, price comparison across distributors, scheme and payable dates.' },
+    { role: 'Accountant', question: 'What did we buy and owe?', sees: 'Purchases by distributor, payables, credit notes, discounts and sales by mode.' },
   ],
 
-  useCasesHeading: 'What pharmacies use Verity for',
-  useCases: [
-    {
-      name: 'Return window tracking',
-      body: 'Return eligibility on the batch against each distributor’s terms, so returnable value and closing dates are current rather than held in memory.',
-    },
-    {
-      name: 'Expiry exposure',
-      body: 'Expiry on the batch with value by counter, so short-dated stock surfaces while a return or transfer is still possible.',
-    },
-    {
-      name: 'Refill follow-up',
-      body: 'Refill cycles derived from purchase history, so regular customers who stop returning become a worked list.',
-    },
-    {
-      name: 'Unfilled demand capture',
-      body: 'Requests that could not be supplied recorded against the item, so stocking is corrected by demand rather than by sales alone.',
-    },
-    {
-      name: 'Credit ageing',
-      body: 'Household and institutional balances aged from the bill date with contact history, so exposure does not grow unnoticed.',
-    },
-    {
-      name: 'Scheme claim recovery',
-      body: 'Distributor scheme terms recorded against qualifying purchases, so claims are assembled before their windows close.',
-    },
-    {
-      name: 'Branch transfers',
-      body: 'Near-expiry stock at one branch matched against demand at another, so it is used rather than written off.',
-    },
-    {
-      name: 'Asking about dates',
-      body: 'Plain-language questions across batches, expiry, refills and credit, with returns and follow-ups raised in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing software. We agree how its sales reach Verity during setup.',
+      'Your distributors and how you order from them.',
+      'Your pharmacist, who stays accountable for registers and prescriptions.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Run the billing counter or take payments.',
+      'Sell medicines online or take orders from patients.',
+      'Send messages to patients on its own.',
+      'File your returns or run your payroll.',
+    ],
+    migration:
+      'We bring your product list, stock with batches, distributors and patient lists across from the sheets and registers you use now, in stages, so the counter never stops.',
+  },
 
-  migration:
-    'Your billing software and distributor arrangements continue to run and are mapped during implementation. Stock is brought across at batch level with expiry where records allow, along with customers, credit balances and scheme terms.',
-
-  faqHeading: 'Questions pharmacy owners ask',
+  faqHeading: 'Questions pharmacy owners ask.',
   faqs: [
     [
-      'Does Verity handle dispensing or prescription validity?',
-      'No. Dispensing decisions, prescription validity and clinical judgement remain with your pharmacist and your existing systems. Verity runs the commercial and stock operation — batches, expiry, returns, refills, credit, distributors and reporting.',
+      'Does Verity replace my billing software?',
+      'No. Your billing software stays at the counter. Verity records the stock, batch and register behind it, and we agree during setup how sales reach Verity.',
     ],
     [
-      'What can AI software do for a pharmacy?',
-      'Verity AI answers questions from your own batch, sales, customer and distributor records: what is returnable now and which windows close within thirty days, what is expiring and where, which regular customers are past their expected refill, which items could not be supplied. Each answer can become a return or a follow-up.',
+      'How does it know batches and expiry?',
+      'Batch and expiry are captured when stock is received against a distributor bill, and carried through to sale. We help you start from your current stock by batch as far as it is known.',
     ],
     [
-      'Can Verity track batches and expiry?',
-      'Yes, and that is the foundation. Stock is held per batch with expiry, distributor, cost and return eligibility, because the batch is the unit that expires and the unit that can be returned.',
+      'Will it make my H1 register legally complete?',
+      'It makes sure each entry has the fields the rules ask for before the sale closes, and keeps the register searchable. Your pharmacist remains responsible for compliance, and we do not give legal advice.',
     ],
     [
-      'How does it help with returns to distributors?',
-      'Return eligibility sits on the batch against each distributor’s terms, so returnable value and closing windows are current. The window generally closes well before the expiry date, which is why discovering short-dated stock at a shelf check costs the full value.',
+      'Can it send refill reminders to patients?',
+      'Not by itself. Verity lists patients overdue for a refill and assigns the call or message to a staff member, and records the outcome.',
     ],
     [
-      'Can it help with chronic patients?',
-      'Refill cycles are derived from purchase history, so customers past their expected refill become a list with contact history attached — which is the most predictable revenue in retail pharmacy and the least followed up.',
+      'I run three stores. Can I see all of them?',
+      'Yes. Each store is a location in one system, and stock, expiry and sales can be compared and transferred between them.',
     ],
     [
-      'Does it record demand we could not fill?',
-      'Requests that could not be supplied and substitutions made are both recorded against the original item, so reordering is corrected by actual demand rather than by sales data that systematically understates items you keep running out of.',
+      'Can it help me compete with online prices?',
+      'It shows your margin by product and discount, so you decide where to match a price and where to hold. It does not set your prices for you.',
     ],
     [
-      'Can it manage credit accounts?',
-      'Household and institutional balances age automatically from the bill date with contact history recorded, and credit beyond an agreed limit is an approval rather than a decision taken at a busy counter.',
+      'Who can see patient information?',
+      'Only the people you allow. Access is set by role, and every change is recorded with who made it and when.',
     ],
     [
-      'Does it work across branches?',
-      'Counters, stores and branches are locations holding their own batches, so near-expiry stock at one can be matched against demand at another and transferred rather than written off.',
+      'How long before I see results?',
+      'The expiry list and below-reorder list need only your stock data, so they are among the first things we aim to have working. Refill and margin trends become reliable after some weeks of recorded sales.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the pharmacy trades, configuration of distributor return and scheme terms, migration of stock at batch level, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of stores and what you want set up. Message us and we will give you a clear number after a short conversation about how your pharmacy runs.',
     ],
   ],
 
-  ctaHeading: 'Start with what is still returnable.',
-  ctaLede:
-    'In most pharmacies it is a larger number than expected and some of it stops being returnable this month. Tell us how batches are tracked today.',
+  related: ['clinics', 'medical-distributors', 'pharmaceutical-manufacturers', 'dental-clinics', 'diagnostic-labs', 'optical-stores'],
 
-  related: ['medical-distributors', 'diagnostic-labs', 'clinics', 'hospitals', 'cosmetics-stores', 'grocery-stores'],
+  ctaHeading: 'Find out what is expiring on your shelves.',
+  ctaLede:
+    'Tell us how your pharmacy runs and we will show you the expiry exposure, register gaps and overdue refills it would find, using your own numbers.',
 };

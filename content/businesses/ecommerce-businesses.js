@@ -1,554 +1,685 @@
 export default {
+  schema: 2,
   slug: 'ecommerce-businesses',
   status: 'published',
   plural: 'e-commerce businesses',
-  subject: 'e-commerce business',
+  subject: 'online seller',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for e-commerce businesses | Verity',
+    title: 'E-commerce operations software for Indian online sellers | Verity',
     description:
-      'Verity connects multi-channel inventory, returns and RTO economics, fulfilment commitments, marketplace settlements and customer service load into one system.',
+      'See 15 problems that drain online sellers: stock across channels, RTO, returns, courier delays, COD cash and settlements, and the Verity screens that fix them.',
     keywords: [
-      'AI software for ecommerce businesses',
-      'ecommerce operations management software',
-      'multi channel inventory and returns tracking',
-      'marketplace settlement reconciliation software',
+      'ecommerce operations software India',
+      'multi channel inventory management India',
+      'RTO and returns tracking for online sellers',
+      'COD reconciliation software',
+      'marketplace settlement reconciliation',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'orders', 'suppliers', 'logistics', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for e-commerce',
-    headline: 'The order was profitable. The return, the RTO and the settlement deduction were not.',
+    eyebrow: 'Verity for e-commerce businesses',
+    headline: 'The order looked profitable. The return, the RTO and the settlement deduction were not.',
     lede:
-      'E-commerce margin survives or dies after the order. Verity records the return, the failed delivery and the marketplace deduction against the order that produced them.',
-    note: 'Verity runs operations. Your online store and marketplaces stay where they are.',
-    panel: {
-      title: 'Operations',
-      meta: 'All channels · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Orders shipped', value: '9,840', note: 'across 4 channels' },
-        { label: 'Return and RTO rate', value: '14.2%', note: 'up from 11.1%' },
-        { label: 'Settlement variance', value: '₹4.6 L', note: 'unreconciled deductions' },
-        { label: 'Stock out of sync', value: '86 SKUs', note: 'across channels' },
-      ],
-      rows: [
-        { name: '₹4.6 L of marketplace deductions unreconciled', meta: 'Three settlement cycles', active: true },
-        { name: 'Return rate on one category at 31%', meta: 'Size and description mismatch recorded', active: true },
-        { name: '86 SKUs with channel stock out of sync', meta: 'Oversell and cancellation risk', active: true },
-        { name: 'RTO concentrated on one payment mode and region', meta: '₹2.1 L of shipping absorbed', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own operations in this shape.',
-    },
+      'An online seller makes or loses money after the customer clicks buy. Stock is shared across channels, parcels go missing, cash arrives weeks late and returns come back as a bag nobody counts. Verity ties every one of those events back to the order that caused it.',
+    oneLine:
+      'One system that knows what you have, where it is, what came back, what the courier owes you and what each order really earned.',
+    note: 'Your website and your marketplace accounts stay exactly where they are. Verity runs the work behind them.',
+    screen: 'owner',
+    screenNote: 'channels, warehouses, couriers and suppliers',
   },
 
-  overview: {
-    heading: 'The order is the easy part. Everything after it decides the margin.',
+  today: {
+    heading: 'Selling is online. Running it is still a lot of sheets and calls.',
     paragraphs: [
-      'An e-commerce business sells across its own site and several marketplaces, each with its own inventory feed, its own fulfilment expectations, its own return rules and its own settlement arithmetic. The order is captured cleanly. What happens afterwards — returns, failed deliveries, marketplace deductions, customer service — is where the margin actually goes, and it is recorded in as many places as there are channels.',
-      'Returns and return-to-origin are the largest of these. A return costs the outbound shipping, the return shipping, the handling and often the saleability of the item, and it is concentrated: particular categories, particular sizes, particular descriptions, particular regions and payment modes. A business that records returns as a total cannot see the concentration and therefore cannot act on it.',
-      'Marketplace settlements are the second. Payouts arrive net of commissions, shipping, penalties and adjustments, and reconciling them against the orders they cover is a monthly chore that most businesses do partially. Four point six lakh of unreconciled deductions across three cycles is money that was possibly deducted incorrectly and will never be recovered.',
-      'The third is inventory across channels. Stock sold on one channel must reduce availability on the others, and a lag produces oversells, cancellations and marketplace penalties.',
-      'Verity records the order, its returns, its shipping outcomes and its settlement against one set of stock and one customer.',
+      'The orders arrive on their own. What follows does not. Someone updates stock on three channels by hand at night. Someone else chases a courier for a parcel that has not moved in six days. A returns bag is opened on Thursday for an order refunded on Monday. Cash on delivery money is sitting with the courier, and the marketplace payout is short by an amount nobody can explain.',
+      'Each of these is handled by a person with a sheet, a portal login or a WhatsApp group. The seller panel shows sales. The courier panel shows parcels. The bank shows money. Nothing shows the order from click to cash, so the real margin of a product is only guessed at.',
+      'The result is not one big failure. It is a hundred small leaks: an oversold unit, a refused COD parcel, a freight overcharge, a claim raised too late. Each looks minor and together they decide whether the month made money.',
     ],
+    stack: ['Marketplace seller panels', 'Courier dashboards', 'Excel stock and returns sheets', 'WhatsApp with the warehouse', 'Accounting software'],
+    stackNote: 'Each tool is fine at its own job. The gaps between them are where the money goes.',
   },
 
-  terminology: [
-    ['SKUs, variants, channel listings', 'Inventory'],
-    ['Orders, returns, exchanges, RTO', 'Orders'],
-    ['Customers, repeat buyers, accounts', 'Relationships'],
-    ['Marketplaces, couriers, suppliers', 'Suppliers'],
-    ['Picking, packing, dispatch', 'Work'],
-    ['Settlements, deductions, claims', 'Workflows'],
-    ['Warehouses, channels, regions', 'Locations'],
-  ],
-
-  challengesHeading: 'The costs arrive after the revenue does.',
-  challengesLede:
-    'E-commerce difficulties are all downstream of the order, in returns, delivery failures and settlements.',
-  challenges: [
+  painsHeading: 'Where an online seller actually loses money.',
+  painsLede:
+    'These are the situations sellers describe again and again. For each one: how it looks on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Returns are recorded as a rate, not a cause',
-      detail:
-        'Return rate is known in total, so the concentration by category, size, description or region that would let you fix it is invisible.',
-      outcome:
-        'Returns carry reasons and attach to the SKU, listing, region and payment mode, so concentration is visible.',
+      area: 'Stock',
+      title: 'The same unit is sold on three channels',
+      scene:
+        'You have 6 pieces of a kurta set. Your website, a marketplace and a quick-commerce listing all show 6. Four sell within an hour of a campaign going out. Two customers get a cancellation message the next morning.',
+      cost:
+        'Example arithmetic: 40 oversold orders a month at ₹900 each is ₹36,000 of sales cancelled, plus marketplace penalties for cancelling and a drop in your seller rating.',
+      fix:
+        'One stock record per item, with units reserved against open orders from every channel. The stock screen shows what is free to sell on each channel, and a low-free-stock alert goes to the person who updates listings.',
+      screen: 'stock',
     },
     {
-      problem: 'Settlement deductions go unreconciled',
-      detail:
-        'Payouts arrive net of commissions, shipping and penalties, and matching them to orders is partial at best.',
-      outcome:
-        'Settlements reconcile against recorded orders, so unexplained deductions become claims rather than losses.',
-    },
-    {
-      problem: 'Channel stock drifts and produces oversells',
-      detail:
-        'A sale on one channel must reduce availability on the others, and lag causes cancellations and marketplace penalties.',
-      outcome:
-        'One stock position across channels, with allocation and sync state visible per SKU.',
-    },
-    {
-      problem: 'RTO cost is absorbed as shipping',
-      detail:
-        'Failed deliveries cost outbound and return freight and are recorded as a general shipping expense rather than against the pattern that caused them.',
-      outcome:
-        'RTO is recorded against the order, region, payment mode and courier, so the concentration is addressable.',
-    },
-    {
-      problem: 'Customer service load is unattributed',
-      detail:
-        'Tickets are handled without being connected to the orders, SKUs or listings that generate them.',
-      outcome:
-        'Service contacts attach to the order and SKU, so the products creating the load are identifiable.',
-    },
-    {
-      problem: 'Fulfilment commitments differ by channel and are managed as one',
-      detail:
-        'Each marketplace has its own dispatch expectations and penalties, and the warehouse works one queue.',
-      outcome:
-        'Channel commitments are on the order, so the queue is worked by deadline rather than by arrival.',
-    },
-  ],
-
-  modulesLede:
-    'One system across channels, stock, fulfilment and settlements.',
-  modules: [
-    {
-      id: 'orders',
-      title: 'Orders, returns, exchanges and RTO',
-      line:
-        'Each order records its channel, items, customer, payment mode, fulfilment commitment, shipping outcome and any return with its reason.',
-      why:
-        'The order is where revenue and every downstream cost meet, and the downstream costs are usually recorded elsewhere.',
-      example:
-        'Return rate at thirty-one percent on one category, with the recorded reasons naming the cause.',
-    },
-    {
-      id: 'inventory',
-      title: 'SKUs, variants and channel availability',
-      line:
-        'Stock is held once with allocation across channel listings, reservation on order and sync state per channel.',
-      why:
-        'Overselling is a stock-synchronisation failure, and it costs cancellations and marketplace standing.',
-      example:
-        'Eighty-six SKUs out of sync across channels, flagged before they cause cancellations.',
-    },
-    {
-      id: 'work',
-      title: 'Picking, packing and dispatch',
-      line:
-        'Fulfilment is work with a deadline derived from the channel commitment, an owner and a state.',
-      why:
-        'Each channel penalises late dispatch differently, so the queue should be worked by deadline rather than by order of arrival.',
-      example:
-        'The dispatch queue ordered by channel deadline rather than by when the order came in.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Marketplaces, couriers and suppliers',
-      line:
-        'Channels, couriers and suppliers are relationships with their terms, performance, deductions, penalties and balances.',
-      why:
-        'A marketplace is a supplier of demand with commercial terms, and a courier’s failure rate is a direct margin cost.',
-      example:
-        'RTO rate by courier and region, which changes routing decisions.',
-    },
-    {
-      id: 'workflows',
-      title: 'Settlements, deductions and claims',
-      line:
-        'Settlement reconciliation, deduction disputes, penalty claims and refunds move through defined steps with recorded outcomes.',
-      why:
-        'Deductions are frequent, individually small and collectively significant, and they expire if unclaimed.',
-      example:
-        'Four point six lakh of unexplained deductions raised as claims rather than absorbed.',
-    },
-    {
-      id: 'relationships',
-      title: 'Customers and repeat buyers',
-      line:
-        'Customers are records with their orders, returns, service contacts and lifetime value across channels.',
-      why:
-        'The same customer buys across channels, and return behaviour and service load are customer-level facts.',
-      example:
-        'Customer lifetime value net of returns, which is a different ranking from gross revenue.',
-    },
-    {
-      id: 'communication',
-      title: 'Service contacts on the order',
-      line:
-        'Customer contacts, complaints and resolutions attach to the order and SKU they concern.',
-      why:
-        'Service load is generated by specific products and listings, and connecting the two is how it reduces.',
-      example:
-        'Contacts concentrated on one listing whose description is misleading.',
-    },
-    {
-      id: 'locations',
-      title: 'Warehouses, channels and regions',
-      line:
-        'Locations and channels roll into the business, with stock, fulfilment and reporting following the same structure.',
-      why:
-        'Regional patterns in RTO and delivery failure are among the most actionable facts in e-commerce.',
-      example:
-        'RTO concentrated in one region and payment mode, quantified as absorbed shipping.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Contribution, returns and settlement reporting',
-      line:
-        'Contribution after returns, shipping and deductions; return concentration by cause; settlement variance; fulfilment against commitments; and service load by SKU come from the operational records.',
-      why:
-        'Gross revenue by channel is easy and misleading. Contribution after everything downstream is the real number.',
-      example:
-        'Contribution by SKU after returns, RTO and settlement deductions.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask operations a question',
-      line:
-        'Verity AI answers from your own order, stock, return and settlement records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions that matter cross channel, product, region and courier at once.',
-      example:
-        '"Where are returns concentrated and why?" returns the categories and reasons with actions assigned.',
-    },
-    {
-      id: 'people',
-      title: 'Warehouse and service teams',
-      line:
-        'Staff are modelled once, and every pick, pack, dispatch and service contact carries who handled it.',
-      why:
-        'Picking accuracy is a direct driver of returns, and it is a per-person number.',
-      example:
-        'Returns attributable to picking errors, by person and shift.',
-    },
-    {
-      id: 'control',
-      title: 'Refunds, write-offs and price changes',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Refunds and goodwill credits are issued under service pressure and add up.',
-      example:
-        'Refunds beyond policy recorded as approvals with the order history attached.',
-    },
-  ],
-
-  workflowsHeading: 'Order, fulfil, return, settle.',
-  workflowsLede:
-    'These already happen across channels. On one record the downstream costs become attributable.',
-  workflows: [
-    {
-      name: 'Order to dispatch',
-      steps: [
-        'Order received from a channel with its fulfilment commitment',
-        'Stock reserved against the single stock position',
-        'Channel availability updated across listings',
-        'Picking and packing assigned by deadline',
-        'Dispatch recorded with courier and tracking',
-      ],
-      note:
-        'Working the queue by channel deadline rather than by arrival order is what avoids penalties.',
-    },
-    {
-      name: 'Return and exchange',
-      steps: [
-        'Return requested and reason recorded',
-        'Return authorised per channel and policy',
-        'Item received, inspected and graded',
-        'Stock restored or written off with the reason',
-        'Refund or exchange processed and recorded',
-        'Reason aggregated against SKU, listing and region',
-      ],
-      note:
-        'The reason is what turns a return rate into an addressable cause.',
-    },
-    {
-      name: 'Failed delivery and RTO',
-      steps: [
-        'Delivery failure recorded with courier reason',
-        'Reattempt or RTO decision taken',
-        'Shipping cost both ways recorded against the order',
-        'Pattern aggregated by region, payment mode and courier',
-        'Routing or payment policy decision raised',
-      ],
-      note:
-        'RTO concentration by region and payment mode is one of the most actionable patterns in e-commerce.',
-    },
-    {
-      name: 'Settlement reconciliation',
-      steps: [
-        'Settlement received from the channel for a period',
-        'Matched against recorded orders and returns',
-        'Commission, shipping and penalties verified against terms',
-        'Unexplained deductions raised as claims',
-        'Net position recorded against the channel',
-      ],
-      note:
-        'Deductions are small individually and material together, and they are only recoverable within a window.',
-    },
-    {
-      name: 'Channel stock synchronisation',
-      steps: [
-        'Single stock position maintained across listings',
-        'Allocation and reservation applied per channel',
-        'Sync state monitored per SKU',
-        'Out-of-sync SKUs flagged before oversell',
-        'Cancellations and penalties recorded where they occur',
-      ],
-      note:
-        'An oversell costs a cancellation, a penalty and marketplace standing, all avoidable.',
-    },
-    {
-      name: 'Service load review',
-      steps: [
-        'Service contacts attached to orders and SKUs',
-        'Volume aggregated by product and listing',
-        'Causes reviewed — description, sizing, packaging, delivery',
-        'Listing or product action assigned',
-        'Effect measured in subsequent periods',
-      ],
-      note:
-        'Service load is generated by a small number of products, and fixing the listing is cheaper than answering the tickets.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask what happened after the order.',
-    lede:
-      'Verity AI reads the same order, stock, return and settlement records the business creates as it trades. It answers from your own channels, respects permissions, and can turn an answer into claims and actions.',
-    panelMeta: 'Grounded in your operations records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Where are returns concentrated, and what reasons were recorded?',
-      'Which marketplace deductions are unexplained against our orders?',
-      'Which SKUs are out of sync across channels?',
-      'Where is RTO concentrated by region, payment mode and courier?',
-      'What is contribution by SKU after returns, shipping and deductions?',
-      'Which listings generate the most customer service contacts?',
-      'Which orders missed their channel dispatch commitment?',
-      'What is customer lifetime value net of returns?',
-      'Summarise contribution and downstream cost this month.',
-    ],
-  },
-
-  automationHeading: 'The costs that arrive quietly.',
-  automationLede:
-    'Each runs from the order and stock records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A settlement is received',
-      steps: [
-        'Matched against recorded orders and returns',
-        'Deductions verified against channel terms',
-        'Unexplained items raised as claims with references',
-      ],
-    },
-    {
-      trigger: 'A return is recorded',
-      steps: [
-        'Reason captured and attached to SKU and listing',
-        'Stock restored or written off with grading',
-        'Concentration recalculated by category and region',
-      ],
-    },
-    {
-      trigger: 'A delivery fails',
-      steps: [
-        'Courier reason recorded against the order',
-        'Reattempt or RTO decision raised',
-        'Pattern updated by region, payment mode and courier',
-      ],
-    },
-    {
-      trigger: 'Channel stock drifts out of sync',
-      steps: [
-        'SKU flagged before oversell occurs',
-        'Correction task assigned',
-        'Cancellations avoided or recorded if they occur',
-      ],
-    },
-    {
-      trigger: 'An order approaches its channel dispatch deadline',
-      steps: [
-        'Order prioritised in the fulfilment queue',
-        'Escalated if it will miss the commitment',
-        'Penalty recorded if incurred',
-      ],
-    },
-    {
-      trigger: 'Service contacts concentrate on a listing',
-      steps: [
-        'Listing flagged with the contact reasons',
-        'Review assigned to the catalogue owner',
-        'Effect measured after the change',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the operator can actually see.',
-  intelligenceLede:
-    'Contribution after everything that happens downstream of the order.',
-  intelligence: [
-    {
-      area: 'Contribution',
-      points: [
-        'Contribution by SKU, category and channel after returns and deductions',
-        'Shipping and RTO cost per order',
-        'Commission and penalty cost by channel',
-        'Customer lifetime value net of returns',
-      ],
+      area: 'Stock',
+      title: 'Listings and codes do not match across channels',
+      scene:
+        'One product is "KS-BLU-M" in your sheet, "KSBLUM01" on the marketplace and a different name on the website. A price change is made on one channel and forgotten on the other two.',
+      cost:
+        'Wrong stock deducted, wrong price sold, and hours spent every week matching codes by eye before anyone can trust a report.',
+      fix:
+        'Each item is a single record with its channel codes listed against it. Orders from any channel land on the right item, and a list shows items whose price differs between channels so someone can correct them.',
+      screen: 'stock',
     },
     {
       area: 'Returns',
-      points: [
-        'Return and RTO rate by SKU, category and region',
-        'Reasons recorded and their distribution',
-        'Restorable against written-off returns',
-        'Returns attributable to picking errors',
+      title: 'Cash on delivery parcels come back undelivered',
+      scene:
+        'A COD order is shipped to a customer who placed it on impulse. The courier tries twice, the customer does not pick up, and the parcel goes back to the warehouse nine days later.',
+      cost:
+        'You pay forward freight, return freight and packing, and the stock is out of sale for two weeks. Industry estimates put RTO for Indian e-commerce at roughly 20 to 40 percent, with cash on delivery making up most returns.',
+      fix:
+        'Every RTO is recorded against the order, pin code, courier and payment mode. Verity shows RTO rate by each of these, so you see which pin codes and which couriers lose money, and can set a rule such as a confirmation call before dispatch for high-risk pin codes.',
+      screen: 'returns',
+      source: {
+        name: 'Eshopbox, 2026 (a fulfilment vendor)',
+        url: 'https://www.eshopbox.com/blog/how-to-reduce-rto-ecommerce-india',
+      },
+    },
+    {
+      area: 'Returns',
+      title: 'Returned goods sit in a bag instead of going back on the shelf',
+      scene:
+        'Returns arrive in a corner of the warehouse. They are opened when someone has time. A good unit stays unchecked for ten days while a customer buys the last one from the marketplace and you show out of stock.',
+      cost:
+        'Sellable stock is invisible. The refund has gone out but the unit is neither counted nor resold.',
+      fix:
+        'A return is a record with a state: received, checked, resell, repair or write off. A checked unit goes back into free stock the same day, and units waiting more than three days appear on a list.',
+      screen: 'returns',
+    },
+    {
+      area: 'Returns',
+      title: 'Customers claim damage or a wrong item and you cannot tell if it is true',
+      scene:
+        'A customer says the mixer jar arrived cracked. The marketplace refunds on a photo. You have no record of what was packed, who packed it, or whether the same item is being returned again and again.',
+      cost:
+        'Refunds paid on claims you cannot dispute, and serial returners who stay unnoticed. For fashion and footwear, size and fit alone drive a large share of returns.',
+      fix:
+        'Return reasons are recorded against the item, the packer and the courier. Verity flags items, customers and couriers with unusual return patterns, and the packing check for each order sits on the order record as evidence.',
+      screen: 'returns',
+    },
+    {
+      area: 'Delivery',
+      title: 'Parcels stuck, delayed or lost, and the claim window closes',
+      scene:
+        'A parcel has shown "in transit" for eight days. The customer writes in daily. By the time someone checks the courier portal, the period to raise a loss or damage claim has passed.',
+      cost:
+        'A refund to the customer plus the value of the goods, with no recovery from the courier. One missed claim on a ₹2,500 parcel cancels the margin on about eight good orders.',
+      fix:
+        'Shipments with no movement for a set number of days appear on a list with the customer and value. A claim task with a deadline goes to the person who handles couriers, and the outcome is recorded.',
+      screen: 'shipments',
+    },
+    {
+      area: 'Delivery',
+      title: 'Freight bills do not match what you shipped',
+      scene:
+        'The courier invoice charges for 1.5 kg on a 600 g parcel because of volumetric weight. Nobody compares the invoice to the actual packed weight, so the invoice is simply paid.',
+      cost:
+        'Example arithmetic: ₹18 of overcharge on each of 6,000 parcels is ₹1.08 lakh a month that never shows up as a line anywhere.',
+      fix:
+        'Each shipment records packed weight and dimensions. Verity compares them to the weight billed by the courier and lists the parcels where the difference is above your limit, ready to dispute.',
+      screen: 'shipments',
+    },
+    {
+      area: 'Money',
+      title: 'COD cash is with the courier for weeks and the remittance does not tie',
+      scene:
+        'You shipped 420 COD orders last week. The courier pays in lumps, with a statement that lists some orders and not others. Finance cannot say which orders are still unpaid.',
+      cost:
+        'Working capital sits in a courier account. Parcels delivered but never remitted are quietly written off.',
+      fix:
+        'Every COD order carries an amount due. When a remittance arrives, it is matched against the delivered orders it covers, and the orders delivered but not yet paid are listed by courier and by age.',
+      screen: 'money',
+    },
+    {
+      area: 'Money',
+      title: 'Marketplace payouts are short and nobody knows why',
+      scene:
+        'The payout for the fortnight is ₹4.2 lakh against sales of ₹5.1 lakh. The settlement report is a spreadsheet of 6,000 rows with commission, fixed fee, shipping fee, returns and adjustments.',
+      cost:
+        'Wrong fees, return deductions on orders that were not returned, and penalties that never get disputed. Reconciliation is skipped because it takes days.',
+      fix:
+        'Each payout is checked against the orders it should cover. The gap is split into commission, fees, returns and unexplained, and the unexplained rows are listed as items to raise with the marketplace.',
+      screen: 'money',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Best sellers run out while slow items pile up',
+      scene:
+        'The supplier needs 21 days for the fabric. Your bestselling set has been out for two weeks. In the back room there are 300 pieces of a design that sold 12 last quarter.',
+      cost:
+        'Lost sales on the products that earn the most, and cash locked in stock that will end in a clearance sale.',
+      fix:
+        'Each item has a sales rate and a supplier lead time. Verity shows days of stock left against the lead time and drafts the reorder before the gap opens, with supplier and expected date recorded.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Old stock is never reviewed',
+      scene:
+        'Items bought nine months ago are still on the rack. They were written off in the mind of the buyer and never cleared. A new season design takes their shelf space.',
+      cost:
+        'Money tied up in stock that earns nothing, storage fees if you use a third-party warehouse, and expiry for items with a shelf life.',
+      fix:
+        'Stock is shown by age and by how many units sold in the last 30 and 90 days. Items past your age limit are listed with a suggested action: markdown, bundle or return to supplier.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Customers',
+      title: 'Half the support messages are "where is my order"',
+      scene:
+        'Three people answer chat, calls and marketplace messages. They open four panels to find one parcel. The same customer writes on two channels and gets two answers.',
+      cost:
+        'Support hours spent looking things up rather than fixing problems, and customers who dispute or cancel because they could not get a clear answer.',
+      fix:
+        'The order record shows its status, courier, last movement and refund state in one place, with every message attached. Late orders are flagged before the customer asks.',
+      screen: 'order',
+    },
+    {
+      area: 'People',
+      title: 'Wrong item packed, and no way to see who or why',
+      scene:
+        'In a sale week, temporary staff pack 900 orders a day. A wrong colour goes to a customer and comes back as a return. There is no record of who packed the order.',
+      cost:
+        'Freight both ways, a refund and an unhappy customer, repeated whenever peak load arrives.',
+      fix:
+        'The packing steps for each order are a short checklist on the record, completed by a named person. Wrong-item returns trace back to a packer and a shift, so training goes where it is needed.',
+      screen: 'order',
+    },
+    {
+      area: 'Compliance',
+      title: 'Tax deducted by marketplaces does not match your books',
+      scene:
+        'Marketplaces collect tax at source on your sales. At filing time, your accountant finds the amounts in the portals do not match the settlement reports, and spends days finding why.',
+      cost:
+        'Credit claimed late or lost, and accountant hours billed at month end and again at year end.',
+      fix:
+        'Each order carries its value, channel and the tax collected on it, and the monthly summary by channel matches what the marketplace reports. Differences are listed so the accountant starts from the gaps.',
+      screen: 'money',
+    },
+    {
+      area: 'Owner',
+      title: 'You do not know what each order really earned',
+      scene:
+        'The sales figure looks great. After product cost, packing, freight both ways, marketplace fees, ad spend, returns and cash delays, some products and channels lose money on every order.',
+      cost:
+        'Money keeps going into advertising products that look like winners and are not.',
+      fix:
+        'Each order is costed against its product, freight, fees, returns and the cost of getting the money. The overview shows contribution by product and channel so you can see where to push and where to stop.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '20 to 40%',
+      text: 'estimated average RTO rate for Indian e-commerce, with cash on delivery making up over 60% of returns, according to a fulfilment company.',
+      source: { name: 'Eshopbox', year: '2026', url: 'https://www.eshopbox.com/blog/how-to-reduce-rto-ecommerce-india' },
+    },
+    {
+      figure: '₹32.8 lakh crore',
+      text: 'projected size of India’s e-commerce market by 2030 (US$ 345 billion), from ₹10.56 lakh crore in 2024, with 420 to 440 million online shoppers expected.',
+      source: { name: 'IBEF, citing the Infisum report “Smart Growth in a Fast Market”', year: '2026', url: 'https://www.ibef.org/news/india-s-e-commerce-market-projected-to-reach-us-345-billion-by-2030-dark-stores-expected-to-triple' },
+    },
+    {
+      figure: '0.5%',
+      text: 'GST tax collected at source by marketplaces on the net taxable value of your sales, reduced from 1% from 10 July 2024. A separate 0.1% income tax deduction also applies on gross sales for many sellers.',
+      source: { name: 'Patron Accounting', year: '2024', url: 'https://www.patronaccounting.com/blog/tcs-section-52-ecommerce-gst-explained' },
+    },
+    {
+      figure: '1 Jan 2027',
+      text: 'date from which the Consumer Protection (E-Commerce) Amendment Rules, 2026 take effect, requiring clearer disclosure of returns and refunds, and showing the lowest price of the last 30 days beside any reduced price.',
+      source: { name: 'LiveLaw', year: '2026', url: 'https://www.livelaw.in/consumer-cases/government-amends-e-commerce-rules-to-strengthen-consumer-protection-550184' },
+    },
+  ],
+  factsNote:
+    'The RTO figure is from a fulfilment vendor and is an industry estimate, not audited data. The tax and rules items come from a news report and an accounting firm’s guide, so confirm them with your accountant. They show scale, not what your business will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each built for one job. Channels, couriers, codes and terms are set up the way your team already says them.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Operations / Today',
+      meta: 'All channels, this week',
+      heading: 'The owner’s overview',
+      caption:
+        'Orders, returns, cash still to come and the contribution of each product on one screen, with the things that need a decision listed under it.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Orders shipped', value: '2,310', note: 'across 4 channels' },
+            { label: 'Return and RTO rate', value: '17.8%', note: 'was 13.4% last month' },
+            { label: 'Cash still to come', value: '₹9.4 L', note: 'COD and payouts' },
+            { label: 'Out of stock', value: '11', note: 'items with demand' },
+          ],
+        },
+        { type: 'title', text: 'Contribution per order, after freight, fees and returns' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Cotton kurta set', value: 78, display: '₹212' },
+            { label: 'Steel bottle 1 L', value: 54, display: '₹146' },
+            { label: 'Mixer jar 750 ml', value: 18, display: '₹49', tone: 'muted' },
+            { label: 'Phone case, printed', value: 6, display: '₹16', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'RTO on COD orders to 3 pin codes is 41%. Confirmation call rule not yet set.', action: 'Set rule' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Courier claim window closing', meta: '5 parcels, ₹11,800 total', tag: ['Raise', 'late', 'Raised', 'ok'] },
+            { name: 'Marketplace payout short', meta: '₹38,200 unexplained', tag: ['Open', 'flag', 'Raised', 'info'] },
+          ],
+        },
       ],
     },
     {
-      area: 'Settlements',
-      points: [
-        'Settlement matched against recorded orders',
-        'Unexplained deductions and claims raised',
-        'Recovery against claims filed',
-        'Net realisation by channel',
+      id: 'stock',
+      title: 'Stock',
+      meta: 'Free to sell by channel',
+      heading: 'One stock count behind every channel',
+      caption:
+        'What is on the shelf, what is reserved for open orders, and what is free to list on each channel. Items with mismatched prices or codes show up here too.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'On shelf', 'Reserved', 'Free', 'Price check'],
+          rows: [
+            ['Kurta set, blue M', '6', '4', '2', ['Matches', 'ok']],
+            ['Kurta set, blue L', '3', '3', ['0', 'late'], ['Matches', 'ok']],
+            ['Steel bottle 1 L', '58', '12', '46', ['Website ₹60 lower', 'flag', 'Fixed', 'ok']],
+            ['Mixer jar 750 ml', '14', '2', '12', ['Matches', 'ok']],
+            ['Phone case, printed', '120', '9', '111', ['Matches', 'ok']],
+          ],
+        },
+        { type: 'alert', text: '2 items have different codes on the marketplace and your sheet. Orders may deduct the wrong item.', action: 'Map codes' },
       ],
     },
     {
-      area: 'Fulfilment',
-      points: [
-        'Dispatch against channel commitments',
-        'Picking accuracy and its downstream returns',
-        'Courier performance and failure rates',
-        'Stock sync state and oversell incidents',
+      id: 'returns',
+      title: 'Returns and RTO',
+      meta: 'Received this week',
+      heading: 'Every return, with a reason and a decision',
+      caption:
+        'Returned parcels from refused COD to damage claims, each with a state, the packer and the courier, so good units go back on sale and patterns become visible.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Order', 'Type', 'Courier', 'Reason', 'State'],
+          rows: [
+            ['#48213', 'RTO', 'Delhivery', 'Refused at door', ['Checking', 'flag', 'Back in stock', 'ok']],
+            ['#48190', 'Return', 'Ecom Express', 'Wrong size', ['Resell', 'info']],
+            ['#48177', 'Return', 'Delhivery', 'Jar cracked', ['Claim', 'late', 'Claim raised', 'ok']],
+            ['#48102', 'RTO', 'Shadowfax', 'Not reachable', ['Waiting 5 days', 'late']],
+          ],
+        },
+        { type: 'title', text: 'RTO rate by payment mode' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Cash on delivery', value: 31, display: '31%', tone: 'muted' },
+            { label: 'Prepaid', value: 6, display: '6%' },
+          ],
+        },
       ],
     },
     {
-      area: 'Service',
-      points: [
-        'Contact volume by SKU and listing',
-        'Reasons and resolutions',
-        'Refunds and goodwill credits issued',
-        'Effect of listing changes on contact volume',
+      id: 'shipments',
+      title: 'Shipments and couriers',
+      meta: 'Open parcels',
+      heading: 'Parcels that need chasing, and bills that need checking',
+      caption:
+        'Parcels with no movement, claims with a deadline, and freight bills compared with the weight you packed.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Order', 'Courier', 'Last scan', 'Value', 'Action'],
+          rows: [
+            ['#47990', 'Delhivery', '8 days ago', '₹2,490', ['Raise claim', 'late', 'Claim raised', 'ok']],
+            ['#48004', 'Ecom Express', '6 days ago', '₹1,299', ['Chase', 'flag']],
+            ['#48031', 'Shadowfax', '5 days ago', '₹899', ['Chase', 'flag', 'Moving', 'ok']],
+            ['#48067', 'Delhivery', '4 days ago', '₹3,150', ['Watch', 'info']],
+          ],
+        },
+        { type: 'alert', text: 'Billed weight is above packed weight on 214 parcels this month, ₹38,900 extra.', action: 'Dispute' },
+      ],
+    },
+    {
+      id: 'money',
+      title: 'Cash and settlements',
+      meta: 'COD and marketplace payouts',
+      heading: 'What each channel and courier still owes you',
+      caption:
+        'Expected against received for every payout and COD remittance, with the gap explained row by row and the tax collected at source shown beside it.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Source', 'Expected', 'Received', 'Gap', 'Status'],
+          rows: [
+            ['Marketplace A, fortnight', '₹5.10 L', '₹4.20 L', '₹0.90 L', ['Explained ₹0.52 L', 'flag', 'Raised', 'info']],
+            ['Courier B, COD', '₹3.80 L', '₹3.35 L', '₹0.45 L', ['12 orders unpaid', 'late']],
+            ['Marketplace C, fortnight', '₹2.40 L', '₹2.40 L', '₹0', ['Tied', 'ok']],
+            ['Courier D, COD', '₹1.15 L', '₹0.60 L', '₹0.55 L', ['Not yet due', 'muted']],
+          ],
+        },
+        { type: 'alert', text: 'Tax collected at source in the marketplace report is ₹2,480 higher than your sales imply.', action: 'Check' },
+      ],
+    },
+    {
+      id: 'suppliers',
+      title: 'Reorders and ageing stock',
+      meta: 'Days of stock left',
+      heading: 'Order before the gap, clear before it ages',
+      caption:
+        'Fast items measured against supplier lead time, and slow items measured by age and recent sales.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Days left', 'Supplier lead', 'Supplier', 'Action'],
+          rows: [
+            ['Kurta set, blue', '4', '21 days', 'Jaipur Textiles', ['Order now', 'late', 'Ordered', 'ok']],
+            ['Steel bottle 1 L', '19', '10 days', 'Moradabad Metals', ['Order in 6 days', 'info']],
+            ['Mixer jar 750 ml', '40', '14 days', 'Ludhiana Appliances', ['OK', 'ok']],
+            ['Block-print scarf', '310', '12 days', 'Sanganer Prints', ['Markdown', 'flag', 'Bundled', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Stock older than 180 days', meta: '14 items, ₹3.2 lakh at cost', tag: ['Review', 'flag'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'order',
+      title: 'Order',
+      meta: 'Record',
+      heading: 'One order from click to cash',
+      caption:
+        'Everything support, packing and finance need to know about an order in one place: status, parcel movement, packing check, refund and what it earned.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Order #48177, mixer jar 750 ml',
+          sub: 'Marketplace A, COD, customer in Nagpur',
+          fields: [
+            ['Packed by', 'Sunil, shift B'],
+            ['Courier', 'Delhivery'],
+            ['Last scan', 'Delivered 9 Oct'],
+            ['Return reason', ['Jar cracked', 'flag']],
+            ['Refund', ['Paid ₹1,299', 'info']],
+            ['Courier claim', ['To raise', 'late', 'Raised', 'ok']],
+          ],
+          timeline: [
+            ['9 Oct', 'Delivered, COD ₹1,299 collected'],
+            ['11 Oct', 'Customer reports crack, photo attached'],
+            ['12 Oct', 'Marketplace refund, return picked up'],
+            ['Note', 'Third cracked jar this month from the same shift.'],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Item matches the order', meta: 'Sunil', done: true },
+            { text: 'Bubble wrap and corner guards', meta: 'Sunil', done: true },
+            { text: 'Weight and box size noted', meta: 'Sunil', done: true },
+          ],
+        },
       ],
     },
   ],
-  intelligenceNote:
-    'Verity records operations. Your online store, marketplace integrations and payment processing continue as they are.',
 
-  rolesHeading: 'One operation, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Monday, before and after.',
+  dayLede: 'Orders arrive the same way. What changes is that every event around them leaves a record.',
+  day: [
+    {
+      time: '9:30',
+      before: 'You open four panels to learn what sold overnight and what is out of stock.',
+      after: 'You open Today. Eleven items are out of stock with demand, and four are already on order.',
+    },
+    {
+      time: '11:00',
+      before: 'A campaign goes live. By noon, two channels have sold the last unit.',
+      after: 'Stock reserved across channels hits zero free, and the listing owner is alerted before the third sale.',
+    },
+    {
+      time: '1:00',
+      before: 'A customer writes for the third time about a parcel that stopped moving.',
+      after: 'The parcel was on the stuck list on day four. The claim is raised and the customer was told.',
+    },
+    {
+      time: '4:00',
+      before: 'Returned parcels from last week are still in the corner, unchecked.',
+      after: 'Each has a state. Nine are back on sale, two wait for a claim, one is written off.',
+    },
+    {
+      time: '6:30',
+      before: 'Finance asks why the marketplace payout is ₹90,000 short. No one can say.',
+      after: 'The gap is split into fees, returns and an unexplained part, with the rows to raise.',
+    },
+    {
+      time: 'Month end',
+      before: 'Your accountant spends days matching tax collected at source to settlement reports.',
+      after: 'A channel-wise summary with the differences already listed.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how an order actually moves through your business, build Verity around that, bring your data in, and stay on to keep it right.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend time with you, your operations lead and whoever handles returns and finance. Follow a few orders from click to cash and note every sheet and panel it touches.',
+        you: 'Two to three hours of your time, plus read access to seller panels, courier reports and your stock sheets.',
+        get: 'A written map of your order flow, your channels and couriers, and a ranked list of the leaks we will close first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your items and channel codes, warehouses, couriers, return states, supplier lead times and the rules for RTO, claims and reorders. We also agree how orders, shipments and settlements reach Verity.',
+        you: 'Review the item list and return states with your operations lead. Correct anything we got wrong.',
+        get: 'A working Verity holding your items, channels and rules, ready for your history.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in item masters, open orders, supplier terms, open claims and recent settlement reports. Train packers, support and finance on live orders at their own desks.',
+        you: 'Your sheets and exports in whatever shape they exist. One hour with each role.',
+        get: 'Your stock, returns and open cash in one place, and a team that has handled real orders in it.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Review the first month of returns, claims and payouts with you, adjust the rules, and add channels or warehouses as you grow or run a sale.',
+        you: 'A short monthly review of the numbers.',
+        get: 'A system that keeps pace as channels and volumes change, with someone accountable for it.',
+      },
+    ],
+    bring: [
+      'Your item list with channel codes, even if it is a sheet',
+      'Recent settlement reports from each marketplace',
+      'Courier rate cards and recent freight invoices',
+      'Your return and refund rules as you apply them',
+      'Supplier names, lead times and last purchase prices',
+    ],
+    time: 'About 10 to 12 hours of your own time across the four weeks, mostly in week 1. Your operations lead and finance person need a few more.',
+    after: 'No one has to be hired to run Verity. Packing, returns and receipts are recorded as part of work the team already does.',
+  },
+
+  ai: {
+    heading: 'Ask your business a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own orders, returns, shipment and settlement records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which pin codes have the worst RTO on COD this month?',
+        a: 'Three pin codes account for 29% of RTO losses. All three are above 40% RTO on COD and below 8% on prepaid.',
+        rows: [['Pin code 440001', '44%'], ['Pin code 800014', '41%'], ['Pin code 302012', '40%'], ['All other', '19%']],
+        action: 'Create confirmation-call tasks for open COD orders to these pin codes',
+      },
+      {
+        q: 'Which products lose money after returns and freight?',
+        a: 'Two products earn under ₹20 per order after all costs. The printed phone case earns ₹16 and the mixer jar earns ₹49.',
+        rows: [['Cotton kurta set', '₹212'], ['Steel bottle 1 L', '₹146'], ['Mixer jar', '₹49'], ['Phone case', '₹16']],
+      },
+      {
+        q: 'Which parcels need a courier claim this week?',
+        a: 'Five parcels worth ₹11,800 have had no movement for more than seven days and the claim window closes within three days.',
+        action: 'Assign the claims to the courier desk',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Staff still call couriers and write to customers. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'Free stock of an item hits zero on one channel',
+      then: ['Alert to the person managing listings', 'Other channels checked against reserved units', 'Item shown on the out-of-stock list with demand'],
+    },
+    {
+      when: 'A parcel has no movement for five days',
+      then: ['Added to the stuck list with order value', 'Task to chase the courier', 'Claim task created with a deadline'],
+    },
+    {
+      when: 'A COD order is placed to a high-risk pin code',
+      then: ['Held for a confirmation call', 'Outcome recorded on the order', 'Order released or cancelled'],
+    },
+    {
+      when: 'A returned parcel is received',
+      then: ['Return record opened with reason', 'Checking task to the returns desk', 'Good units added back to free stock'],
+    },
+    {
+      when: 'A marketplace payout or COD remittance arrives',
+      then: ['Matched against the orders it covers', 'Gap split into known and unexplained', 'Unexplained rows listed to raise'],
+    },
+    {
+      when: 'Days of stock fall below supplier lead time',
+      then: ['Reorder drafted with quantity and supplier', 'Approval sent to you or the buyer', 'Expected delivery date recorded'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules an online seller has to keep up with.',
+    lede:
+      'Verity does not give legal or tax advice and does not file anything for you. It keeps the order, return and payment records these rules depend on in order, so your accountant is not rebuilding them from panels.',
+    items: [
+      {
+        name: 'GST tax collected at source',
+        what: 'Marketplaces generally collect 0.5% of the net taxable value of your sales as GST tax at source, in place of the earlier 1% from 10 July 2024. You recover it through your own GST return. Many sellers who supply only within their state through a marketplace may not need GST registration, but inter-state sellers generally do.',
+        how: 'Each order carries its channel, value and tax collected, so a channel-wise summary exists for your accountant to compare with the marketplace report.',
+        source: { name: 'Patron Accounting', url: 'https://www.patronaccounting.com/blog/tcs-section-52-ecommerce-gst-explained' },
+      },
+      {
+        name: 'Income tax deducted by the marketplace',
+        what: 'Marketplaces generally deduct 0.1% of gross sales as income tax on payments to sellers, with a threshold of ₹5 lakh a year for individuals who have given PAN or Aadhaar. The section numbers may change as the new Income-tax Act, 2025 takes effect, so check what applies to you.',
+        how: 'Gross sales by channel and financial year are on one summary, so you can see where you stand against the threshold and match what is deducted.',
+        source: { name: 'Patron Accounting', url: 'https://www.patronaccounting.com/blog/section-194o-tds-ecommerce-guide' },
+      },
+      {
+        name: 'Consumer Protection (E-Commerce) Rules',
+        what: 'The 2026 amendment, effective 1 January 2027, asks for clearer disclosure of return, refund, warranty and delivery details, and for any reduced price to show the lowest price of the previous 30 days. Details for sellers (as opposed to platforms) are best confirmed with an adviser.',
+        how: 'Return and refund terms, price history and complaint records sit on the item and order records, so there is something to show if a customer or regulator asks.',
+        source: { name: 'LiveLaw', url: 'https://www.livelaw.in/consumer-cases/government-amends-e-commerce-rules-to-strengthen-consumer-protection-550184' },
+      },
+      {
+        name: 'Customer data',
+        what: 'Customer names, addresses and phone numbers are personal data. India’s data protection rules were notified in November 2025, with most duties starting over the following 12 to 18 months.',
+        how: 'Customer details live in one permissioned place, with who viewed or changed them recorded, rather than in exports shared on WhatsApp.',
+      },
+    ],
+    note: 'Rules change and differ by situation. Confirm current requirements with your accountant or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A packer does not need to see margins. Finance does not need to edit stock. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Founder',
-      question: 'What is actually profitable?',
-      focus: 'Contribution by SKU and channel after returns and deductions, RTO concentration, settlement realisation.',
-    },
-    {
-      role: 'Operations manager',
-      question: 'What is at risk today?',
-      focus: 'Orders against dispatch deadlines, stock sync, returns to process, courier failures.',
-    },
-    {
-      role: 'Finance',
-      question: 'Are the settlements right?',
-      focus: 'Settlement reconciliation, unexplained deductions, claims raised and recovered, refunds issued.',
-    },
-    {
-      role: 'Catalogue and service',
-      question: 'Which products are causing the load?',
-      focus: 'Contact volume and return reasons by listing, description and sizing issues, actions taken.',
-    },
+    { role: 'Owner', question: 'Which products and channels really make money?', sees: 'Contribution per product and channel, return and RTO rate, cash still to come, stock tied up.' },
+    { role: 'Operations lead', question: 'What is stuck, short or late today?', sees: 'Stuck parcels, free stock by channel, returns waiting, reorders due, packing errors.' },
+    { role: 'Packer', question: 'What do I pack next and how?', sees: 'Open orders for their shift, the packing checklist and any special notes.' },
+    { role: 'Support', question: 'Where is this customer’s order?', sees: 'Order status, courier movement, return and refund state, and past messages.' },
+    { role: 'Finance and accountant', question: 'What has been paid and what is owed?', sees: 'Payouts and COD remittances against orders, gaps, tax collected at source, supplier payables.' },
   ],
 
-  useCasesHeading: 'What e-commerce businesses use Verity for',
-  useCases: [
-    {
-      name: 'Return cause analysis',
-      body: 'Reasons recorded against SKU, listing and region, so a return rate becomes a concentration you can act on.',
-    },
-    {
-      name: 'Settlement reconciliation',
-      body: 'Payouts matched against recorded orders with deductions verified against terms, so unexplained amounts become claims rather than losses.',
-    },
-    {
-      name: 'Cross-channel stock',
-      body: 'One stock position with allocation and sync state per channel, preventing the oversells that cost cancellations and standing.',
-    },
-    {
-      name: 'RTO concentration',
-      body: 'Failed deliveries recorded by region, payment mode and courier, exposing one of the most actionable patterns in the category.',
-    },
-    {
-      name: 'Deadline-driven fulfilment',
-      body: 'The dispatch queue worked by channel commitment rather than by order arrival, avoiding penalties.',
-    },
-    {
-      name: 'True contribution',
-      body: 'Contribution by SKU after returns, shipping and deductions, which is a different ranking from gross revenue.',
-    },
-    {
-      name: 'Service load attribution',
-      body: 'Contacts attached to orders and SKUs, so the small number of listings generating most of the load can be fixed.',
-    },
-    {
-      name: 'Asking about downstream cost',
-      body: 'Plain-language questions across returns, settlements, stock and couriers, with claims and actions raised in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your website and marketplace seller accounts. We agree how orders reach Verity during setup.',
+      'Your courier partners and their panels. Verity records what they report.',
+      'Your accounting software and your accountant.',
+      'WhatsApp and phone for talking to customers and couriers. Staff send, Verity assigns and records.',
+    ],
+    not: [
+      'Run your website, take orders or process payments.',
+      'Send messages to customers or couriers on its own.',
+      'File your GST or income tax returns.',
+      'Replace your accountant or your marketplace support.',
+    ],
+    migration:
+      'We bring your item list, open orders, supplier terms and recent settlements across from the sheets and panels you use now, in stages, so shipping continues while we do it.',
+  },
 
-  migration:
-    'Your online store, marketplace integrations and payment processing continue to run and are mapped during implementation. SKUs, channel listings, stock, open orders, returns and settlement history are brought across, and Verity is introduced as the operational layer.',
-
-  faqHeading: 'Questions e-commerce operators ask',
+  faqHeading: 'Questions online sellers ask.',
   faqs: [
     [
-      'What can AI software do for an e-commerce business?',
-      'Verity AI answers questions from your own order, stock, return and settlement records: where returns are concentrated and why, which marketplace deductions are unexplained, which SKUs are out of sync across channels, where RTO concentrates by region and payment mode. Each answer can become a claim or an action.',
+      'Do I have to move my store or leave my marketplaces?',
+      'No. Your website and marketplace accounts stay where they are. Verity is the operations system behind them, and we agree during setup how orders and reports reach it.',
     ],
     [
-      'Does Verity replace our online store or marketplace integrations?',
-      'No. Your online store, marketplace connections and payment processing continue and are mapped during implementation. Verity records operations — stock across channels, fulfilment, returns, RTO, settlements and service load.',
+      'Can Verity update my stock on every channel by itself?',
+      'Verity holds one stock count and shows what is free to sell on each channel. How that number reaches each channel is agreed during setup. Where it cannot be automatic, it becomes a task for the person who updates listings.',
     ],
     [
-      'How does it help with returns?',
-      'Returns carry a recorded reason and attach to the SKU, listing, region and payment mode, so a return rate resolves into concentrations — a category, a size, a misleading description — that can actually be fixed.',
+      'I am a small seller doing 60 orders a day. Is this for me?',
+      'The leaks are the same at a smaller size, with less spare time to notice them. We set up only what you need, and the four-week process is the same.',
     ],
     [
-      'Can it reconcile marketplace settlements?',
-      'Settlements are matched against your recorded orders and returns with commissions, shipping and penalties verified against channel terms, so unexplained deductions become claims raised inside the window rather than money quietly absorbed.',
+      'Will it reduce my RTO?',
+      'Verity does not change what customers do. It shows where RTO happens by pin code, courier and payment mode, and lets you set rules such as a confirmation call before dispatch. Whether that helps depends on your orders.',
     ],
     [
-      'Does it prevent overselling?',
-      'Stock is held once with allocation and reservation across channel listings and sync state monitored per SKU, so drift is flagged before it produces a cancellation and a marketplace penalty.',
+      'Can it raise courier claims for me?',
+      'It finds the parcels that qualify and creates a claim task with a deadline. Your team raises the claim with the courier and records the result.',
     ],
     [
-      'Can it show true product profitability?',
-      'Contribution is calculated by SKU after returns, shipping, RTO and settlement deductions, which frequently produces a very different ranking from gross revenue by product.',
+      'How does it handle COD cash?',
+      'Each COD order carries an amount due. When a courier remittance arrives, it is matched against the delivered orders it covers, and unpaid orders are listed by courier and age.',
     ],
     [
-      'Does it help with customer service load?',
-      'Service contacts attach to the order and SKU, so the small number of listings generating most contacts is identifiable — and fixing the listing is considerably cheaper than answering the tickets.',
+      'Who can see my sales and customer data?',
+      'Only the people you allow. Access is set by role, so packers, support, finance and your accountant each see what they need, and every change is recorded with who made it and when.',
     ],
     [
-      'Does it handle multi-warehouse fulfilment?',
-      'Warehouses, channels and regions are locations rolling into the business, so allocation, dispatch performance and delivery outcomes are visible per location.',
+      'Can I run it for a sale like Diwali with temporary staff?',
+      'Yes. Temporary packers get a simple role with their own checklist, and you can see errors by person and shift. We plan the busy season with you in the weeks before.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of channels, fulfilment commitments and settlement terms, configuration, migration of SKUs, stock and open orders, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of channels, warehouses and users and what you want set up. Message us and we will give you a clear number after a short conversation about how you sell.',
     ],
   ],
 
-  ctaHeading: 'Start with returns or with settlements.',
-  ctaLede:
-    'Both are margin already lost that most operators cannot break down. Tell us which is bigger for you.',
+  related: ['retail-stores', 'fashion-stores', 'online-marketplaces', 'distributors', 'wholesalers', 'beauty-stores'],
 
-  related: ['retail-stores', 'distributors', 'saas-companies', 'online-marketplaces', 'content-agencies', 'wholesalers'],
+  ctaHeading: 'Start with the money stuck between the order and your bank.',
+  ctaLede:
+    'Tell us how you sell and we will show you the stuck parcels, the unpaid COD orders and the payout gaps it would find, using your own numbers.',
 };

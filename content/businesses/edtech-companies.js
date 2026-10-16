@@ -1,181 +1,667 @@
 export default {
+  schema: 2,
   slug: 'edtech-companies',
   status: 'published',
   plural: 'EdTech companies',
-  subject: 'EdTech business',
+  subject: 'EdTech company',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for EdTech companies | Verity',
+    title: 'EdTech operations software for cohorts, refunds and churn | Verity',
     description:
-      'Verity connects content production cost, learner completion, cohort economics, support load and institutional contracts into one operational system.',
+      'The 14 problems that hurt an Indian EdTech company, from sales promises and refund disputes to late cohorts and inactive learners, and the Verity screens that fix each one.',
     keywords: [
-      'AI software for edtech companies',
-      'edtech operations management software',
-      'content production and learner completion tracking',
-      'cohort economics and institutional contract software',
+      'EdTech operations software India',
+      'EdTech refund and complaint tracking',
+      'learner cohort management',
+      'EdTech churn and inactive learner tracking',
+      'course content production tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'schedule', 'workforce', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for EdTech',
-    headline: 'Enrolment is the number you report. Completion is the number that renews.',
+    eyebrow: 'Verity for EdTech companies',
+    headline: 'The app is built. The trouble is everything the learner meets around it: the sales call, the start date, the refund.',
     lede:
-      'EdTech spends heavily to produce content and is judged on whether learners finish it. Verity records the production cost and the completion it produced.',
-    note: 'Verity runs the company. Your learning platform stays where it is.',
-    panel: {
-      title: 'Company',
-      meta: 'This quarter',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active learners', value: '18,400', note: 'across 42 courses' },
-        { label: 'Completion rate', value: '31%', note: 'range 8% to 74% by course' },
-        { label: 'Content in production', value: '14 courses', note: '5 past their release date' },
-        { label: 'Institutional contracts', value: '22', note: '6 up for renewal' },
-      ],
-      rows: [
-        { name: '5 courses past their production release date', meta: 'Marketing and enrolment commitments already made', active: true },
-        { name: 'Completion at 8% on three courses', meta: 'Against 74% on the best · same platform', active: true },
-        { name: 'Support load concentrated on four courses', meta: 'Content likely the cause', active: true },
-        { name: '6 institutional contracts up for renewal', meta: 'Completion evidence needed', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own company in this shape.',
-    },
+      'An EdTech company sells a promise of learning and then has to keep it with people: counsellors, instructors, mentors, support staff. Most of the damage happens in the gaps between them. A promise made on a sales call. A cohort that starts late. A refund request that waits for a month. Verity gives each learner a single record that every team writes to, so the promise, the delivery and the complaint are in the same place.',
+    oneLine:
+      'One system that follows a learner from the first enquiry to the last class, and shows the team where the promise and the delivery have drifted apart.',
+    note: 'Your app, content and live-class tools stay as they are. Verity runs the operations around them.',
+    screen: 'owner',
+    screenNote: 'cohorts, learners, refunds, content and partners',
   },
 
-  overview: {
-    heading: 'Content is the cost and completion is the product.',
+  today: {
+    heading: 'The product is software. The business around it is still run by people and spreadsheets.',
     paragraphs: [
-      'An EdTech business spends heavily up front to produce a course and then earns from learners who enrol in it. Enrolment is the number that gets reported and completion is the number that determines renewal, referral and institutional confidence — and the gap between them is enormous. A completion rate spanning eight to seventy-four percent across courses on the same platform is a content problem, not a platform one.',
-      'That makes course-level economics the central question: what a course cost to produce, how many learners it attracted, how many finished, and what support burden it generated. Most EdTech companies measure the first two.',
-      'The second characteristic is content production, which behaves like any other project business — briefs, subject experts, production, review and release dates that slip against marketing commitments already made.',
-      'The third is support load, which concentrates on specific courses and is almost always a symptom of the content rather than of the learners.',
-      'The fourth is institutional contracts, where the buyer is an organisation with completion expectations and renewal dates, and evidence is required.',
-      'Verity records production cost and progress, completion by course and cohort, support load by course and institutional delivery.',
+      'A learning app can show every video watched and every quiz taken. What it usually cannot show is the human side: what the counsellor promised, which instructor cancelled a class, whether the refund was approved, which school partner has gone quiet. That side lives in a CRM, a support inbox, a content tracker and several WhatsApp groups.',
+      'When a learner complains, the support agent has to ask three teams to find out what happened. When a cohort slips, the first the founder hears of it is a social media post. When revenue dips, it is hard to tell whether the cause is lead quality, sales conduct, delivery or price.',
+      'This matters more for EdTech than for most businesses, because the business sells trust to parents and students, and regulators have been watching how the sector sells and refunds.',
     ],
+    stack: ['Sales CRM or sheet', 'Support inbox', 'Content production tracker', 'Learner app admin screens', 'WhatsApp groups for each cohort'],
+    stackNote: 'Each is good at its own job. None of them shows one learner’s whole story.',
   },
 
-  terminology: [
-    ['Courses, modules, cohorts', 'Records'],
-    ['Learners, cohorts, institutions', 'Relationships'],
-    ['Content production, review, release', 'Work'],
-    ['Support tickets, escalations', 'Workflows'],
-    ['Subject experts, producers, reviewers', 'People'],
-    ['Contracts, licences, renewals', 'Control'],
-    ['Enrolment, progress, completion', 'Intelligence'],
+  painsHeading: 'Where an EdTech company loses learners, money and trust.',
+  painsLede:
+    'These are the situations founders and operations heads describe. For each: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Sales',
+      title: 'Leads from ads and webinars are called late, or by whoever is free',
+      scene:
+        'A webinar brings in 900 sign-ups on Saturday. By Tuesday, half have been called once and a third not at all. The best-fit leads are mixed in with the rest.',
+      cost:
+        'Example arithmetic: ₹400 to acquire each lead and 900 leads is ₹3.6 lakh. If a third are never called, about ₹1.2 lakh of ad spend produced nothing.',
+      fix:
+        'Each lead is a record with source, class or goal and an owner. Those not called within your limit show on the sales lead’s list, and each call outcome is written down so the next step is clear.',
+      screen: 'leads',
+    },
+    {
+      area: 'Sales',
+      title: 'What the counsellor promised on the call is nowhere in writing',
+      scene:
+        'A parent says the counsellor said classes would start in a week and a mentor would call daily. The counsellor says nothing of the kind. Support has no record of the call.',
+      cost:
+        'Complaints, refunds and bad reviews. Consumer authorities raised concerns in 2022 about aggressive mis-selling to parents by EdTech companies.',
+      fix:
+        'Every sales call ends with a note on the learner’s record: the course, the price, the start date and any promise about mentoring or outcomes. Promises outside your approved list are flagged to the sales lead.',
+      screen: 'leads',
+      source: {
+        name: 'Outlook Business on the Consumer Affairs meeting, July 2022',
+        url: 'https://www.outlookbusiness.com/amp/story/news/edtech-startups-in-india-govt-expresses-concern-over-alleged-malpractices-by-byju-s-other-edtech-companies-edtech-startup-funding-news-209376',
+      },
+    },
+    {
+      area: 'Cohorts',
+      title: 'A cohort fills slowly and then starts late',
+      scene:
+        'A cohort is planned for the 1st with 120 seats. On the 25th, 74 have paid and 20 are waiting for a call. The instructor was told to expect a full room. The start slides by a week, then another.',
+      cost:
+        'Learners who paid and wait become the loudest complainers. A Telangana consumer commission has ordered a refund where classes did not start for weeks.',
+      fix:
+        'Each cohort has a start date, seats, minimum viable size and an instructor. Verity shows paid, pending and waiting learners against the date, and flags the cohort 14 days ahead if it is likely to slip.',
+      screen: 'cohorts',
+    },
+    {
+      area: 'Cohorts',
+      title: 'Instructors cancel, swap or run over, and learners hear last',
+      scene:
+        'A live class is moved at 8 pm for a 9 pm session. The cohort’s WhatsApp group knows. The learners who muted it do not.',
+      cost:
+        'No-shows, missed sessions and a complaint that the platform is disorganised.',
+      fix:
+        'Every session is a record with instructor, time and link. A change creates a task listing the learners affected, and the support team sees the changed sessions that day.',
+      screen: 'cohorts',
+    },
+    {
+      area: 'Content',
+      title: 'A course goes live late because the recording chain has no owner',
+      scene:
+        'Module 6 needs a script, a recording, an edit, a check and an upload. The edit has been "almost done" for nine days. Learners are already at module 5.',
+      cost:
+        'Learners who finish what exists and then wait, so engagement falls exactly where it was growing.',
+      fix:
+        'Each lesson moves through script, recording, edit, quality check and publish, with a named person and a date at each step. The content lead sees which lessons are late and what they block.',
+      screen: 'content',
+    },
+    {
+      area: 'Content',
+      title: 'Freelance instructors and editors are paid per piece and tracked in a sheet',
+      scene:
+        'Twenty freelancers record videos, set questions and edit. Payments are by lesson. A few lessons are paid twice and a few are forgotten until the creator asks.',
+      cost:
+        'Overpayment, late payment and the loss of good creators who lose patience.',
+      fix:
+        'Each piece of work is a task against the creator with a rate and a status. Approved work builds a monthly statement, and your accounts team makes the payment.',
+      screen: 'content',
+    },
+    {
+      area: 'Learners',
+      title: 'Learners go inactive and nobody notices until renewal',
+      scene:
+        'A learner paid for twelve months and has not opened a lesson in five weeks. The first contact the company makes is a renewal reminder.',
+      cost:
+        'A learner who has not used the product does not renew and may ask for a refund. In the worst case, they post about it.',
+      fix:
+        'Each learner’s record carries last activity, attendance and progress as they reach Verity during setup. Those silent beyond your limit go to a mentor’s list with their goal and last topic.',
+      screen: 'learners',
+    },
+    {
+      area: 'Learners',
+      title: 'Mentors and teaching assistants carry uneven loads',
+      scene:
+        'One mentor has 140 learners and another has 60. The first replies in two days, the second in two hours. Learners compare notes in the group.',
+      cost:
+        'Unequal service, and the busiest mentors burn out first.',
+      fix:
+        'Learners are assigned to mentors with a load number. Doubt tickets show age and owner, and the lead can rebalance with a few moves.',
+      screen: 'learners',
+    },
+    {
+      area: 'Refunds',
+      title: 'Refund requests wait in an inbox while the learner posts about them',
+      scene:
+        'A parent asks for a refund on day 12. Support forwards the mail to finance, finance asks sales, sales asks the founder. Three weeks later the parent files a consumer complaint.',
+      cost:
+        'A refund that would have been ₹30,000 becomes ₹30,000 plus interest, compensation and legal time. Complaints against EdTech companies have been counted in the hundreds, and surveys have found many learners reporting issues with refunds.',
+      fix:
+        'A refund request is a record with the course, days attended, policy applied and a decision path with a deadline. It shows where it is stuck and how many days it has waited, and a decision is written with its reason.',
+      screen: 'refunds',
+      source: {
+        name: 'Outlook Business, July 2022',
+        url: 'https://www.outlookbusiness.com/amp/story/news/edtech-startups-in-india-govt-expresses-concern-over-alleged-malpractices-by-byju-s-other-edtech-companies-edtech-startup-funding-news-209376',
+      },
+    },
+    {
+      area: 'Refunds',
+      title: 'Complaints from many places are never counted together',
+      scene:
+        'A grievance comes by email, a call, a tweet and a consumer helpline notice. Each is handled by a different person. Nobody can say how many are open or what the common cause is.',
+      cost:
+        'Repeat causes stay unfixed. A regulator or a consumer forum sees a pattern that the company cannot see itself.',
+      fix:
+        'Every complaint, from any channel, becomes one record with its cause, owner, deadline and result. A weekly view shows causes by count so a repeated problem becomes visible.',
+      screen: 'refunds',
+    },
+    {
+      area: 'Money',
+      title: 'Instalments and loan-linked fees fail, and no one follows up',
+      scene:
+        'A learner joined on a monthly instalment plan. The second payment fails twice. The system marks it failed. No human sees it until the third month, when access is cut and the parent complains.',
+      cost:
+        'Revenue stuck and a learner cut off with no warning, which is exactly how complaints start.',
+      fix:
+        'Each plan has instalment dates and status as they reach Verity. A failed or late instalment becomes a task for finance with the learner’s plan and last contact, and access decisions are written down with a reason.',
+      screen: 'refunds',
+    },
+    {
+      area: 'Partners',
+      title: 'School and college partnerships go quiet between pilot and renewal',
+      scene:
+        'A school pilots your platform for one grade. By March nobody has checked how many students used it. The contract renews on 31 March and the principal has not heard from you since August.',
+      cost:
+        'A renewal that should have been won is lost, and the replacement costs a full sales cycle.',
+      fix:
+        'Each partner is a record with contract dates, students enrolled, usage reached and a contact. Partners with falling use or a renewal in 90 days appear on the account owner’s list.',
+      screen: 'partners',
+    },
+    {
+      area: 'Compliance',
+      title: 'Advertised outcomes and learner data practices are not backed by records',
+      scene:
+        'An ad says "1,000 students got placed". Marketing cannot say how many were on the paid course or consented to their name being used. The platform also holds children’s data with no clear consent record.',
+      cost:
+        'The consumer authority fined an EdTech company ₹10 lakh in 2023 for misleading ads about successful candidates it could not substantiate. Education has also been named the most violative sector in advertising reviews.',
+      fix:
+        'Each claim links to the learners behind it, their course, their dates and their consent. Parental consent for children’s data is stored as a record with date and scope, so it can be shown on request.',
+      screen: 'partners',
+      source: {
+        name: 'Storyboard18, January 2026',
+        url: 'https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm',
+      },
+    },
+    {
+      area: 'Owner',
+      title: 'Revenue dips and nobody can say why',
+      scene:
+        'Monthly revenue falls 12%. Marketing blames price, sales blames lead quality, product blames the sales pitch. Each has a dashboard that supports its view.',
+      cost:
+        'Months spent on the wrong fix, and decisions made on the loudest voice.',
+      fix:
+        'Leads, calls, enrolments, cohort starts, activity and refunds are joined on the same learner record. The owner’s page shows where learners are lost, stage by stage, by source and by cohort.',
+      screen: 'owner',
+    },
   ],
 
-  challengesHeading: 'Enrolment is easy to count and completion is what matters.',
-  challengesLede:
-    'EdTech difficulties come from production cost committed ahead of demand and completion nobody attributes.',
-  challenges: [
-    { problem: 'Completion varies enormously and is not attributed', detail: 'One course completes at eight percent and another at seventy-four on the same platform, and the difference is treated as learner behaviour.', outcome: 'Completion is measured per course and cohort against production cost and content structure.' },
-    { problem: 'Production slips against marketing commitments', detail: 'A course release date is committed publicly and the production runs late.', outcome: 'Production is work with stages, owners and a release date, so slippage is visible before the commitment is broken.' },
-    { problem: 'Support load reveals content problems', detail: 'Tickets concentrate on specific courses and are handled as support rather than as content feedback.', outcome: 'Support is recorded against the course and module, so concentration becomes a content decision.' },
-    { problem: 'Course economics are never assembled', detail: 'Production cost, enrolment, completion and support burden exist in four places.', outcome: 'All four attach to the course, so contribution per course is calculable.' },
-    { problem: 'Institutional renewals need evidence', detail: 'An organisation renews on completion and outcome evidence that is assembled by hand each time.', outcome: 'Cohort completion and progress are records, so renewal evidence is an extract.' },
-    { problem: 'Content ages without review', detail: 'Courses remain live long after their material has dated, and nobody owns the review.', outcome: 'Courses carry review dates and performance, so refresh decisions are prompted.' },
+  factsHeading: 'The numbers behind the EdTech sector’s trust problem.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '69%',
+      text: 'of people who had taken online coaching or learning classes reported facing issues, in a LocalCircles survey cited in 2022. Refunds were a repeated complaint.',
+      source: { name: 'Outlook Business, citing LocalCircles', year: '2022', url: 'https://www.outlookbusiness.com/amp/story/news/edtech-startups-in-india-govt-expresses-concern-over-alleged-malpractices-by-byju-s-other-edtech-companies-edtech-startup-funding-news-209376' },
+    },
+    {
+      figure: '147',
+      text: 'consumer complaints against EdTech startups were reported by Consumer Affairs officials at a meeting in June 2022, where aggressive mis-selling to parents was discussed.',
+      source: { name: 'Outlook Business', year: '2022', url: 'https://www.outlookbusiness.com/amp/story/news/edtech-startups-in-india-govt-expresses-concern-over-alleged-malpractices-by-byju-s-other-edtech-companies-edtech-startup-funding-news-209376' },
+    },
+    {
+      figure: '27%',
+      text: 'of all advertising complaints received by the advertising standards body in 2022 were about education, of which 5% were EdTech.',
+      source: { name: 'Storyboard18 on ASCI findings', year: '2026', url: 'https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm' },
+    },
+    {
+      figure: '₹10 lakh',
+      text: 'was the penalty imposed in 2023 by the consumer authority on an EdTech company over misleading advertising for an online coaching programme. The company said it would appeal.',
+      source: { name: 'Storyboard18', year: '2026', url: 'https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm' },
+    },
+  ],
+  factsNote:
+    'The survey and complaint figures are from 2022 and come through a business news report. The advertising figures come from a 2026 news article on a regulator’s findings. They describe the sector, not your company.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each for one job. Course names, cohorts and teams use your company’s own words.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Company / Today',
+      meta: 'October',
+      heading: 'Where learners are won and lost',
+      caption:
+        'Leads, enrolments, cohort health, inactive learners and refunds on one page, with the items needing a decision below. It replaces the Monday dashboard meeting.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Enrolments', value: '412', note: 'from 3,180 leads' },
+            { label: 'Cohorts at risk', value: '3', note: 'may start late' },
+            { label: 'Inactive 14 days', value: '1,126', note: 'of 8,940 learners' },
+            { label: 'Refunds open', value: '29', note: '7 older than 10 days' },
+          ],
+        },
+        { type: 'title', text: 'Where learners drop between lead and day 30' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Lead called in 1 day', value: 71, display: '71%' },
+            { label: 'Enrolled', value: 13, display: '13%' },
+            { label: 'Started the cohort', value: 11, display: '11%' },
+            { label: 'Active at day 30', value: 8, display: '8%' },
+          ],
+        },
+        { type: 'alert', text: 'NEET Foundation cohort starts in 9 days with 74 of 120 seats paid.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Refunds older than 10 days', meta: '7 requests, oldest 19 days', tag: ['Decide', 'late', 'Decided', 'ok'] },
+            { name: 'Partner renewal: Greenfield School', meta: 'Contract ends in 52 days, usage down 40%', tag: ['Call', 'flag'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'leads',
+      title: 'Leads and sales calls',
+      meta: 'Sales team',
+      heading: 'Every lead with its next call and what was promised',
+      caption:
+        'New leads, calls due and the notes from each call, including the price quoted, the start date and any promise made, so support and finance see the same story.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Lead', 'Goal', 'Source', 'Owner', 'Next step'],
+          rows: [
+            ['Anita Rao (parent)', 'Class 10 maths', 'Webinar', 'Varun', ['Call today', 'late', 'Enrolled', 'ok']],
+            ['Imran Qureshi', 'CUET prep', 'Instagram ad', 'Varun', ['Not reached', 'flag']],
+            ['Pooja Singh (parent)', 'Class 8 coding', 'Referral', 'Neha', ['Demo booked', 'info']],
+            ['Dev Malhotra', 'Class 12 NEET', 'Webinar', 'Neha', ['Call today', 'flag', 'Declined', 'muted']],
+          ],
+        },
+        { type: 'alert', text: 'Call note for Pooja Singh promises a refund "on any day". This is not on the approved list.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'cohorts',
+      title: 'Cohorts and sessions',
+      meta: 'Next 30 days',
+      heading: 'Every cohort against its start date',
+      caption:
+        'Seats paid, waiting and open for each cohort, with the instructor, the start date and any session changes that learners need to be told about.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Cohort', 'Start', 'Seats paid', 'Instructor', 'Status'],
+          rows: [
+            ['NEET Foundation, Nov', '24 Oct', '74 of 120', 'Dr. Menon', ['At risk', 'late', 'Going ahead', 'ok']],
+            ['Class 9 Maths, Oct', '18 Oct', '58 of 60', 'Ms. Pillai', ['On track', 'ok']],
+            ['CUET English, Nov', '2 Nov', '31 of 80', 'Mr. D’Souza', ['Slow', 'flag']],
+            ['Coding for kids, Nov', '5 Nov', '44 of 50', 'Ms. Kapoor', ['On track', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Tonight’s Class 9 Maths session moved from 9 pm to 7 pm. 58 learners to be told.', action: 'Notify' },
+      ],
+    },
+    {
+      id: 'learners',
+      title: 'Learner',
+      meta: 'Record',
+      heading: 'One page for every learner',
+      caption:
+        'Plan, cohort, mentor, activity, doubts, payments, promises and complaints in one record that sales, support and mentors all read and write to.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Aditi Joshi, Class 10 (parent: Mrs. Joshi)',
+          sub: 'Maths Mastery, 12 months. Mentor: Kiran',
+          fields: [
+            ['Last active', ['34 days ago', 'late', 'Mentor called', 'ok']],
+            ['Progress', '22% of course'],
+            ['Open doubts', '3, oldest 6 days'],
+            ['Plan', '₹36,000, 6 instalments'],
+            ['Next instalment', ['Failed twice', 'flag', 'Paid', 'ok']],
+            ['Promise on file', 'Weekly mentor call'],
+          ],
+          timeline: [
+            ['15 Oct', 'Instalment 4 failed for the second time. Task to finance'],
+            ['2 Oct', 'Weekly mentor call not made. Mentor on leave'],
+            ['10 Sep', 'Last live class attended'],
+            ['Jun', 'Enrolled by Varun. Promise noted: weekly mentor call'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'content',
+      title: 'Content pipeline',
+      meta: 'Course production',
+      heading: 'Each lesson from script to publish',
+      caption:
+        'Lessons by stage, with the owner and date at each step and what each late lesson holds up, plus the work freelancers have done this month.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Editing',
+              cards: [
+                { title: 'Maths M6: Quadratic equations', meta: 'Editor: Rahul. 9 days in the stage', tag: ['Late', 'late', 'Delivered', 'ok'] },
+                { title: 'CUET English Unit 3', meta: 'Editor: Sneha. Due 22 Oct', tag: ['On time', 'ok'] },
+              ],
+            },
+            {
+              name: 'Quality check',
+              cards: [
+                { title: 'Coding M4: Loops', meta: 'Reviewer: Ms. Kapoor', tag: ['Check', 'flag', 'Passed', 'ok'] },
+                { title: 'NEET Bio Ch. 7 questions', meta: 'Key check pending', tag: ['Check', 'flag'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'refunds',
+      title: 'Refunds, complaints and payments',
+      meta: 'Support and finance',
+      heading: 'Every request with a deadline and a reason',
+      caption:
+        'Refund requests with days attended and the policy applied, complaints from every channel by cause, and failed instalments that need a human.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Request', 'Course', 'Days waiting', 'Policy day', 'Status'],
+          rows: [
+            ['Refund: Mrs. Gupta', 'Maths Mastery', '19', 'Day 12 of 30', ['Decide', 'late', 'Approved', 'ok']],
+            ['Refund: Imran Q.', 'CUET English', '6', 'Day 4 of 14', ['In review', 'flag']],
+            ['Complaint: no mentor call', 'Maths Mastery', '3', 'Open', ['Assigned', 'info']],
+            ['Failed instalment: Joshi', 'Maths Mastery', '2', 'Plan 6', ['Call', 'flag', 'Paid', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Top complaint cause this month: promised mentor call not made (14 cases).', action: 'View' },
+      ],
+    },
+    {
+      id: 'partners',
+      title: 'Partners and claims',
+      meta: 'Schools, colleges and results',
+      heading: 'Partner accounts and the claims you make',
+      caption:
+        'Contract dates and usage for each school or college partner, and, for each advertised result, the learners behind it and their consent.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Partner', 'Students', 'Usage', 'Contract ends', 'Status'],
+          rows: [
+            ['Greenfield School', '420', ['Down 40%', 'late'], '31 Dec', ['Call', 'flag', 'Meeting set', 'ok']],
+            ['Sunrise College', '1,150', '78%', '31 Mar', ['Healthy', 'ok']],
+            ['Pioneer Academy', '260', '51%', '15 Jan', ['Renewal in 90 days', 'info']],
+          ],
+        },
+        { type: 'alert', text: 'Banner claim "1,000 placed": 612 on the paid course, 138 with consent on file.', action: 'Review' },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across production, completion, support and contracts.',
-  modules: [
-    { id: 'records', title: 'Courses, modules and versions', line: 'Each course carries its modules, production cost, release date, version, review date and performance.', why: 'The course is the unit of investment and of completion.', example: 'Completion from eight to seventy-four percent across courses on the same platform.' },
-    { id: 'work', title: 'Content production and release', line: 'Production is work with stages, subject experts, producers, reviewers, cost and a release date.', why: 'Content production is a project business inside the company.', example: 'Five courses past their release date with enrolment commitments made.' },
-    { id: 'relationships', title: 'Learners, cohorts and institutions', line: 'Learners and institutional accounts carry enrolment, progress, completion, support history and contract terms.', why: 'Institutional buyers renew on completion evidence rather than on enrolment.', example: 'Cohort completion evidence assembled for a renewal.' },
-    { id: 'workflows', title: 'Support, escalation and content feedback', line: 'Support tickets carry the course and module, and concentration raises content review.', why: 'Support load is content feedback arriving through the wrong channel.', example: 'Support concentrated on four courses, raised as content review.' },
-    { id: 'people', title: 'Subject experts, producers and reviewers', line: 'Contributors are modelled once with effort recorded against production.', why: 'Production cost is mostly people, including external subject experts.', example: 'Production cost per course including external contributor effort.' },
-    { id: 'control', title: 'Contracts, licences and renewals', line: 'One permission model and one audit trail, with institutional contracts, licence terms and renewals recorded.', why: 'Institutional terms differ and renewals need evidence.', example: 'Six contracts up for renewal with completion evidence attached.' },
-    { id: 'intelligence', title: 'Completion, cost and support reporting', line: 'Completion by course and cohort, production cost against enrolment and completion, support load by course, and contract renewal evidence come from the records.', why: 'Course contribution requires all four together and is usually assembled from none of them.', example: 'Contribution per course after production and support cost.' },
-    { id: 'ai', title: 'Ask the company a question', line: 'Verity AI answers from your own course, production, learner and support records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions cross content, learners and support.', example: '"Which courses have the worst completion and the highest support load?" returns the overlap.' },
-    { id: 'communication', title: 'Institutional reporting and feedback', line: 'Reporting, feedback and escalations attach to the institution or course they concern.', why: 'Institutional relationships run on periodic evidence.', example: 'Cohort progress reporting issued and recorded against the contract.' },
-    { id: 'orders', title: 'Enrolments, licences and invoicing', line: 'Enrolments, licence allocations and invoices are recorded against learners and institutions.', why: 'Institutional licensing and individual enrolment behave differently.', example: 'Licences allocated against a contract with utilisation tracked.' },
-    { id: 'locations', title: 'Teams and content units', line: 'Production teams and content units roll into the company with reporting following the same structure.', why: 'Production quality and completion vary by team.', example: 'Completion by producing team and subject area.' },
-    { id: 'suppliers', title: 'External experts and production partners', line: 'External contributors carry engagements, cost, delivery reliability and rights granted.', why: 'Much EdTech content is produced with external subject experts under licence.', example: 'Content rights and their scope recorded against the course.' },
+  dayHeading: 'The same Wednesday, before and after.',
+  dayLede: 'The product does not change. What changes is that every team writes to the learner’s record, so nobody asks the others what happened.',
+  day: [
+    {
+      time: '9:30 am',
+      before: 'Operations opens the CRM, the inbox, the content tracker and a sheet of cohorts.',
+      after: 'One Today page shows 3 cohorts at risk, 7 old refunds and 38 uncalled leads.',
+    },
+    {
+      time: '11:00 am',
+      before: 'A parent calls to say the counsellor promised daily mentoring. Support has no record.',
+      after: 'The call note shows what was said. Support sees the promise and the mentor’s load, and fixes it.',
+    },
+    {
+      time: '1:00 pm',
+      before: 'A refund request is forwarded between sales, finance and the founder.',
+      after: 'The request shows days attended, policy applied and the one person who must decide today.',
+    },
+    {
+      time: '3:00 pm',
+      before: 'An instructor moves a live class by two hours and posts in one group.',
+      after: 'The change creates a task listing every learner affected, and support confirms they were told.',
+    },
+    {
+      time: '5:00 pm',
+      before: 'The content lead asks the editors, one by one, which lessons are late.',
+      after: 'The board shows two late lessons and what they block.',
+    },
+    {
+      time: 'Weekly',
+      before: 'Marketing, sales and product each show a different dashboard and disagree.',
+      after: 'One funnel from lead to day 30 shows where learners are lost, by source and by cohort.',
+    },
   ],
 
-  workflowsHeading: 'Produce, release, complete, renew.',
-  workflowsLede: 'These already happen. Recorded against the course, contribution becomes calculable.',
-  workflows: [
-    { name: 'Content production', steps: ['Course scoped with modules and learning outcomes', 'Subject experts and producers assigned with effort estimated', 'Production stages tracked with a release date', 'Review completed and content approved', 'Release recorded with total production cost'], note: 'Recording production cost against the course is what makes contribution calculable later.' },
-    { name: 'Cohort delivery', steps: ['Cohort enrolled with start date', 'Progress recorded through modules', 'Drop points identified within the course', 'Intervention assigned where cohorts stall', 'Completion recorded against the cohort'], note: 'Drop points within a course are content feedback of the most direct kind.' },
-    { name: 'Support as content feedback', steps: ['Tickets recorded against course and module', 'Concentration identified by module', 'Content review raised where support clusters', 'Content revised and version recorded', 'Support volume compared after the revision'], note: 'A module generating support is usually a module that needs rewriting.' },
-    { name: 'Institutional contract', steps: ['Contract recorded with cohort, licences and expectations', 'Delivery and progress tracked against it', 'Periodic reporting issued from records', 'Renewal raised ahead of the date with evidence', 'Outcome recorded'], note: 'Renewal evidence should be an extract rather than a construction.' },
-    { name: 'Content refresh', steps: ['Course review dates and performance monitored', 'Courses with declining completion identified', 'Refresh scoped with cost and effort', 'Production scheduled and released', 'Performance compared after refresh'], note: 'Courses age and nobody owns the review unless it has a date.' },
-  ],
+  approach: {
+    heading: 'We set it up with you in four weeks, starting with the learner’s journey.',
+    lede:
+      'EdTech teams work fast, so we start with the handoffs where learners get lost, and build outward.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Meet the founders, sales lead, operations head, support lead and content lead. Follow one learner from ad click to refund request, and one cohort from planning to the last class.',
+        you: 'Two to three hours of your time and an hour from each team lead. A sample of recent refunds and complaints.',
+        get: 'A written map of your learner journey, the teams that touch it, and the three or four handoffs we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up courses, cohorts, plans, refund policy steps, sales call note fields, content pipeline stages, partner records and permissions, and build the screens above using your language.',
+        you: 'Review the refund policy steps and the list of promises sales may make. Correct anything we have wrong.',
+        get: 'A working Verity with your courses, cohorts and rules, ready for data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in leads, learners, cohorts, refund and complaint history, and partner contracts from your CRM, sheets and support inbox. We agree how activity data reaches Verity from your app during setup. Train each team on its own screen.',
+        you: 'Exports from the tools you use now, as they are. An hour with each team.',
+        get: 'Your learners and cohorts in Verity and teams that have used it on live cases.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Review the first cohort cycle with you, tune inactivity limits and refund timings, and set up each new course and cohort as you launch.',
+        you: 'A monthly review with the founder or operations head.',
+        get: 'A system that grows with each new course, with a named person responsible for it.',
+      },
+    ],
+    bring: [
+      'Exports of leads and learners from your CRM or sheets',
+      'Your refund and cancellation policy as written, and as applied',
+      'A list of cohorts with dates, seats and instructors',
+      'Recent complaints and refund cases, even in an inbox',
+      'Partner contracts with dates and contacts',
+    ],
+    time: 'About 10 to 14 hours of your own time across the four weeks, mostly in week 1. The sales, support and content leads need a few more.',
+    after: 'No one is hired to run Verity. Teams record the work they already do, and the pages come from those records.',
+  },
 
   ai: {
-    heading: 'Ask what completion is costing.',
-    lede: 'Verity AI reads the same course, production, learner and support records the company creates as it operates. It answers from your own catalogue, respects permissions, and can turn an answer into content reviews.',
-    panelMeta: 'Grounded in your company records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which courses have the worst completion and the highest support load?',
-      'Which courses are past their production release date?',
-      'What is contribution per course after production and support cost?',
-      'Where within courses do learners drop out?',
-      'Which institutional contracts need completion evidence for renewal?',
-      'Which courses are past their content review date?',
-      'What did external contributor effort cost by course?',
-      'How does completion compare by producing team?',
-      'Summarise completion and production position.',
+    heading: 'Ask the company a question. Get an answer, not a dashboard to build.',
+    lede:
+      'Verity AI reads your own lead, learner, cohort, refund and content records. Ask in plain language, then turn the answer into tasks.',
+    examples: [
+      {
+        q: 'Which learners have been inactive for 14 days and have an instalment due?',
+        a: '212 learners. 64 have a mentor call overdue, and 31 are in the NEET Foundation cohort.',
+        rows: [['NEET Foundation', '31'], ['Maths Mastery', '84'], ['CUET English', '55'], ['Coding for kids', '42']],
+        action: 'Create mentor calls for the 64 with no call',
+      },
+      {
+        q: 'What are the top three causes of refund requests this month?',
+        a: 'Promised mentor call not made (14), class start delayed (9), content not as described (6).',
+        rows: [['Mentor call not made', '14'], ['Start delayed', '9'], ['Content not as described', '6']],
+        action: 'Ask the operations head for fixes on the top two',
+      },
+      {
+        q: 'Which partners are up for renewal in 90 days and are using it less?',
+        a: 'Two partners: Greenfield School (down 40%) and Pioneer Academy (down 12%).',
+        action: 'Assign account calls',
+      },
     ],
   },
 
-  automationHeading: 'Release dates and completion signals.',
-  automationLede: 'Each runs from the company’s own records at the point the condition is met.',
+  automationHeading: 'The follow-ups that decide whether a learner stays.',
+  automationLede: 'Set once, then they run from your records. Your team still calls and writes, Verity makes sure the right person knows when.',
   automations: [
-    { trigger: 'A production stage passes its date', steps: ['Release date risk flagged', 'Marketing and enrolment commitments identified', 'Escalation or date revision raised'] },
-    { trigger: 'Support concentrates on a module', steps: ['Concentration flagged with ticket reasons', 'Content review assigned', 'Support volume compared after revision'] },
-    { trigger: 'A cohort stalls at a module', steps: ['Drop point identified with cohort size', 'Content or intervention review raised', 'Completion tracked afterwards'] },
-    { trigger: 'An institutional contract approaches renewal', steps: ['Completion and progress evidence assembled', 'Renewal conversation assigned', 'Outcome recorded'] },
-    { trigger: 'A course passes its review date', steps: ['Performance and completion attached', 'Refresh decision assigned', 'Outcome recorded against the course'] },
+    {
+      when: 'A lead has not been called within your limit',
+      then: ['Shown on the sales lead’s list', 'Reassigned if the owner is away', 'Outcome recorded: enrolled, thinking or no'],
+    },
+    {
+      when: 'A cohort is 14 days from start with seats below the minimum',
+      then: ['Flagged to operations', 'Waiting learners listed with dates', 'Decision recorded: go, delay or merge'],
+    },
+    {
+      when: 'A learner is inactive past your limit',
+      then: ['Added to the mentor’s list with last topic', 'Call task created', 'Reason noted when reached'],
+    },
+    {
+      when: 'A refund request is received',
+      then: ['Days attended and policy worked out', 'Routed to the one decision-maker with a deadline', 'Decision and reason recorded'],
+    },
+    {
+      when: 'An instalment fails or is late',
+      then: ['Task to finance with plan and last contact', 'Access decision recorded with reason', 'Plan updated once resolved'],
+    },
+    {
+      when: 'A partner contract is 90 days from its end',
+      then: ['Usage summary attached', 'Task to the account owner', 'Renewal or exit recorded'],
+    },
   ],
 
-  intelligenceHeading: 'What the leadership can see.',
-  intelligenceLede: 'Course-level economics rather than platform-level totals.',
-  intelligence: [
-    { area: 'Completion', points: ['Completion by course, cohort and institution', 'Drop points within courses', 'Completion against production investment', 'Trend after content revision'] },
-    { area: 'Production', points: ['Cost per course including external contributors', 'Stage progress against release dates', 'Slippage and its causes', 'Review dates and refresh decisions'] },
-    { area: 'Support', points: ['Load by course and module', 'Reasons and their concentration', 'Effect of content revision on volume', 'Cost to serve by course'] },
-    { area: 'Commercial', points: ['Contribution per course after production and support', 'Institutional contracts and licence utilisation', 'Renewal outcomes against completion evidence', 'Enrolment against completion by channel'] },
-  ],
-  intelligenceNote: 'Verity records the company around the product. Your learning platform and content delivery continue as they are.',
+  rules: {
+    heading: 'The rules an EdTech company has to keep up with.',
+    lede: 'Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order.',
+    items: [
+      {
+        name: 'Consumer protection and refunds',
+        what: 'Consumer commissions have ordered refunds and compensation to learners where classes were not delivered as promised, and the consumer authority has taken action against misleading education advertising. The right to a refund depends on your policy, the facts and the order of the forum.',
+        how: 'Each refund request keeps the promise made, the delivery record and the decision, with dates, so a case can be answered quickly.',
+        source: { name: 'Storyboard18, January 2026', url: 'https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm' },
+      },
+      {
+        name: 'Misleading coaching advertisement guidelines, 2024',
+        what: 'Guidelines issued by the consumer authority in November 2024 bar false claims about selection rates, ranks, job security, courses, faculty, fees and refunds. They also require written consent to use a successful candidate’s name or photo, and they cover people who endorse coaching.',
+        how: 'Every claim links to the learners behind it, their course and dates, and a consent document.',
+        source: { name: 'DT Next, November 2024', url: 'https://www.dtnext.in/news/national/centre-issues-guidelines-to-crack-down-on-misleading-ads-by-coaching-centres-811047' },
+      },
+      {
+        name: 'Advertising standards body code',
+        what: 'The advertising standards body reviews complaints about ads and has found education to be among the most violative sectors. Its code applies to claims about outcomes, guarantees and testimonials.',
+        how: 'Ad claims and the evidence for them sit on one record, with the date each was checked.',
+        source: { name: 'Storyboard18, January 2026', url: 'https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm' },
+      },
+      {
+        name: 'Children’s data and consent',
+        what: 'India’s data protection law, with rules notified in November 2025, generally requires verifiable parental consent for children’s data and limits tracking and targeted ads aimed at children. Duties start in stages, so check dates and exemptions with your adviser.',
+        how: 'Parental consent is a record with date and scope. Access to learner data is by role, with views and changes recorded.',
+      },
+    ],
+    note: 'Rules change and differ by case. Confirm current requirements with your legal adviser or the relevant authority.',
+  },
 
-  rolesHeading: 'One catalogue, four views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Everyone sees the same learner, through their own window.',
+  rolesLede: 'A freelance editor does not need to see a parent’s phone number. Sales does not need to edit a refund decision. Each role opens on what it needs.',
   roles: [
-    { role: 'Founder', question: 'Which courses actually work?', focus: 'Contribution per course after production and support, completion by course, institutional renewals.' },
-    { role: 'Content lead', question: 'What needs producing or fixing?', focus: 'Production stages against release dates, support concentration by module, courses past review date.' },
-    { role: 'Learning or success lead', question: 'Where are cohorts stalling?', focus: 'Drop points within courses, cohort completion, intervention outcomes, institutional progress.' },
-    { role: 'Support lead', question: 'Where is the load coming from?', focus: 'Tickets by course and module, reasons, effect of revisions, cost to serve.' },
+    { role: 'Founder or CEO', question: 'Where are we losing learners and why?', sees: 'The funnel from lead to day 30 by source and cohort, refund causes, cohorts at risk, partner renewals.' },
+    { role: 'Sales lead', question: 'Who is not being called, and what was promised?', sees: 'Lead ageing, call outcomes, promises outside the approved list, enrolment by counsellor.' },
+    { role: 'Operations head', question: 'Are cohorts starting and running on time?', sees: 'Cohorts against start dates, session changes, mentor load, content pipeline.' },
+    { role: 'Support and mentors', question: 'What happened with this learner?', sees: 'The learner’s whole record: promises, activity, doubts, payments and complaints.' },
+    { role: 'Finance', question: 'What is owed and what is going back?', sees: 'Refund decisions waiting, failed instalments, creator statements, partner invoices due.' },
   ],
 
-  useCasesHeading: 'What EdTech companies use Verity for',
-  useCases: [
-    { name: 'Course-level contribution', body: 'Production cost, enrolment, completion and support load assembled per course, which is the only honest measure of whether a course works.' },
-    { name: 'Production against release dates', body: 'Content production as staged work, so slippage is visible before a public commitment is broken.' },
-    { name: 'Support as content feedback', body: 'Tickets recorded against course and module, so concentration becomes a content decision rather than a support burden.' },
-    { name: 'Drop point analysis', body: 'Progress recorded through modules, so where learners stop is a specific module rather than a general completion rate.' },
-    { name: 'Institutional renewal evidence', body: 'Cohort completion and progress as records, so renewal evidence is an extract rather than a construction.' },
-    { name: 'Content refresh discipline', body: 'Review dates and performance on the course, so ageing content is refreshed rather than left live.' },
-    { name: 'Asking across content and learners', body: 'Plain-language questions spanning production, completion and support, with reviews raised in the same step.' },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your learning app and video hosting. We agree how activity and attendance data reaches Verity during setup.',
+      'Your live-class tool. Verity records each session and who needs to be told of changes.',
+      'Your payment gateway and any loan partners. Verity records plan and status, it does not collect money.',
+      'Your accountant and legal adviser.',
+    ],
+    not: [
+      'Host courses, videos or live classes.',
+      'Take course payments or sell courses online.',
+      'Send messages to learners on its own.',
+      'Give legal advice on refunds or advertising.',
+    ],
+    migration:
+      'We bring in leads, learners, cohorts, refund history and partner contracts from your CRM, sheets and support inbox, in stages, so teams carry on working while it happens.',
+  },
 
-  migration: 'Your learning platform and content delivery continue and are mapped during implementation. Courses with production cost, cohorts and completion history, institutional contracts and support history are brought across.',
-
-  faqHeading: 'Questions EdTech teams ask',
+  faqHeading: 'Questions EdTech founders ask.',
   faqs: [
-    ['Does Verity replace our learning platform?', 'No. The platform, content delivery and learner experience continue and are mapped during implementation. Verity records the company around them — production cost, course economics, completion, support load and institutional contracts.'],
-    ['What can AI software do for an EdTech company?', 'Verity AI answers questions from your own course, production, learner and support records: which courses have the worst completion and the highest support load, which are past their release date, what contribution looks like per course, where learners drop out. Each answer can become a content review.'],
-    ['Why focus on completion rather than enrolment?', 'Because enrolment is the number that gets reported and completion is the number that renews, refers and satisfies institutional buyers. A completion range from eight to seventy-four percent across courses on one platform is a content signal, not a learner one.'],
-    ['How does it handle content production?', 'Production is work with stages, subject experts, producers, cost and a release date, so slippage is visible before a marketing commitment is broken and cost is recorded against the course it produced.'],
-    ['Why treat support as content feedback?', 'Because it concentrates on specific modules. A module generating disproportionate support is usually a module that needs rewriting, and treating the tickets as a support burden fixes nothing.'],
-    ['Can it help with institutional renewals?', 'Cohort completion and progress are records, so the evidence an institutional buyer wants at renewal is an extract rather than something assembled by hand each time.'],
-    ['Does it track content ageing?', 'Courses carry review dates and performance, so declining completion on ageing content prompts a refresh decision rather than remaining live indefinitely.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of course structures, production process and contract terms, configuration, migration of courses, cohorts and contracts, then an ongoing operations partnership.'],
+    [
+      'We already have a CRM and a helpdesk. Why add Verity?',
+      'Those tools handle one team each. Verity gives each learner a single record that sales, support, mentors and finance all use, so a refund or complaint is not a hunt through three systems. We agree how data moves between them during setup.',
+    ],
+    [
+      'Does Verity replace our learning app?',
+      'No. Your app delivers lessons. Verity runs the operations around it: leads, promises, cohorts, content production, refunds and partners.',
+    ],
+    [
+      'Can it track learner activity from our app?',
+      'It can hold activity data such as last active date and progress once we agree how it reaches Verity during setup. It does not read your app on its own.',
+    ],
+    [
+      'Can it send reminders to inactive learners?',
+      'Not by itself. It builds the list and assigns the call or message to a person, then records the outcome.',
+    ],
+    [
+      'How does it help with refund disputes?',
+      'It keeps the promise made, the days attended, the policy applied and the decision with a reason, in one record. That makes a case quicker to answer, but whether a refund is due depends on your policy and the facts.',
+    ],
+    [
+      'We sell to schools as well. Is that covered?',
+      'Yes. Partner schools and colleges are records with contract dates, student counts and usage, and renewals in 90 days appear on the account owner’s list.',
+    ],
+    [
+      'Who can see learner and parent data?',
+      'Only the people you allow. Access is by role, children’s data can be restricted further, and every view and change is recorded with who made it and when.',
+    ],
+    [
+      'How soon will we see something useful?',
+      'The uncalled-lead list, cohort start risk and old-refund list work as soon as your data is loaded, usually in weeks 3 to 4. Churn and funnel trends improve over a cohort cycle.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of teams, learners and courses you want set up. Message us and we will give you a clear number after a short conversation about how your company runs.',
+    ],
   ],
 
-  ctaHeading: 'Start with contribution per course.',
-  ctaLede: 'It usually reorders which courses look successful. Tell us how production cost is tracked today.',
+  related: ['coaching-institutes', 'test-preparation-centres', 'skill-training-institutes', 'language-institutes', 'ai-companies', 'app-developers'],
 
-  related: ['saas-companies', 'skill-training-institutes', 'universities', 'content-agencies', 'coaching-institutes', 'language-institutes'],
+  ctaHeading: 'Start with the learners who are about to complain.',
+  ctaLede:
+    'Tell us how your company runs and we will show you the late cohorts, the old refund requests and the silent learners, using your own numbers.',
 };

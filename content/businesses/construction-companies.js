@@ -1,552 +1,673 @@
 export default {
+  schema: 2,
   slug: 'construction-companies',
   status: 'published',
   plural: 'construction companies',
   subject: 'construction company',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for construction companies | Verity',
+    title: 'Software for construction companies in India | Verity',
     description:
-      'Verity connects bill of quantities, subcontractor packages, material at site, progress billing, retention, labour and safety records into one operational system.',
+      'See the 15 problems that cost a builder money: unbilled work, site material, subcontractor bills, delays, variations. And the Verity screens that fix each one.',
     keywords: [
-      'AI software for construction companies',
-      'construction project management software',
-      'BOQ and progress billing tracking',
-      'subcontractor and material at site management',
+      'construction company software India',
+      'running account bill and retention tracking',
+      'site material indent and purchase tracking',
+      'subcontractor work order and bill management',
+      'daily progress report for construction sites',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'workforce', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for construction',
-    headline: 'The project was profitable at tender and is not now, and the difference happened in fifty small pieces.',
+    eyebrow: 'Verity for construction companies',
+    headline: 'The work is done on site. The money is decided in the office. Verity joins the two.',
     lede:
-      'Variations done without instruction, material issued and unaccounted, subcontractor claims agreed on site. Verity records each piece where it happens, so the margin does not disappear silently.',
-    note: 'Runs alongside your existing accounting and design tools.',
-    panel: {
-      title: 'Projects',
-      meta: 'All sites · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active projects', value: '9', note: '₹184 Cr contract value' },
-        { label: 'Unbilled progress', value: '₹9.4 Cr', note: 'work done, not certified' },
-        { label: 'Variations unapproved', value: '38', note: '₹4.1 Cr executed' },
-        { label: 'Retention held', value: '₹12.6 Cr', note: '₹2.2 Cr past release date' },
-      ],
-      rows: [
-        { name: '38 variations executed without written instruction', meta: '₹4.1 Cr · recovery at risk', active: true },
-        { name: '₹2.2 Cr retention past its release date', meta: 'No release request raised', active: true },
-        { name: 'Material issued at Site 3 exceeds consumption by 8%', meta: 'Unreconciled for six weeks', active: true },
-        { name: 'Subcontractor claim above certified quantity', meta: '₹64 L · measurement disputed', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own projects in this shape.',
-    },
+      'A construction company makes money on measured work, billed on time, bought at a good price and finished on schedule. At each of these, site and office usually disagree for weeks. Verity puts quantities, material, subcontractors, labour and client bills on one record, so the number is the same on both sides.',
+    oneLine:
+      'One system that knows every site, every quantity done, every material received, every subcontractor bill and every client bill still to be raised or collected.',
+    note: 'No new team needed. Site engineers, purchase, accounts and planning keep their roles and share one record.',
+    screen: 'owner',
+    screenNote: 'projects, sites, contracts and bill schedules',
   },
 
-  overview: {
-    heading: 'Construction margin is lost in small pieces, on site, over months.',
+  today: {
+    heading: 'Most construction firms build on schedule in the head and late on paper.',
     paragraphs: [
-      'A project is tendered against a bill of quantities with a calculated margin. What arrives at the end is a different number, and the difference is almost never one large event. It is fifty small ones: a variation executed on a verbal instruction and never approved, material issued to site and not reconciled against consumption, a subcontractor claim agreed by a site engineer above the certified quantity, retention that nobody requested at the release date.',
-      'Each of those is recoverable at the moment it happens and largely irrecoverable afterwards. A variation without written instruction is disputed months later when the client’s representative has changed. Material unaccounted for six weeks is untraceable. Retention past its release date has to be chased against a client who has moved on.',
-      'The second structural problem is that construction data lives on site and reporting lives in an office. Progress, measurement, material and labour are recorded on paper at the site and reach the office as a monthly summary, which is far too slow for a business where the cost accrues daily.',
-      'The third is that progress billing depends on measurement. Work done and not certified is money earned and unbilled, and it sits on the balance sheet as a project asset while the company funds it.',
-      'Verity records the variation, the measurement, the material movement, the subcontractor package and the retention as they happen, at the site, against the project.',
+      'On site, everyone knows what is happening. The slab is poured. The steel came in short on Tuesday. The electrical subcontractor has started the second floor. The problem is that this knowledge is held by the site engineer, the purchase manager and the project manager, and each holds a different part of it.',
+      'In the office, the client’s running bill is prepared from measurement sheets that are two weeks old. A subcontractor bill is passed without a check against what the site actually measured. Material issues are noted in a register that is reconciled, if at all, at the end of the month.',
+      'So work is done and not billed, materials disappear into wastage nobody tracks, and subcontractors are paid for more than they did. Each is small. Together they decide whether a project makes or loses money.',
     ],
+    stack: ['Measurement sheets in Excel', 'Accounts software or Tally', 'Site WhatsApp groups', 'Drawings in folders and email', 'Material registers on paper'],
+    stackNote: 'Each of these is how a site really works. The cost is that nobody sees the whole project in one place.',
   },
 
-  terminology: [
-    ['Projects, packages, bill of quantities', 'Records'],
-    ['Activities, milestones, progress', 'Work'],
-    ['Materials at site, consumption, wastage', 'Inventory'],
-    ['Subcontractors, suppliers, plant hire', 'Suppliers'],
-    ['Site engineers, supervisors, labour', 'People'],
-    ['Variations, certifications, retention', 'Workflows'],
-    ['Sites, blocks, stores', 'Locations'],
-  ],
-
-  challengesHeading: 'The losses are small, frequent and site-level.',
-  challengesLede:
-    'Construction difficulties come from decisions made on site with commercial consequences recorded nowhere.',
-  challenges: [
+  painsHeading: 'Where a construction company actually loses money.',
+  painsLede:
+    'These are the situations project managers, site engineers, purchase heads and owners describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Variations are executed without instruction',
-      detail:
-        'The client’s representative asks for a change on site, the work is done, and no written instruction is raised. Recovery depends on a conversation nobody recorded.',
-      outcome:
-        'A variation is a workflow step raised at the point of instruction, with the cost attached before the work proceeds.',
+      area: 'Billing',
+      title: 'Work is done but the client bill is raised late',
+      scene:
+        'The second-floor slab was cast on the 4th. The measurement is agreed with the client’s consultant on the 12th. The running account bill goes out on the 28th, because the quantity surveyor had other sites to do first.',
+      cost:
+        'Example arithmetic: a ₹40 lakh running bill raised four weeks late is cash you did not have for four weeks. At a 12 percent borrowing rate that is about ₹37,000, besides the strain on the next payment to your suppliers.',
+      fix:
+        'Each contract item has a quantity and a rate. Site records the quantity done and the consultant’s certification. Verity builds the next running bill from certified quantities and shows the gap between work done and work billed.',
+      screen: 'billing',
     },
     {
-      problem: 'Material at site is not reconciled',
-      detail:
-        'Material is issued to a site and consumed by work, and the two are compared at project end when the difference is untraceable.',
-      outcome:
-        'Issue and consumption are recorded against activities, so the gap is visible weekly rather than at closure.',
+      area: 'Billing',
+      title: 'Retention, advances and deductions are tracked on paper',
+      scene:
+        'The client holds 5 percent retention on every bill. An advance of ₹60 lakh was given at the start and is recovered in instalments. Six months later, nobody is sure what is still held or when it is due to be released.',
+      cost:
+        'Retention is cash earned and not received. Lost or forgotten, it is profit that never reaches the account.',
+      fix:
+        'Retention, advance recovery and other deductions are recorded on every bill. Verity lists what is held per contract, its release date and the condition, such as a defect liability period ending.',
+      screen: 'billing',
     },
     {
-      problem: 'Work done is not certified',
-      detail:
-        'Progress is achieved and measurement lags, so completed work sits unbilled while the company funds it.',
-      outcome:
-        'Measurement and certification are steps against the bill of quantities, so unbilled progress is a current number.',
+      area: 'Billing',
+      title: 'Variations and extra work are done on a verbal word',
+      scene:
+        'The client’s architect asks for a changed finish on the lobby and an extra beam. The site engineer agrees to avoid delay. Three months later the client says it was in scope.',
+      cost:
+        'Example arithmetic: ₹18 lakh of extra work without a written approval is ₹18 lakh you may argue for and not recover.',
+      fix:
+        'A change request is a record: description, quantity, rate, who asked, who approved and the drawing revision. Work against a change that is not yet approved is flagged, and the approved value is added to the contract billing.',
+      screen: 'changes',
     },
     {
-      problem: 'Subcontractor claims exceed certified quantities',
-      detail:
-        'A claim is agreed on site against a measurement nobody has verified, and the difference is discovered at payment.',
-      outcome:
-        'Subcontractor packages carry certified quantities, so a claim above them is an exception rather than a payment.',
+      area: 'Materials',
+      title: 'Material is ordered in a hurry and bought dear',
+      scene:
+        'The site engineer calls the purchase manager at 6 pm: steel is finishing tomorrow. The order goes to the nearest supplier at whatever rate is quoted. The comparison with the contract rate never happens.',
+      cost:
+        'Example arithmetic: a 4 percent premium on ₹50 lakh of urgent purchases a month is ₹2 lakh a month.',
+      fix:
+        'Each site raises an indent against the planned quantity. Purchase sees the quotes next to the last rate paid and the contract allowance, and a purchase order is issued only after approval.',
+      screen: 'materials',
     },
     {
-      problem: 'Retention is never requested',
-      detail:
-        'Retention passes its release date and nobody raises the request, so the money sits with the client indefinitely.',
-      outcome:
-        'Retention release dates sit on the project record, so the request is raised on the date rather than remembered.',
-    },
-    {
-      problem: 'Site information reaches the office monthly',
-      detail:
-        'Progress, labour, material and safety records are kept on site and summarised for the office, by which point the month is fixed.',
-      outcome:
-        'Site records are the same records the office reads, so cost and progress are current rather than reported.',
-    },
-  ],
-
-  modulesLede:
-    'One system across the bill of quantities, the site and the commercial position.',
-  modules: [
-    {
-      id: 'records',
-      title: 'Projects, packages and bill of quantities',
-      line:
-        'Each project is a record with its contract, bill of quantities, packages, rates, milestones, retention terms and drawings.',
-      why:
-        'The bill of quantities is the commercial spine of the project, and everything measured or claimed refers to it.',
-      example:
-        'Certified quantities against the bill, with unbilled progress calculable at any point.',
-    },
-    {
-      id: 'work',
-      title: 'Activities, milestones and progress',
-      line:
-        'Site work is recorded against activities and packages with quantities, dates, owners and states.',
-      why:
-        'Progress is the basis of billing and the measure of schedule, and it belongs on the same record as the quantities.',
-      example:
-        'Nine point four crore of work done and not yet certified, visible weekly.',
-    },
-    {
-      id: 'workflows',
-      title: 'Variations, certification and retention',
-      line:
-        'Variations, measurements, certifications, subcontractor claims and retention release move through defined steps with recorded decisions.',
-      why:
-        'These are the commercial events, and every one of them is currently a conversation on a site.',
-      example:
-        'Thirty-eight variations executed without written instruction, quantified before recovery becomes impossible.',
-    },
-    {
-      id: 'inventory',
-      title: 'Material at site and consumption',
-      line:
-        'Material is held by site with cost and supplier, issued against activities and reconciled against consumption and wastage.',
-      why:
-        'Material is the largest controllable cost and the easiest to lose track of once it leaves the store.',
-      example:
-        'Issue exceeding consumption by eight percent at one site, surfaced at six weeks rather than at closure.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Subcontractors, suppliers and plant hire',
-      line:
-        'Each is a relationship with its packages, rates, certified quantities, claims, performance and balances.',
-      why:
-        'Subcontract packages are where most project cost sits, and the claim process is where it escapes.',
-      example:
-        'A claim above certified quantity held as an exception rather than paid and disputed later.',
-    },
-    {
-      id: 'people',
-      title: 'Site engineers, supervisors and labour',
-      line:
-        'Staff and labour are modelled once, with attendance and deployment recorded against sites and activities.',
-      why:
-        'Labour is a daily cost that accrues on site and reaches the office late.',
-      example:
-        'Labour deployed by activity against the progress it produced.',
-    },
-    {
-      id: 'locations',
-      title: 'Sites, blocks and stores',
-      line:
-        'Sites, blocks and site stores are locations, with material, work and reporting following the same structure.',
-      why:
-        'Everything in construction is site-specific, and comparison across sites requires identical recording.',
-      example:
-        'Material reconciliation and progress by site, comparable across the company.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Cost, progress and commercial reporting',
-      line:
-        'Progress against programme, cost against budget, unbilled and uncertified work, variation recovery, material reconciliation and retention position come from the operational records.',
-      why:
-        'A construction company that reports monthly is managing a business whose cost accrues daily.',
-      example:
-        'Cost against budget by package, current rather than compiled after month end.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the project a question',
-      line:
-        'Verity AI answers from your own project, measurement, material and subcontractor records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The commercially valuable questions are about things executed and not documented.',
-      example:
-        '"Which variations were executed without written instruction?" returns thirty-eight with their value.',
-    },
-    {
-      id: 'control',
-      title: 'Approvals, certification authority and audit',
-      line:
-        'One permission model and one audit trail, with certification and approval authority set by role and value.',
-      why:
-        'Site staff make commitments on the company’s behalf, and authority needs to be explicit.',
-      example:
-        'Certification beyond a site engineer’s authority routed to the project manager and recorded.',
-    },
-    {
-      id: 'communication',
-      title: 'Instructions and site correspondence',
-      line:
-        'Instructions, notices and correspondence attach to the project, package or variation they concern.',
-      why:
-        'Construction disputes are won and lost on contemporaneous records of what was instructed.',
-      example:
-        'A client instruction recorded on the variation at the time it was given.',
-    },
-  ],
-
-  workflowsHeading: 'Commercial events, recorded where they happen.',
-  workflowsLede:
-    'These already occur on your sites. Recorded at the moment, they stay recoverable.',
-  workflows: [
-    {
-      name: 'Variation from instruction to recovery',
-      steps: [
-        'Instruction received on site and recorded against the project',
-        'Scope and cost impact assessed against the bill of quantities',
-        'Written instruction requested and tracked',
-        'Approval obtained before or alongside execution',
-        'Work executed and measured',
-        'Variation certified and billed',
-      ],
-      note:
-        'The written instruction is the entire difference between a variation and a dispute.',
-    },
-    {
-      name: 'Measurement and progress billing',
-      steps: [
-        'Work completed and recorded against bill items',
-        'Joint measurement conducted and recorded',
-        'Certification raised against certified quantities',
-        'Progress bill submitted with supporting measurement',
-        'Certification received and payment tracked',
-        'Retention withheld and recorded with its release date',
-      ],
-      note:
-        'Uncertified completed work is the company funding the client, and it is usually not measured as such.',
-    },
-    {
-      name: 'Material at site',
-      steps: [
-        'Material ordered and received at the site store',
-        'Issue to activities recorded with quantities',
-        'Consumption derived from measured progress',
-        'Issue against consumption reconciled at intervals',
-        'Variance investigated with the activity and supervisor named',
-      ],
-      note:
-        'Reconciling weekly is what makes a variance investigable rather than merely regrettable.',
-    },
-    {
-      name: 'Subcontractor package',
-      steps: [
-        'Package awarded with scope, rates and terms recorded',
-        'Work measured and certified against the package',
-        'Claims received and checked against certified quantities',
-        'Exceptions raised where a claim exceeds certification',
-        'Payment released with retention withheld',
-        'Performance recorded against the package',
-      ],
-      note:
-        'Checking the claim against certification before payment is the control the process usually lacks.',
-    },
-    {
-      name: 'Retention release',
-      steps: [
-        'Retention terms and release dates recorded at award',
-        'Defect liability obligations tracked',
-        'Release request raised on the date',
-        'Client or subcontractor position tracked to settlement',
-        'Release recorded against the project',
-      ],
-      note:
-        'Retention is money already earned that sits uncollected because nobody raised the request.',
-    },
-    {
-      name: 'Project cost review',
-      steps: [
-        'Cost to date pulled by package against budget',
-        'Variations approved, executed and unapproved reviewed',
-        'Material reconciliation variances reviewed',
-        'Forecast cost to complete assembled',
-        'Actions assigned against the divergences',
-      ],
-      note:
-        'The tender margin can still be defended in month three and not in month eleven.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask what was done and not documented.',
-    lede:
-      'Verity AI reads the same project, measurement, material and subcontractor records the sites create as they build. It answers from your own projects, respects permissions, and can turn an answer into instructions and claims.',
-    panelMeta: 'Grounded in your project records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which variations were executed without a written instruction?',
-      'How much completed work is uncertified and unbilled?',
-      'Where does material issued exceed consumption, and by how much?',
-      'Which retention amounts are past their release date?',
-      'Which subcontractor claims exceed certified quantities?',
-      'What is cost against budget by package and project?',
-      'Which activities are behind programme, and what is blocking them?',
-      'Which suppliers deliver late to which sites?',
-      'Summarise the commercial position across active projects.',
-    ],
-  },
-
-  automationHeading: 'The events that must be captured on the day.',
-  automationLede:
-    'Each runs from the project and site records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A variation is recorded on site',
-      steps: [
-        'Cost impact assessed against the bill of quantities',
-        'Written instruction request raised and tracked',
-        'Approval routed before execution where possible',
-        'Escalated if work proceeds without instruction',
-      ],
-    },
-    {
-      trigger: 'Completed work remains uncertified',
-      steps: [
-        'Uncertified value aged against the project',
-        'Measurement task assigned',
-        'Escalated to the commercial manager past threshold',
-      ],
-    },
-    {
-      trigger: 'Material issue diverges from consumption',
-      steps: [
-        'Variance calculated by site and activity',
-        'Investigation assigned to the site supervisor',
-        'Outcome recorded against the activity',
-      ],
-    },
-    {
-      trigger: 'Retention reaches its release date',
-      steps: [
-        'Release request raised against the client or subcontractor',
-        'Defect liability obligations checked',
-        'Settlement tracked and recorded',
-      ],
-    },
-    {
-      trigger: 'A subcontractor claim exceeds certified quantity',
-      steps: [
-        'Claim held as an exception with the certification attached',
-        'Measurement review assigned',
-        'Decision recorded before payment',
-      ],
-    },
-    {
-      trigger: 'An activity falls behind programme',
-      steps: [
-        'Activity flagged with its dependencies',
-        'Cause recorded — material, labour, instruction or access',
-        'Recovery action assigned with an owner',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the commercial manager can actually see.',
-  intelligenceLede:
-    'Cost and progress from site records rather than from a monthly summary.',
-  intelligence: [
-    {
-      area: 'Commercial',
-      points: [
-        'Cost against budget by package and project',
-        'Uncertified and unbilled work by age',
-        'Variations approved, executed and unapproved',
-        'Retention held and past release date',
-      ],
-    },
-    {
-      area: 'Progress',
-      points: [
-        'Progress against programme by activity',
-        'Milestones achieved and at risk',
-        'Causes of delay recorded',
-        'Forecast completion by project',
-      ],
-    },
-    {
-      area: 'Material',
-      points: [
-        'Issue against derived consumption by site',
-        'Variance and its investigation outcomes',
-        'Wastage recorded by activity',
-        'Supplier delivery reliability by site',
-      ],
+      area: 'Materials',
+      title: 'Cement and steel go missing between the gate and the slab',
+      scene:
+        'The delivery challan says 12 tonnes. The weighbridge slip was never attached. The store register shows issues that seem higher than the work done. At month end, a shortage is “wastage”.',
+      cost:
+        'Material is often the largest cost on a project. A few percent of unexplained wastage across a year is lakhs, and nobody can name where it went.',
+      fix:
+        'Receipts are recorded against the purchase order with quantity checked. Issues are recorded against the work item. Verity compares material issued with the quantity of work done and flags a gap beyond the allowed wastage.',
+      screen: 'materials',
     },
     {
       area: 'Subcontractors',
-      points: [
-        'Certified quantity against claims',
-        'Package cost against award value',
-        'Performance and rework by subcontractor',
-        'Retention withheld and released',
-      ],
+      title: 'Subcontractor bills are paid without being checked against measured work',
+      scene:
+        'The shuttering contractor submits a bill for 80 percent of the work. The site engineer thinks it is nearer 65. The bill is settled in a call between the contractor and the director on the last day of the month.',
+      cost:
+        'Example arithmetic: a 10 percent overpayment on a ₹3 crore work order is ₹30 lakh. It is usually early billing, not fraud, but it is still your money gone out before the work.',
+      fix:
+        'Each work order has a bill schedule. A subcontractor bill is compared with the measured quantity and needs the engineer’s sign-off, then the project manager’s, before accounts releases it. Retention and advances are tracked on the same record.',
+      screen: 'subcontractors',
+    },
+    {
+      area: 'Subcontractors',
+      title: 'Small subcontractors wait for payment and walk off site',
+      scene:
+        'A small electrical contractor has been waiting 70 days. His men stop coming on Monday. The project falls two weeks behind for a bill worth ₹4 lakh that was stuck in an approval.',
+      cost:
+        'A delayed site costs far more than the bill. If the subcontractor is a micro or small enterprise, the tax law also generally allows a deduction for amounts owed only when paid within the 45-day limit.',
+      fix:
+        'Every bill shows its age and where it is waiting. Verity lists bills nearing the due date by approver, and a stuck bill is flagged before the contractor stops work.',
+      screen: 'subcontractors',
+      source: {
+        name: 'ClearTax, Section 43B(h) of the Income Tax Act',
+        url: 'https://cleartax.in/s/section-43bh-of-income-tax-act',
+      },
+    },
+    {
+      area: 'Site',
+      title: 'Progress is known by the site engineer, not by the project plan',
+      scene:
+        'The programme says the third floor should be complete by the 20th. The site WhatsApp group shows some photographs. Nobody can say, without a call, whether the plan is four days or four weeks behind.',
+      cost:
+        'Delays found late cost liquidated damages and idle crews. Government project tracking shows how common delay is: in March 2024, 779 of 1,873 central projects tracked were reported delayed.',
+      fix:
+        'Each site files a short daily report: work done by item, labour, material received, issues and photographs. Progress is shown against the programme, and the slip is a number on the project manager’s screen.',
+      screen: 'site',
+      source: {
+        name: 'Outlook Business, MoSPI monthly report, March 2024',
+        url: 'https://www.outlookbusiness.com/news/mospi-says-449-infra-projects-hit-by-cost-overrun-of-rs-501-lakh-crore-in-march',
+      },
+    },
+    {
+      area: 'Site',
+      title: 'Drawing changes do not reach the people doing the work',
+      scene:
+        'Revision C of the column schedule was issued last week. The shuttering gang is working from revision B. Rework is discovered after the concrete is poured.',
+      cost:
+        'Demolition and recasting. A single wrongly poured column can cost days and a lot of material.',
+      fix:
+        'Drawings are records with revision numbers and an issued date. When a revision is issued, Verity assigns an acknowledgement task to the site engineer and the supervisor, and shows which revision each work item is on.',
+      screen: 'changes',
     },
     {
       area: 'Labour',
-      points: [
-        'Deployment by site and activity',
-        'Attendance against deployment plan',
-        'Output against labour deployed',
-        'Cost by activity and package',
+      title: 'Labour headcount, attendance and wages are not matched to work done',
+      scene:
+        'A labour contractor says 60 workers were on site. The gate register says 48. Payment is made for 60. Productivity per worker is not known for any trade.',
+      cost:
+        'Paying for people who were not there, and no basis to say if a gang is slow. Labour is a major part of the cost of a site.',
+      fix:
+        'Attendance is recorded by gang and trade each day. Verity compares headcount with work done per trade, shows productivity, and ties the labour contractor’s bill to recorded days.',
+      screen: 'workforce',
+    },
+    {
+      area: 'Compliance',
+      title: 'The construction workers’ cess and registers are done in a rush',
+      scene:
+        'Construction workers’ welfare cess has to be paid on the cost of construction, certified by an engineer, and a final assessment is due after each work is finished. The cost figure sits in three different files.',
+      cost:
+        'Interest or penalties for late payment, and time spent each time an inspector asks for a register.',
+      fix:
+        'The cost of construction per work is on the project record. Verity shows the cess calculation inputs, the due dates for advance and final assessments, and the worker register for each site.',
+      screen: 'workforce',
+      source: {
+        name: 'Taxmann, BOCW Cess under the Code on Social Security 2020, September 2026',
+        url: 'https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/',
+      },
+    },
+    {
+      area: 'Compliance',
+      title: 'Site safety checks and incidents are not recorded',
+      scene:
+        'A scaffold inspection is meant to be done every week. It was done on three sites and skipped on two. A worker is hurt, and the first question is what the last inspection recorded.',
+      cost:
+        'Injury, stoppage, and a record you cannot produce when asked. Insurance and client contracts also ask for safety logs.',
+      fix:
+        'Inspections are scheduled checklists per site with photographs and sign-off. Missed ones are listed by site, and incidents are records with a cause, an action and an owner.',
+      screen: 'site',
+    },
+    {
+      area: 'Equipment',
+      title: 'Machines sit idle on one site while another hires the same machine',
+      scene:
+        'A concrete mixer is parked at site B. Site A hires one for ₹1,800 a day. Nobody knows what you own, where it is or when it was last serviced.',
+      cost:
+        'Hire charges for equipment you already own, and breakdowns from missed servicing.',
+      fix:
+        'Each machine is an asset record with site, hours, service date and operator. A request on one site first shows what you own that is idle elsewhere, and service dates raise tasks.',
+      screen: 'materials',
+    },
+    {
+      area: 'Cash',
+      title: 'Cash is tight across ten sites and nobody can see by how much',
+      scene:
+        'Two sites are waiting for client payment. Three have vendor bills due this week. The director decides which to pay by looking at the bank balance and asking the accounts head.',
+      cost:
+        'Late payment fees to suppliers, borrowing when you did not need to, and strained relationships on the sites that matter most.',
+      fix:
+        'Bills raised, bills received, payments due to subcontractors and suppliers, and retention held are shown for each project and for the company, by week. The gap is visible before the week starts.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'The profit on a project is known only after it finishes',
+      scene:
+        'The budget was ₹12 crore. Costs have been tracked in four places. At the end, the accounts head says the margin was 3 percent, not the 9 percent in the estimate. By then nothing can be changed.',
+      cost:
+        'A problem you could have fixed at 40 percent of the project is found at 100 percent.',
+      fix:
+        'Each project carries a budget by cost head. Costs from purchases, subcontractor bills and labour are recorded against it as they happen, so the likely margin is a live number from the start.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Some are a few years old and are shown with their dates. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '779 of 1,873',
+      text: 'central sector infrastructure projects of ₹150 crore and above were reported delayed in the ministry of statistics report for March 2024.',
+      source: { name: 'Outlook Business, MoSPI monthly report', year: '2024', url: 'https://www.outlookbusiness.com/news/mospi-says-449-infra-projects-hit-by-cost-overrun-of-rs-501-lakh-crore-in-march' },
+    },
+    {
+      figure: '18.65%',
+      text: 'was the cost overrun on the 449 projects that reported one in the same report, a total of about ₹5.01 lakh crore over the original cost.',
+      source: { name: 'Outlook Business, MoSPI monthly report', year: '2024', url: 'https://www.outlookbusiness.com/news/mospi-says-449-infra-projects-hit-by-cost-overrun-of-rs-501-lakh-crore-in-march' },
+    },
+    {
+      figure: '45 days',
+      text: 'is the longest period for paying a micro or small enterprise supplier under a written agreement. Under Section 43B(h), late payment generally defers your tax deduction until you pay. It applies from 1 April 2024.',
+      source: { name: 'ClearTax, Section 43B(h) of the Income Tax Act', url: 'https://cleartax.in/s/section-43bh-of-income-tax-act' },
+    },
+    {
+      figure: '1%',
+      text: 'of the cost of construction is the welfare cess an employer undertaking building work pays, per a notification dated 8 May 2026, with an advance self-assessment and a final one within 60 days of completion.',
+      source: { name: 'Taxmann, BOCW Cess under the Code on Social Security 2020', year: '2026', url: 'https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/' },
+    },
+  ],
+  factsNote:
+    'The delay and overrun figures are for large central government infrastructure projects, not private building work, so they show how common slippage is, not what your sites will see. The cess and payment rules come from commentary sites and should be confirmed against the notification and the statute.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each built for one job. Names, columns and stages are set up in your company’s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Projects / Today',
+      meta: '7 active sites',
+      heading: 'The owner’s morning view across sites',
+      caption:
+        'Work done against billed, cash due in and out this week, progress against programme and the items that need a decision. It replaces the Monday review where each project manager brings their own sheet.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Done, not billed', value: '₹2.3 cr', note: '3 projects' },
+            { label: 'Due from clients', value: '₹4.1 cr', note: '₹1.2 cr overdue' },
+            { label: 'Payable this week', value: '₹1.6 cr', note: 'to 22 parties' },
+            { label: 'Retention held', value: '₹3.8 cr', note: '5 projects' },
+          ],
+        },
+        { type: 'title', text: 'Progress against programme' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Metro Tower, Pune', value: 92, display: '92% of plan' },
+            { label: 'Riverside Mall, Nagpur', value: 71, display: '71% of plan', tone: 'muted' },
+            { label: 'School block, Indore', value: 100, display: 'On plan' },
+          ],
+        },
+        { type: 'alert', text: 'Riverside Mall is 3 weeks behind. Steel supply is the stated cause.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'billing',
+      title: 'Client billing',
+      meta: 'Metro Tower, Pune',
+      heading: 'Work done, work certified, work billed',
+      caption:
+        'Each contract item with its quantity, certified quantity and amount billed, with retention and advance recovery on each bill. The next running bill is built from certified quantities.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Contract', 'Certified', 'Billed', 'Status'],
+          rows: [
+            ['RCC, 8th floor', '420 m³', '420 m³', '420 m³', ['Billed', 'ok']],
+            ['Brickwork, 6th floor', '1,800 m²', '1,650 m²', '1,200 m²', ['Unbilled 450 m²', 'late', 'Added to bill 14', 'ok']],
+            ['Plaster, 5th floor', '2,600 m²', '1,100 m²', '1,100 m²', ['Billed', 'ok']],
+            ['Waterproofing, terrace', '900 m²', '0', '0', ['Waiting measurement', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Retention held on this contract: ₹71 lakh. First release is due when the defect period ends on 15 March 2027.', action: 'Open' },
+      ],
+    },
+    {
+      id: 'materials',
+      title: 'Materials and equipment',
+      meta: 'All sites',
+      heading: 'From indent to purchase to receipt to use',
+      caption:
+        'What each site has asked for, what was ordered at what rate, what was received and checked, and what was used against the work done. Machines show where they are and when they are due for service.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Material', 'Ordered', 'Received', 'Used vs work', 'Status'],
+          rows: [
+            ['TMT steel, 16 mm', '30 t at ₹62,500', '28 t', '+4% over', ['Query', 'late', 'Checked', 'ok']],
+            ['Cement 53 grade', '600 bags', '600 bags', 'On allowance', ['OK', 'ok']],
+            ['Sand, river', '40 brass', '38 brass', '+1%', ['OK', 'ok']],
+            ['Concrete mixer M-3', 'Site B', 'Idle 9 days', 'Hired 1 at site A', ['Move', 'flag', 'Moved', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Steel received is 2 tonnes short of the challan, and issues are 4% above the quantity of work done.', action: 'Check' },
+      ],
+    },
+    {
+      id: 'subcontractors',
+      title: 'Subcontractors',
+      meta: 'Work orders and bills',
+      heading: 'Bills checked against measured work',
+      caption:
+        'Each work order with the quantity billed against the quantity measured, retention held, who has signed and how old the bill is. Accounts pays only after the chain of sign-offs is complete.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Subcontractor', 'Work order', 'Billed', 'Measured', 'Status'],
+          rows: [
+            ['Shree Shuttering', 'Formwork, Tower', '80%', '66%', ['Query', 'late', 'Revised', 'ok']],
+            ['Om Electricals', 'Wiring, floors 1 to 4', '45%', '44%', ['Engineer signed', 'info', 'Paid', 'ok']],
+            ['Balaji Plumbing', 'Plumbing, block B', '30%', '30%', ['Approved', 'ok']],
+            ['Kumar Tiles', 'Flooring', '55%', '55%', ['38 days old', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Om Electricals bill is 38 days old and waiting on the project manager. The contractor is a small enterprise.', action: 'Open bill' },
+      ],
+    },
+    {
+      id: 'workforce',
+      title: 'Labour and registers',
+      meta: 'Riverside Mall, Nagpur',
+      heading: 'Who was on site, doing what',
+      caption:
+        'Attendance by gang and trade, the days on which the labour contractor is billing and the registers a site has to keep. Productivity per trade comes from work done divided by recorded days.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Gang', 'Trade', 'Recorded', 'Billed', 'Status'],
+          rows: [
+            ['Ramesh gang', 'Masons', '48', '60', ['12 extra', 'late', 'Corrected', 'ok']],
+            ['Suresh gang', 'Carpenters', '32', '32', ['OK', 'ok']],
+            ['Imran gang', 'Bar benders', '24', '24', ['OK', 'ok']],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Worker register updated for the month', meta: 'Site office', done: true },
+            { text: 'Welfare cess working for this work', meta: 'Cost certified by engineer', done: false },
+            { text: 'Weekly scaffold inspection', meta: 'Missed last Friday', done: false },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'site',
+      title: 'Daily site report',
+      meta: 'Metro Tower, Pune',
+      heading: 'One short report from every site, every day',
+      caption:
+        'Work done by item, labour, material received, hold-ups and photographs. The project manager compares it with the programme without a phone call.',
+      blocks: [
+        {
+          type: 'list',
+          items: [
+            { name: '8th floor slab: shuttering complete, steel 60% tied', meta: 'Engineer: Prakash, 14 Oct, 18 photos', tag: ['On plan', 'ok'] },
+            { name: 'Lift shaft waterproofing waiting for material', meta: 'Hold-up logged, purchase notified', tag: ['Hold-up', 'late', 'Resolved', 'ok'] },
+            { name: 'Weekly scaffold inspection', meta: 'Due Friday, not done on 2 of 7 sites', tag: ['Overdue', 'flag', 'Done', 'ok'] },
+          ],
+        },
+        { type: 'alert', text: 'Programme: 8th floor slab is 3 days behind. Cause: steel short delivery.', action: 'Open' },
+      ],
+    },
+    {
+      id: 'changes',
+      title: 'Drawings and changes',
+      meta: 'All projects',
+      heading: 'Revisions acknowledged, extra work approved',
+      caption:
+        'Each drawing revision with who has acknowledged it, and each change request with its value, approval status and the work done against it.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Waiting for client approval',
+              cards: [
+                { title: 'Lobby finish change', meta: '₹7.4 lakh, work started', tag: ['Not approved', 'late', 'Approved', 'ok'] },
+                { title: 'Extra beam, 5th floor', meta: '₹3.1 lakh', tag: ['Pending', 'flag'] },
+              ],
+            },
+            {
+              name: 'Drawings issued',
+              cards: [
+                { title: 'Column schedule, rev C', meta: 'Site engineer not yet acknowledged', tag: ['Not read', 'flag', 'Read', 'ok'] },
+                { title: 'MEP layout, rev B', meta: 'Acknowledged by all', tag: ['Done', 'ok'] },
+              ],
+            },
+            {
+              name: 'Approved, ready to bill',
+              cards: [
+                { title: 'Additional waterproofing', meta: '₹5.2 lakh', tag: ['Add to bill', 'info', 'Billed', 'ok'] },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
-  intelligenceNote:
-    'Verity holds project, site and commercial records. Design, drawing management and accounting continue in your existing systems.',
 
-  rolesHeading: 'One project, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Wednesday, before and after.',
+  dayLede: 'What changes is not the building. It is that every quantity, delivery and bill leaves a record, and the record tells the next person it is their turn.',
+  day: [
+    {
+      time: '9:30',
+      before: 'You ring the project managers to find out which site is behind and why.',
+      after: 'You open the Today screen. Riverside Mall is three weeks behind, with steel as the reason.',
+    },
+    {
+      time: '11:00',
+      before: 'The site asks for urgent steel. Purchase calls the nearest supplier.',
+      after: 'The indent shows the last rate paid. Purchase gets two quotes and the approval takes minutes.',
+    },
+    {
+      time: '1:00',
+      before: 'A truck of steel arrives. The challan is signed and the weighbridge slip is not attached.',
+      after: 'Receipt is recorded against the order. The 2-tonne shortfall is flagged that afternoon.',
+    },
+    {
+      time: '3:30',
+      before: 'The shuttering contractor’s bill reaches you for signature, with no measurement.',
+      after: 'It reaches you after the engineer’s sign-off, with billed against measured shown side by side.',
+    },
+    {
+      time: '5:00',
+      before: 'The client asks for a changed finish and the engineer says yes on the phone.',
+      after: 'It is logged as a change request with value, and the work waits for approval or is flagged.',
+    },
+    {
+      time: 'Month end',
+      before: 'The running bill is built from measurement sheets that are two weeks old.',
+      after: 'Certified quantities are already on the bill, with retention and advance recovery shown.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your sites are planned, bought for and billed, set Verity up around that, bring your data in, then stay on so it keeps working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you, a project manager, the purchase head and accounts. Visit a site, follow one bill from measurement to payment, and see where quantities, purchases and subcontractor bills are recorded today.',
+        you: 'Two to three hours of your time, and an hour each from a project manager, purchase and accounts. Access to a contract, a running bill and a subcontractor work order.',
+        get: 'A written map of your company: projects, contract items, cost heads, approval chain, and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up projects and sites, contract items and rates, budgets by cost head, indent and purchase approval, subcontractor work orders and bill checks, daily report formats, change request flow and roles.',
+        you: 'Check the setup with a project manager and the purchase head. Tell us where a rule is wrong.',
+        get: 'A working Verity with your own projects, items and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your active projects, contract items, vendor and subcontractor lists, open orders and bills to date from your sheets and software. Train site engineers on the daily report on a real site.',
+        you: 'Your sheets and registers as they stand. An hour with each site team.',
+        get: 'Your projects, orders and bills inside Verity, and site teams that have filed real reports.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on through the first running bills and the first month end. Tune the wastage allowances, approval limits and reports, and add new projects as you win them.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps pace with each new project, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'The contract and bill of quantities for each active project',
+      'Your latest running bills and the retention held',
+      'Subcontractor work orders and the bills paid so far',
+      'Your vendor list with usual rates for steel, cement and aggregates',
+      'Your list of sites with the team on each',
+    ],
+    time: 'About 10 to 14 hours of your own time across the four weeks, mostly in week 1. Project managers, purchase and accounts need a few more each.',
+    after: 'No extra staff are hired to run Verity. Quantities, receipts and bills are recorded as the work happens, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your sites a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own contract, site, material and bill records. Ask in plain language, then turn the answer into tasks for the right people. It respects who is allowed to see what.',
+    examples: [
+      {
+        q: 'How much work is done but not yet billed, by project?',
+        a: '₹2.3 crore is certified but not billed across three projects. The largest is Metro Tower at ₹1.4 crore.',
+        rows: [['Metro Tower', '₹1.4 cr'], ['Riverside Mall', '₹0.6 cr'], ['School block', '₹0.3 cr']],
+        action: 'Assign bill preparation to each quantity surveyor',
+      },
+      {
+        q: 'Which sites are using more steel than the work done allows?',
+        a: 'Two sites are over their allowance: Riverside Mall by 4 percent and Metro Tower by 2 percent.',
+        action: 'Raise a check on each site',
+      },
+      {
+        q: 'Which subcontractor bills are older than 30 days?',
+        a: 'Seven bills are older than 30 days. Three are from small enterprises and are close to 45 days.',
+        rows: [['Om Electricals', '38 days'], ['Kumar Tiles', '38 days'], ['Gupta Paints', '33 days']],
+        action: 'Send to the approvers today',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups that fall between site and office.',
+  automationLede: 'Set once, then they run from your records. People still make the calls and send the bills. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'Quantity is certified on site',
+      then: ['Added to the next running bill', 'Billed value updated against contract', 'Quantity surveyor told it is ready'],
+    },
+    {
+      when: 'An indent is raised by a site',
+      then: ['Compared with planned quantity', 'Quotes shown beside the last rate paid', 'Order released after approval'],
+    },
+    {
+      when: 'Material is received',
+      then: ['Checked against the order', 'Shortfall flagged to purchase', 'Stock updated for the site'],
+    },
+    {
+      when: 'A subcontractor bill is submitted',
+      then: ['Compared with measured quantity', 'Sent to the engineer, then the project manager', 'Held from payment until both sign'],
+    },
+    {
+      when: 'A drawing revision is issued',
+      then: ['Acknowledgement task to site engineer and supervisor', 'Work items marked with the revision', 'Unread revisions listed daily'],
+    },
+    {
+      when: 'A weekly inspection is not logged',
+      then: ['Listed by site', 'Task to the site engineer', 'Photographs and sign-off recorded when done'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a construction company has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your accountant is not rebuilding them from site registers.',
+    items: [
+      {
+        name: 'Construction workers’ welfare cess',
+        what: 'An employer doing building or other construction work generally pays a welfare cess on the cost of construction, with an advance self-assessment and a final one within 60 days of completing each work. A May 2026 notification is reported to set it at 1 percent.',
+        how: 'The certified cost of construction for each work sits on the project record, with the due dates and the register for each site.',
+        source: { name: 'Taxmann, BOCW Cess under the Code on Social Security 2020', url: 'https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/' },
+      },
+      {
+        name: 'Labour codes and worker records',
+        what: 'The four labour codes are reported to have taken effect on 21 November 2025. Contractors and principal employers have duties on registration, wages and records for site workers, which depend on headcount and state rules.',
+        how: 'Gang attendance, trade and days are recorded each day, so the registers are built from records, not from memory.',
+      },
+      {
+        name: 'Payment to micro and small suppliers',
+        what: 'Under Section 43B(h) of the Income Tax Act, amounts owed to micro and small enterprises generally need to be paid within 45 days under a written agreement, or 15 days without one, for the deduction to be allowed in the same year.',
+        how: 'Every subcontractor and supplier bill shows its age and whether the party is a micro or small enterprise, so due dates are visible.',
+        source: { name: 'ClearTax, Section 43B(h) of the Income Tax Act', url: 'https://cleartax.in/s/section-43bh-of-income-tax-act' },
+      },
+      {
+        name: 'Contract terms: retention, defect liability and delay damages',
+        what: 'Your contracts set retention, advance recovery, liquidated damages for delay and the defect liability period. These terms decide when money is released or deducted.',
+        how: 'Each term is recorded on the contract, and the dates that trigger them show on the project screen.',
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your accountant, your lawyer and the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A site engineer should not see company profit. Accounts should not approve measured work. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Managing director',
-      question: 'Are the projects still profitable?',
-      focus: 'Cost against budget by project, variation recovery, uncertified work, retention position.',
-    },
-    {
-      role: 'Commercial manager',
-      question: 'What is at risk of not being recovered?',
-      focus: 'Variations without instruction, uncertified progress, subcontractor claims above certification, retention past release.',
-    },
-    {
-      role: 'Project manager',
-      question: 'Is the site on programme?',
-      focus: 'Activities against programme, blockers and causes, labour and material at site, instructions outstanding.',
-    },
-    {
-      role: 'Site engineer',
-      question: 'What am I recording today?',
-      focus: 'Work completed and measured, material issued, instructions received, labour deployed.',
-    },
-    {
-      role: 'Procurement',
-      question: 'What is required and who is late?',
-      focus: 'Material requirements from programme, supplier delivery reliability, orders outstanding, site stock.',
-    },
+    { role: 'Owner or director', question: 'Which project is making money and which needs cash?', sees: 'Done and billed, cash due in and out, progress against plan, retention held and projected margin by project.' },
+    { role: 'Project manager', question: 'What is behind and what is waiting for me?', sees: 'Programme against actual, subcontractor bills for sign-off, change requests, hold-ups and site reports.' },
+    { role: 'Site engineer', question: 'What do I record and receive today?', sees: 'Daily report, indents, receipts, measurements, drawing revisions to acknowledge. Not company margin.' },
+    { role: 'Purchase head', question: 'What is needed, from whom and at what rate?', sees: 'Indents, quotes beside last rates, orders, receipts and shortfalls, vendor history.' },
+    { role: 'Accounts', question: 'What do we bill, collect and pay?', sees: 'Running bills, retention, subcontractor and supplier bills ready to pay, ageing and weekly cash.' },
   ],
 
-  useCasesHeading: 'What construction companies use Verity for',
-  useCases: [
-    {
-      name: 'Variation capture',
-      body: 'Instructions recorded on site with a written instruction requested and tracked, which is the entire difference between a recoverable variation and a dispute.',
-    },
-    {
-      name: 'Uncertified work visibility',
-      body: 'Completed work measured against the bill of quantities, so money earned and unbilled is a current number rather than a year-end surprise.',
-    },
-    {
-      name: 'Material reconciliation',
-      body: 'Issue against derived consumption reconciled at intervals, so a variance is investigable while the activity is still fresh.',
-    },
-    {
-      name: 'Subcontractor claim control',
-      body: 'Claims checked against certified quantities before payment rather than disputed after it.',
-    },
-    {
-      name: 'Retention recovery',
-      body: 'Release dates on the project record with requests raised on the date, recovering money that otherwise sits with the client.',
-    },
-    {
-      name: 'Site records as office records',
-      body: 'Progress, labour, material and instructions recorded once at the site and read directly by the office, replacing a monthly summary.',
-    },
-    {
-      name: 'Certification authority',
-      body: 'Approval and certification limits by role and value, so commitments made on site are within authority and attributable.',
-    },
-    {
-      name: 'Asking about the commercial position',
-      body: 'Plain-language questions across variations, measurement, material and claims, with actions assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your accounting software or Tally for the books. We agree how data reaches Verity during setup.',
+      'Your scheduling tool, if the planning team uses one. We map it during setup.',
+      'Your drawings and design tools. Verity tracks the revision and who has acknowledged it.',
+      'Your accountant, who still prepares your returns, and your lawyer for contracts.',
+    ],
+    not: [
+      'Produce engineering drawings or estimates.',
+      'Send bills or messages to clients on its own.',
+      'File returns or the welfare cess for you.',
+      'Run payroll or give legal advice.',
+    ],
+    migration:
+      'We bring your projects, contract items, vendors, orders and bills across from the sheets and software you use now, project by project, so sites keep working while it happens.',
+  },
 
-  migration:
-    'Design, drawing management and accounting continue to run and are mapped during implementation. Projects, bills of quantities, packages, subcontractors, site stores and open variations are brought across, and Verity is introduced as the site and commercial layer.',
-
-  faqHeading: 'Questions construction companies ask',
+  faqHeading: 'Questions construction companies ask.',
   faqs: [
     [
-      'What can AI software do for a construction company?',
-      'Verity AI answers questions from your own project, measurement, material and subcontractor records: which variations were executed without written instruction, how much completed work is uncertified, where material issued exceeds consumption, which retention is past its release date. Each answer can become an instruction request or a claim.',
+      'Will my site engineers actually use it?',
+      'It only works if the daily report and receipts are recorded, so we make that quick, on the phone they already carry. Each engineer gets something back: a clear list of indents, drawings to read and bills waiting, so it saves them chasing.',
     ],
     [
-      'Does Verity replace our accounting or design software?',
-      'No. Accounting, design and drawing management continue and are mapped during implementation. Verity holds the project, site and commercial records — bill of quantities, progress, measurement, variations, material, subcontract packages and retention.',
+      'Does Verity replace our accounting software?',
+      'No. Your accountant keeps the books. Verity holds the quantities, orders, bills and approvals that the ledger needs, and we agree how data reaches Verity during setup.',
     ],
     [
-      'How does it help with variations?',
-      'An instruction received on site is recorded against the project with its cost impact assessed, and a written instruction is requested and tracked before or alongside execution. A variation without a contemporaneous record is the most common recoverable loss in construction.',
+      'Can it make our client bill?',
+      'It builds the quantities and amounts for the next running bill from certified work, with retention and advances. Your team checks and sends the bill, and the payment is then recorded.',
     ],
     [
-      'Can it show uncertified work?',
-      'Completed work is recorded against bill items and measurement is a tracked step, so work done and not yet certified is a current figure — which is the company funding the client and is rarely measured as such.',
+      'We have sites in three cities. Is that supported?',
+      'Yes. Each site is a location in one system. Projects, vendors and subcontractors are shared, and the owner sees every site side by side.',
     ],
     [
-      'Does it reconcile material at site?',
-      'Material is issued to activities and consumption is derived from measured progress, so issue against consumption is reconciled at intervals rather than at project closure when a variance is untraceable.',
+      'How does it deal with unapproved extra work?',
+      'Every change is a record with a value and an approval status. Work done against a change that is not yet approved is flagged, so the argument happens before the work, not after.',
     ],
     [
-      'Can it control subcontractor claims?',
-      'Packages carry certified quantities, so a claim exceeding certification is held as an exception for measurement review before payment rather than paid and disputed afterwards.',
+      'Can it track our own machines?',
+      'Yes. Each machine is an asset record with its site, hours and service date. A request on one site first shows idle machines you own elsewhere. It does not use machine sensors.',
     ],
     [
-      'Does it track retention?',
-      'Retention terms and release dates are recorded at award and the release request is raised on the date, recovering money that otherwise remains with the client because nobody asked.',
+      'Who can see company and project financials?',
+      'Only the people you allow. Access is set by role. Site engineers do not see margin, accounts do not approve measured work, and every change is recorded with who made it and when.',
     ],
     [
-      'Can site staff use it?',
-      'Site records are the same records the office reads — progress, measurement, material issue, instructions and labour — which removes the monthly summary and the lag that goes with it.',
+      'Can we start with one project?',
+      'Yes, and most do. We set up one live project first, run a full billing cycle, and add the others once it works.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how projects are run and measured, configuration of bills of quantities and authority limits, migration of active projects and packages, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of projects, sites and users, and on what you want set up. Message us and we will give you a clear number after a short conversation about how your company runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the variations nobody instructed in writing.',
-  ctaLede:
-    'They are recoverable now and will not be in six months. Tell us how instructions are recorded on site today.',
+  related: ['contractors', 'real-estate-developers', 'building-material-suppliers', 'home-builders', 'architecture-firms', 'facility-management'],
 
-  related: ['contractors', 'real-estate-developers', 'building-material-suppliers', 'architects', 'property-management', 'manufacturers'],
+  ctaHeading: 'Start with the work done and not yet billed.',
+  ctaLede:
+    'Tell us how your company runs and we will show you the unbilled work, the material gaps and the old subcontractor bills it would find, using your own numbers.',
 };

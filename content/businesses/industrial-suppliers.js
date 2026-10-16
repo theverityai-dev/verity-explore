@@ -1,181 +1,668 @@
 export default {
+  schema: 2,
   slug: 'industrial-suppliers',
   status: 'published',
   plural: 'industrial suppliers',
-  subject: 'industrial supplier',
+  subject: 'industrial supply business',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for industrial suppliers | Verity',
+    title: 'Software for industrial suppliers and MRO dealers | Verity',
     description:
-      'Verity gives industrial suppliers one system for specification search, breakdown urgency, dead stock, rate contracts and plant customer accounts.',
+      'The 14 leaks in an industrial supply business: cold quotes, slow plant payments, wrong parts, missing test certificates, lost rebates and stock-outs, and the fix for each.',
     keywords: [
-      'AI software for industrial suppliers',
-      'industrial supplies management software',
-      'spare parts catalogue and specification software',
-      'MRO supply and rate contract software',
+      'industrial supplier software India',
+      'MRO dealer quotation and order tracking',
+      'bearings fasteners tools distributor software',
+      'customer rate contract and PO tracking',
+      'test certificate and dispatch documents tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'orders', 'suppliers', 'logistics', 'ai'],
 
   hero: {
     eyebrow: 'Verity for industrial suppliers',
-    headline: 'Forty thousand part numbers, and the one that matters is the one a plant is stopped for.',
+    headline: 'The factory needs the part by Thursday. Verity makes sure you quoted it right, have it, and get paid for it.',
     lede:
-      'Industrial supply is a large, slow-moving catalogue answering urgent, specific questions. Verity makes "do you have this exact part" a fast and accurate answer.',
-    note: 'Verity runs the supply business. Accounting continues where it is.',
-    panel: {
-      title: 'Counter',
-      meta: 'Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active part numbers', value: '41,200', note: '68% moved once this year' },
-        { label: 'Enquiries today', value: '186', note: '31 marked breakdown' },
-        { label: 'Quoted not converted', value: '44%', note: 'no reason recorded' },
-        { label: 'Stock value idle', value: '₹1.7 Cr', note: 'no movement in 18 months' },
-      ],
-      rows: [
-        { name: '31 breakdown enquiries today', meta: 'Plant stopped, answer needed in minutes', active: true },
-        { name: '₹1.7 Cr in parts unmoved for 18 months', meta: 'Bought for a customer who stopped ordering', active: true },
-        { name: '44% of quotations not converted', meta: 'Lost on price, stock or response time unknown', active: true },
-        { name: '6 rate contracts expiring this quarter', meta: 'Plant accounts at renewal', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own counter in this shape.',
-    },
+      'An industrial supplier lives on part numbers, quotes, purchase orders and the plant’s payment cycle. A wrong part, a lost enquiry or a missing test certificate costs the order and sometimes the account. Verity keeps the enquiry, quote, order, stock, documents and dues of every customer in one place.',
+    oneLine:
+      'One system that knows every enquiry, every quote and its follow-up, every rate contract, every part in stock, and what each plant owes you and for how long.',
+    note: 'Your accounting software and your brand portals stay. Verity holds the enquiries, orders, documents and dues around them.',
+    screen: 'owner',
+    screenNote: 'plants, quotes, stock and brands',
   },
 
-  overview: {
-    heading: 'A slow catalogue serving urgent demand.',
+  today: {
+    heading: 'A catalogue of thousands, a dozen engineers, and a lot of it in email.',
     paragraphs: [
-      'An industrial supplier holds tens of thousands of part numbers of which most move rarely. Sixty-eight per cent moving once in a year is not poor management — it is the nature of maintenance supply, where the value is being able to answer a specific technical question quickly rather than turning stock over fast.',
-      'The second characteristic is that a large share of demand is urgent. Thirty-one breakdown enquiries in a day are plants that have stopped, where the answer needed is whether the exact part exists, where it is and how fast it can arrive. Response time, not price, decides most of these.',
-      'The third is specification. Parts are identified by manufacturer number, equipment fit, dimension and material, and an equivalent is only an equivalent if someone can prove it. Matching by specification rather than description is what makes the catalogue usable.',
-      'The fourth is that dead stock has a history. One point seven crore unmoved for eighteen months was usually bought for a customer who has since stopped ordering, and knowing which customer it was is the route to clearing it.',
-      'The fifth is rate contracts with plant customers, which fix prices and terms for a period and come up for renewal on a date somebody has to notice.',
-      'Verity holds the catalogue by specification, prioritises breakdown demand, and connects stock to the customers and contracts behind it.',
+      'Most industrial suppliers carry thousands of lines across a few brands: bearings, fasteners, hoses, valves, cutting tools, safety gear, electricals. Enquiries come by phone, email and WhatsApp from plant purchasers and maintenance engineers, often urgent, often with only a part number or a photograph.',
+      'The knowledge is in people. One senior salesman knows which bearing replaces the discontinued one. The store keeper knows which shelf has the odd size. Another colleague knows which plant accepts what delivery document. When any of them is away, the quote is slower and the chance of a wrong part goes up.',
+      'The money side is slower still. Plants pay on their own cycle, rebates from the brand arrive late if at all, and slow-moving parts sit in the store while a fast one runs out. Margins are thin, so each of these has a visible cost.',
     ],
+    stack: ['Email threads with quotes', 'Brand price lists and portals', 'Accounting software or Tally', 'Excel of rate contracts', 'Store register', 'Engineers’ phones'],
+    stackNote: 'All of them useful. None of them can tell you that a plant owes ₹14 lakh, past 90 days, and just sent an urgent enquiry.',
   },
 
-  terminology: [
-    ['Parts, equivalents, specifications', 'Inventory'],
-    ['Enquiries, quotations, orders', 'Orders'],
-    ['Plants, maintenance teams, purchase departments', 'Relationships'],
-    ['Rate contracts, approved vendor status', 'Control'],
-    ['Manufacturers, importers, principals', 'Suppliers'],
-    ['Counter staff, field sales, stores', 'People'],
-    ['Delivery, urgency, breakdown response', 'Logistics'],
+  painsHeading: 'Where an industrial supply business actually loses money.',
+  painsLede:
+    'These are the situations industrial suppliers describe most often. For each: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Enquiries',
+      title: 'Urgent enquiries answered late, or not at all',
+      scene:
+        'A maintenance engineer emails at 9 a.m. for a bearing that has failed. It lands in one person’s inbox. He is at a customer. By the time someone replies, the plant has called your competitor.',
+      cost:
+        'Breakdown orders go to whoever answers first. An unanswered enquiry is a lost order and sometimes a lost vendor listing.',
+      fix:
+        'Every enquiry becomes a record with the plant, the contact, items and a response time. Anything unanswered past your limit goes to the next person, and the open list shows who owns what.',
+      screen: 'quotes',
+    },
+    {
+      area: 'Quotes',
+      title: 'Quotes sent and never followed up',
+      scene:
+        'Forty quotes went out last week. Nobody knows which were read, which were won and which went to the other supplier. The salesman remembers the big ones only.',
+      cost:
+        'Example arithmetic: if 40 quotes a week average ₹60,000 and you win 25%, the 30 you do not win are ₹18 lakh of enquiries. If a follow-up call lifts even 3 of them to a win, that is ₹1.8 lakh a week.',
+      fix:
+        'Each quote has a status and a follow-up date. Verity lists quotes due for a call, with the plant’s history, and records the outcome and the reason you lost, so patterns show up.',
+      screen: 'quotes',
+    },
+    {
+      area: 'Catalogue',
+      title: 'The wrong part is quoted or sent',
+      scene:
+        'The plant asks for “6205 bearing”. There are three variants: sealed, shielded, open. The quote says one, the stock is another, and the part that arrives does not fit.',
+      cost:
+        'Returns, a second dispatch, a delayed breakdown fix and a purchaser who stops trusting your word.',
+      fix:
+        'Each part is a record with brand, specification, size, alternatives and supersessions. A quote line pulls from the record, and a salesman sees the variants side by side before he commits.',
+      screen: 'catalogue',
+    },
+    {
+      area: 'Pricing',
+      title: 'Brand prices change and quotes stay on the old list',
+      scene:
+        'The brand raises prices on the 1st. Quotes from the last two weeks were on the old list, and the plant places the order on the 12th at the old price.',
+      cost:
+        'You sell below your new cost and the margin on that order is gone, sometimes the whole of it.',
+      fix:
+        'Brand price lists are loaded with effective dates. A quote shows its validity, and an order against an expired quote waits for a decision, with the current cost and the old price beside it.',
+      screen: 'catalogue',
+    },
+    {
+      area: 'Pricing',
+      title: 'Rate contracts kept on paper and quietly crossed',
+      scene:
+        'A plant has an annual rate contract on fasteners, valid until March. A new salesman quotes spot prices. Another sells at the contract rate after it has lapsed.',
+      cost:
+        'Contract abuse in either direction. Sell below and you lose margin, sell above and the plant complains.',
+      fix:
+        'Contracts are records with items, rates, validity and quantity caps. The order screen applies the live contract and shows what is left, and a lapsing contract creates a renewal task weeks before the end.',
+      screen: 'catalogue',
+    },
+    {
+      area: 'Credit',
+      title: 'Plants pay late and the cash sits in invoices',
+      scene:
+        'A large plant pays at 90 days, sometimes 120. A small workshop pays at 15 but takes the credit anyway. Your own supplier wants payment in 30.',
+      cost:
+        'One analysis of industrial distribution says 52% of B2B payments in industrial hubs are overdue past 90 days and distributor margins rarely exceed 5 to 8%. Long credit eats the margin on every sale.',
+      fix:
+        'Each plant has terms, a limit and an ageing record. Verity shows dues by bill and age, logs the purchaser or accounts person to call, and puts a hold flag on new orders when a plant is over limit.',
+      screen: 'credit',
+      source: {
+        name: 'UNICbiz analysis, via Devdiscourse, May 2026 (vendor)',
+        url: 'https://www.devdiscourse.com/article/business/3916401-indias-45-day-msme-payment-rule-exposes-structural-gap-in-industrial-supply-chain-finance',
+      },
+    },
+    {
+      area: 'Credit',
+      title: 'Payment chasing depends on one person’s relationship',
+      scene:
+        'Only one executive knows how to get the invoice through the plant’s vendor portal. When he leaves, a dozen bills are stuck for lack of the right PO number.',
+      cost:
+        'Invoices rejected for a missing PO or GRN number are re-raised, and payment slips by weeks.',
+      fix:
+        'The bill record holds the customer PO, delivery note, GRN number and the submission status. Pending submissions are listed with the plant’s process notes, so any colleague can pick one up.',
+      screen: 'credit',
+    },
+    {
+      area: 'Orders',
+      title: 'POs do not match quotes, and invoices do not match POs',
+      scene:
+        'The plant’s PO shows a rate lower than your quote. Nobody notices until the invoice is raised and the plant refuses to pay the difference.',
+      cost:
+        'A debit note, a credit note and a month’s delay. The margin on that order is gone.',
+      fix:
+        'A customer PO is matched line by line to the quote and the contract rate on arrival. A difference is flagged for a salesman’s decision before the order is accepted, not after the bill is rejected.',
+      screen: 'orders',
+    },
+    {
+      area: 'Orders',
+      title: 'Test certificates and documents missing at dispatch',
+      scene:
+        'A consignment of high-tensile fasteners reaches the plant without the mill test certificate. The inward quality team rejects it, and your van is back on the road.',
+      cost:
+        'A wasted trip, a delayed plant job and a quality note against your name on the vendor list.',
+      fix:
+        'Each order line lists the documents the plant needs: test certificate, datasheet, batch number, material code. The order cannot move to dispatched until each required document is attached.',
+      screen: 'orders',
+    },
+    {
+      area: 'Orders',
+      title: 'Partial deliveries and back orders lost in the follow-up',
+      scene:
+        'You send 60 of 100 pieces and promise the rest in a week. The week passes, the supplier is late, and the plant calls.',
+      cost:
+        'Trust. A plant that has to chase you for a promised delivery looks at other vendors.',
+      fix:
+        'The order keeps the open quantity as a back order with a promised date and a supplier purchase order behind it. A date at risk goes to the salesman before the customer calls.',
+      screen: 'orders',
+    },
+    {
+      area: 'Stock',
+      title: 'Fast movers run out and slow movers pile up',
+      scene:
+        'A common V-belt size is out for ten days. The odd size bought for one customer in 2022 is still on the shelf.',
+      cost:
+        'A missed sale for the fast item and cash locked in the slow one. Both happen when minimum levels are set once and never checked.',
+      fix:
+        'Each part carries a reorder level, the lead time of its supplier, and sales history. A short list shows what will run out before the next delivery, and another shows parts that have not moved in your chosen months.',
+      screen: 'stock',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Brand rebates, targets and claims tracked only at year end',
+      scene:
+        'The brand’s annual rebate depends on hitting a purchase target by quarter. Nobody tracks progress. Also, a batch of defective bearings was returned under warranty, but the credit note never came.',
+      cost:
+        'A rebate missed by a small gap, or a warranty credit written off, is real money for a business on thin margins.',
+      fix:
+        'Each brand has its target, purchase to date and days left. Warranty claims are records with the batch, the customer complaint and the stage, from raised to credited.',
+      screen: 'brands',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Brand and supplier payments and the small supplier rule',
+      scene:
+        'A local manufacturer of gaskets, a small enterprise, is owed for 70 days while the brand distributor with strict terms is paid on the day.',
+      cost:
+        'Under the MSME payment rule, a bill to a micro or small supplier paid after the allowed days is generally deductible only when paid. Late payments can raise your tax bill and strain supply.',
+      fix:
+        'Supplier bills carry due dates and a flag for micro and small suppliers. The payables list sorts by due date and the flag, so payments go out in the order that matters.',
+      screen: 'brands',
+      source: {
+        name: 'ClearTax, Section 43B(h)',
+        url: 'https://cleartax.in/s/section-43bh-of-income-tax-act',
+      },
+    },
+    {
+      area: 'Owner',
+      title: 'You cannot say which plants and brands really make money',
+      scene:
+        'Sales are up, but which plant is worth keeping? A plant that buys ₹40 lakh a year but pays at 110 days and negotiates every rate may earn less than a small workshop that pays on time.',
+      cost:
+        'Time and capital go to accounts that look big and earn little.',
+      fix:
+        'For each plant and brand Verity shows margin after the cost of credit days, discount given, returns and claims. The owner’s screen shows the five accounts that need attention today.',
+      screen: 'owner',
+    },
   ],
 
-  challengesHeading: 'A catalogue too large to know and demand too urgent to research.',
-  challengesLede:
-    'Industrial supply difficulties come from breadth of range meeting urgency of need.',
-  challenges: [
-    { problem: 'Finding the exact part takes too long', detail: 'The catalogue is searched by description and the correct match depends on who is at the counter.', outcome: 'Parts are held with manufacturer numbers, specifications, equipment fit and equivalents.' },
-    { problem: 'Breakdown enquiries are handled like ordinary ones', detail: 'An urgent enquiry sits in the same queue as a routine quotation.', outcome: 'Urgency is a property of the enquiry, so breakdown demand is prioritised and measured.' },
-    { problem: 'Lost quotations have no recorded reason', detail: 'Nearly half of quotations do not convert and nobody knows whether it was price, stock or speed.', outcome: 'Quotation outcomes carry a reason, making the loss pattern addressable.' },
-    { problem: 'Dead stock is disconnected from its cause', detail: 'Parts bought for a customer sit unmoved with no record of who they were for.', outcome: 'Stock carries the customer and order it was bought against.' },
-    { problem: 'Rate contracts expire unnoticed', detail: 'Contracted prices and approved vendor status lapse and orders move elsewhere.', outcome: 'Contracts carry expiry with renewal raised in advance.' },
-    { problem: 'Equivalents cannot be justified', detail: 'An alternative part is offered and the customer’s engineer cannot verify the fit.', outcome: 'Equivalence is recorded with the specification basis that supports it.' },
+  factsHeading: 'The numbers behind the problem.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '52%',
+      text: 'of B2B payments in India’s industrial hubs are overdue beyond 90 days, according to one analysis of industrial supply chain finance.',
+      source: { name: 'UNICbiz analysis, via Devdiscourse (a vendor)', year: '2026', url: 'https://www.devdiscourse.com/article/business/3916401-indias-45-day-msme-payment-rule-exposes-structural-gap-in-industrial-supply-chain-finance' },
+    },
+    {
+      figure: '5 to 8%',
+      text: 'is the margin industrial distributors in the middle of the chain rarely exceed, in the same analysis, while they pay manufacturers on the manufacturer’s terms.',
+      source: { name: 'UNICbiz analysis, via Devdiscourse (a vendor)', year: '2026', url: 'https://www.devdiscourse.com/article/business/3916401-indias-45-day-msme-payment-rule-exposes-structural-gap-in-industrial-supply-chain-finance' },
+    },
+    {
+      figure: '45 days',
+      text: 'is the ceiling for payment to a micro or small supplier under a written agreement, and 15 days without one. Late payments can defer your tax deduction on the bill.',
+      source: { name: 'ClearTax on Section 43B(h)', url: 'https://cleartax.in/s/section-43bh-of-income-tax-act' },
+    },
+    {
+      figure: '24 Oct 2025',
+      text: 'is when the Gazette carried notices cancelling three chemical quality control orders. Product standards rules for traded goods change often, so stock and certificates need a record.',
+      source: { name: 'Corpseed, on the withdrawal of BIS quality control orders', year: '2025', url: 'https://www.corpseed.com/law-update/government-withdraws-bis-quality-control-orders' },
+    },
+  ],
+  factsNote:
+    'The first two figures come from a vendor’s analysis, not an independent survey, and cover one slice of the industrial chain. The standards item is a compliance service’s summary of a notice. They show scale and direction, not what your accounts will show.',
+
+  screensHeading: 'The screens an industrial supplier would open every day.',
+  screensLede: 'Seven views, each for one job, set up in your own terms: plants, parts, quotes, rate contracts and brands.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Supply / Today',
+      meta: 'Store: Pune',
+      heading: 'The owner’s morning view',
+      caption:
+        'Open enquiries, quotes due for a call, dues by age, stock short and brand targets on one screen, with the five items that need a decision.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Open enquiries', value: '18', note: '3 over 2 hours' },
+            { label: 'Quotes due a call', value: '26', note: '₹14.2 L value' },
+            { label: 'Outstanding', value: '₹1.9 Cr', note: '₹54 L past 90 days' },
+            { label: 'Parts short', value: '41', note: 'before next delivery' },
+          ],
+        },
+        { type: 'title', text: 'Quote win rate by salesman, this month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Prakash', value: 38, display: '38%' },
+            { label: 'Anand', value: 31, display: '31%' },
+            { label: 'Nisha', value: 22, display: '22%', tone: 'muted' },
+            { label: 'Vivek', value: 16, display: '16%', tone: 'muted' },
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Mahindra supply plant: ₹6.8 L past 90 days', meta: 'New enquiry waiting for a hold decision', tag: ['Decide', 'flag', 'Called', 'ok'] },
+            { name: 'SKF target: 82% reached, 11 days left', meta: 'Rebate slab at 90%', tag: ['Plan buy', 'info'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'quotes',
+      title: 'Enquiries and quotes',
+      meta: 'Pipeline',
+      heading: 'From enquiry to order, with every follow-up on the record',
+      caption:
+        'Each enquiry with the plant, items, owner and response time, and each quote with status and the next follow-up. Lost quotes carry the reason.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'New enquiries',
+              cards: [
+                { title: 'Bearing 6205-2RS, 20 pcs', meta: 'Tata Auto Comp · Prakash', tag: ['Reply by 11:00', 'late', 'Quoted', 'ok'] },
+                { title: 'Hydraulic hose assy, 6 pcs', meta: 'Bharat Forge · Anand', tag: ['New', 'flag'] },
+              ],
+            },
+            {
+              name: 'Quoted, follow-up due',
+              cards: [
+                { title: 'Fasteners M12 x 60 HT, 4,000', meta: 'Kirloskar · ₹1.8 L · day 6', tag: ['Call today', 'flag', 'Won', 'ok'] },
+                { title: 'Welding electrodes, 30 boxes', meta: 'Thermax · ₹72,000 · day 9', tag: ['Call today', 'flag', 'Lost on price', 'muted'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'catalogue',
+      title: 'Parts and rates',
+      meta: 'Specification, price and contract',
+      heading: 'The right part, the right price and the right contract rate',
+      caption:
+        'A part with its brand, size, variants and replacements, the price list valid today, and the contract rate for the plant on the order.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Bearing 6205, deep groove ball',
+          sub: 'Brand: SKF · Bore 25 mm · OD 52 mm',
+          fields: [
+            ['Variants', 'Open, 2Z shielded, 2RS sealed'],
+            ['In stock', '2RS: 140, 2Z: 22, open: 0'],
+            ['List price', '₹312, valid from 1 Oct'],
+            ['Contract: Kirloskar', '₹268 to March, 3,000 cap'],
+            ['Quote validity', ['Expired 30 Sep', 'late', 'Revised', 'ok']],
+          ],
+          timeline: [
+            ['1 Oct', 'Brand list price raised by 6%'],
+            ['26 Sep', 'Quote to Tata Auto Comp at ₹294'],
+            ['Note', 'Replaces 6205-ZZ in older machines. Check shaft tolerance.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'credit',
+      title: 'Plant dues',
+      meta: 'Outstanding by age',
+      heading: 'What each plant owes, and where the bill is stuck',
+      caption:
+        'Dues by plant and age with the purchase order, delivery note and GRN against each bill, and whether the invoice has been submitted to the plant’s portal.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Plant', 'Terms', 'Owed', 'Oldest', 'Stuck at'],
+          rows: [
+            ['Kirloskar Pumps', '60 days', '₹14.6 L', '94 days', ['Missing GRN', 'late', 'GRN sent', 'ok']],
+            ['Thermax Boilers', '45 days', '₹8.2 L', '52 days', ['Portal pending', 'flag']],
+            ['Bharat Forge', '90 days', '₹22.4 L', '81 days', ['On track', 'ok']],
+            ['Local workshop (Chakan)', '15 days', '₹1.1 L', '33 days', ['Call owner', 'flag', 'Paid', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Kirloskar invoice #4812 returned for a missing PO number. ₹3.8 lakh waiting 19 days.', action: 'Resubmit' },
+      ],
+    },
+    {
+      id: 'orders',
+      title: 'Orders and dispatch',
+      meta: 'POs and documents',
+      heading: 'Orders matched to the quote, with the documents attached before dispatch',
+      caption:
+        'A customer PO checked line by line against the quote and the contract, the documents the plant needs, back orders and the vehicle with its e-way bill.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['PO', 'Plant', 'Lines', 'Match', 'Documents'],
+          rows: [
+            ['PO 77412', 'Kirloskar', '14', ['2 rates differ', 'late', 'Corrected', 'ok'], '3 of 4'],
+            ['PO 88109', 'Thermax', '6', ['Matches', 'ok'], ['Test certificate missing', 'flag', 'Attached', 'ok']],
+            ['PO 31022', 'Bharat Forge', '22', ['Matches', 'ok'], '4 of 4'],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Mill test certificate, M12 HT fasteners', meta: 'Required by Thermax inward quality', done: false },
+            { text: 'E-way bill for van MH12 TR 4471', meta: 'Consignment ₹2.4 L', done: true },
+            { text: 'Back order, hose assy x 4', meta: 'Promised 22 Oct', done: false },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock and reorder',
+      meta: 'Store and supplier lead times',
+      heading: 'What will run out, and what has not moved',
+      caption:
+        'Stock by part with reorder level, supplier lead time and sales per month, plus parts that have not sold in the months you choose.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Part', 'In stock', 'Sold / month', 'Lead time', 'Action'],
+          rows: [
+            ['V-belt B-52', '6', '28', '9 days', ['Order now', 'late', 'Ordered', 'ok']],
+            ['Bearing 6205-2RS', '140', '110', '5 days', ['OK', 'ok']],
+            ['Grease cartridge 400 g', '34', '22', '3 days', ['Reorder soon', 'flag']],
+            ['Flange coupling 80 mm', '12', '0', '14 days', ['No sale in 14 months', 'muted']],
+          ],
+        },
+        { type: 'alert', text: '₹7.6 lakh of parts have not moved in 12 months across 63 lines.', action: 'Review list' },
+      ],
+    },
+    {
+      id: 'brands',
+      title: 'Brands and suppliers',
+      meta: 'Targets, claims and payables',
+      heading: 'Rebate targets, warranty claims and what you owe',
+      caption:
+        'For each brand, the target, purchases so far and days left, open warranty claims, and supplier bills by due date with small suppliers flagged.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Brand', 'Target', 'Done', 'Days left', 'Claims open'],
+          rows: [
+            ['SKF', '₹60 L', '82%', '11', ['2 (₹1.1 L)', 'flag']],
+            ['Gates hoses', '₹24 L', '61%', '11', ['0', 'ok']],
+            ['Local fastener maker', 'None', 'None', 'None', ['Bill 70 days old', 'late', 'Paid', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Rebate slab at 90% of SKF target. ₹6.8 lakh more of purchase needed by 31 Oct.', action: 'Plan buy' },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across catalogue, enquiries, contracts and stock.',
-  modules: [
-    { id: 'inventory', title: 'Parts, specifications and equivalents', line: 'Every part carries manufacturer numbers, technical specification, equipment fit, recorded equivalents, location and movement history.', why: 'The catalogue is the product, and it is only useful if it can be searched by specification.', example: 'Forty-one thousand parts searchable by specification and fit.' },
-    { id: 'orders', title: 'Enquiries, quotations and conversion', line: 'Enquiries carry urgency, requested specification, quotation, outcome and reason for loss.', why: 'Nearly half of quotations fail, and the reason is the improvable part.', example: 'Forty-four per cent unconverted with no recorded reason.' },
-    { id: 'relationships', title: 'Plants, maintenance teams and buyers', line: 'Customers carry their equipment, previously supplied parts, rate contracts, approved status and ordering patterns.', why: 'Knowing a plant’s equipment is what makes the next enquiry answerable in seconds.', example: 'Parts previously supplied by plant and equipment.' },
-    { id: 'logistics', title: 'Breakdown response and delivery', line: 'Urgent enquiries carry availability, source, delivery route and response time against the plant’s stoppage.', why: 'For a stopped plant, response time is the entire proposition.', example: 'Thirty-one breakdown enquiries with response time measured.' },
-    { id: 'control', title: 'Rate contracts and approved status', line: 'One permission model and one audit trail, with contracted prices, validity, approved vendor status and renewal dates held per customer.', why: 'A lapsed contract quietly diverts a plant’s ordering elsewhere.', example: 'Six rate contracts expiring this quarter.' },
-    { id: 'suppliers', title: 'Manufacturers, principals and sourcing', line: 'Suppliers carry lead times, pricing, availability and reliability against the parts they supply.', why: 'What is not in stock still has to be answered with a real date.', example: 'Sourcing lead time by supplier for non-stock parts.' },
-    { id: 'intelligence', title: 'Catalogue, conversion and stock reporting', line: 'Movement profile, conversion by reason, breakdown response times, dead stock by cause and contract coverage come from the records.', why: 'The business is judged on availability and answer speed, both measurable.', example: 'Dead stock by originating customer and order.' },
-    { id: 'ai', title: 'Ask the counter a question', line: 'Verity AI answers from your own catalogue, enquiry, customer and stock records, respects permissions, and can create assigned follow-ups.', why: 'The core question is whether a specific part exists and where.', example: '"Which unmoved stock was bought for customers who stopped ordering?" returns the list by value.' },
-    { id: 'locations', title: 'Stores, racks and branch stock', line: 'Stock is located precisely across stores and branches with transfer visibility.', why: 'A part that exists but cannot be found quickly has not been supplied.', example: 'Exact location by rack and branch.' },
-    { id: 'people', title: 'Counter staff, field sales and stores', line: 'Staff carry enquiries handled, conversion, response times and customer responsibility.', why: 'Answer quality at the counter varies by person and is improvable once measured.', example: 'Conversion and response time by counter staff.' },
-    { id: 'records', title: 'Technical documents and equivalence basis', line: 'Drawings, datasheets and equivalence justifications attach to the part.', why: 'A customer engineer accepts an equivalent when the basis is shown.', example: 'Equivalence basis attached to the alternative offered.' },
-    { id: 'communication', title: 'Customer enquiry correspondence', line: 'Enquiry conversation, quotations and follow-ups attach to the customer and part.', why: 'Most industrial supply is repeat business built on previous conversations.', example: 'Previous enquiries surfaced when the same plant asks again.' },
+  dayHeading: 'The same Wednesday at the counter, before and after.',
+  dayLede: 'The work is the same. What changes is that each enquiry, quote and bill leaves a record, and the record chases.',
+  day: [
+    {
+      time: '9:00',
+      before: 'Three enquiries sit in two inboxes. Nobody is sure who is on the bearing request.',
+      after: 'All three have an owner and a reply time. One is already overdue and has moved to the next person.',
+    },
+    {
+      time: '11:30',
+      before: 'A PO arrives for fasteners at a rate below your quote. The order desk accepts it.',
+      after: 'The PO is flagged on arrival. The salesman confirms the contract rate and a note goes back to the plant.',
+    },
+    {
+      time: '2:00',
+      before: 'A van leaves without the test certificate. The plant rejects the lot on arrival.',
+      after: 'The order cannot move to dispatched until the certificate is attached.',
+    },
+    {
+      time: '4:00',
+      before: 'You find out a quote of last month is being honoured on the brand’s new price.',
+      after: 'The quote shows as expired against the new list. The salesman revises it before the order is accepted.',
+    },
+    {
+      time: '6:00',
+      before: 'A plant’s bill has been stuck for 19 days for a missing GRN number. Nobody knew.',
+      after: 'The stuck bill is on the dues list with the missing item. Accounts resubmits on the same day.',
+    },
+    {
+      time: 'Month end',
+      before: 'You learn you missed the brand’s rebate slab by a small purchase.',
+      after: 'The brand screen showed the gap 10 days earlier. You placed a planned purchase.',
+    },
   ],
 
-  workflowsHeading: 'Enquire, identify, quote, supply, follow up.',
-  workflowsLede: 'These already happen. Recorded, the catalogue starts answering faster.',
-  workflows: [
-    { name: 'Breakdown enquiry', steps: ['Enquiry received and marked urgent with the plant and equipment', 'Part identified by specification or previous supply', 'Availability checked across stores and branches', 'Equivalent offered with basis if needed', 'Delivery committed with response time recorded'], note: 'Response time is the measure, so it starts at receipt rather than at quotation.' },
-    { name: 'Part identification', steps: ['Requested specification or manufacturer number captured', 'Catalogue searched by specification and equipment fit', 'Previous supply to the same plant checked', 'Equivalents evaluated with documented basis', 'Selection confirmed with the customer'], note: 'Checking previous supply to the same plant is usually the fastest identification route.' },
-    { name: 'Quotation and outcome', steps: ['Quotation issued with availability and lead time', 'Contract price applied where one exists', 'Follow-up assigned', 'Outcome recorded as won or lost', 'Reason captured on loss'], note: 'The recorded reason is what makes the conversion rate improvable.' },
-    { name: 'Non-stock sourcing', steps: ['Requirement identified as non-stock', 'Suppliers checked for availability and lead time', 'Customer given a real date', 'Purchase raised against the customer order', 'Receipt and supply recorded'], note: 'Recording the customer against the purchase is what prevents future dead stock without a cause.' },
-    { name: 'Contract renewal', steps: ['Expiring contracts surfaced in advance', 'Volume and pricing performance reviewed', 'Renewal terms proposed', 'Approved vendor status confirmed', 'New contract recorded with validity'], note: 'A lapsed approved status removes the supplier from the plant’s system entirely.' },
-  ],
+  approach: {
+    heading: 'We set it up with you, in four weeks, around your parts and your plants.',
+    lede:
+      'You do not get a login and a manual. We learn how your counter and your key accounts work, build Verity around it, bring in your parts, rates and dues, then stay on until it sticks.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with your senior salesman and the store keeper. Follow an urgent enquiry from first call to dispatch, and one plant’s invoice from delivery to payment. Note where parts, rates and documents are held today.',
+        you: 'Two to three hours of your time, and your senior salesman’s. A sample of quotes, POs, rate contracts and the store register.',
+        get: 'A written map of your business: plants and their rules, brands and terms, the parts that matter most, and the leaks to fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up parts with variants and replacements, brand price lists with dates, rate contracts, credit terms per plant, the documents each plant needs, reorder levels and brand targets.',
+        you: 'Check the rules with the senior salesman and the accounts person. Tell us where a rule is wrong.',
+        get: 'A working Verity with your parts, price lists, contracts and rules loaded, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in the parts list, stock, customers with open dues by bill, open POs, back orders and supplier bills. Train salesmen, the order desk, the store and accounts on live enquiries.',
+        you: 'Your sheets and ledger exports, in whatever shape. One hour with each role, and a week of live enquiries to test.',
+        get: 'Your parts, plants and dues inside Verity, and a team that has run a real week of enquiries on it.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review quote follow-up, plant ageing and brand targets with you, and tune rules as brands and contracts change.',
+        you: 'A short monthly review of quotes won and lost, dues and brand progress.',
+        get: 'A setup that keeps up with new plants, new brands and new price lists, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your parts list with brand and cost, even a spreadsheet',
+      'Brand price lists and their effective dates',
+      'Customer rate contracts and their validity',
+      'Open dues by bill with PO and GRN numbers if you have them',
+      'Plant vendor rules, such as documents and portal steps',
+      'Brand targets, rebate slabs and open warranty claims',
+    ],
+    time: 'About 10 to 13 hours of your own time across the four weeks, mostly in week 1. The senior salesman and the accounts person need a few more.',
+    after: 'Nobody extra is hired. Enquiries, quotes and orders are recorded as they happen, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask about parts, plants and stock.',
-    lede: 'Verity AI reads the same catalogue, enquiry, customer and stock records the business creates as it trades. It answers from your own counter, respects permissions, and can turn an answer into a quotation or a clearance decision.',
-    panelMeta: 'Grounded in your counter records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Do we hold this specification and where is it?',
-      'What have we supplied to this plant before for this equipment?',
-      'Which unmoved stock was bought for customers who stopped ordering?',
-      'What is our response time on breakdown enquiries?',
-      'Why are quotations being lost this month?',
-      'Which rate contracts expire in the next quarter?',
-      'Which parts do we quote often and never stock?',
-      'Which suppliers give the shortest lead time for non-stock items?',
-      'Summarise conversion and stock position.',
+    heading: 'Ask the business a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own enquiry, quote, stock, dues and brand records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which quotes older than a week are worth chasing today?',
+        a: '26 quotes worth ₹14.2 lakh have had no reply for over 7 days. Eight are above ₹50,000 and four are from plants that bought from you last quarter.',
+        rows: [['Prakash', '9 quotes, ₹5.1 L'], ['Anand', '8 quotes, ₹4.4 L'], ['Nisha', '5 quotes, ₹2.7 L'], ['Vivek', '4 quotes, ₹2.0 L']],
+        action: 'Create call tasks for each salesman',
+      },
+      {
+        q: 'Which plants are over 90 days and still raising POs?',
+        a: 'Four plants owe ₹54 lakh past 90 days. Two raised new POs this week worth ₹6.2 lakh.',
+        rows: [['Kirloskar Pumps', '₹14.6 L'], ['Bharat Forge', '₹22.4 L'], ['Thermax Boilers', '₹8.2 L'], ['Others', '₹8.8 L']],
+        action: 'Send hold decisions to the owner',
+      },
+      {
+        q: 'Will we hit the SKF rebate slab this quarter?',
+        a: 'You are at 82% of the target with 11 days left. The 90% slab needs ₹6.8 lakh more in purchases. Stock cover supports about ₹4.5 lakh of it.',
+        action: 'Draft a purchase order within the cover limit',
+      },
     ],
   },
 
-  automationHeading: 'Urgency, contracts and dead stock.',
-  automationLede: 'Each runs from the business’s own records at the point the condition is met.',
+  automationHeading: 'The follow-ups that fall between the counter and the store.',
+  automationLede: 'Set once, then they run from your records. People still call, quote and dispatch. Verity makes sure the right person knows to.',
   automations: [
-    { trigger: 'An enquiry is marked as a breakdown', steps: ['Prioritised with plant and equipment attached', 'Availability checked across locations', 'Response time measured from receipt'] },
-    { trigger: 'A quotation is not converted', steps: ['Follow-up assigned', 'Outcome and reason recorded', 'Loss pattern updated by reason'] },
-    { trigger: 'A part is quoted repeatedly and never stocked', steps: ['Demand pattern surfaced', 'Stocking decision raised', 'Outcome recorded'] },
-    { trigger: 'Stock passes a no-movement threshold', steps: ['Originating customer and order surfaced', 'Clearance or return option raised', 'Decision recorded'] },
-    { trigger: 'A rate contract approaches expiry', steps: ['Flagged with volume and pricing history', 'Renewal assigned', 'New terms recorded'] },
+    {
+      when: 'An enquiry has no reply within your limit',
+      then: ['Moves to the next available person', 'Reply time shown on the open list', 'Quote created from the enquiry items'],
+    },
+    {
+      when: 'A quote reaches its follow-up date',
+      then: ['Appears on the salesman’s call list', 'Plant history shown beside it', 'Outcome and loss reason recorded'],
+    },
+    {
+      when: 'A brand price list takes effect',
+      then: ['Open quotes marked against the new list', 'Salesman asked to revise or confirm', 'Revised price saved with the validity date'],
+    },
+    {
+      when: 'A customer PO arrives',
+      then: ['Matched to the quote and contract', 'Differences held for a decision', 'Required documents added to the order'],
+    },
+    {
+      when: 'A part falls below its reorder level',
+      then: ['Checked against open orders and lead time', 'Purchase order drafted', 'Stock updated when goods are received'],
+    },
+    {
+      when: 'A plant bill passes its terms',
+      then: ['Added to the dues list with what is stuck', 'Task to the accounts person', 'New orders held if over the limit'],
+    },
   ],
 
-  intelligenceHeading: 'What the business can see.',
-  intelligenceLede: 'Availability, conversion and stock health from trading records.',
-  intelligence: [
-    { area: 'Service', points: ['Breakdown response time', 'Availability at first enquiry', 'Fill rate by customer and part class', 'Non-stock sourcing lead times'] },
-    { area: 'Conversion', points: ['Quotation conversion by reason', 'Loss to price, stock or speed', 'Conversion by counter staff', 'Repeat quoting without stocking'] },
-    { area: 'Stock', points: ['Movement profile across the catalogue', 'Dead stock by value and originating customer', 'Location accuracy', 'Stocking decisions against demand'] },
-    { area: 'Customers', points: ['Equipment and supply history by plant', 'Rate contract coverage and expiry', 'Approved vendor status', 'Order patterns and lapses'] },
-  ],
-  intelligenceNote: 'Verity records the supply business. Accounting continues where it is and is mapped during implementation.',
+  rules: {
+    heading: 'The rules an industrial supplier has to keep up with.',
+    lede:
+      'Verity does not give tax or legal advice and does not file anything. It keeps the records these rules rely on in order, so your accountant is not rebuilding them from email.',
+    items: [
+      {
+        name: 'Payment to micro and small suppliers',
+        what: 'Payment to a micro or small supplier is generally due within 15 days with no written agreement, or the agreed term, not above 45 days. Section 43B(h) of the Income-tax Act ties the tax deduction to actual payment for late bills.',
+        how: 'Supplier bills carry a due date and a small-supplier flag, and payables are sorted so the right bills are paid first.',
+        source: { name: 'ClearTax on Section 43B(h)', url: 'https://cleartax.in/s/section-43bh-of-income-tax-act' },
+      },
+      {
+        name: 'E-way bill for goods in transit',
+        what: 'A consignment above ₹50,000 generally needs an e-way bill before it moves, and the intra-state limit differs by state.',
+        how: 'Each dispatch records the vehicle and e-way bill number, and an order marked dispatched without one is flagged.',
+        source: { name: 'Tally Solutions, e-way bill guide', url: 'https://tallysolutions.com/gst/e-way-bill-under-gst' },
+      },
+      {
+        name: 'BIS standards on certain traded products',
+        what: 'For products under a BIS quality control order, selling or stocking goods without the required certification can be an offence. Several orders were withdrawn in 2025 and others remain, so the list changes.',
+        how: 'Parts carry their standard and certificate details, so a seller sees what applies to a line before quoting, and certificates stay attached to batches.',
+        source: { name: 'Corpseed, on withdrawn BIS quality control orders', url: 'https://www.corpseed.com/law-update/government-withdraws-bis-quality-control-orders' },
+      },
+      {
+        name: 'GST invoices and e-invoicing',
+        what: 'Businesses above a turnover threshold, generally ₹5 crore, must generate e-invoices, and larger taxpayers must report them within a limited number of days. Thresholds have changed more than once.',
+        how: 'Orders, rates, HSN and tax split are held per customer and bill, so your accountant or billing software works from complete data.',
+      },
+    ],
+    note: 'Rules and thresholds change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
 
-  rolesHeading: 'One business, four views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A junior salesman should not see brand cost prices. The store should not see plant credit. Each role opens on what it needs.',
   roles: [
-    { role: 'Owner', question: 'Is the catalogue earning?', focus: 'Conversion by reason, dead stock by cause, contract coverage, breakdown response performance.' },
-    { role: 'Counter', question: 'Do we have this part?', focus: 'Specification search, location, equivalents with basis, previous supply to the plant.' },
-    { role: 'Purchase', question: 'What should we stock and source?', focus: 'Repeat quoted non-stock items, supplier lead times, dead stock, contract obligations.' },
-    { role: 'Field sales', question: 'What does this plant need next?', focus: 'Equipment and supply history, contract expiry, lapsed ordering, open quotations.' },
+    { role: 'Owner', question: 'Which plants and brands make money?', sees: 'Margin after credit days by plant and brand, quote win rate, dues by age, brand targets and approvals waiting.' },
+    { role: 'Salesman', question: 'Whom do I call and what do I quote?', sees: 'His enquiries and quotes, plant history, live prices and contract rates, and his dues to chase.' },
+    { role: 'Order desk', question: 'What can I accept and dispatch?', sees: 'POs matched to quotes, back orders, required documents, and dispatches awaiting e-way bills.' },
+    { role: 'Store keeper', question: 'What is in the store and what is short?', sees: 'Stock by part and location, reorder levels, goods inward to check, and picklists.' },
+    { role: 'Accounts', question: 'What is billed, due and stuck?', sees: 'Bills by plant, PO and GRN status, receipts, supplier bills by due date, and claims to chase.' },
   ],
 
-  useCasesHeading: 'What industrial suppliers use Verity for',
-  useCases: [
-    { name: 'Searching by specification', body: 'Parts held with manufacturer numbers, technical specification and equipment fit, so the correct match does not depend on who is at the counter.' },
-    { name: 'Prioritising breakdown demand', body: 'Urgency held on the enquiry with response time measured from receipt, because a stopped plant buys speed rather than price.' },
-    { name: 'Understanding lost quotations', body: 'Outcomes recorded with reasons, turning a conversion percentage into a specific problem of price, availability or response.' },
-    { name: 'Clearing dead stock with its cause', body: 'Unmoved stock carrying the customer and order it was bought against, which is the route to returning or reselling it.' },
-    { name: 'Justifying equivalents', body: 'Equivalence recorded with the specification basis and documents, so a customer engineer can accept an alternative.' },
-    { name: 'Holding rate contracts', body: 'Contracted prices, approved vendor status and expiry dates with renewal raised in advance, so a plant’s ordering does not quietly move elsewhere.' },
-    { name: 'Asking about the counter', body: 'Plain-language questions across catalogue, enquiries, customers and stock, with quotations and stocking decisions raised in the same step.' },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your accounting software or Tally. We agree how data reaches Verity during setup.',
+      'Brand portals and distributor logins, where you still place orders and raise claims.',
+      'Email and WhatsApp for talking to plant purchasers. Verity holds the enquiry and the record.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Print invoices or run the counter billing.',
+      'Take orders from plants through a web portal.',
+      'Send quotes or reminders to plants on its own.',
+      'File returns or give tax advice.',
+    ],
+    migration:
+      'We bring parts, stock, plants, open POs, rate contracts and open dues across from your sheets and ledgers, in stages, so the counter keeps quoting while it happens.',
+  },
 
-  migration: 'Accounting continues where it is and is mapped during implementation. The part catalogue with specifications and equivalents, stock and locations, customer records with equipment and supply history, rate contracts and quotation history are brought across.',
-
-  faqHeading: 'Questions industrial suppliers ask',
+  faqHeading: 'Questions industrial suppliers ask.',
   faqs: [
-    ['What can AI software do for an industrial supplier?', 'Verity AI answers questions from your own catalogue, enquiry, customer and stock records: whether a specification is held and where, what has been supplied to a plant before for a given piece of equipment, which unmoved stock was bought for customers who stopped ordering, why quotations are being lost. Each answer can become a quotation or a stocking decision.'],
-    ['How does it handle a very large catalogue?', 'Parts are held with manufacturer numbers, technical specification, equipment fit and recorded equivalents rather than descriptions alone, which makes the catalogue searchable by what the customer actually asks for.'],
-    ['Why treat breakdown enquiries differently?', 'Because the customer is a stopped plant and the proposition is response time rather than price. Marking urgency on the enquiry lets it be prioritised and lets response time be measured from receipt rather than from quotation.'],
-    ['Can it explain lost quotations?', 'Outcomes are recorded with a reason — price, availability or response time — which converts a conversion rate into a specific and fixable pattern.'],
-    ['How does it help with dead stock?', 'Stock carries the customer and order it was bought against, so unmoved parts have a traceable cause and a route to clearance, return or a conversation with the plant that ordered them.'],
-    ['Does it support equivalents?', 'Equivalence is recorded with the specification basis and supporting documents, which is what allows a customer’s engineer to accept an alternative part rather than refuse it.'],
-    ['Does it manage rate contracts?', 'Contracted prices, validity, approved vendor status and renewal dates are held per customer with renewal raised in advance, because a lapsed contract removes the supplier from a plant’s ordering system.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the catalogue structure, specification fields, customer equipment records and contract terms, configuration, migration of catalogue, stock and history, then an ongoing operations partnership.'],
+    [
+      'We have thousands of parts. Do we need to enter all of them?',
+      'No. We start with the parts that make most of your sales and the ones with variants that cause mistakes. The rest come in from your existing sheet during migration, and are completed as they are used.',
+    ],
+    [
+      'Does it send quotes to customers?',
+      'No. Verity builds the quote from the part, price and contract records, and your salesman sends it as he does today. The follow-up date and the outcome are then recorded.',
+    ],
+    [
+      'How does it handle different documents for different plants?',
+      'Each plant has a list of documents it needs, such as test certificates, batch numbers or datasheets. An order cannot move to dispatched until each required one is attached.',
+    ],
+    [
+      'Can it work with our brand’s distributor portal?',
+      'You still place orders and raise claims on the brand’s portal. Verity records the claim, the batch and the stage, and we agree during setup how data from your side reaches Verity.',
+    ],
+    [
+      'We have three stores. Can I see all stock together?',
+      'Yes. Each store is a location in one system. Stock rolls up, and a transfer between stores is recorded so parts do not appear or disappear.',
+    ],
+    [
+      'Can salespeople see each other’s quotes?',
+      'Only if you allow it. Many suppliers let each salesman see his own accounts, and keep the full pipeline for owners and managers. Access is set by role.',
+    ],
+    [
+      'Who can see my cost prices?',
+      'Only the people you allow. Salesmen can see a selling price and floor without seeing brand cost, and every change is recorded with who made it and when.',
+    ],
+    [
+      'How quickly will it help?',
+      'The quote follow-up list and plant dues by age need only your existing quotes and ledger, so they come first. Margin by plant and brand becomes reliable after a month or two of recorded orders.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of stores, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your counter works.',
+    ],
   ],
 
-  ctaHeading: 'Start with the enquiries you cannot answer fast.',
-  ctaLede: 'They are the ones a plant is stopped for. Tell us how parts are identified today.',
+  related: ['hardware-stores', 'wholesalers', 'distributors', 'building-material-suppliers', 'manufacturers', 'importers'],
 
-  related: ['distributors', 'wholesalers', 'hardware-stores', 'auto-parts-stores', 'manufacturers', 'importers'],
+  ctaHeading: 'Start with the quotes nobody called back.',
+  ctaLede:
+    'Tell us how your counter runs and we will show you the aged quotes, the plant dues and the brand targets, using your own numbers.',
 };

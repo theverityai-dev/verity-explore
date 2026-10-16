@@ -156,7 +156,7 @@ async function checkPositioning() {
   for (const file of files) {
     const biz = (await import(pathToFileURL(join(dir, file)).href)).default;
     if (biz.status !== 'published') continue;
-    const ids = biz.modules.map((m) => m.id);
+    const ids = biz.schema === 2 ? biz.uses : biz.modules.map((m) => m.id);
     const usedWedge = ids.filter((id) => WEDGE.includes(id));
     const usedPrimitives = ids.filter((id) => PRIMITIVES.includes(id));
     if (usedWedge.length && usedPrimitives.length < MIN_PRIMITIVES_WITH_WEDGE) {

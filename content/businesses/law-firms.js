@@ -1,565 +1,659 @@
 export default {
+  schema: 2,
   slug: 'law-firms',
   status: 'published',
   plural: 'law firms',
   subject: 'law firm',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for law firms | Verity',
+    title: 'Law firm software for India: matters, hearings, billing | Verity',
     description:
-      'Verity connects matters, clients, deadlines, documents, approvals and fee recovery into one system, so engagement health is visible before it becomes a write-off.',
+      'The 14 problems that put a law firm at risk: missed dates, conflicts, unbilled time, loose client money and lost orders, and the Verity matter screens that fix each one.',
     keywords: [
-      'AI software for law firms',
-      'legal practice management software',
-      'matter management software',
-      'law firm document and deadline management',
-      'business software for lawyers',
+      'law firm practice management software India',
+      'advocate case diary and hearing dates',
+      'law firm time and billing tracking',
+      'conflict of interest check law firm',
+      'client money ledger advocate',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'schedule', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for law firms',
-    headline: 'A matter that has quietly consumed twice its budget looks exactly like a healthy one.',
+    headline: 'The next hearing date is in one junior’s diary. The limitation date is in another’s head. Verity puts both on one screen.',
     lede:
-      'Until someone reviews it. Verity holds the client, the matter, the work inside it, the deadlines, the documents and the fee position on one record, so engagement health is visible while it can still be acted on.',
-    note: 'Verity manages the practice. It does not provide legal advice or draft documents.',
-    panel: {
-      title: 'Practice',
-      meta: 'All matters · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active matters', value: '148', note: 'across 6 practice areas' },
-        { label: 'Deadlines in 14 days', value: '31', note: '4 without an owner' },
-        { label: 'Unbilled work', value: '₹62 L', note: 'older than 60 days' },
-        { label: 'Fees outstanding', value: '₹1.1 Cr', note: '₹34 L beyond 90 days' },
-      ],
-      rows: [
-        { name: '4 statutory deadlines in 14 days with no owner', meta: 'Two filings · two responses', active: true },
-        { name: 'Matter consumed 210% of estimated effort', meta: 'Corporate · no scope variation recorded', active: true },
-        { name: '₹62 L of work unbilled beyond 60 days', meta: '11 matters · 4 partners', active: true },
-        { name: 'Engagement letter unsigned on active matter', meta: 'Work started 18 days ago', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own practice in this shape.',
-    },
+      'A law firm sells judgement, but it runs on dates, documents, money held for clients and hours that were worked and never billed. Most firms keep these in a court diary, an email folder, a cash book and memory. Verity gives each matter one record that knows the next date, the last order, the people on it and what is owed.',
+    oneLine:
+      'One system where every matter shows its stage, its next hearing and its limitation dates, its documents, its time and its client money, and where the partner sees all of it without asking.',
+    note: 'Your lawyers keep drafting in Word and filing on the court portals. Verity holds the matter around that work.',
+    screen: 'owner',
+    screenNote: 'matters, hearings, billing and client money',
   },
 
-  overview: {
-    heading: 'The firm sells attention, and attention is the least measured thing in it.',
+  today: {
+    heading: 'A firm can be excellent in court and blind at the desk.',
     paragraphs: [
-      'A law firm has a simple commercial shape and a difficult operational one. A client engages the firm, a matter is opened, work is done against it by people whose time is the product, deadlines must be met, documents must be produced and retained, and eventually a bill is raised and — with any luck — paid. Every part of that is well understood by the people doing it and almost none of it is visible to the firm as a whole.',
-      'The characteristic failure is silent. A matter drifts past its estimate because nobody was watching effort against scope. A junior does work that was never within the engagement and nobody recorded a variation. Work sits unbilled for two months because the partner meant to review it. None of these announce themselves; they surface at a quarterly review, by which point the money is gone.',
-      'The second characteristic failure is a deadline. Statutory and court deadlines sit in individual calendars rather than against the matter they belong to, which means their coverage depends on whoever entered them still being available and still remembering.',
-      'The third is documents. The version that matters is in a folder whose naming convention one person understands, and it will be needed on the day that person is in court.',
-      'Verity holds the client, the matter, the work, the deadlines, the documents and the fee position as connected records with one permission model and one history. The firm gets a view of its own engagements without a partner having to assemble one.',
+      'The legal work is visible: a good argument, a clean draft, a settlement reached. What is not visible is the rest of the system around it. Which of the 140 live matters has a hearing tomorrow in a court two cities away. Which notice has 12 days left to reply. Which client paid a deposit for court fees that has not been accounted for. Which hours were worked and never put on a bill.',
+      'That information exists, but in pieces: a diary kept by each junior, the court portals and cause lists, an email folder per client, a cash book and a billing spreadsheet. The partner is usually in court, so the system that connects the pieces is a clerk or a very good associate.',
+      'The cost of a gap is high. A missed date can mean an ex parte order. A missed limitation date can end a claim. A conflict found after the engagement is signed can force the firm to leave a client. And a courts system carrying crores of pending cases means each hearing that does happen counts.',
     ],
+    stack: ['Court diary per lawyer', 'Court portals and cause lists', 'Email folder per client', 'Cash book and billing spreadsheet', 'Clerk’s memory of every file'],
+    stackNote: 'Each is fine for one job. None of them tells the firm the full state of a matter.',
   },
 
-  terminology: [
-    ['Clients, opposing parties, referrers', 'Relationships'],
-    ['Matters, engagements, mandates', 'Work'],
-    ['Filings, hearings, statutory deadlines', 'Workflows'],
-    ['Drafts, contracts, evidence, opinions', 'Records'],
-    ['Partners, associates, paralegals', 'People'],
-    ['Conflict checks, approvals, sign-offs', 'Control'],
-    ['Offices, practice areas, teams', 'Locations'],
-  ],
-
-  challengesHeading: 'Everything expensive happens quietly.',
-  challengesLede:
-    'A law firm rarely fails loudly. It leaks — through unbilled work, unrecorded scope, missed reviews and deadlines held in one person’s head.',
-  challenges: [
+  painsHeading: 'Where a law firm actually loses money and takes risk.',
+  painsLede:
+    'These are the situations partners and associates describe again and again. For each one: what it looks like on an ordinary week, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Engagement health is discovered late',
-      detail:
-        'A matter that has consumed twice its estimated effort is indistinguishable from a healthy one until somebody reviews it, usually at quarter end.',
-      outcome:
-        'Effort recorded against the matter’s scope makes overrun a visible state rather than a quarterly discovery.',
+      area: 'Dates',
+      title: 'A hearing date is missed or sits in only one person’s diary',
+      scene:
+        'The junior who keeps the diary for a bank’s recovery matters is on leave. The matter is listed tomorrow in a tribunal, and the senior only finds out at 7 pm when the clerk calls.',
+      cost:
+        'An adjournment at best. At worst an ex parte order, a dismissal for default, or a client who loses faith. The cost is impossible to put a number on until it happens.',
+      fix:
+        'Every hearing is a dated entry on the matter with court, bench, stage, counsel and a backup. Verity shows a daily and weekly diary for each lawyer and the whole firm, and tells the backup when the main person is away.',
+      screen: 'diary',
     },
     {
-      problem: 'Deadlines live in individual calendars',
-      detail:
-        'A statutory date is in the associate’s calendar. If they are on leave, in court or have left the firm, the date is unowned and nobody knows.',
-      outcome:
-        'Deadlines are workflow steps against the matter with an owner and an escalation path, independent of any individual’s calendar.',
+      area: 'Dates',
+      title: 'Limitation and reply deadlines are tracked in notebooks',
+      scene:
+        'A notice under a statute must be answered in 30 days. An appeal must be filed within a fixed time from the order. The dates are in a notebook and on a few sticky notes. One order was received by the client weeks before it reached the firm.',
+      cost:
+        'A missed statutory date can end a client’s case. Limitation rules are strict and delay can only be excused in limited cases, so the cost of one miss is the matter itself.',
+      fix:
+        'The matter records the order or event date, the type of deadline and the calculated last date, with an earlier warning date. Verity lists deadlines by days left across the firm, with the responsible lawyer and checker named.',
+      screen: 'deadlines',
     },
-    {
-      problem: 'Work sits unbilled',
-      detail:
-        'Effort accumulates, the partner intends to review it, and two months later it is harder to bill and harder to justify.',
-      outcome:
-        'Unbilled work is aged against the matter, so it surfaces as an exception at thirty days rather than at ninety.',
-    },
-    {
-      problem: 'Scope creeps without a variation',
-      detail:
-        'Additional work is done because the client asked and it seemed reasonable. It was never agreed in writing, and it is not recoverable.',
-      outcome:
-        'Scope changes are approvals against the matter, so out-of-scope work is either agreed or is a recorded decision not to charge.',
-    },
-    {
-      problem: 'Documents are findable by one person',
-      detail:
-        'The current version, the executed copy and the counterpart live in a structure only the person who created it understands.',
-      outcome:
-        'Documents attach to the matter with the same permissions and history as everything else, so retrieval does not depend on availability.',
-    },
-    {
-      problem: 'Capacity is a feeling',
-      detail:
-        'Which associates are overloaded and which have room is known anecdotally, so work is allocated to whoever answers first.',
-      outcome:
-        'Assigned work per person is a record, so allocation is a decision made against what people are already carrying.',
-    },
-  ],
-
-  modulesLede:
-    'Verity runs the practice around the law. These are the parts a firm works with.',
-  modules: [
-    {
-      id: 'work',
-      title: 'Matters and the work inside them',
-      line:
-        'A matter is work with a client, a scope, an owner, a state and a history, containing the tasks, deadlines and effort recorded against it.',
-      why:
-        'The matter is the firm’s unit of commerce and its unit of delivery. When it is not a record, neither profitability nor progress can be seen.',
-      example:
-        'A corporate matter shows the estimate, the effort recorded, the scope variations approved and the unbilled position, on one record.',
-    },
-    {
-      id: 'relationships',
-      title: 'Clients, referrers and counterparties',
-      line:
-        'Clients are records with their matters, engagement terms, contacts, fee position and full interaction history.',
-      why:
-        'A firm’s most valuable asset is its client relationships, and they are usually held personally by the partner who brought them in.',
-      example:
-        'A client with four matters across three practice areas is one record, so their total exposure and total fee position are visible.',
-    },
-    {
-      id: 'workflows',
-      title: 'Deadlines, filings and sign-offs',
-      line:
-        'Statutory dates, hearings, filings, approvals and sign-offs are defined steps against the matter with an owner and an escalation path.',
-      why:
-        'A missed deadline is the one operational failure a firm cannot absorb, and it is currently protected by individual memory.',
-      example:
-        'A filing due in fourteen days with no owner assigned is an exception on the firm’s view, not a calendar entry nobody can see.',
-    },
-    {
-      id: 'records',
-      title: 'Documents, drafts and executed copies',
-      line:
-        'Documents attach to the matter they belong to with version history, permissions and retention following the same model as every other record.',
-      why:
-        'Legal documents are needed years later, urgently, by someone other than the person who filed them.',
-      example:
-        'The executed counterpart of an agreement from three years ago is on the matter record rather than in a folder structure.',
-    },
-    {
-      id: 'people',
-      title: 'Partners, associates and paralegals',
-      line:
-        'The team is modelled once, and every matter, task and document shows who owns it and who last acted on it.',
-      why:
-        'Allocation, supervision and succession all depend on knowing who is carrying what, which is currently a matter of impression.',
-      example:
-        'Assigned matters and open tasks per associate, so a new instruction goes to someone with capacity rather than to whoever replied.',
-    },
-    {
-      id: 'control',
-      title: 'Conflicts, access and audit',
-      line:
-        'One permission model and one audit trail across every record, with access to a matter set deliberately rather than by default.',
-      why:
-        'Confidentiality obligations are absolute, and information barriers are only real if they are enforced by the system.',
-      example:
-        'A matter can be restricted to its team, and every access to it is on the trail.',
-    },
-    {
-      id: 'communication',
-      title: 'Correspondence attached to the matter',
-      line:
-        'Comments, notes, notifications and activity attach to the matter or client they concern.',
-      why:
-        'Matter context that lives in individual inboxes is unavailable exactly when the person is unavailable.',
-      example:
-        'The client’s instruction to hold a filing sits on the matter, visible to the supervising partner rather than only to the associate who took the call.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Practice reporting from live records',
-      line:
-        'Matter health, effort against estimate, unbilled ageing, realisation, deadline compliance and workload distribution come from the operational records.',
-      why:
-        'Firms typically know their billings and almost nothing about what produced them, because everything else would require assembling.',
-      example:
-        'Unbilled work aged by matter and by partner, current rather than compiled for a quarterly meeting.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the practice a question',
-      line:
-        'Verity AI answers from the firm’s own matter, deadline, document and fee records, respects each user’s permissions and confidentiality boundaries, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking cross matters, people and money at once, which is why they are usually asked at a partners’ meeting rather than answered.',
-      example:
-        '"Which matters have consumed more than their estimate without a recorded variation?" returns seven, and one instruction assigns reviews to the responsible partners.',
-    },
-    {
-      id: 'locations',
-      title: 'Offices, practice areas and teams',
-      line:
-        'Organisational units roll into the firm, with permissions, reporting and exceptions following the same structure.',
-      why:
-        'A multi-office or multi-practice firm cannot compare performance unless every unit records work identically.',
-      example:
-        'Matter volume, realisation and deadline compliance by practice area, from one set of records.',
-    },
-    {
-      id: 'commandCentre',
-      title: 'The firm as it is running',
-      line:
-        'One live view of what is moving, what is blocked, who owns it and what needs attention.',
-      why:
-        'Partner visibility of the firm is currently a monthly meeting, which is a reconstruction rather than a view.',
-      example:
-        'Deadlines approaching, matters over estimate, unbilled ageing and unowned tasks in one picture.',
-    },
-  ],
-
-  workflowsHeading: 'From instruction to recovery, recorded at each step.',
-  workflowsLede:
-    'These sequences already run in your firm. In Verity each step is a state on a record, so the ones that stall are visible before they cost money.',
-  workflows: [
-    {
-      name: 'New instruction to open matter',
-      steps: [
-        'Enquiry recorded against a client or prospective client record',
-        'Conflict check performed and its outcome recorded',
-        'Scope and fee basis agreed and documented',
-        'Engagement letter issued and its signature tracked',
-        'Matter opened with owner, team and access set',
-        'Initial tasks and deadlines created against the matter',
-      ],
-      note:
-        'Work starting before the engagement letter is signed becomes a visible exception rather than a discovered risk.',
-    },
-    {
-      name: 'Deadline management',
-      steps: [
-        'Statutory or court date recorded against the matter',
-        'Owner assigned and preparatory tasks created',
-        'Reminders raised at defined intervals',
-        'Escalation to the supervising partner if unowned or unactioned',
-        'Completion recorded against the deadline',
-      ],
-      note:
-        'Coverage stops depending on an individual calendar and becomes a firm-level obligation with an escalation path.',
-    },
-    {
-      name: 'Scope variation',
-      steps: [
-        'Additional work identified as outside the agreed scope',
-        'Variation raised with the effort and basis attached',
-        'Approval routed to the responsible partner',
-        'Client agreement recorded against the matter',
-        'Scope and estimate updated, or a decision not to charge recorded',
-      ],
-      note:
-        'Out-of-scope work becomes either recoverable or a documented decision, rather than an unnoticed cost.',
-    },
-    {
-      name: 'Billing and recovery',
-      steps: [
-        'Unbilled effort aged against the matter',
-        'Draft bill prepared and routed for partner review',
-        'Write-offs above the threshold routed for approval',
-        'Bill issued and recorded against the client',
-        'Payment applied and the ageing updated',
-        'Collection follow-up assigned where terms are exceeded',
-      ],
-      note:
-        'Ageing starts when the work is done rather than when the bill is finally raised.',
-    },
-    {
-      name: 'Matter review',
-      steps: [
-        'Effort compared against estimate and scope',
-        'Deadlines and their completion reviewed',
-        'Unbilled and outstanding positions checked',
-        'Risks and exceptions raised with owners',
-        'Outcome recorded on the matter',
-      ],
-      note:
-        'The review is a check against records rather than a reconstruction of what happened.',
-    },
-    {
-      name: 'Matter closure and retention',
-      steps: [
-        'Final bill issued and settled',
-        'Documents finalised and attached to the matter',
-        'Retention period applied to the record',
-        'Access adjusted to closed-matter permissions',
-        'Client record updated with the outcome',
-      ],
-      note:
-        'Closure produces a retrievable record rather than a folder that has to be searched years later.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask what the firm cannot currently see.',
-    lede:
-      'Verity AI reads the same matter, deadline, document and fee records the firm runs on. It answers from your own practice, respects each user’s permissions and matter access, and can turn an answer into work assigned to the responsible person.',
-    panelMeta: 'Grounded in your matter records',
-    note: 'Verity AI only returns what the person asking has permission to see. It does not provide legal advice.',
-    questions: [
-      'Which matters have exceeded their estimate without a recorded variation?',
-      'Which deadlines fall in the next fourteen days, and which have no owner?',
-      'How much work is unbilled beyond sixty days, and on which matters?',
-      'Which clients are outstanding beyond ninety days?',
-      'Which active matters have no signed engagement letter?',
-      'How is work distributed across associates right now?',
-      'Which practice areas have the highest realisation this quarter?',
-      'Which matters have had no activity recorded in thirty days?',
-      'Summarise the position across active matters.',
-    ],
-  },
-
-  automationHeading: 'The reviews that never happen on time.',
-  automationLede:
-    'These run from the matter records at the moment the condition occurs.',
-  automations: [
-    {
-      trigger: 'A deadline approaches without an owner',
-      steps: [
-        'Exception raised against the matter',
-        'Assignment task created for the supervising partner',
-        'Escalated at defined intervals as the date approaches',
-      ],
-    },
-    {
-      trigger: 'Effort on a matter passes its estimate',
-      steps: [
-        'Matter flagged as over estimate',
-        'Review task assigned to the responsible partner',
-        'Scope variation raised or a write-off decision recorded',
-      ],
-    },
-    {
-      trigger: 'Work remains unbilled beyond the threshold',
-      steps: [
-        'Unbilled position aged on the matter',
-        'Billing task assigned to the responsible partner',
-        'Escalated to the practice head past the second threshold',
-      ],
-    },
-    {
-      trigger: 'A matter is opened',
-      steps: [
-        'Conflict check task created and recorded',
-        'Engagement letter tracked to signature',
-        'Access restricted to the matter team',
-        'Initial tasks and deadlines created',
-      ],
-    },
-    {
-      trigger: 'A client balance passes its payment terms',
-      steps: [
-        'Balance aged on the client record',
-        'Collection follow-up assigned to the relationship partner',
-        'Escalated with the matter history attached',
-      ],
-    },
-    {
-      trigger: 'A matter has no recorded activity for a defined period',
-      steps: [
-        'Dormancy flagged against the matter',
-        'Review task assigned to the owner',
-        'Closure or reactivation recorded',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the partners can actually see.',
-  intelligenceLede:
-    'Practice performance drawn from the records the firm creates as it works.',
-  intelligence: [
     {
       area: 'Matters',
-      points: [
-        'Active matters by practice area, partner and state',
-        'Effort recorded against estimate',
-        'Matters over estimate without a recorded variation',
-        'Dormant matters with no recent activity',
-      ],
+      title: 'What happened at the last hearing lives in a junior’s notes',
+      scene:
+        'The senior asks what the court said on the last date. The junior finds a note in her phone. The certified order has not been uploaded, and the next date is not on the file.',
+      cost:
+        'Repeated work, wrong preparation, and a hearing in which the lawyer is less ready than the other side.',
+      fix:
+        'After each hearing a short note is added to the matter: what was argued, the order, the next date and directions. The order is attached when it is received, and the next hearing is created from the note.',
+      screen: 'matter',
     },
     {
-      area: 'Deadlines',
-      points: [
-        'Deadlines approaching, by matter and owner',
-        'Deadlines without an assigned owner',
-        'Completion against due date historically',
-        'Escalations raised and how they resolved',
-      ],
+      area: 'Matters',
+      title: 'Documents live in email chains and personal drives',
+      scene:
+        'The latest draft of an agreement is somewhere in a thread of nine mails. Two associates edited different versions. A client sends a signed copy on WhatsApp that is never added to the file.',
+      cost:
+        'Hours lost every week finding things, and a risk of filing or sending the wrong version.',
+      fix:
+        'Pleadings, drafts, orders and correspondence are attached to the matter with a name, date and author. Anyone with access sees the same current file and the history of changes.',
+      screen: 'matter',
     },
     {
-      area: 'Fees',
-      points: [
-        'Unbilled work aged by matter and partner',
-        'Bills issued against work recorded',
-        'Write-offs and their approval trail',
-        'Realisation by practice area and client',
-      ],
+      area: 'Intake',
+      title: 'Conflicts are discovered after the engagement letter is signed',
+      scene:
+        'A new client asks the firm to act against a company. A junior partner recalls that another partner acted for a group company three years ago. Nobody searched before accepting the brief.',
+      cost:
+        'The firm may have to withdraw, return fees and lose both clients. The professional rules on conflicts apply to every advocate.',
+      fix:
+        'New enquiries are checked against every client, opposite party, related company and past matter on file before the matter opens. Matches are shown to the partner for a decision, and the decision is recorded.',
+      screen: 'intake',
+    },
+    {
+      area: 'Billing',
+      title: 'Time is worked and never billed',
+      scene:
+        'A senior associate spends two days on a due diligence review. The hours are in her head and a calendar. By month end the invoice is built from what she remembers, and a day is quietly lost.',
+      cost:
+        'Example arithmetic: 20 lawyers losing one billable hour a week at an average ₹3,000 an hour is about ₹31 lakh a year in work done and not charged.',
+      fix:
+        'Time is entered against the matter as it is worked, with the task. Verity shows unbilled time per matter and per lawyer, and builds a draft fee note for the partner to review. Verity does not issue tax invoices.',
+      screen: 'billing',
+    },
+    {
+      area: 'Billing',
+      title: 'Fees are late, disputed or never chased',
+      scene:
+        'A corporate client has outstanding fee notes worth ₹6 lakh across four matters. The partner dislikes asking. Reports on Indian firms describe late payment and renegotiation as a routine problem, especially with larger clients.',
+      cost:
+        'Cash flow squeezed for a firm that pays salaries and rent on time, and, in the worst case, work done for a client who then disappears.',
+      fix:
+        'Fee notes and retainers are tracked per client and per matter with age and dates. Verity lists overdue amounts by client and partner and creates a follow-up task with the history of what was agreed.',
+      screen: 'billing',
+    },
+    {
+      area: 'Money',
+      title: 'Client money and court expenses are mixed with the firm’s',
+      scene:
+        'A client sends ₹2 lakh for court fees and stamp duty. It goes into the same account as fees. A month later nobody can say how much was spent on whose matter, or what remains.',
+      cost:
+        'Professional-conduct risk, client disputes about expenses, and an accountant who cannot separate money held from money earned.',
+      fix:
+        'Money received for expenses is recorded as held for the client and the matter. Each payment out is tied to it, and the balance is visible to the partner. Verity does not hold funds or file accounts; it keeps the ledger.',
+      screen: 'clientmoney',
     },
     {
       area: 'Clients',
-      points: [
-        'Total exposure and fee position per client',
-        'Outstanding by client with ageing bands',
-        'Matter volume by client over time',
-        'Referral sources and their contribution',
-      ],
+      title: 'Clients keep calling to ask what happened',
+      scene:
+        'A promoter calls the partner three times in a week for an update. The associate who knows is in court. The partner asks someone else, who has to find the file.',
+      cost:
+        'Interrupted work, an anxious client, and calls that should have been a one-line update.',
+      fix:
+        'The matter record always shows the latest hearing note, next date and open tasks, so any lawyer can answer in a minute. Verity creates a follow-up task for client updates after each hearing, and your team sends the message.',
+      screen: 'matter',
     },
     {
-      area: 'People',
-      points: [
-        'Matters and tasks assigned per person',
-        'Effort recorded by individual and practice area',
-        'Supervision coverage across matters',
-        'Distribution of load across the team',
-      ],
+      area: 'Team',
+      title: 'Work is handed out by who is nearby, not who has capacity',
+      scene:
+        'The same two associates get every urgent brief. One is on 24 live matters and four drafts due Friday. Another has capacity and is never asked.',
+      cost:
+        'Missed deadlines, burnout, and juniors who learn nothing new before they leave.',
+      fix:
+        'Each lawyer’s matters, deadlines and tasks are shown against their capacity. The partner assigns work by looking at the load, and reassigning a matter moves its dates and tasks with it.',
+      screen: 'team',
+    },
+    {
+      area: 'Courts',
+      title: 'Two hearings at once, in two courts',
+      scene:
+        'A partner is listed at 10:30 in the High Court and at 11 in a consumer forum across town. The junior who could have covered is also in court. The clash is found when the clerk reads both cause lists.',
+      cost:
+        'A mentioning counsel who is unprepared, or a request for time that annoys the bench.',
+      fix:
+        'The diary checks each lawyer’s hearings by time and place, flags clashes before the day, and shows who else on the team knows the matter.',
+      screen: 'diary',
+    },
+    {
+      area: 'Team',
+      title: 'When an associate leaves, the knowledge leaves with her',
+      scene:
+        'An associate who handled twelve arbitration files resigns with a month’s notice. Her notes and drafts are on her laptop and in her mailbox. Two clients ask for her by name.',
+      cost:
+        'Rework, errors at handover, and clients who follow her to the next firm.',
+      fix:
+        'Matters, notes, drafts and tasks sit in the firm’s system. A resignation produces a handover list of live matters with next dates and open tasks, and reassigning moves them in one step.',
+      screen: 'team',
     },
     {
       area: 'Compliance',
-      points: [
-        'Conflict checks recorded on opened matters',
-        'Engagement letters outstanding on active matters',
-        'Document completeness and retention states',
-        'Access history on restricted matters',
+      title: 'Confidential files are open to everyone, or locked away from those who need them',
+      scene:
+        'A sensitive matter for a listed company is in a shared folder visible to the whole firm. Another matter is restricted so tightly that the covering lawyer cannot open it on the day of the hearing.',
+      cost:
+        'A breach of client confidentiality, or a hearing without the papers. Client personal data is also covered by India’s data protection rules.',
+      fix:
+        'Each matter has a team list. Only those people, and partners you name, can open it. Every view and change is recorded, and sensitive matters can be walled off from named lawyers.',
+      screen: 'intake',
+    },
+    {
+      area: 'Owner',
+      title: 'The partners cannot see the firm in one view',
+      scene:
+        'At the quarterly meeting, nobody can say which practice area makes money, how many matters are older than three years, or how much work is in progress and not billed.',
+      cost:
+        'Decisions on hires, rates and which clients to keep are made on feel rather than facts.',
+      fix:
+        'The practice view shows matters by stage and age, billing against time, collections by client and capacity by lawyer, built from the records the team already enters.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '4.77 crore',
+      text: 'cases pending in district and subordinate courts as on 31 December 2025, according to the National Judicial Data Grid figures given to Parliament.',
+      source: { name: 'IANS, quoting a Lok Sabha reply of 13 February 2026', year: '2026', url: 'https://ianslive.in/over-476-crore-cases-pending-across-indian-courts-govt-tells-parliament--20260213184542' },
+    },
+    {
+      figure: '63.66 lakh',
+      text: 'cases pending in the 25 High Courts at the same date.',
+      source: { name: 'IANS, quoting a Lok Sabha reply of 13 February 2026', year: '2026', url: 'https://ianslive.in/over-476-crore-cases-pending-across-indian-courts-govt-tells-parliament--20260213184542' },
+    },
+    {
+      figure: '95,718',
+      text: 'cases pending in the Supreme Court on 1 August 2026, up 1,404 from the end of June, according to the National Judicial Data Grid.',
+      source: { name: 'Supreme Court Observer', year: '2026', url: 'https://www.scobserver.in/journal/july-2026-pendency-increases-after-partial-break/' },
+    },
+    {
+      figure: '1 July 2024',
+      text: 'is when the Bharatiya Nagarik Suraksha Sanhita replaced the Code of Criminal Procedure, so every criminal practice had to relearn its procedure and timelines.',
+      source: { name: 'Wikipedia, Bharatiya Nagarik Suraksha Sanhita', year: '2024', url: 'https://en.wikipedia.org/wiki/Bharatiya_Nagarik_Suraksha_Sanhita' },
+    },
+  ],
+  factsNote:
+    'Court pendency figures change daily and the government replies cited here use different cut-off dates, so treat them as the scale of the problem. The pendency numbers are reported by the press and the Supreme Court Observer from the National Judicial Data Grid. Wikipedia is used for the date of the criminal procedure change. None of these show what your firm will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each built for one job. Matters, hearings and fee notes are named as your firm names them.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Practice / Today',
+      meta: 'Whole firm',
+      heading: 'The partner’s morning view',
+      caption:
+        'Hearings this week, deadlines about to pass, unbilled time and overdue fees on one screen, with the items that need a decision listed below. It replaces the morning round of asking each associate.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Hearings this week', value: '23', note: '4 need a decision' },
+            { label: 'Deadlines in 10 days', value: '9', note: '2 within 3 days' },
+            { label: 'Unbilled time', value: '₹14.2 lakh', note: '312 hours' },
+            { label: 'Fees overdue', value: '₹9.6 lakh', note: '7 clients' },
+          ],
+        },
+        { type: 'title', text: 'Live matters by lawyer' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Associate Mehta', value: 90, display: '24 matters' },
+            { label: 'Associate Iyer', value: 65, display: '17 matters' },
+            { label: 'Associate Nair', value: 40, display: '11 matters', tone: 'muted' },
+            { label: 'Associate Khan', value: 30, display: '8 matters', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'Reply to the notice for Sunrise Infra is due in 3 days. Draft not yet reviewed.', action: 'Open matter' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Tomorrow’s hearing, Tribunal Bench 2', meta: 'Counsel on leave, backup not named', tag: ['Assign', 'late', 'Assigned', 'ok'] },
+            { name: 'Conflict check: Rao Textiles', meta: 'One possible match with a past client', tag: ['Decide', 'flag', 'Cleared', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'diary',
+      title: 'Hearing diary',
+      meta: 'This week, all courts',
+      heading: 'Every hearing, every court, one diary',
+      caption:
+        'Court, bench, matter, stage and counsel for each date, with a backup named. Clashes between a lawyer’s hearings are flagged before the day.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Date', 'Court', 'Matter', 'Counsel', 'Status'],
+          rows: [
+            ['Tue 10:30', 'High Court, Court 12', 'Patel v. State Bank', 'Mehta', ['Clash with 11:00', 'late', 'Covered', 'ok']],
+            ['Tue 11:00', 'Consumer forum', 'Gupta v. Builder', 'Mehta', ['Clash', 'late', 'Iyer covers', 'ok']],
+            ['Wed 2:00', 'Tribunal, Bench 2', 'Sunrise Infra, recovery', 'Nair', ['No backup', 'flag', 'Backup named', 'ok']],
+            ['Thu 10:30', 'District court', 'Rao v. Rao, family', 'Khan', ['Ready', 'ok']],
+            ['Fri 3:00', 'Arbitration', 'Delta v. Orbit', 'Iyer', ['Brief due', 'flag']],
+          ],
+        },
+        { type: 'alert', text: '1 clash and 1 hearing without a backup this week.', action: 'Resolve' },
+      ],
+    },
+    {
+      id: 'deadlines',
+      title: 'Deadlines and limitation',
+      meta: 'Across the firm',
+      heading: 'Last dates, counted from the event',
+      caption:
+        'Each deadline stores the triggering order or notice, the rule that sets the period, the calculated last date and a warning date. The lawyer who prepares it and the lawyer who checks it are both named.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Matter', 'Deadline', 'Trigger date', 'Last date', 'Status'],
+          rows: [
+            ['Sunrise Infra', 'Reply to statutory notice', '19 Sep', '19 Oct, 3 days', ['Draft pending', 'late', 'Filed', 'ok']],
+            ['Gupta v. Builder', 'Written statement', '2 Oct', '1 Nov, 16 days', ['Drafting', 'flag']],
+            ['Patel v. State Bank', 'Appeal against order', '28 Sep', '28 Oct, 12 days', ['Check period', 'flag', 'Confirmed', 'ok']],
+            ['Delta v. Orbit', 'Counter-claim', '10 Oct', '9 Nov, 24 days', ['On track', 'ok']],
+          ],
+        },
+        { type: 'alert', text: '2 deadlines have no second checker named.', action: 'Assign checker' },
+      ],
+    },
+    {
+      id: 'matter',
+      title: 'Matter',
+      meta: 'Patel v. State Bank',
+      heading: 'One page for the whole matter',
+      caption:
+        'Parties, court, stage, the team, the last hearing note, the next date, documents and open tasks. Anyone covering can answer a client’s call from this page.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Patel v. State Bank',
+          sub: 'High Court, writ petition. Partner: Rao. Associate: Mehta',
+          fields: [
+            ['Client', 'Patel Industries'],
+            ['Stage', 'Arguments'],
+            ['Next hearing', ['Tue 10:30, Court 12', 'flag', 'Covered', 'ok']],
+            ['Open deadline', ['Appeal in 12 days', 'late']],
+            ['Unbilled time', '41 hours'],
+            ['Client money held', '₹1.2 lakh'],
+          ],
+          timeline: [
+            ['12 Oct', 'Hearing: respondent sought two weeks, listed 21 Oct'],
+            ['3 Oct', 'Rejoinder filed, receipt attached'],
+            ['21 Sep', 'Interim order continued'],
+            ['Note', 'Client prefers a call after each date, not email.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'intake',
+      title: 'New matter and conflicts',
+      meta: 'Intake',
+      heading: 'Checked before it is accepted',
+      caption:
+        'A new brief is checked against clients, opposite parties, related entities and past matters before the engagement is signed. A match goes to a partner for a decision, with the reason recorded and any walls set up.',
+      blocks: [
+        {
+          type: 'checks',
+          items: [
+            { text: 'Client and group companies searched', meta: 'Rao Textiles and 3 related entities', done: true },
+            { text: 'Opposite party searched', meta: 'Possible match: Zenith Exports, past client 2022', done: false },
+            { text: 'Partner decision recorded', meta: 'Awaiting Partner Rao', done: false },
+            { text: 'Engagement letter and fee terms', meta: 'Draft ready', done: true },
+            { text: 'Matter team and access set', meta: 'Mehta, Iyer, Partner Rao only', done: true },
+          ],
+        },
+        { type: 'alert', text: 'One possible conflict needs a partner’s decision before the matter opens.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'billing',
+      title: 'Time and fees',
+      meta: 'Unbilled and overdue',
+      heading: 'Hours worked, fee notes sent, money collected',
+      caption:
+        'Time entered against each matter, draft fee notes for the partner’s review, and overdue amounts by client with age. Invoices are issued through your usual accounts process.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Client', 'Unbilled hours', 'Unbilled value', 'Overdue', 'Status'],
+          rows: [
+            ['Patel Industries', '41', '₹1.6 lakh', '₹0', ['Draft fee note', 'flag', 'Sent', 'ok']],
+            ['Sunrise Infra', '28', '₹1.1 lakh', '₹2.4 lakh', ['Overdue 62 days', 'late']],
+            ['Gupta Builders', '12', '₹48,000', '₹1.2 lakh', ['Overdue 31 days', 'flag', 'Paid', 'ok']],
+            ['Delta Corp', '60', '₹2.4 lakh', '₹0', ['Retainer covers', 'ok']],
+          ],
+        },
+        { type: 'title', text: 'Overdue fees by age' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Under 30 days', value: 30, display: '₹2.0 lakh', tone: 'muted' },
+            { label: '30 to 60 days', value: 55, display: '₹3.6 lakh' },
+            { label: 'Over 60 days', value: 60, display: '₹4.0 lakh' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'clientmoney',
+      title: 'Client money',
+      meta: 'Held for expenses',
+      heading: 'Money held for clients, matter by matter',
+      caption:
+        'What each client sent for court fees, stamp duty and expenses, what was spent and on what, and what remains. It is kept separate from fees earned.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Matter', 'Received', 'Spent', 'Held', 'Note'],
+          rows: [
+            ['Patel v. State Bank', '₹2.0 lakh', '₹80,000', '₹1.2 lakh', ['Receipts matched', 'ok']],
+            ['Gupta v. Builder', '₹60,000', '₹58,000', '₹2,000', ['Ask for top-up', 'flag', 'Requested', 'ok']],
+            ['Rao v. Rao', '₹25,000', '₹31,000', '-₹6,000', ['Overspent', 'late']],
+            ['Delta v. Orbit', '₹1.5 lakh', '₹40,000', '₹1.1 lakh', ['Matched', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Rao v. Rao has spent ₹6,000 more than was received. Write to the client.', action: 'Create task' },
       ],
     },
   ],
-  intelligenceNote:
-    'These are practice-management records. Verity holds no legal reasoning and takes no view on the substance of a matter.',
 
-  rolesHeading: 'One firm, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, with matter access set deliberately.',
+  dayHeading: 'The same Tuesday, before and after.',
+  dayLede: 'The cases and the courts are the same. What changes is that the firm’s state is written down in one place and the dates do the reminding.',
+  day: [
+    {
+      time: '8:30',
+      before: 'You ask the clerk what is listed today and check three lawyers’ diaries for clashes.',
+      after: 'The diary shows today’s hearings by lawyer. One clash is already covered and one hearing has a backup.',
+    },
+    {
+      time: '11:00',
+      before: 'A client calls for an update. The associate is in court. The partner asks the clerk to look for the file.',
+      after: 'Anyone opens the matter page and reads the last hearing note and the next date to the client.',
+    },
+    {
+      time: '1:30',
+      before: 'A new bank asks the firm to act. You say yes and a partner recalls a conflict a week later.',
+      after: 'The intake check flags a possible conflict before the engagement letter goes out.',
+    },
+    {
+      time: '4:00',
+      before: 'Notice reply is due in three days, and you learn it from a sticky note.',
+      after: 'The deadlines list shows it at the top with the lawyer and the checker, since morning.',
+    },
+    {
+      time: '6:30',
+      before: 'The day’s hours exist in a calendar and a few memories. Billing will be done at month end.',
+      after: 'The day’s time is on the matters. The partner sees the unbilled value per client as it builds.',
+    },
+    {
+      time: 'Month end',
+      before: 'Fee notes are built from memory, client money is reconciled by hand and the accountant waits.',
+      after: 'Draft fee notes are ready for review. The client money ledger shows balance by matter.',
+    },
+  ],
+
+  approach: {
+    heading: 'Four weeks, built around your live matters.',
+    lede:
+      'We start from matters you are already running, not a sample firm. We learn how your partners, associates and clerks actually work a file, build Verity around that, move your live matters across, and stay on as the practice changes.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a day with the managing partner and a senior associate. Follow three live matters from intake to the latest hearing and note the diaries, folders and ledgers each one touches.',
+        you: 'Two to three hours from a partner and an hour from a senior associate. Your diaries, a list of live matters and a recent fee note.',
+        get: 'A written map of how a matter runs in your firm, your practice areas and courts, the deadlines you track and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your matter types by practice area, courts and benches, deadline rules, roles and access, rate cards, retainer and fee-note formats, the client money ledger, and conflict-check rules.',
+        you: 'Check the setup with a senior partner. Tell us where a deadline rule or access rule is wrong for the work you do.',
+        get: 'A working Verity with your matter types, courts and rules in your own words, ready for your live files.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in live matters, clients, parties, next dates, key documents, open fee notes and client money balances from your diaries, spreadsheets and folders. Train lawyers and clerks on their own matters.',
+        you: 'Your matter list, diaries and cash book, in whatever shape they exist. An hour with each practice group and the clerks.',
+        get: 'Your live matters, dates and balances inside Verity, and a team that has used it on its own files.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on through the first month of hearings to tune the diary, deadline lists and access rules, and adapt the setup as you add a practice area or office.',
+        you: 'A short monthly review of unbilled time, overdue fees and deadlines caught.',
+        get: 'A system that keeps matching how the firm works, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'A list of live matters with court, stage and next date',
+      'Your diaries and any deadline registers',
+      'Client and opposite-party lists for conflict checks',
+      'Recent fee notes, retainer terms and the client money cash book',
+      'Your lawyers’ rate card and how you bill each practice area',
+    ],
+    time: 'About 8 to 12 hours of a partner’s time across the four weeks, mostly in week 1. A senior associate and your accounts person need a few more.',
+    after: 'Nobody is hired to run Verity. Lawyers add a hearing note and their time as part of the work, and the diaries, lists and ledgers come from those entries.',
+  },
+
+  ai: {
+    heading: 'Ask your firm a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own matter, hearing, time and money records, and respects who may see which matter. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which matters have a deadline in the next 10 days with no checker named?',
+        a: '2 of 9 deadlines have no second checker: the Sunrise Infra reply and the Gupta written statement.',
+        rows: [['Sunrise Infra', 'Reply, 3 days'], ['Gupta v. Builder', 'Written statement, 16 days']],
+        action: 'Assign a checker for each',
+      },
+      {
+        q: 'Which clients have overdue fees above ₹1 lakh?',
+        a: '3 clients owe ₹7.6 lakh in total. Sunrise Infra is the oldest at 62 days.',
+        rows: [['Sunrise Infra', '₹2.4 lakh'], ['Gupta Builders', '₹1.2 lakh'], ['Others', '₹4.0 lakh']],
+        action: 'Create a follow-up task for each partner',
+      },
+      {
+        q: 'How much unbilled time do we have on arbitration matters?',
+        a: '162 hours worth ₹6.5 lakh. Delta v. Orbit accounts for 60 hours.',
+        rows: [['Delta v. Orbit', '60 hrs'], ['Orion v. Vasu', '54 hrs'], ['Others', '48 hrs']],
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Lawyers still draft and file, and staff still call and write. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'An order or notice is recorded on a matter',
+      then: ['Deadline created with last date and warning date', 'Preparer and checker named', 'Escalates to the partner at the warning date'],
+    },
+    {
+      when: 'A hearing is added to the diary',
+      then: ['Counsel and backup recorded', 'Clashes with the lawyer’s other hearings checked', 'Hearing-note task created for after the date'],
+    },
+    {
+      when: 'A hearing note is saved',
+      then: ['Next date created on the matter', 'Client-update task assigned', 'Order task raised until the certified copy is attached'],
+    },
+    {
+      when: 'A new brief is entered',
+      then: ['Parties searched against past matters', 'Possible conflicts sent to a partner', 'Matter stays closed until a decision is recorded'],
+    },
+    {
+      when: 'A fee note is overdue by 30 days',
+      then: ['Added to the client’s overdue list', 'Follow-up task to the responsible partner', 'Outcome and promised date recorded'],
+    },
+    {
+      when: 'Money for expenses is received',
+      then: ['Recorded as held for the client and matter', 'Each payment out is matched to it', 'Top-up task when the balance falls below a limit'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a law firm has to keep up with.',
+    lede: 'Verity does not give legal advice and does not file anything for you or the court. It keeps the records these rules depend on in order, so the firm is not rebuilding them when a question is raised.',
+    items: [
+      {
+        name: 'Limitation and statutory time limits',
+        what: 'Suits, appeals, replies to notices and filings each run on fixed periods counted from a set event, and a delay can be excused only in limited cases. Periods differ by law and forum, so the responsible lawyer must confirm each one.',
+        how: 'Every deadline stores its trigger, rule, last date and warning date, with the preparer and checker named. Verity does not calculate the law for you; the lawyer confirms the period.',
+      },
+      {
+        name: 'Professional conduct and conflicts',
+        what: 'Advocates are bound by the Bar Council of India’s professional standards, including duties on conflicts of interest, handling client money and fees. Check the current rules and your State Bar Council’s requirements.',
+        how: 'Conflict checks, partner decisions, client money ledgers and fee terms are kept as records with dates and names.',
+      },
+      {
+        name: 'New criminal procedure laws',
+        what: 'The Bharatiya Nagarik Suraksha Sanhita replaced the Code of Criminal Procedure from 1 July 2024, along with the other new criminal codes. Time limits and procedures differ in places, so criminal teams need to check the new provisions.',
+        how: 'Matter types carry the correct law for each case, and old and new references are recorded on the matter.',
+        source: { name: 'Wikipedia, Bharatiya Nagarik Suraksha Sanhita', url: 'https://en.wikipedia.org/wiki/Bharatiya_Nagarik_Suraksha_Sanhita' },
+      },
+      {
+        name: 'Client confidentiality and data protection',
+        what: 'Client files carry personal and commercial secrets. India’s data protection rules apply to personal data, with duties that start in phases. Check current requirements with your own adviser.',
+        how: 'Matter access lists, views and changes are recorded, and sensitive matters can be walled off from named lawyers.',
+      },
+    ],
+    note: 'Rules change and differ by court and state. Confirm current requirements with the Bar Council and your own senior counsel.',
+  },
+
+  rolesHeading: 'Everyone sees the same matter, through their own window.',
+  rolesLede: 'An associate should not see every partner’s fee arrangements. Accounts should not read privileged notes. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Managing partner',
-      question: 'Is the firm healthy?',
-      focus: 'Matters over estimate, unbilled ageing, realisation by practice area, outstanding fees, workload distribution.',
-    },
-    {
-      role: 'Practice head',
-      question: 'What is at risk in my area?',
-      focus: 'Deadlines approaching, matters over estimate, dormant matters, capacity across the team.',
-    },
-    {
-      role: 'Responsible partner',
-      question: 'What needs my decision?',
-      focus: 'Scope variations, draft bills for review, write-off approvals, client balances, matters requiring supervision.',
-    },
-    {
-      role: 'Associate',
-      question: 'What do I owe, and by when?',
-      focus: 'Assigned matters and tasks, deadlines owned, documents outstanding, effort recorded.',
-    },
-    {
-      role: 'Practice manager',
-      question: 'What is stalled or unowned?',
-      focus: 'Unowned deadlines, unsigned engagement letters, unbilled ageing, exceptions awaiting resolution.',
-    },
+    { role: 'Managing partner', question: 'Where is the firm exposed and where is it earning?', sees: 'Deadlines across the firm, unbilled and overdue fees, capacity by lawyer, matters by stage and age.' },
+    { role: 'Partner', question: 'What do I need to decide on my matters?', sees: 'Her matters, next dates, conflict decisions, draft fee notes and client money balances.' },
+    { role: 'Associate', question: 'What is on my plate this week?', sees: 'Her hearings, deadlines, drafts due, time entries and the matters she is on.' },
+    { role: 'Clerk or paralegal', question: 'Is the file ready and filed?', sees: 'Cause lists, filing tasks, document checklists, order copies pending and court receipts.' },
+    { role: 'Accounts', question: 'What has been billed and received?', sees: 'Fee notes, receipts, retainers and the client money ledger, without privileged notes.' },
   ],
 
-  useCasesHeading: 'What firms use Verity for',
-  useCases: [
-    {
-      name: 'Matter management',
-      body: 'A matter as a record carrying its client, scope, team, effort, deadlines, documents and fee position, so engagement health is visible rather than inferred.',
-    },
-    {
-      name: 'Deadline coverage',
-      body: 'Statutory and court dates as workflow steps against the matter with owners and escalation, independent of any individual’s calendar.',
-    },
-    {
-      name: 'Scope and variation control',
-      body: 'Out-of-scope work raised as a variation with an approval, so additional effort is either agreed or is a recorded decision.',
-    },
-    {
-      name: 'Unbilled and recovery management',
-      body: 'Work aged from the moment it is recorded, so unbilled effort surfaces at thirty days rather than at a quarterly review.',
-    },
-    {
-      name: 'Document and version control',
-      body: 'Drafts, executed copies and counterparts attached to the matter with version history, permissions and retention.',
-    },
-    {
-      name: 'Conflicts and information barriers',
-      body: 'Conflict checks recorded at matter opening and matter access set deliberately, with every access on the audit trail.',
-    },
-    {
-      name: 'Workload and allocation',
-      body: 'Assigned matters and open tasks per person, so new instructions go to available capacity rather than to whoever answered.',
-    },
-    {
-      name: 'Client relationship view',
-      body: 'Total matters, exposure, fee position and history per client, held by the firm rather than by the partner who brought them in.',
-    },
-    {
-      name: 'Asking the practice questions',
-      body: 'Plain-language questions across matters, deadlines, effort and fees, with follow-ups assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'The court portals, e-filing systems and cause lists your lawyers use today.',
+      'Word and your legal research subscriptions for drafting.',
+      'Your accounting software and your accountant, who prepares your returns.',
+      'Your relationships with clients, counsel and clerks.',
+    ],
+    not: [
+      'File documents in court or check the court portal for you.',
+      'Hold or move client money. It keeps the ledger.',
+      'Give legal advice or calculate the law for you.',
+      'Run payroll or file tax returns.',
+    ],
+    migration:
+      'We bring your matters, dates, clients and balances across from your diaries, folders and sheets in stages, starting with the matters that are listed soonest, so hearings continue as normal.',
+  },
 
-  migration:
-    'The matter list, the document store, the deadline calendar and whatever billing arrangement the firm runs are mapped during implementation. Active matters, clients and documents are brought across, and Verity is introduced alongside the accounting system rather than replacing it.',
-
-  faqHeading: 'Questions firms ask',
+  faqHeading: 'Questions law firms ask.',
   faqs: [
     [
-      'Does Verity provide legal advice or draft documents?',
-      'No. Verity manages the practice around the law: matters, deadlines, documents, approvals, workload and fee recovery. It holds no legal reasoning and takes no view on the substance of a matter.',
+      'Will my lawyers really enter hearing notes and time?',
+      'Only if it takes a minute. We set up short forms for each practice group and test them on live matters. Lawyers get something back: a diary that covers them when they are in court and fees that are not forgotten.',
     ],
     [
-      'What can AI software do for a law firm?',
-      'Verity AI answers practice questions from your own records: which matters have exceeded their estimate without a recorded variation, which deadlines in the next fortnight have no owner, how much work is unbilled beyond sixty days, which active matters have no signed engagement letter. Each answer can become work assigned to the responsible person.',
+      'Does Verity fetch hearing dates from the court portals?',
+      'No. Your team keeps using the portals and cause lists, and enters the date and order on the matter. During setup we agree how this is done so it is quick and consistent.',
     ],
     [
-      'How does Verity handle deadlines?',
-      'A statutory or court date is a workflow step against the matter with an assigned owner, preparatory tasks, reminders and an escalation path. Coverage stops depending on an individual’s calendar and becomes an obligation the firm can see.',
+      'How does it handle privileged and confidential matters?',
+      'Each matter has a team list. Only those people and the partners you name can open it, and every view and change is recorded. Sensitive matters can be walled off from named lawyers.',
     ],
     [
-      'Can it show which matters are unprofitable?',
-      'It shows effort recorded against the agreed estimate and scope, variations approved or not, and the unbilled and outstanding positions. That is what makes an overrun visible while it can still be discussed with the client.',
+      'Can it issue invoices or hold client funds?',
+      'No. It keeps the time, fee notes and client money ledger, and you issue invoices through your own accounts process. Funds stay in your bank accounts.',
     ],
     [
-      'How is confidentiality handled?',
-      'Verity has one permission model and one audit trail. Matter access is set deliberately rather than by default, so a matter can be restricted to its team, and every access is recorded.',
+      'We are a small chamber with three advocates. Is this too much for us?',
+      'A small chamber has the same dates and the same unbilled time, with fewer people to catch a slip. We set up only what you need, and the four-week process is the same.',
     ],
     [
-      'Does Verity replace our accounting or billing software?',
-      'No. Verity holds the operational side — matters, work, deadlines, documents, unbilled ageing and collection follow-up — and is introduced alongside your existing accounting arrangements rather than in place of them.',
+      'Can we run several offices and courts?',
+      'Yes. Each office is a location in one system, matters can sit in different courts and cities, and a client is one record across offices.',
     ],
     [
-      'Can it help with workload allocation?',
-      'Assigned matters and open tasks per person are records, so a new instruction can be allocated against what people are already carrying rather than to whoever responded first.',
+      'Will it calculate limitation for me?',
+      'It stores the trigger date, the rule you name and the last date, and warns before it passes. The lawyer confirms the period, since it depends on the law and the facts.',
     ],
     [
-      'Is it suitable for a small firm?',
-      'A four-partner firm has the same silent failures as a large one — unbilled work, unrecorded scope, deadlines in personal calendars — and less administrative capacity to catch them. Larger firms use the same structure across offices and practice areas.',
+      'Who can see client data?',
+      'Only the people you allow. Access is set by role and by matter, and every view and change is recorded with who made it and when.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the firm actually works, configuration, migration of matters, clients and documents, then an ongoing operations partnership.',
+      'How long before we see results?',
+      'The shared diary and the deadline list only need your live matters and dates, so they are the first things we aim to have working. Billing and collection trends become reliable after a month or two of recorded time.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of lawyers, offices and what you want set up. Message us and we will give you a clear number after a short conversation about how your firm runs.',
     ],
   ],
 
-  ctaHeading: 'Start with unbilled work or with deadline ownership.',
-  ctaLede:
-    'Those two carry most of a firm’s avoidable loss and most of its avoidable risk. Tell us which concerns you more and we will show you what it looks like in Verity.',
+  related: ['accounting-firms', 'ca-firms', 'consulting-firms', 'financial-advisors', 'insurance-agencies', 'real-estate-agencies'],
 
-  related: ['accounting-firms', 'ca-firms', 'consulting-firms', 'architecture-firms', 'recruitment-agencies', 'it-services-companies'],
+  ctaHeading: 'Start with the dates that cannot slip.',
+  ctaLede:
+    'Send us a week of your diary and we will show you the clashes, the deadlines without a checker and the unbilled time it would find, using your own matters.',
 };

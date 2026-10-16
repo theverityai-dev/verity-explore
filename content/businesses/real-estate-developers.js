@@ -1,562 +1,688 @@
 export default {
+  schema: 2,
   slug: 'real-estate-developers',
   status: 'published',
   plural: 'real estate developers',
-  subject: 'real estate development business',
+  subject: 'real estate developer',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for real estate developers | Verity',
+    title: 'Software for real estate developers in India | Verity',
     description:
-      'Verity connects unit inventory, booking pipeline, construction-linked payment demands, collections, approvals and handover into one operational system.',
+      'See the 15 problems that stall a developer: unit holds, late demand letters, RERA updates, contractor bills, snags. And the Verity screens that fix each one.',
     keywords: [
-      'AI software for real estate developers',
-      'real estate development management software',
-      'construction linked payment and demand tracking',
-      'project unit inventory and booking software',
+      'real estate developer software India',
+      'RERA quarterly update tracking',
+      'buyer payment milestone tracking',
+      'unit inventory and booking management',
+      'construction progress and contractor bill tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'suppliers', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for developers',
-    headline: 'The milestone was achieved in March. The demand went out in June.',
+    eyebrow: 'Verity for real estate developers',
+    headline: 'The slab is cast. The demand letter is not. Verity closes that gap.',
     lede:
-      'Construction-linked collections are a developer’s cash flow, and they depend on a demand being raised when a stage completes. Verity connects the site to the demand to the collection.',
-    note: 'Runs alongside your existing accounting and approval processes.',
-    panel: {
-      title: 'Projects',
-      meta: 'All projects · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Units sold', value: '412 of 640', note: 'across 3 projects' },
-        { label: 'Demands unraised', value: '68', note: 'milestones already achieved' },
-        { label: 'Collections overdue', value: '₹22 Cr', note: '142 customers' },
-        { label: 'Handovers pending', value: '46', note: '11 past committed date' },
-      ],
-      rows: [
-        { name: '68 demands unraised against achieved milestones', meta: '₹31 Cr of collectible cash', active: true },
-        { name: '142 customers overdue, 38 beyond 90 days', meta: 'No follow-up recorded on 51', active: true },
-        { name: '11 handovers past their committed date', meta: 'Snag lists incomplete', active: true },
-        { name: 'Channel partner commission unreconciled', meta: '₹1.8 Cr across 9 partners', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own projects in this shape.',
-    },
+      'A developer runs three businesses at once: selling units, building them and answering to RERA. Each one lives in a different sheet, a different office and a different person’s head. Verity keeps the unit, the buyer, the site and the money on one record, so the next step is always visible.',
+    oneLine:
+      'One system that knows every unit, every buyer’s dues, every stage of every tower, every contractor bill and every RERA update that is coming due.',
+    note: 'No new team needed. Your sales, accounts, site and legal people keep their work and gain one shared record.',
+    screen: 'owner',
+    screenNote: 'projects, towers, units and your own milestone schedule',
   },
 
-  overview: {
-    heading: 'A developer’s cash flow depends on a connection between a site and a demand letter.',
+  today: {
+    heading: 'Most developers build well and chase badly.',
     paragraphs: [
-      'Residential development is funded largely by construction-linked payments: a customer pays instalments as stages of the building are completed. The mechanism only works if the achievement of a stage triggers a demand, and the demand triggers a collection. In most developers those three live in three places — the site records progress, the sales office holds the customer, and accounts raise the demand — with a manual step between each.',
-      'That gap is expensive in the most direct way possible. Sixty-eight demands unraised against milestones already achieved is thirty-one crore of collectible cash the business has earned and not asked for, while it borrows to fund the same construction.',
-      'The second issue is inventory. A developer’s stock is a fixed set of units with a price list that changes over the project, and it is sold through direct sales and channel partners simultaneously. Double bookings, unrecorded holds and stale availability are routine, and every one of them is a customer conversation that goes badly.',
-      'The third is collection follow-up. A customer overdue on a construction-linked instalment is not a normal debtor: the relationship continues for years and ends with a handover, so the chase has to be persistent and recorded rather than aggressive and forgotten.',
-      'The fourth is handover, where the snag list is the difference between a satisfied customer and a dispute.',
-      'Verity connects the project, the unit, the customer, the milestone, the demand, the collection and the handover as one chain.',
+      'The building goes up. What slips is everything that has to happen in step with it. The plinth is done, but the demand letter for that stage goes out two weeks late. A buyer’s loan is sanctioned, but nobody told the bank the stage was complete. The quarterly RERA update is due and the site engineer has the photographs on his phone.',
+      'Each of these is handled by a good person. The trouble is that the facts sit in different places: the sales team’s sheet for bookings, the accounts team’s ledger for receipts, the site team’s reports for progress, the lawyer’s folder for agreements and approvals. The owner or the project head is the only one who connects them, usually on a call.',
+      'So money comes in later than it could, buyers hear about delays from rumour, and compliance work is done in a rush near the deadline. None of it is a disaster in one week. Together it is a slow drag on cash, on trust and on the next launch.',
     ],
+    stack: ['Sales sheet in Excel', 'Accounts software or Tally', 'Site progress in WhatsApp', 'Lawyer’s folder of agreements', 'Channel partner call lists'],
+    stackNote: 'Each tool does its own job well enough. The gap is that none of them knows what the others know.',
   },
 
-  terminology: [
-    ['Projects, towers, units, inventory', 'Records'],
-    ['Bookings, allotments, agreements', 'Orders'],
-    ['Customers, channel partners, investors', 'Relationships'],
-    ['Milestones, demands, collections', 'Workflows'],
-    ['Construction progress, snags, handover', 'Work'],
-    ['Contractors, consultants, vendors', 'Suppliers'],
-    ['Projects, towers, floors', 'Locations'],
-  ],
-
-  challengesHeading: 'Cash earned and not asked for.',
-  challengesLede:
-    'Developer difficulties come from a break between construction progress and the commercial process that depends on it.',
-  challenges: [
+  painsHeading: 'Where a developer actually loses time and money.',
+  painsLede:
+    'These are the situations project heads, sales heads and finance heads describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Demands lag milestone achievement',
-      detail:
-        'A construction stage completes and the demand is raised weeks later, because nothing connects the site record to the commercial one.',
-      outcome:
-        'Milestone achievement raises demands automatically against every unit on that stage.',
-    },
-    {
-      problem: 'Availability is stale and double bookings happen',
-      detail:
-        'Units are held, released and sold through direct sales and channel partners at once, and the availability list is a shared document.',
-      outcome:
-        'Unit state is a record — available, held, booked, agreement executed — so availability is live for everyone selling.',
-    },
-    {
-      problem: 'Collection follow-up is inconsistent',
-      detail:
-        'Overdue instalments are chased by whoever remembers, on a relationship that continues for years.',
-      outcome:
-        'Balances age on the customer record with contact history, so follow-up is persistent and defensible.',
-    },
-    {
-      problem: 'Channel partner commissions are reconciled late',
-      detail:
-        'Commissions are agreed per booking and settled from memory across many partners and slabs.',
-      outcome:
-        'Commission terms are recorded against the booking, so what is due is calculable rather than negotiated.',
-    },
-    {
-      problem: 'Handover is a snag list nobody owns',
-      detail:
-        'A unit is ready, snags are raised verbally at inspection, and handover slips past its committed date.',
-      outcome:
-        'Snags are work with owners and dates against the unit, so handover is a tracked process.',
-    },
-    {
-      problem: 'Approvals and compliance documents are scattered',
-      detail:
-        'Statutory approvals, sanctions and their conditions live with different consultants and are needed together.',
-      outcome:
-        'Approvals attach to the project record with their conditions and validity dates.',
-    },
-  ],
-
-  modulesLede:
-    'One system connecting construction, sales and collections.',
-  modules: [
-    {
-      id: 'records',
-      title: 'Projects, towers and unit inventory',
-      line:
-        'Every unit is a record with its project, tower, floor, configuration, price, current state and the customer holding it.',
-      why:
-        'The unit is the stock, and stale availability is the most common cause of a bad customer conversation.',
-      example:
-        'Four hundred and twelve of six hundred and forty units sold, with live state per unit.',
-    },
-    {
-      id: 'workflows',
-      title: 'Milestones, demands and collections',
-      line:
-        'Construction milestones, payment demands, receipts and interest on delay are defined steps linked to the unit and the customer.',
-      why:
-        'This chain is the developer’s cash flow, and it currently has manual joins at every link.',
-      example:
-        'Sixty-eight demands raised automatically from achieved milestones rather than assembled by hand.',
-    },
-    {
-      id: 'orders',
-      title: 'Bookings, allotments and agreements',
-      line:
-        'Bookings carry their unit, customer, price, payment plan, channel partner, agreement status and documentation.',
-      why:
-        'The booking is where the price, the plan and the commission are fixed, and disputes return to it.',
-      example:
-        'A booking with its agreed payment plan and commission terms, referenced at every later demand.',
-    },
-    {
-      id: 'relationships',
-      title: 'Customers, channel partners and investors',
-      line:
-        'Customers and partners are records with their bookings, payment history, communications, commissions and balances.',
-      why:
-        'A developer’s customer relationship runs for years and ends with a handover, so its history matters throughout.',
-      example:
-        'A customer’s full demand and payment history, visible before a collection call.',
-    },
-    {
-      id: 'work',
-      title: 'Construction progress, snags and handover',
-      line:
-        'Progress, inspections, snags and handover steps are work with owners, dates and states against units and towers.',
-      why:
-        'Handover is the last impression and the most common source of dispute, and it is a process rather than an event.',
-      example:
-        'Eleven handovers past their committed date, each showing the outstanding snags.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Contractors, consultants and vendors',
-      line:
-        'Suppliers are relationships with their packages, progress, certification, payments and performance.',
-      why:
-        'Construction progress determines demands, so contractor performance is a cash-flow variable.',
-      example:
-        'A contractor behind on a stage, alongside the demands that depend on it.',
-    },
-    {
-      id: 'people',
-      title: 'Sales teams, engineers and CRM staff',
-      line:
-        'Staff are modelled once, and every booking, demand, collection call and snag shows who owns it.',
-      why:
-        'Collections and handover both depend on someone specific following through.',
-      example:
-        'Collection follow-ups by owner with outcomes recorded.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Sales, collection and progress reporting',
-      line:
-        'Inventory and sales velocity, demand raised against achieved, collection ageing, channel partner performance, construction progress and handover status come from the operational records.',
-      why:
-        'A developer’s two questions — what is sold and what is collected — are answered from three systems today.',
-      example:
-        'Collectible cash against milestones achieved, current rather than compiled.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the project a question',
-      line:
-        'Verity AI answers from your own unit, booking, milestone and collection records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The most valuable question — what have we earned and not asked for — spans construction and finance.',
-      example:
-        '"Which demands are unraised against achieved milestones?" returns sixty-eight with their value.',
-    },
-    {
-      id: 'control',
-      title: 'Discounts, holds and approvals',
-      line:
-        'One permission model and one audit trail, with price exceptions, unit holds and cancellations as approvals.',
-      why:
-        'Discounting and holds are where a price list quietly stops meaning anything.',
-      example:
-        'A price exception recorded against the booking with the approver.',
-    },
-    {
-      id: 'communication',
-      title: 'Customer contact on the booking',
-      line:
-        'Demands, reminders, responses and complaints attach to the booking or unit they concern.',
-      why:
-        'A relationship lasting several years produces correspondence that must be findable at handover.',
-      example:
-        'Every demand and reminder sent, visible when a customer disputes an interest charge.',
-    },
-    {
-      id: 'locations',
-      title: 'Projects, towers and floors',
-      line:
-        'Locations roll into the business, with units, progress and reporting following the same structure.',
-      why:
-        'Milestones are achieved per tower, and demands follow that structure.',
-      example:
-        'Milestone achievement by tower, driving demands for the units within it.',
-    },
-  ],
-
-  workflowsHeading: 'From stage completion to cash.',
-  workflowsLede:
-    'These already happen across three departments. As one chain they stop losing weeks at each join.',
-  workflows: [
-    {
-      name: 'Milestone to demand to collection',
-      steps: [
-        'Construction milestone recorded as achieved for a tower',
-        'Demands generated for every unit on that stage',
-        'Demand issued to the customer and recorded',
-        'Payment received and applied to the booking',
-        'Overdue balances aged with interest terms applied',
-        'Follow-up assigned with the demand history attached',
-      ],
-      note:
-        'This is the developer’s cash flow, and every manual join in it costs weeks of collection.',
-    },
-    {
-      name: 'Enquiry to booking',
-      steps: [
-        'Enquiry recorded with source and channel partner',
-        'Unit held with an expiry on the hold',
-        'Price and payment plan agreed with approvals for exceptions',
-        'Booking recorded and the unit state updated',
-        'Agreement executed and documentation completed',
-        'Commission terms recorded against the booking',
-      ],
-      note:
-        'A hold with an expiry is what stops inventory being blocked indefinitely by optimistic sales.',
-    },
-    {
-      name: 'Collection follow-up',
-      steps: [
-        'Overdue demands aged by customer and project',
-        'Contact history reviewed before calling',
-        'Follow-up assigned with the outstanding schedule attached',
-        'Outcome and commitment recorded',
-        'Escalation raised where commitments are missed',
-      ],
-      note:
-        'The relationship continues to handover, so the chase must be persistent and recorded rather than aggressive.',
-    },
-    {
-      name: 'Channel partner commission',
-      steps: [
-        'Partner and slab recorded against the booking',
-        'Commission accrued at the agreed trigger',
-        'Claim received and checked against the terms',
-        'Approval routed and payment released',
-        'Partner performance recorded against bookings produced',
-      ],
-      note:
-        'Recording terms at booking is what makes settlement a calculation rather than a negotiation.',
-    },
-    {
-      name: 'Handover',
-      steps: [
-        'Unit marked ready with completion evidence',
-        'Customer inspection scheduled and conducted',
-        'Snags recorded as work with owners and dates',
-        'Rectification tracked to completion and re-inspection',
-        'Handover completed with documentation issued',
-        'Outstanding dues settled before possession',
-      ],
-      note:
-        'Handover is the last impression and the most common source of dispute, and it is a process rather than a date.',
-    },
-    {
-      name: 'Approvals and compliance',
-      steps: [
-        'Statutory approvals recorded against the project',
-        'Conditions and validity dates held on the record',
-        'Renewal and condition deadlines tracked',
-        'Documents attached and completeness reported',
-        'Exceptions raised where a condition is unmet',
-      ],
-      note:
-        'Approvals with conditions are obligations, and they are usually held by whichever consultant obtained them.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask what has been earned and not asked for.',
-    lede:
-      'Verity AI reads the same unit, booking, milestone and collection records the business runs on. It answers from your own projects, respects permissions, and can turn an answer into demands and follow-ups.',
-    panelMeta: 'Grounded in your project records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which demands are unraised against achieved milestones, and what are they worth?',
-      'Which customers are overdue beyond ninety days with no follow-up recorded?',
-      'What is live availability by project, tower and configuration?',
-      'Which units are held past their hold expiry?',
-      'Which channel partners have unreconciled commissions?',
-      'Which handovers are past their committed date, and what snags remain?',
-      'Which contractors are behind on stages that demands depend on?',
-      'What is sales velocity by configuration and price band?',
-      'Summarise collectible cash and collection ageing.',
-    ],
-  },
-
-  automationHeading: 'The joins that lose weeks.',
-  automationLede:
-    'Each runs from the project and booking records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A construction milestone is recorded as achieved',
-      steps: [
-        'Demands generated for every unit on that stage',
-        'Issue task assigned with customer details attached',
-        'Collectible value updated on the project',
-      ],
-    },
-    {
-      trigger: 'A demand passes its due date',
-      steps: [
-        'Balance aged with interest terms applied',
-        'Follow-up assigned with demand and contact history',
-        'Escalated past the second threshold',
-      ],
-    },
-    {
-      trigger: 'A unit hold reaches its expiry',
-      steps: [
-        'Hold flagged with the sales owner',
-        'Release or extension decision raised',
-        'Availability updated for all sales channels',
-      ],
-    },
-    {
-      trigger: 'A unit is marked ready for handover',
-      steps: [
-        'Inspection scheduled with the customer',
-        'Snags recorded as work with owners',
-        'Outstanding dues checked before possession',
-      ],
-    },
-    {
-      trigger: 'A booking is executed',
-      steps: [
-        'Payment plan and demand schedule created',
-        'Commission terms recorded against the partner',
-        'Documentation checklist opened',
-      ],
-    },
-    {
-      trigger: 'An approval condition approaches its deadline',
-      steps: [
-        'Condition flagged against the project',
-        'Owner assigned with the document attached',
-        'Escalated as the date approaches',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the developer can actually see.',
-  intelligenceLede:
-    'Sales, cash and construction from one chain of records.',
-  intelligence: [
-    {
-      area: 'Cash',
-      points: [
-        'Demands raised against milestones achieved',
-        'Collectible value not yet demanded',
-        'Collection ageing by customer and project',
-        'Interest accrued on delayed payments',
-      ],
+      area: 'Sales',
+      title: 'Site visits and enquiries go cold with no follow-up',
+      scene:
+        'A family visits the sample flat on Sunday. The sales executive notes it in his own diary. Two weeks later nobody remembers that they liked the east-facing unit on the ninth floor and wanted to see it with a loan estimate.',
+      cost:
+        'Example arithmetic: if a project gets 400 site visits in a quarter and 3 in every 100 book at ₹90 lakh, that is 12 units, about ₹10.8 crore. One missed follow-up in ten costs more than one unit.',
+      fix:
+        'Every visit becomes a record with the unit they liked, their budget and a next step. Verity lists visits with no follow-up in a set number of days and assigns each to the executive who met them.',
+      screen: 'units',
     },
     {
       area: 'Sales',
-      points: [
-        'Inventory by state, configuration and tower',
-        'Sales velocity and price realisation',
-        'Holds and their expiry',
-        'Direct against channel partner contribution',
-      ],
+      title: 'Channel partners claim the same buyer, and brokerage is argued over',
+      scene:
+        'Two brokers say they brought the same family. The buyer came once with one broker and again alone. The brokerage is held up for weeks while sales, accounts and both brokers argue from memory.',
+      cost:
+        'Hours of senior time per dispute, and a channel partner network that gets quieter after being treated unfairly.',
+      fix:
+        'The first registered visit is recorded against the partner with the date. Brokerage is then linked to the booking, so the claim can be settled from the record instead of from memory.',
+      screen: 'units',
     },
     {
-      area: 'Construction',
-      points: [
-        'Progress against programme by tower',
-        'Milestones achieved and their demand impact',
-        'Contractor performance against packages',
-        'Delays and their recorded causes',
-      ],
+      area: 'Inventory',
+      title: 'Units are held verbally and the availability chart is wrong',
+      scene:
+        'A senior sales person says “keep that unit for my client”. It stays blocked for six weeks. A walk-in buyer is told it is sold, and goes to the next project down the road.',
+      cost:
+        'A good unit sitting idle while a ready buyer walks away. In a project with 200 units, even ten stale holds change what you can say yes to.',
+      fix:
+        'Each unit has a state: available, on hold, booked, agreement signed, possession given. A hold carries a name, a reason and an expiry date, and lapses back to available unless someone renews it.',
+      screen: 'units',
+    },
+    {
+      area: 'Sales',
+      title: 'Booking is made, but the agreement stalls on paperwork',
+      scene:
+        'The token is paid. KYC is incomplete, the co-applicant’s documents are missing and the draft agreement is waiting on a change request. Weeks pass with the unit shown as booked and the buyer not yet committed.',
+      cost:
+        'A booking that is not yet an agreement can still be cancelled. The unit and the cash both stay uncertain.',
+      fix:
+        'The path from booking to agreement is a checklist on each buyer’s record: KYC, loan documents, draft sent, stamp duty paid, registration date. Verity shows which buyers are stuck and on which step.',
+      screen: 'demands',
+    },
+    {
+      area: 'Collections',
+      title: 'Demand letters go out late because someone has to notice the stage',
+      scene:
+        'The payment plan says a demand is due on completion of the fourth slab. The site team finishes it on the 3rd. Accounts hears on the 17th. The letters go out on the 20th and the payments arrive next month.',
+      cost:
+        'Example arithmetic: a stage worth 10% on 200 units of ₹90 lakh is about ₹18 crore. Each week of delay in raising it is a week of that money not available for contractor bills.',
+      fix:
+        'Each stage in the payment plan is linked to a site milestone. When the site team marks the milestone complete and the engineer’s certificate is attached, Verity creates the demand for every affected buyer, ready for accounts to review and send.',
+      screen: 'demands',
+    },
+    {
+      area: 'Collections',
+      title: 'Overdue buyer payments are chased by different people in different ways',
+      scene:
+        'Some buyers pay late every time. Some are waiting on a bank. One is quietly in trouble. The collections list is a sheet sorted by flat number and it does not say who has been spoken to, or what they promised.',
+      cost:
+        'Cash that is owed, not received. Interest terms in the agreement are only useful if they are applied evenly and on time.',
+      fix:
+        'Each buyer’s overdue amount shows the days late, the last contact and the promised date. Follow-ups are tasks with an owner. Verity highlights those who have broken a promise twice.',
+      screen: 'demands',
+    },
+    {
+      area: 'Collections',
+      title: 'Bank loan disbursements are not tracked against construction stage',
+      scene:
+        'A buyer’s loan is sanctioned, but the next tranche needs a stage certificate and a demand letter in the bank’s format. Nobody sent them. The bank pays two weeks later than it could have.',
+      cost:
+        'Buyer cash stuck in a queue at the bank. The buyer is shown as defaulting when the delay is in paperwork.',
+      fix:
+        'For each buyer with a loan, the record shows bank, sanctioned amount, tranches released and the document the next tranche needs. Verity creates a task to send it when the stage completes.',
+      screen: 'demands',
+    },
+    {
+      area: 'Compliance',
+      title: 'The RERA quarterly update is built in a hurry from scattered numbers',
+      scene:
+        'The deadline is near. The site engineer sends photographs. Accounts sends sales figures from a sheet. Someone has to match unit counts, receipts and the percentage of completion, and the RERA portal wants it in its own format.',
+      cost:
+        'Late or inconsistent filings can invite penalties from the state authority and make buyers doubt you. Even without a penalty, it is days of senior time every quarter, per project.',
+      fix:
+        'The unit list, receipts, stage progress and photographs already sit on the project record. Verity assembles the figures a quarterly update needs, flags what is missing and assigns the gaps, so your team enters the update in the portal from one checked sheet.',
+      screen: 'rera',
+      source: {
+        name: 'TaxGuru, Importance of RERA compliances, July 2024',
+        url: 'https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html',
+      },
+    },
+    {
+      area: 'Compliance',
+      title: 'The 70 percent account and its withdrawal certificates',
+      scene:
+        'Seventy percent of buyer money must go to a separate project account. Withdrawals need a certificate from an engineer, an architect and a chartered accountant, in proportion to completion. Accounts is asked to withdraw for a bill before anyone has lined up the three signatures.',
+      cost:
+        'Delayed contractor payments, or a withdrawal that does not match the percentage of completion and has to be explained later to an auditor or the authority.',
+      fix:
+        'Receipts are split into the project account and the free account as they arrive. A withdrawal request is a workflow: the bill, the completion percentage and the three certificates must be attached before it is released for approval.',
+      screen: 'rera',
+      source: {
+        name: 'TaxGuru, Importance of RERA compliances, July 2024',
+        url: 'https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html',
+      },
+    },
+    {
+      area: 'Site',
+      title: 'Progress is reported in photographs, not against the plan',
+      scene:
+        'The site head sends twenty photos and a message saying “third floor slab done”. The programme in the project office says it should have been done twelve days ago. Nobody puts the two side by side until the sales team asks why the demand is late.',
+      cost:
+        'Delay interest exposure that nobody has added up, and buyers who learn of a slip from a rumour.',
+      fix:
+        'Every tower has stages with planned and actual dates. Progress is recorded against them with photographs, so the gap to plan is a number on the project head’s screen and the sales team can see it too.',
+      screen: 'site',
+    },
+    {
+      area: 'Site',
+      title: 'Contractor running bills are paid on trust, not on measured work',
+      scene:
+        'The structure contractor submits a bill for 70 percent of the work. The site engineer says it is nearer 55. Accounts has no measurement sheet. The bill is settled by a phone call between the contractor and the director.',
+      cost:
+        'Example arithmetic: a 15 percent over-claim on a ₹6 crore work order is ₹90 lakh. It does not need to be fraud, only unmeasured work billed early.',
+      fix:
+        'Each work order has a bill schedule. A running bill is compared with the measured quantity and the progress recorded on site, and needs the engineer’s sign-off, then the project head’s, before accounts pays. Retention and advances are tracked on the same record.',
+      screen: 'bills',
+    },
+    {
+      area: 'Approvals',
+      title: 'Sanctions, NOCs and the occupancy certificate run on a lawyer’s folder',
+      scene:
+        'The commencement certificate, fire NOC, environment clearance and lift licence each have dates and conditions. One expires in a month and only the liaison person knows. The occupancy certificate application cannot start until half of them are in order.',
+      cost:
+        'A project that cannot be handed over because one paper lapsed. Buyers who have paid in full wait outside the building.',
+      fix:
+        'Every approval is a record with its authority, validity date, conditions and owner. Verity lists those expiring soon and those that gate the next step, and assigns the follow-up to the liaison person or the lawyer.',
+      screen: 'rera',
+    },
+    {
+      area: 'Buyers',
+      title: 'Buyers ask the sales team about progress and nobody has a clear answer',
+      scene:
+        'A buyer calls to ask when the tower will be ready, why the lobby finish is different from the brochure and whether the car park has been allotted. Sales calls site, site calls accounts, and the buyer waits two days.',
+      cost:
+        'Loss of trust in the one period when trust matters most. Unhappy buyers also tend to be slower to pay.',
+      fix:
+        'Each buyer’s record carries their unit, payment history, change requests and tickets. Questions become tickets with an owner and a due date, and the answer is recorded for the next person who gets the same call.',
+      screen: 'demands',
     },
     {
       area: 'Handover',
-      points: [
-        'Units ready, inspected and handed over',
-        'Snags open by unit and trade',
-        'Handovers past committed date',
-        'Dues outstanding at possession',
+      title: 'Snagging and possession are managed on paper checklists',
+      scene:
+        'Two hundred flats are ready for possession in the same month. Each buyer walks through with a printed snag list. Fixes are promised, done, not signed off and re-reported. The handover date slips because the last 20 snags per flat are not tracked in one place.',
+      cost:
+        'Possession delayed past the agreed date, and a quiet source of delay interest for flats that were “nearly ready”.',
+      fix:
+        'Each flat gets a snag list with items, photographs, an owner and a status. Verity shows how many flats are clean, how many have open snags and which contractor is holding up the most.',
+      screen: 'handover',
+    },
+    {
+      area: 'Owner',
+      title: 'Cash across several projects is judged by instinct',
+      scene:
+        'Project A is collecting well. Project B has a bridge loan due. Project C needs a large advance for a contractor. Which can fund which is worked out in a meeting with three sheets on the table.',
+      cost:
+        'Borrowing at a higher rate than needed, or delaying a stage payment that would have kept a site moving.',
+      fix:
+        'Receipts due, receipts overdue, payables by contractor and committed amounts are shown for each project side by side. The owner sees which project is short and which has room, from the same live records.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Some are a few years old and are shown with their dates. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '98,523',
+      text: 'real estate projects were registered under RERA across India as of 3 December 2022, and 1,03,784 complaints had been disposed of by the authorities.',
+      source: { name: 'Moneylife, citing a Lok Sabha reply', year: '2022', url: 'https://www.moneylife.in/article/rera-in-31-states-and-uts-disposed-of-103-lakh-complaints-govt/69202.html' },
+    },
+    {
+      figure: '1.74 lakh homes',
+      text: 'in 220 projects launched in 2013 or earlier were stalled across the top seven cities, with no construction under way, in an ANAROCK count reported by IANS. The report is from about 2019.',
+      source: { name: 'Orissa Post, citing ANAROCK via IANS', url: 'https://www.orissapost.com/indias-home-mess-1-74-lakh-housing-projects-stalled-across-major-cities/amp/' },
+    },
+    {
+      figure: '70%',
+      text: 'of the money realised from buyers must generally be kept in a separate project bank account, and withdrawals follow the percentage of completion as certified by an engineer, an architect and a chartered accountant.',
+      source: { name: 'TaxGuru, Importance of RERA compliances', year: '2024', url: 'https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html' },
+    },
+    {
+      figure: 'Every month',
+      text: 'of delay in handing over a flat past the agreed date can bring interest to the buyer under Section 18 of RERA. A MahaRERA extension does not remove that duty, according to a legal column.',
+      source: { name: 'Free Press Journal, Consumer Connect', year: '2025', url: 'https://www.freepressjournal.in/amp/mumbai/consumer-connect-maharera-extension-no-excuse-to-deny-interest-payment-for-delay-says-expert' },
+    },
+  ],
+  factsNote:
+    'The registration and complaint counts are from December 2022 and the stalled-homes count is several years old, so both show scale, not today’s position. The RERA rules differ by state. A legal column is not a legal opinion.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each built for one job. Names, columns and stages are set up in your own project’s language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Developer / Today',
+      meta: 'All projects',
+      heading: 'The owner’s morning view across projects',
+      caption:
+        'Money due, money overdue, progress against plan and what needs a decision, for every project on one screen. It replaces the Monday review where three people bring three sheets.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Due this month', value: '₹7.4 cr', note: 'from 112 buyers' },
+            { label: 'Overdue', value: '₹1.9 cr', note: '34 buyers past due' },
+            { label: 'Units unsold', value: '63', note: 'of 410 across 3 projects' },
+            { label: 'Approvals expiring', value: '2', note: 'within 45 days' },
+          ],
+        },
+        { type: 'title', text: 'Progress against plan, by project' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Skyline Heights, Tower A', value: 78, display: '78% of plan' },
+            { label: 'Skyline Heights, Tower B', value: 54, display: '54% of plan', tone: 'muted' },
+            { label: 'Green Meadows Phase 2', value: 91, display: '91% of plan' },
+          ],
+        },
+        { type: 'alert', text: 'Tower B is 5 weeks behind plan. 18 buyers have a possession date inside the next 6 months.', action: 'Review' },
       ],
     },
     {
-      area: 'Partners',
-      points: [
-        'Bookings by channel partner',
-        'Commission accrued, claimed and settled',
-        'Conversion quality by partner',
-        'Outstanding partner balances',
+      id: 'units',
+      title: 'Units and bookings',
+      meta: 'Skyline Heights, Tower A',
+      heading: 'Every unit, its state and who has it',
+      caption:
+        'Available, on hold, booked and agreement signed, for each unit, with the holder, the expiry of any hold and the channel partner who brought the buyer. Holds lapse unless someone renews them.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Unit', 'Type', 'Price', 'State', 'Held by'],
+          rows: [
+            ['A-904', '3 BHK', '₹1.32 cr', ['On hold, 3 days', 'flag', 'Released', 'ok'], 'Sandeep (sales)'],
+            ['A-905', '2 BHK', '₹92 lakh', ['Available', 'ok'], 'None'],
+            ['A-1002', '3 BHK', '₹1.38 cr', ['Booked', 'info'], 'Mehta family'],
+            ['A-1101', '2 BHK', '₹95 lakh', ['Hold expired', 'late', 'Available', 'ok'], 'Broker request'],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Site visit with no follow-up', meta: 'Rao family, liked A-1203, 9 days ago', tag: ['Call', 'flag', 'Called', 'ok'] },
+            { name: 'Partner claim to settle', meta: 'Two brokers, one buyer. First visit: 12 September', tag: ['Open', 'flag', 'Settled', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'demands',
+      title: 'Buyer payments',
+      meta: 'Demands and dues',
+      heading: 'Payment milestones linked to what is built',
+      caption:
+        'Each buyer’s payment plan, the stages raised, the amounts received and the loan tranches pending. A stage completed on site creates the demand, and the follow-up for late payers is a task with an owner.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Buyer', 'Unit', 'Stage due', 'Amount', 'Status'],
+          rows: [
+            ['Kavita Sharma', 'A-702', '4th slab', '₹9.2 lakh', ['Raise demand', 'flag', 'Sent', 'ok']],
+            ['Imran Qureshi', 'A-1002', '3rd slab', '₹9.6 lakh', ['32 days late', 'late', 'Promised 22 Oct', 'info']],
+            ['Rajiv Menon', 'B-505', '4th slab', '₹8.8 lakh', ['Loan tranche pending', 'flag', 'Bank notified', 'ok']],
+            ['Anita Desai', 'A-306', 'Plinth', '₹7.1 lakh', ['Paid', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Fourth slab of Tower A was marked complete on 3 October. 41 demand letters are ready for review.', action: 'Review and send' },
+      ],
+    },
+    {
+      id: 'rera',
+      title: 'RERA project record',
+      meta: 'Skyline Heights, Tower A',
+      heading: 'The project file that the quarterly update comes from',
+      caption:
+        'Registration details, unit counts, receipts, the project account split, stage progress and approvals on one record. Verity lists what is missing before the quarterly update is due and who owns the gap.',
+      blocks: [
+        {
+          type: 'checks',
+          items: [
+            { text: 'Unit count and booked units matched to the sales list', meta: 'Checked 12 October', done: true },
+            { text: 'Receipts split between project account and other account', meta: 'Up to date', done: true },
+            { text: 'Stage photographs for the quarter attached', meta: 'Site team, due 18 October', done: false },
+            { text: 'Engineer, architect and CA certificates for the next withdrawal', meta: '2 of 3 attached', done: false },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Approval', 'Authority', 'Valid till', 'Owner', 'Status'],
+          rows: [
+            ['Fire NOC', 'Fire department', '30 Nov 2026', 'Liaison', ['Renew', 'late', 'Applied', 'ok']],
+            ['Commencement certificate', 'Local authority', 'Open', 'Legal', ['Valid', 'ok']],
+            ['Lift licence', 'State inspector', '14 Dec 2026', 'Project head', ['Due soon', 'flag']],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'site',
+      title: 'Site progress',
+      meta: 'Skyline Heights',
+      heading: 'Stages, plan against actual',
+      caption:
+        'The stages of each tower with planned and actual dates, photographs and who is holding each up. A stage marked complete with the engineer’s certificate attached is what releases the buyer demand.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'In progress',
+              cards: [
+                { title: 'A: 10th floor slab', meta: 'Plan 14 Oct, now 18 Oct', tag: ['4 days late', 'late'] },
+                { title: 'B: 6th floor slab', meta: 'Plan 25 Sep, now 10 Oct', tag: ['Behind', 'flag'] },
+              ],
+            },
+            {
+              name: 'Waiting for certificate',
+              cards: [
+                { title: 'A: 9th floor slab', meta: 'Engineer to certify', tag: ['Pending', 'flag', 'Certified', 'ok'] },
+              ],
+            },
+            {
+              name: 'Complete, demand raised',
+              cards: [
+                { title: 'A: 8th floor slab', meta: '41 buyers billed', tag: ['Done', 'ok'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'bills',
+      title: 'Contractor bills',
+      meta: 'Work orders',
+      heading: 'Running bills checked against measured work',
+      caption:
+        'Each work order with its bill schedule, the quantity billed against the quantity measured on site, retention held and who has signed. Accounts pays only after the chain of sign-offs is complete.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Contractor', 'Work order', 'Billed', 'Measured', 'Status'],
+          rows: [
+            ['Shree Structures', 'Tower A structure', '70%', '58%', ['Query', 'late', 'Revised', 'ok']],
+            ['Om Electricals', 'Tower A wiring', '35%', '34%', ['Engineer signed', 'info', 'Paid', 'ok']],
+            ['Balaji Plumbing', 'Tower B plumbing', '20%', '20%', ['Approved', 'ok']],
+            ['Kumar Waterproofing', 'Terrace', '100%', '85%', ['Query', 'late']],
+          ],
+        },
+        { type: 'alert', text: 'Shree Structures bill is ₹38 lakh above measured work. Waiting for the engineer’s revised measurement.', action: 'Open bill' },
+      ],
+    },
+    {
+      id: 'handover',
+      title: 'Possession and snags',
+      meta: 'Green Meadows Phase 2',
+      heading: 'Flat by flat, from snag list to keys',
+      caption:
+        'Each flat’s snag list, photographs, who owns each fix and the status of the dues, certificate and handover date. The project head sees how many flats are clean and who is slowing the rest.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Flats ready', value: '86', note: 'no open snags' },
+            { label: 'Open snags', value: '214', note: 'across 47 flats' },
+            { label: 'Dues pending', value: '9', note: 'blocking handover' },
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Flat C-402, Mr. Joshi', meta: '6 snags, 4 fixed, tiles in bathroom pending', tag: ['Open', 'flag', 'Closed', 'ok'] },
+            { name: 'Flat C-505, Mrs. Nair', meta: 'Final payment pending ₹2.1 lakh', tag: ['Dues', 'late'] },
+            { name: 'Flat D-101, Mr. Reddy', meta: 'All clear, handover on 28 Oct', tag: ['Ready', 'ok'] },
+          ],
+        },
       ],
     },
   ],
-  intelligenceNote:
-    'Verity connects construction, sales and collection records. Accounting and statutory filing continue in your existing systems.',
 
-  rolesHeading: 'One project, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Thursday, before and after.',
+  dayLede: 'What changes is not the building. It is that every step leaves a record, and the record tells the next person it is their turn.',
+  day: [
+    {
+      time: '9:30',
+      before: 'You ask the project head how Tower A is doing and wait for him to ring the site.',
+      after: 'You open the Today screen. Tower A is four days behind plan, with the reason against the stage.',
+    },
+    {
+      time: '11:00',
+      before: 'The fourth slab is done. The sales team hears about it a week later.',
+      after: 'The engineer marks it complete. Forty-one demand letters are ready for accounts to review.',
+    },
+    {
+      time: '1:00',
+      before: 'A walk-in wants unit A-904. The chart says booked, but the hold ended last month.',
+      after: 'The hold lapsed on its date. The unit shows available and the executive takes the booking.',
+    },
+    {
+      time: '3:30',
+      before: 'The structure contractor’s bill arrives. Accounts calls you to ask whether to pay.',
+      after: 'The bill shows billed against measured. It waits for the engineer’s revised measurement before it reaches you.',
+    },
+    {
+      time: '5:00',
+      before: 'A buyer calls about the car park allotment. Nobody has the file open.',
+      after: 'The buyer’s record shows the allotment, the payments and the open ticket. It is answered on the call.',
+    },
+    {
+      time: 'Quarter end',
+      before: 'The RERA update is assembled from four sheets in the last three days.',
+      after: 'Verity lists the three gaps a week before. The update is entered from one checked record.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your projects are actually sold, built and billed, set Verity up around that, bring your data in, then stay on so it keeps working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with the sales head, the finance head and the project head. Walk a site, follow one unit from enquiry to possession, and map where bookings, receipts, progress and approvals are recorded today.',
+        you: 'Two to three hours of your time, plus an hour each from sales, accounts and site. Access to your sales sheet, ledger and a recent RERA update.',
+        get: 'A written map of your projects: towers, unit list, payment plans, stages, work orders, approvals, and the problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up each project, tower and unit, the payment plans and their linked stages, the project account split, hold rules, work orders and bill checks, approval records and the roles who sign off.',
+        you: 'Check the setup with the heads of sales, accounts and site. Tell us where a rule is wrong.',
+        get: 'A working Verity with your real projects, stages and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your unit list, bookings, buyer details, receipts, contractors, work orders and approvals from the sheets and software you use. Train each team on its own screens, with real units and real bills.',
+        you: 'Your sheets and ledgers as they stand. One hour with each team.',
+        get: 'Your units, buyers and bills inside Verity, and teams that have used it on live work.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on through the first quarterly update and the first set of demands. Review what the numbers say, tune the stage links and add the next project or phase as you launch it.',
+        you: 'A short monthly review with the project head and the finance head.',
+        get: 'A system that keeps pace with each new launch, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your unit list for each project with prices and areas',
+      'Payment plans as they appear in the agreements',
+      'Your booking list, receipts ledger and the latest RERA quarterly update',
+      'Contractor work orders and the bills paid so far',
+      'Your list of approvals, with dates and the person who handles each',
+    ],
+    time: 'About 10 to 12 hours of your own time across the four weeks, mostly in the first week. The heads of sales, finance and site need a few more each.',
+    after: 'No extra staff are hired to run Verity. Bookings, receipts, stage updates and bills are recorded as the work happens, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your projects a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own unit, buyer, site and bill records. Ask in plain language, then turn the answer into tasks for the right people. It respects who is allowed to see what.',
+    examples: [
+      {
+        q: 'Which buyers owe us more than 30 days on a milestone, and who spoke to them last?',
+        a: '34 buyers are more than 30 days late, ₹1.9 crore in total. 11 have a promised date in the past.',
+        rows: [['Tower A', '19 buyers'], ['Tower B', '9 buyers'], ['Green Meadows', '6 buyers']],
+        action: 'Create follow-up tasks for the sales owners',
+      },
+      {
+        q: 'Which approvals expire in the next 60 days?',
+        a: 'Two approvals fall due: the fire NOC for Tower A on 30 November, and the lift licence on 14 December.',
+        rows: [['Fire NOC, Tower A', '30 Nov'], ['Lift licence, Tower A', '14 Dec']],
+        action: 'Assign renewal to the liaison person',
+      },
+      {
+        q: 'Which contractor bills are higher than the work measured on site?',
+        a: 'Two bills are above measured work: Shree Structures by ₹38 lakh and Kumar Waterproofing by ₹4.5 lakh.',
+        action: 'Ask the engineer for revised measurements',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups that fall between teams.',
+  automationLede: 'Set once, then they run from your records. People still send the letters and make the calls. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'A tower stage is marked complete',
+      then: ['Checked for the engineer’s certificate', 'Demands prepared for each buyer on the plan', 'Accounts asked to review and send'],
+    },
+    {
+      when: 'A unit hold passes its expiry',
+      then: ['Unit returns to available', 'Holder told it has lapsed', 'Renewal logged only if approved'],
+    },
+    {
+      when: 'A buyer’s payment is overdue',
+      then: ['Added to the dues list with days late', 'Follow-up task to the sales owner', 'Promise date and outcome recorded'],
+    },
+    {
+      when: 'A loan tranche becomes due',
+      then: ['Stage certificate and demand pulled together', 'Task to send them to the bank', 'Receipt date recorded when it arrives'],
+    },
+    {
+      when: 'A contractor bill is submitted',
+      then: ['Compared with measured quantity', 'Sent to the engineer, then the project head', 'Held back from payment until both sign'],
+    },
+    {
+      when: 'An approval is 60 days from expiry',
+      then: ['Flagged on the project record', 'Renewal task to the liaison person', 'Outcome and new date recorded'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a developer has to keep up with.',
+    lede: 'Verity does not give legal advice and does not file anything on the RERA portal. It keeps the project records these rules depend on in order, so your team is not rebuilding them each quarter.',
+    items: [
+      {
+        name: 'RERA project registration and quarterly updates',
+        what: 'A registered project is generally expected to be updated on the state authority’s portal each quarter. The format and deadlines are set by each state.',
+        how: 'Unit counts, receipts, stage progress and photographs are on one project record, so the figures for the update are checked before they are entered.',
+        source: { name: 'TaxGuru, Importance of RERA compliances', url: 'https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html' },
+      },
+      {
+        name: 'The separate project account for buyer money',
+        what: 'Under Section 4(2)(l)(D), generally 70 percent of what is collected from buyers goes into a separate account and is withdrawn in proportion to completion, with an engineer, an architect and a chartered accountant certifying. Accounts are audited every year.',
+        how: 'Receipts are split as they arrive, and a withdrawal needs the bill, the completion percentage and the three certificates attached before it moves forward.',
+        source: { name: 'TaxGuru, Importance of RERA compliances', url: 'https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html' },
+      },
+      {
+        name: 'Interest for delayed possession',
+        what: 'Under Section 18, a buyer who stays in the project can be owed interest for every month of delay past the agreed date. The rate is set by state rules.',
+        how: 'Each flat carries its agreed possession date and the current expected date, so the exposure is a number you can see long before it is claimed.',
+        source: { name: 'Free Press Journal, Consumer Connect, March 2025', url: 'https://www.freepressjournal.in/amp/mumbai/consumer-connect-maharera-extension-no-excuse-to-deny-interest-payment-for-delay-says-expert' },
+      },
+      {
+        name: 'Approvals and the occupancy certificate',
+        what: 'A project depends on sanctions, NOCs and licences with their own validity dates and conditions, and handover generally needs the occupancy certificate from the local authority.',
+        how: 'Each approval is a record with its authority, expiry and owner, and the ones that gate handover are shown first.',
+      },
+      {
+        name: 'Buyer personal data',
+        what: 'Buyer identity documents, income papers and loan details are personal data. India’s Digital Personal Data Protection law and its rules apply in stages.',
+        how: 'Buyer papers sit in one permissioned place, with a log of who opened or changed them, rather than in sales staff’s phones and email.',
+      },
+    ],
+    note: 'Rules differ by state and change often. Confirm current requirements with your lawyer, your chartered accountant and the state RERA authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A site engineer should not see buyer receipts. A sales executive should not release a contractor payment. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Promoter',
-      question: 'What have we earned and what have we collected?',
-      focus: 'Collectible value against demands raised, collection ageing, sales velocity, construction progress.',
-    },
-    {
-      role: 'CRM head',
-      question: 'Who is overdue and what have we said to them?',
-      focus: 'Ageing by customer, contact history, commitments made, escalations due.',
-    },
-    {
-      role: 'Sales head',
-      question: 'What can we actually sell?',
-      focus: 'Live availability, holds and expiry, price realisation, channel partner performance.',
-    },
-    {
-      role: 'Project head',
-      question: 'Which stages are late and what do they hold up?',
-      focus: 'Progress against programme, contractor performance, milestones pending, demands blocked.',
-    },
-    {
-      role: 'Handover team',
-      question: 'Which units are ready and what remains?',
-      focus: 'Inspections due, snags open by trade, rectification progress, dues outstanding.',
-    },
+    { role: 'Owner or director', question: 'Which project needs cash or attention this week?', sees: 'Dues and receipts across projects, progress against plan, expiring approvals and bills waiting for sign-off.' },
+    { role: 'Sales head', question: 'Which units can I sell and which buyers are stuck?', sees: 'Unit states and holds, booking checklists, partner claims, site visits with no follow-up.' },
+    { role: 'Project head', question: 'What is behind plan and why?', sees: 'Stages with planned and actual dates, contractor bills waiting, snag counts and approvals.' },
+    { role: 'Accounts and finance', question: 'What should we raise, collect and pay?', sees: 'Demands ready to send, overdue by buyer, loan tranches, the project account split and approved bills.' },
+    { role: 'Legal and compliance', question: 'Is the project record ready for the next update?', sees: 'The RERA project record, agreements, approval validity dates and what is missing for the quarter.' },
   ],
 
-  useCasesHeading: 'What developers use Verity for',
-  useCases: [
-    {
-      name: 'Milestone-linked demand generation',
-      body: 'Stage achievement generating demands for every unit on it, closing the manual join that costs weeks of collection.',
-    },
-    {
-      name: 'Live unit availability',
-      body: 'Unit state as a record shared across direct sales and channel partners, ending stale availability lists and double bookings.',
-    },
-    {
-      name: 'Collection follow-up',
-      body: 'Balances aged with contact history, so a years-long relationship is chased persistently and defensibly.',
-    },
-    {
-      name: 'Hold expiry',
-      body: 'Holds with expiry dates, so optimistic sales cannot block inventory indefinitely.',
-    },
-    {
-      name: 'Channel partner commission',
-      body: 'Terms recorded at booking, so settlement is a calculation rather than a negotiation across slabs and partners.',
-    },
-    {
-      name: 'Handover and snags',
-      body: 'Snags as work with owners and dates, so handover is a tracked process rather than a date that slips.',
-    },
-    {
-      name: 'Approval conditions',
-      body: 'Statutory approvals with their conditions and validity dates on the project record rather than with the consultant who obtained them.',
-    },
-    {
-      name: 'Asking across sales and site',
-      body: 'Plain-language questions spanning construction, bookings, demands and collections, with actions assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your accounting software or Tally for the books. We agree how data reaches Verity during setup.',
+      'The RERA portal, where your team enters the update from the checked record.',
+      'Your CRM or lead sheet, if you have one. We map it during setup.',
+      'Your lawyer, your chartered accountant and your architect, who keep their roles.',
+    ],
+    not: [
+      'File anything on the RERA portal for you.',
+      'Take bookings or payments from buyers online.',
+      'Send demand letters or messages on its own.',
+      'Give legal advice or replace your lawyer.',
+    ],
+    migration:
+      'We bring your unit lists, buyer details, receipts, work orders and approvals across from the sheets and software you use now, project by project, so sales and site keep going while it happens.',
+  },
 
-  migration:
-    'Your accounting, statutory filing and design systems continue to run and are mapped during implementation. Projects, unit inventory, bookings, payment plans, partners and open demands are brought across, and Verity is introduced as the connecting operational layer.',
-
-  faqHeading: 'Questions developers ask',
+  faqHeading: 'Questions developers ask.',
   faqs: [
     [
-      'What can AI software do for a real estate developer?',
-      'Verity AI answers questions from your own unit, booking, milestone and collection records: which demands are unraised against achieved milestones and what they are worth, which customers are overdue with no follow-up recorded, what live availability looks like, which handovers are past their committed date. Each answer can become a demand or a follow-up.',
+      'Will my sales and site teams actually use it?',
+      'It only works if updates are made, so we set it up around what each team already does. Site marks a stage complete, sales updates a hold, accounts approves a demand. Each person gets something back, such as a ready list or a clear sign-off, so using it saves them time.',
     ],
     [
-      'How does it improve collections?',
-      'Construction milestone achievement generates demands for every unit on that stage, closing the manual join between the site and the commercial process. Demands unraised against achieved milestones are cash the business has earned and not asked for, usually while borrowing to fund the same construction.',
+      'Does Verity file my RERA quarterly update?',
+      'No. Your team enters the update on the state portal. Verity keeps unit counts, receipts, stage progress and photographs on the project record and lists what is missing, so the update is entered from checked information.',
     ],
     [
-      'Can it prevent double bookings?',
-      'Unit state — available, held, booked, agreement executed — is a live record shared across direct sales and channel partners, with holds carrying expiry dates, so availability is current for everyone selling rather than a shared document that drifts.',
+      'Can it send demand letters to buyers?',
+      'Not by itself. When a stage is certified complete, Verity prepares the demand for each buyer on the plan and asks accounts to review it. Your team sends it and the payment is then recorded against the buyer.',
     ],
     [
-      'Does it handle channel partner commissions?',
-      'Commission terms and slabs are recorded against the booking at the point it is made, so what is due is a calculation from records rather than a negotiation reconstructed across many partners.',
+      'We run three projects at once. Is that supported?',
+      'Yes. Each project, tower and phase is set up with its own units, payment plans, stages and approvals. The owner sees them side by side, and a buyer who has bought in two projects is one person.',
     ],
     [
-      'Can it manage handover?',
-      'Handover is a process — readiness, inspection, snags as work with owners and dates, rectification, re-inspection, documentation and dues settlement — rather than a committed date that slips with nobody owning the outstanding items.',
+      'Does it replace our accounting software?',
+      'No. Your accountant keeps the books. Verity holds the buyer, unit, stage and bill records that the ledger needs, and we agree how data reaches Verity during setup.',
     ],
     [
-      'Does Verity replace our accounting software?',
-      'No. Accounting and statutory filing continue and are mapped during implementation. Verity connects the construction, sales, demand, collection and handover records that sit around them.',
+      'How does it help with the 70 percent account rule?',
+      'Receipts are split as they come in, and a withdrawal request cannot move forward without the bill, the completion percentage and the three certificates. It does not move money or advise on your bank arrangements.',
     ],
     [
-      'Can it track approval conditions?',
-      'Statutory approvals attach to the project with their conditions and validity dates, so obligations and renewals are tracked rather than held by whichever consultant obtained them.',
+      'Who can see buyer and financial data?',
+      'Only the people you allow. Access is set by role. Site staff cannot see buyer receipts, sales cannot approve contractor payments, and every change is recorded with who made it and when.',
     ],
     [
-      'Is it suitable for a single-project developer?',
-      'A single project still runs the same chain from milestone to demand to collection to handover, and a break in that chain is proportionally more damaging to a smaller balance sheet.',
+      'Can we migrate a project that is already half built?',
+      'Yes, most are. We bring in the units, bookings, receipts to date, stage history and open work orders so the record starts from where you are, and we check it against your ledger before go-live.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of the payment plans and construction stages, configuration of projects and unit inventory, migration of bookings and open demands, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of projects, towers and users, and on what you want set up. Message us and we will give you a clear number after a short conversation about how your projects run.',
     ],
   ],
 
-  ctaHeading: 'Start with the demands you have not raised.',
-  ctaLede:
-    'It is cash you have already earned, sitting behind a manual step. Tell us how milestones reach your CRM today.',
+  related: ['property-dealers', 'real-estate-agencies', 'construction-companies', 'contractors', 'building-material-suppliers', 'property-management'],
 
-  related: ['construction-companies', 'property-dealers', 'real-estate-agencies', 'property-management', 'contractors', 'architects'],
+  ctaHeading: 'Start with the demand letters that are late.',
+  ctaLede:
+    'Tell us how your projects run and we will show you the overdue dues, the stale unit holds and the approvals that are close to lapsing, using your own numbers.',
 };

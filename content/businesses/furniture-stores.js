@@ -1,573 +1,684 @@
 export default {
+  schema: 2,
   slug: 'furniture-stores',
   status: 'published',
   plural: 'furniture stores',
-  subject: 'furniture retail business',
+  subject: 'furniture store',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for furniture stores | Verity',
+    title: 'Furniture store management software for Indian showrooms | Verity',
     description:
-      'Verity connects long-lead orders, made-to-order production, delivery and assembly scheduling, showroom stock and customer promises into one system.',
+      'The problems that drain a furniture showroom: slipping delivery dates, lost custom specs, dead stock and unpaid balances, and the Verity screens that fix each one.',
     keywords: [
-      'AI software for furniture stores',
-      'furniture retail management software',
-      'made to order furniture tracking',
-      'furniture delivery and assembly scheduling software',
+      'furniture showroom management software India',
+      'made to order furniture order tracking',
+      'furniture delivery and assembly scheduling',
+      'furniture store stock ageing',
+      'furniture showroom enquiry follow up',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'orders', 'suppliers', 'logistics', 'schedule', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for furniture retail',
-    headline: 'You sold it in March. You deliver it in June. Everything in between is the business.',
+    eyebrow: 'Verity for furniture stores',
+    headline: 'A sofa is sold in ten minutes and promised for six weeks. Verity keeps the promise in view.',
     lede:
-      'Furniture retail is a promise with a long gap in the middle — production, transit, delivery and assembly. Verity holds the order, the stages and the customer promise on one record.',
-    note: 'Runs alongside your existing billing and accounting.',
-    panel: {
-      title: 'Orders',
-      meta: 'All orders · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Open orders', value: '146', note: '₹1.9 Cr committed' },
-        { label: 'Past promised date', value: '18', note: 'customer already told' },
-        { label: 'Awaiting delivery slot', value: '24', note: 'produced, not scheduled' },
-        { label: 'Advances held', value: '₹38 L', note: 'against undelivered orders' },
-      ],
-      rows: [
-        { name: '18 orders past the date the customer was given', meta: 'No revised date communicated', active: true },
-        { name: '24 items ready with no delivery slot booked', meta: 'Warehouse space filling', active: true },
-        { name: 'Fabric selection unconfirmed on 6 made-to-order items', meta: 'Production cannot start', active: true },
-        { name: 'Transit damage claim unfiled with the transporter', meta: '₹2.1 L · window closing', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own orders in this shape.',
-    },
+      'A furniture sale is not over at the counter. It runs through an advance, a custom spec, a factory or carpenter, a truck, a lift and an assembly visit, and any link can slip. Verity puts the whole journey of every order on one screen so nobody has to chase it from memory.',
+    oneLine:
+      'One system that knows every enquiry, every order spec, every piece in the showroom and godown, every delivery date and every rupee still due.',
+    note: 'No extra staff needed. The order you already write for each sale becomes the record that everything else runs from.',
+    screen: 'owner',
+    screenNote: 'showrooms, godowns, salespeople and delivery teams',
   },
 
-  overview: {
-    heading: 'Furniture is retail where the sale and the fulfilment are months apart.',
+  today: {
+    heading: 'The showroom looks busy. The back half of the business is running on phone calls.',
     paragraphs: [
-      'A customer chooses in a showroom, pays an advance, and receives the item weeks or months later. In between sit fabric and finish selections, a production run at a manufacturer or an in-house workshop, transit, a delivery slot the customer has to be home for, and assembly. Each of those is a place the promise can break, and the customer only experiences the last one.',
-      'That gap is what makes furniture retail an operational business rather than a stock business. The showroom holds display pieces; the money is committed to orders that do not exist yet. Advances are held against undelivered goods, which is a liability the store carries for months.',
-      'The characteristic failure is silence. An order stalls because a fabric selection was never confirmed, or because production slipped, and nobody tells the customer until the promised date passes. The store then absorbs both the delay and the loss of trust, and often a discount as well.',
-      'The second is bulk. Furniture is large, expensive to store and easy to damage in transit. Warehouse space fills with produced items waiting for delivery slots, and transit damage claims against transporters and manufacturers go unfiled because the evidence was never captured at the point of receipt.',
-      'Verity holds the order, its stages, the selections, the production, the delivery slot, the assembly and the customer promise as one chain of records with owners and dates.',
+      'On the floor, a furniture store is easy to read: pieces on display, a customer sitting on a sofa, a salesperson with a quotation pad. What is hard to see is everything that happens after the customer says yes. Which orders are waiting on the factory. Which dining sets are in the godown, wrapped, with no truck booked. Which customer paid an advance five weeks ago and has called three times.',
+      'That knowledge sits in several places at once: a quotation book, a payment register, a delivery diary, a stock sheet that someone updates on Sundays, and the memory of the senior salesperson and the godown supervisor. When one of them is off for a week, the promise made to the customer goes with them.',
+      'Furniture is bought rarely and costs a lot, so every unhappy customer is a lost referral for years. The leak is not a single big mistake. It is a wrong finish, a missed delivery slot, a damaged leg nobody photographed and a balance nobody asked for until the truck was already loaded.',
     ],
+    stack: ['Quotation book or Excel', 'Payment and advance register', 'Delivery diary and WhatsApp groups', 'Godown stock sheet', 'Supplier and carpenter phone calls'],
+    stackNote: 'Each of these does its own job. None of them tells you that order 1184 is promised for Saturday and the sofa is still at the factory.',
   },
 
-  terminology: [
-    ['Display pieces, stock items, made-to-order', 'Inventory'],
-    ['Customer orders, advances, deliveries', 'Orders'],
-    ['Production, delivery, assembly, service', 'Work'],
-    ['Customers, interior designers, referrers', 'Relationships'],
-    ['Manufacturers, workshops, transporters', 'Suppliers'],
-    ['Selections, approvals, revised dates', 'Workflows'],
-    ['Showroom, warehouse, workshop', 'Locations'],
-  ],
-
-  challengesHeading: 'The failure is always in the gap.',
-  challengesLede:
-    'Furniture retail problems happen in the months between the sale and the delivery, where nobody is watching.',
-  challenges: [
+  painsHeading: 'Where a furniture store actually loses money.',
+  painsLede:
+    'These are the situations furniture showroom owners describe again and again. For each: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Orders stall on unconfirmed selections',
-      detail:
-        'A fabric or finish was never confirmed, so production never started, and the promised date arrives with nothing made.',
-      outcome:
-        'Selections are a stage on the order with an owner and an age, so an order that cannot start is visible within days.',
+      area: 'Customers',
+      title: 'Walk-ins browse, say they will think about it, and are never called again',
+      scene:
+        'A couple spends an hour on bedroom sets on Sunday, takes a brochure and leaves. The salesperson jots a number on a slip. By Thursday the slip is under other papers, and the couple has bought from the showroom that phoned them on Monday.',
+      cost:
+        'Example arithmetic: if a showroom sees 120 serious walk-ins a month, loses a fifth of them to nobody following up, and an average sale is ₹55,000, that is about ₹13 lakh of sales a month that simply walked out.',
+      fix:
+        'Every walk-in is recorded as an enquiry against a salesperson with what they looked at, budget and when they plan to buy. Verity lists enquiries with no contact for a set number of days and creates a follow-up task for that salesperson.',
+      screen: 'enquiries',
     },
     {
-      problem: 'The customer finds out late',
-      detail:
-        'A delay is known internally weeks before the customer is told, because telling them is nobody’s specific task.',
-      outcome:
-        'A slipped stage raises a customer communication task, so a revised date is given before the original one passes.',
+      area: 'Customers',
+      title: 'Quotations get lost and nobody knows which version the customer saw',
+      scene:
+        'The customer was quoted ₹92,000 for a wardrobe on Saturday. On Wednesday the owner quotes ₹88,000 on the phone. Nobody wrote either number down, and a third salesperson now quotes ₹95,000 to the same family.',
+      cost:
+        'Customers who compare notes lose trust, and your best discount gets given twice. A showroom also cannot learn which quotes actually closed.',
+      fix:
+        'Each quotation is a record with the items, price, discount and who approved it, linked to the customer. Revisions keep the old version, and the customer record shows every figure quoted.',
+      screen: 'enquiries',
     },
     {
-      problem: 'Produced stock waits for a delivery slot',
-      detail:
-        'Items are finished and occupy warehouse space while nobody has booked a slot with the customer.',
-      outcome:
-        'Readiness triggers scheduling work, so warehouse dwell time is a measured number rather than an accumulating cost.',
-    },
-    {
-      problem: 'Transit damage is absorbed',
-      detail:
-        'An item arrives damaged, is repaired or replaced at the store’s cost, and the claim against the transporter or manufacturer is never filed.',
-      outcome:
-        'Condition is recorded at receipt against the consignment, so a claim is raised from evidence inside the window.',
-    },
-    {
-      problem: 'Advances are a liability nobody sizes',
-      detail:
-        'Money is held against goods not yet delivered, and the total is known only when someone adds it up.',
-      outcome:
-        'Advances sit on the order record, so the liability against undelivered goods is current.',
-    },
-    {
-      problem: 'Assembly is treated as an afterthought',
-      detail:
-        'Delivery is scheduled and assembly is assumed, so a two-person job arrives with one person and a missing part.',
-      outcome:
-        'Assembly is work with its own requirements and owner, scheduled with the delivery rather than after it.',
-    },
-  ],
-
-  modulesLede:
-    'One system across orders, production, delivery and the customer promise.',
-  modules: [
-    {
-      id: 'orders',
-      title: 'Customer orders and their stages',
-      line:
-        'Orders are records with their items, selections, advance, promised date, production state, delivery slot and assembly requirement.',
-      why:
-        'The order, not the stock item, is the unit of a furniture business, because it exists for months before the goods do.',
-      example:
-        'One hundred and forty-six open orders, eighteen past the date the customer was given, each showing the stage it stalled at.',
-    },
-    {
-      id: 'work',
-      title: 'Production, delivery and assembly',
-      line:
-        'Each stage is work with an owner, a due date and a state, connected to the order it serves.',
-      why:
-        'A furniture promise is a chain of dependent jobs, and a break at any one of them surfaces at the customer’s door.',
-      example:
-        'Twenty-four items produced with no delivery slot booked is a scheduling backlog visible before it becomes a warehouse problem.',
-    },
-    {
-      id: 'inventory',
-      title: 'Display, stock and produced items',
-      line:
-        'Stock is held per item with model, finish, cost, condition, location and state — display, in production, produced, in transit, delivered.',
-      why:
-        'The states matter more than the count. An item produced and awaiting a slot is a different cost from an item on display.',
-      example:
-        'Warehouse dwell time by item, which is the cost nobody measures and everybody pays.',
-    },
-    {
-      id: 'relationships',
-      title: 'Customers, designers and referrers',
-      line:
-        'Customers are records with their orders, selections, delivery history, advances and every interaction.',
-      why:
-        'Furniture buying is episodic and referral-driven, and interior designers in particular bring repeat volume worth tracking.',
-      example:
-        'A designer who brought eleven orders this year is a relationship with a record rather than a familiar name.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Manufacturers, workshops and transporters',
-      line:
-        'Suppliers are relationships with their orders, lead times, delivery reliability, damage rates and outstanding balances.',
-      why:
-        'The promised date given to a customer is only as good as the manufacturer’s lead time, and that should be measured rather than assumed.',
-      example:
-        'A manufacturer whose actual lead time runs three weeks over its quoted one changes what the showroom should promise.',
-    },
-    {
-      id: 'workflows',
-      title: 'Selections, revised dates and claims',
-      line:
-        'Selection confirmations, date revisions, damage claims, discounts and cancellations move through defined steps with recorded decisions.',
-      why:
-        'A revised date given to a customer is a commitment, and it should be a recorded decision rather than a phone call somebody made.',
-      example:
-        'A transit damage claim raised from the condition recorded at receipt, inside the transporter’s window.',
-    },
-    {
-      id: 'records',
-      title: 'Specifications, images and delivery proof',
-      line:
-        'Selections, drawings, images, condition photographs and delivery confirmations attach to the order and item.',
-      why:
-        'Disputes in furniture retail are about what was chosen and what arrived, and both need evidence months later.',
-      example:
-        'A customer disputes a finish. The confirmed selection and the images are on the order.',
-    },
-    {
-      id: 'people',
-      title: 'Showroom staff, delivery and assembly crews',
-      line:
-        'Staff and crews are modelled once, and every order, delivery and assembly carries who owns it.',
-      why:
-        'The person who made the promise and the person who has to keep it are usually different, which is exactly why ownership must be explicit.',
-      example:
-        'Orders sold by each salesperson alongside how many were delivered on the date promised.',
-    },
-    {
-      id: 'locations',
-      title: 'Showroom, warehouse and workshop',
-      line:
-        'Locations roll into the business, with item state, permissions and reporting following the same structure.',
-      why:
-        'Bulky stock makes location a real cost, and items move between three of them before delivery.',
-      example:
-        'Warehouse occupancy by order age, so the cost of scheduling delay is visible.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reporting from order records',
-      line:
-        'On-time delivery, stage duration, supplier lead time, warehouse dwell, advance liability and damage rates come from the operational records.',
-      why:
-        'A furniture business is judged on delivery dates, and delivery performance is not measurable without stage-level records.',
-      example:
-        'On-time delivery against the date originally promised, per supplier and per category.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the order book a question',
-      line:
-        'Verity AI answers from your own order, production, supplier and customer records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The important questions are about which orders are quietly stuck and which customers have not been told.',
-      example:
-        '"Which orders are past their promised date without a revised date communicated?" returns eighteen, with the calls assigned.',
-    },
-    {
-      id: 'communication',
-      title: 'What the customer was told',
-      line:
-        'Notes, notifications and activity attach to the order or customer they concern.',
-      why:
-        'The single most damaging thing in furniture retail is a customer who was told two different things by two people.',
-      example:
-        'The revised date given on the phone is on the order, so the next person says the same thing.',
-    },
-    {
-      id: 'control',
-      title: 'Who can discount, revise and cancel',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Discounts given to compensate for delays are a real cost and are usually granted at the counter under pressure.',
-      example:
-        'A goodwill discount is an approval carrying the delay that prompted it, so the true cost of late delivery is visible.',
-    },
-  ],
-
-  workflowsHeading: 'The months between the sale and the door.',
-  workflowsLede:
-    'These already happen. As records with owners and dates, the gaps stop being invisible.',
-  workflows: [
-    {
-      name: 'Order to production start',
-      steps: [
-        'Order recorded with items, advance and promised date',
-        'Selections captured — fabric, finish, dimensions',
-        'Selection confirmation tracked as a stage with an owner',
-        'Purchase or work order raised with the manufacturer or workshop',
-        'Production start confirmed against the order',
-      ],
-      note:
-        'An order sitting on an unconfirmed selection is the most common and most preventable delay in the category.',
-    },
-    {
-      name: 'Production to warehouse',
-      steps: [
-        'Production progress tracked against the promised date',
-        'Slippage raises a revised-date decision',
-        'Item dispatched by the manufacturer and tracked in transit',
-        'Condition recorded at receipt with photographs',
-        'Damage claim raised where condition requires it',
-        'Item taken into warehouse with its order reference',
-      ],
-      note:
-        'Recording condition at receipt is what makes a transit claim possible at all.',
-    },
-    {
-      name: 'Delivery and assembly',
-      steps: [
-        'Readiness triggers a scheduling task',
-        'Slot agreed with the customer and recorded',
-        'Delivery crew and assembly requirement assigned',
-        'Delivery completed and confirmation captured',
-        'Assembly completed and any shortfall recorded',
-        'Balance collected and the order closed',
-      ],
-      note:
-        'Assembly scheduled with the delivery rather than assumed after it is what prevents a second visit.',
-    },
-    {
-      name: 'Delay and customer communication',
-      steps: [
-        'Stage slippage detected against the promised date',
-        'Revised date proposed with the reason',
-        'Approval applied where compensation is involved',
-        'Customer informed and the communication recorded',
-        'New date tracked as the commitment',
-      ],
-      note:
-        'The point is that the customer hears before the original date passes.',
-    },
-    {
-      name: 'Transit or manufacturing damage claim',
-      steps: [
-        'Condition recorded at receipt with photographs',
-        'Claim raised against transporter or manufacturer',
-        'Replacement or repair work created against the order',
-        'Customer impact assessed and communicated',
-        'Settlement recorded against the supplier balance',
-      ],
-      note:
-        'Claims are lost to missing evidence and closed windows, both of which are record-keeping problems.',
-    },
-    {
-      name: 'Supplier lead time review',
-      steps: [
-        'Quoted lead times compared with actual across orders',
-        'On-time delivery calculated per supplier and category',
-        'Showroom promise guidance updated against reality',
-        'Sourcing decisions raised where variance is persistent',
-      ],
-      note:
-        'The date the showroom promises should come from measured lead times rather than from the manufacturer’s brochure.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask which promises are at risk.',
-    lede:
-      'Verity AI reads the same order, production, supplier and customer records the business runs on. It answers from your own order book, only shows what the person asking can see, and can turn the answer into calls and scheduling assigned to the right person.',
-    panelMeta: 'Grounded in your order records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which orders are past their promised date without a revised date communicated?',
-      'Which orders are stalled on an unconfirmed selection?',
-      'Which produced items have no delivery slot booked, and for how long?',
-      'Which manufacturers run longest against their quoted lead time?',
-      'How much is held in advances against undelivered orders?',
-      'Which orders had transit damage this quarter, and were claims filed?',
-      'What is on-time delivery against the date originally promised?',
-      'Which designers brought the most orders this year?',
-      'Summarise the state of the order book.',
-    ],
-  },
-
-  automationHeading: 'The silence that costs customers.',
-  automationLede:
-    'Each runs from the order records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A selection remains unconfirmed past its threshold',
-      steps: [
-        'Order flagged with the outstanding selection and its age',
-        'Follow-up assigned to the salesperson who sold it',
-        'Escalated if production cannot start in time',
-      ],
-    },
-    {
-      trigger: 'A production stage slips against the promised date',
-      steps: [
-        'Order flagged with the projected new date',
-        'Revised-date decision routed for approval',
-        'Customer communication task raised before the original date',
-      ],
-    },
-    {
-      trigger: 'An item is marked produced',
-      steps: [
-        'Scheduling task created to agree a delivery slot',
-        'Assembly requirement checked and crew reserved',
-        'Warehouse dwell time tracked from readiness',
-      ],
-    },
-    {
-      trigger: 'Damage is recorded at receipt',
-      steps: [
-        'Claim raised against transporter or manufacturer with photographs',
-        'Replacement or repair work created against the order',
-        'Customer impact assessed and communication raised',
-      ],
-    },
-    {
-      trigger: 'An order passes its promised date',
-      steps: [
-        'Order flagged with the stage it is stuck at',
-        'Owner of that stage notified',
-        'Escalated to the manager with the customer history attached',
-      ],
-    },
-    {
-      trigger: 'A goodwill discount is requested',
-      steps: [
-        'Request held at the approval step with the delay attached',
-        'Decision recorded against the order',
-        'Cost of delay aggregated for the supplier review',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the owner can actually see.',
-  intelligenceLede:
-    'Delivery performance and its causes, from the order records themselves.',
-  intelligence: [
-    {
-      area: 'Delivery',
-      points: [
-        'On-time delivery against the date originally promised',
-        'Orders past date, with the stage blocking each',
-        'Average time from order to delivery by category',
-        'Revised dates issued and their causes',
-      ],
+      area: 'Referrals',
+      title: 'Architects and interior designers send business, and their commission is argued about',
+      scene:
+        'A designer brings a client who buys a full living room. A month later the designer calls to ask about the agreed share. The salesperson who made the deal has left, and the arrangement was verbal.',
+      cost:
+        'Underpaid referrers stop sending clients. Overpaid ones eat the margin. In both cases the owner is guessing, because nothing was recorded at the time of sale.',
+      fix:
+        'The referrer is recorded on the enquiry and the order, with the agreed rate. When the order is delivered and paid, Verity lists the commission due to each designer or architect, so settlement is a short list, not a conversation.',
+      screen: 'enquiries',
     },
     {
       area: 'Orders',
-      points: [
-        'Open order value and count by stage',
-        'Orders stalled on selections',
-        'Advances held against undelivered goods',
-        'Cancellations and their recorded reasons',
-      ],
+      title: 'Custom specifications are passed on by word of mouth and built wrong',
+      scene:
+        'The customer wanted a 7 foot sofa in the teal fabric with the left-hand chaise. The order slip says "sofa, teal". The factory builds the right-hand chaise in a different teal. It arrives after six weeks and has to go back.',
+      cost:
+        'Example arithmetic: one remade ₹70,000 sofa means a second production slot, double freight and a customer who waited three months. Even if the factory pays for the remake, the showroom bears the lost goodwill.',
+      fix:
+        'The order record holds every dimension, fabric code, finish, hand and photo, and the customer signs against that same record. The factory receives the same specification, so the thing built matches the thing sold.',
+      screen: 'order',
+    },
+    {
+      area: 'Orders',
+      title: 'Advance taken, delivery date promised, then the date slips and nobody tells the customer',
+      scene:
+        'A customer paid ₹30,000 advance on a dining set and was told "four weeks". It is week six. She calls the showroom every few days and each time a different person says "I will check and call you back".',
+      cost:
+        'Long waits on paid orders are among the most common furniture complaints in Indian consumer forums. Beyond the lost customer, the showroom holds a customer\'s money with no clear commitment behind it.',
+      fix:
+        'Each order carries a promised date and a current stage. When the date is at risk, Verity raises it to the order owner before the customer calls, so the revised date is given by you, with a reason, and recorded on the order.',
+      screen: 'making',
+      source: {
+        name: 'Examples of delayed-delivery complaints, consumercomplaints.in',
+        url: 'https://www.consumercomplaints.in/jodhpuri-furniture-delayed-and-missing-furniture-c3226707',
+      },
     },
     {
       area: 'Suppliers',
-      points: [
-        'Quoted lead time against actual',
-        'Damage rate by manufacturer and transporter',
-        'Claims raised and settled',
-        'Outstanding payable by supplier',
+      title: 'You cannot see where the order is inside the factory or workshop',
+      scene:
+        'Half your range is made by two or three factories and a few carpenters. The only way to learn whether the almirah is cut, polished or packed is to call. The factory manager says "this week", every week.',
+      cost:
+        'A showroom that cannot see production cannot promise dates honestly. Staff spend hours a week on status calls that add nothing to the business.',
+      fix:
+        'Each purchase order to a factory or workshop has stages (cutting, finishing, upholstery, packed, dispatched) with a date for each. The supplier or your coordinator updates the stage, and the customer order shows it.',
+      screen: 'making',
+    },
+    {
+      area: 'Stock',
+      title: 'Display pieces and slow movers sit for months and eat showroom rent',
+      scene:
+        'A glass-top dining table has stood in the corner since last Diwali. Three sofa models that looked good in the catalogue have not sold. Every square foot of display is paid for in rent.',
+      cost:
+        'Retail trade commentary lists rent, staff and inventory costs and slow-moving stock as the main strain on furniture stores in 2026. A piece that has stood for eight months has already cost its margin in floor space.',
+      fix:
+        'Every piece has an age in the showroom and godown. Verity lists items past your cut-off, with the money tied up, and suggests the options you decide on: markdown, ex-display sale, swap to another outlet or return to supplier.',
+      screen: 'stock',
+      source: {
+        name: 'InteriorDaily, 22 May 2026, quoting the CEO of Priti International',
+        url: 'https://www.interiordaily.com/article/9840066/the-indian-furniture-sector-has-long-term-potential-but-the-industry-is-facing-several-real-challenges/',
+      },
+    },
+    {
+      area: 'Stock',
+      title: 'The piece you sold is not in the godown, or is sold twice',
+      scene:
+        'Two salespeople promise the last oak bed in the display finish to two customers on the same afternoon. Or the stock sheet says four coffee tables and the godown has two, because the sheet is updated on Sundays.',
+      cost:
+        'One customer is told the item is gone after agreeing to buy it. Showrooms also reorder too late or too early because the count in the sheet is a guess.',
+      fix:
+        'Stock is held per location (showroom, godown, factory in progress). A sale reserves the exact piece, so the second salesperson sees it is taken, and every movement between locations is recorded against a transfer.',
+      screen: 'stock',
+    },
+    {
+      area: 'Delivery',
+      title: 'Delivery slots clash with lifts, floors, building rules and truck availability',
+      scene:
+        'The sofa is loaded at 9 am. At the building the lift is booked until noon, the society allows deliveries only until 2 pm, and the crew cannot carry a 3-seater up four floors. The customer takes a half-day off for nothing.',
+      cost:
+        'A failed delivery costs a truck trip, a crew day and a customer\'s trust. Heavy furniture delivery in India often takes one to three weeks, and a missed slot adds more.',
+      fix:
+        'Delivery details (floor, lift size, society timings, contact person, access photos) are captured on the order. Verity builds the day\'s runs by truck and crew, and flags orders where the balance is unpaid or an item is not yet ready.',
+      screen: 'delivery',
+      source: {
+        name: 'Industry commentary on heavy furniture lead times, Startupfeed',
+        url: 'https://startupfeed.in/why-indias-furniture-ecommerce-is-growing-up-wakefits-ipo-pepperfrys-fall-and-what-comes-next/',
+      },
+    },
+    {
+      area: 'Delivery',
+      title: 'Damage in transit is found at the door and cannot be claimed',
+      scene:
+        'The leg of the dining table is cracked. The packing was fine when it left the godown, or so the supervisor says. There is no photo, the transporter says the receipt was signed clean, and the factory says it left perfect.',
+      cost:
+        'Without proof, the showroom absorbs the loss. Furniture returns and damage costs are high because logistics firms often lack experience handling bulky pieces.',
+      fix:
+        'The delivery record has a check at dispatch and at handover with photos attached, and the customer\'s remarks. A damage becomes a claim record against the transporter or supplier with the evidence in one place and a deadline.',
+      screen: 'delivery',
+    },
+    {
+      area: 'Delivery',
+      title: 'Assembly and installation visits are forgotten or incomplete',
+      scene:
+        'The wardrobe was delivered in parts on Friday. The carpenter was supposed to fit it on Saturday but was sent to another job. The customer has panels leaning on the wall and a house-warming on Sunday.',
+      cost:
+        'Many of the worst reviews are about the days after delivery, not the product. A missing set of screws also means a second visit, which is a cost with no revenue behind it.',
+      fix:
+        'Assembly is a task on the same order with a date, a carpenter and a short checklist (all parts present, fitted, cleaned, customer signed off). Verity shows what is delivered but not yet fitted.',
+      screen: 'delivery',
+    },
+    {
+      area: 'Money',
+      title: 'Balances are chased after delivery instead of before it',
+      scene:
+        'The truck is loaded for a ₹1.4 lakh order with ₹60,000 outstanding. The driver is told "the customer will pay on delivery". The customer is not home, the cheque is "in the mail", and the furniture is now in the flat.',
+      cost:
+        'Example arithmetic: ten orders a month with ₹40,000 outstanding at delivery is ₹4 lakh of cash waiting on goodwill, plus the time of whoever calls for it.',
+      fix:
+        'The order shows advance, balance and due date. The delivery plan flags unpaid balances before the truck is loaded, and payments (cash, UPI, cheque, finance) are recorded against the order as they arrive.',
+      screen: 'order',
+    },
+    {
+      area: 'After-sales',
+      title: 'Warranty and repair complaints arrive on WhatsApp and are lost',
+      scene:
+        'A customer messages that the sofa fabric is pilling after a year. Nobody knows the purchase date, the fabric code or the warranty terms. The message sits in a personal phone and is answered two weeks later.',
+      cost:
+        'Furniture is bought rarely, so the customer you have is your referral for the next purchase. Unanswered complaints also appear as public reviews.',
+      fix:
+        'Each complaint is a case on the customer record with the original order, warranty term, photos and an owner. Verity tracks the case to a visit, repair, replacement or closure, and shows how many are open and how old.',
+      screen: 'aftersales',
+    },
+    {
+      area: 'People',
+      title: 'Discounts and incentives are decided at the counter and calculated by hand',
+      scene:
+        'Salespeople offer "a bit off" to close a sale. At month end the owner adds up incentives from the order book, one salesperson says a sale was missed, and the strongest seller starts looking at a competitor.',
+      cost:
+        'Uncontrolled discounting is a direct margin leak, and a salesperson who feels short-changed takes their customers when they go.',
+      fix:
+        'Discounts above a limit wait for an approval with a reason. Every sale is recorded against the salesperson, so the incentive statement is built from the records and each person can see their own.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'Several showrooms and a godown, and no single view of what is selling',
+      scene:
+        'The main showroom sells out of a recliner while a second branch has three unsold. Weekly numbers arrive on WhatsApp in different formats. Festive season stocking is decided by gut feel.',
+      cost:
+        'Stock sits idle in one place while another loses sales. The owner finds out about a weak range after a season, not during it.',
+      fix:
+        'Each showroom and godown is a location in one system. Sales, stock age, pending orders and collections can be compared side by side, and a transfer between locations is a recorded movement.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '90%',
+      text: 'of India\'s furniture trade was reported as unorganised, with only a sliver of sales online. Most buyers still choose in a shop, against a handful of competitors nearby.',
+      source: { name: 'The Ken, on Indian furniture retailers', year: '2020', url: 'https://the-ken.com/story/indias-furniture-retailers-hit-the-reset-button-again/' },
+    },
+    {
+      figure: '$45 billion',
+      text: 'is the size projections suggest India\'s furniture market could pass by 2031, according to Mordor Intelligence research quoted in a 2026 trade article. The same article lists rent, staff cost, inventory cost and slow-moving stock as the strain on stores.',
+      source: { name: 'InteriorDaily', year: '2026', url: 'https://www.interiordaily.com/article/9840066/the-indian-furniture-sector-has-long-term-potential-but-the-industry-is-facing-several-real-challenges/' },
+    },
+    {
+      figure: '6 standards',
+      text: 'are covered by the Furniture (Quality Control) Order, 2025: work chairs, general purpose chairs and stools, tables and desks, storage units, beds and bunk beds. Covered goods must carry the BIS Standard Mark.',
+      source: { name: 'Furniture (Quality Control) Order, 2025, via Legitquest', year: '2025', url: 'https://www.legitquest.com/act/furniture-quality-control-order-2025/10996' },
+    },
+    {
+      figure: '18%',
+      text: 'is the GST rate that furniture under HSN 9403 largely continues to carry after the September 2025 changes, per one accounting-software guide. Parts under HSN 94039000 also remain at 18%.',
+      source: { name: 'Tally Solutions guide to HSN 9403', year: '2025', url: 'https://tallysolutions.com/gst/hsn-code-9403-product-classification-gst-rate-business-filing-guide/' },
+    },
+  ],
+  factsNote:
+    'The unorganised share is from 2020 and market-size projections differ widely between research firms. The GST figure comes from a software vendor\'s guide and should be checked against the rate notification for your item. They show the scale, not what your showroom will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Seven views, each built for one job. Names, columns and terms are set up in your showroom\'s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Showroom / Today',
+      meta: 'All locations',
+      heading: 'The owner\'s morning view',
+      caption:
+        'Sales, orders at risk, stock that is too old and money due on the same screen, with the items that need a decision listed below. This replaces the evening WhatsApp round of numbers.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales today', value: '₹3.8 lakh', note: '7 orders' },
+            { label: 'Orders at risk', value: '9', note: 'promised date in danger' },
+            { label: 'Balance due', value: '₹11.6 lakh', note: 'on 24 open orders' },
+            { label: 'Stock over 180 days', value: '₹14.2 lakh', note: '31 pieces' },
+          ],
+        },
+        { type: 'title', text: 'Sales by salesperson, this month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Imran', value: 90, display: '₹9.8 lakh' },
+            { label: 'Kavita', value: 74, display: '₹8.0 lakh' },
+            { label: 'Suresh', value: 52, display: '₹5.6 lakh' },
+            { label: 'Pooja', value: 34, display: '₹3.7 lakh', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: '3 discounts above 12% are waiting for your approval.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Order 1184, dining set', meta: 'Promised Sat. Factory stage: polish', tag: ['At risk', 'late', 'New date told', 'ok'] },
+            { name: 'Godown to Whitefield showroom', meta: '4 recliners moved, not yet received', tag: ['In transit', 'info', 'Received', 'ok'] },
+          ],
+        },
       ],
     },
     {
-      area: 'Warehouse',
-      points: [
-        'Dwell time from readiness to delivery',
-        'Occupancy by order age',
-        'Items awaiting a delivery slot',
-        'Damage occurring in storage',
+      id: 'enquiries',
+      title: 'Enquiries and quotes',
+      meta: 'Open, by salesperson',
+      heading: 'Every walk-in, quote and referrer in one list',
+      caption:
+        'Who came in, what they looked at, what was quoted, who referred them and when to call next. Follow-ups are tasks on each salesperson\'s own screen.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Customer', 'Interested in', 'Quote', 'Referrer', 'Next step'],
+          rows: [
+            ['Rohan and Meera Iyer', 'King bed, 2 side tables', '₹1,12,000', 'Walk-in', ['Call today', 'late', 'Called', 'ok']],
+            ['Dr. Farah Siddiqui', '3+2 sofa set', '₹86,500', 'Designer: Studio Ruh', ['Call today', 'flag', 'Visit Sat', 'info']],
+            ['Anil Kapoor', 'Wardrobe, 3 door', '₹64,000', 'Walk-in', ['Quote sent', 'info']],
+            ['Lakshmi Narayanan', 'Dining set, 6 seater', '₹58,000', 'Referral: Iyer family', ['No contact 9 days', 'late', 'Called', 'ok']],
+            ['Tanvi Joshi', 'Study table, chair', '₹21,500', 'Walk-in', ['Closed', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Designer commission due on delivered orders: Studio Ruh ₹7,800, Anand Patil Associates ₹12,400.', action: 'See list' },
       ],
     },
     {
-      area: 'Commercial',
-      points: [
-        'Sales by category, salesperson and store',
-        'Goodwill discounts and their causes',
-        'Orders introduced by designers and referrers',
-        'Margin after delay costs',
+      id: 'order',
+      title: 'Order',
+      meta: 'Record',
+      heading: 'One record from quotation to the last screw',
+      caption:
+        'The exact specification, the advance and balance, the delivery details and every promise made, owned by the showroom and visible to everyone who handles the order.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Order 1184, Lakshmi Narayanan',
+          sub: 'Dining set, 6 seater, walnut finish. Salesperson: Kavita',
+          fields: [
+            ['Specification', 'Table 72 x 36 in, walnut matte, 6 chairs, beige fabric F-214'],
+            ['Order value', '₹58,000'],
+            ['Advance paid', '₹20,000 (UPI, 2 Sep)'],
+            ['Balance', ['₹38,000 due before delivery', 'flag', 'Paid by UPI', 'ok']],
+            ['Promised date', 'Saturday 18 Oct'],
+            ['Delivery', '4th floor, lift 4 x 4 ft, society allows 10 am to 2 pm'],
+          ],
+          timeline: [
+            ['2 Sep', 'Order signed against specification, advance received'],
+            ['4 Sep', 'Purchase order sent to workshop, 4 weeks'],
+            ['28 Sep', 'Workshop reported stage: polish'],
+            ['Note', 'Customer prefers a weekday morning. Do not call after 7 pm.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'making',
+      title: 'Orders in production',
+      meta: 'Factories and workshops',
+      heading: 'Where every made-to-order piece is, and whether the date holds',
+      caption:
+        'Each supplier\'s open orders by stage, with the customer date next to the supplier date. A gap is shown before it becomes a phone call from an angry customer.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Order', 'Supplier', 'Stage', 'Supplier date', 'Customer date'],
+          rows: [
+            ['1184 Dining set', 'Sharma Wood Works', 'Polish', '16 Oct', ['18 Oct', 'late', 'On time', 'ok']],
+            ['1190 Sofa 3+2', 'Royal Upholstery', 'Cutting', '28 Oct', ['25 Oct', 'late', 'Moved to 30 Oct', 'ok']],
+            ['1193 Wardrobe', 'Sharma Wood Works', 'Packed', '15 Oct', '17 Oct'],
+            ['1197 King bed', 'Jodhpur Crafts', 'Not started', '5 Nov', ['2 Nov', 'flag', 'Moved to 6 Nov', 'ok']],
+          ],
+        },
+        { type: 'alert', text: '3 customers need a revised date today. Reasons: fabric short, polish delay, factory shutdown.', action: 'Assign calls' },
+      ],
+    },
+    {
+      id: 'delivery',
+      title: 'Delivery and assembly',
+      meta: 'This week',
+      heading: 'The day\'s runs, by truck and crew, with nothing missing',
+      caption:
+        'Orders ready to go, with balance, floor, lift and society timing. After delivery come damage notes with photos and the assembly visit, so it is clear what is fitted and what is not.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Ready to deliver',
+              cards: [
+                { title: '1193 Wardrobe, Banjara Hills', meta: 'Truck 2. 3rd floor, lift 3 x 3. Balance clear', tag: ['Slot 10 am', 'info'] },
+                { title: '1176 Recliner pair, Kondapur', meta: 'Balance ₹22,000 pending', tag: ['Hold', 'late', 'Paid', 'ok'] },
+              ],
+            },
+            {
+              name: 'Delivered, to fit',
+              cards: [
+                { title: '1169 Modular wardrobe', meta: 'Panels at site. Carpenter: Naseer', tag: ['Not fitted', 'flag', 'Fitted', 'ok'] },
+                { title: '1171 Dining set', meta: 'Leg cracked, photo attached', tag: ['Claim', 'late', 'Raised', 'info'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock',
+      meta: 'Showrooms and godown',
+      heading: 'What you hold, where, and for how long',
+      caption:
+        'Every piece with its location and age. Slow movers surface with the money they tie up, and reserved pieces are visible to every salesperson.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Location', 'Age', 'Value', 'Status'],
+          rows: [
+            ['Glass-top dining set', 'Showroom A', '312 days', '₹46,000', ['Markdown?', 'late', 'Marked down', 'ok']],
+            ['Fabric recliner, grey', 'Godown', '205 days', '₹28,500', ['Move to B', 'flag', 'Moved', 'ok']],
+            ['Oak bed, display finish', 'Showroom A', '40 days', '₹52,000', ['Reserved: Imran', 'info']],
+            ['Coffee table, round', 'Showroom B', '21 days', '₹9,800', ['OK', 'ok']],
+            ['Shoe rack, 4 tier', 'Godown', '260 days', '₹6,200', ['Return to supplier?', 'flag']],
+          ],
+        },
+        { type: 'alert', text: '31 pieces are past 180 days. ₹14.2 lakh is tied up. Festive season starts in 6 weeks.', action: 'Plan clearance' },
+      ],
+    },
+    {
+      id: 'aftersales',
+      title: 'After-sales cases',
+      meta: 'Open complaints and warranty',
+      heading: 'Every complaint on the customer\'s record, with an owner and an age',
+      caption:
+        'Complaints are cases linked to the original order, so the warranty term, the fabric code and the photos are right there when someone picks it up.',
+      blocks: [
+        {
+          type: 'list',
+          items: [
+            { name: 'Sofa fabric pilling, Order 0921', meta: 'Bought Nov last year. Warranty 2 years. Photos attached', tag: ['Visit Thu', 'info', 'Resolved', 'ok'] },
+            { name: 'Bed slat broken, Order 1032', meta: 'Spare slat available in godown', tag: ['Send part', 'flag', 'Sent', 'ok'] },
+            { name: 'Wardrobe door misaligned, Order 1103', meta: 'Carpenter: Naseer', tag: ['Open 9 days', 'late', 'Fixed', 'ok'] },
+          ],
+        },
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Open cases', value: '11', note: '3 older than a week' },
+            { label: 'Closed this month', value: '27', note: 'visit or part sent' },
+          ],
+        },
       ],
     },
   ],
-  intelligenceNote:
-    'All of this comes from recording the order stages the business already moves through.',
 
-  rolesHeading: 'One order book, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Saturday, before and after.',
+  dayLede: 'The work does not change. The difference is that every promise leaves a record, and the record does the chasing.',
+  day: [
+    {
+      time: '10:00',
+      before: 'You open and try to recall which deliveries are due today. The diary has two of them, the WhatsApp group has a third.',
+      after: 'The Today screen shows the day\'s runs, each with balance, floor and lift details, and one order held for an unpaid balance.',
+    },
+    {
+      time: '12:00',
+      before: 'A customer calls to ask where her dining table is. Whoever picks up promises to ring back.',
+      after: 'The order shows the workshop stage and the date. You tell her it is in polish, due Thursday, while she is still on the line.',
+    },
+    {
+      time: '2:30',
+      before: 'Two salespeople offer the last display bed to two different families.',
+      after: 'The first sale reserves the piece. The second salesperson sees it is taken and shows the next one in the godown.',
+    },
+    {
+      time: '5:00',
+      before: 'The truck returns with a cracked table leg and no one can say whether it was damaged on the way.',
+      after: 'The dispatch and handover photos are on the order. The claim to the supplier is raised from the same record.',
+    },
+    {
+      time: '7:30',
+      before: 'You call the three salespeople for their numbers and add them up on a calculator.',
+      after: 'The day\'s sales, discounts and enquiries by person are already on your screen.',
+    },
+    {
+      time: 'Month end',
+      before: 'Incentives and designer commissions are worked out from the order book, with disputes.',
+      after: 'Both statements are ready on the 1st from the delivered and paid orders, and each person sees the same breakdown.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your showroom takes an order, builds it and gets it into a home, set Verity up around that, move your data in and then stay on.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend time at the showroom, the godown and with your delivery coordinator. Follow one order from quotation to the last assembly visit and note every place it can stall.',
+        you: 'Two to three hours from you, and one hour each from your senior salesperson and godown supervisor. Sight of your quotation book, payment register and stock sheet.',
+        get: 'A written map of your order journey, your product list and suppliers, your delivery rules and the ranked list of problems we fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your product list with finishes and fabrics, supplier stages, locations, discount limits, delivery rules and incentive slabs. Build the order, production, delivery and stock screens in your terms.',
+        you: 'Check the order form against a recent real order. Tell us where a rule is wrong, such as when the balance must be paid.',
+        get: 'A working Verity holding your products, suppliers, showrooms and approval rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in open orders with their advances, customer records, stock by location and supplier orders in progress. Train sales, godown and delivery teams on live orders, not slides.',
+        you: 'Your open order list and stock sheet in whatever form they exist. One hour with each team.',
+        get: 'Every open order and piece of stock inside Verity, and a team that has run a real delivery day on it.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on through the first festive season. Watch the late-order and stock-age lists with you, tune the rules and adjust when you add a showroom or a supplier.',
+        you: 'A monthly review of orders at risk, stock age and collections.',
+        get: 'A system that keeps pace with your showroom, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your quotation format and recent order slips',
+      'Your product list with finishes, fabrics and cost prices',
+      'Your supplier and workshop list with usual lead times',
+      'Your open orders with the advance taken on each',
+      'Your discount, incentive and designer commission rules',
+    ],
+    time: 'About 9 to 12 hours of your own time across the four weeks, most of it in the first week. Your senior salesperson, godown supervisor and delivery coordinator need a few more.',
+    after: 'Nobody is hired to run Verity. Orders are entered as part of the sale you already write up, and the delivery, stock and money views come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your showroom a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own enquiry, order, stock and payment records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which paid orders are going to miss the date we promised?',
+        a: '9 open orders are at risk. 5 are waiting on one workshop and 3 on fabric.',
+        rows: [['Sharma Wood Works', '5'], ['Royal Upholstery', '3'], ['Jodhpur Crafts', '1']],
+        action: 'Create a call-back task for each order owner',
+      },
+      {
+        q: 'What stock has been sitting more than 6 months, and where?',
+        a: '31 pieces worth ₹14.2 lakh. 14 are in Showroom A, 11 in the godown and 6 in Showroom B.',
+        rows: [['Showroom A', '14'], ['Godown', '11'], ['Showroom B', '6']],
+        action: 'List them for the clearance plan',
+      },
+      {
+        q: 'Which enquiries from last month have not been called back?',
+        a: '27 enquiries had no contact after the first visit. 11 had a quote above ₹50,000.',
+        action: 'Assign follow-ups to the original salesperson',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Staff still make the calls and send the messages. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'An enquiry has had no contact for 5 days',
+      then: ['Listed on the salesperson\'s screen with the quote', 'Task created to call the customer', 'Outcome recorded: bought, later or lost'],
+    },
+    {
+      when: 'A made-to-order piece changes stage',
+      then: ['Customer order updated with the stage', 'Date checked against the promise', 'Order owner told if the date is at risk'],
+    },
+    {
+      when: 'An order is ready to leave the godown',
+      then: ['Balance and delivery details checked', 'Added to the day\'s truck run', 'Held if payment is outstanding'],
+    },
+    {
+      when: 'A delivery is completed',
+      then: ['Assembly task created for a carpenter', 'Handover photos stored on the order', 'Warranty term started on the customer record'],
+    },
+    {
+      when: 'A piece passes your stock age limit',
+      then: ['Flagged with the money tied up', 'Options sent to you for decision', 'Decision and new price recorded'],
+    },
+    {
+      when: 'An order with a designer referral is paid in full',
+      then: ['Commission calculated at the agreed rate', 'Added to the referrer\'s payable list', 'Marked settled when paid'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a furniture store has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules lean on in order, so your accountant is not rebuilding them from a quotation book.',
+    items: [
+      {
+        name: 'GST on furniture and parts',
+        what: 'Furniture under HSN 9403 generally carries 18% after the September 2025 revisions, but rates differ by item and can change. Mattresses and cushions sit under a different heading.',
+        how: 'Each order line carries its tax category, so the split your accountant needs is clean, and advances are recorded separately from final invoices.',
+        source: { name: 'Tally Solutions guide to HSN 9403', url: 'https://tallysolutions.com/gst/hsn-code-9403-product-classification-gst-rate-business-filing-guide/' },
+      },
+      {
+        name: 'BIS standards for covered furniture',
+        what: 'Under the Furniture (Quality Control) Order, 2025, work chairs, general purpose chairs and stools, tables and desks, storage units, beds and bunk beds must meet the matching Indian Standard and carry the BIS Standard Mark. Start dates and exemptions for small makers were amended, so confirm the current position.',
+        how: 'The licence or mark details of covered products are kept on the product record, so you can see which suppliers have supplied them before a piece goes on the floor.',
+        source: { name: 'Furniture (Quality Control) Order, 2025, via Legitquest', url: 'https://www.legitquest.com/act/furniture-quality-control-order-2025/10996' },
+      },
+      {
+        name: 'Consumer protection and written promises',
+        what: 'Under India\'s consumer protection law, a customer can complain about defective goods or deficient service, including delay on a paid order. Your written order, promised date and warranty terms are your evidence.',
+        how: 'Specification, promised dates, revised dates with reasons and signed handover are on the order record with who changed what and when.',
+      },
+      {
+        name: 'Staff records under state shop rules',
+        what: 'Most states require records of working hours, weekly offs and leave for showroom staff under their Shops and Establishments rules. Details differ by state.',
+        how: 'Shifts, attendance and leave are recorded against each person, including delivery crews and carpenters on your payroll.',
+      },
+    ],
+    note: 'Rules change and differ by state and by product. Confirm current requirements with your accountant, the BIS or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A salesperson should not see everyone\'s margins. A carpenter should not see customer payments. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'Are we keeping the promises we sell on?',
-      focus: 'On-time delivery, orders past date, supplier lead time variance, advance liability, goodwill cost.',
-    },
-    {
-      role: 'Operations manager',
-      question: 'What is stuck and who owns it?',
-      focus: 'Orders by stage, stalled selections, delivery slots to book, warehouse dwell, claims open.',
-    },
-    {
-      role: 'Showroom staff',
-      question: 'What can I promise this customer?',
-      focus: 'Measured lead times by supplier, availability, the customer’s open orders and their state.',
-    },
-    {
-      role: 'Delivery coordinator',
-      question: 'What is going out and with whom?',
-      focus: 'Items ready, slots agreed, crews and assembly requirements, confirmations outstanding.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is held and what is owed?',
-      focus: 'Advances against undelivered orders, balances due on delivery, supplier payables, claims settled.',
-    },
+    { role: 'Owner', question: 'Are the promises we made going to be kept, and where is cash stuck?', sees: 'Sales, orders at risk, balances due, stock age and every showroom side by side.' },
+    { role: 'Showroom manager', question: 'Who needs a call today?', sees: 'Open enquiries, quotes waiting, discount approvals, reserved pieces and the day\'s deliveries.' },
+    { role: 'Salesperson', question: 'What did I promise, and who should I call?', sees: 'Own enquiries, quotes, orders and their stages, and own incentive statement.' },
+    { role: 'Godown and delivery coordinator', question: 'What leaves today and what is missing?', sees: 'Trucks and crews, items ready, balances held, damage notes and assembly visits.' },
+    { role: 'Accountant', question: 'What came in and what is owed?', sees: 'Advances and balances by mode, supplier payables, designer commissions, GST split by order line.' },
   ],
 
-  useCasesHeading: 'What furniture retailers use Verity for',
-  useCases: [
-    {
-      name: 'Order stage tracking',
-      body: 'The months between sale and delivery as stages with owners and dates, so a stalled order is visible rather than silent.',
-    },
-    {
-      name: 'Selection confirmation',
-      body: 'Fabric and finish confirmation as a tracked stage, closing the most common preventable delay in the category.',
-    },
-    {
-      name: 'Proactive delay communication',
-      body: 'Slippage raising a customer communication task before the original promised date passes.',
-    },
-    {
-      name: 'Delivery and assembly scheduling',
-      body: 'Readiness triggering slot booking with the assembly requirement assigned, so one visit completes the job.',
-    },
-    {
-      name: 'Transit and manufacturing damage claims',
-      body: 'Condition recorded with photographs at receipt, so claims are raised from evidence inside the window.',
-    },
-    {
-      name: 'Supplier lead-time reality',
-      body: 'Quoted lead time measured against actual, so the showroom promises dates the business can keep.',
-    },
-    {
-      name: 'Warehouse dwell cost',
-      body: 'Time from produced to delivered measured per item, exposing a cost most stores carry without sizing.',
-    },
-    {
-      name: 'Advance liability',
-      body: 'Money held against undelivered goods visible on the order records rather than added up occasionally.',
-    },
-    {
-      name: 'Asking the order book questions',
-      body: 'Plain-language questions across orders, production, suppliers and customers, with follow-ups assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing software for invoices. We agree during setup how orders and payments reach Verity.',
+      'Your factories and carpenters, who keep working the way they do. They update stages or your coordinator does.',
+      'WhatsApp for talking to customers and suppliers. Staff send the message, Verity tells them who and when.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Run your billing counter or issue invoices.',
+      'Take orders from customers online.',
+      'Send messages to customers on its own.',
+      'Run your payroll or prepare your tax returns.',
+    ],
+    migration:
+      'We bring your open orders, customer list, advances and stock across from the quotation books, sheets and registers you use now, in stages, so deliveries keep going while it happens.',
+  },
 
-  migration:
-    'The order book, the delivery diary and your billing and accounting arrangements are mapped during implementation. Open orders, advances, suppliers and customers are brought across, and Verity is introduced as the operational layer over them while the order book keeps moving.',
-
-  faqHeading: 'Questions furniture retailers ask',
+  faqHeading: 'Questions furniture store owners ask.',
   faqs: [
     [
-      'What can AI software do for a furniture store?',
-      'Verity AI answers questions from your own order, production, supplier and customer records: which orders are past their promised date without a revised date communicated, which are stalled on unconfirmed selections, which produced items have no delivery slot, which manufacturers run longest against quoted lead times. Each answer can become a call or a scheduling task assigned to the right person.',
+      'Will my salespeople actually enter orders properly?',
+      'It only works if the order is recorded, so the order form is built from the slip they already write and takes a few minutes. Salespeople get something back: their own enquiries, order status and incentive statement, which saves them from being asked where things are.',
     ],
     [
-      'Can Verity track made-to-order items?',
-      'Yes. An order carries its items, selections, advance, promised date, production state, delivery slot and assembly requirement as one record with stages, so an order that exists for months before the goods do is visible throughout.',
+      'We make most pieces to order through workshops. Can Verity track that?',
+      'Yes. Each customer order links to a purchase order with a workshop or factory, and the stages you use (cutting, polish, upholstery, packed) are set up in week 2. The workshop or your coordinator updates the stage and the customer order shows it.',
     ],
     [
-      'Does it help with delivery scheduling?',
-      'Readiness triggers a scheduling task, the slot agreed with the customer is recorded, and the crew and assembly requirement are assigned with it. Warehouse dwell time from readiness to delivery becomes a measured cost.',
+      'Does Verity handle my billing?',
+      'No. Your billing software keeps issuing invoices. We agree during setup how orders and payments reach Verity, which holds the order, the promise and the money still due.',
     ],
     [
-      'Can it tell us which manufacturers are actually reliable?',
-      'Quoted lead times are compared against actual across orders, along with damage rates, so the date your showroom promises can be based on measured performance rather than on a brochure.',
+      'Can it message my customers about delivery dates?',
+      'Not by itself. Verity flags that a date has moved and creates the task, your team calls or sends the message, and the outcome is recorded on the order.',
     ],
     [
-      'Does it handle transit damage claims?',
-      'Condition is recorded with photographs at receipt against the consignment, so a claim against the transporter or manufacturer is raised from evidence inside the window rather than absorbed as a cost.',
+      'I have two showrooms and a godown. Is that a problem?',
+      'No, it is the normal case. Each is a location in one system, stock is held per location, and a transfer between them is a recorded movement. Sales, order backlogs and stock age can be compared side by side.',
     ],
     [
-      'How does it help with customer communication?',
-      'Slippage at any stage raises a communication task before the original promised date passes, and what was said is recorded on the order, so the next person to speak to the customer says the same thing.',
+      'Who can see my margins and cost prices?',
+      'Only the people you allow. Access is set by role, so a salesperson can see selling prices and their own results while cost prices stay with you and your accountant. Every change is recorded with who made it and when.',
     ],
     [
-      'Does Verity replace our billing or accounting software?',
-      'No. Those continue and are mapped during implementation. Verity holds the orders, the stages, the suppliers, the deliveries and the reporting across them.',
+      'Can it handle designer and architect commissions?',
+      'Yes. The referrer and agreed rate are recorded on the enquiry and the order. When the order is delivered and paid, the commission shows on a payable list, and you mark it settled.',
     ],
     [
-      'Can we see how much we hold in advances?',
-      'Advances sit on the order record, so the liability against undelivered goods is current rather than something that has to be added up.',
+      'Can it track damage and warranty claims against suppliers?',
+      'Yes. Damage found at delivery becomes a claim record with the photos, the order and the supplier or transporter. Warranty complaints are cases linked to the original order and its warranty term.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the order book actually moves, configuration, migration of open orders and suppliers, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of showrooms, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your orders move.',
     ],
   ],
 
-  ctaHeading: 'Start with the orders that are past their date.',
-  ctaLede:
-    'They are the most expensive thing in a furniture business and the least visible. Tell us how your order book is tracked today.',
+  related: ['home-decor-stores', 'furniture-manufacturers', 'interior-designers', 'interior-design-firms', 'electronics-stores', 'retail-stores'],
 
-  related: ['home-decor-stores', 'retail-stores', 'interior-designers', 'furniture-manufacturers', 'electronics-stores', 'construction-companies'],
+  ctaHeading: 'Start with the orders you have already promised.',
+  ctaLede:
+    'Tell us how your showroom takes and delivers an order, and we will show you the orders at risk, the stock that has aged and the balances due, using your own numbers.',
 };

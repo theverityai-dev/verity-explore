@@ -1,574 +1,680 @@
 export default {
+  schema: 2,
   slug: 'retail-stores',
   status: 'published',
   plural: 'retail stores',
-  subject: 'retail business',
+  subject: 'store',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for retail stores | Verity',
+    title: 'Retail store management software for Indian shops | Verity',
     description:
-      'Verity connects stock, suppliers, customers, staff and store performance into one operational system you can ask questions of in plain language.',
+      'The 14 problems that quietly drain a retail store, what each costs, and the Verity screens that fix them: dead stock, shrinkage, supplier dues, staff targets and more.',
     keywords: [
-      'AI software for retail stores',
-      'retail management software',
-      'retail inventory management software',
-      'multi store retail operations software',
-      'business software for retailers',
+      'retail store management software India',
+      'retail inventory and dead stock tracking',
+      'retail shrinkage control',
+      'multi-store retail operations software',
+      'retail supplier payment tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'workforce', 'locations', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for retail',
-    headline: 'The shelf says one thing. The sheet says another. The reorder is due today.',
+    eyebrow: 'Verity for retail stores',
+    headline: 'The shelf looks full. The money is somewhere else. Verity shows you where.',
     lede:
-      'A shop is a stock position, a customer list and a day’s takings, and in most stores those three live in three places. Verity puts them on one record model with one history.',
-    note: 'Runs alongside your existing billing. Nothing switches off on day one.',
-    panel: {
-      title: 'Store',
-      meta: 'All stores · Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sales today', value: '₹4.86 L', note: '312 transactions' },
-        { label: 'Stock value', value: '₹1.4 Cr', note: 'across 3 stores' },
-        { label: 'Not moved 90d', value: '₹22 L', note: '410 lines' },
-        { label: 'Below reorder', value: '37', note: 'lines, 12 fast-moving' },
-      ],
-      rows: [
-        { name: '12 fast-moving lines below reorder point', meta: 'Two suppliers · both deliver Thursday', active: true },
-        { name: '₹22 L in stock that has not moved in 90 days', meta: 'Concentrated in two categories', active: true },
-        { name: 'Store 2 count differs from system by 34 units', meta: 'Since last cycle count', active: true },
-        { name: 'Supplier price increase not reflected in retail', meta: '9 lines · margin down', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own stores in this shape.',
-    },
+      'A store can be busy all day and still end the month short, because cash is stuck in stock that does not move, goods go missing between the back room and the till, and supplier bills pile up unseen. Verity ties stock, purchases, customers and staff together so you can see each leak.',
+    oneLine:
+      'One system that knows what is on every shelf, what it cost, who bought it, and what is owed to whom, store by store.',
+    note: 'Built for a shop that has no time for extra data entry. Records come from the sale, the delivery and the stock count you already do.',
+    screen: 'owner',
+    screenNote: 'products, suppliers, staff and stores',
   },
 
-  overview: {
-    heading: 'Retail is unusual: the thing being managed is physically present and constantly moving.',
+  today: {
+    heading: 'Most stores know what they sold. Few know what it left them.',
     paragraphs: [
-      'Stock arrives from suppliers, sits, sells, gets returned, gets damaged, gets written off, and has to be reordered before it runs out — usually while the person who understands the pattern is serving a customer. That is the whole business, and the difficulty is not that retailers lack data. It is that the sale, the stock movement, the purchase order and the customer’s history are recorded in four systems that do not know about each other.',
-      'So the questions that decide a retail year go unanswered. Which lines are tying up money without moving. Which categories are actually carrying the store. Whether the margin on a range survived the supplier’s last price increase. Whether the customers who used to come in every fortnight still do. Each of those is answerable from records the store already creates; none of them are answerable from four disconnected systems.',
-      'The second structural problem is that retail decisions are made at the counter under time pressure. A discount is given, a return is accepted, stock is moved between stores, an order is placed with whoever picks up the phone. Individually each is small. Collectively they are where a thin-margin business loses its margin, and none of them leave a record anyone reviews.',
-      'Verity holds the stock, the suppliers, the customers, the staff and the transactions as connected records with one permission model and one history. The store’s own activity produces the picture, so nobody has to assemble one.',
+      'The till total is easy: it is on the screen by evening. Everything behind it is harder. Which products have sat on the shelf for six months. How much was lost between delivery and sale. What the supplier will ask you to pay next week. Which customers used to come every month and have stopped.',
+      'The answers exist, but scattered: a billing app, a purchase register, supplier bills in a drawer, a stock sheet updated when someone has time, and the memory of the person who has run the shop for years. The owner is usually also serving customers, so the system that joins it all is you, between sales.',
+      'The damage is rarely one big event. It is a slow drag from slow stock, small losses, early payments, missed supplier credit and discounts given without a note, and it shows up only when the bank balance is lower than the sales suggested.',
     ],
+    stack: ['Billing app or machine', 'Purchase bills in a file', 'Excel or notebook stock list', 'WhatsApp with suppliers and staff', 'The owner’s memory'],
+    stackNote: 'Each does its own small job well enough. None of them see each other, and that gap is where the money goes.',
   },
 
-  terminology: [
-    ['Lines, SKUs, categories, ranges', 'Inventory'],
-    ['Sales, returns, exchanges', 'Orders'],
-    ['Customers, regulars, account holders', 'Relationships'],
-    ['Vendors, brands, distributors', 'Suppliers'],
-    ['Floor staff, cashiers, store managers', 'People'],
-    ['Discounts, returns, write-offs', 'Workflows'],
-    ['Stores, stockrooms, transfers', 'Locations'],
-  ],
-
-  challengesHeading: 'The same four problems, in every store, at every size.',
-  challengesLede:
-    'Retail difficulties are remarkably consistent. They come from stock, price and customer information living apart from each other.',
-  challenges: [
+  painsHeading: 'Where a retail store actually loses money.',
+  painsLede:
+    'These are the situations store owners describe over and over. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Stock truth lives in two places',
-      detail:
-        'The shelf says one thing and the system says another, and nobody trusts either at the moment a reorder decision has to be made.',
-      outcome:
-        'Every movement — sale, return, transfer, damage, write-off — is recorded against the line, so the count and the record diverge visibly rather than silently.',
-    },
-    {
-      problem: 'Reordering is a memory exercise',
-      detail:
-        'Purchasing depends on whoever has been there longest noticing that something is running low, which fails on their day off.',
-      outcome:
-        'Reorder points sit on the line and are checked against actual movement, so replenishment starts from a record rather than from an observation.',
-    },
-    {
-      problem: 'Slow stock is found when the cash is needed',
-      detail:
-        'Capital sits in lines that stopped selling two seasons ago, and it becomes obvious only when the next buying decision has to be funded.',
-      outcome:
-        'Ageing is a query rather than an audit. What has not moved in sixty, ninety or a hundred and twenty days is visible while it can still be cleared.',
-    },
-    {
-      problem: 'Margin erodes quietly',
-      detail:
-        'A supplier raises cost, retail price stays where it was, and the line keeps selling at a margin nobody recalculated.',
-      outcome:
-        'Purchase cost is recorded against the line, so cost movement against selling price is visible per line rather than discovered in the annual accounts.',
-    },
-    {
-      problem: 'Customer history stops at the till',
-      detail:
-        'A repeat customer is recognised by face, not by record, so nothing happens when they stop coming in.',
-      outcome:
-        'Purchases attach to the customer record, so the regulars who have gone quiet become a list rather than an absence.',
-    },
-    {
-      problem: 'A second store doubles the confusion',
-      detail:
-        'Two stores mean two counts, two ordering habits and no comparable numbers, and stock sits in one while the other loses the sale.',
-      outcome:
-        'Stores are locations rolling into the business, so availability across all of them is one view and transfers are recorded movement.',
-    },
-  ],
-
-  modulesLede:
-    'One system across stock, purchase, customers and staff. These are the parts a retail business works with.',
-  modules: [
-    {
-      id: 'inventory',
-      title: 'Every line, wherever it is',
-      line:
-        'Stock is held with supplier, cost, category, location, reorder point and state, and moves as it is received, sold, transferred, returned or written off.',
-      why:
-        'Inventory is where a retailer’s capital sits and where its margin is decided. Everything else in the store is downstream of knowing what is on hand.',
-      example:
-        'Availability across three stores in one view turns an out-of-stock at Store 1 into a transfer from Store 3 rather than a lost sale.',
-    },
-    {
-      id: 'orders',
-      title: 'Sales, returns and exchanges',
-      line:
-        'Transactions are records with their lines, the customer, the staff member, the discount applied and the stock they moved.',
-      why:
-        'The sale is the event that touches stock, margin, staff performance and customer history at once. Recorded properly, it answers all four.',
-      example:
-        'A return recorded against the original sale restores the stock, adjusts the day’s takings and stays on the customer’s history.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Vendors, purchase and price',
-      line:
-        'Suppliers are relationships with their orders, deliveries, cost movement, delivery reliability and outstanding balances.',
-      why:
-        'Retail purchasing is frequent and rarely examined, so price creep and late delivery both pass through unnoticed.',
-      example:
-        'A supplier whose costs have risen nine percent over four months is visible from the purchase records, before the margin report says so.',
-    },
-    {
-      id: 'relationships',
-      title: 'Customers and regulars',
-      line:
-        'Customers are records with their purchases, returns, preferences, credit position and interaction history.',
-      why:
-        'Repeat custom is the cheapest revenue a store has and the least likely to be recorded anywhere the owner can query.',
-      example:
-        'Customers who bought monthly until June and not since are a list you ask for, not a pattern you happen to notice.',
-    },
-    {
-      id: 'people',
-      title: 'Floor staff, cashiers and managers',
-      line:
-        'Staff are modelled once, and every sale, discount, transfer and stock adjustment shows who made it.',
-      why:
-        'Retail performance varies sharply by individual, and so does discounting behaviour. Both need attribution before they can be discussed.',
-      example:
-        'Sales value, transaction count and discount rate by staff member, from the transactions themselves.',
-    },
-    {
-      id: 'workflows',
-      title: 'Discounts, returns and write-offs',
-      line:
-        'Discounts above a threshold, returns beyond policy, transfers and stock write-offs move through defined approval steps with a recorded reason.',
-      why:
-        'The decisions that cost a retailer money are made quickly at the counter, which is exactly why they need a record rather than a conversation.',
-      example:
-        'A discount beyond the manager’s threshold is an approval with a reason, not a judgement call nobody sees.',
-    },
-    {
-      id: 'records',
-      title: 'Product information and documents',
-      line:
-        'Product details, warranties, supplier agreements and invoices attach to the line or transaction they belong to.',
-      why:
-        'The paperwork that matters in retail is needed at the counter, months later, by whoever is on shift.',
-      example:
-        'A customer returns with a purchase from last year. The invoice and the warranty terms are on the same record as the sale.',
-    },
-    {
-      id: 'locations',
-      title: 'Stores, stockrooms and transfers',
-      line:
-        'Locations roll into the business, with stock, permissions and reporting following the same structure, and movement between them recorded.',
-      why:
-        'Even a single shop has a floor and a stockroom. A second store multiplies the problem without changing its shape.',
-      example:
-        'Sales, stock and ageing by store from one set of records rather than three spreadsheets in three formats.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reports from the day’s transactions',
-      line:
-        'Category performance, ageing, margin against cost movement, staff conversion and customer return rate come from the operational records.',
-      why:
-        'Retail reporting is usually monthly, which is far too slow for a business whose stock position changes every hour.',
-      example:
-        'Turnover by category against stock held, current, rather than compiled after the quarter that produced it.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the store a question',
-      line:
-        'Verity AI answers from your own stock, sales, supplier and customer records, only shows what the person asking can see, and can turn an answer into assigned follow-ups.',
-      why:
-        'A retailer’s real questions are about absence — what is not moving, who is not returning — and absence is exactly what nobody notices.',
-      example:
-        '"Which lines have not sold in ninety days and what are they worth?" returns four hundred and ten, and one instruction raises the clearance decision.',
-    },
-    {
-      id: 'control',
-      title: 'Who can discount, transfer and adjust',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Retail gives a lot of people the ability to move stock and change prices. Who did what should never be unanswerable.',
-      example:
-        'Cost price is visible to the owner and not to floor staff, and every stock adjustment carries the person and the time.',
-    },
-    {
-      id: 'communication',
-      title: 'Notes that survive the shift',
-      line:
-        'Comments, notifications and activity attach to the record they concern rather than living in a group chat.',
-      why:
-        'Store context is handed over verbally and lost the moment someone is off for two days.',
-      example:
-        'The note that a delivery arrived short sits on the purchase order, where whoever reconciles it will find it.',
-    },
-  ],
-
-  workflowsHeading: 'What the store does anyway, recorded as it happens.',
-  workflowsLede:
-    'These sequences already run. In Verity each step is a state change, so the failures are visible where they occur.',
-  workflows: [
-    {
-      name: 'Purchase to shelf',
-      steps: [
-        'Reorder flagged against the line from actual movement',
-        'Purchase order raised against the supplier',
-        'Goods received and checked against the order',
-        'Stock recorded with cost, category and location',
-        'Cost movement compared against current retail price',
-        'Supplier delivery performance updated',
-      ],
-      note:
-        'Checking cost against price at intake is what stops margin eroding one delivery at a time.',
-    },
-    {
-      name: 'Sale and return',
-      steps: [
-        'Transaction recorded with its lines, staff member and customer',
-        'Stock deducted as the sale completes',
-        'Discount above threshold routed for approval',
-        'Return recorded against the original transaction',
-        'Stock restored or written off depending on condition',
-        'Customer history updated either way',
-      ],
-      note:
-        'A return tied to its original sale is what makes return rate measurable by line, staff member and reason.',
-    },
-    {
-      name: 'Stock transfer between stores',
-      steps: [
-        'Shortfall identified at one location against demand',
-        'Availability located at another store',
-        'Transfer raised and approved',
-        'Stock dispatched and received',
-        'Both locations updated as the movement completes',
-      ],
-      note:
-        'The transfer turns an out-of-stock into a delayed sale rather than a lost one.',
-    },
-    {
-      name: 'Cycle count and adjustment',
-      steps: [
-        'Count scheduled against a category or location',
-        'Physical count recorded against the system position',
-        'Variances raised as exceptions with a reason',
-        'Adjustments above threshold routed for approval',
-        'Recurring variance patterns surfaced by line and location',
-      ],
-      note:
-        'Counting becomes a check on the record rather than a replacement for it.',
-    },
-    {
-      name: 'Ageing and clearance',
-      steps: [
-        'Lines with no movement past the threshold identified',
-        'Value and category concentration reviewed',
-        'Clearance or markdown decision raised for approval',
-        'Markdown applied and recorded against the line',
-        'Result compared against the original cost',
-      ],
-      note:
-        'Clearing stock becomes a decision with numbers behind it rather than a reaction to a cash shortage.',
-    },
-    {
-      name: 'Buying review',
-      steps: [
-        'Category performance pulled for the period',
-        'Ageing and turnover compared across categories',
-        'Supplier cost movement and reliability reviewed',
-        'Purchase decisions raised against the gaps',
-        'Decisions recorded against the lines and suppliers',
-      ],
-      note:
-        'Buying is planned against what actually moved rather than against what felt busy.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask the store what it is holding.',
-    lede:
-      'Verity AI reads the same stock, sales, supplier and customer records the store runs on. It answers from your own business rather than from generic knowledge, and it can turn the answer into work assigned to the person who owns it.',
-    panelMeta: 'Grounded in your store records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which lines have not sold in ninety days, and what are they worth?',
-      'Which fast-moving lines are below their reorder point?',
-      'Which categories turned over fastest this quarter?',
-      'Which supplier costs have risen without a price change on our side?',
-      'Which customers bought regularly until this year and have stopped?',
-      'What is the return rate by line and by reason?',
-      'Which stores hold stock that another store is short of?',
-      'What discount rate is each staff member running at?',
-      'Summarise this month’s store performance.',
-    ],
-  },
-
-  automationHeading: 'The checks that only fail when someone is busy.',
-  automationLede:
-    'Each runs from the store’s own records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A line falls below its reorder point',
-      steps: [
-        'Reorder flagged with recent movement attached',
-        'Purchase raised against the supplier who last delivered it',
-        'Approval routed where the value requires it',
-        'Delivery checked against the order on receipt',
-      ],
-    },
-    {
-      trigger: 'Supplier cost rises on a line',
-      steps: [
-        'Cost change recorded against the line',
-        'Current margin recalculated against retail price',
-        'Pricing review task raised where margin falls below threshold',
-      ],
-    },
-    {
-      trigger: 'A discount exceeds the threshold',
-      steps: [
-        'Transaction held at the approval step',
-        'Routed to the manager with the reason attached',
-        'Decision recorded against the sale',
-      ],
-    },
-    {
-      trigger: 'A line passes its ageing threshold',
-      steps: [
-        'Line flagged with its value and days without movement',
-        'Clearance review task assigned to the buyer',
-        'Decision recorded against the line',
-      ],
-    },
-    {
-      trigger: 'A cycle count records a variance',
-      steps: [
-        'Exception raised against the line and location',
-        'Adjustment routed for approval above threshold',
-        'Recurring variances surfaced in the next review',
-      ],
-    },
-    {
-      trigger: 'A regular customer goes quiet',
-      steps: [
-        'Customer flagged after a defined period without a purchase',
-        'Follow-up assigned to the store that serves them',
-        'Outcome recorded on the customer record',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the owner can see without compiling anything.',
-  intelligenceLede:
-    'All of it comes from transactions the store creates in the ordinary course of trading.',
-  intelligence: [
-    {
-      area: 'Sales',
-      points: [
-        'Revenue by day, store, category and line',
-        'Average transaction value and basket size',
-        'Comparison against the same period historically',
-        'Performance by staff member',
-      ],
+      area: 'Stock',
+      title: 'Cash is locked in products that do not move',
+      scene:
+        'Half the back room is last season’s buys and one-off bulk deals. The fast sellers run out while these gather dust. Nobody has a list of what has not sold in six months.',
+      cost:
+        'Example arithmetic: if ₹4 lakh of a ₹20 lakh stock has not sold in six months, that is ₹4 lakh you cannot use to buy what customers want, plus the discount you will eventually take to clear it.',
+      fix:
+        'Every sale and delivery is recorded against the product, so Verity shows days since last sale and stock cover for each line. Slow movers are listed with their cost, ready for a markdown, a bundle or a return to the supplier.',
+      screen: 'stock',
+      source: {
+        name: 'Vector Consulting Group, The Ticking Shelf, reported by Indian Retailer, 2026',
+        url: 'https://indianretailer.com/article/retail-business/retail/91-pc-organised-retail-stores-india-are-losing-revenue-shelf',
+      },
     },
     {
       area: 'Stock',
-      points: [
-        'Value held by category and location',
-        'Ageing at sixty, ninety and a hundred and twenty days',
-        'Turnover by category across periods',
-        'Lines below reorder point',
-      ],
+      title: 'The best sellers run out, and nobody knows until a customer asks',
+      scene:
+        'A customer asks for the item that sold fast all month. The shelf is empty. The supplier takes four days to deliver, and the customer buys it from the shop next door today.',
+      cost:
+        'Each missed sale is gone for good, and some of those customers do not come back. Example arithmetic: ten missed sales a week at ₹600 is ₹3 lakh a year.',
+      fix:
+        'Each product has a reorder point set from how fast it actually sells. Verity flags lines about to run out, sorted by how fast they sell, and drafts the purchase order for you to approve.',
+      screen: 'stock',
     },
     {
-      area: 'Margin',
-      points: [
-        'Cost movement against retail price by line',
-        'Margin by category and by supplier',
-        'Discounting against approval thresholds',
-        'Markdown taken on cleared stock',
-      ],
-    },
-    {
-      area: 'Customers',
-      points: [
-        'Repeat purchase rate and frequency',
-        'Regulars who have stopped buying',
-        'Highest-value customers by spend',
-        'Return rate by customer and by reason',
-      ],
+      area: 'Stock',
+      title: 'Stock goes missing and no one can say when',
+      scene:
+        'The count in the sheet says 40. The shelf has 31. Some went to customers without a bill, some were taken by staff, some were damaged and thrown out. It is a guess which.',
+      cost:
+        'Shrinkage is a real line in Indian retail. Trent reported 0.41 percent of sales for FY24, and the Retailers Association of India has said up to 0.5 percent is manageable. For a small store without counts the figure is usually unknown, which is worse.',
+      fix:
+        'Deliveries, sales, damages and transfers are all recorded movements. A regular count is compared with the book and Verity lists each gap with the item, the quantity, the value and the date range it fell in.',
+      screen: 'stock',
+      source: {
+        name: 'Economic Times piece reprinted by Third Eyesight, June 2024',
+        url: 'https://www.thirdeyesight.in/?p=6499',
+      },
     },
     {
       area: 'Suppliers',
-      points: [
-        'Delivery reliability against ordered dates',
-        'Cost movement on repeat purchases',
-        'Short and rejected deliveries',
-        'Outstanding payable by supplier',
+      title: 'You pay suppliers late, or early, and miss the credit you earned',
+      scene:
+        'Bills sit in a file. One supplier offers a discount for payment in ten days, and you find the bill on day thirty. Another is paid twice because two people thought it was pending.',
+      cost:
+        'Lost early-payment discounts, double payments you have to chase back, and strained supplier relations when a payment is forgotten.',
+      fix:
+        'Each purchase bill is a record with its due date and terms. Verity lists what is due this week, what has a discount window closing, and what has already been paid, and sends a task to whoever pays.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Delivered quantity does not match the bill',
+      scene:
+        'The bill says 48 pieces and the carton had 44. The delivery boy has left. The short pieces are noticed a week later, when it is too late to argue.',
+      cost:
+        'You pay for goods that never arrived. Example arithmetic: four short pieces a week at ₹250 is about ₹52,000 a year.',
+      fix:
+        'Goods are received against the purchase order with the counted quantity. Verity compares order, receipt and bill and flags any mismatch before the bill is passed for payment.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Suppliers',
+      title: 'Margin changes when supplier prices change, and you find out late',
+      scene:
+        'The supplier raises the cost of a popular item by 8 percent. The shelf price stays the same for three months. Every sale since has earned less.',
+      cost:
+        'A few rupees lost on every unit of your best sellers is a large number by the quarter end.',
+      fix:
+        'Each purchase records the cost, so Verity tracks cost per product over time and shows the margin on each line. A rise beyond a limit you set is flagged with the products it affects.',
+      screen: 'suppliers',
+    },
+    {
+      area: 'Customers',
+      title: 'Regular customers drift away without anyone noticing',
+      scene:
+        'A family that bought household items every month has not been in since July. Nobody on the staff knows they used to be regulars, because nobody ever wrote it down.',
+      cost:
+        'Example arithmetic: 200 regular households spending ₹1,800 a month are worth about ₹43 lakh a year. Losing a fifth without noticing is ₹8.6 lakh.',
+      fix:
+        'Sales are linked to the customer by phone number. Verity learns each customer’s usual gap, lists those who have passed it with what they bought, and assigns a follow-up task to a staff member.',
+      screen: 'customers',
+    },
+    {
+      area: 'Customers',
+      title: 'Returns and exchanges are handled by memory and goodwill',
+      scene:
+        'A customer comes back with a bag and no bill. A staff member says yes to be polite. The item goes back on the shelf, or into the corner, with no entry and no reason.',
+      cost:
+        'Refunds with no record, damaged returns put back on sale, and no view of which products or suppliers cause the returns.',
+      fix:
+        'Every return is a recorded entry against the original sale with a reason and a decision on where the item goes: shelf, damaged or back to the supplier. Refunds above your limit wait for approval.',
+      screen: 'customers',
+    },
+    {
+      area: 'Staff',
+      title: 'Sales staff leave often and take their know-how with them',
+      scene:
+        'A good floor person who knows which brands each regular likes resigns. A new hire starts from zero. Retail attrition figures cited in Indian press run from about 30 percent to well over half a year.',
+      cost:
+        'Hiring, training and the weeks of weak selling while a new person learns the stock and the customers.',
+      fix:
+        'Customer preferences and past purchases sit on the customer record, not in one person’s head. Verity shows a handover list for any customer or product area when someone leaves.',
+      screen: 'staff',
+    },
+    {
+      area: 'Staff',
+      title: 'Targets, incentives and shifts are worked out on paper',
+      scene:
+        'The manager has a notebook of who was in on which day, who sold how much, and who gets the monthly incentive. At month end two people disagree with the figures.',
+      cost:
+        'Hours of the manager’s time every month and a good salesperson who feels cheated and starts to look elsewhere.',
+      fix:
+        'Attendance and sales are recorded against each person. Verity builds the monthly sheet from the rule you gave, and the staff member sees the same figures.',
+      screen: 'staff',
+    },
+    {
+      area: 'Money',
+      title: 'Discounts given at the counter are never added up',
+      scene:
+        'A regular asks for “a little less”. The cashier rounds down. A manager says yes to a bigger one with a nod. By month end nobody can say how much was given away.',
+      cost:
+        'Small rounds of discretion are where thin margins disappear. Example arithmetic: ₹40 off on 60 bills a day is ₹7 lakh a year.',
+      fix:
+        'Each bill records the discount and who allowed it. Anything above your limit needs a one-tap approval with a reason, and the owner sees discounts by person, product and week.',
+      screen: 'owner',
+    },
+    {
+      area: 'Money',
+      title: 'The cash, card and UPI at close do not match the day’s bills',
+      scene:
+        'At 9 pm the drawer is ₹850 short. Was it a missed bill, a wrong change or a free item? Nobody knows, so the difference is written off and the same gap appears next week.',
+      cost:
+        'Small daily gaps add up, and the owner cannot trust the number in front of them.',
+      fix:
+        'The day’s sales and the day’s collections are compared by mode. Verity flags the mismatch with the exact bills that do not tie, and the close is recorded with who counted.',
+      screen: 'owner',
+    },
+    {
+      area: 'Compliance',
+      title: 'Price, pack and tax details have to be right on every item',
+      scene:
+        'Packaged goods must be sold at or below the printed MRP. A new stock lot arrives with a revised MRP, the shelf tag still shows the old one, and the billing app has the old price too.',
+      cost:
+        'Selling above MRP is an offence under the Legal Metrology rules and an unfair trade practice under consumer law. Penalties are set by the state and the Act, so check the current amounts with your adviser.',
+      fix:
+        'Each product record holds its MRP and tax rate, with a history of changes. Verity flags a new lot whose MRP differs from the record so the shelf tag and the billing price are corrected the same day.',
+      screen: 'stock',
+      source: {
+        name: 'Legal Metrology (Packaged Commodities) Rules, 2011, Rule 18(2); see the 2025 Lok Sabha reply',
+        url: 'https://fcainfoweb.nic.in/PMS/writereaddata/2025_LS_B_4362.pdf',
+      },
+    },
+    {
+      area: 'Owner',
+      title: 'A second store doubles the blind spots',
+      scene:
+        'Store two has a different billing app and its own stock list. Stock sits idle in one while the other runs out. The owner learns how each is doing from a phone call at night.',
+      cost:
+        'Stock bought twice, no fair comparison between stores, and problems that grow for weeks before anyone sees them.',
+      fix:
+        'Stores are locations in one system. Stock, sales and margin compare side by side, and a transfer between stores is a recorded movement with a sender and a receiver.',
+      screen: 'locations',
+    },
+  ],
+
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede:
+    'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '91%',
+      text: 'of large organised retail chains in India report revenue leaking at the shelf, in a survey of 100 chains with revenue over ₹500 crore.',
+      source: {
+        name: 'Vector Consulting Group, via Indian Retailer',
+        year: '2026',
+        url: 'https://indianretailer.com/article/retail-business/retail/91-pc-organised-retail-stores-india-are-losing-revenue-shelf',
+      },
+    },
+    {
+      figure: '66%',
+      text: 'of those retailers see markdowns as margin erosion, and about 65% say they lack strong processes to keep inventory fresh.',
+      source: {
+        name: 'Vector Consulting Group, via Indian Retailer',
+        year: '2026',
+        url: 'https://indianretailer.com/article/retail-business/retail/91-pc-organised-retail-stores-india-are-losing-revenue-shelf',
+      },
+    },
+    {
+      figure: '0.41%',
+      text: 'of sales lost to shrinkage at Trent in FY24, up from 0.22% the year before. Retailers Association of India has said up to 0.5% is manageable.',
+      source: {
+        name: 'Economic Times piece reprinted by Third Eyesight',
+        year: '2024',
+        url: 'https://www.thirdeyesight.in/?p=6499',
+      },
+    },
+    {
+      figure: '13 May 2027',
+      text: 'is when most duties in India’s DPDP Rules, 2025 begin for businesses that hold customer data, including notice and consent. The Rules were notified in November 2025.',
+      source: {
+        name: 'S.S. Rana & Co. on the DPDP Rules',
+        year: '2025',
+        url: 'https://ssrana.in/articles/meity-notifies-final-digital-personal-data-protection-rules-2025/',
+      },
+    },
+  ],
+  factsNote:
+    'The survey and shrinkage figures come from large chains, not a single shop, and one source is a reprint of a news article. They show the scale of the problem, not what your store will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each built for one job. Names, columns and terms are set up in your store’s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Store / Today',
+      meta: 'Store: Pune Camp',
+      heading: 'The owner’s morning view',
+      caption:
+        'Sales, margin, stock health, cash match and the things waiting for a decision, on one screen. This replaces the evening phone call and the mental list.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹2,18,400', note: '164 bills' },
+            { label: 'Gross margin', value: '27%', note: 'after discounts' },
+            { label: 'Slow stock', value: '₹3.9 lakh', note: 'no sale in 180 days' },
+            { label: 'Supplier dues', value: '₹1.2 lakh', note: 'due this week' },
+          ],
+        },
+        { type: 'title', text: 'Discounts given, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Counter 1', value: 34, display: '₹6,100' },
+            { label: 'Counter 2', value: 58, display: '₹10,400', tone: 'muted' },
+            { label: 'Manager', value: 22, display: '₹3,900' },
+          ],
+        },
+        { type: 'alert', text: 'Collections do not tie to bills by ₹850. 3 bills unmatched.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Reorder: steel bottles 1 L', meta: 'Sells 14 a week, 6 left', tag: ['Order', 'flag', 'Ordered', 'ok'] },
+            { name: 'MRP changed on a new lot of chocolates', meta: 'Shelf and billing show the old price', tag: ['Update', 'late', 'Updated', 'ok'] },
+          ],
+        },
       ],
     },
     {
-      area: 'Operations',
-      points: [
-        'Count variances by line and location',
-        'Transfers between stores',
-        'Approvals awaiting a decision',
-        'Store comparison across the business',
+      id: 'stock',
+      title: 'Stock',
+      meta: 'Cover, slow movers and counts',
+      heading: 'Every product, how fast it moves and what it ties up',
+      caption:
+        'Days of cover, days since last sale and value locked up, per product. A count compared with the book shows exactly what does not match and by how much.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Product', 'In stock', 'Sells / week', 'Cover', 'Status'],
+          rows: [
+            ['Steel bottle 1 L', '6', '14', '3 days', ['Reorder', 'late', 'Ordered', 'ok']],
+            ['Cotton towel set', '38', '2', '19 weeks', ['Slow', 'flag', 'Marked down', 'info']],
+            ['Lunch box, 3 piece', '22', '9', '2.4 weeks', ['OK', 'ok']],
+            ['Desk lamp, LED', '41', '0', 'No sale 210 days', ['Dead stock', 'late', 'Return to supplier', 'info']],
+            ['Chocolate box 250 g', '60', '25', '2.4 weeks', ['New MRP', 'flag', 'Updated', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Last count: 11 lines short, ₹7,400 at cost. Largest gap: earphones, 9 units.', action: 'See gaps' },
+      ],
+    },
+    {
+      id: 'suppliers',
+      title: 'Suppliers',
+      meta: 'Bills, receipts and prices',
+      heading: 'What you ordered, what arrived and what you owe',
+      caption:
+        'Each purchase order, the quantity counted at the door, the bill, the cost rate and the due date. Mismatches and rising costs are flagged before payment.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Supplier', 'Ordered', 'Received', 'Bill', 'Status'],
+          rows: [
+            ['Gupta Traders', '48', '44', '₹21,600', ['Short 4', 'late', 'Credit note', 'ok']],
+            ['Sharma Home Goods', '120', '120', '₹38,400', ['Discount ends in 3 days', 'flag', 'Paid', 'ok']],
+            ['Kapoor Stationers', '200', '200', '₹14,200', ['Matched', 'ok']],
+            ['Metro Distributors', '60', '60', '₹52,000', ['Cost +8%', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Cost of steel bottles rose 8% since June. Margin on the line fell from 31% to 24%.', action: 'Reprice' },
+      ],
+    },
+    {
+      id: 'customers',
+      title: 'Customers',
+      meta: 'Repeat buyers and returns',
+      heading: 'Regulars, lapsed customers and returns on one list',
+      caption:
+        'Customers ordered by what they were worth and how overdue they are. Returns appear against the sale they came from, with a reason and a decision.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Customer', 'Last visit', 'Usual gap', 'Spend, 12 mo', 'Status'],
+          rows: [
+            ['Anjali Deshmukh', '9 Jul', '4 wks', '₹24,600', ['Call today', 'late', 'Visited', 'ok']],
+            ['Rahul Joshi', '21 Jul', '5 wks', '₹18,900', ['Message', 'flag']],
+            ['Fatima Sheikh', '30 Jun', '6 wks', '₹31,200', ['Call today', 'late', 'Declined', 'muted']],
+            ['Suresh Kulkarni', '14 Aug', '4 wks', '₹12,400', ['Message', 'flag', 'Visited', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Return: desk lamp, no bill', meta: 'Reason: stopped working. Over limit.', tag: ['Approve?', 'flag', 'Approved', 'ok'] },
+            { name: 'Return: cotton towel, wrong colour', meta: 'Back to shelf, same lot', tag: ['Restock', 'info', 'Restocked', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'staff',
+      title: 'Team',
+      meta: 'This month',
+      heading: 'Attendance, sales and incentive for every person',
+      caption:
+        'Days worked, sales per person, returns and the incentive that follows from your rule. Each person sees the same breakdown, so month end stops being an argument.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Name', 'Days', 'Sales', 'Returns', 'Incentive'],
+          rows: [
+            ['Pooja', '26', '₹6.4 lakh', '2%', '₹6,400'],
+            ['Imran', '25', '₹5.8 lakh', '3%', '₹5,800'],
+            ['Deepak', '22', '₹3.1 lakh', '7%', '₹1,550'],
+            ['Neha', '26', '₹4.9 lakh', '2%', '₹4,900'],
+          ],
+        },
+        { type: 'title', text: 'Sales against monthly target' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Pooja', value: 100, display: '107%' },
+            { label: 'Imran', value: 97, display: '97%' },
+            { label: 'Neha', value: 82, display: '82%' },
+            { label: 'Deepak', value: 52, display: '52%', tone: 'muted' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'locations',
+      title: 'Stores',
+      meta: 'All stores side by side',
+      heading: 'Two or more stores, one view',
+      caption:
+        'Sales, margin, slow stock and shrinkage for every store, with transfers between stores recorded as movements so stock is not bought twice.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Store', 'Sales, 30 days', 'Margin', 'Slow stock', 'Shrinkage'],
+          rows: [
+            ['Pune Camp', '₹58.2 lakh', '27%', '₹3.9 lakh', '0.4%'],
+            ['Baner', '₹41.7 lakh', '29%', '₹1.8 lakh', '0.2%'],
+            ['Kothrud', '₹33.5 lakh', '24%', '₹5.2 lakh', '1.1%'],
+          ],
+        },
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Transfers in progress',
+              cards: [
+                { title: '24 lunch boxes, Pune Camp to Kothrud', meta: 'Sent today', tag: ['In transit', 'info', 'Received', 'ok'] },
+                { title: '12 desk lamps, Kothrud to Baner', meta: 'Dead at Kothrud, selling at Baner', tag: ['Approve?', 'flag', 'Approved', 'ok'] },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
-  intelligenceNote:
-    'None of this requires separate data entry. It comes from recording the sale and the delivery, which the store does anyway.',
 
-  rolesHeading: 'One business, five different questions.',
+  dayHeading: 'The same Thursday, before and after.',
+  dayLede: 'The work in the shop does not change. What changes is that each task leaves a record, and the record does the chasing.',
+  day: [
+    {
+      time: 'Opening',
+      before: 'You walk the floor and try to remember what was low. A best seller turns out to be empty.',
+      after: 'The Today screen lists what is about to run out. The order for it went to the supplier last night.',
+    },
+    {
+      time: '11:30',
+      before: 'A delivery arrives. The bill says 48, the carton has 44, and the driver has left.',
+      after: 'The count is entered at the door against the order. The short four are flagged and a credit note is queued.',
+    },
+    {
+      time: '2:00',
+      before: 'A customer returns an item with no bill. The staff member agrees to avoid an argument.',
+      after: 'The return is logged against the sale, with a reason. It is over your limit, so you approve it on your phone.',
+    },
+    {
+      time: '5:00',
+      before: 'A lapsed regular walks in after five months. Nobody knew she had stopped coming.',
+      after: 'She was on the list at week six. Pooja called her, and the visit is recorded as a win-back.',
+    },
+    {
+      time: '9:00',
+      before: 'The drawer is ₹850 short. You write it off and hope it does not happen again.',
+      after: 'Verity shows the three bills that do not tie. You find the wrong change in two minutes.',
+    },
+    {
+      time: 'Month end',
+      before: 'The manager works out staff incentives from a notebook. One person disputes it.',
+      after: 'The sheet is ready on the 1st from recorded sales, and each person sees the same figures.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you over four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your store actually runs, set Verity up around it, bring your data across, and then stay on while it settles in.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a day in the store. Follow one delivery from the door to the shelf and one sale from the shelf to the drawer, and write down every place where a number is kept today.',
+        you: 'Two to three hours of your time and your manager’s. Access to your billing app’s reports, your purchase bills and your stock list.',
+        get: 'A written map of your store: product groups, suppliers and terms, staff roles, and the three or four problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your products, reorder points, supplier terms, discount limits, incentive rules and stores, and build the screens above around your terms.',
+        you: 'Check the setup with your manager and tell us where a rule is wrong.',
+        get: 'A working Verity with your real product groups, suppliers and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your product list, opening stock, supplier balances and customer list from the sheets and apps you use. Train the counter, the stockroom and the manager on real bills and deliveries.',
+        you: 'Your product and customer lists in whatever form they exist. One hour with each role.',
+        get: 'Your products, stock, suppliers and customers inside Verity, and a team that has used it on a real delivery and a real close.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month with you, tune the reorder points and flags, and handle changes as the store grows.',
+        you: 'A short monthly review of the numbers.',
+        get: 'A system that keeps matching how the store runs, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your product list with cost and selling prices',
+      'Your current stock count, even if rough',
+      'Supplier names, payment terms and open bills',
+      'Your discount and incentive rules as you apply them today',
+      'Your staff list and shift pattern',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your store manager needs a few more, and the person who receives goods needs about an hour.',
+    after: 'Nobody is hired to run Verity. Sales, receipts and counts are recorded as part of the work already done, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your store a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own stock, supplier, customer and staff records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which products have not sold in six months, and what are they worth?',
+        a: '41 lines have had no sale in 180 days. Together they tie up ₹3.9 lakh at cost.',
+        rows: [['Home and kitchen', '₹1.6 lakh'], ['Gifts', '₹1.1 lakh'], ['Electrical', '₹0.7 lakh'], ['Stationery', '₹0.5 lakh']],
+        action: 'Create a markdown task for the manager',
+      },
+      {
+        q: 'Which supplier has raised prices the most this quarter?',
+        a: 'Metro Distributors, up 8% on steel bottles and 5% on lunch boxes. Two other suppliers are unchanged.',
+        rows: [['Metro Distributors', '+6.4% avg'], ['Gupta Traders', '+1.2%'], ['Sharma Home Goods', '0%']],
+      },
+      {
+        q: 'Who are my 20 best customers who have not come in for 60 days?',
+        a: '14 of your top 20 by spend are past 60 days. Together they spent ₹2.6 lakh in the last year.',
+        action: 'Assign follow-ups to the floor staff',
+      },
+    ],
+  },
+
+  automationHeading: 'The jobs nobody has time to remember.',
+  automationLede:
+    'Set once, then they run from your records. Staff still make the call or send the message. Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'A product falls below its reorder point',
+      then: ['Checked against recent sales speed', 'Purchase order drafted for approval', 'Stock updated when goods are received'],
+    },
+    {
+      when: 'A product has no sale for 90 days',
+      then: ['Added to the slow stock list with its cost', 'Task to the manager to mark down or return', 'Outcome recorded against the product'],
+    },
+    {
+      when: 'Goods are received that differ from the order',
+      then: ['Mismatch flagged with supplier and bill', 'Credit note task opened', 'Bill held back from payment'],
+    },
+    {
+      when: 'A supplier bill is within 5 days of its due date',
+      then: ['Listed on the payment screen', 'Task to the person who pays', 'Payment recorded against the bill'],
+    },
+    {
+      when: 'A regular customer passes their usual gap',
+      then: ['Added to the win-back list', 'Task to a floor staff member', 'Outcome recorded: visited, declined or unreachable'],
+    },
+    {
+      when: 'A discount or refund is above your limit',
+      then: ['Held for approval', 'Routed to you with the reason', 'Decision recorded against the bill'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a retail store has to keep up with.',
+    lede:
+      'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your accountant is not rebuilding them from a bill file.',
+    items: [
+      {
+        name: 'MRP and the Legal Metrology rules',
+        what: 'Packaged goods generally must not be sold above the printed maximum retail price, and the MRP includes all taxes. State Legal Metrology departments inspect and penalise. Check the current penalties with your adviser.',
+        how: 'Each product holds its MRP with the date it changed, so a new lot with a different MRP is flagged before it reaches the shelf.',
+        source: {
+          name: 'Lok Sabha reply on Legal Metrology (Packaged Commodities) Rules, 2025',
+          url: 'https://fcainfoweb.nic.in/PMS/writereaddata/2025_LS_B_4362.pdf',
+        },
+      },
+      {
+        name: 'GST invoices and rates by product',
+        what: 'Goods are taxed at rates that depend on the product, and the rate for a product can change when the GST Council revises it. Your accountant prepares and files the returns.',
+        how: 'Each product record carries its tax rate with a history. Sales and purchases show the split by rate, so month end starts from clean figures.',
+      },
+      {
+        name: 'Customer data and consent',
+        what: 'Phone numbers and purchase histories are personal data. The DPDP Rules, 2025 were notified in November 2025, and most duties for businesses start on 13 May 2027.',
+        how: 'Customer data sits in one permissioned place with a record of who viewed or changed it, instead of in staff phones and loose bill books.',
+        source: {
+          name: 'S.S. Rana & Co. on the DPDP Rules',
+          url: 'https://ssrana.in/articles/meity-notifies-final-digital-personal-data-protection-rules-2025/',
+        },
+      },
+      {
+        name: 'Staff records under state shop rules',
+        what: 'Most states require records of working hours, weekly offs and leave under their Shops and Establishments law. Details differ by state, so check your own.',
+        how: 'Shifts, attendance and leave are recorded against each person, so the register exists without a separate notebook.',
+      },
+    ],
+    note: 'Rules and rates change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
   rolesLede:
-    'Everyone works from the same records, and each role opens on what they actually need.',
+    'A salesperson should not see supplier costs. The stock keeper does not need customer spend. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'Where is my money and what is it doing?',
-      focus: 'Stock value and ageing, margin by category, sales against last year, store comparison.',
-    },
-    {
-      role: 'Store manager',
-      question: 'What needs fixing today?',
-      focus: 'Lines below reorder, count variances, approvals pending, staff on floor, transfers due.',
-    },
-    {
-      role: 'Buyer',
-      question: 'What should I be ordering?',
-      focus: 'Turnover by category, ageing, supplier cost movement and reliability, open purchase orders.',
-    },
-    {
-      role: 'Floor staff',
-      question: 'What do we have and what does this customer want?',
-      focus: 'Availability across stores, customer purchase history, warranties, open returns.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What came in and what is owed?',
-      focus: 'Daily takings, supplier payables, customer credit, write-offs and discounts approved.',
-    },
+    { role: 'Owner', question: 'Is the store making money, and where is it leaking?', sees: 'Sales, margin, slow stock, shrinkage, supplier dues and every store side by side.' },
+    { role: 'Store manager', question: 'What needs sorting today?', sees: 'Reorders, deliveries due, approvals waiting, staff attendance and the win-back list.' },
+    { role: 'Sales staff', question: 'What does this customer usually buy?', sees: 'Customer history, what is in stock, and their own sales and incentive.' },
+    { role: 'Stock keeper', question: 'What arrived and what is short?', sees: 'Purchase orders, receipts, counts, transfers and damaged goods.' },
+    { role: 'Accountant', question: 'What came in and what is owed?', sees: 'Collections by mode, supplier bills and due dates, discounts, returns and the tax split by rate.' },
   ],
 
-  useCasesHeading: 'What retailers use Verity for',
-  useCases: [
-    {
-      name: 'Stock accuracy and movement',
-      body: 'Every sale, return, transfer, damage and write-off recorded against the line, so the count and the record diverge visibly instead of silently.',
-    },
-    {
-      name: 'Replenishment',
-      body: 'Reorder points checked against actual movement, so purchasing starts from a record rather than from someone noticing an empty shelf.',
-    },
-    {
-      name: 'Stock ageing and clearance',
-      body: 'What has not moved in sixty, ninety or a hundred and twenty days, by value and category, while it can still be cleared profitably.',
-    },
-    {
-      name: 'Margin protection',
-      body: 'Purchase cost recorded against the line, so supplier price movement against retail price is visible per line rather than in the annual accounts.',
-    },
-    {
-      name: 'Multi-store availability and transfers',
-      body: 'One view of stock across every store, with transfers as recorded movement, so a shortfall at one becomes a sale rather than a loss.',
-    },
-    {
-      name: 'Customer retention',
-      body: 'Purchase history on the customer record, so regulars who have stopped coming are a worked list.',
-    },
-    {
-      name: 'Discount and return control',
-      body: 'Decisions taken at the counter carried as approvals with reasons, so the small things that cost margin are visible.',
-    },
-    {
-      name: 'Staff performance',
-      body: 'Sales value, transactions and discount rate attributed to the person who made them.',
-    },
-    {
-      name: 'Asking the store questions',
-      body: 'Plain-language questions across stock, sales, suppliers and customers at once, with follow-ups assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing app or machine at the counter. We agree during setup how its sales reach Verity.',
+      'Your accounting software and your accountant, who still prepares your returns.',
+      'WhatsApp with suppliers and customers. Your staff send the messages.',
+      'Your supplier relationships. Verity records the orders, receipts and bills.',
+    ],
+    not: [
+      'Run your billing counter or ring up sales.',
+      'Take orders from customers online.',
+      'Send messages to customers on its own.',
+      'File tax returns or run your payroll.',
+    ],
+    migration:
+      'We bring your product list, opening stock, supplier balances and customer list across from the sheets and apps you use now, in stages, so the store keeps trading while it happens.',
+  },
 
-  migration:
-    'Your billing software, the stock sheet and whatever accounting you run are mapped during implementation. Stock, suppliers, customers and open balances are brought across, and Verity is introduced as the operational layer over them while the store keeps trading.',
-
-  faqHeading: 'Questions retailers ask',
+  faqHeading: 'Questions retail store owners ask.',
   faqs: [
     [
-      'What can AI software do for a retail store?',
-      'Verity AI answers questions from your own stock, sales, supplier and customer records. You can ask which lines have not sold in ninety days and what they are worth, which fast-moving lines are below reorder, which supplier costs have risen without a price change on your side, or which regulars have stopped buying — and turn the answer into work assigned to the person who owns it.',
+      'My staff are busy at the counter. Will they have time to use it?',
+      'The aim is that recording takes seconds and sits where the work already happens: the sale, the delivery and the count. We train at the counter and in the stockroom on real work, not in a classroom.',
     ],
     [
-      'Does Verity replace our billing software?',
-      'No. Verity is introduced as an operational layer over what you already run. Your billing setup is mapped during implementation and continues to work while Verity takes over stock, purchasing, customers, approvals and the reporting across them.',
+      'Does Verity replace my billing app?',
+      'No. Your billing app keeps ringing up sales. During setup we agree how those sales reach Verity, and Verity gives you the picture around them: stock, suppliers, customers and staff.',
     ],
     [
-      'Can it track stock across several stores?',
-      'Yes. Stores and stockrooms are locations that roll into the business, so availability across all of them is one view and transfers between them are recorded movement. A shortfall at one store can be answered from another rather than becoming a lost sale.',
+      'I have 4,000 products. How do you load them?',
+      'From the list you already have, usually a spreadsheet or an export from your billing app. We clean it in week 3, load it in stages and check a sample against the shelf before go-live.',
     ],
     [
-      'How does it help with slow-moving stock?',
-      'Movement is recorded against every line, so ageing is a query rather than an audit. What has not moved in sixty, ninety or a hundred and twenty days is visible by value and category while there is still time to clear it profitably.',
+      'Can it tell me about theft by staff or customers?',
+      'It shows where stock does not match the book: which item, how many, what value and over what period. It does not accuse anyone. It gives you the facts so you can act on them.',
     ],
     [
-      'Can Verity show whether margin is holding?',
-      'Purchase cost is recorded against each line, so cost movement can be compared with the current retail price per line. A supplier increase that was never reflected in your pricing shows up as a margin exception rather than in the annual accounts.',
+      'I run two stores. Can I see them together?',
+      'Yes. Each store is a location in one system. A customer is one person across stores, and stock, sales, margin and shrinkage can be compared, with transfers recorded between them.',
     ],
     [
-      'Does it track customers?',
-      'Purchases, returns, preferences and credit position sit on the customer record, so repeat rate is measurable and regulars who have gone quiet become a list you can ask for rather than a pattern someone happens to notice.',
+      'Will it send messages to customers?',
+      'Not by itself. Verity builds the list of customers to contact and assigns the task to a staff member, who makes the call or sends the message. The outcome is recorded.',
     ],
     [
-      'Can we control who sees cost and margin?',
-      'Verity has one permission model across every record, so cost and margin can be visible to the owner and accounts while floor staff see availability, customer history and product information.',
+      'Who can see my costs and margins?',
+      'Only the people you allow. Access is set by role, so floor staff can see selling prices and stock but not supplier costs, and every change is recorded with who made it and when.',
     ],
     [
-      'Is Verity suitable for a single shop?',
-      'A single shop already has a floor and a stockroom, a supplier list, a customer base and discount decisions taken at the counter. Those are the parts Verity handles. Additional stores use the same structure without further setup.',
+      'How long before I see something useful?',
+      'The slow stock list and the reorder warnings need only your existing product and sales data, so they are the first things we aim to have working. Margin and shrinkage trends become reliable after a few weeks of recorded deliveries and counts.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the store actually runs, configuration, migration of stock, suppliers and customers, then an ongoing operations partnership rather than a handover.',
+      'What does it cost?',
+      'It depends on the number of stores, users and what you want set up. Message us and we will give you a clear number after a short conversation about how your store runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the stock that stopped moving.',
-  ctaLede:
-    'It is usually the fastest money in a retail business and the hardest thing to see today. Tell us how your store runs and we will show you.',
+  related: ['supermarkets', 'grocery-stores', 'convenience-stores', 'department-stores', 'fashion-stores', 'gift-shops'],
 
-  related: ['supermarkets', 'fashion-stores', 'electronics-stores', 'jewellery-stores', 'furniture-stores', 'cosmetics-stores'],
+  ctaHeading: 'Start with the stock that is not selling.',
+  ctaLede:
+    'Tell us how your store runs and we will show you the slow stock, the supplier gaps and the lapsed customers it would find, using your own numbers.',
 };

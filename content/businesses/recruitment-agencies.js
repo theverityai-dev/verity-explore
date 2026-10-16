@@ -1,533 +1,647 @@
 export default {
+  schema: 2,
   slug: 'recruitment-agencies',
   status: 'published',
   plural: 'recruitment agencies',
   subject: 'recruitment agency',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for recruitment agencies | Verity',
+    title: 'Recruitment agency software: requisitions, pipeline, fees | Verity',
     description:
-      'Verity connects mandates, candidate pipelines, submission and interview stages, placements, guarantee periods and consultant performance into one system.',
+      '14 problems that cost a staffing firm placements and fees: vague requisitions, duplicate submissions, offer drops, unbilled joinings and late client payments. What fixes each.',
     keywords: [
-      'AI software for recruitment agencies',
-      'recruitment agency management software',
-      'candidate pipeline and submission tracking',
-      'staffing agency placement and guarantee tracking',
+      'recruitment agency software India',
+      'staffing firm candidate pipeline tracking',
+      'placement fee and replacement guarantee tracking',
+      'recruiter requisition tracking',
+      'candidate offer drop tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'schedule', 'workforce', 'ai'],
 
   hero: {
-    eyebrow: 'Verity for recruitment',
-    headline: 'You are not short of candidates. You are short of candidates for the four roles that will actually close.',
+    eyebrow: 'Verity for recruitment agencies',
+    headline: 'The candidate accepted. Then went silent. Verity shows which offers are at risk while you can still save them.',
     lede:
-      'A recruitment agency wins on mandate selection and submission speed, and loses to roles that were never fillable. Verity tracks the pipeline at stage level so effort follows the mandates worth working.',
-    note: 'Runs alongside your existing job boards and sourcing tools.',
-    panel: {
-      title: 'Desk',
-      meta: 'All consultants · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Open mandates', value: '64', note: 'across 22 clients' },
-        { label: 'Submissions', value: '186', note: '31 awaiting client feedback' },
-        { label: 'Placements', value: '11', note: '₹42 L billed' },
-        { label: 'In guarantee', value: '19', note: '3 at risk' },
-      ],
-      rows: [
-        { name: '31 submissions with no client feedback in 10 days', meta: 'Candidates going cold · 6 clients', active: true },
-        { name: '14 mandates with no submission in 3 weeks', meta: 'Consultant time spent, nothing shipped', active: true },
-        { name: '3 placements inside guarantee showing risk signals', meta: 'Refund exposure ₹6.8 L', active: true },
-        { name: 'Client owes on two placements past terms', meta: '₹9.4 L · 62 days', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own desk in this shape.',
-    },
+      'A recruitment agency earns its fee on one day, the day a candidate joins, and loses it on many days before that: a requisition nobody understood, a candidate sent to the wrong client, an offer that was never followed up. Verity keeps every requisition, candidate and fee on one record so the pipeline is visible from first call to the last day of the guarantee.',
+    oneLine:
+      'One system that shows each client’s open roles, each candidate’s stage, each offer’s risk and each fee owed.',
+    note: 'Recruiters keep using the job boards and phones they use today. Verity records what happened and shows what is stuck.',
+    screen: 'desk',
+    screenNote: 'requisitions, candidates, offers and fees',
   },
 
-  overview: {
-    heading: 'Recruitment is a business where most of the work produces nothing, deliberately.',
+  today: {
+    heading: 'Every recruiter has a system. The agency has five.',
     paragraphs: [
-      'An agency works many mandates and gets paid on a few. That is not inefficiency — it is the model. What makes an agency profitable is not working harder but working the right mandates, and identifying which ones those are early enough to redirect effort.',
-      'Most agencies cannot do that, because the pipeline is held per consultant rather than per mandate and stage. A consultant knows their own roles and candidates. The agency knows the placements. Nobody can see that fourteen mandates have absorbed three weeks of consultant time without a single submission, which is the clearest possible signal that those roles were never fillable at that price.',
-      'The second characteristic loss is client silence. A submission sitting ten days without feedback is a candidate going cold, and candidates who go cold take the agency’s only real asset with them. Chasing feedback is nobody’s scheduled task, so it happens when a consultant remembers.',
-      'The third is the guarantee period. A placement that falls within its guarantee is a refund, and the early signals — a candidate who did not start, a client who has gone quiet, a first month that went badly — exist and are not tracked. Refund exposure is usually discovered when the client asks for the money back.',
-      'Verity holds the mandate, the candidates against it, the submission and interview stages, the placement and its guarantee as one chain of records with owners and ages.',
+      'A good recruiter carries a deep, personal database: who is open to a move, who just got promoted, who declined last time and why. It lives in a personal spreadsheet, a phone, a job-board login and an email folder. When the recruiter is on leave, resigns or simply forgets, the memory goes with them.',
+      'The agency owner sees open roles in a shared sheet, but the real status of each role sits with whoever is working it. Which candidates were sent, which interviews are scheduled, which offers are out, which of them have a notice period that ends next month. Clients ask for updates by phone, and the answers come from memory.',
+      'The money follows the same pattern. A fee is earned when someone joins, and billed when someone remembers. Replacement guarantees run for weeks, and an early exit is learned of when the client complains.',
     ],
+    stack: ['Job boards and portals', 'Recruiters’ personal sheets', 'Email folders per client', 'WhatsApp with candidates', 'A shared requisition sheet', 'Recruiters’ memory'],
+    stackNote: 'Each is useful for one recruiter. Nothing tells the agency which candidate belongs to whom or which fee is waiting to be billed.',
   },
 
-  terminology: [
-    ['Mandates, roles, requisitions', 'Work'],
-    ['Candidates, applicants, placements', 'Relationships'],
-    ['Submissions, interviews, offers', 'Workflows'],
-    ['CVs, notes, contracts', 'Records'],
-    ['Consultants, researchers, account managers', 'People'],
-    ['Clients, hiring managers, panels', 'Relationships'],
-    ['Desks, teams, offices', 'Locations'],
-  ],
-
-  challengesHeading: 'Effort goes where it is comfortable, not where it converts.',
-  challengesLede:
-    'Recruitment problems come from a pipeline held personally and from silence nobody chases.',
-  challenges: [
+  painsHeading: 'Where a recruitment agency loses placements and fees.',
+  painsLede:
+    'These are the situations agency owners and team leads describe. For each one: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Unfillable mandates absorb the desk',
-      detail:
-        'A role that will never close at that salary keeps consuming consultant hours because nobody measures effort against submissions per mandate.',
-      outcome:
-        'Mandates carry their age, effort and stage progress, so roles producing nothing surface as a list rather than as a vague sense.',
+      area: 'Requisitions',
+      title: 'A role is taken without being understood',
+      scene:
+        'The client says "we need a finance manager, around 15 years". Three recruiters begin searching. A week later the client says it should be someone with SAP experience and a CA qualification, and the budget is lower than the recruiters assumed.',
+      cost:
+        'A week of three recruiters’ time spent on the wrong profile, and a client who thinks the agency does not listen.',
+      fix:
+        'Each requisition is a record with the role, must-have and good-to-have skills, budget range, location, notice period tolerance, fee terms and the person at the client who decides. Changes to the brief are logged with the date, so everyone works from the current version.',
+      screen: 'requisitions',
     },
     {
-      problem: 'Submissions go silent and candidates go cold',
-      detail:
-        'A CV sits with a client for ten days. The candidate accepts something else. The agency finds out when it calls to arrange the interview.',
-      outcome:
-        'Submissions are workflow steps with an age, so silence is chased on a schedule rather than when someone remembers.',
+      area: 'Requisitions',
+      title: 'Too many open roles, and no sense of which can close',
+      scene:
+        'The agency has 60 open requisitions. Fifteen have candidates in interview. Twenty have had nothing for a month. The team spends equal energy on both.',
+      cost:
+        'Recruiter time drains into roles that will not fill while closable roles slow down. The fee for a closable role is delayed.',
+      fix:
+        'Requisitions are ranked by stage and age. A role with no submission in 14 days, or a client who has not given feedback in 10, appears on a list with a decision to keep, pause or return the role.',
+      screen: 'requisitions',
     },
     {
-      problem: 'The pipeline leaves with the consultant',
-      detail:
-        'Candidates, relationships and mandate context are held personally, so a departure removes a working desk.',
-      outcome:
-        'Candidates, mandates and history are agency records assigned to a consultant, so a departure is a reassignment.',
+      area: 'Candidates',
+      title: 'The same candidate is submitted by two recruiters',
+      scene:
+        'A recruiter sends a profile to the client. The next day another recruiter in the same agency sends the same person for a different role. The client sees the duplicate and the candidate is confused about who represents them.',
+      cost:
+        'An embarrassing call to the client, a candidate who dislikes being chased twice, and a dispute in the team about who gets the credit.',
+      fix:
+        'Candidates are one record across the agency. Before a submission, Verity shows whether the person has been submitted to that client in the last period and by whom. Credit rules sit on the record.',
+      screen: 'candidate',
     },
     {
-      problem: 'Guarantee exposure is unmanaged',
-      detail:
-        'Placements inside their guarantee period are a refund liability, and the early warning signs are noticed by the consultant and recorded nowhere.',
-      outcome:
-        'Placements carry their guarantee end date and check-in schedule, so risk is visible while it can still be addressed.',
+      area: 'Candidates',
+      title: 'The candidate database is full of stale, unconsented data',
+      scene:
+        'There are 40,000 profiles collected over eight years. Half the phone numbers are wrong. Nobody remembers whether the candidates agreed to be contacted or shared. Some are in the sheet because a recruiter copied them from a job board.',
+      cost:
+        'Time wasted on dead profiles, candidates annoyed by calls they did not expect, and growing exposure under India’s data protection rules, whose main duties start from 13 May 2027.',
+      fix:
+        'Each candidate record carries its source, consent note, last contact date and status. Profiles not contacted for a set period are flagged for review, and someone can be marked do not contact.',
+      screen: 'candidate',
+      source: {
+        name: 'AZB & Partners, on the DPDP Rules, 2025',
+        url: 'https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/',
+      },
     },
-    {
-      problem: 'Consultant performance is judged on placements alone',
-      detail:
-        'The only visible number is fees billed, which says nothing about whether a consultant is working a thin desk well or a rich one badly.',
-      outcome:
-        'Submissions per mandate, interview conversion and time-to-submit are recorded, so performance is readable at the stage where it differs.',
-    },
-    {
-      problem: 'Client quality is never assessed',
-      detail:
-        'Some clients interview slowly, brief badly and rarely hire, and the agency keeps working their roles because the relationship is old.',
-      outcome:
-        'Feedback times, interview-to-offer rates and fill rates are recorded per client, so mandate acceptance becomes a decision.',
-    },
-  ],
-
-  modulesLede:
-    'One system across mandates, candidates, stages and placements.',
-  modules: [
-    {
-      id: 'work',
-      title: 'Mandates and the work against them',
-      line:
-        'Each mandate is work with a client, a specification, a fee basis, an owner, a stage, an age and the effort recorded against it.',
-      why:
-        'The mandate is the unit that either converts or does not, and effort against it is the only way to tell which is which.',
-      example:
-        'Fourteen mandates with no submission in three weeks, ranked by the consultant hours they have consumed.',
-    },
-    {
-      id: 'relationships',
-      title: 'Candidates, clients and hiring managers',
-      line:
-        'Candidates and clients are records with their history, submissions, interviews, feedback, placements and preferences.',
-      why:
-        'The candidate database is the agency’s asset, and it is worthless if it is personal to a consultant.',
-      example:
-        'A candidate submitted for three roles across two years, with every piece of feedback on their record.',
-    },
-    {
-      id: 'workflows',
-      title: 'Submissions, interviews and offers',
-      line:
-        'Each stage is a defined step with an owner, a date and an age, from submission through interview rounds to offer and acceptance.',
-      why:
-        'Recruitment is a stage business, and every loss happens at a specific stage that can be measured.',
-      example:
-        'Thirty-one submissions with no client feedback in ten days, chased on a schedule.',
-    },
-    {
-      id: 'people',
-      title: 'Consultants, researchers and account managers',
-      line:
-        'The team is modelled once, and every mandate, submission and placement shows who owns it.',
-      why:
-        'A desk is a person, and the agency needs to see what each desk is carrying and converting.',
-      example:
-        'Submissions per mandate and interview-to-offer conversion by consultant.',
-    },
-    {
-      id: 'records',
-      title: 'CVs, notes, contracts and terms',
-      line:
-        'Documents and interview notes attach to the candidate, mandate or placement they belong to.',
-      why:
-        'Terms of business and fee agreements decide what is billable, and they surface in disputes months later.',
-      example:
-        'The signed terms and the agreed fee percentage on the client record, referenced at invoicing.',
-    },
-    {
-      id: 'communication',
-      title: 'Feedback and candidate contact',
-      line:
-        'Notes, reminders and activity attach to the candidate, mandate or submission they concern.',
-      why:
-        'A candidate’s reason for declining is the most useful information the agency will get that week, and it usually stays in a phone.',
-      example:
-        'A candidate’s salary expectation recorded on their record, visible for the next relevant role.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Pipeline and conversion reporting',
-      line:
-        'Mandate conversion, time-to-submit, submission-to-interview and interview-to-offer rates, client feedback speed, guarantee exposure and consultant performance come from the operational records.',
-      why:
-        'Agencies measure placements and almost nothing else, which means they cannot tell a bad month from a bad mandate mix.',
-      example:
-        'Fill rate by client, which frequently changes which mandates the agency should accept.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the desk a question',
-      line:
-        'Verity AI answers from your own mandate, candidate, submission and placement records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The valuable questions are about silence and about effort with nothing to show for it.',
-      example:
-        '"Which submissions have had no feedback in ten days?" returns thirty-one, with chases assigned by client.',
-    },
-    {
-      id: 'control',
-      title: 'Who can see which candidates',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Candidate data is personal information and consultants compete internally, so access needs to be deliberate.',
-      example:
-        'Consultants see their own desks and the shared candidate pool; every access is on the trail.',
-    },
-    {
-      id: 'locations',
-      title: 'Desks, teams and offices',
-      line:
-        'Organisational units roll into the agency, with permissions and reporting following the same structure.',
-      why:
-        'Multi-desk agencies only learn from comparison if every desk records the same stages.',
-      example:
-        'Conversion by stage across desks and offices.',
-    },
-  ],
-
-  workflowsHeading: 'Stage by stage, with an age on every one.',
-  workflowsLede:
-    'These already run. As records with ages, the silences become visible.',
-  workflows: [
-    {
-      name: 'Mandate intake and qualification',
-      steps: [
-        'Requirement recorded against the client with specification and fee basis',
-        'Terms of business confirmed and attached',
-        'Fillability assessed against comparable past mandates',
-        'Owner assigned and target submission date set',
-        'Mandate accepted or declined with the reason recorded',
-      ],
-      note:
-        'Declining a mandate with a recorded reason is how an agency learns which clients and roles are worth working.',
-    },
-    {
-      name: 'Sourcing to submission',
-      steps: [
-        'Candidates identified and matched against the specification',
-        'Screening completed and notes recorded',
-        'Candidate consent and availability confirmed',
-        'Submission made and the stage opened with a date',
-        'Time from mandate to first submission recorded',
-      ],
-      note:
-        'Time-to-first-submission is the earliest reliable predictor of whether a mandate will close.',
-    },
-    {
-      name: 'Client feedback chase',
-      steps: [
-        'Submission age tracked from the date sent',
-        'Reminder issued to the hiring manager at the threshold',
-        'Escalated to the account owner if silence continues',
-        'Candidate kept warm with a recorded contact',
-        'Feedback recorded against candidate and mandate',
-      ],
-      note:
-        'This is the cheapest thing an agency can fix and the one most often left to memory.',
-    },
-    {
-      name: 'Interview to offer',
-      steps: [
-        'Interview scheduled and confirmed with both sides',
-        'Outcome and feedback recorded after each round',
-        'Offer prepared with the agreed fee basis',
-        'Acceptance or decline recorded with the reason',
-        'Start date confirmed and the placement created',
-      ],
-      note:
-        'Recording decline reasons is what turns a lost placement into a usable signal.',
-    },
-    {
-      name: 'Placement and guarantee',
-      steps: [
-        'Placement recorded with fee, start date and guarantee period',
-        'Invoice raised against the agreed terms',
-        'Check-ins scheduled through the guarantee period',
-        'Risk signals recorded from candidate or client contact',
-        'Guarantee end recorded and exposure released',
-      ],
-      note:
-        'Refund exposure is manageable only if the guarantee period is a tracked window rather than a date in a contract.',
-    },
-    {
-      name: 'Desk review',
-      steps: [
-        'Mandates by age and effort pulled per consultant',
-        'Conversion by stage compared across the desk',
-        'Mandates producing nothing identified for release',
-        'Client fill rates and feedback speed reviewed',
-        'Effort redirected with decisions recorded',
-      ],
-      note:
-        'Redirecting effort is the entire management job in recruitment, and it needs stage data to do at all.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask where the effort is going.',
-    lede:
-      'Verity AI reads the same mandate, candidate, submission and placement records the agency runs on. It answers from your own desks, respects permissions, and can turn an answer into chases and reassignments.',
-    panelMeta: 'Grounded in your pipeline records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which submissions have had no client feedback in ten days?',
-      'Which mandates have consumed effort without producing a submission?',
-      'Which placements inside guarantee are showing risk signals?',
-      'What is interview-to-offer conversion by consultant?',
-      'Which clients give feedback slowest, and what are their fill rates?',
-      'Which candidates were declined for salary in the last quarter?',
-      'What is time-to-first-submission by mandate type?',
-      'Which placements are unbilled or outstanding past terms?',
-      'Summarise pipeline movement and guarantee exposure.',
-    ],
-  },
-
-  automationHeading: 'The silences that lose candidates.',
-  automationLede:
-    'Each runs from the pipeline records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'A submission passes its feedback threshold',
-      steps: [
-        'Submission flagged with its age and client',
-        'Chase assigned to the account owner',
-        'Candidate keep-warm contact task raised',
-      ],
-    },
-    {
-      trigger: 'A mandate ages without a submission',
-      steps: [
-        'Mandate flagged with effort recorded against it',
-        'Review assigned to the desk manager',
-        'Release or reprioritisation recorded',
-      ],
-    },
-    {
-      trigger: 'A placement enters its guarantee period',
-      steps: [
-        'Check-in schedule created across the period',
-        'Risk signals recorded from each contact',
-        'Exposure reported until the guarantee ends',
-      ],
-    },
-    {
-      trigger: 'A candidate declines an offer',
-      steps: [
-        'Reason recorded against the candidate and mandate',
-        'Mandate returned to active sourcing',
-        'Pattern surfaced if the reason repeats for a client',
-      ],
-    },
-    {
-      trigger: 'A placement invoice passes its terms',
-      steps: [
-        'Balance aged on the client record',
-        'Collection follow-up assigned to the account owner',
-        'Escalated with the placement history attached',
-      ],
-    },
-    {
-      trigger: 'A consultant leaves or is reassigned',
-      steps: [
-        'Their mandates and candidates identified',
-        'Reassignment made with full history intact',
-        'Active submissions flagged for continuity',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the agency owner can actually see.',
-  intelligenceLede:
-    'Conversion at each stage, from the records consultants create as they work.',
-  intelligence: [
     {
       area: 'Pipeline',
-      points: [
-        'Open mandates by age, stage and consultant',
-        'Submissions awaiting feedback by age',
-        'Interviews and offers in progress',
-        'Weighted expected fees by stage',
-      ],
+      title: 'Pipeline stages are updated when someone remembers',
+      scene:
+        'The client says the candidate was rejected last week. The recruiter has him as "interview scheduled". The candidate calls the recruiter asking about the result.',
+      cost:
+        'Credibility with both sides, and no honest number for how many candidates are really in play.',
+      fix:
+        'Each candidate has one stage per requisition: sourced, screened, submitted, interviewing, offered, joined or dropped, each with a date and the reason for any drop. The pipeline view is the only place the team looks.',
+      screen: 'pipeline',
     },
     {
-      area: 'Conversion',
-      points: [
-        'Time from mandate to first submission',
-        'Submission-to-interview and interview-to-offer rates',
-        'Offer acceptance and decline reasons',
-        'Fill rate by mandate type',
-      ],
+      area: 'Pipeline',
+      title: 'Interviews are fixed over calls and clash or lapse',
+      scene:
+        'The client panel is available only on Thursday. Two candidates are told 3 pm. One has an exam, another is travelling. The interview is cancelled and the client’s interest cools.',
+      cost:
+        'A slow process loses good candidates, who accept other offers. Each slipped interview adds days to the placement.',
+      fix:
+        'Interviews are scheduled on both sides. The recruiter sees the candidate’s and the panel’s availability, and a reminder task goes out before the slot. Feedback from the client is due within an agreed number of days and chased if late.',
+      screen: 'pipeline',
+    },
+    {
+      area: 'Offers',
+      title: 'Candidates accept offers and then do not join',
+      scene:
+        'The candidate accepted an offer with a 60-day notice period. At day 40 the current employer matches the salary and he withdraws. The recruiter finds out when the joining date passes.',
+      cost:
+        'Weeks of work and a fee that goes to nothing, plus a client who asks why the agency does not manage this.',
+      fix:
+        'Each offer records the notice period end, joining date and the check-in tasks in between. Offers with no contact for a set number of days, or a competing offer mentioned, are flagged as at risk so the recruiter can act.',
+      screen: 'offers',
+    },
+    {
+      area: 'Fees',
+      title: 'A joining happens and the invoice goes out weeks later',
+      scene:
+        'A candidate joined on the 3rd. The recruiter tells accounts on the 22nd. The client’s payment cycle is 45 days from invoice, so the agency is paid in December for a September joining.',
+      cost:
+        'Cash arrives about two months later than it needed to. In a business with salaries to pay each month, that is real money.',
+      fix:
+        'The joining date is recorded on the offer. The same day, Verity creates an invoice task for accounts with the fee terms from the requisition, so the invoice goes out on time and the payment due date is known.',
+      screen: 'fees',
+    },
+    {
+      area: 'Fees',
+      title: 'Replacement guarantees are not tracked, so exits surprise you',
+      scene:
+        'The agency promised a free replacement if the hire leaves within 90 days. A candidate resigned on day 62. The client mentioned it only when the next invoice arrived.',
+      cost:
+        'A replacement search the agency did not plan for, or a credit note it could have avoided by acting sooner.',
+      fix:
+        'Each placement has its guarantee end date. Check-in tasks at 30, 60 and 80 days go to the recruiter. An exit is recorded with a reason and opens a replacement requisition with the same terms.',
+      screen: 'offers',
+    },
+    {
+      area: 'Money',
+      title: 'Large clients pay late, and you cannot afford to say so',
+      scene:
+        'A client owes ₹4.2 lakh in fees across three invoices, the oldest from 80 days ago. The client is also the biggest source of roles. The recruiter is reluctant to chase.',
+      cost:
+        'The agency funds a large client’s delays. A micro or small agency can expect payment within a written term of up to 45 days under the MSMED Act, but only if invoices and terms are in order.',
+      fix:
+        'Invoices carry the agreed terms. Overdue invoices list by client and age with a follow-up task for accounts, and each conversation and promise date is recorded. The owner sees which clients pay late before agreeing to more roles.',
+      screen: 'fees',
+      source: {
+        name: 'Taxmann, on MSMED Act section 15 and section 43B(h)',
+        url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/',
+      },
     },
     {
       area: 'Clients',
-      points: [
-        'Feedback speed by client and hiring manager',
-        'Fill rate and time to fill by client',
-        'Mandates accepted against mandates filled',
-        'Outstanding balances and ageing',
+      title: 'Fee terms differ by client and nobody remembers them',
+      scene:
+        'One client pays 8.33 percent of annual CTC, another 12 percent for senior roles and a flat ₹60,000 for juniors. One has a 60-day guarantee, another 90. Recruiters quote from memory.',
+      cost:
+        'An invoice with the wrong percentage, an argument with the client, and underbilled fees that nobody notices.',
+      fix:
+        'Each client holds its fee schedule, guarantee period, payment terms and exclusivity on the client record. A requisition inherits those terms, and the invoice is calculated from the offer’s final CTC.',
+      screen: 'fees',
+    },
+    {
+      area: 'People',
+      title: 'Recruiter productivity is invisible until someone resigns',
+      scene:
+        'Two recruiters each produced three placements in a quarter. One made 120 calls a day and the other made 40 quality submissions. The owner cannot tell which is the better recruiter, or who needs help.',
+      cost:
+        'The wrong people get incentives, and the right people are not coached. Attrition among recruiters is high, and each exit takes candidates and client relationships with them.',
+      fix:
+        'Submissions, interviews, offers, joinings and fees are credited to the recruiter on each record. A scorecard shows ratios at each stage, and candidates, clients and requisitions stay with the agency when a recruiter leaves.',
+      screen: 'desk',
+    },
+    {
+      area: 'Contract staffing',
+      title: 'Temporary and contract staff need attendance and payout records',
+      scene:
+        'The agency places 80 contract staff at three client sites. Attendance comes as a photo of a register. The client queries ten days, the agency cannot confirm them, and the invoice is held.',
+      cost:
+        'A held invoice delays the cash needed to pay the staff. A dispute with a client over attendance can end the contract.',
+      fix:
+        'Contract staff are recorded with their client, site, shift and attendance. The month’s attendance is compared with the client’s count before the invoice is raised, and differences are listed by person.',
+      screen: 'fees',
+    },
+    {
+      area: 'Owner',
+      title: 'The owner cannot forecast fees for next month',
+      scene:
+        'Salaries and rent are due on the 1st. The owner asks for a list of expected joinings and gets a mix of optimism and rumour.',
+      cost:
+        'Cash planning by guess, and no early warning that a quarter is going to be thin while there is time to push.',
+      fix:
+        'Offers in the pipeline carry their expected joining date, fee and a risk rating. The desk screen shows expected fees by month and how much sits in at-risk offers.',
+      screen: 'desk',
+    },
+  ],
+
+  factsHeading: 'The numbers behind these problems.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '13 May 2027',
+      text: 'is when the main duties of India’s Digital Personal Data Protection Rules, 2025 take effect, 18 months after they were notified on 13 November 2025. They cover notice and consent, and apply to anyone who holds candidate data.',
+      source: { name: 'AZB & Partners', year: '2025', url: 'https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/' },
+    },
+    {
+      figure: '2.6%',
+      text: 'was the rise in flexi staffing employment in the first quarter of FY27, with manufacturing leading hiring, according to a report item dated 8 October 2026 listed by the Indian Staffing Federation.',
+      source: { name: 'Indian Staffing Federation, listing a Business World item', year: '2026', url: 'https://www.indianstaffingfederation.org/' },
+    },
+    {
+      figure: '45 days',
+      text: 'is the longest written credit period a buyer can agree with a micro or small supplier under the MSMED Act, and 15 days applies if nothing is agreed in writing. A small agency billing a large client may qualify as a micro or small supplier.',
+      source: { name: 'Taxmann, on MSMED Act section 15', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+    },
+    {
+      figure: '21 Nov 2025',
+      text: 'is the date the Industrial Relations Code, 2020 was notified as in force, one of the new labour codes that affect fixed-term and contract staffing arrangements. The details of each code matter for staffing firms.',
+      source: { name: 'Wikipedia, Industrial Relations Code 2020', url: 'https://en.wikipedia.org/wiki/Industrial_Relations_Code,_2020' },
+    },
+  ],
+  factsNote:
+    'The staffing growth figure is one quarter reported by a trade body and is not a full-year industry total. The labour code date comes from a general reference page. Neither figure measures recruiter or offer drop rates, which differ by agency, so Verity measures yours.',
+
+  screensHeading: 'The screens an agency would use every day.',
+  screensLede: 'Six views, each built for one job. Stages, role types and fee terms use your agency’s own words.',
+  screens: [
+    {
+      id: 'desk',
+      title: 'Agency / Today',
+      meta: 'All recruiters',
+      heading: 'The owner’s view of roles, offers and fees',
+      caption:
+        'Open roles, interviews today, offers at risk, expected joinings and the fees they bring. It replaces the Monday status round with each team lead.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Open roles', value: '58', note: '14 ageing' },
+            { label: 'Interviews today', value: '11', note: '3 unconfirmed' },
+            { label: 'Offers at risk', value: '5', note: '₹6.8 L in fees' },
+            { label: 'Fees overdue', value: '₹9.4 L', note: '4 clients' },
+          ],
+        },
+        { type: 'title', text: 'Expected fees by joining month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'October', value: 80, display: '₹8.2 L' },
+            { label: 'November', value: 62, display: '₹6.4 L' },
+            { label: 'December', value: 35, display: '₹3.6 L', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'Neha Verma accepted the Brightline role but has not replied for 6 days. Joining planned 3 Nov.', action: 'Check in' },
       ],
     },
     {
-      area: 'Consultants',
-      points: [
-        'Mandates held and effort per mandate',
-        'Submissions per mandate',
-        'Conversion at each stage',
-        'Placements and fees by period',
+      id: 'requisitions',
+      title: 'Requisitions',
+      meta: 'By client',
+      heading: 'Every open role, how old it is, and whether it can close',
+      caption:
+        'Roles by client with the brief, budget, age and submissions so far. Roles that are not moving come up for a decision.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Role', 'Client', 'Budget', 'Age', 'Status'],
+          rows: [
+            ['Finance manager', 'Brightline Foods', '₹24 to 30 L', '12 days', ['2 submitted', 'info']],
+            ['Senior backend engineer', 'Quantix Software', '₹38 to 45 L', '34 days', ['No submissions', 'late', 'Brief clarified', 'ok']],
+            ['Plant manager', 'Orbit Auto', '₹18 to 22 L', '21 days', ['Client silent 9 days', 'flag']],
+            ['Sales lead, west', 'Nova Pharma', '₹20 to 26 L', '5 days', ['Sourcing', 'info']],
+          ],
+        },
+        { type: 'alert', text: '14 roles have had no submission in 14 days. Pause or return them to the client.', action: 'Review' },
       ],
     },
     {
-      area: 'Placements',
-      points: [
-        'Placements by period, client and consultant',
-        'Guarantee exposure and end dates',
-        'Falls within guarantee and their causes',
-        'Fees billed, collected and outstanding',
+      id: 'candidate',
+      title: 'Candidate',
+      meta: 'Record',
+      heading: 'One record for every candidate, shared across the agency',
+      caption:
+        'Profile, source, consent, every submission and every conversation. Before anyone sends a profile, they see where the person has already been sent.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Neha Verma',
+          sub: 'Finance manager, 14 years. Current: Hexa Retail. Notice: 60 days',
+          fields: [
+            ['Source', 'Referral from past placement'],
+            ['Consent', 'Agreed to sharing, 3 Sep 2026'],
+            ['Last contact', ['6 days ago', 'late', 'Today', 'ok']],
+            ['Submitted to', 'Brightline Foods (Sunita)'],
+            ['Expected CTC', '₹28 to 30 L'],
+            ['Stage', ['Offer accepted', 'info']],
+          ],
+          timeline: [
+            ['9 Oct', 'Offer accepted at ₹29.5 L. Notice ends 3 Nov.'],
+            ['2 Oct', 'Final interview with Brightline CFO, positive'],
+            ['24 Sep', 'Submitted to Brightline by Sunita'],
+            ['Note', 'Mentioned a counter-offer might come from her current firm.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'pipeline',
+      title: 'Pipeline',
+      meta: 'Candidates by stage',
+      heading: 'Where every candidate stands, in one view',
+      caption:
+        'Candidates moving through each stage for a requisition or for a recruiter, with interviews scheduled and client feedback owed.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Screened',
+              cards: [
+                { title: 'Arjun Das, backend engineer', meta: 'Quantix, 9 years', tag: ['Submit', 'flag', 'Submitted', 'ok'] },
+                { title: 'Meera Pillai, sales lead', meta: 'Nova Pharma, 10 years', tag: ['Screened', 'info'] },
+              ],
+            },
+            {
+              name: 'Interviewing',
+              cards: [
+                { title: 'Ravi Menon, plant manager', meta: 'Orbit Auto, round 2 on Thu', tag: ['Unconfirmed', 'flag', 'Confirmed', 'ok'] },
+                { title: 'Kiran Shah, finance manager', meta: 'Brightline, feedback pending 4 days', tag: ['Chase', 'late'] },
+              ],
+            },
+            {
+              name: 'Offered',
+              cards: [
+                { title: 'Neha Verma, finance manager', meta: 'Brightline, ₹29.5 L, joins 3 Nov', tag: ['At risk', 'late', 'Confirmed', 'ok'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'offers',
+      title: 'Offers and guarantees',
+      meta: 'Joining and replacement',
+      heading: 'From accepted offer to the last day of the guarantee',
+      caption:
+        'Each offer with the notice period, joining date and risk, and each placement with its replacement guarantee and check-in dates.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Candidate', 'Client', 'Joining', 'Risk', 'Next step'],
+          rows: [
+            ['Neha Verma', 'Brightline Foods', '3 Nov', ['Counter-offer', 'late'], 'Call today'],
+            ['Sandeep Joshi', 'Quantix Software', '20 Oct', ['Low', 'ok'], 'Welcome note'],
+            ['Pooja Nair', 'Orbit Auto', '28 Oct', ['No reply 5 days', 'flag', 'Confirmed', 'ok'], 'Call'],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Anil Rao, joined Quantix 12 Aug', meta: 'Guarantee ends 10 Nov. 60-day check-in due', tag: ['Check in', 'flag', 'Done', 'ok'] },
+            { name: 'Priya Iyer, joined Orbit 20 Jul', meta: 'Resigned day 62. Replacement requisition opened', tag: ['Replace', 'late'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'fees',
+      title: 'Fees and clients',
+      meta: 'Invoices and terms',
+      heading: 'Fees ready to bill, and money still to collect',
+      caption:
+        'Joinings not yet invoiced, invoices by age, each client’s fee terms, and attendance checks for contract staff before the monthly invoice.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Client', 'Item', 'Fee', 'Due', 'Status'],
+          rows: [
+            ['Quantix Software', 'Sandeep Joshi, joined 20 Oct', '₹3.2 L', 'Not invoiced', ['Invoice now', 'late', 'Invoiced', 'ok']],
+            ['Orbit Auto', 'Anil Rao, joined 12 Aug', '₹1.9 L', '40 days overdue', ['Chase', 'flag']],
+            ['Brightline Foods', 'Q3 contract staff, 62 people', '₹14.6 L', 'Attendance check', ['3 differences', 'flag', 'Resolved', 'ok']],
+            ['Nova Pharma', 'Priya Singh, joined 1 Sep', '₹2.1 L', 'Paid', ['Received', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Orbit Auto owes ₹4.2 lakh across three invoices, the oldest 80 days. Their fee terms are 45 days.', action: 'Open client' },
       ],
     },
   ],
-  intelligenceNote:
-    'All of this comes from recording the mandate, the submission and the stage outcome, which the desk already does informally.',
 
-  rolesHeading: 'One agency, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Wednesday in a recruitment agency, before and after.',
+  dayLede: 'The calls and interviews are the same. What changes is that each submission, offer and fee leaves a record, and the record tells the recruiter what to do next.',
+  day: [
+    {
+      time: 'Morning',
+      before: 'The team lead asks every recruiter for a status on their roles. Answers come as a long list of "in process".',
+      after: 'The requisition screen shows which roles have a stuck client, no submissions or interviews waiting. The huddle takes ten minutes.',
+    },
+    {
+      time: 'Late morning',
+      before: 'A recruiter sends a profile that another recruiter sent to the same client last month.',
+      after: 'Verity warns that the profile was submitted to this client last month, so the recruiter checks before sending.',
+    },
+    {
+      time: 'Midday',
+      before: 'A candidate with an accepted offer stops answering. The recruiter finds out on the joining date.',
+      after: 'The offer was flagged as at risk after four quiet days. A call that afternoon surfaces a counter-offer.',
+    },
+    {
+      time: 'Afternoon',
+      before: 'A client panel member cancels an interview over a message. The candidate finds out an hour before.',
+      after: 'The slot is recorded for both sides, and a new time is proposed to the candidate and client the same afternoon.',
+    },
+    {
+      time: 'Evening',
+      before: 'A candidate joined on the 3rd. Accounts hear about it on the 20th.',
+      after: 'The joining is recorded, and an invoice task with the client’s fee terms reaches accounts that day.',
+    },
+    {
+      time: 'Month end',
+      before: 'The owner asks for expected joinings and gets guesses.',
+      after: 'The desk screen shows expected fees by month, with the share sitting in at-risk offers.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how roles, candidates and fees move through your agency, then build Verity around it and stay on to make it work.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you and a team lead. Follow one requisition from the client call to the fee invoice, and see how candidates, submissions, offers and guarantees are tracked today.',
+        you: 'Two to three hours of your time and an hour from a senior recruiter. Access to your requisition sheet, candidate database export and a fee invoice or two.',
+        get: 'A written map of how the agency works: client types, fee terms, stages, credit rules and the five problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your clients and fee terms, requisition fields, candidate stages, duplicate check, offer risk flags, guarantee periods and recruiter scorecards, with screens in your own words.',
+        you: 'Check the stages, fee terms and credit rules with a team lead. Tell us where a rule is wrong.',
+        get: 'A working Verity with your clients, roles and rules, ready for your live pipeline.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your clients, open roles, candidate lists, offers and placements still under guarantee from your sheets and tools. Train recruiters in short sessions on their own roles.',
+        you: 'Your requisition and placement sheets and a candidate export. Thirty minutes with each recruiter.',
+        get: 'Every open role, live candidate and placement under guarantee inside Verity, and a team that has logged a real submission.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month with you, tune flags and fee rules, and handle changes as your client mix changes.',
+        you: 'A short monthly review of pipeline, offers and fees.',
+        get: 'A system that follows how the agency recruits and bills, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your open requisitions with client, role and budget',
+      'A candidate database export, even if it is messy',
+      'Your client agreements with fee terms and guarantee periods',
+      'A list of placements still within their guarantee period',
+      'Your recruiter incentive and credit rules',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Each recruiter needs about half an hour.',
+    after: 'Nobody is hired to run Verity. Submissions, offers and joinings are recorded as recruiters work, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask the agency a question and get an answer.',
+    lede:
+      'Verity AI reads your own requisition, candidate, offer and fee records. Ask in plain words, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which accepted offers are at risk of not joining?',
+        a: 'Five offers worth ₹6.8 lakh in fees. Neha Verma, joining Brightline on 3 November, mentioned a counter-offer and has not replied for six days.',
+        rows: [['Neha Verma', 'Brightline'], ['Pooja Nair', 'Orbit Auto'], ['Rohit Das', 'Nova Pharma'], ['Isha Kapoor', 'Quantix']],
+        action: 'Create check-in tasks for the recruiters',
+      },
+      {
+        q: 'Which clients pay slower than their agreed terms?',
+        a: 'Orbit Auto is 40 days past terms, Quantix 12 days and Nova Pharma on time. Orbit owes ₹4.2 lakh.',
+        rows: [['Orbit Auto', '40 days late'], ['Quantix Software', '12 days late'], ['Nova Pharma', 'On time']],
+        action: 'Create a follow-up task for accounts',
+      },
+      {
+        q: 'What is our submission-to-offer ratio by recruiter this quarter?',
+        a: 'Sunita converts 1 in 5 submissions to an offer, Rahul 1 in 9 and Imran 1 in 14. Imran submits the most profiles.',
+        rows: [['Sunita', '1 in 5'], ['Rahul', '1 in 9'], ['Imran', '1 in 14']],
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Recruiters still call and message; Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'A new requisition is created',
+      then: ['Client fee terms and guarantee attached', 'Assigned to a recruiter with a first-submission target', 'Added to the open roles list'],
+    },
+    {
+      when: 'A profile is about to be submitted',
+      then: ['Checked for earlier submissions to this client', 'Consent note confirmed', 'Submission recorded with the recruiter’s name'],
+    },
+    {
+      when: 'An offer is accepted',
+      then: ['Joining date and notice end recorded', 'Check-in tasks set through the notice period', 'Flag if there is no contact for several days'],
+    },
+    {
+      when: 'A candidate joins',
+      then: ['Invoice task to accounts with the fee terms', 'Guarantee end date set', 'Check-ins at 30, 60 and 80 days'],
+    },
+    {
+      when: 'A placement leaves within the guarantee',
+      then: ['Exit and reason recorded', 'Replacement requisition opened with same terms', 'Credit note decision requested from the owner'],
+    },
+    {
+      when: 'An invoice passes its due date',
+      then: ['Listed by client with age', 'Follow-up task to accounts', 'Promise date recorded after each call'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a recruitment agency has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you can show consent, terms and dates when asked.',
+    items: [
+      {
+        name: 'Candidate data under the DPDP Rules, 2025',
+        what: 'The Digital Personal Data Protection Rules were notified on 13 November 2025, with the main duties on notice and consent starting 18 months later, on 13 May 2027. A CV, a phone number and a salary history are personal data.',
+        how: 'Each candidate record carries its source, consent note and last contact, and who viewed or changed it. Do-not-contact status and review of old profiles are built in.',
+        source: { name: 'AZB & Partners', url: 'https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/' },
+      },
+      {
+        name: 'Labour codes for fixed-term and contract staff',
+        what: 'The Industrial Relations Code, 2020 is listed as in force from 21 November 2025, alongside other labour codes. Rules on contract and fixed-term staff, registration of contractors and benefits are changing, so staffing firms should check their position carefully.',
+        how: 'Contract staff are recorded with client, site, shift and attendance, so the records your adviser needs for contract labour are in one place.',
+        source: { name: 'Wikipedia, Industrial Relations Code 2020', url: 'https://en.wikipedia.org/wiki/Industrial_Relations_Code,_2020' },
+      },
+      {
+        name: 'Overseas recruitment',
+        what: 'Under the Emigration Act, 1983, a person could act as a recruiting agent for emigrants only if registered, and employers must hire through a registered agent or hold a recruitment permit. Agencies placing people abroad should check current rules on fees and registration.',
+        how: 'Overseas roles, candidates and documents are recorded as separate project types, with registration numbers and approvals stored on the client and requisition.',
+        source: { name: 'Wikipedia, Emigration Act 1983', url: 'https://en.wikipedia.org/wiki/Emigration_Act,_1983' },
+      },
+      {
+        name: 'Timely payment of micro and small suppliers',
+        what: 'The MSMED Act sets payment within the agreed written term, not more than 45 days, or 15 days with no written agreement, for micro and small suppliers. Whether an agency qualifies depends on its registration and size.',
+        how: 'Invoice dates, agreed terms and payment dates are recorded, so ageing and promised dates are visible by client.',
+        source: { name: 'Taxmann', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+      },
+    ],
+    note: 'Rules change and differ by state and case. Confirm current requirements with your lawyer or accountant. Verity does not file anything.',
+  },
+
+  rolesHeading: 'Everyone sees the same pipeline, through their own window.',
+  rolesLede: 'A recruiter does not need to see what the agency earns on other recruiters’ placements. Accounts do not need candidates’ details. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Agency owner',
-      question: 'Where is effort going and what is it converting?',
-      focus: 'Mandate conversion, effort per mandate, guarantee exposure, client fill rates, fees against pipeline.',
-    },
-    {
-      role: 'Desk manager',
-      question: 'What needs redirecting this week?',
-      focus: 'Mandates producing nothing, submissions awaiting feedback, stage conversion by consultant.',
-    },
-    {
-      role: 'Consultant',
-      question: 'Who do I need to move today?',
-      focus: 'Own mandates by stage, submissions to chase, interviews scheduled, candidates to keep warm.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is billed and what is at risk?',
-      focus: 'Placement invoices, balances ageing, guarantee exposure, refunds issued.',
-    },
+    { role: 'Owner', question: 'Which clients and roles earn, and what will we bill this month?', sees: 'Expected fees by month, offers at risk, client payment behaviour, recruiter ratios.' },
+    { role: 'Team lead', question: 'Which roles are stuck and who needs help?', sees: 'Requisitions by age, submissions without feedback, interviews today, recruiters’ pipelines.' },
+    { role: 'Recruiter', question: 'Who do I call now?', sees: 'Their roles, candidates and offers, check-in tasks, and their own scorecard and incentive.' },
+    { role: 'Account manager', question: 'What does my client need from us?', sees: 'The client’s open roles, status of each, fee terms, invoices and guarantees.' },
+    { role: 'Accounts', question: 'What can I invoice and what is late?', sees: 'Joinings awaiting invoice, ageing by client, contract staff attendance checks, credit notes.' },
   ],
 
-  useCasesHeading: 'What recruitment agencies use Verity for',
-  useCases: [
-    {
-      name: 'Mandate qualification',
-      body: 'Effort and stage progress recorded per mandate, so roles that were never fillable are identified before they absorb a month of desk time.',
-    },
-    {
-      name: 'Feedback chasing',
-      body: 'Submissions aged from the date sent, with chases scheduled rather than remembered, which is the cheapest loss an agency can fix.',
-    },
-    {
-      name: 'Pipeline continuity',
-      body: 'Candidates and mandates as agency records assigned to a consultant, so a departure is a reassignment rather than a lost desk.',
-    },
-    {
-      name: 'Guarantee exposure',
-      body: 'Placements carrying guarantee end dates and check-in schedules, so refund risk is visible while it can still be addressed.',
-    },
-    {
-      name: 'Stage conversion',
-      body: 'Submission-to-interview and interview-to-offer rates by consultant and client, so performance is readable where it actually differs.',
-    },
-    {
-      name: 'Client quality assessment',
-      body: 'Feedback speed, fill rate and time to fill per client, so accepting a mandate becomes a decision rather than a reflex.',
-    },
-    {
-      name: 'Decline reason capture',
-      body: 'Reasons recorded against candidate and mandate, turning a lost placement into a signal about salary, brief or process.',
-    },
-    {
-      name: 'Asking the desk questions',
-      body: 'Plain-language questions across mandates, submissions, stages and placements, with chases assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'The job boards and portals you source from. Recruiters keep their logins; Verity holds the record of what was found.',
+      'Email and WhatsApp for talking to candidates and clients. Recruiters log what was said on the record.',
+      'Your accounting software and your accountant, who still prepares returns.',
+      'Your client agreements and offer letter templates.',
+    ],
+    not: [
+      'Source candidates from job boards or post jobs for you.',
+      'Send messages to candidates or clients on its own.',
+      'File your GST returns or run payroll for your contract staff.',
+      'Give legal advice on contracts or labour law.',
+    ],
+    migration:
+      'We bring your clients, open roles, candidate lists and placements still under guarantee across from your sheets and tools in stages, so recruiters keep working while it happens.',
+  },
 
-  migration:
-    'Job boards, sourcing tools and your billing arrangement continue to run and are mapped during implementation. Clients, candidates, open mandates and active submissions are brought across, and Verity is introduced as the pipeline and operations layer.',
-
-  faqHeading: 'Questions agencies ask',
+  faqHeading: 'Questions agency owners ask.',
   faqs: [
     [
-      'What can AI software do for a recruitment agency?',
-      'Verity AI answers questions from your own mandate, candidate, submission and placement records: which submissions have had no client feedback in ten days, which mandates have consumed effort without producing a submission, which placements inside guarantee show risk signals, what interview-to-offer conversion looks like by consultant. Each answer can become a chase or a reassignment.',
+      'Will my recruiters actually use it?',
+      'Recruiters use what saves them effort: a duplicate check before submission, a list of whom to call, and their own scorecard. We keep logging to a few taps and train on their own roles. A recruiter who can show their numbers tends to like that.',
     ],
     [
-      'Is Verity an applicant tracking system?',
-      'It covers what an agency needs from one — candidates, mandates, submissions, interview stages, placements and their history — and holds the commercial side alongside it: effort per mandate, fee terms, guarantee exposure and collections. Job boards and sourcing tools continue to run and are mapped during implementation.',
+      'Can Verity pull candidates from Naukri or LinkedIn?',
+      'We agree during setup how profiles you export or collect reach Verity. We do not promise a direct link to any named job board in advance. Once a profile is in Verity, it is one record across the agency.',
     ],
     [
-      'What happens to a desk when a consultant leaves?',
-      'Candidates, mandates and their full history are agency records assigned to a consultant rather than personal contact lists, so a departure is a reassignment with continuity rather than the loss of a working desk.',
+      'Does it send emails or messages to candidates?',
+      'No. Verity tells the recruiter who to contact and when, and records what happened. The recruiter sends the message or makes the call.',
     ],
     [
-      'Can it help us decide which mandates to work?',
-      'Effort, age and stage progress are recorded per mandate, and fill rate, feedback speed and time to fill are recorded per client. Together those make mandate acceptance a decision based on evidence rather than on the age of the relationship.',
+      'We are a small team of six recruiters. Is this too much?',
+      'The leaks are the same at six recruiters: duplicate submissions, offers that drop and fees billed late. We set up only what you need, and the four weeks run the same way.',
     ],
     [
-      'Does it track guarantee periods?',
-      'A placement carries its guarantee end date with a check-in schedule across the period, and risk signals from candidate or client contact are recorded, so refund exposure is visible while something can still be done about it.',
+      'Can it handle both permanent hiring and contract staffing?',
+      'Yes. Permanent hiring runs through requisitions, candidates, offers and fees. Contract staffing adds client sites, shifts and attendance, with a check before each monthly invoice.',
     ],
     [
-      'Can we measure consultant performance fairly?',
-      'Submissions per mandate, time to first submission and conversion at each stage are all recorded, so a consultant working a thin desk well is distinguishable from one working a rich desk badly.',
+      'What happens to candidates and clients when a recruiter leaves?',
+      'They belong to the agency’s records. A leaver’s roles and candidates can be reassigned in one step, and their access ends on their last day.',
     ],
     [
-      'How is candidate data protected?',
-      'Verity has one permission model and one audit trail. Access to candidates and desks is set deliberately, and every access is recorded.',
+      'Who can see candidate data?',
+      'Only the people you allow. Access is set by role, so recruiters, account managers and accounts each see what they need, and every change is recorded with who made it and when. Candidates marked do not contact are hidden from search.',
     ],
     [
-      'Is it suitable for a small agency?',
-      'A four-consultant agency has the same silent losses — unfillable mandates, unchased submissions, unmanaged guarantees — with less capacity to notice them.',
+      'How long before I see something useful?',
+      'The stuck-role list, offers at risk and joinings to invoice need only your existing sheets, so they come first. Ratios by recruiter become reliable after a few weeks of recorded stages.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the desks work, configuration of stages and fee terms, migration of clients, candidates and open mandates, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of recruiters and what you want set up. Message us and we will give you a clear number after a short conversation about how your agency runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the submissions nobody has answered.',
-  ctaLede:
-    'Those are candidates going cold on roles you have already worked. Tell us how your pipeline is tracked today.',
+  related: ['hotels', 'consulting-firms', 'it-services-companies', 'real-estate-agencies', 'marketing-agencies', 'insurance-agencies'],
 
-  related: ['it-services-companies', 'consulting-firms', 'marketing-agencies', 'accounting-firms', 'law-firms', 'startups'],
+  ctaHeading: 'Start with the offers that might not join.',
+  ctaLede:
+    'Tell us how your agency runs and we will show you the stuck roles, the at-risk offers and the unbilled joinings it would find, using your own numbers.',
 };

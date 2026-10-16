@@ -1,565 +1,716 @@
 export default {
+  schema: 2,
   slug: 'bakeries',
   status: 'published',
   plural: 'bakeries',
   subject: 'bakery',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for bakeries | Verity',
+    title: 'Bakery management software for Indian bakeries | Verity',
     description:
-      'Verity connects overnight production planning, same-day shelf life, wholesale accounts, custom cake orders and ingredient costing into one system.',
+      'Fifteen ways a bakery loses money, from unsold bakes and lost cake orders to flour and butter price swings, and the Verity screens that fix each one.',
     keywords: [
-      'AI software for bakeries',
-      'bakery management software',
-      'bakery production planning software',
-      'wholesale bakery order and delivery tracking',
-      'custom cake order management',
+      'bakery management software India',
+      'bakery production planning and wastage',
+      'custom cake order tracking',
+      'bakery recipe costing and ingredient prices',
+      'multi-outlet bakery software',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'workforce', 'schedule', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for bakeries',
-    headline: 'You decide tonight what tomorrow will sell, and you find out at seven in the evening whether you were right.',
+    headline: 'You bake at night and count the loss in the morning. Verity helps you bake the right amount.',
     lede:
-      'A bakery commits its production before it has any demand signal, and everything unsold expires the same day. Verity turns that guess into a calculation from what the same day actually sold.',
-    note: 'Runs alongside your existing billing and accounting.',
-    panel: {
-      title: 'Production',
-      meta: 'Tomorrow’s plan · Tonight',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Planned units', value: '1,840', note: 'across 42 lines' },
-        { label: 'Wholesale committed', value: '1,120', note: '9 accounts' },
-        { label: 'Yesterday unsold', value: '11.4%', note: 'against 6% target' },
-        { label: 'Custom orders due', value: '14', note: '3 for tomorrow' },
-      ],
-      rows: [
-        { name: 'Three lines over-produced four days running', meta: 'Averaging 26% unsold', active: true },
-        { name: 'Wholesale account order not confirmed for tomorrow', meta: '340 units · usual cut-off passed', active: true },
-        { name: 'Custom cake for Saturday without design confirmed', meta: 'Advance taken 6 days ago', active: true },
-        { name: 'Butter cost up 14% since the last price review', meta: 'Affects most of the viennoiserie range', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own production in this shape.',
-    },
+      'A bakery works against the clock. Bread, cakes and pastries are made before anyone has bought them and lose their value within days. Custom orders arrive by phone and message, flour and butter prices move, and a festival week can double the load. Verity ties orders, bakes, ingredients and shelf life together so each night’s plan rests on what actually sold.',
+    oneLine:
+      'One system that knows every cake order, every tray baked and sold, every kilo of flour and every outlet, and flags what is about to expire or go wrong.',
+    note: 'Built for a bakery that starts before dawn. The records come from orders, bake sheets and deliveries, not from extra paperwork.',
+    screen: 'owner',
+    screenNote: 'orders, bakes, outlets and ingredients',
   },
 
-  overview: {
-    heading: 'A bakery is a manufacturer that has to guess demand before it makes anything.',
+  today: {
+    heading: 'Most bakeries are good at baking and guess at everything around it.',
     paragraphs: [
-      'Almost every food business buys stock and sells it. A bakery converts raw ingredients into finished goods overnight, on a production decision taken before there is any information about the day ahead, and everything unsold at close is a total loss rather than tomorrow’s stock. The production plan is the business.',
-      'That plan is usually made from habit and from the head baker’s sense of the season. It can be made from evidence instead — what this weekday sold across the last several weeks, what the weather did, what the wholesale accounts have committed to — but only if yesterday’s sales and yesterday’s unsold quantities were both recorded, and in most bakeries only the first is.',
-      'The second complication is that a bakery usually runs two businesses at once. The counter sells to walk-ins in unpredictable quantities. Wholesale accounts — cafés, hotels, offices, retailers — commit to standing orders with cut-off times, delivery windows and credit terms. Those two demand streams compete for the same oven capacity and the same overnight shift, and they are usually planned separately.',
-      'The third is custom orders. Cakes for occasions carry advances, designs, dates that cannot move, and a production requirement that has to fit around everything else. A design not confirmed in time is a problem that becomes visible on the morning it needed to be baked.',
-      'Verity holds the production plan, the sales history that should inform it, the wholesale commitments, the custom orders and the ingredient costs as one set of records.',
+      'The craft is visible: the smell at 6 am, the full display, a wedding cake delivered on time. What is not visible is the arithmetic behind it. How many tray bakes went unsold last Thursday. Whether the butter you used in September still costs what you priced it at. Which custom cake orders still owe a balance. Which bag of cream expires on Saturday.',
+      'That knowledge sits in separate places: an order diary or WhatsApp chat, a production sheet pinned in the kitchen, the billing machine at the counter, a stock register that is updated when someone has time, and the head baker’s memory. The owner is usually in the kitchen or at the counter, so the thing connecting these is you.',
+      'Bakery margins depend heavily on ingredient cost and on how much of what you make is sold at full price. A price rise in flour, fat or sugar, or a bad guess on Friday’s quantity, goes straight to profit, and it often shows only at month end.',
     ],
+    stack: ['Order diary or WhatsApp chats', 'Bake sheet on the kitchen wall', 'Billing machine at the counter', 'Stock register or Excel', 'Head baker’s memory'],
+    stackNote: 'Each one works for its own job. Nothing joins an order to a bake to an ingredient to a payment.',
   },
 
-  terminology: [
-    ['Ingredients, doughs, finished lines', 'Inventory'],
-    ['Production runs, batches, bakes', 'Work'],
-    ['Counter sales, wholesale orders, custom orders', 'Orders'],
-    ['Wholesale accounts, regulars, occasion customers', 'Relationships'],
-    ['Bakers, counter staff, delivery riders', 'People'],
-    ['Cut-offs, advances, approvals', 'Workflows'],
-    ['Bakery, counter, delivery routes', 'Locations'],
+  painsHeading: 'Where a bakery actually loses money.',
+  painsLede:
+    'These are the situations bakery owners and head bakers describe. For each one: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Orders',
+      title: 'Custom cake details live in a chat and a diary',
+      scene:
+        'A birthday cake for Saturday is booked on a call and noted as “chocolate, 1 kg, Aarav”. The customer thought eggless. The message on top, the pickup time and the allergy were in a WhatsApp voice note the decorator never heard.',
+      cost:
+        'Remade cakes, an angry parent on the day, and a refund. A custom cake can take hours of decorating, so a wrong one is hours lost as well as ingredients.',
+      fix:
+        'Each cake order is a record: flavour, weight, eggless or not, message, photo, allergy, pickup or delivery time and balance. The kitchen sees the same sheet the counter took, and a change after booking is tracked with who made it.',
+      screen: 'orders',
+    },
+    {
+      area: 'Orders',
+      title: 'Advances are taken, balances are chased, cancellations hurt',
+      scene:
+        'A ₹500 advance on a ₹3,200 cake. The customer cancels the night before, after the sponge is baked. Another collects the cake and promises to pay the balance tomorrow. Nobody writes it down.',
+      cost:
+        'Example arithmetic: ten unpaid balances of ₹1,500 a month is ₹15,000, and a few cancelled custom cakes each month are ingredient cost and time with no sale.',
+      fix:
+        'Advances, balances and cancellation terms are recorded on the order. Verity lists unpaid balances with the customer and the order, and shows cancellations late enough to waste a bake, so you can set advance rules from facts.',
+      screen: 'orders',
+    },
+    {
+      area: 'Orders',
+      title: 'Festival weeks overbook the oven and the vans',
+      scene:
+        'Christmas, Diwali, Valentine’s Day and Eid bring a rush of hampers, plum cakes and box orders. Orders are accepted until the phone stops ringing, and only on the 23rd does anyone notice there is no oven time for all of them.',
+      cost:
+        'Orders delivered late or turned away on your best days of the year, and overtime and mistakes when the kitchen is overloaded.',
+      fix:
+        'Each order carries a date, a bake time and a delivery slot. Verity totals the load by day against your oven and van capacity, flags the days that are full and shows what can still be accepted.',
+      screen: 'orders',
+    },
+    {
+      area: 'Bakes',
+      title: 'Trays baked at night, unsold by evening',
+      scene:
+        'The head baker bakes 120 buns because that is what Tuesday used to be. Today only 85 sold. The rest are marked down at 7 pm or end up with staff. On Friday the opposite happens and the shelf is empty by noon.',
+      cost:
+        'Example arithmetic: 30 unsold items a day at ₹18 ingredient and labour cost each is about ₹16,000 a month, plus the sales missed when you run out.',
+      fix:
+        'Every bake is recorded by item and time. Each day’s sales and leftovers are compared with the bake, and Verity shows sell-through by item, day and hour so tomorrow’s quantity follows the pattern. Bakers still decide; the sheet shows the evidence.',
+      screen: 'production',
+    },
+    {
+      area: 'Bakes',
+      title: 'Loose items are marked down with no record of by how much',
+      scene:
+        'At closing, pastries that did not sell are sold at half price, packed as “day-old” boxes or given away. The register shows the sale, but not what the item would have earned.',
+      cost:
+        'Markdowns turn a margin into a loss on one tray at a time, and without a record you cannot tell if a new item deserves its shelf space.',
+      fix:
+        'Markdowns and day-old sales are recorded as separate lines per item. Verity shows what share of each product was sold at full price, at a discount or not at all.',
+      screen: 'production',
+    },
+    {
+      area: 'Costing',
+      title: 'Butter, flour and cocoa prices move and the price list does not',
+      scene:
+        'The butter supplier raises the rate. Cream is dearer before festivals. Maida moves too. The price list was set two years ago, and the signature cake may now sell at a loss.',
+      cost:
+        'In 2020 the Trade Promotion Council of India said input costs for biscuit makers had risen 35 to 40 percent, which shows how fast wheat, fat and sugar can move together. A bakery that does not reprice absorbs it.',
+      fix:
+        'Each product has a recipe with ingredient quantities and a yield. Purchase rates feed in, so Verity shows each product’s current cost and margin and flags the ones that dropped below your target.',
+      screen: 'costing',
+      source: { name: 'The Morung Express (IANS), TPCI on biscuit input costs, 2020', url: 'https://morungexpress.com/higher-input-cost-bites-into-biscuits-manufactures-profits-tpci' },
+    },
+    {
+      area: 'Costing',
+      title: 'Batch yields drift and nobody weighs the dough',
+      scene:
+        'A 25 kg flour batch should give 180 loaves. This week it gave 168. A new baker scales differently, the proofing room is warmer, and the mixer was refilled by hand.',
+      cost:
+        'Twelve loaves a batch, every batch, is a sale lost before it reaches the counter. It is also invisible, because the flour that went in looks the same.',
+      fix:
+        'Each batch records ingredients in and units out. Verity compares the actual yield with the recipe’s, per baker and per product, so a drifting batch is spotted in days rather than months.',
+      screen: 'costing',
+    },
+    {
+      area: 'Stock',
+      title: 'Cream, eggs and fresh fillings expire in the fridge',
+      scene:
+        'Cream bought for a wedding order is left over. Paneer fillings, custard and fresh fruit have days, not weeks. Nobody checks dates until something smells wrong or a batch has to be thrown.',
+      cost:
+        'Perishable ingredients are bought, paid for and lost, and a bad batch of filling can mean a recall of a day’s cakes.',
+      fix:
+        'Received lots have a date. Verity lists what expires in the next few days, suggests using the oldest first and shows how much perishable stock is on hand against what the next days’ orders need.',
+      screen: 'stock',
+    },
+    {
+      area: 'Stock',
+      title: 'Running out of eggs or packaging in festival week',
+      scene:
+        'Cake boxes, cake boards, gift ribbons and egg trays are counted by looking. The box supplier needs two days. You run out on the 24th of December.',
+      cost:
+        'Orders delayed or packed badly, and rush purchases at higher prices from a nearby shop.',
+      fix:
+        'Every ingredient and pack item has a reorder point. Verity totals what confirmed orders and the usual walk-in sales need for the coming days and drafts the purchase with lead time in mind.',
+      screen: 'stock',
+    },
+    {
+      area: 'Accounts',
+      title: 'Hotel, café and shop accounts run on credit and memory',
+      scene:
+        'You supply buns to three cafés and a hotel on credit, delivered each morning. Who has paid what, which delivery was short and what is overdue is in a notebook the delivery boy updates.',
+      cost:
+        'Bulk accounts are the steadiest income a bakery has, and also the place where money gets stuck for months with no one chasing it politely.',
+      fix:
+        'Each account has standing orders, delivery records and a running balance. Verity lists overdue balances with the customer and last payment, and assigns the follow-up to the person who knows the account.',
+      screen: 'accounts',
+    },
+    {
+      area: 'Outlets',
+      title: 'A central kitchen sends goods to outlets and no one reconciles',
+      scene:
+        'The kitchen dispatches 400 items to three outlets. Outlet A says it received 380. Outlet C ran out by noon and nobody told the kitchen. Returns are collected, but not counted.',
+      cost:
+        'Items lost between the oven and the shelf, and the wrong quantities baked for the wrong outlet the next day.',
+      fix:
+        'Each dispatch is a transfer with items and counts, received and signed at the outlet. Verity shows sent, received, sold and returned per outlet, and the gap on each.',
+      screen: 'accounts',
+    },
+    {
+      area: 'People',
+      title: 'Skills sit in two or three people’s hands',
+      scene:
+        'One decorator does all fondant cakes. One baker knows the sourdough. When either is on leave or resigns, an entire line of products stops, and the replacement learns from scratch on the busiest week.',
+      cost:
+        'A single resignation can take away the product that earns the most, and covering a night shift at short notice costs overtime.',
+      fix:
+        'Recipes and procedures are kept as records, and each person’s skills and sign-offs are recorded. Verity shows who can cover which product, and a shift swap is visible before it is needed.',
+      screen: 'upkeep',
+    },
+    {
+      area: 'Equipment',
+      title: 'Oven, mixer or chiller failure at 3 am',
+      scene:
+        'The deck oven runs uneven on one side for weeks. The walk-in chiller’s door seal is torn. The planetary mixer stops at the start of a batch.',
+      cost:
+        'A night’s production lost, orders late, and an emergency service call at a premium. A chiller failure can also spoil a week of cream and butter.',
+      fix:
+        'Ovens, mixers, proofers and chillers are asset records with service dates and the vendor’s details. Verity raises a task before each service falls due and keeps the history of repairs per machine.',
+      screen: 'upkeep',
+    },
+    {
+      area: 'Compliance',
+      title: 'Labels, licence details and tax rates differ by product',
+      scene:
+        'Packed cakes need dates and ingredient lists on the label. A box of mixed items has bread, cake and cookies, and these have not always been taxed the same way. The FSSAI certificate is on the wall; the details are in a drawer.',
+      cost:
+        'A notice from an inspector, wrong tax on a bill your accountant must later correct, and customers with allergies who are not told what is in the cake.',
+      fix:
+        'Each product record holds its label details, allergens and tax category, and each licence is a record with its dates. The accountant gets a clean split by category, and the labels come from the same record.',
+      screen: 'upkeep',
+    },
+    {
+      area: 'Money',
+      title: 'Counter takings, discounts and the day’s bakes never tie',
+      scene:
+        'At closing, the counter has sold 340 items, the kitchen made 380, 25 were marked down and 10 were given to staff. The cash is short by ₹300 and the explanation is “the rush”.',
+      cost:
+        'Small unexplained gaps every day, and an owner who cannot tell stock loss from a billing error.',
+      fix:
+        'Bakes, sales, markdowns, staff items and waste are reconciled by item at day end. A shortfall in cash or count is flagged with the shift, and the closer records the reason.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'You are the planner, the buyer and the closer',
+      scene:
+        'You decide the next day’s bake, check the order diary, approve discounts, place purchases and count the till. When you are ill or travelling, quality and numbers both slip.',
+      cost:
+        'The bakery cannot grow past what one person can carry, and a second outlet multiplies the load.',
+      fix:
+        'Each morning Verity shows a short list of what needs a decision: the bake plan, low stock, orders needing action and unpaid balances, each with an owner, so a manager can run it on days you are away.',
+      screen: 'owner',
+    },
   ],
 
-  challengesHeading: 'Everything is decided before the day begins.',
-  challengesLede:
-    'A bakery’s problems all come from committing production ahead of demand, with no record of how the last commitment went.',
-  challenges: [
+  factsHeading: 'The figures behind the problem.',
+  factsLede: 'From published sources, with the source named under each. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
     {
-      problem: 'The production plan is habit, not history',
-      detail:
-        'The same quantities are made each weekday regardless of what the equivalent day actually sold, and the difference is thrown away every evening.',
-      outcome:
-        'Sales and unsold quantities are both recorded by line and day, so tomorrow’s plan is calculated from the last several equivalent days.',
+      figure: 'USD 15.06 billion',
+      text: 'was the estimated size of India’s bakery market in 2025, with bread the largest product type at 36% of it.',
+      source: { name: 'IMARC Group, Indian Bakery Market', year: '2025', url: 'https://www.imarcgroup.com/indian-bakery-market' },
     },
     {
-      problem: 'Unsold stock is not measured by line',
-      detail:
-        'The bakery knows roughly how much went in the bin. It does not know that three specific lines account for most of it, four days running.',
-      outcome:
-        'Unsold quantity is recorded per line at close, so persistent over-production is visible as a specific list.',
+      figure: '18% to 5%',
+      text: 'is the GST change for pastries, cakes and biscuits from 22 September 2025, after the 56th GST Council meeting. Many Indian breads moved to nil.',
+      source: { name: 'ClearTax, GST on cakes and pastries', year: '2025', url: 'https://cleartax.in/s/gst-on-cakes-pastries' },
     },
     {
-      problem: 'Wholesale and counter demand are planned separately',
-      detail:
-        'Standing orders and walk-in demand compete for the same oven time and the same shift, and are usually reconciled in the baker’s head at midnight.',
-      outcome:
-        'Wholesale commitments and forecast counter demand feed one production plan against capacity.',
+      figure: '35 to 40%',
+      text: 'rise in input costs for Indian biscuit makers, said the Trade Promotion Council of India in 2020, as wheat, refined palm oil and sugar prices rose together.',
+      source: { name: 'The Morung Express (IANS)', year: '2020', url: 'https://morungexpress.com/higher-input-cost-bites-into-biscuits-manufactures-profits-tpci' },
     },
     {
-      problem: 'Wholesale cut-offs are missed',
-      detail:
-        'An account has not confirmed its order and the cut-off has passed, which is discovered when the delivery is short or the production was wasted.',
-      outcome:
-        'Cut-offs are dates on the account, so an unconfirmed order surfaces before the plan is committed.',
-    },
-    {
-      problem: 'Custom orders stall on unconfirmed details',
-      detail:
-        'An advance is taken for an occasion cake and the design, flavour or inscription is never confirmed, which becomes urgent on the morning of the bake.',
-      outcome:
-        'A custom order carries its advance, specification, required date and state, so an unconfirmed detail ages visibly.',
-    },
-    {
-      problem: 'Ingredient costs move faster than prices',
-      detail:
-        'Butter, flour and cream move several times a year against a price list that changes annually, on a margin that cannot absorb it.',
-      outcome:
-        'Cost sits on the ingredient and lines carry their components, so a rise is mapped to the products it affects.',
+      figure: '₹1.5 crore',
+      text: 'is the annual turnover up to which a food business generally needs only basic FSSAI registration, from 1 April 2026. Hygiene and display duties are unchanged.',
+      source: { name: 'SetIndiaBiz summary of FSSAI 2026 changes', year: '2026', url: 'https://www.setindiabiz.com/blog/fssai-2026-reforms' },
     },
   ],
+  factsNote:
+    'The market size is from a research vendor and other firms give different figures. The input cost figure is for biscuit manufacturers in 2020, not neighbourhood bakeries today. The tax and licence figures come from advisory summaries, so confirm them with your accountant or the authority.',
 
-  modulesLede:
-    'One system across production, sales, wholesale and custom orders.',
-  modules: [
+  screensHeading: 'The screens a bakery would use every day.',
+  screensLede: 'Seven views, each built for one job, set up in your own product names and units.',
+  screens: [
     {
-      id: 'work',
-      title: 'Production runs and batches',
-      line:
-        'Production is work with a planned quantity per line, an owner, a shift, the ingredients it consumes and the finished goods it produces.',
-      why:
-        'The production plan is the bakery’s central decision, and it is currently made without a record of how the last one performed.',
-      example:
-        'Tomorrow’s eighteen hundred and forty units across forty-two lines, planned against what the last four equivalent weekdays sold.',
-    },
-    {
-      id: 'inventory',
-      title: 'Ingredients, doughs and finished lines',
-      line:
-        'Stock is held with supplier, cost, batch and shelf life, consumed by production runs and depleted by sales or written off at close.',
-      why:
-        'A bakery holds two very different stocks — ingredients that keep and finished goods that do not — and conflating them hides where the loss is.',
-      example:
-        'Eleven point four percent of finished production unsold, by line, alongside the ingredient cost it consumed.',
+      id: 'owner',
+      title: 'Bakery / Today',
+      meta: 'Group: 3 outlets and central kitchen',
+      heading: 'The owner’s morning view',
+      caption:
+        'Yesterday’s sales, leftovers, orders due, unpaid balances and anything that does not tie, with the decisions listed below. It replaces the morning round of calls to each outlet.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹1,12,400', note: 'all outlets' },
+            { label: 'Unsold at close', value: '8.4%', note: 'of items baked' },
+            { label: 'Cake orders today', value: '26', note: '4 not yet decorated' },
+            { label: 'Balances unpaid', value: '₹38,500', note: '17 orders' },
+          ],
+        },
+        { type: 'title', text: 'Unsold share by outlet, yesterday' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Koramangala', value: 6, display: '6%' },
+            { label: 'Indiranagar', value: 9, display: '9%' },
+            { label: 'Whitefield', value: 17, display: '17%', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'Whitefield cash is ₹420 short against items sold. Counts and markdowns do not tie.', action: 'Review' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Plum cake butter running low', meta: 'Needs 62 kg for Christmas orders, 28 kg on hand', tag: ['Order', 'flag', 'Ordered', 'ok'] },
+            { name: 'Whitefield bake plan for Friday', meta: 'Cut croissants by 20 and puffs by 15', tag: ['Review', 'flag', 'Set', 'ok'] },
+          ],
+        },
+      ],
     },
     {
       id: 'orders',
-      title: 'Counter, wholesale and custom orders',
-      line:
-        'Counter transactions, standing wholesale orders and one-off custom orders are all records with quantities, dates and states.',
-      why:
-        'These three demand streams compete for the same capacity and are usually tracked in three different places.',
-      example:
-        'Eleven hundred and twenty units committed to wholesale before a single counter sale is forecast.',
+      title: 'Cake and bulk orders',
+      meta: 'Next 7 days',
+      heading: 'Every custom order, from booking to pickup',
+      caption:
+        'Orders by day and stage: booked, in the kitchen, decorated, ready, collected. Each card holds the details the decorator needs and the balance the counter must collect.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Booked',
+              cards: [
+                { title: '1 kg chocolate, eggless', meta: 'Aarav, Sat 6 pm, ₹800 advance', tag: ['Check message', 'flag', 'Confirmed', 'ok'] },
+                { title: '3 kg anniversary, fondant', meta: 'Mrs Iyer, Sun noon, ₹1,500 advance', tag: ['Allergy: nuts', 'late'] },
+              ],
+            },
+            {
+              name: 'In the kitchen',
+              cards: [
+                { title: '2 kg red velvet', meta: 'Neha, Fri 5 pm, decorator Imran', tag: ['Baked', 'info', 'Decorated', 'ok'] },
+                { title: '60 cupcakes, corporate', meta: 'Rao & Co, Fri 9 am', tag: ['Late start', 'late', 'On time', 'ok'] },
+              ],
+            },
+            {
+              name: 'Ready',
+              cards: [
+                { title: '1 kg pineapple', meta: 'Mr Gupta, ₹1,100 balance due', tag: ['Collect balance', 'flag', 'Paid', 'ok'] },
+              ],
+            },
+          ],
+        },
+        { type: 'alert', text: 'Saturday is at 92% of oven capacity with 6 orders unconfirmed. Hold new bookings at 6 pm.', action: 'See load' },
+      ],
     },
     {
-      id: 'relationships',
-      title: 'Wholesale accounts and occasion customers',
-      line:
-        'Accounts are records with their standing orders, cut-offs, delivery windows, credit terms, order history and balances.',
-      why:
-        'Wholesale revenue is predictable and contractual, which makes it the most plannable part of a bakery and the most damaging to under-serve.',
-      example:
-        'An account whose order has not been confirmed past its cut-off, surfaced before the plan is committed.',
+      id: 'production',
+      title: 'Bakes and sell-through',
+      meta: 'Last 14 days, by item',
+      heading: 'What was baked, what sold, what was left',
+      caption:
+        'The night’s bake sheet set against the day’s sales and the leftovers, by item. The head baker sees the pattern behind each product before writing tomorrow’s plan.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'Avg baked', 'Avg sold', 'Left over', 'Advice'],
+          rows: [
+            ['Butter croissant', '60', '47', '22%', ['Bake 50', 'flag', 'Set', 'ok']],
+            ['Whole wheat bread', '40', '39', '3%', ['Hold', 'ok']],
+            ['Veg puff', '90', '66', '27%', ['Bake 70', 'late', 'Set', 'ok']],
+            ['Chocolate truffle slice', '35', '33', '6%', ['Hold', 'ok']],
+            ['Plain pav (pack of 6)', '80', '79', '1%', ['Add 5', 'info']],
+          ],
+        },
+        { type: 'title', text: 'How leftovers were sold, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Full price', value: 91, display: '91%' },
+            { label: 'Marked down', value: 6, display: '6%', tone: 'muted' },
+            { label: 'Staff or given', value: 2, display: '2%', tone: 'muted' },
+            { label: 'Thrown away', value: 1, display: '1%', tone: 'muted' },
+          ],
+        },
+      ],
     },
     {
-      id: 'suppliers',
-      title: 'Ingredient suppliers',
-      line:
-        'Suppliers are relationships with their orders, delivery days, price movement, reliability and balances.',
-      why:
-        'Bakery margins are decided by a small number of ingredients whose prices move frequently.',
-      example:
-        'Butter up fourteen percent since the last price review, mapped to the range it affects.',
+      id: 'costing',
+      title: 'Recipes and cost',
+      meta: 'Cost at latest purchase rates',
+      heading: 'What each product costs to make, today',
+      caption:
+        'Each product shows its ingredient cost at the latest purchase rate, its price and its margin. A rise in butter or flour shows up as a changed margin the same week.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Product', 'Cost', 'Price', 'Margin', 'Change'],
+          rows: [
+            ['Plum cake 500 g', '₹168', '₹320', '47%', ['Butter +8%', 'late']],
+            ['Chocolate truffle 1 kg', '₹512', '₹950', '46%', ['Cocoa +5%', 'flag']],
+            ['Multigrain loaf', '₹29', '₹70', '59%', ['Flat', 'ok']],
+            ['Butter croissant', '₹14', '₹55', '75%', ['Butter +8%', 'flag']],
+          ],
+        },
+        {
+          type: 'record',
+          title: 'Batch yield: whole wheat bread',
+          sub: 'Recipe: 25 kg flour makes 180 loaves',
+          fields: [
+            ['This week, average', '168 loaves'],
+            ['Last month', '178 loaves'],
+            ['Lowest yield', ['162, night shift Tue', 'late']],
+            ['Check', ['Scaling and proof time', 'flag', 'Reviewed', 'ok']],
+          ],
+          timeline: [
+            ['Tue', '162 loaves, new baker on scaling'],
+            ['Wed', '171 loaves after retraining'],
+            ['Thu', '176 loaves'],
+          ],
+        },
+      ],
     },
     {
-      id: 'people',
-      title: 'Bakers, counter staff and riders',
-      line:
-        'Staff are modelled once, and every production run, delivery, sale and wastage record carries who handled it.',
-      why:
-        'A bakery runs an overnight shift and a day shift that rarely overlap, which makes recorded handover essential rather than optional.',
-      example:
-        'Production completed against plan by shift, visible to the counter staff who open.',
+      id: 'stock',
+      title: 'Ingredients and dates',
+      meta: 'Central kitchen store and cold room',
+      heading: 'Stock against confirmed orders and shelf life',
+      caption:
+        'What is in the store and the cold room, what expires soon and what the coming orders will need. Perishables show their dates first.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'On hand', 'Needed 7 days', 'Expiry', 'Status'],
+          rows: [
+            ['Fresh cream (L)', '14', '22', '19 Oct', ['Short', 'late', 'Ordered', 'ok']],
+            ['Butter (kg)', '28', '62', 'Dec', ['Short', 'flag', 'Ordered', 'ok']],
+            ['Eggs (trays)', '30', '26', '24 Oct', ['OK', 'ok']],
+            ['Cake boxes 1 kg', '120', '260', '-', ['Reorder', 'flag']],
+            ['Custard filling (kg)', '9', '6', '17 Oct', ['Use first', 'late', 'Used', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Fresh cream arrives 19 October and Saturday needs 22 litres. Order by Thursday noon.', action: 'Raise order' },
+      ],
     },
     {
-      id: 'records',
-      title: 'Recipes, specifications and designs',
-      line:
-        'Recipes with their components, custom order specifications and design references attach to the line or order they belong to.',
-      why:
-        'Costing and custom fulfilment both depend on specifications that are usually held informally by whoever has been there longest.',
-      example:
-        'A repeat custom order made against the specification used the last time rather than re-discussed.',
+      id: 'accounts',
+      title: 'Bulk accounts and outlets',
+      meta: 'Credit and transfers',
+      heading: 'Hotel and café accounts, and what each outlet received',
+      caption:
+        'Standing orders, deliveries and balances for each bulk customer, and for each outlet what was sent, received and sold. Gaps get an owner.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Account', 'Standing order', 'Delivered', 'Balance', 'Status'],
+          rows: [
+            ['Café Bloom', '80 buns daily', 'Today 7:10', '₹14,200', ['Overdue 21 d', 'late', 'Promised Fri', 'info']],
+            ['Hotel Sapphire', '200 rolls daily', 'Today 6:40', '₹32,600', ['Due 5 Nov', 'ok']],
+            ['Chai Point, Koramangala', '60 puffs daily', 'Today 8:00', '₹6,900', ['Overdue 9 d', 'flag', 'Paid', 'ok']],
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Outlet', 'Sent', 'Received', 'Sold', 'Returned'],
+          rows: [
+            ['Koramangala', '420', '420', '395', '25'],
+            ['Indiranagar', '380', '372', '341', '31'],
+            ['Whitefield', '300', '300', '248', '52'],
+          ],
+        },
+      ],
     },
     {
-      id: 'workflows',
-      title: 'Cut-offs, advances and approvals',
-      line:
-        'Wholesale cut-offs, custom order advances, price changes and write-offs move through defined steps with recorded decisions.',
-      why:
-        'The commitments in a bakery are time-bound, and a missed cut-off wastes either production or a customer.',
-      example:
-        'An advance taken with no design confirmed ages as an exception rather than surfacing on the day of the bake.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reporting from production and sales',
-      line:
-        'Sell-through by line and day, unsold percentage, wholesale performance, custom order throughput and ingredient cost movement come from the records.',
-      why:
-        'The single number a bakery most needs — unsold by line against what was made — does not exist unless both sides are recorded.',
-      example:
-        'Three lines averaging twenty-six percent unsold over four days, which no daily takings figure would show.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the bakery a question',
-      line:
-        'Verity AI answers from your own production, sales, account and supplier records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The plan is set late at night by someone tired, and the questions that improve it need answering then.',
-      example:
-        '"Which lines have been over-produced this week?" returns three, with the plan adjustment task raised.',
-    },
-    {
-      id: 'locations',
-      title: 'Bakery, counter and delivery routes',
-      line:
-        'Locations roll into the business, with stock, production and reporting following the same structure.',
-      why:
-        'A bakery supplying its own outlets and wholesale accounts is running a small distribution operation.',
-      example:
-        'Production allocated between counter and delivery routes, with each reconciled separately.',
-    },
-    {
-      id: 'communication',
-      title: 'Handover between shifts',
-      line:
-        'Notes, notifications and activity attach to the production run, order or account they concern.',
-      why:
-        'The overnight shift and the counter staff barely meet, so anything not on a record does not transfer.',
-      example:
-        'A note that a batch underproved sits on the run, visible to whoever sells it.',
-    },
-    {
-      id: 'control',
-      title: 'Who can change prices and write off',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Write-offs are daily and large in a bakery, which makes attribution and thresholds worth having.',
-      example:
-        'Every write-off carries the line, the quantity, the reason and the person.',
+      id: 'upkeep',
+      title: 'Team, machines and paperwork',
+      meta: 'Next 30 days',
+      heading: 'Who can bake what, which machine is due, which licence expires',
+      caption:
+        'Skills by person, service dates by machine, and licences with their dates. A leave, a breakdown or a renewal is a visible task, not a surprise.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Person', 'Role', 'Sourdough', 'Fondant', 'Cover'],
+          rows: [
+            ['Rahim', 'Head baker', ['Cleared', 'ok'], ['Trained', 'info'], 'Mon to Sat'],
+            ['Imran', 'Decorator', ['No', 'muted'], ['Cleared', 'ok'], ['Single point', 'late', 'Backup training', 'info']],
+            ['Sunita', 'Baker', ['In training', 'info'], ['No', 'muted'], 'Nights'],
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Item', 'Last done', 'Due', 'Owner', 'Status'],
+          rows: [
+            ['Deck oven 2 service', '2 Apr', '2 Oct', 'Rahim', ['Overdue', 'late', 'Booked 18 Oct', 'ok']],
+            ['Walk-in chiller seal', 'Torn', 'Now', 'Manager', ['Replace', 'flag', 'Replaced', 'ok']],
+            ['FSSAI details and display', 'On file', 'Check', 'Owner', ['Review', 'flag', 'Checked', 'ok']],
+          ],
+        },
+      ],
     },
   ],
 
-  workflowsHeading: 'The night decides the day.',
-  workflowsLede:
-    'These already happen. Recorded, the plan stops being a guess repeated.',
-  workflows: [
+  dayHeading: 'The same Thursday, before and after.',
+  dayLede: 'The work is the same. The difference is that each step leaves a record, and the next step can read it.',
+  day: [
     {
-      name: 'Production planning',
-      steps: [
-        'Sales for the same weekday pulled across recent weeks',
-        'Unsold quantities for those days pulled by line',
-        'Wholesale commitments confirmed against cut-offs',
-        'Custom orders for the date added to the requirement',
-        'Plan set per line against oven and shift capacity',
-        'Plan issued to the overnight shift as work',
-      ],
-      note:
-        'The plan is the bakery’s main decision, and this is the loop that makes it improve rather than repeat.',
+      time: '4:30 am',
+      before: 'The head baker starts from last week’s sheet and guesses the bake. Nobody has checked the cream.',
+      after: 'The bake plan is already on his screen with yesterday’s leftovers by item, and the cream shortfall has been ordered.',
     },
     {
-      name: 'Overnight production',
-      steps: [
-        'Production run started against the plan',
-        'Ingredients consumed and recorded against the run',
-        'Quantities produced recorded per line',
-        'Shortfalls or overruns against plan noted with reasons',
-        'Finished goods allocated to counter, wholesale and custom',
-      ],
-      note:
-        'Recording produced against planned is what makes tomorrow’s plan trustworthy.',
+      time: '8:00',
+      before: 'A cake enquiry arrives by voice note while the counter is busy. Details are scribbled on a slip.',
+      after: 'The counter enters it as an order with flavour, message and balance. The decorator sees it on her screen.',
     },
     {
-      name: 'Wholesale order and delivery',
-      steps: [
-        'Standing order confirmed against the account’s cut-off',
-        'Requirement added to the production plan',
-        'Goods allocated and dispatched on the delivery route',
-        'Delivery confirmed and any shortfall recorded',
-        'Invoice raised and the account balance updated',
-      ],
-      note:
-        'A cut-off that passes unconfirmed is either wasted production or a short delivery, and both are avoidable.',
+      time: '11:00',
+      before: 'A hotel says the morning rolls were short. The delivery boy cannot recall the count.',
+      after: 'The delivery record shows the count signed at the hotel. The dispute is settled in a minute.',
     },
     {
-      name: 'Custom order',
-      steps: [
-        'Order taken with advance, date and specification',
-        'Design and flavour confirmation tracked as a stage',
-        'Requirement scheduled into the production plan for the date',
-        'Production completed and quality checked',
-        'Collection or delivery completed and balance collected',
-      ],
-      note:
-        'The date cannot move, so an unconfirmed detail has to surface days ahead rather than on the morning.',
+      time: '3:00',
+      before: 'You find out the butter price rose only when you see the invoice weeks later.',
+      after: 'The latest purchase flagged the rise. The croissant margin dropped, and you decide to hold or reprice.',
     },
     {
-      name: 'Close of day',
-      steps: [
-        'Counter sales recorded by line',
-        'Unsold quantity recorded per line',
-        'Write-off or discount decision applied and recorded',
-        'Sell-through calculated against production',
-        'Result added to the history informing the next plan',
-      ],
-      note:
-        'Unsold by line is the number the whole business turns on, and it exists only if someone records it.',
+      time: '8:30 pm',
+      before: 'You count the cash and try to reconcile it with what is left on the display.',
+      after: 'Sales, markdowns and leftovers are reconciled by item. Two items are off and the closer notes why.',
     },
     {
-      name: 'Ingredient cost review',
-      steps: [
-        'Delivery received with cost recorded against the ingredient',
-        'Movement compared against previous purchases',
-        'Affected lines identified from their recipes',
-        'Margin recalculated per line',
-        'Price review raised where margin falls below threshold',
-      ],
-      note:
-        'A butter increase affects most of the range at once, which is why it deserves a specific trigger.',
+      time: 'Month end',
+      before: 'The accountant asks for sales by tax category and credit account balances. You spend a day on it.',
+      after: 'Sales by category and balances by account are ready, because every line was recorded when it happened.',
     },
   ],
+
+  approach: {
+    heading: 'Four weeks from your first call to a working bakery system.',
+    lede:
+      'You do not receive a login and a manual. We spend a night shift and a counter day with you, build Verity around your products and orders, bring your data in, and stay to keep it working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Join a night bake and a counter morning. Follow an order from booking to pickup, see how stock arrives and how the day is closed, and list the leaks that cost most.',
+        you: 'Two to three hours of yours and your head baker’s. A few weeks of bake sheets, your order diary and recent supplier bills.',
+        get: 'A written map of your bakery: products and recipes, the order flow, ingredient list, outlets and accounts, and the first problems we will close.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your products with recipes and yields, ingredient units, reorder points, order stages, advance and cancellation rules, outlets and bulk accounts, and build the seven screens in your own terms.',
+        you: 'Review recipes and yields with your head baker. Correct anything that does not match how you bake.',
+        get: 'A working Verity with your real products, outlets and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your customer and account lists, open orders, stock and recipes from diaries and sheets. Train the kitchen at its stations and the counter during a real shift.',
+        you: 'Your account balances, open orders and an opening stock count. One hour with each role.',
+        get: 'Your orders, accounts and ingredients inside Verity, and a team that has run a day on it.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Remain involved after launch. Review the first bake plans and leftover numbers with you, adjust the rules, and add products, outlets or festival plans as they come.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps pace with your menu and calendar, with a named person responsible for it.',
+      },
+    ],
+    bring: [
+      'Your product list with prices and recipes, even rough ones',
+      'A few weeks of bake sheets and your order diary',
+      'Your ingredient and packaging list with supplier names and rates',
+      'Credit account balances for hotels, cafés and shops',
+      'Licence details and the service dates of ovens, mixers and chillers',
+    ],
+    time: 'About 8 to 12 hours of your own time across the four weeks, mostly in week 1. Your head baker and counter lead need a few more.',
+    after: 'Nobody is hired to run Verity. Bakes, orders and deliveries are recorded as part of the work, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask what to make tomorrow.',
+    heading: 'Ask your bakery a question and get an answer.',
     lede:
-      'Verity AI reads the same production, sales, account and supplier records the bakery creates as it works. It answers from your own bakery, only shows what the person asking can see, and can turn the answer into plan adjustments and follow-ups.',
-    panelMeta: 'Grounded in your production records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which lines have been over-produced this week, and by how much?',
-      'What did this weekday sell across the last four weeks, by line?',
-      'Which wholesale accounts have not confirmed against their cut-off?',
-      'Which custom orders for this week have unconfirmed specifications?',
-      'Which ingredient costs have moved since the last price review?',
-      'What is sell-through by line against what was produced?',
-      'Which wholesale accounts are outstanding beyond terms?',
-      'Which lines consistently sell out before midday?',
-      'Summarise unsold percentage and wholesale performance this week.',
+      'Verity AI reads your own orders, bakes, stock and account records. Ask in plain words, then turn the answer into a task for the right person.',
+    examples: [
+      {
+        q: 'Which items should we bake less of on Fridays?',
+        a: 'Veg puffs and butter croissants. Both left over 22 to 27 percent on the last four Fridays, while pav and whole wheat bread sold out.',
+        rows: [['Veg puff', '-20'], ['Butter croissant', '-10'], ['Plain pav', '+5'], ['Whole wheat', '+2']],
+        action: 'Update Friday’s bake plan',
+      },
+      {
+        q: 'Which bulk accounts are overdue by more than two weeks?',
+        a: 'Two accounts: Café Bloom at ₹14,200 for 21 days and Chai Point Koramangala at ₹6,900 for 9 days.',
+        rows: [['Café Bloom', '₹14,200'], ['Chai Point Koramangala', '₹6,900']],
+        action: 'Assign follow-up to the account owner',
+      },
+      {
+        q: 'Do we have enough butter and cream for the Christmas orders?',
+        a: 'Butter is short by 34 kg and cream by 8 litres against confirmed orders. Your butter supplier needs three days, so order by Friday.',
+        action: 'Raise both orders today',
+      },
     ],
   },
 
-  automationHeading: 'The commitments that have to be checked before the ovens start.',
-  automationLede:
-    'Each runs from the production and account records at the point the condition is met.',
+  automationHeading: 'The nudges that keep a bakery on time.',
+  automationLede: 'Set once, then they run from your records. Your team still talks to customers and suppliers; Verity makes sure the right person knows when.',
   automations: [
     {
-      trigger: 'A wholesale cut-off approaches without confirmation',
-      steps: [
-        'Account flagged with its usual order for reference',
-        'Confirmation task assigned before the plan is committed',
-        'Requirement added or removed from the plan accordingly',
-      ],
+      when: 'A custom cake order is confirmed',
+      then: ['Added to the day’s oven load', 'Sent to the decorator with details and photo', 'Balance due shown at pickup'],
     },
     {
-      trigger: 'A line exceeds its unsold tolerance',
-      steps: [
-        'Line flagged with produced against sold over recent days',
-        'Plan adjustment task assigned to the head baker',
-        'Adjusted quantity recorded for the next equivalent day',
-      ],
+      when: 'A bake day closes',
+      then: ['Leftovers compared with the bake', 'Sell-through updated by item', 'Next day’s suggested quantity refreshed'],
     },
     {
-      trigger: 'A custom order lacks a confirmed specification',
-      steps: [
-        'Order flagged with its date and advance',
-        'Follow-up assigned to whoever took it',
-        'Escalated as the required bake date approaches',
-      ],
+      when: 'An ingredient has under three days of shelf life',
+      then: ['Listed at the top of the store view', 'Use-first note to the baker', 'Waste logged if discarded'],
     },
     {
-      trigger: 'An ingredient cost rises',
-      steps: [
-        'Movement recorded against the ingredient',
-        'Affected lines identified from their recipes',
-        'Price review raised where margin falls below threshold',
-      ],
+      when: 'A purchase rate rises past your limit',
+      then: ['Products using it re-costed', 'Margin drop shown to the owner', 'Reprice or switch decision recorded'],
     },
     {
-      trigger: 'A line sells out before a defined time',
-      steps: [
-        'Stockout recorded with the hour',
-        'Plan increase considered for the next equivalent day',
-        'Pattern surfaced if it repeats',
-      ],
+      when: 'A bulk account passes its due date',
+      then: ['Flagged with delivery history', 'Task to the account’s owner', 'Promise date recorded'],
     },
     {
-      trigger: 'A wholesale balance passes its terms',
-      steps: [
-        'Balance aged on the account record',
-        'Collection follow-up assigned',
-        'Escalated with the delivery history attached',
-      ],
+      when: 'An oven or chiller reaches its service date',
+      then: ['Task to the person who owns it', 'Vendor and last visit shown', 'Next date set once done'],
     },
   ],
 
-  intelligenceHeading: 'What the head baker and the owner can see.',
-  intelligenceLede:
-    'Production against sales, which is the only comparison that matters here.',
-  intelligence: [
-    {
-      area: 'Production',
-      points: [
-        'Planned against produced by line and day',
-        'Unsold percentage by line',
-        'Lines selling out and at what time',
-        'Capacity used against available',
-      ],
-    },
-    {
-      area: 'Sales',
-      points: [
-        'Counter sales by line, day and hour',
-        'Comparison against the same weekday historically',
-        'Wholesale against counter revenue split',
-        'Custom order revenue by period',
-      ],
-    },
-    {
-      area: 'Wholesale',
-      points: [
-        'Order confirmation against cut-offs',
-        'Delivery completion and shortfalls',
-        'Revenue and volume by account',
-        'Outstanding balances with ageing',
-      ],
-    },
-    {
-      area: 'Custom orders',
-      points: [
-        'Orders by date and state',
-        'Specifications unconfirmed against required date',
-        'Advances held against undelivered orders',
-        'Throughput and on-time completion',
-      ],
-    },
-    {
-      area: 'Cost',
-      points: [
-        'Ingredient cost movement over time',
-        'Margin per line against current costs',
-        'Ingredient consumption against production',
-        'Write-off value by line and reason',
-      ],
-    },
-  ],
-  intelligenceNote:
-    'All of this comes from recording the plan, the production and the unsold quantity, which is one additional record at close.',
+  rules: {
+    heading: 'The rules a bakery has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules lean on in order, so your accountant is not rebuilding them from a diary.',
+    items: [
+      {
+        name: 'FSSAI registration or licence and hygiene',
+        what: 'A bakery needs FSSAI registration or a licence for its category. From 1 April 2026 basic registration generally applies up to ₹1.5 crore of turnover, and licences generally no longer need yearly renewal. Hygiene standards for bakeries continue to apply.',
+        how: 'The registration or licence is stored with its category and dates, and the daily hygiene checks are tasks signed off in the kitchen.',
+        source: { name: 'SetIndiaBiz summary of FSSAI 2026 changes', url: 'https://www.setindiabiz.com/blog/fssai-2026-reforms' },
+      },
+      {
+        name: 'GST by product category',
+        what: 'From 22 September 2025, pastries, cakes and biscuits generally moved from 18% to 5%, and many Indian breads to nil. Rates for items such as rusks and some packed goods can differ, so confirm each item with your accountant.',
+        how: 'Each product record carries its tax category, so the monthly split by rate is already in the sales data your accountant receives.',
+        source: { name: 'ClearTax, GST on cakes and pastries', url: 'https://cleartax.in/s/gst-on-cakes-pastries' },
+      },
+      {
+        name: 'Labels, dates and allergens on packed goods',
+        what: 'Packed food generally needs a date of manufacture or packing, a use-by or expiry date and an ingredient list, with allergens declared. FSSAI has also notified labelling amendments for 2026 and 2027, so check the current rule for your product.',
+        how: 'Label details and allergens are kept on the product record, and the shelf life drives the use-by date shown.',
+      },
+      {
+        name: 'Local trade and shop rules',
+        what: 'Municipal trade or health licences and Shops and Establishments registration generally apply and differ by city and state.',
+        how: 'Each is stored with a renewal date and an owner, and a renewal becomes a task in good time.',
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
 
-  rolesHeading: 'Two shifts, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each opens on what they need.',
+  rolesHeading: 'Everyone reads the same records, through their own window.',
+  rolesLede: 'A baker does not need to see supplier rates. The counter does not need to see margins. Each role opens on what it uses.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'Are we making the right quantities?',
-      focus: 'Unsold by line, sell-through, wholesale revenue, ingredient cost movement, margin per line.',
-    },
-    {
-      role: 'Head baker',
-      question: 'What am I making tonight?',
-      focus: 'Plan by line against history, wholesale commitments, custom orders due, capacity and shift.',
-    },
-    {
-      role: 'Counter staff',
-      question: 'What do we have and what is promised?',
-      focus: 'Finished goods available, custom orders for collection, lines sold out, unsold to record at close.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is owed by which account?',
-      focus: 'Wholesale balances and ageing, advances held, supplier payables, write-offs approved.',
-    },
+    { role: 'Owner', question: 'Is the bakery earning, and where is it leaking?', sees: 'Sales and margin by product and outlet, leftovers, unpaid balances, ingredient price changes and orders at risk.' },
+    { role: 'Head baker', question: 'What do I bake tomorrow, and do I have what I need?', sees: 'The bake plan with sell-through history, confirmed cake orders, batch yields and perishable stock.' },
+    { role: 'Decorator', question: 'Which orders are mine and what exactly is wanted?', sees: 'Orders by day with flavour, message, photo, allergy and pickup time.' },
+    { role: 'Counter and outlet staff', question: 'What is coming and what do I collect?', sees: 'Ready orders with balances, today’s transfer from the kitchen, markdown rules and day-end counts.' },
+    { role: 'Accountant', question: 'What was sold, bought and owed?', sees: 'Sales by tax category and payment mode, credit balances by account, and purchases matched to deliveries.' },
   ],
 
-  useCasesHeading: 'What bakeries use Verity for',
-  useCases: [
-    {
-      name: 'Production planning from history',
-      body: 'Sales and unsold quantities recorded by line and day, so tomorrow’s plan is calculated from the last several equivalent days rather than repeated from habit.',
-    },
-    {
-      name: 'Unsold measurement by line',
-      body: 'Wastage recorded per line at close, so persistent over-production shows as a specific list rather than a general sense that too much goes in the bin.',
-    },
-    {
-      name: 'Wholesale cut-off management',
-      body: 'Standing orders, cut-offs and delivery windows on the account, so unconfirmed orders surface before the plan is committed.',
-    },
-    {
-      name: 'Custom order tracking',
-      body: 'Advance, specification, required date and state on one record, so an unconfirmed design ages visibly instead of surfacing on the morning of the bake.',
-    },
-    {
-      name: 'Ingredient cost impact',
-      body: 'Recipes with components, so a butter or flour rise is mapped to every line it affects and margin is recalculated per line.',
-    },
-    {
-      name: 'Shift handover',
-      body: 'Production against plan and any issues recorded on the run, so the counter opens knowing what the overnight shift actually made.',
-    },
-    {
-      name: 'Capacity planning',
-      body: 'Wholesale commitments and forecast counter demand feeding one plan against oven and shift capacity.',
-    },
-    {
-      name: 'Asking the plan questions',
-      body: 'Plain-language questions across production, sales, accounts and costs, with plan adjustments raised in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing machine at the counter. We agree during setup how sales reach Verity.',
+      'Delivery apps and your phone for taking orders. Verity holds the order once it is taken.',
+      'WhatsApp for customers and suppliers. Staff reply; Verity tracks what is owed.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Run your billing counter or take orders from customers online.',
+      'Send messages to customers or suppliers on its own.',
+      'File your GST returns or run your payroll.',
+      'Decide how much to bake. It shows the evidence and the baker decides.',
+    ],
+    migration:
+      'We bring in your accounts, open orders, recipes and stock from the diaries, sheets and notebooks you use now, in stages, so ovens stay on while it happens.',
+  },
 
-  migration:
-    'Your billing setup, the wholesale order book and the recipe sheets are mapped during implementation. Accounts, recipes, suppliers and open custom orders are brought across, and Verity is configured around the production routine the bakery already runs.',
-
-  faqHeading: 'Questions bakers ask',
+  faqHeading: 'Questions bakery owners ask.',
   faqs: [
     [
-      'What can AI software do for a bakery?',
-      'Verity AI answers questions from your own production, sales, account and supplier records: which lines have been over-produced this week, what this weekday sold across the last four weeks by line, which wholesale accounts have not confirmed against their cut-off, which custom orders lack a confirmed specification. Each answer can become a plan adjustment or a follow-up.',
+      'My bakers start at 4 am. Will they really use a screen?',
+      'Only if it saves them effort. They see the bake plan and cake details on one screen, and recording a bake and leftovers takes a few taps. We train at their station, during a night shift.',
     ],
     [
-      'Can Verity help set the production plan?',
-      'Yes, and that is the main reason to use it here. Because sales and unsold quantities are both recorded by line and day, tomorrow’s plan can be calculated from what the last several equivalent weekdays actually sold rather than repeated from habit.',
+      'Does Verity take cake orders from customers online?',
+      'No. Customers keep ordering by call, message or your usual channel. Your counter enters the order, and from then on Verity tracks it through the kitchen to pickup and payment.',
     ],
     [
-      'Does it track what goes unsold?',
-      'Unsold quantity is recorded per line at close and compared against what was produced, so persistent over-production appears as a specific list of lines rather than a general figure.',
+      'Can it tell me how much to bake?',
+      'It shows how each item sold and was left over, by day and hour, and suggests a quantity. Your head baker decides, because they know about weather, holidays and local events that numbers miss.',
     ],
     [
-      'Can it handle wholesale accounts?',
-      'Wholesale accounts are records with standing orders, cut-off times, delivery windows, credit terms and balances, so an order not confirmed before its cut-off surfaces while the production plan can still change.',
+      'We make some things in-house and buy others. Can both be tracked?',
+      'Yes. Made items have recipes and ingredient use. Bought items are tracked as stock with a purchase rate. Both show margin and sell-through the same way.',
     ],
     [
-      'Does it manage custom cake orders?',
-      'A custom order carries its advance, specification, required date and state, and its requirement is scheduled into the production plan for that date. An unconfirmed design ages as an exception rather than becoming urgent on the morning of the bake.',
+      'I only have one shop with a small kitchen. Is this too big?',
+      'A single-shop bakery has the same leftovers and price swings. We set up only what you need, in the same four weeks, with fewer screens in daily use.',
     ],
     [
-      'Can it show the effect of ingredient price rises?',
-      'Lines are records with their recipe components, so a rise in butter or flour is mapped to every product that uses it and margin is recalculated per line rather than estimated across the range.',
+      'Can I see my outlets and central kitchen together?',
+      'Yes. Each outlet and the kitchen is a location. You see what was sent, received, sold and returned, and the gap, per outlet and per item.',
     ],
     [
-      'Does Verity replace our billing software?',
-      'No. Billing continues and is mapped during implementation. Verity holds production, stock, wholesale, custom orders, suppliers and the reporting across them.',
+      'Who can see my recipes and costs?',
+      'Only the people you allow. Recipes and costs can be limited to you and your head baker, and the counter sees only what it sells. Every change is recorded with who made it and when.',
     ],
     [
-      'Is it suitable for a bakery with one outlet?',
-      'Yes. The production plan, unsold measurement and ingredient costing are all single-site problems. Additional outlets and delivery routes use the same structure.',
+      'How soon will it be useful?',
+      'Order tracking, unpaid balances and expiry lists need only your existing orders and stock, so we aim to have them first. Bake advice becomes reliable after a few weeks of recorded sales and leftovers.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the bakery plans and produces, configuration, migration of recipes, accounts and suppliers, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of outlets, people and what you want set up. Message us and we will give you a clear number after a short conversation about how your bakery runs.',
     ],
   ],
 
-  ctaHeading: 'Start with what goes unsold.',
-  ctaLede:
-    'It is the number that decides a bakery’s year and the one almost no bakery records by line. Tell us how you plan production today.',
+  related: ['cafes', 'restaurants', 'catering-businesses', 'cloud-kitchens', 'fast-food-businesses', 'food-manufacturers'],
 
-  related: ['cafes', 'restaurants', 'cloud-kitchens', 'catering-businesses', 'food-manufacturers', 'grocery-stores'],
+  ctaHeading: 'Start with what was left on the shelf last night.',
+  ctaLede:
+    'Tell us how your bakery runs and we will show you the leftover pattern, the unpaid balances and the ingredients about to expire, using your own numbers.',
 };

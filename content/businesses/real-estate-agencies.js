@@ -1,573 +1,653 @@
 export default {
+  schema: 2,
   slug: 'real-estate-agencies',
   status: 'published',
   plural: 'real estate agencies',
   subject: 'real estate agency',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for real estate agencies | Verity',
+    title: 'Real estate agency software: leads, listings, commissions | Verity',
     description:
-      'Verity connects leads, property inventory, site visits, agent activity, deal stages and commissions into one operational system you can ask questions of.',
+      '14 problems that cost a brokerage deals: slow lead follow-up, stale listings, double-worked clients, late commissions and RERA gaps. What each costs and what fixes it.',
     keywords: [
-      'AI software for real estate agencies',
-      'CRM for real estate agencies',
-      'real estate lead management software',
-      'property management software for brokers',
-      'real estate agency management system',
+      'real estate agency software India',
+      'property broker lead follow-up tracking',
+      'real estate brokerage commission tracking',
+      'listing and buyer requirement matching',
+      'RERA agent compliance records',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'schedule', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for real estate agencies',
-    headline: 'Your pipeline is real. It is just distributed across six phones.',
+    headline: 'The buyer was ready. The lead was called three days late. Verity makes sure the right agent calls first.',
     lede:
-      'Enquiries, site visits, negotiations and follow-ups are recorded personally by whoever handled them, and they leave when that person does. Verity puts the leads, the properties, the agents and the deals on one record with one history.',
-    note: 'Nothing has to be replaced on day one. We map what you already run.',
-    panel: {
-      title: 'Pipeline',
-      meta: 'All agents · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active leads', value: '184', note: 'across 6 agents' },
-        { label: 'Site visits', value: '37', note: 'scheduled this week' },
-        { label: 'In negotiation', value: '11', note: '₹14.2 Cr combined' },
-        { label: 'No contact 14d', value: '46', note: 'leads gone quiet' },
-      ],
-      rows: [
-        { name: '46 leads with no contact in 14 days', meta: 'Oldest 38 days · 3 agents', active: true },
-        { name: 'Sector 62 unit shown 9 times, no offer', meta: 'Priced above comparable listings', active: true },
-        { name: 'Two site visits confirmed with no agent assigned', meta: 'Saturday · 11:00 and 15:30', active: true },
-        { name: 'Commission unreconciled on closed deal', meta: 'Closed 22 days ago', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own pipeline in this shape.',
-    },
+      'A brokerage earns from speed, memory and trust: calling a lead while it is warm, remembering which flat suits which buyer, and keeping owners and buyers on the same page until the deal registers. Most of that lives in agents’ phones. Verity moves it onto one record per client and per property.',
+    oneLine:
+      'One system that shows every lead, every listing, every site visit and every deal stage, and what each of them is worth to the agency.',
+    note: 'Your agents keep calling and meeting clients the way they do today. Verity records what happened and tells them who to call next.',
+    screen: 'desk',
+    screenNote: 'leads, listings, deals and commissions',
   },
 
-  overview: {
-    heading: 'An agency is a pipeline that nobody owns centrally.',
+  today: {
+    heading: 'The agency runs on phones. The business lives in none of them.',
     paragraphs: [
-      'A real estate agency has two inventories. One is properties: listings with owners, prices, availability, photographs and a history of who has seen them. The other is people: enquiries at every stage from a first phone call to a signed agreement. The business is the matching of the two, and the matching happens in the heads of individual agents.',
-      'That is the structural problem. An agent knows their leads, knows which property suits which buyer, knows who is close to deciding and who is stalling. None of it is in a system, so the agency principal cannot see the pipeline without asking six people, and when an agent leaves, their pipeline leaves with them.',
-      'The second problem is follow-up. Real estate deals are decided over weeks and months, and most are lost not to a competitor but to silence. A lead that goes fourteen days without contact is usually gone, and nobody notices because there is nothing counting the days.',
-      'Verity holds the lead, the property, the site visit, the agent and the deal stage as connected records with one permission model. The pipeline becomes something the agency owns rather than something six agents each hold a piece of, and the leads that have gone quiet become a list rather than an omission.',
+      'A good agent knows their buyers by name and their listings by floor. That knowledge sits in a personal phone, a WhatsApp group of owners, a notebook of requirements and a portal login. The agency owner sees the outcome at month end, and little of what led to it.',
+      'Leads arrive from portals, social media, hoardings, referrals and walk-ins. Some are called in minutes, some in days, some twice by two different agents. A buyer who wanted a 3 BHK under ₹1.5 crore in March is matched by memory, not by a record, to a flat that came on the market in September.',
+      'The deals that close hide the leaks: the leads that died quietly, the owners who listed with three brokers, the commission a developer owes for a booking from August, and the agent who left with fifteen hundred contacts.',
     ],
+    stack: ['Portal lead inboxes', 'WhatsApp groups with owners and buyers', 'Agents’ phone contacts', 'Excel listing and requirement sheets', 'Notebook of site visits', 'The owner’s memory'],
+    stackNote: 'Each is a fine tool for one agent. None of them tells the agency who owns a client, what has been shown, or what is owed.',
   },
 
-  terminology: [
-    ['Leads, enquiries, prospects', 'Relationships'],
-    ['Listings, units, projects', 'Records'],
-    ['Site visits, follow-ups, negotiations', 'Work'],
-    ['Agents, teams, channel partners', 'People'],
-    ['Builders, owners, developers', 'Suppliers'],
-    ['Stages, approvals, commissions', 'Workflows'],
-    ['Localities, projects, territories', 'Locations'],
-  ],
-
-  challengesHeading: 'The deals are lost quietly.',
-  challengesLede:
-    'Almost nothing goes wrong loudly in an agency. Leads go cold, listings go stale and pipelines go with departing agents, and none of it announces itself.',
-  challenges: [
+  painsHeading: 'Where a real estate agency loses deals and money.',
+  painsLede:
+    'These are the situations brokerage owners describe. For each one: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'The pipeline lives in agents’ phones',
-      detail:
-        'Enquiries, conversations and next steps are held personally. The principal’s view of the business is a weekly meeting where six people report what they remember.',
-      outcome:
-        'Leads are records owned by the agency and assigned to an agent, so the pipeline is visible without a meeting and survives a departure.',
-    },
-    {
-      problem: 'Follow-up depends on memory',
-      detail:
-        'A lead that needed a call on Thursday gets one the following Tuesday, if at all. The loss is invisible because nothing was tracking the gap.',
-      outcome:
-        'Days since last contact is a property of the lead record, so the leads going quiet surface before they are gone.',
-    },
-    {
-      problem: 'Nobody knows why a listing is not moving',
-      detail:
-        'A unit has been shown nine times without an offer. Whether that is price, condition or presentation is a matter of opinion because the viewings were never recorded against it.',
-      outcome:
-        'Site visits are recorded against both the lead and the property, so viewing volume without conversion becomes evidence rather than an impression.',
-    },
-    {
-      problem: 'Agent performance is judged on closings alone',
-      detail:
-        'The only visible number is deals closed, which says nothing about whether an agent is working a thin pipeline well or a rich one badly.',
-      outcome:
-        'Enquiries handled, visits conducted, conversion at each stage and response time are all recorded, so performance can be read at the stage where it actually differs.',
-    },
-    {
-      problem: 'Site visits are coordinated by phone',
-      detail:
-        'Confirmations, keys, owner permissions and agent availability are arranged in calls and messages, and a missed handover means a buyer standing outside a locked door.',
-      outcome:
-        'A visit is work with a date, an owner and a state, visible to everyone who needs to see it.',
-    },
-    {
-      problem: 'Commissions are reconciled late and argued about',
-      detail:
-        'Splits between agents, channel partners and the agency are agreed verbally and settled from memory weeks after closing.',
-      outcome:
-        'The deal record carries its stages, participants and agreed splits, so settlement follows the record rather than the recollection.',
-    },
-  ],
-
-  modulesLede:
-    'One system, described in the terms an agency already uses. Nothing here is a separate product to buy.',
-  modules: [
-    {
-      id: 'relationships',
-      title: 'Leads, buyers, sellers and owners',
-      line:
-        'Every enquiry is a record with its source, requirement, budget, stage, assigned agent and full interaction history.',
-      why:
-        'The lead is the agency’s asset. Held personally it is a liability; held as a record it is something the business can manage, measure and hand over.',
-      example:
-        'A buyer who enquired in March about a three-bedroom in one locality is still on record in September, with every call, visit and objection attached.',
-    },
-    {
-      id: 'records',
-      title: 'Property and project inventory',
-      line:
-        'Listings are records with their owner, configuration, price, availability, documents and the history of who has viewed them.',
-      why:
-        'A listing without a viewing history is just an advertisement. With one, it tells you whether the problem is demand or price.',
-      example:
-        'A unit shown nine times in six weeks with no offer, against a comparable one that sold after three viewings, is a pricing conversation with the owner.',
-    },
-    {
-      id: 'work',
-      title: 'Site visits, follow-ups and negotiations',
-      line:
-        'Each is work with an owner, a date and a state, connected to the lead and the property it concerns.',
-      why:
-        'The activity between enquiry and closing is where deals are won and where they quietly stop. Recording it is what makes the pipeline real.',
-      example:
-        'Saturday’s eleven o’clock viewing has an agent, a property, a buyer and a state, and shows as unassigned until someone owns it.',
-    },
-    {
-      id: 'workflows',
-      title: 'Deal stages and approvals',
-      line:
-        'Deals move through defined stages, and price reductions, exclusive agreements and commission splits pass through approval steps with a record.',
-      why:
-        'Stages are what turn a list of leads into a forecast. Approvals are what stop a discount being agreed on a phone call and disputed later.',
-      example:
-        'A price reduction below the owner’s floor becomes an approval with a requester and a reason rather than an agent’s judgement call.',
-    },
-    {
-      id: 'people',
-      title: 'Agents, teams and channel partners',
-      line:
-        'Agents and partners are modelled once, and every lead, visit and deal shows who owns it and who last acted on it.',
-      why:
-        'An agency is a distributed team whose work is invisible unless it is recorded. Ownership on every record is what makes accountability possible without supervision.',
-      example:
-        'Response time from enquiry to first contact, by agent, is a number rather than a complaint.',
-    },
-    {
-      id: 'communication',
-      title: 'The conversation stays with the lead',
-      line:
-        'Calls, notes, notifications and activity attach to the lead or property they concern.',
-      why:
-        'Most agency context lives in individual WhatsApp threads. When the agent is unavailable, so is the context.',
-      example:
-        'A buyer’s objection about the floor level is a note on their record, so any agent picking up the conversation knows it.',
-    },
-    {
-      id: 'locations',
-      title: 'Localities, projects and territories',
-      line:
-        'Properties and teams roll up by locality, project and region, with permissions and reporting following the same structure.',
-      why:
-        'Agencies think in areas. Demand, pricing and agent performance all vary by locality, and comparing them requires the structure to exist.',
-      example:
-        'Enquiry volume and conversion by locality shows where marketing spend is producing pipeline and where it is producing noise.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Builders, developers and property owners',
-      line:
-        'The supply side is a set of relationships with their inventory, agreements, commission terms and history.',
-      why:
-        'An agency’s inventory comes from someone. Which developer’s projects actually convert, and which owner is unrealistic on price, are commercial facts worth holding.',
-      example:
-        'Two projects from the same developer have absorbed thirty viewings between them and produced one booking. That is a conversation with a record behind it.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Pipeline reporting from live records',
-      line:
-        'Pipeline value by stage, conversion rates, agent performance, source effectiveness and listing velocity come from the operational records themselves.',
-      why:
-        'Agency forecasting is usually a number an owner feels. Stage-based records make it a calculation.',
-      example:
-        'Weighted pipeline by stage this month, against the same month last year, from the same records the agents work in daily.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the pipeline a question',
-      line:
-        'Verity AI answers from your own lead, property and activity records, respects each user’s permissions, and can create assigned follow-ups from what it finds.',
-      why:
-        'The most valuable questions in an agency are about absence — which leads have not been contacted, which properties are not moving — and absence is exactly what nobody notices.',
-      example:
-        '"Which leads in negotiation have had no contact in the last ten days?" returns eleven, and one instruction assigns follow-ups to the agents who own them.',
-    },
-    {
-      id: 'control',
-      title: 'Who can see which leads',
-      line:
-        'One permission model across every record, with a single audit trail.',
-      why:
-        'Agencies are competitive internally. Agents need their own pipeline; the principal needs all of it; neither should be an argument.',
-      example:
-        'An agent sees their own leads and the shared listing inventory. The principal sees every pipeline, and every reassignment is on the record.',
-    },
-    {
-      id: 'commandCentre',
-      title: 'The agency as it is running',
-      line:
-        'One live view of what is moving, what is blocked, who owns it and what needs attention today.',
-      why:
-        'A weekly pipeline meeting is a reconstruction. A live picture removes the need for most of it.',
-      example:
-        'Visits today, leads gone quiet, deals awaiting approval and unassigned enquiries, in one view rather than six conversations.',
-    },
-  ],
-
-  workflowsHeading: 'From enquiry to closing, recorded at every stage.',
-  workflowsLede:
-    'These sequences already run in your agency. In Verity each step is a state change, so the next action is visible rather than remembered.',
-  workflows: [
-    {
-      name: 'New enquiry to first contact',
-      steps: [
-        'Enquiry recorded with its source and requirement',
-        'Lead assigned to an agent by locality or rotation',
-        'First contact task created with a due time',
-        'Requirement captured — budget, configuration, timeline',
-        'Matching properties identified from inventory',
-        'Site visit proposed and scheduled',
-      ],
-      note:
-        'Response time from enquiry to first contact becomes a measured number rather than a matter of who was free.',
-    },
-    {
-      name: 'Site visit',
-      steps: [
-        'Visit created against the lead and the property',
-        'Agent assigned and owner permission confirmed',
-        'Visit conducted and outcome recorded',
-        'Objections and feedback captured on both records',
-        'Next step created — second visit, offer or alternative properties',
-      ],
-      note:
-        'Viewing history accumulates on the property, which is what turns nine unconverted viewings into a pricing conversation.',
-    },
-    {
-      name: 'Negotiation to closing',
-      steps: [
-        'Offer recorded against the lead and property',
-        'Counter-offers logged as the negotiation moves',
-        'Price below the owner’s floor routed for approval',
-        'Agreement stage reached and documents attached',
-        'Deal closed, stage updated, property marked unavailable',
-        'Commission split recorded against the participants',
-      ],
-      note:
-        'The record of what was agreed exists before the settlement conversation rather than after it.',
-    },
-    {
-      name: 'Lead reactivation',
-      steps: [
-        'Leads without contact for a defined period identified',
-        'Reason for going quiet reviewed against the history',
-        'Follow-up assigned with a specific next action',
-        'Outcome recorded — revived, disqualified or deferred',
-        'Disqualified leads retained with their reason for future matching',
-      ],
-      note:
-        'A disqualified lead is not deleted. A buyer whose budget was wrong in March may be the right buyer in December.',
-    },
-    {
-      name: 'New listing intake',
-      steps: [
-        'Property recorded with owner, configuration and asking price',
-        'Documents and photographs attached to the record',
-        'Agreement terms and commission recorded',
-        'Listing made available to the agent team',
-        'Matching leads identified from existing requirements',
-      ],
-      note:
-        'A new listing is matched against the leads already on record rather than only against new enquiries.',
-    },
-    {
-      name: 'Agent handover',
-      steps: [
-        'Departing agent’s leads and deals identified',
-        'Each reassigned with its full history intact',
-        'Receiving agents notified with context attached',
-        'Active negotiations flagged for principal review',
-      ],
-      note:
-        'A handover becomes a reassignment rather than a loss, because the pipeline was never personal property.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask what the pipeline is actually doing.',
-    lede:
-      'Verity AI reads the same lead, property, visit and deal records your agents work in. It answers from your pipeline rather than from generic knowledge, and it can turn an answer into follow-ups assigned to the agents who own the leads.',
-    panelMeta: 'Grounded in your pipeline records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which leads are closest to conversion this month?',
-      'Which leads have had no contact in the last fourteen days?',
-      'Which properties have the most viewings and no offers?',
-      'Which agent has the highest conversion from visit to offer?',
-      'Which enquiry sources produced the most closings this quarter?',
-      'What is the weighted pipeline by stage right now?',
-      'Which site visits this week have no agent assigned?',
-      'Which localities are producing enquiries but not conversions?',
-      'Summarise this month’s pipeline movement.',
-    ],
-  },
-
-  automationHeading: 'The follow-ups that decide the deals.',
-  automationLede:
-    'These run from the lead and property records themselves, at the moment the condition is met.',
-  automations: [
-    {
-      trigger: 'A new enquiry arrives',
-      steps: [
-        'Lead record created with source and requirement',
-        'Assigned to an agent by locality or rotation',
-        'First-contact task created with a due time',
-        'Escalated to the principal if contact does not happen',
-      ],
-    },
-    {
-      trigger: 'A lead has no contact for the defined period',
-      steps: [
-        'Lead flagged as going quiet',
-        'Follow-up assigned to the owning agent',
-        'Escalated if the follow-up is not actioned',
-      ],
-    },
-    {
-      trigger: 'A site visit is completed',
-      steps: [
-        'Outcome and feedback recorded against lead and property',
-        'Next step created based on the outcome',
-        'Property viewing count updated',
-      ],
-    },
-    {
-      trigger: 'A price is offered below the owner’s floor',
-      steps: [
-        'Offer held at the approval step',
-        'Request routed with the negotiation history attached',
-        'Decision recorded against the deal',
-      ],
-    },
-    {
-      trigger: 'A deal reaches agreement stage',
-      steps: [
-        'Property marked unavailable across the inventory',
-        'Document checklist created against the deal',
-        'Commission split recorded against participants',
-      ],
-    },
-    {
-      trigger: 'A listing passes a defined age without an offer',
-      steps: [
-        'Listing flagged for review with its viewing history',
-        'Task created to discuss pricing with the owner',
-        'Outcome recorded against the property',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the principal can actually see.',
-  intelligenceLede:
-    'Pipeline, activity and performance drawn from the records agents create as they work.',
-  intelligence: [
-    {
-      area: 'Pipeline',
-      points: [
-        'Weighted pipeline value by stage',
-        'Deals expected to close this month and next',
-        'Movement between stages over time',
-        'Deals stalled at a stage beyond the usual duration',
-      ],
+      area: 'Leads',
+      title: 'Portal and social leads wait too long for a first call',
+      scene:
+        'A buyer fills a form at 9 pm. The agent sees it the next afternoon. By then the buyer has spoken to two other brokers and has a site visit booked.',
+      cost:
+        'In one audit of 2,241 US companies, only 37 percent replied to a test web lead within an hour and 23 percent never replied. A broker who calls first usually gets the visit.',
+      fix:
+        'Every new lead becomes a record with an owner and a due time for the first call. A lead not called within your target time moves to a list the team lead sees and can reassign.',
+      screen: 'leads',
+      source: {
+        name: 'SmartCompany, on the HBR audit of lead response times',
+        url: 'https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/',
+      },
     },
     {
       area: 'Leads',
-      points: [
-        'Enquiry volume by source and by locality',
-        'Leads without contact beyond the threshold',
-        'Conversion from enquiry to visit, and visit to offer',
-        'Reasons recorded for disqualified leads',
+      title: 'Nobody knows which lead source pays',
+      scene:
+        'The agency spends ₹60,000 a month on portal listings and ₹40,000 on social ads. Leads come in, but nobody can say how many became site visits, bookings or commission.',
+      cost:
+        'Example arithmetic: ₹1 lakh a month on lead sources for 180 leads that produce two closed deals is a very different story from the same spend producing six. Without the count, money keeps going to the wrong place.',
+      fix:
+        'Every lead carries its source. Verity shows, by source, how many leads were called, visited, negotiated and closed, and the commission earned against what was spent.',
+      screen: 'desk',
+    },
+    {
+      area: 'Leads',
+      title: 'The same buyer is worked by two agents',
+      scene:
+        'A buyer enquires on a portal and also walks in. Two agents each call her. She gets confused, and later the two agents argue about who gets the credit.',
+      cost:
+        'A buyer who feels hassled walks away, and the agency loses an agent’s goodwill when commission is split by argument.',
+      fix:
+        'A client is one record across the agency. A second enquiry from the same phone number links to the existing record and the original owner, so ownership is clear before the second call is made.',
+      screen: 'leads',
+    },
+    {
+      area: 'Buyers',
+      title: 'Buyer requirements are remembered, not matched',
+      scene:
+        'A family asked for a 3 BHK in Whitefield near a good school, under ₹1.6 crore. A listing matching that came in on Tuesday. The agent who spoke to the family is on leave, and no one else knows.',
+      cost:
+        'A matching listing and a waiting buyer, and the deal goes to whoever happens to remember first.',
+      fix:
+        'Each buyer record holds a structured requirement: area, type, budget, timing, must-haves. A new listing shows the buyers who match, and the agent who owns each buyer gets a task to share it.',
+      screen: 'matching',
+    },
+    {
+      area: 'Listings',
+      title: 'Listings are stale, sold or at the wrong price',
+      scene:
+        'A flat was rented out last month but is still on the portal and in the WhatsApp groups. Buyers call about it. Another owner has dropped the price by ₹8 lakh and told no one at the agency.',
+      cost:
+        'Wasted site visits, annoyed buyers and a reputation for stale information, which is the one thing buyers use to choose a broker.',
+      fix:
+        'Every listing has a status, a price, a last checked date and an owner contact. Listings not confirmed with the owner within your set number of days are flagged, and price changes are logged with the date.',
+      screen: 'matching',
+    },
+    {
+      area: 'Owners',
+      title: 'Owners list with three brokers and the mandate is vague',
+      scene:
+        'An owner told two agents "go ahead". The flat is also on the portal from another broker. When a buyer is found, there is a discussion on who introduced whom.',
+      cost:
+        'Commission disputes, owners who lose trust, and agent time spent on a flat the agency may not be allowed to sell.',
+      fix:
+        'Each listing records the mandate type, exclusive or open, the start and end dates and the agreed brokerage. Mandates ending soon appear as a renewal task with the owner’s contact.',
+      screen: 'matching',
+    },
+    {
+      area: 'Visits',
+      title: 'Site visits are not confirmed, and feedback is lost',
+      scene:
+        'Four visits are fixed for Saturday. Two buyers do not show up. Of the two who do, one liked the flat but wanted a lower floor. That detail stays in the agent’s head.',
+      cost:
+        'A wasted morning for the agent, a missed second flat shown, and no memory of what the buyer actually wanted when they come back.',
+      fix:
+        'Each visit is a scheduled record with the buyer, the property and the agent, and a confirmation task the day before. After the visit the agent records feedback in a few taps, and the buyer’s requirement is updated.',
+      screen: 'leads',
+    },
+    {
+      area: 'Deals',
+      title: 'A deal stalls between token and registration',
+      scene:
+        'The buyer paid a token. The loan sanction is awaited. The owner’s documents are incomplete. The agreement date slips twice. The agent has no list of what is missing.',
+      cost:
+        'Deals fall through between booking and registration more often than at the start, and the agent’s commission is only earned if the deal completes.',
+      fix:
+        'Each deal has a stage, a checklist of documents for buyer and owner, and an owner for each pending item. Deals sitting at a stage longer than usual appear on the pipeline with the missing item named.',
+      screen: 'deals',
+    },
+    {
+      area: 'Commission',
+      title: 'Developers pay brokerage late, and the agency has to chase',
+      scene:
+        'A builder promised brokerage within 30 days of agreement. It has been 75. The agency’s account person calls every week, and the developer’s team says it is "with accounts".',
+      cost:
+        'Cash tied up in commission invoices, and agents who are paid only after the agency is paid, so they get restless.',
+      fix:
+        'Each booking has an expected brokerage, the invoice raised and its due date. Overdue developer payments list by developer with age, and every follow-up call is recorded with a promise date.',
+      screen: 'commission',
+    },
+    {
+      area: 'Commission',
+      title: 'Agent commissions are calculated by hand and argued over',
+      scene:
+        'At month end the owner works out each agent’s share across deals, referral splits, slabs and a deduction for the lead cost. One agent says the split on a joint deal was different.',
+      cost:
+        'Hours of owner time every month, and the risk of an agent leaving to a rival who pays on time.',
+      fix:
+        'Each deal records the agents involved and their split. Verity builds a monthly commission statement from your own slabs. The agent sees the same breakdown, and a deal is not paid out until the brokerage is received, if that is your rule.',
+      screen: 'commission',
+    },
+    {
+      area: 'Rentals',
+      title: 'Rental renewals and lock-in dates go unnoticed',
+      scene:
+        'The agency placed 120 tenants over three years. Eleven agreements end this quarter. The tenants will renew or move, and the owners will relist, but nobody called them.',
+      cost:
+        'A second brokerage, from the tenant or the owner, goes to whoever called first.',
+      fix:
+        'Each rental has its start, end and lock-in dates. The renewal list shows agreements ending in the next 90 days with the owner and tenant, and a task for the agent who placed it.',
+      screen: 'deals',
+    },
+    {
+      area: 'Compliance',
+      title: 'RERA registration, ads and agreements are tracked by memory',
+      scene:
+        'The agency’s RERA registration comes up for renewal. A new ad goes out without the registration number or QR code. A buyer agreement is signed on an old template.',
+      cost:
+        'RERA provides for a penalty of up to ₹10,000 for every day a registration default continues, up to 5 percent of the property cost. In Maharashtra, a notification reported in April 2025 set penalties of up to ₹50,000 for advertisements without the registration number and QR code.',
+      fix:
+        'Registration numbers, certificate dates and renewals sit on the agency and agent records. Ad checklists and agreement templates are attached to the listing, and a reminder task goes out before each renewal.',
+      screen: 'rera',
+      source: {
+        name: 'The Realty Today, on MahaRERA advertisement rules',
+        url: 'https://therealtytoday.com/news/regulatory/maharera-makes-qr-code-registration-number-mandatory-in-ads-50000-penalty-for-violations/',
+      },
+    },
+    {
+      area: 'People',
+      title: 'When an agent leaves, their clients and listings leave with them',
+      scene:
+        'A senior agent resigns on Friday. He has 600 contacts on his phone, 40 owner relationships and 12 live deals. He starts at a rival on Monday.',
+      cost:
+        'Buyers, owners and the deals in progress follow the person, not the agency.',
+      fix:
+        'Clients, owners, listings and deals belong to the agency’s records, with their full history and an agent assigned. A leaver’s list can be reassigned in one step, and access is removed on their last day.',
+      screen: 'desk',
+    },
+    {
+      area: 'Owner',
+      title: 'The owner cannot see the pipeline or forecast the month',
+      scene:
+        'The owner asks each team lead how many deals will close this month. The answers are a mix of hope and memory. Rent and salaries are due on the 1st.',
+      cost:
+        'Cash planning by guess, and no early sign that a month will be weak while there is still time to push.',
+      fix:
+        'The pipeline shows deals by stage with expected brokerage and probability set by you. The desk screen compares the expected brokerage this month with commitments, and agents’ pipelines side by side.',
+      screen: 'desk',
+    },
+  ],
+
+  factsHeading: 'The numbers behind these problems.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '37%',
+      text: 'of 2,241 US companies replied to a test web lead within an hour, and 23 percent never replied. A companion analysis of about 1.25 million leads found that contacting a lead within an hour made it far more likely to be qualified. These are US firms across industries, not property brokers.',
+      source: { name: 'SmartCompany, on a Harvard Business Review study', year: '2011', url: 'https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/' },
+    },
+    {
+      figure: '₹10,000 a day',
+      text: 'is the penalty RERA provides for each day an agent’s default continues for not registering or not following the agent’s duties, up to 5 percent of the cost of the plot or apartment.',
+      source: { name: 'Mondaq, RERA Act 2016 summary', url: 'https://www.mondaq.com/india/real-estate/1235906/rera-act-2016-part-3' },
+    },
+    {
+      figure: '₹50,000',
+      text: 'is the penalty reported for advertisements without the project registration number and QR code under a MahaRERA notification of April 2025. It applies to developers and registered agents in Maharashtra.',
+      source: { name: 'The Realty Today', year: '2025', url: 'https://therealtytoday.com/news/regulatory/maharera-makes-qr-code-registration-number-mandatory-in-ads-50000-penalty-for-violations/' },
+    },
+    {
+      figure: '18%',
+      text: 'is the GST rate commonly charged on a real estate broker’s commission or brokerage, and it applies to rental brokerage as well. Registration thresholds and conditions vary, so confirm with your accountant.',
+      source: { name: 'TaxBuddy, GST guide for real estate brokers (vendor)', url: 'https://www.taxbuddy.com/blog/gst-filing-real-estate-brokers-taxbuddy' },
+    },
+  ],
+  factsNote:
+    'The lead response figure is from a US study of many industries, and is a decade and a half old. The penalty figures are legal summaries and a news report. The tax rate comes from a vendor guide. Check each against the official source or with your adviser.',
+
+  screensHeading: 'The screens an agency would use every day.',
+  screensLede: 'Six views, each built for one job. Names and stages use your agency’s own terms.',
+  screens: [
+    {
+      id: 'desk',
+      title: 'Agency / Today',
+      meta: 'All agents',
+      heading: 'The owner’s view of leads, listings and money',
+      caption:
+        'Leads waiting for a first call, site visits today, deals by stage, and brokerage expected and overdue. It replaces the Monday call round with each team lead.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Leads uncalled', value: '14', note: 'past target time' },
+            { label: 'Visits today', value: '9', note: '3 unconfirmed' },
+            { label: 'Deals live', value: '27', note: '₹68 L expected' },
+            { label: 'Brokerage overdue', value: '₹7.2 L', note: '3 developers' },
+          ],
+        },
+        { type: 'title', text: 'Closed deals and leads by source, this quarter' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Referrals', value: 82, display: '9 deals' },
+            { label: 'Portal listings', value: 45, display: '5 deals' },
+            { label: 'Social ads', value: 18, display: '2 deals', tone: 'muted' },
+            { label: 'Walk-ins', value: 36, display: '4 deals' },
+          ],
+        },
+        { type: 'alert', text: '14 portal leads have waited over 30 minutes for a first call. 6 belong to Rahul, who is on site.', action: 'Reassign' },
       ],
     },
     {
-      area: 'Properties',
-      points: [
-        'Viewings per listing and time on market',
-        'Listings with high viewing volume and no offers',
-        'Inventory by locality, configuration and price band',
-        'Absorption by project and by developer',
+      id: 'leads',
+      title: 'Leads and visits',
+      meta: 'Today',
+      heading: 'Who to call, and who is visiting what',
+      caption:
+        'New leads with their first-call deadline, and today’s site visits with confirmation status. Feedback after each visit goes onto the buyer’s record.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Lead', 'Source', 'Looking for', 'Agent', 'Status'],
+          rows: [
+            ['Neha Kulkarni', 'Portal', '2 BHK, Baner, up to 1.1 Cr', 'Rahul', ['Call due', 'late', 'Called', 'ok']],
+            ['Sandeep Rao', 'Referral', '3 BHK, Hinjewadi, 1.6 Cr', 'Priya', ['Visit Sat', 'info']],
+            ['Fatima Sheikh', 'Social ad', '1 BHK rental, Kothrud', 'Imran', ['Call due', 'flag', 'Called', 'ok']],
+            ['Ravi Joshi', 'Walk-in', 'Plot, Wagholi', 'Priya', ['Matches 2', 'info']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: '11:00 Visit: Skyline Apt 904 with Kulkarni family', meta: 'Agent Priya, owner has the keys', tag: ['Unconfirmed', 'flag', 'Confirmed', 'ok'] },
+            { name: '4:30 Visit: Palm Heights 12B with S. Rao', meta: 'Agent Priya', tag: ['Confirmed', 'ok'] },
+          ],
+        },
       ],
     },
     {
-      area: 'Agents',
-      points: [
-        'Response time from enquiry to first contact',
-        'Visits conducted and offers generated',
-        'Conversion rate at each stage',
-        'Active pipeline held per agent',
+      id: 'matching',
+      title: 'Listings and buyers',
+      meta: 'Matches',
+      heading: 'A new listing, and the buyers who should hear about it',
+      caption:
+        'Each listing with its mandate, price history and last checked date, and the waiting buyers who match it. Stale listings are flagged before a buyer wastes a visit.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Skyline Apt 904, Baner',
+          sub: '3 BHK, 1,420 sq ft. Owner: Mr Deshmukh. Agent: Priya',
+          fields: [
+            ['Price', '₹1.52 Cr (was ₹1.60 Cr)'],
+            ['Mandate', 'Exclusive until 30 Nov'],
+            ['Last confirmed', ['41 days ago', 'late', 'Confirmed today', 'ok']],
+            ['Brokerage', '1% from owner'],
+            ['Matching buyers', '4 on the waiting list'],
+          ],
+          timeline: [
+            ['12 Oct', 'Price reduced by ₹8 lakh at owner’s request'],
+            ['2 Oct', 'Shown to Kulkarni family, liked layout, wanted lower floor'],
+            ['20 Sep', 'Listing exclusive until 30 Nov, signed'],
+            ['Note', 'Owner prefers calls before 6 pm. Keys with security.'],
+          ],
+        },
       ],
     },
     {
-      area: 'Commercial',
-      points: [
-        'Closings by period, locality and agent',
-        'Commission earned and outstanding',
-        'Average deal value and time to close',
-        'Source cost against closings produced',
+      id: 'deals',
+      title: 'Deals',
+      meta: 'Pipeline',
+      heading: 'Every deal by stage, with what is missing',
+      caption:
+        'Deals from first visit to registration, with the document checklist for buyer and owner. Rental renewals sit beside them so nothing is forgotten after the first brokerage.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Negotiating',
+              cards: [
+                { title: 'Palm Heights 12B, S. Rao', meta: 'Offer 1.55 Cr, owner asking 1.6', tag: ['Follow up', 'flag'] },
+                { title: 'Green Acres plot, R. Joshi', meta: 'Visit Saturday', tag: ['Visit', 'info'] },
+              ],
+            },
+            {
+              name: 'Token paid',
+              cards: [
+                { title: 'Skyline 904, Kulkarni', meta: 'Loan sanction awaited, 3 docs pending', tag: ['Stuck 12 days', 'late', 'Cleared', 'ok'] },
+              ],
+            },
+            {
+              name: 'Agreement, registration',
+              cards: [
+                { title: 'Lake View 5A, Mehra', meta: 'Registration on 25 Oct', tag: ['On track', 'ok'] },
+                { title: 'Rental renewals', meta: '11 agreements end in 90 days', tag: ['Call owners', 'flag'] },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
-      area: 'Operations',
-      points: [
-        'Site visits scheduled and unassigned',
-        'Approvals awaiting a decision',
-        'Documents outstanding against agreed deals',
-        'Exceptions raised and how quickly they closed',
+      id: 'commission',
+      title: 'Commissions',
+      meta: 'Brokerage and payouts',
+      heading: 'What is owed to the agency and what is owed to agents',
+      caption:
+        'Brokerage expected, invoiced and received by deal and developer, and each agent’s share built from your slabs. Both sides see the same numbers.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Deal', 'Developer or owner', 'Brokerage', 'Due', 'Status'],
+          rows: [
+            ['Green Acres unit 304', 'Green Acres Developers', '₹2.4 L', '30 days ago', ['Overdue', 'late', 'Promised 20 Oct', 'info']],
+            ['Lake View 5A resale', 'Owner', '₹1.5 L', 'On registration', ['Pending', 'info']],
+            ['Palm Heights rental', 'Owner and tenant', '₹36,000', 'Paid', ['Received', 'ok']],
+            ['Skyline 1202', 'Skyline Group', '₹3.1 L', '15 days ago', ['Invoice sent', 'flag']],
+          ],
+        },
+        { type: 'title', text: 'Agent share this month' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Priya', value: 90, display: '₹1.8 L' },
+            { label: 'Rahul', value: 60, display: '₹1.2 L' },
+            { label: 'Imran', value: 40, display: '₹0.8 L', tone: 'muted' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'rera',
+      title: 'RERA and records',
+      meta: 'Registration and ads',
+      heading: 'Registration numbers, renewals and ad checks in one place',
+      caption:
+        'The agency’s and each agent’s registration, renewal dates, the checklist an advertisement should meet, and the agreement template attached to each deal.',
+      blocks: [
+        {
+          type: 'checks',
+          items: [
+            { text: 'Agency RERA registration, Maharashtra', meta: 'Valid until 14 Mar 2027', done: true },
+            { text: 'Priya Nair, agent certificate', meta: 'Valid until 2 Feb 2027', done: true },
+            { text: 'Imran Qureshi, agent certificate', meta: 'Renewal due in 21 days', done: false },
+            { text: 'Ad: Skyline 904 social post', meta: 'Registration number and QR code missing', done: false },
+          ],
+        },
+        { type: 'alert', text: 'One ad in the last week has no registration number. Rahul is the owner of the post.', action: 'Fix ad' },
       ],
     },
   ],
-  intelligenceNote:
-    'These come from the records agents already create in the course of working their leads. Nothing here requires separate reporting.',
 
-  rolesHeading: 'The pipeline is shared. The view is not.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on the question they need answered.',
+  dayHeading: 'The same Saturday in a brokerage, before and after.',
+  dayLede: 'The calls and meetings are the same. What changes is that each lead, visit and promise leaves a record, and the record tells the agent what to do next.',
+  day: [
+    {
+      time: 'Morning',
+      before: 'Two agents each call the same portal lead without knowing the other has.',
+      after: 'The lead belongs to one agent. A second enquiry from the same number links to her record.',
+    },
+    {
+      time: 'Late morning',
+      before: 'A new listing comes in on a phone call. The agent posts it in four WhatsApp groups and hopes.',
+      after: 'The listing is saved with its mandate. Four waiting buyers appear as matches, each with a task for their agent.',
+    },
+    {
+      time: 'Midday',
+      before: 'A buyer does not show up for a visit. The owner waited two hours for nothing.',
+      after: 'The visit was unconfirmed the evening before, so a reminder task went to the agent and the visit was moved.',
+    },
+    {
+      time: 'Afternoon',
+      before: 'A token was paid last week. The agent has no list of what documents are missing.',
+      after: 'The deal shows three missing items, each with a name. The agent chases the right people.',
+    },
+    {
+      time: 'Evening',
+      before: 'A developer owes brokerage from 75 days ago. Nobody remembers who last called.',
+      after: 'The overdue list shows each call and the date the developer promised. The account person calls with the history in hand.',
+    },
+    {
+      time: 'Month end',
+      before: 'The owner spends an evening working out commission splits, and one agent disagrees.',
+      after: 'The statements are ready on the 1st, and every agent sees the same breakdown.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how leads, listings and deals move through your agency, then build Verity around it and stay on to make it work.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you and a team lead. Follow a lead from the portal to a registered deal and a listing from the owner call to a sale, and see where each step is tracked today.',
+        you: 'Two to three hours of your time and an hour from a senior agent. Access to your lead inbox, listing sheet and commission calculation.',
+        get: 'A written map of how your agency works: lead sources, deal stages, mandates, commission rules and the five problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your lead sources, first-call target, deal stages and document checklists, listing fields, mandate types, commission slabs and RERA records, with screens in your own words.',
+        you: 'Check the stages and commission rules with a team lead. Tell us where a rule is wrong.',
+        get: 'A working Verity with your agents, areas and rules, ready for your live leads and listings.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your clients, owners, listings and live deals from your sheets and the leads inbox. Train agents in short sessions on their own clients.',
+        you: 'Your client and listing sheets and a list of live deals. Thirty minutes with each agent.',
+        get: 'Every live lead, listing and deal inside Verity, and agents who have logged a real visit.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month of leads and deals with you, tune the targets and lists, and handle changes as the agency grows.',
+        you: 'A short monthly review of lead sources, pipeline and commission.',
+        get: 'A system that follows how the agency sells, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your client and owner contact sheets, even if they are exports from phones',
+      'Your live listing sheet with owner contacts and mandates',
+      'The list of live deals with their stage',
+      'Your commission slabs and referral rules',
+      'Your RERA registration and agent certificate numbers',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Each agent needs about half an hour.',
+    after: 'Nobody is hired to run Verity. Calls, visits and deal steps are recorded as agents work, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask the agency a question and get an answer.',
+    lede:
+      'Verity AI reads your own lead, listing, deal and commission records. Ask in plain words, then turn the answer into tasks for the right agents.',
+    examples: [
+      {
+        q: 'Which buyers match the new Skyline 904 listing?',
+        a: 'Four buyers on the waiting list match on area, size and budget. Two of them have already seen a similar flat in the last month.',
+        rows: [['Kulkarni family', 'Priya'], ['Sandeep Rao', 'Priya'], ['Anjali Menon', 'Rahul'], ['Vikas Patel', 'Imran']],
+        action: 'Create a share-listing task for each agent',
+      },
+      {
+        q: 'Which lead source has given us the most closed deals this quarter?',
+        a: 'Referrals, with 9 closed deals, ahead of portal listings with 5 and walk-ins with 4. Social ads produced 2.',
+        rows: [['Referrals', '9'], ['Portal listings', '5'], ['Walk-ins', '4'], ['Social ads', '2']],
+      },
+      {
+        q: 'Which developers owe us brokerage for more than 30 days?',
+        a: 'Three developers, ₹7.2 lakh in total. Green Acres owes ₹2.4 lakh, 30 days past due, with a promise to pay on 20 October.',
+        action: 'Create a follow-up task for accounts',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Agents still make the calls and send the messages; Verity makes sure the right person knows to.',
+  automations: [
+    {
+      when: 'A new lead arrives',
+      then: ['Linked to an existing client if the number matches', 'Assigned to an agent with a call deadline', 'Moved to the team lead if not called in time'],
+    },
+    {
+      when: 'A new listing is saved',
+      then: ['Matched against waiting buyers', 'Task to each buyer’s agent to share it', 'Last confirmed date set for the owner check'],
+    },
+    {
+      when: 'A site visit is within 24 hours',
+      then: ['Confirmation task to the agent', 'Owner and keys checked', 'Feedback form opens after the visit'],
+    },
+    {
+      when: 'A deal stays at one stage too long',
+      then: ['Flag on the pipeline', 'Missing documents listed with owners', 'Escalation to the team lead after a week'],
+    },
+    {
+      when: 'Brokerage is past its due date',
+      then: ['Listed by developer with age', 'Follow-up task to accounts', 'Promise date recorded after each call'],
+    },
+    {
+      when: 'A registration or mandate is near its end',
+      then: ['Renewal task 30 days before', 'Listed on the compliance screen', 'Outcome recorded: renewed or lapsed'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a real estate agency has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you can show your registration, ads and agreements when asked.',
+    items: [
+      {
+        name: 'RERA registration of agents',
+        what: 'Under the Real Estate (Regulation and Development) Act, 2016, an agent who facilitates the sale of a plot, apartment or building in a registered project generally has to be registered with the state authority and quote that number. Failure to comply with Sections 9 or 10 can attract a penalty of up to ₹10,000 per day, up to 5 percent of the cost.',
+        how: 'The agency’s and each agent’s registration number, state and renewal date are stored, and renewal reminders are tasks with an owner.',
+        source: { name: 'Mondaq', url: 'https://www.mondaq.com/india/real-estate/1235906/rera-act-2016-part-3' },
+      },
+      {
+        name: 'State RERA advertising and training rules',
+        what: 'Some state authorities add their own rules. In Maharashtra, a notification reported in April 2025 requires the registration number and QR code in project advertisements by developers and agents. State rules also cover agent training and certification, and the details change.',
+        how: 'Each listing holds the registration number and the ad checklist, and each agent’s certificate dates sit on their record.',
+        source: { name: 'The Realty Today', url: 'https://therealtytoday.com/news/regulatory/maharera-makes-qr-code-registration-number-mandatory-in-ads-50000-penalty-for-violations/' },
+      },
+      {
+        name: 'GST on brokerage',
+        what: 'Brokerage is generally taxed at 18 percent, including rental brokerage. Registration thresholds and conditions depend on your turnover and whether you work across states.',
+        how: 'Each deal records the brokerage, the party billed and the invoice, so your accountant gets a clean list for the month.',
+        source: { name: 'TaxBuddy guide (vendor)', url: 'https://www.taxbuddy.com/blog/gst-filing-real-estate-brokers-taxbuddy' },
+      },
+      {
+        name: 'Client and personal data',
+        what: 'Buyer and owner details, ID documents and financial information are personal data. India’s data protection rules are being phased in, so keep access narrow and know where documents are stored.',
+        how: 'Client records and documents sit in one permissioned place, with a log of who viewed or changed them, instead of personal phones.',
+      },
+    ],
+    note: 'Rules change and differ by state. Confirm current requirements with your state RERA, your lawyer or your accountant. Verity does not file anything.',
+  },
+
+  rolesHeading: 'Everyone sees the same client, through their own window.',
+  rolesLede: 'An agent does not need to see what the agency earns on other agents’ deals. Accounts do not need the buyer’s requirements. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Principal',
-      question: 'What is the business going to close?',
-      focus: 'Weighted pipeline by stage, closings against target, agent performance, listings not moving.',
-    },
-    {
-      role: 'Sales manager',
-      question: 'What needs attention this week?',
-      focus: 'Leads gone quiet, unassigned visits, deals stalled at a stage, response times by agent.',
-    },
-    {
-      role: 'Agent',
-      question: 'Who do I need to contact today?',
-      focus: 'Own leads by stage, visits scheduled, follow-ups due, matching properties for open requirements.',
-    },
-    {
-      role: 'Listings coordinator',
-      question: 'What is in inventory and what is stale?',
-      focus: 'Available listings, viewing counts, time on market, owner agreements and documents.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What has closed and what is owed?',
-      focus: 'Closed deals, commission splits, receipts against agreements, outstanding settlements.',
-    },
+    { role: 'Owner', question: 'What will we earn this month, and where are deals stuck?', sees: 'Pipeline by stage, brokerage expected and overdue, lead sources by outcome, agent performance side by side.' },
+    { role: 'Team lead', question: 'Who needs help, and which leads are cold?', sees: 'Uncalled leads, agents’ pipelines, visits today, deals stuck at a stage.' },
+    { role: 'Agent', question: 'Who do I call now?', sees: 'Their leads with call deadlines, today’s visits, matches for their buyers and their own commission.' },
+    { role: 'Accounts', question: 'What brokerage can I invoice, and what is late?', sees: 'Deals ready to invoice, developer ageing, agent payouts and GST split.' },
+    { role: 'Compliance or admin', question: 'Are our registrations and ads in order?', sees: 'Registration and certificate dates, ad checklists and agreement templates.' },
   ],
 
-  useCasesHeading: 'What agencies use Verity for',
-  useCases: [
-    {
-      name: 'Lead and enquiry management',
-      body: 'Every enquiry as an agency-owned record with source, requirement, stage, assigned agent and full interaction history.',
-    },
-    {
-      name: 'Property inventory',
-      body: 'Listings with owner, configuration, price, documents and the accumulated viewing history that explains whether a unit is priced right.',
-    },
-    {
-      name: 'Site visit coordination',
-      body: 'Visits as work with a date, an agent, a property and a state, so nothing is confirmed to a buyer without someone owning it.',
-    },
-    {
-      name: 'Follow-up discipline',
-      body: 'Days since last contact as a property of the lead, so the leads going quiet surface as a list rather than as a lost quarter.',
-    },
-    {
-      name: 'Deal stage and pipeline forecasting',
-      body: 'Stages that produce a weighted pipeline, so forecasting is a calculation from records rather than a number the principal feels.',
-    },
-    {
-      name: 'Agent performance',
-      body: 'Response time, visits conducted, stage conversion and pipeline held, so performance can be read where it actually differs.',
-    },
-    {
-      name: 'Commission and settlement',
-      body: 'Splits between agents, partners and the agency recorded against the deal at the point they are agreed.',
-    },
-    {
-      name: 'Pipeline continuity',
-      body: 'Reassignment with full history when an agent leaves, because the pipeline was the agency’s record rather than the agent’s phone.',
-    },
-    {
-      name: 'Asking the pipeline questions',
-      body: 'Plain-language questions answered from your own records, with follow-ups created and assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'The property portals you list on. Leads from them are recorded; agents still reply from the portal or phone.',
+      'WhatsApp groups with owners and buyers. Agents log what was agreed on the record.',
+      'Your accounting software and your accountant, who still prepares returns.',
+      'Your own agreement, mandate and brokerage templates.',
+    ],
+    not: [
+      'List properties on the portals or run your advertisements.',
+      'Send messages to buyers or owners on its own.',
+      'File your GST returns or run your payroll.',
+      'Give legal advice on agreements or register your agency with RERA.',
+    ],
+    migration:
+      'We bring your clients, owners, listings and live deals across from your sheets, phone exports and chat threads in stages, so the agency keeps selling while it happens.',
+  },
 
-  migration:
-    'Your existing spreadsheets, contact lists and whatever CRM the agency has half-adopted are mapped during implementation. Leads, listings and history are brought across, and Verity is introduced alongside the way agents already work rather than as a system they have to be forced into.',
-
-  faqHeading: 'Questions agencies ask',
+  faqHeading: 'Questions agency owners ask.',
   faqs: [
     [
-      'What can AI software do for a real estate agency?',
-      'Verity AI answers questions from your own lead, property, visit and deal records. You can ask which leads are closest to conversion, which have had no contact in two weeks, which properties are being viewed without generating offers, or which agent converts best at each stage — and turn the answer into follow-ups assigned to the right agents.',
+      'Will my agents actually use it?',
+      'Agents use it if it saves them work: it tells them who to call, shows matching listings and calculates their commission. We keep logging to a few taps from the phone browser and train on their own clients, not in a classroom.',
     ],
     [
-      'Is Verity a CRM for real estate?',
-      'It includes what an agency needs from a CRM — leads, requirements, stages, activity history and assignment — but it holds the property inventory, the site visits, the agent team and the deal approvals in the same system, so the pipeline and the inventory are connected rather than sitting in separate tools.',
+      'Can it pull leads from the property portals?',
+      'We agree during setup how leads from your portals and ad forms reach Verity, for example by forwarding or export. Each lead then becomes a record with an owner and a call deadline. We do not promise a direct link to any named portal in advance.',
     ],
     [
-      'What happens to a pipeline when an agent leaves?',
-      'It stays. Leads and deals are agency records assigned to an agent rather than personal contact lists, so a departure becomes a reassignment with the full history intact rather than a loss.',
+      'Does Verity message buyers on WhatsApp?',
+      'No. Verity tells the agent who to message and when, and records the outcome. The agent sends the message.',
     ],
     [
-      'Can Verity track site visits and follow-ups?',
-      'Yes. A visit is work with a date, an assigned agent, a property, a lead and a state, and its outcome is recorded against both the lead and the property. Follow-ups are created from those outcomes with owners and due dates.',
+      'We are a team of five agents. Is this too much?',
+      'The same leaks exist at five agents: slow calls, double-worked buyers and late commission. We set up only what you need, and the four weeks run the same way.',
     ],
     [
-      'Can it show why a property is not selling?',
-      'It shows the viewing history: how many times a listing has been shown, over what period, by which agents, and what feedback was recorded. That turns "it is not moving" into evidence you can take to the owner.',
+      'What happens to client data when an agent leaves?',
+      'Clients, owners and listings belong to the agency’s records, not the agent’s phone. A leaver’s list is reassigned in one step and their access is removed on their last day.',
     ],
     [
-      'Can agents see each other’s leads?',
-      'That is set by the permission model. Verity has one permission layer across every record, so agents can be given their own pipeline plus shared listing inventory, while the principal sees everything and every reassignment is on the record.',
+      'Does it handle rentals as well as sales?',
+      'Yes. A rental is a deal with a start, end and lock-in date, so renewals and the next brokerage show up automatically.',
     ],
     [
-      'Does Verity handle commissions?',
-      'Commission splits between agents, channel partners and the agency are recorded against the deal at the point they are agreed, so settlement follows the record. It is not an accounting or payroll system, and it does not replace your existing financial software.',
+      'Who can see my client and commission data?',
+      'Only the people you allow. Access is set by role, so agents, team leads, accounts and compliance each see what they need, and every change is recorded with who made it and when.',
     ],
     [
-      'Is it suitable for a small agency with a few agents?',
-      'A six-agent agency already has six separate pipelines and no shared view, which is the problem Verity solves. Larger teams and multiple offices use the same structure without additional setup.',
+      'How long before I see something useful?',
+      'The uncalled leads list, matching buyers and overdue brokerage need only your existing lead, listing and deal sheets, so they come first. Source-by-source results become reliable after a few weeks of recorded leads.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the agency actually works, configuration, migration of your existing leads and listings, then an ongoing operations partnership rather than a handover.',
+      'What does it cost?',
+      'It depends on the number of agents and branches and what you want set up. Message us and we will give you a clear number after a short conversation about how your agency runs.',
     ],
   ],
 
-  ctaHeading: 'Start with the leads you are already losing.',
-  ctaLede:
-    'For most agencies the fastest thing to fix is contact discipline on leads already in the pipeline. Tell us how yours runs and we will show you what it looks like in Verity.',
+  related: ['property-dealers', 'real-estate-developers', 'property-management', 'home-builders', 'recruitment-agencies', 'insurance-agencies'],
 
-  related: ['property-dealers', 'property-management', 'real-estate-developers', 'construction-companies', 'contractors', 'interior-designers'],
+  ctaHeading: 'Start with the leads nobody called.',
+  ctaLede:
+    'Tell us how your agency runs and we will show you the uncalled leads, the stuck deals and the overdue brokerage it would find, using your own numbers.',
 };

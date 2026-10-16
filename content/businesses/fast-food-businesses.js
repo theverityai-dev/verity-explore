@@ -1,573 +1,682 @@
 export default {
+  schema: 2,
   slug: 'fast-food-businesses',
   status: 'published',
   plural: 'fast food businesses',
   subject: 'fast food business',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for fast food businesses | Verity',
+    title: 'Fast food and QSR outlet software for India | Verity',
     description:
-      'Verity connects service speed, portion control, multi-outlet consistency, peak staffing and promotion performance into one operational system.',
+      'Fifteen ways a fast food outlet loses money in the rush, from slow service and portion drift to fryer oil and franchise audits, with the Verity screens that fix them.',
     keywords: [
-      'AI software for fast food businesses',
-      'quick service restaurant management software',
-      'multi outlet QSR operations software',
-      'portion control and service speed tracking',
+      'fast food outlet management software India',
+      'QSR outlet speed of service tracking',
+      'fast food franchise audit checklist',
+      'fast food crew roster by hour',
+      'multi-outlet QSR stock variance',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'suppliers', 'orders', 'workforce', 'schedule', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for fast food',
-    headline: 'Twelve outlets doing the same thing differently is twelve businesses.',
+    headline: 'Your outlet wins or loses in ninety seconds at the counter. Verity shows you which.',
     lede:
-      'Fast food is a standardisation business: same product, same time, same cost, everywhere. Verity records the operation identically at every outlet so the variance becomes visible instead of averaged.',
-    note: 'Runs alongside your existing billing at each outlet.',
-    panel: {
-      title: 'Network',
-      meta: 'All outlets · This week',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Orders', value: '18,420', note: 'across 12 outlets' },
-        { label: 'Median service time', value: '3m 20s', note: 'range 2m 10s to 6m 40s' },
-        { label: 'Portion variance', value: '4 outlets', note: 'above tolerance' },
-        { label: 'Peak understaffed', value: '9 shifts', note: 'this week' },
-      ],
-      rows: [
-        { name: 'Outlet 7 service time double the network median', meta: 'Four weeks running · peak hours', active: true },
-        { name: 'Portion variance above tolerance at four outlets', meta: 'Same two items · cost impact ₹1.8 L annualised', active: true },
-        { name: 'Promotion running with stock short at three outlets', meta: 'Advertised item unavailable', active: true },
-        { name: 'Opening checks not completed at two outlets', meta: 'Three days this week', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own network in this shape.',
-    },
+      'Fast food is a business of speed, repeatable portions and tight cost control, multiplied by every outlet and every shift. A slow lunch hour, a heavy hand with the cheese, a fryer oil change that is skipped, or an audit that comes up short can each cost more than the day’s margin. Verity records what happens at each outlet and brings it to one screen.',
+    oneLine:
+      'One system that shows speed, stock, crew, audits and cash for every outlet, so a regional manager or owner sees the problem before the customer does.',
+    note: 'Built for a crew that has no time to type. Records come from orders, prep and deliveries, with one-tap logs where a person must act.',
+    screen: 'owner',
+    screenNote: 'outlets, shifts, combos and audits',
   },
 
-  overview: {
-    heading: 'Fast food is not a food business. It is a consistency business.',
+  today: {
+    heading: 'Fast food runs on routine, and routines drift when nobody is watching.',
     paragraphs: [
-      'The proposition is that the product is the same everywhere, made the same way, in the same time, at the same cost. Everything a fast food operator does is in service of that, and every problem is a departure from it at one outlet that the network average hides.',
-      'Service speed is the first. Customers choose fast food for time, so speed is the product. A network median of three minutes twenty is meaningless if it spans two minutes ten at one outlet and six minutes forty at another — and the second outlet is losing customers who will not come back and will not say why.',
-      'Portion control is the second, and it is the quietest cost in the category. An outlet running consistently over on portions is giving away margin on every order. At volume, a small variance on two items is a large annual number, and it is invisible unless consumption is compared against what was sold.',
-      'The third is that promotions are run centrally and executed locally. A campaign advertising an item that three outlets do not have in stock produces exactly the wrong customer experience at the moment of maximum attention.',
-      'The fourth is that outlets are staffed against templates rather than against their own demand curve, which differs by location, day and season.',
-      'Verity records service time, consumption, staffing and execution identically at every outlet, so the network can see where it is not the same business.',
+      'A good outlet is a machine. Orders are taken, fries drop, burgers are assembled in a set order, and the tray goes out in a minute and a half. The recipe is fixed, the portion is fixed, the oil is changed on a schedule. On a good day every one of those is true.',
+      'On an ordinary day they drift. A new crew member over-portions the sauce. The fryer oil goes one more day. The lunch queue is long and the order-to-handover time creeps up. A freezer door is left ajar. Each is small and happens out of the owner’s sight, in a place where the owner is not.',
+      'Most of what an owner gets is a sales total at close of day. By the time food cost, wage cost or an audit shortfall reaches the owner, it is last month’s news. Industry commentary has long put rent as the second-largest cost after raw materials, and attrition among crew at twenty to twenty-five percent, so the margin for drift is narrow.',
     ],
+    stack: ['Billing and kitchen display system', 'Distributor invoices and delivery slips', 'Excel or paper stock sheets', 'WhatsApp groups for each outlet', 'Franchisor portal and audit reports'],
+    stackNote: 'Each sees one slice. A regional manager still pieces the picture together by phone.',
   },
 
-  terminology: [
-    ['Menu items, combos, promotions', 'Records'],
-    ['Orders, tickets, refunds', 'Orders'],
-    ['Ingredients, packaging, consumables', 'Inventory'],
-    ['Prep, service, cleaning, opening checks', 'Work'],
-    ['Crew, shift managers, area managers', 'People'],
-    ['Suppliers, commissary, distributors', 'Suppliers'],
-    ['Outlets, regions, franchise groups', 'Locations'],
-  ],
-
-  challengesHeading: 'The network average hides the outlet that is failing.',
-  challengesLede:
-    'Fast food problems are outlet-level departures from a standard, and aggregate reporting is designed to hide exactly that.',
-  challenges: [
+  painsHeading: 'Where a fast food business actually loses money.',
+  painsLede:
+    'These are the situations owners, franchisees and regional managers describe. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Service speed varies by outlet and nobody attributes it',
-      detail:
-        'A network median looks acceptable while one outlet runs at double it, losing customers who never complain.',
-      outcome:
-        'Service time is recorded per order and per outlet, so variance is visible against the standard rather than averaged into it.',
+      area: 'Service',
+      title: 'Speed of service slips at peak and no one sees it until customers complain',
+      scene:
+        'At 1:15 pm the queue reaches the door. Orders that should leave in ninety seconds take four minutes. One station is overwhelmed while another waits. The manager is on the counter and does not see the pattern.',
+      cost:
+        'Walk-aways at the queue, lower ratings and a trickle of lost regulars. Example arithmetic: ten customers a day walking away at ₹260 a ticket is ₹78,000 a month.',
+      fix:
+        'Each order carries the time it was taken, made and handed over. Verity shows the average and the slowest by hour and station, and flags the hours where the standard was missed, so the crew can be moved before the queue builds.',
+      screen: 'service',
     },
     {
-      problem: 'Portion variance is invisible margin loss',
-      detail:
-        'Consumption is not compared with what was sold, so an outlet giving away extra on two items loses margin on every order for years.',
-      outcome:
-        'Stock consumed is reconciled against items sold per outlet, so variance surfaces as a specific cost.',
+      area: 'Service',
+      title: 'Wrong orders and missing items at the counter and in delivery bags',
+      scene:
+        'A customer opens the bag and finds no fries. A drive-in order has the wrong sauce. The refund is quick, and nobody asks which station or which person packed it.',
+      cost:
+        'Remakes, refunds and a customer who does not return, and without a pattern the same mistake repeats every Saturday.',
+      fix:
+        'Remakes and refunds are logged against the order, the station and the person with a one-tap reason. Verity shows errors by cause and hour, so a packing check or a layout change can target the real source.',
+      screen: 'service',
     },
     {
-      problem: 'Promotions run without checking local stock',
-      detail:
-        'A central campaign advertises an item that some outlets cannot serve, producing the worst possible impression at the busiest moment.',
-      outcome:
-        'Promotion requirements are checked against outlet stock before launch, so shortfalls are ordered rather than discovered.',
+      area: 'Menu',
+      title: 'Combos and limited-time offers move volume and quietly cut margin',
+      scene:
+        'A festive combo sells hard. The burger is discounted, the drink is free, and the fries are a ₹20 add-on. Sales rise, but the real cost per combo was never worked out, and the offer stays on for a month.',
+      cost:
+        'Promotions that increase volume while shrinking contribution are common in fast food, and a crew rushing to hit them makes more mistakes.',
+      fix:
+        'Each combo is a recipe made of items with costs. Verity shows sales, cost and contribution per combo and per outlet, and the share of orders that were discounted, so you know if an offer earned or only sold.',
+      screen: 'menu',
     },
     {
-      problem: 'Staffing follows a template rather than the outlet',
-      detail:
-        'Each outlet has its own demand curve by day and hour, and rostering to a network template guarantees some are short at peak.',
-      outcome:
-        'Orders by interval are recorded per outlet, so staffing follows each site’s own pattern.',
+      area: 'Menu',
+      title: 'Menu prices are set once and costs keep moving',
+      scene:
+        'Chicken, cheese, cooking oil and packaging all changed price in the last two quarters. The menu price was last revised a year ago. The best-selling item is now the one with the thinnest margin.',
+      cost:
+        'A drifting cost on a high-volume item moves quickly into the month’s profit and loss, long before anyone reprices.',
+      fix:
+        'Purchase rates update each item’s cost. Verity shows the current margin of every menu item and combo, flags those under your floor, and shows which outlets sell the most of them.',
+      screen: 'menu',
     },
     {
-      problem: 'Standards are checked by visit',
-      detail:
-        'Opening checks, cleaning and food safety routines are verified when an area manager happens to be there.',
-      outcome:
-        'Routine checks are work with owners, due times and states, so completion is visible without a visit.',
+      area: 'Kitchen',
+      title: 'Portion drift: extra cheese, extra sauce, extra fries',
+      scene:
+        'A trainee fills the fries scoop to the top. The sauce gun gets two pumps instead of one. A grill cook adds an extra slice on busy nights. Each portion looks fine to the customer and is costly to you.',
+      cost:
+        'Example arithmetic: ₹3 of extra cheese and sauce on 200 burgers a day is ₹600 a day, about ₹18,000 a month, per outlet.',
+      fix:
+        'Each item has a standard recipe and weights. Verity compares what orders should have used with what stock says was used, per ingredient and per shift, so over-portioning shows as a number and a name.',
+      screen: 'stock',
     },
     {
-      problem: 'Franchisees report in their own formats',
-      detail:
-        'Each operator sends numbers in a different shape, so the network view is assembled monthly by hand and is never quite comparable.',
-      outcome:
-        'Outlets record the same things the same way, so network comparison is the same records rather than a reconciliation.',
-    },
-  ],
-
-  modulesLede:
-    'One system across outlets, so the network is comparable rather than averaged.',
-  modules: [
-    {
-      id: 'orders',
-      title: 'Orders, tickets and service time',
-      line:
-        'Every order records its items, its outlet, its interval, the crew and the time from order to handover.',
-      why:
-        'Speed is the product. It has to be measured per order and per outlet or it cannot be managed.',
-      example:
-        'A median of three minutes twenty spanning two minutes ten to six minutes forty across outlets, with the outliers named.',
+      area: 'Kitchen',
+      title: 'Cooked food held too long, then thrown away',
+      scene:
+        'Patties and fried chicken are cooked ahead of demand. When the rush does not come, the hold timer runs out and a tray is thrown. When it comes early, the grill is behind. The prep quantity is a guess.',
+      cost:
+        'Wasted, cooked product is the most expensive waste in the building, and under-preparing at peak costs sales instead.',
+      fix:
+        'Cooked quantities, hold times and discards are logged by item and hour. Verity shows the hours where waste is highest and the hours where you ran short, so prep follows demand rather than habit.',
+      screen: 'stock',
     },
     {
-      id: 'inventory',
-      title: 'Ingredients, packaging and consumables',
-      line:
-        'Stock is held with supplier and cost per outlet, and consumption is reconciled against items sold.',
-      why:
-        'Portion variance is the category’s quietest cost, and it only appears when consumption and sales are compared.',
-      example:
-        'Four outlets over tolerance on the same two items, quantified as an annualised cost.',
-    },
-    {
-      id: 'work',
-      title: 'Prep, opening checks and cleaning routines',
-      line:
-        'Standard routines are work with an owner, a due time and a state at each outlet.',
-      why:
-        'Consistency is a set of tasks that either happened or did not, and verification by visit only samples a fraction of them.',
-      example:
-        'Opening checks not completed at two outlets on three days, visible centrally rather than at the next audit.',
-    },
-    {
-      id: 'records',
-      title: 'Menu items, combos and promotions',
-      line:
-        'Items and promotions are records with components, standard portions, pricing and the period they run.',
-      why:
-        'The standard portion is the reference point that makes variance measurable, and it must live in the system rather than in a manual.',
-      example:
-        'A promotion’s components checked against every outlet’s stock before it goes live.',
-    },
-    {
-      id: 'people',
-      title: 'Crew, shift managers and area managers',
-      line:
-        'Staff are modelled once, and every order, check, refund and stock adjustment carries who handled it.',
-      why:
-        'Throughput and standards compliance both vary by shift and by manager, and neither is visible without attribution.',
-      example:
-        'Service time by shift manager across the same outlet and interval.',
-    },
-    {
-      id: 'workforce',
-      title: 'Rosters against each outlet’s demand curve',
-      line:
-        'Assignment, attendance and availability stay connected to the intervals and outlets they covered.',
-      why:
-        'Every outlet peaks differently, and rostering to a network template is the most common cause of slow service.',
-      example:
-        'Nine shifts understaffed this week against each outlet’s own historical volume by interval.',
-    },
-    {
-      id: 'locations',
-      title: 'Outlets, regions and franchise groups',
-      line:
-        'Locations roll into regions and into the network, with stock, staffing, standards and reporting following the same structure.',
-      why:
-        'A fast food business is a network, and the only useful unit of analysis is the outlet against the standard.',
-      example:
-        'Service time, portion variance and check completion by outlet, directly comparable.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Commissary, suppliers and distributors',
-      line:
-        'Suppliers are relationships with their orders, delivery reliability by outlet, cost movement and balances.',
-      why:
-        'Supply failures show up as local stockouts during a national promotion, which is the most expensive way to find out.',
-      example:
-        'Delivery reliability by outlet, so a chronically under-served site is identified rather than blamed.',
-    },
-    {
-      id: 'workflows',
-      title: 'Refunds, waste and standards escalation',
-      line:
-        'Refunds, comps, wastage and failed standard checks move through defined steps with recorded reasons and escalation.',
-      why:
-        'At volume, discretionary decisions and failed checks need thresholds rather than judgement at each site.',
-      example:
-        'A failed food safety check escalates to the area manager automatically rather than waiting for a report.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Network reporting from identical records',
-      line:
-        'Service time, portion variance, check completion, promotion performance, staffing against volume and outlet comparison come from the operational records.',
-      why:
-        'A network only learns anything if every outlet records the same things the same way.',
-      example:
-        'Outlet ranked against the standard on every operational measure, current rather than compiled monthly.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the network a question',
-      line:
-        'Verity AI answers from your own order, stock, staffing and standards records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions that matter are comparisons across outlets, which are laborious to assemble and easy to ask.',
-      example:
-        '"Which outlets run above target service time at peak?" returns three, with reviews assigned to area managers.',
-    },
-    {
-      id: 'communication',
-      title: 'Escalation that reaches the area manager',
-      line:
-        'Notes, notifications and activity attach to the outlet, order or check they concern.',
-      why:
-        'Outlet-level problems are communicated by phone and are invisible above the shift manager.',
-      example:
-        'An equipment failure recorded against the outlet, visible alongside the service times it caused.',
-    },
-    {
-      id: 'control',
-      title: 'Who can refund, adjust and override',
-      line:
-        'One permission model and one audit trail across every outlet.',
-      why:
-        'A distributed crew workforce with till and stock access needs thresholds and attribution rather than trust.',
-      example:
-        'Refunds and stock adjustments by crew member and outlet, against thresholds.',
-    },
-  ],
-
-  workflowsHeading: 'The same operation, everywhere, recorded the same way.',
-  workflowsLede:
-    'These already run at every outlet. Recorded identically, they make the network comparable.',
-  workflows: [
-    {
-      name: 'Order to handover',
-      steps: [
-        'Order recorded with items, outlet and interval',
-        'Preparation steps completed and timed',
-        'Order handed over and the total service time recorded',
-        'Outliers flagged against the outlet’s target',
-        'Service time aggregated by outlet, interval and shift',
-      ],
-      note:
-        'Speed is only manageable if it is recorded per order rather than sampled.',
-    },
-    {
-      name: 'Portion variance check',
-      steps: [
-        'Items sold pulled for the period per outlet',
-        'Expected consumption calculated from standard portions',
-        'Actual stock consumption reconciled against expected',
-        'Variance above tolerance raised as an exception',
-        'Coaching or process action assigned to the shift manager',
-      ],
-      note:
-        'This single reconciliation is usually the largest recoverable cost in a fast food network.',
-    },
-    {
-      name: 'Promotion launch',
-      steps: [
-        'Promotion defined with its component requirements and period',
-        'Stock checked against requirements at every outlet',
-        'Shortfalls ordered before launch',
-        'Performance tracked by outlet through the period',
-        'Result recorded against the promotion for future planning',
-      ],
-      note:
-        'Advertising an item an outlet cannot serve is the most avoidable failure in the category.',
-    },
-    {
-      name: 'Peak staffing',
-      steps: [
-        'Order volume by interval pulled per outlet from history',
-        'Roster built against that outlet’s own curve',
-        'Attendance confirmed at shift start',
-        'Gaps flagged before the peak',
-        'Service time compared against staffing after the shift',
-      ],
-      note:
-        'Every outlet peaks differently, which is why a network template guarantees failures.',
-    },
-    {
-      name: 'Daily standards',
-      steps: [
-        'Opening, food safety and cleaning checks issued as work',
-        'Completion recorded with the person and time',
-        'Failures raised as exceptions with photographs where relevant',
-        'Escalation to the area manager on repeat failure',
-        'Completion rates reported by outlet',
-      ],
-      note:
-        'Verification stops depending on an area manager being physically present.',
-    },
-    {
-      name: 'Outlet performance review',
-      steps: [
-        'Service time, portion variance and check completion pulled by outlet',
-        'Outlets ranked against the standard rather than against each other',
-        'Causes reviewed with the local records attached',
-        'Actions assigned with owners and dates',
-        'Follow-up tracked to completion',
-      ],
-      note:
-        'Ranking against a standard rather than an average is what makes the review actionable.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask which outlet is not the same business.',
-    lede:
-      'Verity AI reads the same order, stock, staffing and standards records every outlet creates. It answers across the network, only shows what the person asking can see, and can turn the answer into actions assigned to area managers.',
-    panelMeta: 'Grounded in your network records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which outlets run above target service time at peak?',
-      'Where is portion variance above tolerance, and on which items?',
-      'Which outlets are short of stock for the current promotion?',
-      'Which outlets were understaffed against their own demand curve this week?',
-      'Where are opening or food safety checks being missed?',
-      'How did the last promotion perform by outlet?',
-      'Which suppliers deliver least reliably to which outlets?',
-      'What is refund and waste rate by outlet and crew?',
-      'Summarise network performance against standard this week.',
-    ],
-  },
-
-  automationHeading: 'The variances that repeat until someone notices.',
-  automationLede:
-    'Each runs from outlet records at the point the condition is met.',
-  automations: [
-    {
-      trigger: 'Service time exceeds target for an interval',
-      steps: [
-        'Outlet and interval flagged with the orders affected',
-        'Review assigned to the shift manager',
-        'Escalated to the area manager on repeat',
-      ],
-    },
-    {
-      trigger: 'Portion variance exceeds tolerance',
-      steps: [
-        'Variance calculated per item with its cost impact',
-        'Exception raised against the outlet',
-        'Coaching or process action assigned',
-      ],
-    },
-    {
-      trigger: 'A promotion is scheduled',
-      steps: [
-        'Component requirements checked against every outlet’s stock',
-        'Shortfalls raised as orders before launch',
-        'Readiness confirmed per outlet',
-      ],
-    },
-    {
-      trigger: 'A standard check is missed or failed',
-      steps: [
-        'Exception raised with the check, outlet and time',
-        'Action assigned to the shift manager',
-        'Escalated to the area manager on repeat failure',
-      ],
-    },
-    {
-      trigger: 'Forecast volume exceeds staffed capacity',
-      steps: [
-        'Interval flagged with the outlet’s own historical volume',
-        'Cover task assigned to the roster owner',
-        'Outcome recorded against the shift',
-      ],
-    },
-    {
-      trigger: 'Refunds or waste exceed threshold at an outlet',
-      steps: [
-        'Pattern flagged with crew attribution',
-        'Review assigned to the shift manager',
-        'Decision recorded against the outlet',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the network can actually see.',
-  intelligenceLede:
-    'Outlet-level performance against a standard, from identical records.',
-  intelligence: [
-    {
-      area: 'Speed',
-      points: [
-        'Service time by outlet, interval and shift',
-        'Variance against the network standard',
-        'Outliers by item and preparation step',
-        'Trend by outlet over time',
-      ],
-    },
-    {
-      area: 'Cost control',
-      points: [
-        'Portion variance by outlet and item',
-        'Waste by outlet, item and reason',
-        'Refunds and comps against thresholds',
-        'Cost per order by outlet',
-      ],
-    },
-    {
-      area: 'Standards',
-      points: [
-        'Check completion by outlet and type',
-        'Failures and time to resolution',
-        'Repeat failures by outlet',
-        'Escalations raised and closed',
-      ],
-    },
-    {
-      area: 'Staffing',
-      points: [
-        'Orders per interval against staffed hours by outlet',
-        'Attendance and no-shows',
-        'Service time against staffing level',
-        'Labour cost against revenue by outlet',
-      ],
-    },
-    {
-      area: 'Promotions',
-      points: [
-        'Uplift by outlet during the period',
-        'Stock readiness at launch',
-        'Item mix shift during the promotion',
-        'Performance against previous campaigns',
-      ],
+      area: 'Kitchen',
+      title: 'Fryer oil is changed by habit, not by test',
+      scene:
+        'The oil gets topped up and stretched another day. The team is busy and the test strip is missing. A food safety officer asks to see the log, and there is none.',
+      cost:
+        'Bad oil gives poor-tasting food and a risk of failing an inspection. FSSAI has fixed a limit of 25 percent total polar compounds, beyond which the oil must not be used.',
+      fix:
+        'Each fryer has an oil log: the test reading, the change date and the person who did it. Verity prompts a test at set intervals, flags a reading near the limit, and records where the used oil went.',
+      screen: 'upkeep',
+      source: { name: 'Eat Right India, FSSAI, Repurpose Used Cooking Oil', url: 'https://eatrightindia.gov.in/ruco' },
     },
     {
       area: 'Supply',
-      points: [
-        'Delivery reliability by supplier and outlet',
-        'Stockouts by item and outlet',
-        'Cost movement across the network',
-        'Outstanding payable',
+      title: 'Deliveries from the distributor arrive short, warm or late',
+      scene:
+        'The weekly truck brings 40 boxes of frozen patties. The slip says 40, the count is 37. A case of chicken arrived at the wrong temperature. The late truck means the outlet borrows stock from the next outlet.',
+      cost:
+        'You pay for what was not delivered, product is thrown for temperature, and borrowing between outlets is never recorded.',
+      fix:
+        'Deliveries are received against the order with quantity and temperature recorded. Verity flags short or warm items before payment, and an outlet borrow is a recorded transfer between the two locations.',
+      screen: 'stock',
+    },
+    {
+      area: 'Supply',
+      title: 'The signature item runs out at the peak hour',
+      scene:
+        'The best-selling burger bun finishes at 8 pm on Friday. The outlet sells chicken burgers with a different bun, which nobody asked for, or turns the order away.',
+      cost:
+        'A stock-out at peak is a lost sale on the busiest hour of the week, and a customer who learns your menu is unreliable.',
+      fix:
+        'Each item has a reorder point based on use by day of the week. Verity checks the coming weekend’s usual demand against stock and the next delivery slot, and drafts an order in time.',
+      screen: 'stock',
+    },
+    {
+      area: 'Crew',
+      title: 'High crew turnover and a long ramp-up for each new hire',
+      scene:
+        'A trainee joins on Monday and is at the counter by Wednesday. Half the crew are part-timers or students. By the end of the month two have left, and the manager is training again.',
+      cost:
+        'Restaurant industry commentary cites crew attrition of 20 to 25 percent. Every exit costs recruitment, training time and slower service during the learning curve.',
+      fix:
+        'Each person’s station skills and training are recorded with a sign-off. Verity shows who is cleared for which station and who is overdue for training, so a new crew member is not placed at the fryer on day two.',
+      screen: 'crew',
+      source: { name: 'Restaurant India, Issues and Challenges by Restaurant Industry, 2013', url: 'https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121' },
+    },
+    {
+      area: 'Crew',
+      title: 'The roster does not match demand by the hour',
+      scene:
+        'The same six people are on from 11 to 9. Lunch and dinner peaks are heavy and the middle of the afternoon is empty. Overtime appears on weekends because nobody planned for them.',
+      cost:
+        'Labour is one of the biggest controllable costs, and paying for the quiet hours while being short at the peak hurts both cost and speed.',
+      fix:
+        'Orders per hour by weekday are laid against the roster. Verity shows over- and under-staffed hours, so the manager moves shifts before the week begins and checks the wage hours against sales.',
+      screen: 'crew',
+    },
+    {
+      area: 'Franchise',
+      title: 'Audit scores, royalty and brand standards arrive as separate reports',
+      scene:
+        'The franchisor’s inspection finds the sauce station out of standard and the signage dirty. The royalty statement lands in another inbox. The corrective action is a message in a group chat.',
+      cost:
+        'A failed audit can mean a penalty or a warning, and royalty and marketing fees are paid on sales that you must be able to match to your own records.',
+      fix:
+        'Audit findings become tasks with an owner and a due date, and the checklist for the next visit is run weekly. Sales for the royalty period come from the same orders, so the statement can be checked against them.',
+      screen: 'audits',
+    },
+    {
+      area: 'Equipment',
+      title: 'A fryer, freezer or shake machine fails at the busiest hour',
+      scene:
+        'The soft-serve machine misses its cleaning cycle. The walk-in freezer door seal is torn. One of two fryers fails on a Saturday evening, and the second cannot carry the rush.',
+      cost:
+        'Menu items go off, product is lost in a failed freezer and the weekend call-out costs more.',
+      fix:
+        'Each machine is a record with its service and cleaning schedule and vendor. Verity raises a task before each is due, logs temperatures for the freezers and keeps the history of repairs.',
+      screen: 'upkeep',
+    },
+    {
+      area: 'Cash',
+      title: 'Voids, refunds and day-end cash across shifts',
+      scene:
+        'A void after payment, a refund for a missing item, a staff meal rung up as zero. Two shift leads share one drawer. The day-end count is off by ₹600 and the explanation is “the rush”.',
+      cost:
+        'Voids and refunds are the most common place for loss and misuse in counter service, and a shortage with no name attached cannot be fixed.',
+      fix:
+        'Voids and refunds above a limit need a manager approval with a reason. Verity totals them by person and shift, and the day-end cash and card totals are compared with orders, with mismatches flagged.',
+      screen: 'owner',
+    },
+    {
+      area: 'Owner',
+      title: 'Many outlets, and the weakest one is not obvious',
+      scene:
+        'A regional manager visits two outlets a day. Each reports its own way, by message or by photo. The weakest outlet this month is found on the visit, not before.',
+      cost:
+        'A poor outlet can carry on losing money for months, while a good one gives no lesson because nobody can say why it works.',
+      fix:
+        'Each outlet is a location in one system. Verity ranks them on speed, food cost, waste, audit score, labour and cash accuracy, so the manager visits where the numbers say.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The figures behind fast food’s thin margin.',
+  factsLede: 'From published sources, with the source named under each. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '25%',
+      text: 'is the Total Polar Compounds limit FSSAI has fixed for frying oil, beyond which it shall not be used. Operators have had to monitor frying oil quality since 1 July 2018.',
+      source: { name: 'Eat Right India, FSSAI', year: '2018 rule', url: 'https://eatrightindia.gov.in/ruco' },
+    },
+    {
+      figure: '20 to 25%',
+      text: 'is the industry attrition rate cited for restaurant staff in a trade article, with availability of trained staff described as low. The article is dated, so treat it as an indication.',
+      source: { name: 'Restaurant India, Issues and Challenges by Restaurant Industry', year: '2013', url: 'https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121' },
+    },
+    {
+      figure: 'Second-largest cost',
+      text: 'is how the same article describes rent in food service outlets, after raw materials.',
+      source: { name: 'Restaurant India, Issues and Challenges by Restaurant Industry', year: '2013', url: 'https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121' },
+    },
+    {
+      figure: 'Normalisation',
+      text: 'is how rating agency ICRA described India’s QSR industry at the end of 2025, after two challenging years, with rising fixed costs and continued store additions pressing on franchise economics.',
+      source: { name: 'ICRA, QSR industry research summary', year: '2025', url: 'https://www.icra.in/Rating/DownloadResearchSummaryReport?id=6719' },
+    },
+  ],
+  factsNote:
+    'The attrition and rent statements come from a 2013 trade article and are indications, not current measures. The ICRA wording is taken from search results of its December 2025 summary, whose slides we could not open in full. The oil rule is from a government site.',
+
+  screensHeading: 'The screens an outlet and its owner would use every day.',
+  screensLede: 'Seven views, each built for one job, set up in your own menu, stations and outlet names.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Outlets / Today',
+      meta: 'Region: South, 6 outlets',
+      heading: 'The owner’s or regional manager’s morning view',
+      caption:
+        'All outlets ranked on speed, food cost, waste, audit score, cash and labour, with the items that need a decision under them. It replaces the morning round of calls.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹3,86,500', note: '6 outlets' },
+            { label: 'Average handover', value: '2 min 41 s', note: 'standard 2 min' },
+            { label: 'Food cost', value: '32.4%', note: 'target 31%' },
+            { label: 'Open audit actions', value: '9', note: '3 overdue' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Outlet', 'Handover', 'Food cost', 'Waste', 'Cash'],
+          rows: [
+            ['MG Road', '2:05', '30.8%', '2.1%', ['Tied', 'ok']],
+            ['Koramangala', '2:32', '31.9%', '3.0%', ['Tied', 'ok']],
+            ['Whitefield', '3:18', '34.6%', '4.8%', ['Off ₹640', 'late', 'Explained', 'ok']],
+            ['Indiranagar', '2:48', '32.2%', '2.9%', ['Tied', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Whitefield has missed the handover standard for 5 days running at the 1 to 2 pm slot.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'service',
+      title: 'Speed and accuracy',
+      meta: 'Outlet: Whitefield, last 7 days',
+      heading: 'Where the lunch queue is building',
+      caption:
+        'Order-to-handover time by hour and station, with errors grouped by cause. The manager can see which hour and which station slips before customers say so.',
+      blocks: [
+        { type: 'title', text: 'Average handover time by hour, minutes' },
+        {
+          type: 'bars',
+          items: [
+            { label: '12 to 1 pm', value: 70, display: '2:50' },
+            { label: '1 to 2 pm', value: 100, display: '3:55', tone: 'muted' },
+            { label: '2 to 4 pm', value: 48, display: '1:50' },
+            { label: '7 to 9 pm', value: 75, display: '3:00' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Error cause', 'Orders', 'Station', 'Hour', 'Action'],
+          rows: [
+            ['Missing item', '17', 'Packing', '8 to 9 pm', ['Checklist', 'flag', 'Added', 'ok']],
+            ['Wrong sauce', '9', 'Assembly', '1 to 2 pm', ['Retrain', 'flag']],
+            ['Cold fries', '7', 'Fryer', '1 to 2 pm', ['Hold time', 'late', 'Set', 'ok']],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'menu',
+      title: 'Menu and combos',
+      meta: 'Cost at latest purchase rates',
+      heading: 'What each combo earns at today’s costs',
+      caption:
+        'Every item and combo with price, cost, margin and the share sold on discount. A change in cheese or chicken shows in the margin the same week.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Combo', 'Sold, week', 'Price', 'Cost', 'Margin'],
+          rows: [
+            ['Classic burger meal', '1,420', '₹199', '₹71', ['64%', 'ok']],
+            ['Festive family box', '380', '₹649', '₹318', ['51%', 'late', 'Repriced', 'ok']],
+            ['Chicken wings x6', '910', '₹179', '₹68', ['62%', 'ok']],
+            ['Cheese burger meal', '1,060', '₹229', '₹94', ['59%', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Cheese rose 11% since July. Cheese burger meal margin fell by 4 points.', action: 'Review price' },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock, portions and deliveries',
+      meta: 'Outlet: Whitefield',
+      heading: 'What was used against what should have been',
+      caption:
+        'Use against the standard for each key ingredient, cooked-food waste by hour, and the checks done on today’s delivery.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Ingredient', 'Should use', 'Used', 'Gap', 'Status'],
+          rows: [
+            ['Cheese slices', '1,420', '1,586', '+11.7%', ['High', 'late', 'Retrained', 'ok']],
+            ['Burger patties', '2,310', '2,330', '+0.9%', ['OK', 'ok']],
+            ['Sauce, litres', '38', '45', '+18%', ['High', 'flag']],
+            ['Frying oil, litres', '120', '124', '+3.3%', ['OK', 'ok']],
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Delivery today', 'Ordered', 'Received', 'Temperature', 'Status'],
+          rows: [
+            ['Frozen patties', '40', '37', '-18°C', ['Short 3', 'late', 'Credit asked', 'info']],
+            ['Chicken pieces', '24', '24', '6°C', ['Too warm', 'flag', 'Returned', 'ok']],
+            ['Buns', '60', '60', 'Ambient', ['OK', 'ok']],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'crew',
+      title: 'Crew and roster',
+      meta: 'Next week',
+      heading: 'Shifts that match the day, and who is cleared where',
+      caption:
+        'Orders by hour against crew on shift, and each person’s station sign-offs. Gaps are marked while there is time to move a shift.',
+      blocks: [
+        { type: 'title', text: 'Orders per hour against crew on shift, Friday' },
+        {
+          type: 'bars',
+          items: [
+            { label: '11 am to 1 pm', value: 60, display: '58 orders, 5 crew' },
+            { label: '1 to 3 pm', value: 100, display: '96 orders, 4 crew', tone: 'muted' },
+            { label: '3 to 7 pm', value: 38, display: '37 orders, 5 crew', tone: 'muted' },
+            { label: '7 to 10 pm', value: 92, display: '88 orders, 5 crew' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Crew', 'Role', 'Fryer', 'Assembly', 'Training'],
+          rows: [
+            ['Anil', 'Shift lead', ['Cleared', 'ok'], ['Cleared', 'ok'], ['Complete', 'ok']],
+            ['Pooja', 'Counter', ['No', 'muted'], ['Cleared', 'ok'], ['Food safety due', 'late', 'Booked', 'info']],
+            ['Rohan', 'New hire', ['No', 'muted'], ['In training', 'info'], ['Week 1', 'info']],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'upkeep',
+      title: 'Oil, machines and licences',
+      meta: 'Due this month',
+      heading: 'Daily logs and service dates in one place',
+      caption:
+        'Fryer oil readings, freezer temperatures, machine cleaning and service, and licence dates, each with a person and a date.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Fryer', 'Last test', 'Reading', 'Last change', 'Status'],
+          rows: [
+            ['Fryer 1', 'Today 11:30', '19%', '14 Oct', ['OK', 'ok']],
+            ['Fryer 2', 'Today 11:35', '23%', '12 Oct', ['Near limit', 'late', 'Changed', 'ok']],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Freezer temperature, morning', meta: '-19°C, Anil, 8:05', done: true },
+            { text: 'Shake machine cleaning cycle', meta: 'Due 10 pm', done: false },
+            { text: 'Used oil handover recorded', meta: 'Collected Mon, receipt filed', done: true },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'audits',
+      title: 'Audits and actions',
+      meta: 'Brand standards',
+      heading: 'Findings that turn into jobs with names',
+      caption:
+        'Every audit finding is an action with an owner and a date. The weekly self-check uses the same list, so the next visit does not come as a surprise.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Open',
+              cards: [
+                { title: 'Sauce station out of standard', meta: 'Whitefield, due 18 Oct, owner Anil', tag: ['Open', 'flag', 'Fixed', 'ok'] },
+                { title: 'Signage lit but dirty', meta: 'MG Road, due 17 Oct', tag: ['Overdue', 'late', 'Cleaned', 'ok'] },
+              ],
+            },
+            {
+              name: 'Waiting for check',
+              cards: [
+                { title: 'Hand-wash log gaps', meta: 'Koramangala, fixed 12 Oct', tag: ['Re-check', 'info'] },
+                { title: 'Uniform standard', meta: 'Indiranagar, fixed 10 Oct', tag: ['Re-check', 'info'] },
+              ],
+            },
+          ],
+        },
+        { type: 'alert', text: 'September royalty is due on sales of ₹1.14 crore. Your recorded sales are ₹1.13 crore, a ₹0.7 lakh gap to explain.', action: 'Reconcile' },
       ],
     },
   ],
-  intelligenceNote:
-    'The value here is comparability. Every outlet records the same things the same way, so a difference is a fact rather than a formatting artefact.',
 
-  rolesHeading: 'A network, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
+  dayHeading: 'The same Friday, before and after.',
+  dayLede: 'The crew does the same job. The outlet just starts to leave a record that someone can read in time.',
+  day: [
+    {
+      time: '10:30 am',
+      before: 'The shift lead eyeballs the walk-in and estimates the day’s prep from memory.',
+      after: 'The prep sheet shows Friday’s usual quantities by hour, and the bun shortage was ordered on Wednesday.',
+    },
+    {
+      time: '1:15 pm',
+      before: 'The queue builds. The manager is on the counter and the owner learns about it from a review.',
+      after: 'The handover time crossed 3 minutes at 1:10. A flag went to the manager, who moved one person from packing to assembly.',
+    },
+    {
+      time: '3:30 pm',
+      before: 'The delivery truck arrives short. The slip is signed and nobody checks the frozen count.',
+      after: 'The received count is entered against the order. The 3-box shortage is flagged and a credit request is raised.',
+    },
+    {
+      time: '6:00 pm',
+      before: 'Fryer oil is “probably fine”. The test strips are in a drawer somewhere.',
+      after: 'Verity prompts the test. Fryer 2 reads 23 percent and is changed before the dinner peak.',
+    },
+    {
+      time: '10:30 pm',
+      before: 'The closing lead counts the drawer. It is ₹600 off and the explanation is the rush.',
+      after: 'Two voids and one refund explain ₹540. The remaining ₹60 is noted for the next shift.',
+    },
+    {
+      time: 'Monthly',
+      before: 'The franchisor’s audit and your own numbers are reconciled by hand over a weekend.',
+      after: 'Audit actions, sales for the royalty and the outlet scorecard are ready from records kept all month.',
+    },
+  ],
+
+  approach: {
+    heading: 'Four weeks from the first visit to a working outlet.',
+    lede:
+      'You do not receive a login and a manual. We spend a lunch peak and a close at one of your outlets, build Verity around your menu and your standards, then roll out outlet by outlet.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a lunch peak and a closing at one outlet. Follow an order from counter to handover, see how stock and cash are handled, and read your latest audit report and royalty statement.',
+        you: 'Two to three hours of yours and one outlet manager’s. A month of sales reports, recent invoices and your standard operating checklist.',
+        get: 'A written map of your outlet: menu and recipes, stations, stock list, shifts, standards and the first problems we will close.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up the menu with recipes and weights, combos, handover standards, reorder points, shifts, approval limits, oil and machine schedules, and audit checklists, then build the seven screens in your language.',
+        you: 'Check recipes and standards with one outlet manager. Tell us where a rule does not match how you run.',
+        get: 'A working Verity with your real menu, stations and standards, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in the menu, suppliers, stock and crew details from your sheets. Train the shift leads and crew at their stations during real shifts, then extend to the remaining outlets.',
+        you: 'An opening stock count and the crew list. One hour with each role at the pilot outlet.',
+        get: 'The pilot outlet running on Verity and a plan to bring the others in.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first weeks of numbers with you, tune the standards and thresholds, and help with each new outlet and each new offer.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps pace with new outlets and offers, with a named person responsible for it.',
+      },
+    ],
+    bring: [
+      'Your menu with prices, combos and any recipe or portion cards',
+      'A month of sales reports and distributor invoices',
+      'Your latest audit report and royalty statement, if you are a franchisee',
+      'Crew list with roles and the current roster pattern',
+      'Licence details and the service dates of fryers, freezers and other machines',
+    ],
+    time: 'About 8 to 12 hours of your own time across the four weeks, mostly in week 1. Your outlet manager or regional manager needs a few more.',
+    after: 'Nobody is hired to run Verity. Orders, prep and deliveries are recorded in the course of the shift, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask your outlets a question.',
+    lede:
+      'Verity AI reads your own orders, stock, crew and audit records. Ask in plain words, then turn the answer into a task for the right person.',
+    examples: [
+      {
+        q: 'Which outlet is slowest at lunch, and why?',
+        a: 'Whitefield, at 3:55 between 1 and 2 pm. The queue builds at assembly, and four crew are on against five at the other outlets.',
+        rows: [['Whitefield', '3:55'], ['Indiranagar', '2:48'], ['Koramangala', '2:32'], ['MG Road', '2:05']],
+        action: 'Create a roster task for Whitefield’s manager',
+      },
+      {
+        q: 'Where is cheese use above standard this week?',
+        a: 'Whitefield is 11.7 percent over, mostly on the 1 to 3 pm shift. Other outlets are within 3 percent.',
+        rows: [['Whitefield', '+11.7%'], ['Indiranagar', '+2.8%'], ['Koramangala', '+1.9%'], ['MG Road', '+0.6%']],
+      },
+      {
+        q: 'What audit actions are overdue?',
+        a: 'Three. Sauce station at Whitefield, signage at MG Road and a hand-wash log at Koramangala that is waiting for a re-check.',
+        action: 'Assign each to its outlet manager',
+      },
+    ],
+  },
+
+  automationHeading: 'The routine checks nobody should have to remember.',
+  automationLede: 'Set once, then they run from your records. The crew still does the job on the floor; Verity makes sure the right person is told at the right time.',
+  automations: [
+    {
+      when: 'Handover time passes the standard for three orders running',
+      then: ['Flagged on the manager’s screen', 'Station and hour recorded', 'Fix and reason noted after the rush'],
+    },
+    {
+      when: 'A delivery is received short or at the wrong temperature',
+      then: ['Marked against the distributor', 'Credit or return task to the manager', 'Held from payment until settled'],
+    },
+    {
+      when: 'A fryer test is due',
+      then: ['Task to the shift lead', 'Reading recorded with the time', 'Oil change task if the reading is near the limit'],
+    },
+    {
+      when: 'A void or refund is above your limit',
+      then: ['Held for manager approval', 'Reason attached to the order', 'Totals updated by person and shift'],
+    },
+    {
+      when: 'An ingredient falls below its reorder point',
+      then: ['Checked against the weekend’s usual demand', 'Order drafted for the next truck', 'Stock updated on receipt'],
+    },
+    {
+      when: 'An audit action passes its due date',
+      then: ['Escalated to the outlet manager', 'Shown to the regional manager', 'Closed with a photo or note'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a fast food business has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules lean on in order, so they can be shown when someone asks.',
+    items: [
+      {
+        name: 'FSSAI registration or licence for each outlet',
+        what: 'Each outlet is a food business and needs registration or a licence for its category. From 1 April 2026 basic registration generally applies up to ₹1.5 crore of turnover, and licences generally no longer need renewal. Check the band for each outlet.',
+        how: 'Each outlet’s registration is stored with its number, category and dates, and a change in address or menu category is a task.',
+        source: { name: 'SetIndiaBiz summary of FSSAI 2026 changes', url: 'https://www.setindiabiz.com/blog/fssai-2026-reforms' },
+      },
+      {
+        name: 'Frying oil quality',
+        what: 'FSSAI has fixed 25 percent Total Polar Compounds as the limit beyond which frying oil must not be used, and food businesses have had to monitor oil quality since 1 July 2018. Larger operators are also expected to hand used oil only to authorised collectors.',
+        how: 'Each fryer carries test readings, change dates and used-oil handover records, ready if an officer asks.',
+        source: { name: 'Eat Right India, FSSAI', url: 'https://eatrightindia.gov.in/ruco' },
+      },
+      {
+        name: 'Hygiene, temperature and staff health records',
+        what: 'Licensed outlets are generally expected to keep records of cleaning, cold-storage temperatures, pest control and staff health, and trained food safety supervision depends on the licence category.',
+        how: 'Daily checks are signed off at the outlet, and training and health certificates sit on each person’s record with expiry dates.',
+      },
+      {
+        name: 'Franchise agreement standards',
+        what: 'A franchise agreement sets brand standards, audit rules, royalty and marketing fees. The terms differ by brand, so the agreement is the rule that applies to you.',
+        how: 'Audit checklists, findings and actions are recorded per outlet, and sales for each royalty period come from the same orders.',
+      },
+    ],
+    note: 'Rules change and differ by city, state and brand. Confirm current requirements with your accountant or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone reads the same records, through their own window.',
+  rolesLede: 'A crew member should not see margins. A regional manager should not have to ask for the numbers. Each role opens on what it uses.',
   roles: [
-    {
-      role: 'Network owner',
-      question: 'Which outlets are not the same business?',
-      focus: 'Service time and portion variance by outlet, standards completion, promotion performance, cost per order.',
-    },
-    {
-      role: 'Area manager',
-      question: 'What needs attention across my outlets?',
-      focus: 'Exceptions and repeat failures, understaffed shifts, stock readiness, actions outstanding.',
-    },
-    {
-      role: 'Shift manager',
-      question: 'Is this shift set up to run?',
-      focus: 'Staffing against the interval curve, opening checks, stock for the promotion, service time so far.',
-    },
-    {
-      role: 'Supply and purchasing',
-      question: 'Is every outlet stocked for what we are advertising?',
-      focus: 'Promotion requirements against outlet stock, delivery reliability, cost movement, payables.',
-    },
+    { role: 'Owner or franchisee', question: 'Which outlet needs me, and why?', sees: 'Outlet ranking on speed, food cost, waste, audits and cash, plus sales against royalty and each outlet’s open actions.' },
+    { role: 'Regional manager', question: 'Where should I go this week?', sees: 'Outlets side by side, overdue audit actions, stock-outs, errors and roster gaps.' },
+    { role: 'Outlet manager', question: 'What will slip today?', sees: 'Live handover times, stock for today, the roster, deliveries to check and approvals waiting.' },
+    { role: 'Shift lead', question: 'What must I log and sign off?', sees: 'Oil tests, temperature checks, voids and refunds to approve, and the cash count at close.' },
+    { role: 'Accountant', question: 'What was sold, bought and paid?', sees: 'Sales by payment mode and channel, distributor invoices matched to deliveries, and royalty period totals.' },
   ],
 
-  useCasesHeading: 'What fast food operators use Verity for',
-  useCases: [
-    {
-      name: 'Service speed by outlet',
-      body: 'Time from order to handover recorded per order, so the outlet running at double the median is named rather than averaged away.',
-    },
-    {
-      name: 'Portion variance control',
-      body: 'Consumption reconciled against items sold per outlet, turning the category’s quietest margin loss into a specific cost.',
-    },
-    {
-      name: 'Promotion readiness',
-      body: 'Campaign component requirements checked against every outlet’s stock before launch, so nothing is advertised that cannot be served.',
-    },
-    {
-      name: 'Outlet-specific rostering',
-      body: 'Orders by interval recorded per outlet, so staffing follows each site’s own demand curve rather than a network template.',
-    },
-    {
-      name: 'Standards without a visit',
-      body: 'Opening, safety and cleaning checks as work with owners and states, so completion and failure are visible centrally.',
-    },
-    {
-      name: 'Network comparability',
-      body: 'Every outlet recording the same things the same way, so comparison is the records themselves rather than a monthly reconciliation.',
-    },
-    {
-      name: 'Supply reliability by outlet',
-      body: 'Delivery performance measured per outlet, identifying chronically under-served sites rather than blaming them.',
-    },
-    {
-      name: 'Asking the network questions',
-      body: 'Plain-language comparisons across outlets, intervals and items, with actions assigned to area managers in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your billing and kitchen display system. We agree during setup how orders and payments reach Verity.',
+      'The delivery apps you sell on. We record their orders by channel.',
+      'Your franchisor’s portal and audits. Verity tracks the actions that come out of them.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Run your billing counter or the kitchen display.',
+      'Take customer orders or run an ordering app.',
+      'Send messages to customers or distributors on its own.',
+      'File your returns or run your payroll.',
+    ],
+    migration:
+      'We bring in the menu, suppliers, stock, crew and past audit actions from the sheets and portals you use now, starting with one pilot outlet, so the others keep serving while it happens.',
+  },
 
-  migration:
-    'Billing at each outlet continues and is mapped during implementation. Menus, standard portions, suppliers and outlet structure are brought across, and Verity is introduced as the operational layer that records every outlet identically.',
-
-  faqHeading: 'Questions fast food operators ask',
+  faqHeading: 'Questions fast food owners ask.',
   faqs: [
     [
-      'What can AI software do for a fast food business?',
-      'Verity AI answers questions from your own order, stock, staffing and standards records: which outlets run above target service time at peak, where portion variance is above tolerance and on which items, which outlets are short of stock for the current promotion, where checks are being missed. Each answer can become an action assigned to an area manager.',
+      'My crew is busy and young. Will they really log things?',
+      'Only where it takes a tap. Orders and stock come from the order itself, and the crew log just remakes, wastes, oil tests and temperatures. We train during live shifts at their station.',
     ],
     [
-      'Can Verity measure service speed?',
-      'Time from order to handover is recorded per order with the outlet, interval and crew, so speed is managed at the outlet level against a standard rather than reported as a network median that hides the outliers.',
+      'Does Verity replace my billing or kitchen display system?',
+      'No. Those keep running the counter. We agree with you how orders and payments reach Verity, which then handles stock, crew, audits, cash and the comparison between outlets.',
     ],
     [
-      'How does it help with portion control?',
-      'Stock consumption is reconciled against items sold using the standard portions held on each item, so an outlet running consistently over is identified with the cost quantified rather than absorbed into general food cost.',
+      'I am a franchisee. Does this clash with my franchisor’s systems?',
+      'No. Their systems and audits stay as they are. Verity holds your own records and turns audit findings into actions with an owner, and it helps you check sales against royalty statements.',
     ],
     [
-      'Does it help with promotions?',
-      'A promotion’s component requirements are checked against every outlet’s stock before launch, so shortfalls are ordered rather than discovered by customers during the campaign.',
+      'Can it measure speed of service?',
+      'Where order times are available from your billing or kitchen display, yes. We agree during setup how those times reach Verity. If they are not available, we start with what can be recorded and add more later.',
     ],
     [
-      'Can it work across franchised outlets?',
-      'Outlets roll into regions and into the network with the same structure and permissions, so franchise groups can see their own sites while the network sees comparable records rather than differently formatted submissions.',
+      'I have two outlets. Is this too much?',
+      'Two outlets are where side-by-side comparison first helps. We set up only what you need, in the same four weeks, and the second outlet shows the first one what is possible.',
     ],
     [
-      'Does it replace the billing system at each outlet?',
-      'No. Billing continues and is mapped during implementation. Verity is the operational layer over it — service times, stock and portion reconciliation, staffing, standards and network reporting.',
+      'Can I see all my outlets together?',
+      'Yes. Each outlet is a location in one system. You can compare speed, food cost, waste, audit score, labour and cash side by side, and transfers between outlets are recorded.',
     ],
     [
-      'How does it help with staffing?',
-      'Order volume by interval is recorded per outlet, so each site is rostered against its own demand curve rather than a network template, and shifts that will be short are flagged before the peak.',
+      'Who can see my data?',
+      'Only the people you allow. Access is set by role, so crew, managers, regional managers and your accountant each see what they need, and every change is recorded with who made it and when.',
     ],
     [
-      'Can standards be checked without visiting?',
-      'Opening, food safety and cleaning routines are work with owners, due times and states, so completion and failure are visible centrally and repeat failures escalate automatically.',
+      'How soon will it be useful?',
+      'Stock-outs, delivery checks and audit actions need only existing data, so we aim to have them first. Speed and portion patterns become reliable after a few weeks of recorded service.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the network operates, configuration, migration of menus, portions, suppliers and outlet structure, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of outlets, people and what you want set up. Message us and we will give you a clear number after a short conversation about how your outlets run.',
     ],
   ],
 
-  ctaHeading: 'Start with the outlet that is slowest.',
-  ctaLede:
-    'In most networks it has been slowest for months and nobody can say why. Tell us how outlets report today and we will show you what comparability looks like.',
+  related: ['restaurants', 'cloud-kitchens', 'cafes', 'bakeries', 'catering-businesses', 'convenience-stores'],
 
-  related: ['restaurants', 'cafes', 'cloud-kitchens', 'catering-businesses', 'retail-stores', 'hotels'],
+  ctaHeading: 'Start with your slowest hour.',
+  ctaLede:
+    'Tell us how your outlets run and we will show you the slow hours, the portion gaps and the open audit actions it would find, using your own numbers.',
 };

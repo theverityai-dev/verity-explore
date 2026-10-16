@@ -1,181 +1,686 @@
 export default {
+  schema: 2,
   slug: 'car-washes',
   status: 'published',
   plural: 'car washes',
   subject: 'car wash',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for car washes | Verity',
+    title: 'Car wash management software for Indian car washes | Verity',
     description:
-      'Verity gives car washes one system for throughput per bay, consumable and water cost per wash, weather-driven demand, staffing to the hour and plan member behaviour.',
+      'The 14 problems that drain a car wash, what each costs, and the Verity screens that fix them: idle bays, lapsed monthly plans, water and shampoo waste, cash gaps and more.',
     keywords: [
-      'AI software for car washes',
-      'car wash management software',
-      'bay throughput and consumable cost software',
-      'car wash membership and staffing software',
+      'car wash management software India',
+      'car wash monthly plan tracking',
+      'doorstep car wash business software',
+      'car detailing studio job tracking',
+      'car wash water and consumable tracking',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'schedule', 'workforce', 'locations', 'ai'],
 
   hero: {
     eyebrow: 'Verity for car washes',
-    headline: 'Six vehicles an hour or eleven. Same staff, same bay, very different business.',
+    headline: 'Your bays sit idle at noon and your monthly plan customers quietly stop coming.',
     lede:
-      'A car wash is a throughput business with a consumable cost per vehicle. Verity measures both, hour by hour, against the staff you rostered.',
-    note: 'Verity runs the site. Wash equipment and payment terminals stay where they are.',
-    panel: {
-      title: 'Site',
-      meta: 'This week',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Vehicles washed', value: '2,140', note: '3 bays' },
-        { label: 'Peak throughput', value: '11.2/hour', note: 'off-peak 4.1' },
-        { label: 'Consumable cost', value: '₹34/wash', note: 'target ₹27' },
-        { label: 'Plan members inactive', value: '86', note: 'paying, not visiting' },
-      ],
-      rows: [
-        { name: 'Consumable cost ₹7 above target per wash', meta: 'Concentrated on one bay', active: true },
-        { name: 'Staffed for peak on 3 low-demand days', meta: 'Labour above requirement', active: true },
-        { name: '86 plan members not visiting', meta: 'Cancellation risk building', active: true },
-        { name: '2 machines overdue for service', meta: 'Throughput falling on bay 3', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own site in this shape.',
-    },
+      'A car wash earns from vehicles through the bay and from customers who come back every week. Both leak, because the information sits in a job slip, a cash box and the supervisor’s memory. Verity puts every vehicle, every plan, every litre of water and every rupee in one place that tells you what to do today.',
+    oneLine:
+      'One system that knows every vehicle, every bay, every can of shampoo and every rupee collected, and tells you what needs your attention before it costs you.',
+    note: 'No new staff needed. The record is made when the vehicle is checked in and handed back.',
+    screen: 'owner',
+    screenNote: 'bays, plans, stock and cash',
   },
 
-  overview: {
-    heading: 'Small ticket, high volume, and every input measured per vehicle.',
+  today: {
+    heading: 'The wash runs well in the bay and blind in the office.',
     paragraphs: [
-      'A car wash earns a small amount many times. That makes throughput the primary variable: eleven vehicles an hour at peak and four off-peak is the same site running as two different businesses, and the labour rostered against those hours decides whether either is profitable.',
-      'The second characteristic is consumable cost per vehicle. Chemicals, water, cloth and power are consumed per wash, and seven rupees above target across two thousand washes is a real monthly amount — usually concentrated on one bay, one shift or one wash type rather than spread evenly.',
-      'The third is that demand is weather-driven and highly uneven. Staffing to an average produces overstaffed slow days and queues on busy ones, and the pattern is knowable from the site’s own history.',
-      'The fourth is that unlimited plans change the economics. A member who does not visit is profit and a member who visits daily is a cost, and eighty-six inactive members is both current margin and imminent cancellation.',
-      'The fifth is machine condition, which shows up as falling throughput before it shows up as a breakdown.',
-      'Verity measures throughput and consumable cost per bay and per hour, holds plan member behaviour, and connects staffing to demand.',
+      'The work is visible. Cars come in, foam goes on, the bay clears. What is not visible is everything around it: which monthly customer has not been in for three weeks, how much shampoo concentrate went into last week’s washes, how many litres each wash really used, and whether the cash in the box matches the vehicles that left.',
+      'That information exists in pieces. A slip book or a phone app for jobs, a notebook of monthly passes, a register of staff days, a tanker driver’s message, and a lot of memory. The owner is often at the site as well, so the system that joins the pieces is you, standing near the bay.',
+      'The result is not a crisis. It is a slow leak across idle hours, expired passes nobody chased, free washes nobody approved and chemicals used by habit. It shows up only when the month’s collection feels lower than the number of vehicles you saw.',
     ],
+    stack: ['Job slip book or phone app', 'Cash box and UPI QR code', 'Notebook of monthly passes', 'WhatsApp groups with the team', 'Supervisor’s memory'],
+    stackNote: 'Each of these does its own job. None of them talk to each other, which is the problem.',
   },
 
-  terminology: [
-    ['Wash types, packages, add-ons', 'Work'],
-    ['Bays, tunnels, machines', 'Locations'],
-    ['Chemicals, water, cloth, power', 'Inventory'],
-    ['Plan members, walk-ins, fleet accounts', 'Relationships'],
-    ['Throughput, queue, cycle time', 'Workflows'],
-    ['Attendants, shifts, rosters', 'People'],
-    ['Pricing, discounts, approvals', 'Control'],
+  painsHeading: 'Where a car wash actually loses money.',
+  painsLede:
+    'These are the situations car wash owners describe again and again, whether they run a fixed site, a doorstep service for apartment societies or a detailing studio. For each one: what it looks like on a normal day, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Customers',
+      title: 'Monthly plan customers pay once and then stop visiting',
+      scene:
+        'A customer buys a pass for eight washes. Three weeks later only two have been used. Nobody on the team notices, the pass lapses, and the customer quietly goes to the wash near the office.',
+      cost:
+        'Example arithmetic: 150 plan customers paying ₹1,800 a month is ₹32 lakh a year. If 20 of them drift away each month without a single call, that is a steady ₹4 lakh a year of repeat income that you never see leaving.',
+      fix:
+        'Every pass is recorded against the customer and the vehicle with the washes used and left. Verity lists customers who are behind on visits or near expiry, and gives the supervisor a call task with the reason, so the follow-up happens while the customer is still undecided.',
+      screen: 'members',
+    },
+    {
+      area: 'Customers',
+      title: 'Walk-in customers are strangers every single time',
+      scene:
+        'A man in a white Creta comes in on the first Sunday of each month. Nobody knows his name, his number or what he usually takes. He is a regular in practice and a stranger in your records.',
+      cost:
+        'You cannot offer him a plan, remind him when he is overdue, or tell whether he has gone elsewhere. Every walk-in who could have become a plan customer is a missed sale.',
+      fix:
+        'The vehicle number is the record. A phone number and the usual service are noted at the first visit, and Verity shows repeat visitors who do not have a plan yet, with a suggested offer for the front desk to make.',
+      screen: 'members',
+    },
+    {
+      area: 'Customers',
+      title: 'Doorstep and apartment society customers dispute whether the car was cleaned',
+      scene:
+        'In a society with 60 subscribed cars, the cleaner skips a few on a rainy day. At month end a resident says the car was cleaned only twice a week, and the cleaner says four times. There is no record either way.',
+      cost:
+        'Refunds given to avoid an argument, a complaint in the society’s WhatsApp group, and the risk of losing the whole society, which may be a dozen or more subscribers at once.',
+      fix:
+        'Each doorstep clean is ticked on the cleaner’s list against the vehicle, with the date. The resident’s record shows what was done and what was missed, and a missed clean becomes a task for a make-up visit rather than an argument.',
+      screen: 'job',
+    },
+    {
+      area: 'Detailing',
+      title: 'Coating and detailing enquiries go cold',
+      scene:
+        'A customer asks about a ceramic coating or paint protection, gets a quote in a message, and says he will think about it. Nobody calls him again. A week later he has booked with a studio that did.',
+      cost:
+        'Example arithmetic: one coating job at ₹18,000 is worth the same as about 60 basic washes. Five lost enquiries a month is ₹90,000 of work that was asked for and not chased.',
+      fix:
+        'An enquiry is a record with the vehicle, the quote, the date and an owner. Verity lists quotes with no reply after three days, and puts them on the owner’s list with the customer’s history beside them.',
+      screen: 'quotes',
+    },
+    {
+      area: 'Bays and time',
+      title: 'Bays sit idle in the afternoon and queue on Sunday morning',
+      scene:
+        'On Sunday between 8 and 11 there are twelve cars waiting and customers leave. On Tuesday after lunch two bays stand empty for three hours while the full team is paid.',
+      cost:
+        'A staffed bay hour that earns nothing is lost for good. Because nobody writes it down as a number, nobody manages it.',
+      fix:
+        'Each vehicle is logged with its check-in and hand-back time and its bay. Verity shows vehicles per bay per hour and the quiet and busy patterns by weekday, so you can plan offers for slow hours and shifts for the rush.',
+      screen: 'owner',
+    },
+    {
+      area: 'Bays and time',
+      title: 'Nobody knows which vehicle is stuck at which stage',
+      scene:
+        'A customer asks where his car is. The supervisor walks around the site to look. One car has been waiting for the interior vacuum for forty minutes because the person on that task was pulled to another bay.',
+      cost:
+        'Waiting customers get angry, tips and repeat visits suffer, and the slowest stage is never identified because it is never measured.',
+      fix:
+        'Every vehicle moves through states on a simple board: waiting, wash, interior, finish, ready. Whoever is free can see what is next, and the owner can see which stage holds cars the longest.',
+      screen: 'job',
+    },
+    {
+      area: 'Customers',
+      title: 'Scratch and damage complaints you cannot settle',
+      scene:
+        'A customer says the bumper scratch was not there when the car came in. Your worker says it was. Without a record you either pay for a touch-up or lose a good customer.',
+      cost:
+        'A repair or a refund on the spot, and a customer who tells others. Even one such case a month is a recurring cost for something that a two-minute check-in could settle.',
+      fix:
+        'At check-in the existing marks are noted on the vehicle’s job record with photos, the customer’s valuables are listed, and both are visible at hand-back. A complaint is then a comparison, not a dispute.',
+      screen: 'job',
+    },
+    {
+      area: 'Stock',
+      title: 'Shampoo, wax and polish used by habit, not by measure',
+      scene:
+        'Workers pour the foam concentrate by eye. A drum meant for four weeks is empty in three. Microfibre cloths disappear, and nobody can say whether the spend is high because volume rose or because usage is loose.',
+      cost:
+        'Example arithmetic: at 2,000 washes a month, an extra ₹6 of chemicals per wash is ₹12,000 a month, or ₹1.44 lakh a year, hidden inside the purchase bills.',
+      fix:
+        'Stock items carry a standard quantity per service. Verity compares what was used with the washes done, per bay and per shift, and shows the cost per wash against your target, so overuse appears as a number.',
+      screen: 'stock',
+    },
+    {
+      area: 'Water',
+      title: 'Water cost and water rules are both tightening',
+      scene:
+        'Tanker bills climb, the borewell level drops in summer, and a neighbour complains to the authorities. You do not know litres per wash, and you cannot say whether the recycling plant is working.',
+      cost:
+        'In 2024 Bengaluru warned and fined potable-water use for washing vehicles, and some washes saw their daily cars fall sharply. A site that cannot show where its water goes is exposed.',
+      fix:
+        'Tanker deliveries and meter readings are recorded, and Verity shows litres per wash by week. Recycling plant servicing and filter changes are scheduled tasks, so the plant is serviced before the water turns dirty.',
+      screen: 'stock',
+      source: {
+        name: 'Ken Research, India car wash market',
+        url: 'https://www.kenresearch.com/india-car-wash-market',
+      },
+    },
+    {
+      area: 'Staff',
+      title: 'Casual washers come and go, and attendance is a guess',
+      scene:
+        'Half the team is daily-wage. Someone does not show on Monday, a friend steps in, and at month end nobody agrees on how many days each person worked or what advance they already took.',
+      cost:
+        'Wage disputes, overpaid or underpaid days, and a bay run short just when the queue builds.',
+      fix:
+        'Attendance is marked against each person each shift. Advances taken are recorded and shown against the month’s dues, and the shift list shows gaps a day ahead so cover can be arranged.',
+      screen: 'staff',
+    },
+    {
+      area: 'Money',
+      title: 'Cash in the box does not match the vehicles that left',
+      scene:
+        'At closing the cash box, the UPI total and the slip book are compared. They are off by ₹600. Was it a free wash, a missed slip, or cash that never reached the box?',
+      cost:
+        'Small daily gaps add up, and the owner cannot trust the numbers on the day. Free and discounted washes with no approval are a large part of the gap.',
+      fix:
+        'Each vehicle is a record with a price and a payment mode. Verity compares the day’s vehicles with the day’s collection by mode and points to the exact vehicle that does not tie. Free or discounted washes need an approval with a reason.',
+      screen: 'staff',
+    },
+    {
+      area: 'Money',
+      title: 'Fleet and company accounts pay late and nobody chases',
+      scene:
+        'A taxi fleet owner, a school bus operator and two offices send cars every week on credit. The month’s dues sit in a notebook, and the follow-up depends on you remembering.',
+      cost:
+        'Example arithmetic: three fleet accounts at ₹45,000 a month each, paid 30 days late, hold back about ₹1.35 lakh of cash every month.',
+      fix:
+        'Each account is a record with its vehicles, washes done and amount due. Verity lists overdue accounts by days late and assigns a payment call task with the last conversation noted.',
+      screen: 'members',
+    },
+    {
+      area: 'Equipment',
+      title: 'Machines break down because service is a memory',
+      scene:
+        'The high-pressure pump loses power, the foam lance clogs and the vacuum motor burns out in the middle of a Saturday. The last service date was written on a wall, if at all.',
+      cost:
+        'A bay out of action during the busiest hours, an emergency repair bill, and customers who walked away while the machine was down.',
+      fix:
+        'Every machine is an asset record with its service interval and history. Verity creates a service task before it is due and records breakdowns, so you can see which machines cost the most to keep running.',
+      screen: 'stock',
+    },
+    {
+      area: 'Owner',
+      title: 'Licences, consents and renewals live in a drawer',
+      scene:
+        'The trade licence, the shop registration, the pollution board consent and the groundwater permission each renew on a different date. You find out one has lapsed when an inspector visits.',
+      cost:
+        'Penalties and, in the worst case, a notice to stop operations, for a business whose water use draws attention.',
+      fix:
+        'Each licence and consent is a record with its renewal date and the document attached. Verity creates a task ahead of each date and shows what is expiring on the owner’s screen.',
+      screen: 'owner',
+    },
   ],
 
-  challengesHeading: 'Throughput, consumables and a demand curve nobody plans against.',
-  challengesLede:
-    'Car wash difficulties come from small margins multiplied by volume.',
-  challenges: [
-    { problem: 'Throughput is not measured by bay and hour', detail: 'Volume is known daily and the hourly capacity picture is not.', outcome: 'Cycle time and throughput are recorded per bay and hour.' },
-    { problem: 'Consumable cost per wash is unknown', detail: 'Chemicals are bought in bulk and consumed without attribution.', outcome: 'Consumption is recorded against washes, giving cost per vehicle by bay and type.' },
-    { problem: 'Staffing does not follow demand', detail: 'Rosters are built on habit rather than on the site’s own hourly pattern.', outcome: 'Demand by hour and day informs the roster, with labour cost per wash visible.' },
-    { problem: 'Plan members are not watched', detail: 'Unlimited plans are sold and usage behaviour is never examined.', outcome: 'Visit frequency per member is tracked, showing both cost and cancellation risk.' },
-    { problem: 'Machine decline is seen as demand decline', detail: 'Throughput falls because a machine is slowing and it looks like fewer customers.', outcome: 'Cycle time per bay is monitored, so equipment decline is separated from demand.' },
-    { problem: 'Add-on sales are inconsistent', detail: 'Higher-margin add-ons depend on which attendant is working.', outcome: 'Attachment rate is measured by attendant and shift.' },
+  factsHeading: 'The numbers that make these problems worth fixing.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: 'USD 1.2 billion',
+      text: 'the size estimated for the India car wash service market in 2025, growing to about USD 1.3 billion in 2026. Most of it is in small local operators.',
+      source: { name: 'IMARC Group, India car wash service market', year: '2025 and 2026 estimates', url: 'https://www.imarcgroup.com/india-car-wash-service-market' },
+    },
+    {
+      figure: 'Over 70%',
+      text: 'of car detailing outlets in India are unorganised, independent workshops, according to industry aggregator data quoted by a market research firm.',
+      source: { name: 'Nexdigm, India car detailing market', url: 'https://www.nexdigm.com/market-research/report-store/india-car-detailing-market/' },
+    },
+    {
+      figure: '₹5,000',
+      text: 'penalty reported for prohibited use of potable water, including for washing vehicles, during Bengaluru’s 2024 water crisis. Delhi Jal Board also advises against using potable water for washing cars.',
+      source: { name: 'Ken Research, India car wash market', year: '2024 events', url: 'https://www.kenresearch.com/india-car-wash-market' },
+    },
+    {
+      figure: '14.5 months',
+      text: 'the median time a paying wash-club member stays at a United States car wash, from one industry report. It shows how quickly members drift unless someone watches.',
+      source: { name: 'International Carwash Association, on the Rinsed industry report', year: '2025', url: 'https://www.carwash.org/car-wash-news/rinsed-releases-new-quarterly-car-wash-industry-report' },
+    },
+  ],
+  factsNote:
+    'The market sizes come from research vendors and are estimates. The detailing share is from a vendor quoting aggregators, and the penalty figure has no primary source on the page. The member lifetime is from the United States. They show the scale of the problem, not what your car wash will see.',
+
+  screensHeading: 'The screens you would use every day.',
+  screensLede: 'Six views, each built for one job. Names, columns and terms are set up in your car wash’s own language.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Car wash / Today',
+      meta: 'Site: Baner Road',
+      heading: 'The owner’s morning view',
+      caption:
+        'Vehicles washed, bay use, plan customers slipping, cash and renewals on one screen, with the things that need a decision listed below. This replaces the evening call to the supervisor.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Vehicles today', value: '94', note: '3 bays' },
+            { label: 'Bay use', value: '68%', note: 'of staffed hours' },
+            { label: 'Plans slipping', value: '27', note: 'behind on visits' },
+            { label: 'Renewals due', value: '3', note: 'licence and consent' },
+          ],
+        },
+        { type: 'title', text: 'Vehicles per hour, by bay, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Bay 1', value: 88, display: '5.3/hr' },
+            { label: 'Bay 2', value: 79, display: '4.7/hr' },
+            { label: 'Bay 3', value: 42, display: '2.5/hr', tone: 'muted' },
+          ],
+        },
+        { type: 'alert', text: 'Pollution board consent renews in 28 days. Documents not yet attached.', action: 'Open' },
+        {
+          type: 'list',
+          items: [
+            { name: 'Bay 3 pump service', meta: 'Throughput down since last Friday', tag: ['Due', 'flag', 'Booked', 'ok'] },
+            { name: 'Slow Tuesday afternoon', meta: 'Offer for plan sign-ups after 2 pm', tag: ['Decide', 'flag', 'Set', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'job',
+      title: 'Vehicle job',
+      meta: 'Check-in to hand-back',
+      heading: 'One record for every vehicle that comes in',
+      caption:
+        'The existing marks, the valuables in the car, the service taken, the stage and the time. The same record serves a fixed-site wash, a doorstep clean and a detailing job.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'MH 12 AB 4471, Hyundai Creta',
+          sub: 'Owner: Karan Joshi. Monthly plan: Gold',
+          fields: [
+            ['Service', 'Foam wash and interior vacuum'],
+            ['Checked in', '8:42 am, Bay 2'],
+            ['Marks noted', ['Scratch, rear left door', 'info']],
+            ['Valuables', 'Sunglasses on dash, noted'],
+            ['Plan', '5 of 8 washes used'],
+            ['Stage', ['Interior', 'flag', 'Ready', 'ok']],
+          ],
+          timeline: [
+            ['8:42', 'Checked in with photos, 2 marks noted'],
+            ['8:50', 'Foam wash, Bay 2, Imran'],
+            ['9:05', 'Interior vacuum started'],
+            ['Note', 'Customer prefers dashboard polish skipped.'],
+          ],
+        },
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Waiting',
+              cards: [{ title: 'KA 03 MN 2210, Swift', meta: 'Plan: none. Waiting 12 min', tag: ['Next', 'info'] }],
+            },
+            {
+              name: 'In bay',
+              cards: [
+                { title: 'MH 14 CD 9087, Innova', meta: 'Bay 1. Foam wash', tag: ['Wash', 'info'] },
+                { title: 'MH 12 AB 4471, Creta', meta: 'Bay 2. Interior', tag: ['Interior', 'flag', 'Ready', 'ok'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'members',
+      title: 'Plans and accounts',
+      meta: 'Monthly passes and fleet credit',
+      heading: 'The list that keeps plan customers visiting and accounts paying',
+      caption:
+        'Plan holders ordered by how behind they are on visits and how close to expiry, with fleet and company dues alongside. A call is a task for the supervisor and the outcome is recorded.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Customer', 'Vehicle', 'Washes used', 'Expires', 'Status'],
+          rows: [
+            ['Karan Joshi', 'Creta', '5 of 8', '30 Oct', ['On track', 'ok']],
+            ['Meghna Rao', 'i20', '1 of 8', '24 Oct', ['Call today', 'late', 'Visited', 'ok']],
+            ['Faisal Shaikh', 'Baleno', '2 of 8', '27 Oct', ['Call today', 'flag', 'Renewed', 'ok']],
+            ['Nitin Kulkarni', 'Fortuner', '0 of 4', '18 Oct', ['Lapsing', 'late']],
+            ['Dhanashree Patil', 'Nexon', '3 of 8', '2 Nov', ['Message', 'flag']],
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Fleet account', 'Vehicles', 'Due', 'Days late', 'Status'],
+          rows: [
+            ['Shree Cabs', '12', '₹46,800', '34', ['Call', 'late', 'Promised 20 Oct', 'info']],
+            ['Greenline Travels', '8', '₹29,400', '12', ['Call', 'flag']],
+            ['Apex Systems staff cars', '6', '₹14,500', '0', ['Current', 'ok']],
+          ],
+        },
+        { type: 'alert', text: '27 plan holders are behind on visits. 9 expire within ten days.', action: 'Assign calls' },
+      ],
+    },
+    {
+      id: 'quotes',
+      title: 'Detailing leads',
+      meta: 'Quotes and follow-ups',
+      heading: 'Every coating and detailing enquiry with an owner and a next step',
+      caption:
+        'From the first question to a booked job. Quotes with no reply show up before the customer goes cold, with the car’s history beside them.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Quote sent',
+              cards: [
+                { title: 'Ceramic coating, BMW 3 Series', meta: '₹24,000. Sent 3 days ago', tag: ['Follow up', 'late', 'Booked', 'ok'] },
+                { title: 'Interior deep clean, Innova', meta: '₹4,500. Sent yesterday', tag: ['Follow up', 'flag'] },
+              ],
+            },
+            {
+              name: 'Booked',
+              cards: [
+                { title: 'PPF front bumper, Nexon', meta: '₹9,500. Thursday', tag: ['Deposit due', 'flag', 'Paid', 'ok'] },
+                { title: 'Headlight restoration, Swift', meta: '₹1,800. Saturday', tag: ['Ready', 'ok'] },
+              ],
+            },
+          ],
+        },
+        { type: 'alert', text: '2 quotes worth ₹28,500 have had no reply in 3 days.', action: 'Assign' },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock, water and machines',
+      meta: 'Consumables, litres and servicing',
+      heading: 'What the wash used, against the vehicles it washed',
+      caption:
+        'Shampoo, wax, cloths and water per wash against your target, with each machine’s service date. Usage comes from the vehicles recorded, so nobody counts cans by eye.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'In stock', 'Used / week', 'Cost per wash', 'Status'],
+          rows: [
+            ['Foam concentrate, 20 L', '3', '4', '₹9.20', ['Reorder', 'flag', 'Ordered', 'ok']],
+            ['Tyre polish, 5 L', '2', '1', '₹2.10', ['OK', 'ok']],
+            ['Microfibre cloths', '24', '18 lost', '₹3.40', ['Check', 'late']],
+            ['Interior dressing', '4', '2', '₹1.80', ['OK', 'ok']],
+          ],
+        },
+        { type: 'title', text: 'Water used per wash, litres' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Last week', value: 72, display: '58 L' },
+            { label: 'This week', value: 91, display: '73 L', tone: 'muted' },
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Recycling plant filter change', meta: 'Due in 6 days', tag: ['Schedule', 'flag', 'Done', 'ok'] },
+            { name: 'Bay 3 high-pressure pump', meta: 'Serviced 7 months ago', tag: ['Overdue', 'late', 'Booked', 'ok'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'staff',
+      title: 'Team and cash',
+      meta: 'Shift and closing',
+      heading: 'Who worked, who was paid and whether the cash ties',
+      caption:
+        'Attendance and advances per person for the month, and the closing check that compares vehicles done with money collected by mode. Discounts and free washes wait for a one-tap approval.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Washer', 'Days worked', 'Vehicles', 'Advance taken', 'Status'],
+          rows: [
+            ['Imran', '24', '412', '₹2,000', ['On roster', 'ok']],
+            ['Suresh', '22', '380', '₹4,500', ['On roster', 'ok']],
+            ['Pappu', '15', '221', '₹0', ['Absent today', 'late', 'Cover set', 'ok']],
+            ['Ganesh', '26', '455', '₹1,000', ['On roster', 'ok']],
+          ],
+        },
+        {
+          type: 'checks',
+          items: [
+            { text: 'Cash and UPI against vehicles washed', meta: 'Gap ₹600, 2 vehicles unmatched', done: false },
+            { text: 'Free wash approval', meta: 'Bay 1, reason: service redo, approved', done: true },
+            { text: 'Chemicals issued and returned', meta: 'Matches the day’s vehicles', done: true },
+          ],
+        },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across bays, consumables, staffing and members.',
-  modules: [
-    { id: 'workflows', title: 'Throughput, cycle time and queue', line: 'Each wash records its bay, type, start and finish, attendant and add-ons, producing throughput and cycle time by hour.', why: 'Throughput is the business, and it is only manageable at the hour and bay level.', example: 'Eleven vehicles an hour at peak against four off-peak.' },
-    { id: 'inventory', title: 'Chemicals, water and consumables', line: 'Consumption is recorded against washes and bays, giving cost per vehicle by wash type.', why: 'A few rupees per wash is a large monthly number at volume.', example: 'Consumable cost seven rupees above target per wash.' },
-    { id: 'locations', title: 'Bays, machines and site layout', line: 'Bays carry equipment, service state, cycle time and throughput history.', why: 'Machine decline shows as slower cycles before it shows as failure.', example: 'Falling throughput on one bay ahead of a service.' },
-    { id: 'people', title: 'Attendants, shifts and rosters', line: 'Staff carry shifts, washes handled, cycle times and add-on attachment.', why: 'Labour is the largest controllable cost and it is rostered by hour.', example: 'Labour cost per wash by shift.' },
-    { id: 'relationships', title: 'Plan members, walk-ins and fleet accounts', line: 'Members carry plan type, visit frequency, cost to serve and lapse risk; fleet accounts carry vehicles and terms.', why: 'An unlimited plan is only profitable at certain usage levels.', example: 'Eighty-six plan members not visiting.' },
-    { id: 'work', title: 'Wash types, packages and add-ons', line: 'Each wash type carries its price, expected cycle time, consumable profile and margin.', why: 'Different wash types have very different margins at the same price point.', example: 'Margin by wash type after consumables and labour.' },
-    { id: 'intelligence', title: 'Throughput, cost and member reporting', line: 'Throughput by hour and bay, consumable and labour cost per wash, member usage, add-on attachment and machine performance come from the records.', why: 'At small margins, per-vehicle measurement is the only useful measurement.', example: 'Cost per wash by bay, shift and type.' },
-    { id: 'ai', title: 'Ask the site a question', line: 'Verity AI answers from your own wash, consumable, staffing and member records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about cost per wash and demand by hour.', example: '"Which hours are overstaffed against demand?" returns the pattern by day.' },
-    { id: 'schedule', title: 'Demand patterns and rostering', line: 'Historical demand by hour, day and season informs rosters and opening decisions.', why: 'Demand is uneven and predictable from the site’s own record.', example: 'Roster built against demand by hour rather than an average.' },
-    { id: 'orders', title: 'Plans, packages and prepaid washes', line: 'Plans, prepaid packages and fleet billing carry usage, balance and renewal.', why: 'Prepaid balances are liability and usage is the margin.', example: 'Prepaid wash balances outstanding by customer.' },
-    { id: 'control', title: 'Pricing, discounts and approvals', line: 'One permission model and one audit trail covering pricing, discounts and rewashes.', why: 'Free rewashes given informally are unrecorded cost.', example: 'Rewashes recorded with reason and attendant.' },
-    { id: 'communication', title: 'Member contact', line: 'Inactivity follow-up, plan renewals and fleet account contact attach to the customer.', why: 'An inactive member cancels unless something reaches them.', example: 'Contact raised for members who have not visited in a month.' },
+  dayHeading: 'The same Sunday, before and after.',
+  dayLede: 'What changes is not the work. It is that the work leaves a record, and the record does the chasing.',
+  day: [
+    {
+      time: '8:00',
+      before: 'You open the site and check which team members turned up. You find out one is missing when a bay stays empty.',
+      after: 'The shift list showed the gap on Saturday evening. Cover was arranged and Bay 3 opens on time.',
+    },
+    {
+      time: '10:00',
+      before: 'Twelve cars wait. A customer walks away because nobody knows who is next.',
+      after: 'The board shows each car’s stage, so the supervisor moves a free washer to the slow stage.',
+    },
+    {
+      time: '12:30',
+      before: 'A customer says the scratch on his door is new. You argue, then give a free touch-up.',
+      after: 'The check-in photos show the scratch was noted at 8:42. The customer sees them and moves on.',
+    },
+    {
+      time: '3:00',
+      before: 'A monthly customer has not been seen for a month. You only learn when she does not renew.',
+      after: 'She was on the call list at week three. The supervisor called and she booked for Wednesday.',
+    },
+    {
+      time: '8:30',
+      before: 'Cash, UPI and the slip book are off by ₹600. You guess.',
+      after: 'Verity shows the two vehicles that do not tie. One was a free wash that was never approved.',
+    },
+    {
+      time: 'Month end',
+      before: 'You settle wages from memory and argue over advances. Fleet dues sit unchased.',
+      after: 'Days worked and advances are on one sheet, and overdue fleet accounts already have a call task.',
+    },
   ],
 
-  workflowsHeading: 'Arrive, wash, record, restock, review.',
-  workflowsLede: 'These already happen. Recorded, the per-vehicle economics become visible.',
-  workflows: [
-    { name: 'Wash cycle', steps: ['Vehicle received with wash type and add-ons', 'Bay and attendant assigned', 'Start and finish recorded', 'Consumables attributed', 'Payment or plan usage recorded'], note: 'Start and finish times are what produce cycle time and throughput.' },
-    { name: 'Consumable control', steps: ['Stock issued to bays', 'Consumption attributed to washes', 'Cost per wash calculated by type and bay', 'Variance against target reviewed', 'Dilution or process corrected'], note: 'Concentration of overuse on one bay usually points to dilution settings.' },
-    { name: 'Rostering to demand', steps: ['Demand by hour and day compiled from history', 'Roster built to match the curve', 'Actual throughput compared with staffing', 'Labour cost per wash reviewed', 'Roster adjusted'], note: 'Staffing to an average guarantees being wrong in both directions.' },
-    { name: 'Plan member review', steps: ['Visit frequency compiled per member', 'High-usage and inactive members identified', 'Cost to serve compared with plan price', 'Contact raised for inactivity', 'Plan structure reviewed'], note: 'Inactive members are the cancellations that have not happened yet.' },
-    { name: 'Machine condition', steps: ['Cycle time monitored per bay', 'Decline compared with service history', 'Service scheduled before failure', 'Throughput after service compared', 'Maintenance record updated'], note: 'Slowing cycle time is the earliest available failure warning.' },
-  ],
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how your wash actually runs on a busy morning, build Verity around it, move your data in, then stay on so it keeps working.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Spend a Sunday morning at your site. Follow a vehicle from the gate to hand-back, count how many people touch it, and note how passes, cash and consumables are tracked today.',
+        you: 'Two to three hours of your time and your supervisor’s. Your slip book, plan notebook and last month’s purchase bills.',
+        get: 'A written map of your wash: services and prices, bays and stages, plan types, the team, and the first leaks we will close.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your services, plan types, stages, standard shampoo and water per wash, machine service intervals, approval limits and any second site, and build the screens above in your own terms.',
+        you: 'Check the setup with your supervisor. Tell us where a service or plan rule is wrong.',
+        get: 'A working Verity with your services, plans, team and rules, ready for your data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in plan holders, fleet accounts, vehicle numbers, stock and the machine list from your notebooks and sheets. Train washers and the supervisor at the bay, with real vehicles.',
+        you: 'Your plan notebook and customer numbers, in any form. Half an hour with each washer.',
+        get: 'Your customers and plans inside Verity, and a team that has used it on a real Saturday.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first weeks with you, tune the call lists and stock standards, and handle changes when you add a bay, a service or a site.',
+        you: 'A short monthly review of what the numbers say.',
+        get: 'A system that keeps pace with the wash, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Your service list and prices, including plan types',
+      'Your plan notebook and any customer numbers you have',
+      'Last two months of chemical and spare purchase bills',
+      'Your team list with daily rates and the advances you give',
+      'Licence, consent and tanker or borewell details',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your supervisor needs a few more.',
+    after: 'Nobody is hired to run Verity. A vehicle is recorded when it is checked in and handed back, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask about cost per wash and demand.',
-    lede: 'Verity AI reads the same wash, consumable, staffing and member records the site creates as it operates. It answers from your own site, respects permissions, and can turn an answer into a roster change or a member contact.',
-    panelMeta: 'Grounded in your site records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'What is consumable cost per wash by bay and type?',
-      'Which hours are overstaffed against actual demand?',
-      'Which plan members have not visited this month?',
-      'Which plan members visit often enough to be loss-making?',
-      'Which bay has the slowest cycle time and is it worsening?',
-      'What is add-on attachment by attendant?',
-      'What is throughput by hour and day of week?',
-      'What did rewashes cost this month?',
-      'Summarise throughput and cost per wash.',
+    heading: 'Ask your car wash a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own vehicle, plan, stock and team records. Ask in plain language, then turn the answer into tasks for the right person.',
+    examples: [
+      {
+        q: 'Which plan customers are behind on visits and expire this month?',
+        a: '27 plan holders are behind, and 9 of them expire within ten days. Together they pay about ₹48,600 a month.',
+        rows: [['Expiring in 10 days', '9'], ['Behind, not expiring', '18'], ['Never visited', '4'], ['Have a vehicle on file', '27']],
+        action: 'Create call tasks for the supervisor',
+      },
+      {
+        q: 'Which bay uses the most shampoo per wash?',
+        a: 'Bay 3, at ₹12.60 a wash against your target of ₹9. The other two bays are within ₹1 of target.',
+        rows: [['Bay 1', '₹9.40'], ['Bay 2', '₹9.90'], ['Bay 3', '₹12.60']],
+      },
+      {
+        q: 'Which fleet accounts are more than 15 days late?',
+        a: 'Shree Cabs is 34 days late on ₹46,800. Greenline Travels is 12 days late and not yet over the limit.',
+        action: 'Assign a payment call today',
+      },
     ],
   },
 
-  automationHeading: 'Cost, demand and members.',
-  automationLede: 'Each runs from the site’s own records at the point the condition is met.',
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your records. Staff still make the calls and send the messages, Verity makes sure the right person knows to.',
   automations: [
-    { trigger: 'Consumable cost per wash exceeds target', steps: ['Flagged by bay, shift and wash type', 'Dilution or process check assigned', 'Cost position updated'] },
-    { trigger: 'Cycle time on a bay slows against its history', steps: ['Flagged with throughput impact', 'Service scheduled', 'Performance compared after service'] },
-    { trigger: 'A plan member stops visiting', steps: ['Inactivity flagged with plan value', 'Contact assigned', 'Outcome recorded'] },
-    { trigger: 'Staffing exceeds demand for a period', steps: ['Labour cost per wash surfaced', 'Roster adjustment proposed', 'Change recorded'] },
-    { trigger: 'A rewash is given', steps: ['Reason and attendant recorded', 'Cost attributed', 'Pattern surfaced by cause'] },
+    {
+      when: 'A plan holder is behind on visits',
+      then: ['Added to the call list with washes used', 'Task to the supervisor', 'Outcome recorded: visited, renewed or lost'],
+    },
+    {
+      when: 'A walk-in visits a third time',
+      then: ['Flagged as a plan prospect', 'Suggested plan shown at the desk', 'Offer made or declined, recorded'],
+    },
+    {
+      when: 'A vehicle is handed back',
+      then: ['Shampoo and water drawn from stock', 'Plan wash count reduced', 'Washer’s count credited for the day'],
+    },
+    {
+      when: 'A quote has no reply after 3 days',
+      then: ['Moved to the owner’s follow-up list', 'Car history shown beside it', 'Booked, declined or dropped, recorded'],
+    },
+    {
+      when: 'A machine reaches its service date',
+      then: ['Service task created ahead of time', 'Bay marked at risk if overdue', 'Service cost and date added to history'],
+    },
+    {
+      when: 'A licence or consent is 45 days from renewal',
+      then: ['Task to the owner with the document', 'Reminder at 20 days if open', 'New date recorded on renewal'],
+    },
   ],
 
-  intelligenceHeading: 'What the site can see.',
-  intelligenceLede: 'Throughput, cost and member behaviour from wash records.',
-  intelligence: [
-    { area: 'Throughput', points: ['Vehicles per hour by bay', 'Cycle time and its trend', 'Queue and peak behaviour', 'Capacity used against available hours'] },
-    { area: 'Cost', points: ['Consumable cost per wash by type and bay', 'Labour cost per wash by shift', 'Rewash cost and causes', 'Margin by wash type'] },
-    { area: 'Demand', points: ['Volume by hour, day and season', 'Staffing against demand', 'Walk-in against plan mix', 'Add-on attachment by attendant'] },
-    { area: 'Members', points: ['Visit frequency per member', 'Cost to serve against plan price', 'Inactive members and lapse risk', 'Fleet account volumes'] },
-  ],
-  intelligenceNote: 'Verity records the site’s operations. Wash equipment and payment terminals continue as they are.',
+  rules: {
+    heading: 'The rules a car wash has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records and dates these rules depend on in order, so you are not looking for papers when an inspector arrives.',
+    items: [
+      {
+        name: 'Local licences and shop registration',
+        what: 'A fixed site generally needs a trade licence from the municipal body and a Shop and Establishment registration from the state once you hire staff. Rules differ by city and state.',
+        how: 'Each licence is a record with its number, renewal date and the document, with a reminder task ahead of the date.',
+        source: { name: 'OkCredit, car wash business guide', url: 'https://okcredit.in/blog/how-to-start-car-wash-business-in-india/' },
+      },
+      {
+        name: 'Pollution board consent',
+        what: 'State pollution control boards generally issue consent to establish and consent to operate. The same guide notes that the CPCB list of January 2026 places automobile service stations in the Orange category. Confirm what applies to your site.',
+        how: 'Consent dates and conditions sit in one record, and recycling plant servicing is scheduled so wastewater conditions are easier to show.',
+        source: { name: 'OkCredit, car wash business guide', url: 'https://okcredit.in/blog/how-to-start-car-wash-business-in-india/' },
+      },
+      {
+        name: 'Water use and groundwater permission',
+        what: 'Several cities restrict potable water for washing vehicles, and a groundwater NOC may apply where a borewell draws a large daily volume. The guide quotes a threshold of 10,000 litres a day.',
+        how: 'Tanker deliveries, meter readings and litres per wash are recorded, so you can show your water source and use.',
+        source: { name: 'OkCredit, car wash business guide', url: 'https://okcredit.in/blog/how-to-start-car-wash-business-in-india/' },
+      },
+      {
+        name: 'GST on car washing services',
+        what: 'The same guide treats car washing as an 18% service, with registration generally needed once service turnover passes ₹20 lakh (₹10 lakh in special-category states). Rates and limits change, so confirm with your accountant.',
+        how: 'Wash and detailing revenue is recorded by service type and customer, so the figures your accountant needs are already separated.',
+        source: { name: 'OkCredit, car wash business guide', url: 'https://okcredit.in/blog/how-to-start-car-wash-business-in-india/' },
+      },
+    ],
+    note: 'Rules change and differ by city and state. Confirm current requirements with your accountant or the local authority.',
+  },
 
-  rolesHeading: 'One site, four views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A washer should not see the day’s collection. The accountant should not edit stock standards. Each role opens on what it needs.',
   roles: [
-    { role: 'Owner', question: 'What does a wash cost and earn?', focus: 'Cost per wash, throughput by bay, member economics, machine performance.' },
-    { role: 'Site manager', question: 'Is today staffed correctly?', focus: 'Demand by hour, roster against the curve, bay availability, queue.' },
-    { role: 'Attendant', question: 'What is queued and what does it need?', focus: 'Wash types in progress, add-ons, consumables at the bay, rewashes.' },
-    { role: 'Accounts', question: 'What is plan revenue really worth?', focus: 'Plan usage against price, prepaid balances, fleet billing, discounts.' },
+    { role: 'Owner', question: 'Is the wash earning what it should?', sees: 'Vehicles, bay use, plan health, cash tie-out, water per wash and renewals, for every site.' },
+    { role: 'Supervisor', question: 'What do I fix before the rush?', sees: 'Stage board, today’s shift gaps, plan call list, stock short and machines due.' },
+    { role: 'Washer', question: 'Which car is next and what does it need?', sees: 'The queue and the job note for each vehicle, and their own count and attendance.' },
+    { role: 'Front desk', question: 'Who is here and what do they owe?', sees: 'Plan balances, quotes in progress, fleet accounts and the payment mode at hand-back.' },
+    { role: 'Accountant', question: 'What came in and what is owed?', sees: 'Collection by mode, fleet receivables, purchase bills, advances and the GST split.' },
   ],
 
-  useCasesHeading: 'What car washes use Verity for',
-  useCases: [
-    { name: 'Measuring throughput by hour and bay', body: 'Cycle times and volumes recorded per bay and hour, so peak and off-peak are managed as the different businesses they are.' },
-    { name: 'Cost per wash', body: 'Chemicals, water and consumables attributed to washes, giving a per-vehicle cost by bay and wash type rather than a bulk purchase figure.' },
-    { name: 'Rostering to the demand curve', body: 'Historical demand by hour and day driving the roster, with labour cost per wash visible against it.' },
-    { name: 'Plan member economics', body: 'Visit frequency per member showing both loss-making heavy users and inactive members about to cancel.' },
-    { name: 'Catching machine decline early', body: 'Cycle time monitored per bay, so slowing equipment is separated from falling demand and serviced before it fails.' },
-    { name: 'Add-on attachment', body: 'Higher-margin add-ons measured by attendant and shift, making inconsistency addressable.' },
-    { name: 'Asking about the site', body: 'Plain-language questions across throughput, cost, staffing and members, with roster changes and contact raised in the same step.' },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your UPI QR code and any card machine. We agree how payment details reach Verity during setup.',
+      'Your washing equipment, recycling plant and water supply.',
+      'WhatsApp for talking to customers and societies. Staff send the messages; Verity says who and when.',
+      'Your accountant, who still prepares your returns.',
+    ],
+    not: [
+      'Take online bookings from customers.',
+      'Send messages to customers on its own.',
+      'Run your counter billing or card payments.',
+      'File your returns or run your payroll.',
+    ],
+    migration:
+      'We bring plan holders, fleet accounts, vehicle numbers and stock across from the notebook, sheets or app you use now, in stages, so the wash keeps running while it happens.',
+  },
 
-  migration: 'Wash equipment and payment terminals continue and are mapped during implementation. Wash types and pricing, plan members with usage history, fleet accounts, consumable records and staffing patterns are brought across.',
-
-  faqHeading: 'Questions car washes ask',
+  faqHeading: 'Questions car wash owners ask.',
   faqs: [
-    ['What can AI software do for a car wash?', 'Verity AI answers questions from your own wash, consumable, staffing and member records: what consumable cost per wash is by bay and type, which hours are overstaffed against demand, which plan members have stopped visiting, which bay is slowing. Each answer can become a roster change or a member contact.'],
-    ['Why measure throughput by bay and hour?', 'Because a site running at eleven vehicles an hour at peak and four off-peak is two different businesses sharing a location. Staffing, queueing and margin all differ, and only hourly measurement makes either half manageable.'],
-    ['How is consumable cost per wash calculated?', 'Consumption is attributed to washes by bay and type rather than treated as a bulk purchase, which is what shows that overuse is usually concentrated on one bay, shift or wash type.'],
-    ['Can it help with staffing?', 'Demand by hour, day and season is compiled from the site’s own history and used to build rosters, with labour cost per wash measured against the result rather than assumed.'],
-    ['How does it handle unlimited plans?', 'Visit frequency is tracked per member, which shows both the heavy users whose cost to serve exceeds the plan price and the inactive members who are about to cancel.'],
-    ['Does it help with equipment?', 'Cycle time is monitored per bay, so gradual slowing is visible as an equipment signal rather than being misread as weakening demand, and service is scheduled before a failure.'],
-    ['Does it replace payment terminals?', 'No. Payment terminals and wash equipment continue as they are. Verity holds the site around them — washes, throughput, consumables, staffing and members.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of wash types, bays, consumable profiles and plan structures, configuration, migration of members and history, then an ongoing operations partnership.'],
+    [
+      'Will my washers actually use it?',
+      'It works only if a vehicle is checked in and handed back, so we make that take seconds on a phone at the bay. We train at the site with real cars. Washers also get something back: their own count and attendance, visible and unarguable.',
+    ],
+    [
+      'I run a doorstep service for apartment societies. Does it work?',
+      'Yes. A society is an account, each car is a vehicle on it, and each clean is ticked on the cleaner’s list. A missed clean becomes a make-up visit task instead of a complaint in the society group.',
+    ],
+    [
+      'Does Verity take bookings or payments from customers?',
+      'No. If you use a booking app or a QR code, it keeps doing that job and we map it during setup. Verity records the vehicle and the payment and gives you the picture around it.',
+    ],
+    [
+      'Can it message my customers about their plan?',
+      'Not on its own. Verity builds the call list and assigns it to the supervisor, who calls or sends the message. The outcome is recorded.',
+    ],
+    [
+      'I only have one bay. Is this too much?',
+      'A one-bay wash has the same leaks and less spare time to notice them. We set up only what you need, and the four-week process is the same.',
+    ],
+    [
+      'Who can see my data?',
+      'Only the people you allow. Access is set by role, so washers, supervisor, desk and accountant each see what they need, and every change is recorded with who made it and when.',
+    ],
+    [
+      'Can it handle detailing and coating jobs, which take days?',
+      'Yes. A job can stay open across several days with its stages, photos, deposit and delivery date, and the customer’s history stays on the vehicle.',
+    ],
+    [
+      'How long before I see a difference?',
+      'The plan call list, fleet dues and stock warnings need only your existing customer and stock data, so they come first. Water and chemical cost per wash become reliable after a few weeks of recorded vehicles.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of sites, bays and what you want set up. Message us and we will give you a clear number after a short conversation about how your wash runs.',
+    ],
   ],
 
-  ctaHeading: 'Start with cost per wash.',
-  ctaLede: 'The overage is usually on one bay. Tell us how consumables are tracked today.',
+  related: ['auto-repair-shops', 'car-rentals', 'cleaning-services', 'laundry-services', 'repair-services', 'facility-management'],
 
-  related: ['car-rentals', 'auto-repair-shops', 'auto-parts-stores', 'cleaning-services', 'laundry-services', 'repair-services'],
+  ctaHeading: 'Start with the plan customers who stopped visiting.',
+  ctaLede:
+    'Tell us how your wash runs and we will show you the lapsing plans, the idle bay hours and the chemical cost per wash it would find, using your own numbers.',
 };

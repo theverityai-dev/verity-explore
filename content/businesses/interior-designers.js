@@ -1,181 +1,626 @@
 export default {
+  schema: 2,
   slug: 'interior-designers',
   status: 'published',
   plural: 'interior designers',
-  subject: 'interior design business',
+  subject: 'interior design firm',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for interior designers | Verity',
+    title: 'Interior design firm management software for India | Verity',
     description:
-      'Verity connects specification and procurement margin, long lead times, client-supplied items, site coordination and snagging into one operational system.',
+      '14 problems that sink an interior project: quotes that miss items, late vendors, unpriced changes, snags, slow payments. What each costs and what fixes it.',
     keywords: [
-      'AI software for interior designers',
-      'interior design business management software',
-      'specification and procurement tracking',
-      'lead time and site coordination software',
+      'interior designer project management software India',
+      'interior design BOQ and variation tracking',
+      'interior site schedule and vendor tracking',
+      'interior design client payment milestones',
+      'home interior snag list software',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'suppliers', 'inventory', 'schedule', 'workforce', 'ai'],
 
   hero: {
     eyebrow: 'Verity for interior designers',
-    headline: 'The design was approved in April. The sofa arrives in September.',
+    headline: 'The home looks beautiful. The project ran over budget and two months late. Verity shows why while there is time to act.',
     lede:
-      'Interior projects are decided by procurement lead times and site coordination, not by drawings. Verity tracks the specification, the order, the lead time and the site.',
-    note: 'Runs alongside your existing design and accounting tools.',
-    panel: {
-      title: 'Projects',
-      meta: 'All live projects',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Live projects', value: '11', note: '₹4.6 Cr including procurement' },
-        { label: 'Items on order', value: '284', note: '31 past expected delivery' },
-        { label: 'Unconfirmed specs', value: '46', note: 'blocking orders' },
-        { label: 'Snags open', value: '78', note: '19 past handover' },
-      ],
-      rows: [
-        { name: '31 items past their expected delivery date', meta: 'Two projects cannot complete', active: true },
-        { name: '46 specifications unconfirmed by clients', meta: 'Lead times running while decisions wait', active: true },
-        { name: '19 snags open past handover', meta: 'Final payments held', active: true },
-        { name: 'Client-supplied items not tracked to site', meta: '9 items · installation blocked', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own projects in this shape.',
-    },
+      'An interior project is a chain: measurements, quote, selections, orders, civil work, electrical, false ceiling, carpentry, painting, handover. Every link depends on a vendor and every link can slip. Verity keeps the quote, the selections, the orders, the site schedule and the money for each home on one record.',
+    oneLine:
+      'One system that shows, for every home, what was quoted, what has changed, which vendor is late, and what the client owes at the next milestone.',
+    note: 'Your designers keep using the 3D and drawing tools they like. Verity keeps the project side: quote, orders, schedule, snags and payments.',
+    screen: 'studio',
+    screenNote: 'sites, vendors, clients and cash',
   },
 
-  overview: {
-    heading: 'The design is the easy part. Procurement and site are the project.',
+  today: {
+    heading: 'The design is shown in renders. The project is run on phone calls.',
     paragraphs: [
-      'An interior project is a set of specified items ordered from many suppliers with wildly different lead times, delivered to a site that has to be ready for them, and installed in an order that cannot be varied much. The design is agreed early; everything that decides whether the project completes on time happens afterwards.',
-      'Lead time is the governing constraint. A specification confirmed late does not delay the project by the delay in confirming — it delays it by the item’s full lead time, which may be months. Forty-six unconfirmed specifications is not a decision backlog; it is a programme already slipping.',
-      'The second is that a large share of the designer’s income is procurement margin, which depends on ordering through the practice rather than around it. Client-supplied items reduce margin and are frequently untracked until they fail to arrive.',
-      'The third is site coordination. Items arrive at a site that must be ready, in an order that respects trades, and a delivery to an unready site costs storage, damage or a return visit.',
-      'The fourth is snagging, which holds final payments and closes projects. Nineteen snags past handover is money held and a relationship cooling.',
-      'Verity tracks specification confirmation against lead time, procurement margin, deliveries against site readiness and snags to closure.',
+      'On the first day the client sees a 3D render and a quote. After that the project becomes a stream of calls: the carpenter needs a decision, the tile has not arrived, the electrician found a beam where the downlight should go, and the client wants the wardrobe handles changed.',
+      'Most firms track this on a site supervisor’s phone, a WhatsApp group per project, a purchase sheet and the designer’s memory. When an owner manages eight or twelve sites at once, nobody can say with confidence which site is on time, which has an unpaid milestone, or which vendor has been paid and not delivered.',
+      'The work still gets finished. The cost is a margin that disappears in small unpriced changes, a handover that slips by weeks, and a client who by then no longer remembers the render with affection.',
     ],
+    stack: ['WhatsApp group per project', 'Excel quote and BOQ', 'Purchase and payment sheet', 'Supervisor’s notebook and phone photos', 'Vendor phone numbers', 'The owner’s memory'],
+    stackNote: 'Each of these is useful. None of them connects a change a client asked for to its price, its vendor and its effect on the handover date.',
   },
 
-  terminology: [
-    ['Projects, rooms, packages', 'Work'],
-    ['Specifications, selections, revisions', 'Records'],
-    ['Items on order, deliveries, installations', 'Orders'],
-    ['Clients, contractors, trades', 'Relationships'],
-    ['Suppliers, makers, importers', 'Suppliers'],
-    ['Approvals, variations, snags', 'Workflows'],
-    ['Sites, rooms, storage', 'Locations'],
+  painsHeading: 'Where an interior project loses money and time.',
+  painsLede:
+    'These are the situations firm owners describe about their sites. For each one: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
+    {
+      area: 'Quote',
+      title: 'The quote missed items, and the client finds out after demolition',
+      scene:
+        'The quote was ₹14 lakh for a 3 BHK. After demolition it becomes clear the quote left out wiring changes, a false ceiling in the passage and branded hardware. The client thought it was all included.',
+      cost:
+        'Example arithmetic: ₹1.2 lakh of items left out of a ₹14 lakh quote is about 9 percent. Either the firm absorbs it or the client feels cheated, and referrals suffer either way.',
+      fix:
+        'The quote is a list of items by room with quantity, rate and what is included or excluded. When an item turns up on site that is not on the list, it is added as a recorded change with a price, before work on it starts.',
+      screen: 'project',
+    },
+    {
+      area: 'Changes',
+      title: 'Client changes pile up and are never priced',
+      scene:
+        'The client moves the TV wall, enlarges a wardrobe and swaps the vanity. Each is a small request on a call. At the end the client believes everything was in the original quote.',
+      cost:
+        'Variations that are not priced are the main way an interior firm loses margin. Disputes in this trade arise most often from changes to scope and from delays.',
+      fix:
+        'Every change is logged with the room, what changed, the extra cost and time, and whether the client approved it. The running total of approved and pending changes sits on the project, and the client signs off on each before work starts.',
+      screen: 'project',
+    },
+    {
+      area: 'Selections',
+      title: 'Material choices are not finalised, so orders cannot be placed',
+      scene:
+        'The tile is chosen but the laminate shade is still pending. The kitchen cannot be ordered until the client picks a colour. Three weeks go by because the client is waiting for her mother-in-law to visit.',
+      cost:
+        'The carpentry slot with the workshop slips, and every trade after it slips too. The delay then gets blamed on the firm.',
+      fix:
+        'Each room has a list of selections to be made, with a decision date that is worked back from the site schedule. Pending selections appear on the project with the date by which the delay starts to move the handover.',
+      screen: 'materials',
+    },
+    {
+      area: 'Vendors',
+      title: 'Deliveries slip and the chain slips with them',
+      scene:
+        'The modular kitchen was promised for the 20th. The factory says the 28th. The tile fixer has been booked for the 22nd. The painter has been told to start on the 1st.',
+      cost:
+        'A one-week slip in one trade moves the others, and labour gangs sitting idle still have to be paid or are lost to another site. A late delivery is one of the most common causes of delayed fit-outs.',
+      fix:
+        'Each order has a promised date, a confirmed date and a status. Late deliveries mark the trades that depend on them, so the supervisor can re-sequence work the same day instead of finding out on arrival.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Vendors',
+      title: 'Advances to vendors are paid, and nobody follows what came back',
+      scene:
+        'A 50 percent advance went to the wardrobe factory. A second 25 percent was released on a phone call. The delivery is half complete. The paper trail is a bank transfer and a chat message.',
+      cost:
+        'Money out ahead of work, and a firm that cannot show a client or an auditor which payment was for which delivery.',
+      fix:
+        'Every purchase order carries its payment schedule. Payments are released against a delivery or milestone, with who approved them. The materials screen shows paid, delivered and balance for each order.',
+      screen: 'materials',
+    },
+    {
+      area: 'Site',
+      title: 'Supervisors see the site, the owner sees nothing',
+      scene:
+        'Eight sites, two supervisors. A weekly summary arrives by voice note. Nobody knows if the false ceiling at the second site started on Monday or was postponed.',
+      cost:
+        'Problems are found when the client visits, not when the supervisor notices. By then a week is gone.',
+      fix:
+        'The supervisor records each day’s progress by room and trade, with photos, on the site record. The owner sees each site’s planned and actual progress, and the trades running behind.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Snags',
+      title: 'Defects are found at handover and fixed slowly',
+      scene:
+        'On handover day the client walks through with a phone, filming. There are 43 small items: a drawer that sticks, a paint patch, a loose switch plate. Some are fixed in a week, some are forgotten.',
+      cost:
+        'Final payment is held until the last snag is closed. Unclear ownership of each defect stretches that by weeks.',
+      fix:
+        'Snags are a checklist on the project. Each one has the room, a photo, the trade responsible and a due date. Fixed items are ticked off with a photo, and the client sees how many remain.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Money',
+      title: 'Client milestones are not billed on time, and advances run out',
+      scene:
+        'The agreement had four payments: booking, after civil, after carpentry, at handover. Civil finished on the 12th. The second demand went out on the 28th. Meanwhile the firm paid vendors from its own pocket.',
+      cost:
+        'The firm finances the client’s home. Under the Consumer Protection Act, a client can complain of deficiency in service within two years, so the firm needs a record that it met its side of each milestone.',
+      fix:
+        'Payment milestones are tied to site stages. When the stage is marked complete with photos, a task is created to raise the demand, and the money received is shown against what was quoted and what was spent on the project.',
+      screen: 'money',
+      source: {
+        name: 'S.S. Rana, on deficiency of service under the Consumer Protection Act, 2019',
+        url: 'https://ssrana.in/articles/deficiency-of-services-consumer-protection-act-2019/',
+      },
+    },
+    {
+      area: 'Money',
+      title: 'Nobody knows which home made money',
+      scene:
+        'A home earned ₹14 lakh and cost ₹11.8 lakh. Another earned ₹22 lakh and cost ₹21.5 lakh after repairs. This is only discovered months later when the accountant tallies the vendors.',
+      cost:
+        'Pricing is by habit, and the firm keeps taking the kind of project that earns the least. It also cannot say which vendors or designers cause the overruns.',
+      fix:
+        'Quote, changes, vendor bills and labour expenses sit on the same project. A running margin is visible during the work, and a project that spends 85 percent of its budget before reaching painting is flagged.',
+      screen: 'studio',
+    },
+    {
+      area: 'Vendors',
+      title: 'Carpenters, electricians and painters are paid by memory',
+      scene:
+        'The contractor team works across three sites. Running bills arrive as photos of notebook pages. Quantities are checked against measurements in a hurry, and sometimes a gang is paid twice for the same room.',
+      cost:
+        'Overpayment, arguments, and good tradesmen who leave because they were paid late. Micro and small vendors can expect payment within a written term of up to 45 days under the MSMED Act, so slow payment has legal weight.',
+      fix:
+        'Each trade’s work is recorded by room with measured quantity and rate. A bill is checked against the recorded work and paid once, with the approver’s name. Payment ageing by vendor is visible.',
+      screen: 'materials',
+      source: {
+        name: 'Taxmann, on MSMED Act section 15 and section 43B(h)',
+        url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/',
+      },
+    },
+    {
+      area: 'Clients',
+      title: 'Enquiries go cold between the site visit and the quote',
+      scene:
+        'A couple visit the studio on Saturday. The designer takes measurements on Tuesday. The quote is sent the following Wednesday. By then they have signed with a firm that quoted in three days.',
+      cost:
+        'Interior buyers talk to several firms at once and often decide on speed and clarity. A slow quote is a lost home.',
+      fix:
+        'Each enquiry is a record with the property, budget, source and owner. Quotes promised but not sent, and sent quotes with no reply after your set interval, appear as tasks. Wins and losses are recorded with a reason.',
+      screen: 'money',
+    },
+    {
+      area: 'Clients',
+      title: 'Clients feel uninformed, so they call more',
+      scene:
+        'The client asks every evening how far the work has got. The designer is tired of answering. The client feels ignored, and writes a review that says so.',
+      cost:
+        'Hours of designer time answering the same questions, and a review that can cost the firm its next three referrals.',
+      fix:
+        'Each project has a short weekly summary built from its own site record: what was done, what is next, what is waiting on the client. The designer shares it, rather than answering the same call six times.',
+      screen: 'schedule',
+    },
+    {
+      area: 'Stock',
+      title: 'Materials at site go missing or are over-ordered',
+      scene:
+        'Plywood sheets, laminates and hardware sit in a flat under a watchman. A box of fittings disappears. Excess tiles are left over after the job and no one knows whose they are.',
+      cost:
+        'Example arithmetic: ten plywood sheets at ₹3,000 each lost or over-ordered is ₹30,000 on one site, and the same pattern repeats across sites.',
+      fix:
+        'Materials received at site are recorded against the project with quantity and who received them. Use is recorded by room, so leftover and missing quantities show up on the site record.',
+      screen: 'materials',
+    },
+    {
+      area: 'Owner',
+      title: 'The owner is also the designer, the buyer and the supervisor',
+      scene:
+        'The founder designs, negotiates with vendors, visits sites and chases payments. When they travel, projects stall waiting for one decision.',
+      cost:
+        'The firm cannot grow beyond what one person can hold in their head, and the owner cannot take a week off.',
+      fix:
+        'Each morning Verity shows a short list of what needs a decision, with an owner for every item. Approvals go to the owner’s phone with the details, and a senior designer can cover when the founder is away.',
+      screen: 'studio',
+    },
   ],
 
-  challengesHeading: 'Lead times, margin and a site that must be ready.',
-  challengesLede:
-    'Interior design difficulties come from decisions taken late against items that take months to arrive.',
-  challenges: [
-    { problem: 'Late confirmations cost a full lead time', detail: 'A specification confirmed two weeks late delays the project by the item’s lead time, not by two weeks.', outcome: 'Specifications carry the item’s lead time and the date by which confirmation is required.' },
-    { problem: 'Procurement margin leaks to client-supplied items', detail: 'Clients buy items directly, reducing the designer’s margin and creating untracked deliveries.', outcome: 'Every item is recorded as specified with a supply route, so margin and tracking are both visible.' },
-    { problem: 'Deliveries arrive at unready sites', detail: 'An item arrives before the site can receive it and is stored, damaged or returned.', outcome: 'Deliveries are scheduled against recorded site readiness and trade sequence.' },
-    { problem: 'Snags hold final payments', detail: 'A project is substantially complete and the final payment waits on a snag list nobody owns.', outcome: 'Snags are work with owners and dates, tracked to closure against the payment they hold.' },
-    { problem: 'Long orders lose visibility', detail: 'An item ordered in April is remembered in September when it has not arrived.', outcome: 'Every order carries an expected date and an age, so a slipping order is visible months ahead.' },
-    { problem: 'Variations are agreed on site', detail: 'A change is agreed with the client during a site visit and the cost is assembled afterwards.', outcome: 'Variations are raised with cost and lead-time impact at the moment they are agreed.' },
+  factsHeading: 'The numbers behind these problems.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '₹2.75 lakh crore',
+      text: 'is the size Magicbricks research projects for India’s home interiors market by 2030, up from ₹1.27 lakh crore in 2024. Tier-2 cities are expected to grow at about 19 percent a year, against 12 percent for Tier-1.',
+      source: { name: 'The Realty Today, citing Magicbricks research', year: '2025', url: 'https://therealtytoday.com/news/market-insights/indias-home-interiors-market-set-to-reach-275-lakh-crore-by-2030-led-by-tier-2-cities-magicbricks-research/' },
+    },
+    {
+      figure: '2 years',
+      text: 'is the period within which a consumer complaint for deficiency in service is generally to be filed under the Consumer Protection Act, 2019, counted from when the cause of action arose.',
+      source: { name: 'S.S. Rana & Co.', url: 'https://ssrana.in/articles/deficiency-of-services-consumer-protection-act-2019/' },
+    },
+    {
+      figure: '45 days',
+      text: 'is the longest written credit period a buyer can agree with a micro or small supplier under the MSMED Act, with 15 days applying if nothing is agreed in writing. Many carpenters and fabricators qualify as micro enterprises.',
+      source: { name: 'Taxmann, on MSMED Act section 15', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+    },
+    {
+      figure: '18%',
+      text: 'is the GST rate commonly quoted for interior designers’ professional and works contract services. Check the rate that applies to each type of service you invoice.',
+      source: { name: 'TaxBuddy, guide on GST for architects and interior designers (vendor)', url: 'https://www.taxbuddy.com/blog/gst-filing-architects-interior-designers-taxbuddy' },
+    },
+  ],
+  factsNote:
+    'The market figure is a research firm’s projection reported by a trade site. The tax rate is from a vendor guide and the legal points are from law firm summaries, so confirm each with your accountant or lawyer.',
+
+  screensHeading: 'The screens a firm would use every week.',
+  screensLede: 'Six views, each built for one job. Rooms, trades and stages use your firm’s own terms.',
+  screens: [
+    {
+      id: 'studio',
+      title: 'Firm / Today',
+      meta: 'All sites',
+      heading: 'The owner’s morning view of every site',
+      caption:
+        'Every live home with its progress, margin, money due and what is blocked. It replaces the evening round of calls to supervisors.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Live sites', value: '9', note: '3 near handover' },
+            { label: 'Deliveries late', value: '5', note: 'across 4 sites' },
+            { label: 'Changes unapproved', value: '₹2.1 L', note: '7 items' },
+            { label: 'Client money due', value: '₹11.4 L', note: '4 milestones' },
+          ],
+        },
+        {
+          type: 'table',
+          cols: ['Home', 'Progress', 'Handover', 'Margin', 'Status'],
+          rows: [
+            ['Reddy 3 BHK, HSR', '78%', '30 Oct', '19%', ['On time', 'ok']],
+            ['Kapoor Villa, Sarjapur', '52%', '22 Nov', '8%', ['Watch', 'flag']],
+            ['Iyer 2 BHK, Indiranagar', '90%', '18 Oct', '21%', ['Snagging', 'info']],
+            ['Verma Office, MG Road', '34%', '15 Dec', '-3%', ['Over budget', 'late', 'Repriced', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Kapoor Villa kitchen delivery moved from 20 to 28 Oct. Tile fixing and painting depend on it.', action: 'Re-sequence' },
+      ],
+    },
+    {
+      id: 'project',
+      title: 'Home',
+      meta: 'Record',
+      heading: 'One record for each home, from quote to handover',
+      caption:
+        'The quote by room, every change and its price, the agreement and the payment plan for one home. Anyone on the team can step in and know where it stands.',
+      blocks: [
+        {
+          type: 'record',
+          title: 'Kapoor Villa, Sarjapur',
+          sub: 'Client: Anil Kapoor. Designer: Shruti. Supervisor: Mohan',
+          fields: [
+            ['Quote', '₹32.0 lakh, 6 rooms'],
+            ['Approved changes', '₹1.9 lakh, 6 items'],
+            ['Pending changes', ['₹70,000, 3 items', 'flag', 'Approved', 'ok']],
+            ['Handover', ['22 Nov planned', 'info']],
+            ['Spent so far', '₹16.8 lakh'],
+            ['Next milestone', 'After carpentry, ₹7.2 lakh'],
+          ],
+          timeline: [
+            ['13 Oct', 'Client asks to extend TV unit by 3 feet, ₹38,000, awaiting approval'],
+            ['9 Oct', 'Kitchen order confirmed, delivery promised 20 Oct'],
+            ['3 Oct', 'Civil work complete, second payment demand sent'],
+            ['Note', 'Client wants walnut finish only. Mother-in-law decides on colours.'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'materials',
+      title: 'Orders and vendors',
+      meta: 'Purchase, delivery, payment',
+      heading: 'What was ordered, what came, what was paid',
+      caption:
+        'Each order with its promised date, delivery status and payment schedule. Trade bills are checked against recorded work before they are paid.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Order', 'Vendor', 'Promised', 'Paid', 'Status'],
+          rows: [
+            ['Modular kitchen', 'Spacio', '20 Oct, now 28 Oct', '₹2.4 L of ₹4.8 L', ['Late 8 days', 'late', 'Re-confirmed', 'ok']],
+            ['Wardrobes x4', 'Sharma Interiors', '25 Oct', '₹3.0 L of ₹6.0 L', ['In production', 'info']],
+            ['Italian marble', 'Marble House', '12 Oct', '₹1.9 L of ₹1.9 L', ['Delivered', 'ok']],
+            ['Plywood 18 mm, 40 sheets', 'Ply Mart', '16 Oct', '₹0 of ₹1.2 L', ['Due tomorrow', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Carpenter bill of ₹84,000 claims 62 sq ft of paneling. Recorded work is 48 sq ft.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'schedule',
+      title: 'Site and snags',
+      meta: 'Trades, progress, defects',
+      heading: 'Which trade is where, and what is left to fix',
+      caption:
+        'The site schedule by trade with planned and actual progress, the supervisor’s daily notes with photos, and the snag list at handover.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Waiting',
+              cards: [
+                { title: 'Tile fixing, kitchen', meta: 'Needs kitchen cabinets, delivery 28 Oct', tag: ['Blocked', 'late', 'Moved', 'ok'] },
+                { title: 'Painting, living room', meta: 'Needs false ceiling done', tag: ['Waiting', 'flag'] },
+              ],
+            },
+            {
+              name: 'In progress',
+              cards: [
+                { title: 'False ceiling, passage', meta: 'Mohan: 70% done today', tag: ['On time', 'ok'] },
+                { title: 'Wardrobe fitting, master', meta: 'Carpenter team B', tag: ['On time', 'ok'] },
+              ],
+            },
+            {
+              name: 'Snags at handover',
+              cards: [
+                { title: 'Drawer sticks, kids room', meta: 'Photo attached, carpenter', tag: ['Open', 'flag', 'Fixed', 'ok'] },
+                { title: 'Paint patch near window', meta: 'Painter, due Friday', tag: ['Open', 'flag'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'money',
+      title: 'Enquiries and client payments',
+      meta: 'Quotes and milestones',
+      heading: 'Quotes waiting to go out and money waiting to come in',
+      caption:
+        'Enquiries with their next step, and client milestones tied to site stages, so a demand goes out the day a stage is complete.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Enquiry', 'Property', 'Budget', 'Stage', 'Next step'],
+          rows: [
+            ['Gupta family', '3 BHK, Whitefield', '₹18 L', 'Quote promised Thursday', ['Send today', 'late', 'Sent', 'ok']],
+            ['Dr Menon', 'Clinic, Koramangala', '₹25 L', 'Measurements done', ['Draft quote', 'flag']],
+            ['Pillai couple', '2 BHK, Hebbal', '₹12 L', 'Quote sent 9 days ago', ['Follow up', 'late', 'Replied', 'ok']],
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: 'Iyer 2 BHK, handover payment', meta: '₹3.8 lakh, after snag list is closed', tag: ['Snags: 4 open', 'flag'] },
+            { name: 'Reddy 3 BHK, milestone 3', meta: '₹5.6 lakh, civil and carpentry complete', tag: ['Raise demand', 'late', 'Demanded', 'ok'] },
+          ],
+        },
+      ],
+    },
   ],
 
-  modulesLede: 'One system across specification, procurement, site and snagging.',
-  modules: [
-    { id: 'records', title: 'Specifications, selections and revisions', line: 'Each item carries its specification, supplier, lead time, confirmation state, cost, margin and the room it belongs to.', why: 'The specification is where lead time and margin both originate.', example: 'Forty-six specifications unconfirmed with lead times already running against the programme.' },
-    { id: 'orders', title: 'Items on order and deliveries', line: 'Orders record supplier, expected date, deposit, delivery state and site readiness requirement.', why: 'The order is the project’s critical path and is usually tracked in a spreadsheet.', example: 'Thirty-one items past expected delivery, blocking two projects.' },
-    { id: 'work', title: 'Projects, rooms and installation', line: 'Work is organised by project and room with installation sequence, trades and dependencies.', why: 'Items install in an order that trades and access dictate.', example: 'Installation sequence recorded so deliveries are scheduled to match it.' },
-    { id: 'suppliers', title: 'Suppliers, makers and importers', line: 'Suppliers carry lead times, reliability against them, deposits, damage rates and balances.', why: 'A supplier’s actual lead time is the only useful basis for a programme date.', example: 'Actual against quoted lead time by supplier, informing the programme.' },
-    { id: 'relationships', title: 'Clients, contractors and trades', line: 'Clients carry their projects, decisions, budgets and payment schedule; contractors and trades carry their scope and coordination.', why: 'Client decision speed is the practice’s biggest programme variable.', example: 'Decision turnaround by client, informing realistic dates.' },
-    { id: 'workflows', title: 'Approvals, variations and snags', line: 'Specification approvals, variations, budget changes and snags move through defined steps with recorded decisions.', why: 'A variation agreed on site without cost and lead-time impact is unrecoverable.', example: 'A variation carrying its cost and lead-time consequence at agreement.' },
-    { id: 'locations', title: 'Sites, rooms and storage', line: 'Sites and storage are locations with readiness state, deliveries received and items held.', why: 'A delivery to an unready site costs storage, damage or a return visit.', example: 'Site readiness recorded and deliveries scheduled against it.' },
-    { id: 'intelligence', title: 'Lead time, margin and snag reporting', line: 'Confirmation against required dates, supplier lead time performance, procurement margin, client-supplied share and snag closure come from the records.', why: 'The project’s outcome is decided by dates and margin, both of which are recordable.', example: 'Procurement margin by project and the share lost to client-supplied items.' },
-    { id: 'ai', title: 'Ask the project a question', line: 'Verity AI answers from your own specification, order, site and snag records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about confirmations outstanding and orders slipping.', example: '"Which specifications are unconfirmed against their required date?" returns forty-six.' },
-    { id: 'communication', title: 'Client decisions on the record', line: 'Selections, approvals and site agreements attach to the item or project they concern.', why: 'A selection agreed verbally on site is the basis for an order and a cost.', example: 'A client selection recorded at the moment it is agreed.' },
-    { id: 'control', title: 'Budget, margin and approvals', line: 'One permission model and one audit trail, with budget changes and margin decisions recorded.', why: 'Procurement margin is the practice’s income and is negotiated per item.', example: 'Margin recorded per item and per project.' },
-    { id: 'people', title: 'Designers and project coordinators', line: 'Staff are modelled once, and every specification, order and site visit carries who owns it.', why: 'Coordination failures are ownership failures.', example: 'Orders and snags by owner with escalation.' },
+  dayHeading: 'The same Saturday on a site, before and after.',
+  dayLede: 'Sites do not get smaller. What changes is that changes, deliveries and payments leave a record, and the record chases them.',
+  day: [
+    {
+      time: 'Morning',
+      before: 'The owner calls four supervisors in turn to find out what is happening at each site.',
+      after: 'The Today screen shows every site’s progress, late deliveries and blockers. The calls are only for decisions.',
+    },
+    {
+      time: 'Midday',
+      before: 'A client asks on site to extend the TV unit. The designer says "fine" and the carpenter starts.',
+      after: 'The change is logged with a price of ₹38,000. The client approves on the spot, and the carpenter starts after the approval.',
+    },
+    {
+      time: 'Afternoon',
+      before: 'The kitchen factory says delivery will be eight days late. The tile fixer arrives anyway and waits.',
+      after: 'The late delivery marks tile fixing as blocked, and the supervisor moves the tile gang to another room that morning.',
+    },
+    {
+      time: 'Late afternoon',
+      before: 'A carpenter presents a bill on a notebook page. The designer pays it to avoid an argument.',
+      after: 'The bill is checked against the recorded measurements. A difference of 14 sq ft is raised before payment.',
+    },
+    {
+      time: 'Evening',
+      before: 'Civil work finishes. The next payment demand is remembered ten days later.',
+      after: 'The stage is marked complete with photos, and a task to raise the demand lands on accounts the same evening.',
+    },
+    {
+      time: 'Month end',
+      before: 'The accountant finds out a villa cost more than it earned.',
+      after: 'The villa was flagged at 85 percent of budget. The remaining changes were priced and the margin held.',
+    },
   ],
 
-  workflowsHeading: 'Specify, confirm, order, install, close.',
-  workflowsLede: 'These already happen. Recorded against lead times, the programme becomes real.',
-  workflows: [
-    { name: 'Specification to order', steps: ['Item specified with supplier and lead time', 'Required confirmation date derived from the programme', 'Client confirmation tracked against that date', 'Order placed with deposit and expected delivery', 'Order tracked with an age against expectation'], note: 'The required confirmation date, derived from lead time, is what makes the client decision urgent at the right moment.' },
-    { name: 'Delivery and site readiness', steps: ['Expected delivery compared with site readiness', 'Delivery scheduled or storage arranged', 'Goods received and condition recorded', 'Damage claimed against supplier or transporter', 'Item recorded as on site and ready to install'], note: 'A delivery to an unready site is a cost the practice usually absorbs.' },
-    { name: 'Installation sequence', steps: ['Installation order set by trade and access', 'Items matched to the sequence', 'Trades coordinated with dates', 'Installation completed and recorded', 'Issues raised as snags'], note: 'Sequence is a constraint rather than a preference, and delivery scheduling must respect it.' },
-    { name: 'Variation on site', steps: ['Change agreed with the client on site', 'Cost and lead-time impact assessed immediately', 'Variation raised with both attached', 'Client approval recorded', 'Programme and budget updated'], note: 'A variation agreed without its lead-time consequence is a date nobody can now meet.' },
-    { name: 'Snagging and closure', steps: ['Snags recorded at handover with owners', 'Rectification assigned and tracked', 'Re-inspection completed', 'Final payment released on closure', 'Outstanding snags aged against payment held'], note: 'Snags hold final payments, which makes closing them a cash task as much as a quality one.' },
-  ],
+  approach: {
+    heading: 'We set it up with you, in four weeks.',
+    lede:
+      'You do not get a login and a manual. We learn how a home moves through your firm, from the first visit to handover, then build Verity around it and stay on to make it work.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Sit with you and a lead designer. Follow two live homes from quote to snag list, and see how orders, changes, site notes and payments are tracked today.',
+        you: 'Two to three hours of your time and an hour from a supervisor. Access to a recent quote, the purchase sheet and the payment plan of two projects.',
+        get: 'A written map of how a home runs in your firm: rooms and trades, vendors, payment stages, and the five problems we will fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up your quote format, change approval flow, order and payment schedules, trade sequence, snag checklist and milestone plan, with screens in your own words.',
+        you: 'Check the trade sequence and milestones with a supervisor. Tell us where a rule is wrong.',
+        get: 'A working Verity with your homes, vendors and stages, ready for your live sites.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in your live projects, quotes, vendor list, open orders and payment plans from your sheets. Train designers and supervisors on site, on their own homes, in short sessions.',
+        you: 'Your project sheets, vendor list and open purchase orders. Thirty minutes with each supervisor and designer.',
+        get: 'Every live home inside Verity with its quote, changes, orders and next milestone, and a team that has logged a real site day.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first month of sites with you, tune the flags and templates, and handle changes as your project mix changes.',
+        you: 'A short monthly review of margin, late deliveries and money due.',
+        get: 'A system that follows how the firm quotes and builds, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Two recent quotes and the agreements that went with them',
+      'Your purchase or order sheet for live sites',
+      'The payment milestone plan you use with clients',
+      'A list of regular vendors and trades with contact details and rates',
+      'Your standard snag list or handover checklist',
+    ],
+    time: 'About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Each supervisor and designer needs about half an hour.',
+    after: 'Nobody is hired to run Verity. Changes, deliveries and site notes are recorded as work happens, and the reports come from those records.',
+  },
 
   ai: {
-    heading: 'Ask what is late and why.',
-    lede: 'Verity AI reads the same specification, order, site and snag records the practice creates as it works. It answers across projects, respects permissions, and can turn an answer into chases and variations.',
-    panelMeta: 'Grounded in your project records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which specifications are unconfirmed against their required date?',
-      'Which orders are past their expected delivery?',
-      'Which suppliers run longest against their quoted lead times?',
-      'What is procurement margin by project?',
-      'How much margin is lost to client-supplied items?',
-      'Which snags are open past handover and holding payment?',
-      'Which deliveries are scheduled against unready sites?',
-      'Which clients take longest to confirm selections?',
-      'Summarise programme risk across live projects.',
+    heading: 'Ask the firm a question and get an answer.',
+    lede:
+      'Verity AI reads your own quotes, changes, orders, site notes and payment records. Ask in plain words, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which deliveries are late and what site work do they hold up?',
+        a: 'Five deliveries across four sites. The Kapoor Villa kitchen is the most serious, holding up tile fixing and painting.',
+        rows: [['Kapoor Villa kitchen', 'Late 8 days'], ['Reddy wardrobe hardware', 'Late 3 days'], ['Verma office glass', 'Late 5 days'], ['Iyer curtain rods', 'Late 2 days']],
+        action: 'Create re-sequence tasks for the supervisors',
+      },
+      {
+        q: 'What changes are approved but not billed?',
+        a: 'Eleven changes worth ₹4.3 lakh across five homes. The largest is the Kapoor Villa wine unit at ₹92,000.',
+        action: 'Add the changes to the next milestone demands',
+      },
+      {
+        q: 'Which homes are below 10 percent margin right now?',
+        a: 'Two. Kapoor Villa is at 8 percent and the Verma office is at minus 3 percent, mainly from glass work added after the quote.',
+        rows: [['Kapoor Villa', '8%'], ['Verma Office', '-3%']],
+      },
     ],
   },
 
-  automationHeading: 'Lead times and confirmations.',
-  automationLede: 'Each runs from the project records at the point the condition is met.',
+  automationHeading: 'The follow-ups nobody has time to make.',
+  automationLede: 'Set once, then they run from your project records. Your team still talks to clients and vendors; Verity makes sure the right person knows to.',
   automations: [
-    { trigger: 'A specification approaches its required confirmation date', steps: ['Flagged with the lead time it governs', 'Client chase assigned', 'Programme impact calculated if it slips'] },
-    { trigger: 'An order passes its expected delivery', steps: ['Flagged with the installation it blocks', 'Supplier chased and response recorded', 'Programme revised where needed'] },
-    { trigger: 'A delivery is due to an unready site', steps: ['Readiness checked against the date', 'Storage or reschedule decision raised', 'Outcome recorded'] },
-    { trigger: 'A variation is agreed on site', steps: ['Cost and lead-time impact assessed', 'Approval routed with both attached', 'Programme and budget updated'] },
-    { trigger: 'Snags remain open past handover', steps: ['Aged against the payment held', 'Rectification assigned', 'Escalated to the project lead'] },
+    {
+      when: 'A client asks for a change',
+      then: ['Logged with room, price and time effect', 'Sent to the client for approval', 'Work starts only after approval is recorded'],
+    },
+    {
+      when: 'A delivery is later than promised',
+      then: ['Order marked late', 'Dependent trades marked blocked', 'Supervisor asked to re-sequence'],
+    },
+    {
+      when: 'A site stage is marked complete',
+      then: ['Photos attached to the stage', 'Milestone demand task to accounts', 'Next trade released to start'],
+    },
+    {
+      when: 'A vendor bill arrives',
+      then: ['Checked against recorded quantities', 'Difference flagged for the designer', 'Payment released with approver’s name'],
+    },
+    {
+      when: 'A project reaches 85 percent of its budget',
+      then: ['Flag to the owner', 'Remaining work and changes listed', 'Decision recorded: reprice, trim or absorb'],
+    },
+    {
+      when: 'A quote has no reply after a week',
+      then: ['Listed on the enquiries screen', 'Follow-up task to the designer', 'Outcome recorded: won, lost or waiting'],
+    },
   ],
 
-  intelligenceHeading: 'What the practice can see.',
-  intelligenceLede: 'Lead times, margin and site progress from the project records.',
-  intelligence: [
-    { area: 'Programme', points: ['Specifications unconfirmed against required dates', 'Orders past expected delivery', 'Installation sequence progress', 'Programme slippage by cause'] },
-    { area: 'Procurement', points: ['Margin by item and project', 'Client-supplied share and margin forgone', 'Supplier lead time actual against quoted', 'Damage and claims by supplier'] },
-    { area: 'Site', points: ['Readiness against scheduled deliveries', 'Storage used and its cost', 'Trade coordination and delays', 'Deliveries refused or returned'] },
-    { area: 'Closure', points: ['Snags by project and age', 'Payments held against snags', 'Rectification turnaround', 'Handover completion'] },
-    { area: 'Clients', points: ['Decision turnaround by client', 'Variations agreed and their impact', 'Budget against actual', 'Payment schedule adherence'] },
-  ],
-  intelligenceNote: 'Verity records the practice and its procurement. Design and drawing tools continue as they are.',
+  rules: {
+    heading: 'The rules an interior design firm has to keep up with.',
+    lede: 'Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your adviser is not rebuilding them from chat threads.',
+    items: [
+      {
+        name: 'Consumer Protection Act, 2019',
+        what: 'A client who feels a service was deficient can generally complain to a consumer commission within two years of the cause of action. A signed quote, written approvals for changes and dated progress records are the strongest evidence of what was agreed and done.',
+        how: 'Quotes, change approvals, progress photos and milestone sign-offs sit on the project record, each with date and name.',
+        source: { name: 'S.S. Rana & Co.', url: 'https://ssrana.in/articles/deficiency-of-services-consumer-protection-act-2019/' },
+      },
+      {
+        name: 'Timely payment of micro and small vendors',
+        what: 'The MSMED Act sets payment within the agreed written term, not more than 45 days, or 15 days with no written agreement. Section 43B(h) of the Income Tax Act, from assessment year 2024-25, ties a buyer’s tax deduction to paying micro and small suppliers on time.',
+        how: 'Vendor bill dates, agreed terms and payment dates are recorded, so ageing is visible before it becomes a tax question.',
+        source: { name: 'Taxmann', url: 'https://www.taxmann.com/post/blog/analysis-practical-insights-into-section-43bh-regarding-disallowance-of-delayed-payments-to-mses/' },
+      },
+      {
+        name: 'GST on design and works contract services',
+        what: 'Interior design services and works contracts are generally taxed at 18 percent, though the treatment of materials supplied, composition and place of supply can change the position. Your accountant decides how each job is invoiced.',
+        how: 'Quote lines separate design fees, labour and materials, and each client invoice carries the project, so your accountant sees a clean split.',
+        source: { name: 'TaxBuddy guide (vendor)', url: 'https://www.taxbuddy.com/blog/gst-filing-architects-interior-designers-taxbuddy' },
+      },
+      {
+        name: 'Client and personal data',
+        what: 'Client contact details, floor plans, photos of homes and family details are personal data. India’s data protection rules are being phased in, so keep access narrow and know where photos and plans are stored.',
+        how: 'Plans, photos and client details sit in one permissioned place, with a record of who viewed or changed them, instead of in personal phones.',
+      },
+    ],
+    note: 'Rules change and differ by case. Confirm current requirements with your accountant or lawyer. Verity does not file anything.',
+  },
 
-  rolesHeading: 'One practice, three views.',
-  rolesLede: 'Everyone works from the same records.',
+  rolesHeading: 'Everyone sees the same home, through their own window.',
+  rolesLede: 'A supervisor does not need to see the firm’s margin. A vendor should not see another vendor’s rates. Each role opens on what it needs.',
   roles: [
-    { role: 'Principal', question: 'Are projects on programme and on margin?', focus: 'Confirmations against required dates, orders late, procurement margin, snags holding payment.' },
-    { role: 'Project coordinator', question: 'What is blocking each project?', focus: 'Unconfirmed specifications, orders past date, site readiness, trade coordination.' },
-    { role: 'Designer', question: 'What needs a decision?', focus: 'Specifications awaiting client confirmation, variations to raise, selections to record.' },
+    { role: 'Owner', question: 'Which homes make money, and which are in trouble?', sees: 'Progress and margin per home, late deliveries, unapproved changes, money due, vendors to pay.' },
+    { role: 'Designer', question: 'What does my client need to decide?', sees: 'Quote, changes, selections pending, payment plan and the site notes for their homes.' },
+    { role: 'Site supervisor', question: 'What do I do today, and who is late?', sees: 'The trade schedule, deliveries due, snags and the daily notes form for their sites.' },
+    { role: 'Accounts', question: 'What can I demand and what must I pay?', sees: 'Milestones ready to bill, vendor bills checked, payment ageing by client and vendor.' },
+    { role: 'Vendor or contractor', question: 'What have I been asked to deliver?', sees: 'Only their own orders, promised dates and payment status for the homes they work on.' },
   ],
 
-  useCasesHeading: 'What interior designers use Verity for',
-  useCases: [
-    { name: 'Confirmation against lead time', body: 'Required confirmation dates derived from item lead times, so a client decision becomes urgent at the right moment rather than at the deadline.' },
-    { name: 'Procurement margin', body: 'Margin recorded per item and project, including what is forgone to client-supplied items.' },
-    { name: 'Order tracking with age', body: 'Every order carrying an expected date and an age, so a slipping order is visible months before installation.' },
-    { name: 'Delivery against site readiness', body: 'Deliveries scheduled against recorded readiness and trade sequence, avoiding storage, damage and return visits.' },
-    { name: 'Variation with lead-time impact', body: 'Site variations raised with both cost and lead-time consequence at the moment they are agreed.' },
-    { name: 'Snag closure against payment', body: 'Snags aged against the final payment they hold, making closure a cash task as well as a quality one.' },
-    { name: 'Supplier lead-time reality', body: 'Actual against quoted lead times per supplier, which is the only honest basis for a programme date.' },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your 3D and drawing software. Renders and drawings stay where your designers work; Verity holds the project side.',
+      'WhatsApp groups with clients and vendors. Your team logs decisions made in them on the project.',
+      'Your accounting software and your accountant, who still prepares returns.',
+      'Your quote and agreement templates, which are attached to each home.',
+    ],
+    not: [
+      'Replace your 3D rendering or drawing tools.',
+      'Place orders with vendors or take payments for you.',
+      'File your GST returns or run your payroll.',
+      'Give legal advice on contracts or consumer disputes.',
+    ],
+    migration:
+      'We bring your live homes, quotes, vendor lists and open orders across from your sheets and chat threads in stages, so the sites keep running while it happens.',
+  },
 
-  migration: 'Your design tools and accounting continue and are mapped during implementation. Projects, specifications, live orders, suppliers with lead times and open snags are brought across.',
-
-  faqHeading: 'Questions designers ask',
+  faqHeading: 'Questions interior firm owners ask.',
   faqs: [
-    ['What can AI software do for an interior design business?', 'Verity AI answers questions from your own specification, order, site and snag records: which specifications are unconfirmed against their required date, which orders are late, what procurement margin looks like by project, which snags are holding final payments. Each answer can become a chase or a variation.'],
-    ['Why does a late confirmation matter so much?', 'Because it costs the item’s full lead time rather than the length of the delay. A specification confirmed two weeks late on an item with a four-month lead time moves the project by four months, not two weeks.'],
-    ['Can it show procurement margin?', 'Margin is recorded per item and per project, including the share forgone when clients supply items directly — which is usually a larger number than practices expect.'],
-    ['How does it help with deliveries?', 'Deliveries are scheduled against recorded site readiness and the installation sequence, so an item does not arrive at a site that cannot receive it and incur storage, damage or a return visit.'],
-    ['Does it handle variations agreed on site?', 'A variation is raised with its cost and lead-time impact at the moment it is agreed, rather than assembled afterwards when the programme consequence has already occurred.'],
-    ['Can it help close projects?', 'Snags are work with owners and ages, tracked against the final payment they hold — which makes closing them a cash task rather than a quality afterthought.'],
-    ['Does Verity replace our design software?', 'No. Design and drawing tools continue and are mapped during implementation. Verity holds specifications, procurement, site coordination, snagging and the commercial record.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the specification and procurement process, configuration, migration of live projects and suppliers, then an ongoing operations partnership.'],
+    [
+      'Will my site supervisors actually use it?',
+      'The daily note takes a minute: what was done, which trade, and a photo. We train on site with their own project, and supervisors get something back: a clear list of what is due and which delivery they are waiting on.',
+    ],
+    [
+      'Does Verity replace my 3D software or quote sheet?',
+      'Your designers keep their 3D and drawing tools. The quote becomes a structured list on the project, so changes and vendor orders attach to the same items, but you can bring your existing format across.',
+    ],
+    [
+      'Can my clients see progress?',
+      'Clients do not need to log in. Your designer shares a short summary built from the site record, so the client sees the same facts you do without a daily call.',
+    ],
+    [
+      'Does it order from vendors?',
+      'No. Your team places orders as it does today. Verity records each order, its promised and confirmed dates, and what has been paid, and flags the ones that are late.',
+    ],
+    [
+      'We have only three sites at a time. Is this too much?',
+      'The leaks are the same on three sites: unpriced changes, late deliveries and slow demands. We set up only what you need, and the four weeks run the same way.',
+    ],
+    [
+      'Can it handle commercial fit-outs as well as homes?',
+      'Yes. A project is rooms or zones, trades, orders and stages, whether it is a 2 BHK or an office floor. We set the stages and approvals to suit each kind.',
+    ],
+    [
+      'Who can see my margins and vendor rates?',
+      'Only the people you allow. Access is set by role, so supervisors, designers, accounts and vendors each see what they need, and every change is recorded with who made it and when.',
+    ],
+    [
+      'How long before I see something useful?',
+      'The late delivery list, unapproved changes and milestones-to-bill list need only your live sites, orders and payment plans, so they come first. Margin becomes reliable after a few weeks of recorded costs.',
+    ],
+    [
+      'What does it cost?',
+      'It depends on the number of sites, the team and what you want set up. Message us and we will give you a clear number after a short conversation about how your firm runs.',
+    ],
   ],
 
-  ctaHeading: 'Start with the specifications nobody has confirmed.',
-  ctaLede: 'Each one is a lead time already running against your programme. Tell us how selections are tracked today.',
+  related: ['interior-design-firms', 'architecture-firms', 'architects', 'furniture-manufacturers', 'home-decor-stores', 'contractors'],
 
-  related: ['architecture-firms', 'interior-design-firms', 'furniture-stores', 'home-decor-stores', 'contractors', 'construction-companies'],
+  ctaHeading: 'Start with the changes nobody priced.',
+  ctaLede:
+    'Tell us how your firm runs and we will show you the unapproved changes, the late deliveries and the unbilled milestones it would find, using your own numbers.',
 };

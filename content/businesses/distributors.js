@@ -1,594 +1,654 @@
 export default {
+  schema: 2,
   slug: 'distributors',
   status: 'published',
   plural: 'distributors',
   subject: 'distribution business',
+  checked: '15 October 2026',
 
   seo: {
-    title: 'AI business management software for distributors | Verity',
+    title: 'Distributor software for FMCG and trade distributors | Verity',
     description:
-      'Verity connects multi-warehouse stock, retailer orders, credit exposure, salesperson beats, dispatch and returns into one operational system you can ask questions of.',
+      'See 14 leaks in a distribution business: retailer credit, schemes and company claims, van routes, expiry and salesman cash, and the Verity screens that fix each.',
     keywords: [
-      'AI software for distributors',
-      'distribution management software',
-      'multi warehouse inventory software',
-      'retailer order and credit management',
-      'FMCG distributor software',
+      'distributor management software India',
+      'FMCG distributor retailer credit tracking',
+      'scheme and claim tracking for distributors',
+      'van sales and beat route tracking',
+      'distributor salesman cash settlement',
     ],
   },
+
+  uses: ['people', 'work', 'relationships', 'records', 'workflows', 'communication', 'intelligence', 'control', 'inventory', 'orders', 'suppliers', 'logistics', 'workforce', 'ai'],
 
   hero: {
     eyebrow: 'Verity for distributors',
-    headline: 'You do not sell products. You sell availability, on credit, on time.',
+    headline: 'You carry the company’s stock, the retailer’s credit and the salesman’s cash. Verity keeps all three straight.',
     lede:
-      'A distributor wins on stock being in the right godown and the right retailer paying on schedule. Verity holds the stock, the orders, the credit exposure and the field team on one record.',
-    note: 'Runs alongside your existing accounting. Nothing switches off on day one.',
-    panel: {
-      title: 'Distribution',
-      meta: 'North region · Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Orders today', value: '212', note: 'across 4 godowns' },
-        { label: 'Credit outstanding', value: '₹1.84 Cr', note: '₹42 L beyond 30 days' },
-        { label: 'Lines out of stock', value: '19', note: 'ordered but unfulfillable' },
-        { label: 'Returns pending', value: '34', note: 'awaiting credit note' },
-      ],
-      rows: [
-        { name: '11 retailers past credit limit with open orders', meta: 'Combined ₹28 L · orders held', active: true },
-        { name: '19 order lines cannot be fulfilled from any godown', meta: 'Fast-moving SKUs · 3 principals', active: true },
-        { name: 'Beat 4 not covered for two consecutive days', meta: 'Salesperson unavailable · 46 outlets', active: true },
-        { name: 'Near-expiry stock in Godown 2', meta: '₹6.2 L · under 45 days', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own distribution in this shape.',
-    },
+      'A distributor sits in the middle. The company pushes targets and schemes down, the retailers pay late, and your salesmen and vans move between the two every day. Verity puts routes, outstanding, schemes and claims in one place, so margin is not lost in the gaps between them.',
+    oneLine:
+      'One system that knows every outlet on every beat, what each owes, which scheme was passed on, which claim is still pending with the company and where every van’s stock went.',
+    note: 'Your accounting software and the company’s portal stay. Verity holds the routes, dues, schemes and claims around them.',
+    screen: 'owner',
+    screenNote: 'routes, principals, dues and claims',
   },
 
-  overview: {
-    heading: 'Distribution is a working-capital business disguised as a logistics one.',
+  today: {
+    heading: 'The margin is small, so the gaps between sheets matter.',
     paragraphs: [
-      'A distributor buys stock from principals, holds it across godowns, sells it to a large number of small retailers, delivers it, and waits to be paid. The margin is thin and the volume is high, which means the business is decided by two things: whether the right stock was in the right place when a retailer ordered it, and whether the money came back before the next purchase had to be funded.',
-      'Both of those are information problems. Stock spread across four godowns is only useful if you know what is where; a fast-moving line sitting in the wrong warehouse is an out-of-stock at the counter. Credit is only safe if the exposure per retailer is current at the moment an order is taken, not at month end when the ledger is reviewed.',
-      'Then there is the field. Salespeople work beats, take orders at outlets, and are the only people who know why a retailer stopped ordering. That knowledge is almost never captured, so a slow decline in an outlet looks identical to a good month until someone notices the annual number.',
-      'Verity holds the stock across locations, the retailer orders, the credit position, the field activity, the dispatch and the returns as connected records. The order taken at a counter can be checked against the stock that exists and the credit the retailer has, at the point it is taken rather than at the point it fails.',
+      'A distributor often earns a single-digit or low double-digit margin on what passes through. That leaves little room for a retailer who pays in 50 days instead of 20, a scheme given to the shop but never claimed, or a pallet of damaged stock that the company has not yet credited.',
+      'The work is spread across many hands. The salesman takes orders on his beat. The van loader packs. The collection boy brings cash. The accountant records invoices. The company sends targets, schemes and claim formats on its own cycle. Each has a sheet or a book, and the distributor is the person who reads all of them.',
+      'The problem is not any one mistake. It is that the truth of the business only appears at month end, when a claim has aged past the window, the cash does not match the settlement, and the target is missed by a few lakh.',
     ],
+    stack: ['Company portal and claim formats', 'Accounting software or Tally', 'Salesman order book', 'Van load and return sheets', 'Excel of schemes and outstanding', 'Cash register'],
+    stackNote: 'Each is used for its own job. The money leaks where they meet.',
   },
 
-  terminology: [
-    ['SKUs, cases, batches', 'Inventory'],
-    ['Retailer orders, indents, returns', 'Orders'],
-    ['Retailers, outlets, key accounts', 'Relationships'],
-    ['Principals, brands, suppliers', 'Suppliers'],
-    ['Salespeople, beats, delivery crews', 'People'],
-    ['Godowns, warehouses, vans', 'Locations'],
-    ['Credit limits, schemes, approvals', 'Workflows'],
-  ],
-
-  challengesHeading: 'Thin margins hide expensive gaps.',
-  challengesLede:
-    'Distribution problems are small individually and large in aggregate, which is exactly why they go unaddressed.',
-  challenges: [
+  painsHeading: 'Where a distribution business actually loses money.',
+  painsLede:
+    'These are the situations distributors describe most often. For each: what it looks like, what it costs, and what Verity does about it.',
+  pains: [
     {
-      problem: 'Stock exists, but not where the order is',
-      detail:
-        'The company holds the SKU. It is in the wrong godown, so the order goes unfulfilled and the retailer buys from a competitor that week.',
-      outcome:
-        'Stock is held by location with availability visible across all of them, so a shortfall in one godown is answerable from another before the order is lost.',
-    },
-    {
-      problem: 'Credit exposure is known at month end',
-      detail:
-        'Orders are accepted from retailers who are already past their limit, and it is discovered when the ledger is reviewed weeks later.',
-      outcome:
-        'Outstanding balance and ageing sit on the retailer record, so an order from a retailer past their limit is held at the point it is taken.',
-    },
-    {
-      problem: 'Out-of-stock is never counted',
-      detail:
-        'An order line that could not be supplied simply disappears. The lost sale leaves no trace and never appears in any report.',
-      outcome:
-        'Unfulfillable lines are recorded against the order, so the cost of stocking decisions is visible rather than invisible.',
-    },
-    {
-      problem: 'Field activity is invisible',
-      detail:
-        'Whether a beat was covered, which outlets were visited and which ordered is known only to the salesperson.',
-      outcome:
-        'Beat coverage and outlet visits are recorded work, so a route going uncovered for two days is something the business sees.',
-    },
-    {
-      problem: 'Returns and expiry are handled informally',
-      detail:
-        'Damaged goods, near-expiry stock and retailer returns accumulate in a corner of the godown and are settled in a rush at quarter end.',
-      outcome:
-        'Returns are recorded movements against the retailer and the batch, with credit notes as workflow rather than negotiation.',
-    },
-    {
-      problem: 'Principal claims are lost',
-      detail:
-        'Scheme discounts, damage claims and promotional support owed by principals are reconstructed from memory and partially claimed.',
-      outcome:
-        'Schemes and claims are recorded against the principal and the transactions they apply to, so what is owed is a number rather than an estimate.',
-    },
-  ],
-
-  modulesLede:
-    'One system across stock, orders, credit and the field. These are the parts a distribution business uses.',
-  modules: [
-    {
-      id: 'inventory',
-      title: 'Stock across every godown',
-      line:
-        'SKUs held with batch, expiry, cost, location and state, with availability visible across all warehouses at once.',
-      why:
-        'Multi-location stock is the distributor’s core asset and its most common failure. Knowing the total is useless; knowing where it is is the whole job.',
-      example:
-        'A fast-moving line is out in Godown 1 and sitting in Godown 3. That is a transfer, not a lost order — provided someone can see it.',
-    },
-    {
-      id: 'orders',
-      title: 'Retailer orders and fulfilment',
-      line:
-        'Orders are records with their lines, the retailer, the credit position at the time of order, the fulfilment state and what could not be supplied.',
-      why:
-        'The order is where stock, credit and the customer relationship meet. Recording the lines that could not be filled is what makes stocking decisions measurable.',
-      example:
-        'Two hundred and twelve orders today, nineteen lines unfulfillable. Those nineteen are the number that should drive next week’s purchase.',
-    },
-    {
-      id: 'relationships',
-      title: 'Retailers, outlets and key accounts',
-      line:
-        'Each outlet is a record with its order history, credit limit, outstanding balance, ageing, returns and visit history.',
-      why:
-        'A distributor’s customer base is wide and shallow. Decline in an individual outlet is invisible without a record, and it is where growth quietly leaks.',
-      example:
-        'An outlet that ordered every week until August and twice since is a list entry rather than something nobody happened to notice.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Principals, brands and purchase',
-      line:
-        'Principals are relationships with their purchase orders, schemes, claims, delivery performance and outstanding balances.',
-      why:
-        'The supply side of a distribution business carries most of its working capital and most of its unclaimed money.',
-      example:
-        'Scheme support owed by a principal is recorded against the transactions it applies to, so the claim is assembled from records.',
-    },
-    {
-      id: 'logistics',
-      title: 'Dispatch, vans and delivery',
-      line:
-        'Dispatch is tracked against the orders it fulfils, with vehicles, routes, delivery confirmation and returns on the record.',
-      why:
-        'Delivery is where a distributor’s promise is either kept or quietly broken, and where undocumented returns begin.',
-      example:
-        'A van loaded against fourteen orders returns with three partial deliveries and two returns, all reconciled against the same records.',
-    },
-    {
-      id: 'records',
-      title: 'Price lists, agreements and claim documentation',
-      line:
-        'Documents attach to the principal, retailer or transaction they belong to, with version history and the same permissions as everything else.',
-      why:
-        'Distribution runs on documents that decide money — the scheme circular, the credit agreement, the damage claim — and they are the ones most often produced late or not at all.',
-      example:
-        'A principal disputes a claim. The scheme circular it was raised against and the transactions it covers are on the same records.',
-    },
-    {
-      id: 'communication',
-      title: 'Retailer context on the record',
-      line:
-        'Notes, notifications and activity attach to the outlet, order or delivery they concern.',
-      why:
-        'Why a retailer stopped ordering is known to one salesperson and to nobody else, which is exactly the fact the business most needs.',
-      example:
-        'The note that an outlet switched to a competitor on one category sits on that outlet, where the field manager will see it.',
-    },
-    {
-      id: 'workflows',
-      title: 'Credit limits, schemes and approvals',
-      line:
-        'Credit limits, discount schemes, returns and credit notes move through defined approval steps with a recorded decision.',
-      why:
-        'Every commercially dangerous decision in distribution is a small one taken quickly — an extra week of credit, a discount to hold an account.',
-      example:
-        'An order from a retailer past their limit is held for approval rather than accepted and regretted.',
-    },
-    {
-      id: 'people',
-      title: 'Salespeople, beats and delivery crews',
-      line:
-        'Field and warehouse teams are modelled once, and every order, visit and delivery shows who owns it.',
-      why:
-        'The field team is the only part of the business that meets the customer, and its activity is the least recorded.',
-      example:
-        'Outlets visited, orders taken and conversion by salesperson, from the records they create as they work.',
-    },
-    {
-      id: 'workforce',
-      title: 'Beat coverage and attendance',
-      line:
-        'Assignment, attendance and availability stay connected to the routes and outlets they cover.',
-      why:
-        'An uncovered beat costs a week of orders from every outlet on it, and it is usually noticed only in the monthly number.',
-      example:
-        'Beat 4 uncovered for two consecutive days is an exception on the day, not a discovery at month end.',
-    },
-    {
-      id: 'locations',
-      title: 'Godowns, regions and vans',
-      line:
-        'Locations roll into regions and into the business, with permissions, stock and reporting following the same structure.',
-      why:
-        'A distributor without location structure cannot answer the only question that matters about stock: where is it.',
-      example:
-        'Stock, orders and out-of-stock lines by godown, with transfers between them as recorded movement.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reports from the transaction records',
-      line:
-        'Stock coverage, fill rate, credit ageing, outlet activity, return rates and principal claims come from the operational records themselves.',
-      why:
-        'The distributor’s critical numbers change daily. Monthly reporting is not slow, it is useless.',
-      example:
-        'Fill rate by SKU and by godown, current, rather than compiled at the end of the month.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the distribution business a question',
-      line:
-        'Verity AI answers from your own stock, order, credit and field records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions that matter here cross stock, credit and field activity at once, which is exactly why they normally go unanswered.',
-      example:
-        '"Which retailers are past their credit limit with open orders?" returns eleven, and one instruction assigns collection follow-ups to the salespeople who cover them.',
-    },
-    {
-      id: 'control',
-      title: 'Who can approve what',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Credit and discount decisions are the ones worth controlling, and they are made at the edges of the business by people under pressure.',
-      example:
-        'A salesperson can take an order; extending credit beyond limit requires an approval that leaves a record.',
-    },
-  ],
-
-  workflowsHeading: 'Order, stock, credit and delivery in one sequence.',
-  workflowsLede:
-    'These already happen daily. In Verity each step is a state change, so the failure points are visible where they occur.',
-  workflows: [
-    {
-      name: 'Order taken at an outlet',
-      steps: [
-        'Salesperson records the order against the retailer',
-        'Stock availability checked across godowns',
-        'Credit position and ageing checked against the retailer record',
-        'Order accepted, or held for approval if it exceeds the limit',
-        'Unfulfillable lines recorded against the order',
-        'Order released to the godown for picking',
-      ],
-      note:
-        'Both checks happen at the counter rather than at month end, which is the difference between a decision and a discovery.',
-    },
-    {
-      name: 'Picking to delivery',
-      steps: [
-        'Order picked at the assigned godown',
-        'Loaded to a van against a route',
-        'Delivered and confirmed at the outlet',
-        'Partial delivery or return recorded against the order',
-        'Vehicle reconciled at the end of the route',
-      ],
-      note:
-        'Returns are recorded at the point of delivery rather than reconstructed when the van gets back.',
-    },
-    {
-      name: 'Stock transfer between godowns',
-      steps: [
-        'Shortfall identified in one location against demand',
-        'Availability located in another godown',
-        'Transfer raised and approved',
-        'Stock dispatched and received at the destination',
-        'Both locations updated as the movement completes',
-      ],
-      note:
-        'The transfer is what turns an out-of-stock into a delayed delivery rather than a lost order.',
-    },
-    {
-      name: 'Purchase from a principal',
-      steps: [
-        'Coverage reviewed against recent movement and open orders',
-        'Purchase order raised against the principal',
-        'Goods received, checked and taken into the godown with batch and expiry',
-        'Scheme terms recorded against the purchase',
-        'Principal balance and delivery performance updated',
-      ],
-      note:
-        'Recording scheme terms at purchase is what makes the claim assemblable later.',
-    },
-    {
-      name: 'Collection and credit control',
-      steps: [
-        'Outstanding balances aged against each retailer',
-        'Accounts past terms flagged with their open orders',
-        'Collection follow-up assigned to the covering salesperson',
-        'Payment received and applied against invoices',
-        'Credit position updated across open and future orders',
-      ],
-      note:
-        'Collection becomes a worked list rather than a monthly reconciliation exercise.',
-    },
-    {
-      name: 'Returns and expiry',
-      steps: [
-        'Return received against the retailer and batch',
-        'Reason recorded — damage, expiry or non-movement',
-        'Credit note raised and approved',
-        'Stock either returned to saleable or written off',
-        'Claim raised against the principal where terms allow',
-      ],
-      note:
-        'Near-expiry stock is visible while it can still be moved rather than after it cannot.',
-    },
-  ],
-
-  ai: {
-    heading: 'Ask across stock, credit and the field at once.',
-    lede:
-      'Verity AI reads the same stock, order, retailer and field records the business runs on. It answers from your own data, only shows what the person asking can see, and can turn an answer into follow-ups assigned to the right salespeople.',
-    panelMeta: 'Grounded in your distribution records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which retailers are past their credit limit with open orders?',
-      'Which SKUs could not be fulfilled this week, and from which godowns?',
-      'Which outlets have stopped ordering in the last sixty days?',
-      'What stock is within forty-five days of expiry, and where?',
-      'Which beats were not covered this week?',
-      'What is outstanding beyond thirty days, and against whom?',
-      'Which principal claims are unfiled against recorded schemes?',
-      'Which SKUs are overstocked in one godown and short in another?',
-      'Summarise this month’s fill rate and credit position.',
-    ],
-  },
-
-  automationHeading: 'The checks that have to happen at the counter.',
-  automationLede:
-    'These run from the stock, order and retailer records at the moment the condition occurs.',
-  automations: [
-    {
-      trigger: 'An order is taken from a retailer past their credit limit',
-      steps: [
-        'Order held at the approval step',
-        'Outstanding balance and ageing attached to the request',
-        'Routed to the credit approver',
-        'Decision recorded against the order',
-      ],
-    },
-    {
-      trigger: 'An order line cannot be fulfilled from the serving godown',
-      steps: [
-        'Availability checked across other locations',
-        'Transfer proposed where stock exists elsewhere',
-        'Unfulfillable line recorded against the order if it does not',
-        'SKU flagged for the next purchase review',
-      ],
-    },
-    {
-      trigger: 'Stock coverage falls below the threshold for a SKU',
-      steps: [
-        'Reorder flagged against the principal who supplies it',
-        'Purchase raised for approval',
-        'Receipt checked against the order on arrival',
-      ],
-    },
-    {
-      trigger: 'A retailer’s balance passes its payment terms',
-      steps: [
-        'Account flagged with its ageing and open orders',
-        'Collection follow-up assigned to the covering salesperson',
-        'Escalated to the credit owner past the second threshold',
-      ],
-    },
-    {
-      trigger: 'A beat goes uncovered',
-      steps: [
-        'Coverage gap flagged against the route and its outlets',
-        'Reassignment task created for the field manager',
-        'Affected outlets surfaced for follow-up',
-      ],
-    },
-    {
-      trigger: 'Stock approaches its expiry window',
-      steps: [
-        'Near-expiry batch flagged with its location and value',
-        'Task created to move or return it',
-        'Principal claim raised where the terms allow',
-      ],
-    },
-  ],
-
-  intelligenceHeading: 'What the distributor can actually see.',
-  intelligenceLede:
-    'Stock, credit, field and commercial performance drawn from the day’s transactions.',
-  intelligence: [
-    {
-      area: 'Stock',
-      points: [
-        'Availability by SKU and by godown',
-        'Coverage in days against recent movement',
-        'Overstock in one location against shortage in another',
-        'Near-expiry and non-moving stock by value',
-      ],
-    },
-    {
-      area: 'Fulfilment',
-      points: [
-        'Fill rate by SKU, godown and period',
-        'Order lines unfulfilled and their value',
-        'Delivery completion and partial deliveries',
-        'Return rates by reason',
-      ],
+      area: 'Credit',
+      title: 'Retailer credit grows beat by beat',
+      scene:
+        'On Route 4, nine outlets are 40 to 70 days behind. The salesman keeps taking orders because the shop is a good account. The total for the beat is only seen when the accountant adds it up.',
+      cost:
+        'Example arithmetic: on a business doing ₹1 crore a month with an average 35 days of credit, about ₹1.2 crore is always out in the market. Each extra 10 days adds roughly ₹33 lakh to what you must fund.',
+      fix:
+        'Outstanding is held per outlet, per beat and per salesman, aged in bands. An order from an outlet over its limit waits for your tap, with its oldest bill and last payment beside it.',
+      screen: 'credit',
     },
     {
       area: 'Credit',
-      points: [
-        'Outstanding by retailer with ageing bands',
-        'Exposure against limits across the base',
-        'Collection performance by salesperson and route',
-        'Orders held on credit approval',
-      ],
+      title: 'Cash with the salesman does not reach the counter the same day',
+      scene:
+        'A salesman collects ₹38,000 across a beat. He deposits ₹31,000 and says the rest is “in the bike”. The evening settlement is done by memory and the difference is carried to tomorrow.',
+      cost:
+        'Cash held outside the books for days is a standing risk. Small gaps repeated over a month become a large figure that nobody can place.',
+      fix:
+        'Each collection is recorded on the outlet against the bill it settles, with mode: cash, cheque or UPI. At the end of the day the settlement screen compares what the salesman recorded with what was handed in, per person.',
+      screen: 'settlement',
     },
     {
-      area: 'Outlets',
-      points: [
-        'Ordering frequency and value by outlet',
-        'Outlets declining or gone quiet',
-        'New outlets added and their first-order value',
-        'Product range per outlet against potential',
-      ],
+      area: 'Schemes',
+      title: 'A scheme given to the retailer is never claimed from the company',
+      scene:
+        'The company runs “buy 12 cartons, get 1 free” for ten days. Retailers get the free cartons from your stock. When the scheme ends, nobody lists which outlets got what, and the claim form is half filled.',
+      cost:
+        'Every free carton that is not claimed is paid for by you. Distributors say scheme recovery is often disputed and delayed, which is the same as a loan to the company.',
+      fix:
+        'A scheme is a record with a start, end, slab and product. Each invoice that earns it is tagged, so when it closes, the claim is already totalled by outlet and bill, ready for the claim form.',
+      screen: 'schemes',
+      source: {
+        name: 'Kirana Club, FMCG distribution guide, 2026',
+        url: 'https://kirana.club/resources/fmcg-distribution-india-guide',
+      },
     },
     {
-      area: 'Field',
-      points: [
-        'Beat coverage and outlet visits',
-        'Orders taken per visit',
-        'Attendance against route plan',
-        'Performance by salesperson and territory',
-      ],
+      area: 'Schemes',
+      title: 'Schemes change mid-month and the billing desk is the last to know',
+      scene:
+        'A new slab starts on the 12th. The salesmen are told on a WhatsApp group. Three invoices are billed on the old slab and the retailers want it corrected.',
+      cost:
+        'Credit notes issued later, retailer irritation, and a claim that does not match the invoice that supported it.',
+      fix:
+        'Scheme rules sit in Verity with the dates they apply. The invoice record picks the live rule for that outlet and date, and a bill that did not earn a scheme it should have shows up in a weekly exception list.',
+      screen: 'schemes',
+    },
+    {
+      area: 'Claims',
+      title: 'Damage, expiry and return claims pending for months',
+      scene:
+        'Twelve cartons arrive broken. A claim is raised, photos are sent, and then nothing. Six months later the same batch is still open with the company, along with two expiry returns.',
+      cost:
+        'Distributors’ federations have described damage claims pending for over 15 months at one large company, and the stock value stays on your books until it is credited.',
+      fix:
+        'A claim is a record with the batch, quantity, value, photos and dates. Each has an owner and a state: raised, acknowledged, approved, credited. Anything older than your window appears on the Today screen.',
+      screen: 'schemes',
+      source: {
+        name: 'Storyboard18, 8 October 2025, on AICPDF and Tata Consumer Products distributors',
+        url: 'https://storyboard18.com/how-it-works/tata-consumer-products-distributors-allege-mismanagement-call-for-non-cooperation-movement-82179.htm',
+      },
+    },
+    {
+      area: 'Claims',
+      title: 'Credit notes from the company that do not match your books',
+      scene:
+        'The company sends a credit note for ₹68,000. Your records show claims worth ₹91,000 for that period. Nobody can say, without a full day of matching, which ones were paid.',
+      cost:
+        'Money you are owed sits unmatched, and disputes start from a pile of papers instead of a list.',
+      fix:
+        'Credit notes from the principal are matched to the claims they settle. Anything unmatched, short-paid or older than your window is listed with amounts, so the reply to the company is a table.',
+      screen: 'principals',
+    },
+    {
+      area: 'Targets',
+      title: 'Targets and stock pushed to you that the market does not need',
+      scene:
+        'The company wants a bigger primary order before month end to hit its numbers. You take it because the margin and incentive depend on it. The stock sits for ten weeks.',
+      cost:
+        'Cash locked in a godown, a higher chance of expiry, and no one to blame because the order was yours.',
+      fix:
+        'Before you accept a primary order, Verity shows weekly secondary sales, stock in hand, goods in transit and days of cover for each item. You see what the order does to your cash and expiry risk before you say yes.',
+      screen: 'stock',
+    },
+    {
+      area: 'Routes',
+      title: 'Beats are visited by habit, not by plan',
+      scene:
+        'A salesman skips a farther lane because it is a long walk. Twelve outlets there have not been visited for five weeks. Meanwhile, three shops near the depot are visited every day.',
+      cost:
+        'Missed outlets do not order, and the next distributor’s man does. A route that is never reviewed stays inefficient for years.',
+      fix:
+        'Each outlet belongs to a beat with a visit day. Verity shows outlets not visited within their cycle, orders per call, and lines sold per outlet, so beats can be rebalanced on facts.',
+      screen: 'routes',
+    },
+    {
+      area: 'Routes',
+      title: 'Van stock does not tally with van sales',
+      scene:
+        'A van leaves with 140 cartons. It returns with 22 unsold and ₹1.9 lakh in sales. The numbers should tie. Nobody checks until the monthly stock count shows a shortage.',
+      cost:
+        'Shortages are written off with a guess. If the cause is theft or poor billing, you never find out which.',
+      fix:
+        'Each van load is an issue from the godown. Sales, returns and the closing load are recorded against the trip, and the difference is shown by van and by driver the same evening.',
+      screen: 'routes',
+    },
+    {
+      area: 'Stock',
+      title: 'Short-dated stock found too late',
+      scene:
+        'A batch of biscuits with six weeks left sits behind newer cartons. The older stock is not billed first, and ends up as a return claim with a cost to you.',
+      cost:
+        'Expired goods are often only partly recovered from the company, and the rest comes out of your margin.',
+      fix:
+        'Stock is held by batch and expiry date. Picking suggests the oldest batch first, and a weekly list shows lots expiring within your window with the outlets that last bought them.',
+      screen: 'stock',
+    },
+    {
+      area: 'People',
+      title: 'A salesman leaves and takes the outlet knowledge with him',
+      scene:
+        'The man who handled 120 outlets resigns on the 30th. His order pattern, shop owners’ phone numbers and unpaid bills were in his book and his phone.',
+      cost:
+        'A beat that goes cold for a month. Distributors’ bodies cite high sales team attrition as an industry problem.',
+      fix:
+        'Outlets, their history and dues belong to the business. A route is reassigned in one step, and the handover list shows each outlet with last order, usual items and money owed.',
+      screen: 'routes',
+    },
+    {
+      area: 'People',
+      title: 'Incentives and expenses argued from memory',
+      scene:
+        'At month end, the salesmen’s target, achievement, daily allowance and fuel claims are totalled from notes. Two disagree. The accountant redoes one.',
+      cost:
+        'Hours of the accountant’s time and a salesman’s trust that goes down a notch.',
+      fix:
+        'Visits, orders, collections and trips are on each salesman’s record. Verity builds the month’s statement from your slabs. He sees the same breakdown, so there is nothing to argue about.',
+      screen: 'owner',
     },
     {
       area: 'Principals',
-      points: [
-        'Purchase value and outstanding payable by principal',
-        'Delivery performance against ordered dates',
-        'Scheme claims raised and settled',
-        'Margin by brand and by category',
+      title: 'No one knows which company actually makes you money',
+      scene:
+        'You distribute for six companies. Sales are highest for one, but its claims are slow and its margin thin. Another is smaller but pays on time. You decide on feel.',
+      cost:
+        'Capital and godown space go to the principals that look big, not the ones that earn.',
+      fix:
+        'For every principal Verity shows margin, credit given, claims pending and stock held. You see return on money employed for each company before you renew or push a line.',
+      screen: 'principals',
+    },
+    {
+      area: 'Owner',
+      title: 'The depot, the vans and the books are three different views',
+      scene:
+        'You open one file for outstanding, another for stock and a third for claims. By the time they agree, the day is over.',
+      cost:
+        'Decisions are delayed until the month closes, when it is too late to chase a claim or pause a credit.',
+      fix:
+        'The Today screen shows the day’s sales by route, outstanding, claims waiting, stock cover and approvals. Every item has an owner and opens into the record.',
+      screen: 'owner',
+    },
+  ],
+
+  factsHeading: 'The numbers behind the problem.',
+  factsLede: 'From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.',
+  facts: [
+    {
+      figure: '15+ months',
+      text: 'is how long distributors’ federation said damage claims had stayed unsettled with one large FMCG company in Maharashtra, in October 2025.',
+      source: { name: 'Storyboard18, on AICPDF and Tata Consumer Products', year: '2025', url: 'https://storyboard18.com/how-it-works/tata-consumer-products-distributors-allege-mismanagement-call-for-non-cooperation-movement-82179.htm' },
+    },
+    {
+      figure: '₹30 to 40 lakh',
+      text: 'of locked capital per state is the guide’s worked example for a brand selling ₹1 crore a month with 30-day distributor credit and a 15% scheme spend. It is an illustration, not survey data.',
+      source: { name: 'Kirana Club, FMCG distribution guide', year: '2026', url: 'https://kirana.club/resources/fmcg-distribution-india-guide' },
+    },
+    {
+      figure: '20 to 30%',
+      text: 'of the sale price is often the total cost of distribution for smaller brands, once margin, credit losses, scheme funding and returns are counted.',
+      source: { name: 'Kirana Club, FMCG distribution guide', year: '2026', url: 'https://kirana.club/resources/fmcg-distribution-india-guide' },
+    },
+    {
+      figure: '₹50,000',
+      text: 'is the general consignment value above which an e-way bill is needed for goods in transit, with intra-state limits that vary by state. Every van trip above it needs the right paper.',
+      source: { name: 'Tally Solutions, e-way bill guide', url: 'https://tallysolutions.com/gst/e-way-bill-under-gst' },
+    },
+  ],
+  factsNote:
+    'The first figure is one federation’s statement about one company and may be disputed. The next two come from a trade community guide aimed at brands, and the last from a software vendor. They show where money gets stuck, not what your business will see.',
+
+  screensHeading: 'The screens a distributor would open every day.',
+  screensLede: 'Seven views, each for one job, set up in your own terms: beats, outlets, principals, vans and claims.',
+  screens: [
+    {
+      id: 'owner',
+      title: 'Distribution / Today',
+      meta: 'Depot: Pune East',
+      heading: 'The owner’s morning view',
+      caption:
+        'Yesterday’s sales by route, outstanding, claims at risk and stock cover on one screen, with the items that need a decision listed below.',
+      blocks: [
+        {
+          type: 'kpis',
+          items: [
+            { label: 'Sales yesterday', value: '₹6.8 L', note: '7 beats' },
+            { label: 'Outstanding', value: '₹1.4 Cr', note: '1,180 outlets' },
+            { label: 'Claims pending', value: '₹9.6 L', note: '23 over 60 days' },
+            { label: 'Short-dated', value: '₹2.1 L', note: 'expiring in 45 days' },
+          ],
+        },
+        { type: 'title', text: 'Beat visits completed against plan, this week' },
+        {
+          type: 'bars',
+          items: [
+            { label: 'Beat 1, Imran', value: 94, display: '94%' },
+            { label: 'Beat 4, Sunil', value: 81, display: '81%' },
+            { label: 'Beat 6, Rafiq', value: 52, display: '52%', tone: 'muted' },
+            { label: 'Beat 7, Deepak', value: 43, display: '43%', tone: 'muted' },
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            { name: '4 orders held for credit', meta: 'Outlets over their limit, ₹1.2 lakh waiting', tag: ['Decide', 'flag', 'Cleared', 'ok'] },
+            { name: '23 claims past 60 days', meta: 'Oldest: 14 weeks, damaged stock', tag: ['Chase', 'late', 'Raised', 'info'] },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'routes',
+      title: 'Beats and vans',
+      meta: 'This week',
+      heading: 'Beats covered, outlets missed and vans reconciled',
+      caption:
+        'Every beat with the outlets due, visits made, orders per call and what each van took out and brought back. A gap is shown by van and driver the same evening.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Beat', 'Outlets', 'Visited', 'Orders / call', 'Van gap'],
+          rows: [
+            ['Beat 1, Kothrud', '142', '134', '0.72', ['0 cartons', 'ok']],
+            ['Beat 4, Hadapsar', '118', '96', '0.61', ['2 cartons', 'flag', 'Explained', 'ok']],
+            ['Beat 6, Wagholi', '131', '68', '0.44', ['6 cartons', 'late']],
+            ['Beat 7, Katraj', '109', '47', '0.39', ['1 carton', 'flag']],
+          ],
+        },
+        { type: 'alert', text: '12 outlets in Wagholi have not been visited in 5 weeks. Last orders worth ₹46,000 a month.', action: 'Assign visit' },
+      ],
+    },
+    {
+      id: 'credit',
+      title: 'Outlet dues',
+      meta: 'Outstanding by beat and age',
+      heading: 'Who owes what on each beat, and the next step',
+      caption:
+        'Outlets ordered by amount and age, with limit, last payment and the salesman responsible. A follow-up is a task, and the promise or result is written back.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Outlet', 'Beat', 'Owed', 'Oldest', 'Next step'],
+          rows: [
+            ['Ganesh Provision', 'Beat 4', '₹48,200', '52 days', ['Visit Tue', 'flag', 'Paid ₹30k', 'ok']],
+            ['New Shree Stores', 'Beat 6', '₹36,900', '71 days', ['Hold billing', 'late']],
+            ['Patil Kirana', 'Beat 1', '₹22,400', '18 days', ['On track', 'ok']],
+            ['Maruti General', 'Beat 7', '₹61,000', '64 days', ['Owner call', 'late', 'Promised 20 Oct', 'info']],
+          ],
+        },
+        { type: 'alert', text: 'Beat 6 outstanding is ₹14.2 lakh. 9 outlets are past 60 days.', action: 'Open beat' },
+      ],
+    },
+    {
+      id: 'settlement',
+      title: 'Daily settlement',
+      meta: 'Cash and receipts by salesman',
+      heading: 'What each salesman recorded against what he handed in',
+      caption:
+        'Every collection is logged against a bill with mode. The evening settlement compares the recorded amount with what reached the counter, per person.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Salesman', 'Recorded', 'Cash in', 'UPI / cheque', 'Gap'],
+          rows: [
+            ['Imran', '₹52,400', '₹31,000', '₹21,400', ['₹0', 'ok']],
+            ['Sunil', '₹38,000', '₹31,000', '₹5,000', ['₹2,000', 'flag', 'Cleared', 'ok']],
+            ['Rafiq', '₹27,600', '₹18,000', '₹6,100', ['₹3,500', 'late']],
+          ],
+        },
+        { type: 'alert', text: 'Rafiq’s cash is ₹3,500 short for the second day. Collections for Beat 6 not matched to bills.', action: 'Review' },
+      ],
+    },
+    {
+      id: 'schemes',
+      title: 'Schemes and claims',
+      meta: 'Principal claims board',
+      heading: 'Every scheme earned and every claim followed to the credit note',
+      caption:
+        'Live schemes with the invoices that earned them, and claims moving from raised to credited. Anything past your window is at the top.',
+      blocks: [
+        {
+          type: 'board',
+          columns: [
+            {
+              name: 'Schemes closing',
+              cards: [
+                { title: 'Buy 12 get 1, biscuits', meta: 'Ends 18 Oct · 214 invoices · ₹86,400', tag: ['Totalling', 'flag', 'Claim ready', 'ok'] },
+                { title: 'Slab discount, detergent', meta: 'Ends 25 Oct · 98 invoices', tag: ['Open', 'info'] },
+              ],
+            },
+            {
+              name: 'Claims in progress',
+              cards: [
+                { title: 'Damaged, 12 cartons, batch B221', meta: 'Raised 9 Jun · 18 weeks', tag: ['Chase', 'late', 'Acknowledged', 'info'] },
+                { title: 'Expiry return, 40 packs', meta: 'Raised 2 Sep · 6 weeks', tag: ['Waiting', 'flag'] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'stock',
+      title: 'Stock and cover',
+      meta: 'By batch and expiry',
+      heading: 'Days of cover and expiry before you say yes to an order',
+      caption:
+        'Stock by item and batch with weekly secondary sales, days of cover and the date it expires. Picking suggests the oldest batch first.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Item', 'In stock', 'Sold / week', 'Cover', 'Expiry'],
+          rows: [
+            ['Biscuits 200 g, case', '640', '110', '41 days', ['Batch B221, 38 days left', 'late', 'Pick first', 'ok']],
+            ['Detergent 1 kg, case', '420', '95', '31 days', ['5 months', 'ok']],
+            ['Soap 100 g, case', '980', '120', '57 days', ['Batch S104, 52 days left', 'flag']],
+            ['Tea 500 g, case', '210', '60', '25 days', ['7 months', 'ok']],
+          ],
+        },
+        { type: 'alert', text: 'Brand B primary order of 600 cartons would raise cover from 41 to 66 days. ₹4.2 lakh expires within 90 days.', action: 'Review order' },
+      ],
+    },
+    {
+      id: 'principals',
+      title: 'Principals',
+      meta: 'Company by company',
+      heading: 'What each company really earns you',
+      caption:
+        'Margin, credit given, claims pending, stock held and target progress for every principal, side by side, with credit notes matched to claims.',
+      blocks: [
+        {
+          type: 'table',
+          cols: ['Principal', 'Margin', 'Stock held', 'Claims open', 'Target'],
+          rows: [
+            ['Brand A, foods', '7.8%', '₹18.2 L', '₹1.1 L', ['82%', 'ok']],
+            ['Brand B, home care', '6.1%', '₹24.6 L', '₹4.8 L', ['64%', 'late']],
+            ['Brand C, personal care', '8.4%', '₹9.3 L', '₹0.6 L', ['91%', 'ok']],
+            ['Brand D, beverages', '5.2%', '₹11.7 L', '₹3.1 L', ['70%', 'flag']],
+          ],
+        },
+        { type: 'alert', text: 'Credit note of ₹68,000 from Brand B covers claims worth ₹91,000. ₹23,000 unmatched.', action: 'See claims' },
       ],
     },
   ],
-  intelligenceNote:
-    'Every one of these comes from the transactions the business already records as orders are taken, picked, delivered and paid.',
 
-  rolesHeading: 'One business, five different urgencies.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on the question they need answered.',
+  dayHeading: 'The same Thursday at the depot, before and after.',
+  dayLede: 'The work stays the same. The difference is that every call, carton and claim leaves a record, and the record does the chasing.',
+  day: [
+    {
+      time: '7:30',
+      before: 'Vans are loaded from a handwritten sheet. The loader says the count is right.',
+      after: 'The load is an issue from stock against each trip. The van and the driver are accountable for it.',
+    },
+    {
+      time: '10:00',
+      before: 'A shop on Beat 6, 70 days behind, orders more. The salesman agrees.',
+      after: 'The order is held. You see the dues and the oldest bill and approve a smaller order.',
+    },
+    {
+      time: '1:00',
+      before: 'A scheme ends and the claim is a stack of invoices that someone must add by hand.',
+      after: 'The claim is already totalled by outlet and bill. The accounts clerk checks and sends it.',
+    },
+    {
+      time: '4:00',
+      before: 'You find out a damage claim from June is still open and the window may be gone.',
+      after: 'It appeared on the Today screen at week eight with an owner and a next step.',
+    },
+    {
+      time: '7:00',
+      before: 'The cash settlement is done by memory. A gap of a few thousand is carried over.',
+      after: 'Each salesman’s recorded collection is matched to what he handed in, before he leaves.',
+    },
+    {
+      time: 'Month end',
+      before: 'You accept a bigger primary order to hit the target without seeing days of cover.',
+      after: 'You see cover, expiry risk and cash impact first, and decide with the numbers.',
+    },
+  ],
+
+  approach: {
+    heading: 'We set it up with you, in four weeks, around your beats and your principals.',
+    lede:
+      'You do not get a login and a manual. We learn how your depot runs, build Verity around it, bring in your outlets and claims, then stay on until it settles.',
+    phases: [
+      {
+        when: 'Week 1',
+        name: 'Discovery and mapping',
+        we: 'Ride one beat with a salesman, sit through a van loading, and follow a scheme from the company circular to the claim. Map how credit, cash and claims are tracked today.',
+        you: 'Two to three hours of your time, plus your accountant’s. Principal agreements, the outlet master, outstanding and open claims.',
+        get: 'A written map of your depot: principals and their terms, beats and vans, credit rules, and the leaks to fix first.',
+      },
+      {
+        when: 'Weeks 2 to 3',
+        name: 'Configuration',
+        we: 'Set up principals, items and batches, beats and visit days, outlet credit limits, scheme rules, claim stages, salesman incentive slabs and van trips.',
+        you: 'Check each principal’s scheme and claim rules with your accountant. Correct any rule we got wrong.',
+        get: 'A working Verity with your principals, beats and rules loaded, ready for your outlet data.',
+      },
+      {
+        when: 'Weeks 3 to 4',
+        name: 'Migration and training',
+        we: 'Bring in outlets by beat, opening outstanding by bill, stock by batch and expiry, and open claims. Train salesmen, loaders, the counter and accounts on live routes.',
+        you: 'Your outlet list and ledgers, however they exist. One hour with each role, and one beat to pilot.',
+        get: 'Your outlets, dues, stock and claims inside Verity, and a team that has run a week of real routes on it.',
+      },
+      {
+        when: 'After go-live',
+        name: 'Operations partnership',
+        we: 'Stay on after launch. Review the first scheme cycle and claim round with you, tune credit limits and beats, and handle new principals.',
+        you: 'A monthly review of dues, claims and principal-wise margin.',
+        get: 'A setup that keeps up as you add companies, vans and routes, with someone responsible for it.',
+      },
+    ],
+    bring: [
+      'Principal agreements and margin terms',
+      'Outlet list with beat and visit day',
+      'Opening outstanding by bill and outlet',
+      'Stock by batch with expiry dates',
+      'Open claims and the company’s claim formats',
+      'Salesman incentive slabs and van list',
+    ],
+    time: 'About 10 to 13 hours of your own time across the four weeks, mostly in week 1. The accountant and the depot in-charge need a few more.',
+    after: 'Nobody extra is hired. Orders, collections and van trips are recorded as part of the day’s work, and the reports come from those records.',
+  },
+
+  ai: {
+    heading: 'Ask the depot a question. Get an answer, not a report to build.',
+    lede:
+      'Verity AI reads your own outlet, order, stock, scheme and claim records. Ask in plain language, then turn the answer into tasks for the right people.',
+    examples: [
+      {
+        q: 'Which claims are older than 60 days, and for which principal?',
+        a: '23 claims worth ₹6.4 lakh are older than 60 days. Brand B has 11 of them, worth ₹3.9 lakh.',
+        rows: [['Brand B', '11 claims, ₹3.9 L'], ['Brand D', '7 claims, ₹1.8 L'], ['Brand A', '3 claims, ₹0.4 L'], ['Brand C', '2 claims, ₹0.3 L']],
+        action: 'Create chase tasks for the accounts clerk',
+      },
+      {
+        q: 'Which outlets on Beat 6 have stopped ordering?',
+        a: '27 outlets have not ordered in 5 weeks. 12 were visited less than twice. Their last 3 months’ sales were ₹46,000 a month.',
+        rows: [['Not visited at all', '12'], ['Visited, no order', '9'], ['Closed or moved', '6']],
+        action: 'Assign a recovery visit to the beat salesman',
+      },
+      {
+        q: 'If I take the extra primary order from Brand B, how long will it last?',
+        a: 'Brand B stock already covers 41 days. The extra 600 cartons raises cover to 66 days, with ₹4.2 lakh expiring in 90 days.',
+        action: 'Send note to owner before approval',
+      },
+    ],
+  },
+
+  automationHeading: 'The follow-ups that slip between the beat and the books.',
+  automationLede: 'Set once, then they run from your records. People still collect, load and call. Verity makes sure each task lands with the right person.',
+  automations: [
+    {
+      when: 'An outlet’s order takes it past its limit or credit days',
+      then: ['Order held before the van is loaded', 'Routed to you with oldest bill and last payment', 'Decision recorded on the order'],
+    },
+    {
+      when: 'A scheme period ends',
+      then: ['Qualifying invoices totalled by outlet', 'Claim drafted for the accounts clerk', 'State moves to raised once sent to the company'],
+    },
+    {
+      when: 'A claim passes your window without a credit note',
+      then: ['Added to the Today screen', 'Task to the owner with batch and photos', 'Reply from the company recorded'],
+    },
+    {
+      when: 'A van trip is closed',
+      then: ['Load, sales and returns compared', 'Gap shown by driver and van', 'Difference sent to the depot in-charge'],
+    },
+    {
+      when: 'A batch is within 45 days of expiry',
+      then: ['Listed with outlets that last bought it', 'Pick-first flag set at the godown', 'Return claim drafted if unsold'],
+    },
+    {
+      when: 'An outlet is not visited in its cycle',
+      then: ['Added to the beat’s missed list', 'Task to the salesman for the next visit', 'Result recorded: ordered, closed or avoiding'],
+    },
+  ],
+
+  rules: {
+    heading: 'The rules a distribution business has to keep up with.',
+    lede:
+      'Verity does not give tax or legal advice, and it files nothing. It keeps the records these rules lean on in order, so your accountant works from clean data.',
+    items: [
+      {
+        name: 'E-way bill for goods in transit',
+        what: 'A consignment above ₹50,000 generally needs an e-way bill before movement, and the limit for movement within a state differs by state. Validity depends on distance.',
+        how: 'Each van or truck trip holds the invoices it carries, the vehicle and the e-way bill number, and a loaded trip without one is flagged before it leaves.',
+        source: { name: 'Tally Solutions, e-way bill guide', url: 'https://tallysolutions.com/gst/e-way-bill-under-gst' },
+      },
+      {
+        name: 'Food safety licence for food and drink lines',
+        what: 'If you handle food products, you generally need a registration or a state or central licence under the food safety rules, depending on turnover and whether you sell across states.',
+        how: 'The licence number and renewal date sit on the depot record, and storage and batch details are kept so a recall or inspection can be answered from the records.',
+      },
+      {
+        name: 'Tax treatment of schemes and credit notes',
+        what: 'Trade schemes and credit notes from companies can have GST consequences, including when they are issued and how they are reported. The treatment depends on how a scheme is structured.',
+        how: 'Each scheme, claim and credit note is a record with dates, amounts and the invoices behind it, so your accountant has the evidence in one place.',
+      },
+      {
+        name: 'Staff records under state shop rules',
+        what: 'Most states require registers of hours, weekly offs and leave under their Shops and Establishments rules. Details differ by state.',
+        how: 'Salesmen’s attendance, trips and leave are kept against each person, so the register is a by-product of daily work.',
+      },
+    ],
+    note: 'Rules and thresholds change and differ by state. Confirm current requirements with your accountant or the relevant authority.',
+  },
+
+  rolesHeading: 'Everyone sees the same records, through their own window.',
+  rolesLede: 'A salesman should not see another beat’s margins. A loader should not see credit. Each role opens on what it needs.',
   roles: [
-    {
-      role: 'Owner',
-      question: 'Where is the working capital sitting?',
-      focus: 'Credit outstanding and ageing, stock value and coverage, fill rate, margin by principal.',
-    },
-    {
-      role: 'Sales manager',
-      question: 'What is the field actually doing?',
-      focus: 'Beat coverage, orders per visit, outlets gone quiet, salesperson performance by territory.',
-    },
-    {
-      role: 'Warehouse manager',
-      question: 'What has to move today?',
-      focus: 'Orders to pick, transfers due, near-expiry stock, returns awaiting processing.',
-    },
-    {
-      role: 'Credit control',
-      question: 'Who is over and who is late?',
-      focus: 'Exposure against limits, ageing bands, orders held on approval, collection follow-ups.',
-    },
-    {
-      role: 'Purchasing',
-      question: 'What has to be bought and what is owed to us?',
-      focus: 'Coverage by SKU, open purchase orders, principal delivery performance, scheme claims outstanding.',
-    },
+    { role: 'Owner', question: 'Which principals and beats earn, and where is cash stuck?', sees: 'Outstanding by beat and age, claims pending, principal-wise margin and stock cover, and approvals waiting.' },
+    { role: 'Salesman', question: 'Whom do I visit, and what do they owe?', sees: 'His own beat, outlet history and dues, live schemes, and his own targets and incentive.' },
+    { role: 'Depot in-charge', question: 'What goes out and what came back?', sees: 'Van loads and returns, stock by batch and expiry, goods inward to check, and claims to raise for damage.' },
+    { role: 'Accounts clerk', question: 'What do I bill, collect and claim?', sees: 'Invoices, receipts by mode, cheque status, scheme totals and claim progress.' },
+    { role: 'Accountant', question: 'What reached the books and what is open?', sees: 'Sales with tax split, receipts, principal statements, credit notes and unmatched claims.' },
   ],
 
-  useCasesHeading: 'What distributors use Verity for',
-  useCases: [
-    {
-      name: 'Multi-godown stock visibility',
-      body: 'Availability by location across every warehouse, so a shortfall in one place is answered from another instead of becoming a lost order.',
-    },
-    {
-      name: 'Order and credit checking at the counter',
-      body: 'Stock availability and credit exposure checked at the moment an order is taken rather than discovered at month end.',
-    },
-    {
-      name: 'Out-of-stock measurement',
-      body: 'Order lines that could not be supplied recorded against the order, so the cost of stocking decisions is visible.',
-    },
-    {
-      name: 'Retailer and outlet management',
-      body: 'Order history, credit limit, ageing, returns and visit history on each outlet record, so decline is visible early.',
-    },
-    {
-      name: 'Beat and field coverage',
-      body: 'Routes, visits and orders taken as recorded work, so an uncovered beat is an exception on the day.',
-    },
-    {
-      name: 'Collections and credit control',
-      body: 'Ageing by retailer with collection follow-ups assigned to the salesperson who covers them.',
-    },
-    {
-      name: 'Returns, damage and expiry',
-      body: 'Returns as recorded movements with reasons, credit notes as approvals, and near-expiry stock visible while it can still move.',
-    },
-    {
-      name: 'Principal schemes and claims',
-      body: 'Scheme terms recorded against the purchases they apply to, so claims are assembled from records rather than from memory.',
-    },
-    {
-      name: 'Asking across stock, credit and field',
-      body: 'Plain-language questions spanning all three at once, with follow-ups created and assigned in the same step.',
-    },
-  ],
+  alongside: {
+    heading: 'What changes, and what stays the same.',
+    keep: [
+      'Your accounting software or Tally. We agree how data reaches Verity during setup.',
+      'The company’s distributor portal, where you still submit claims and place primary orders.',
+      'WhatsApp groups for beats. Salesmen still use them; Verity holds the record behind them.',
+      'Your accountant, who still prepares returns and reconciles with each company.',
+    ],
+    not: [
+      'Print invoices at the counter or run your billing.',
+      'Let retailers place orders online.',
+      'Send messages to retailers on its own.',
+      'Raise claims inside a company’s portal or file returns.',
+    ],
+    migration:
+      'We bring outlets, opening outstanding by bill, stock by batch and open claims across from your books and sheets, a beat at a time, so deliveries carry on while it happens.',
+  },
 
-  migration:
-    'Your accounting software and whatever order-taking arrangement the field currently uses are mapped during implementation. Stock, outlets, credit positions and open orders are brought across, and Verity is introduced as the operational layer over them while the business continues to trade.',
-
-  faqHeading: 'Questions distributors ask',
+  faqHeading: 'Questions distributors ask.',
   faqs: [
     [
-      'What can AI software do for a distribution business?',
-      'Verity AI answers questions from your own stock, order, retailer and field records. You can ask which retailers are past their credit limit with open orders, which SKUs could not be fulfilled this week, which outlets have stopped ordering, or what stock is near expiry and where — and turn the answer into follow-ups assigned to the salespeople who cover those accounts.',
+      'My salesmen enter orders on the company’s app already. Why another system?',
+      'The company’s app is built for its own targets. It does not hold your credit by outlet, your van trips or your claims across six principals. Verity holds those, and we agree during setup how data from the company’s side reaches you.',
     ],
     [
-      'Can Verity handle stock across several godowns?',
-      'Yes. Stock is held by location with batch and expiry, and availability is visible across every warehouse at once, so a shortfall in one godown can be answered by a transfer from another rather than becoming an unfulfilled order.',
+      'Can it handle several principals with different schemes?',
+      'Yes. Each principal has its own items, margin, schemes, claim stages and credit note matching, and the owner sees them side by side.',
     ],
     [
-      'Does it check credit before accepting an order?',
-      'The retailer record carries the credit limit, outstanding balance and ageing, so an order that would take an account past its limit is held at the approval step at the point it is taken rather than discovered when the ledger is reviewed.',
+      'Does it replace my billing software?',
+      'No. Billing and returns stay where they are. Verity holds the routes, dues, schemes, claims and stock around them.',
     ],
     [
-      'Can we see which sales we lost to being out of stock?',
-      'Yes. Order lines that could not be fulfilled are recorded against the order rather than disappearing, so the volume and value of unmet demand becomes a number that can inform purchasing.',
+      'Can it track our vans?',
+      'It records each van trip, the load issued, the sales and the return, and shows the gap. It does not track vehicle location.',
     ],
     [
-      'Does Verity track the field team?',
-      'Beats, outlet visits and orders taken are recorded work with owners, so coverage gaps and per-visit conversion are visible. It records what the field does as part of the ordering process rather than as separate reporting.',
+      'What if we have more than one depot?',
+      'Each depot is a location in one system. Outstanding, claims and stock roll up for you, and a transfer between depots is recorded so nothing goes missing between them.',
     ],
     [
-      'Can it manage returns and expiry?',
-      'Returns are recorded movements against the retailer and the batch, with reasons and credit notes as approval steps. Near-expiry stock is visible by location and value while there is still time to move it.',
+      'Can retailers pay or reorder through Verity?',
+      'No. Retailers order through your salesmen as they do now. Verity records the order, the dues and the payment once your team enters them.',
     ],
     [
-      'Does Verity replace our accounting software?',
-      'No. Verity is the operational layer over what you already run. Your accounting arrangements continue; Verity holds the stock, orders, credit positions, field activity and the reporting across them.',
+      'Who can see margins and claims?',
+      'Only the people you allow. Salesmen see their own beats, the loader sees picks, and you and the accountant see the rest. Every change is recorded with who made it and when.',
     ],
     [
-      'Is it suitable for a distributor with a single godown?',
-      'Yes. A single-godown distributor still faces the credit, out-of-stock and outlet-decline problems, which is most of the value. Additional locations use the same structure without further setup.',
+      'How quickly will I see value?',
+      'Outstanding by beat and the open claims list need only your ledger and claim sheet, so they come first. Beat coverage and principal-wise margin become reliable after a few weeks of recorded routes.',
     ],
     [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the business actually runs, configuration, migration of stock, outlets and open balances, then an ongoing operations partnership.',
+      'What does it cost?',
+      'It depends on the number of depots, salesmen and principals. Message us and we will give you a clear number after a short chat about how your depot runs.',
     ],
   ],
 
-  ctaHeading: 'Start with credit or with fill rate.',
-  ctaLede:
-    'Those two decide most of a distributor’s year. Tell us which one is costing you more and we will show you what it looks like in Verity.',
+  related: ['wholesalers', 'medical-distributors', 'importers', 'industrial-suppliers', 'grocery-stores', 'convenience-stores'],
 
-  related: ['wholesalers', 'manufacturers', 'medical-distributors', 'industrial-suppliers', 'supermarkets', 'retail-stores'],
+  ctaHeading: 'Start with the claims nobody is chasing.',
+  ctaLede:
+    'Tell us how your depot runs and we will show you the aged claims, the beats you are missing and the cash held by each route, using your own numbers.',
 };
