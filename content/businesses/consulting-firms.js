@@ -1,539 +1,1125 @@
 export default {
-  slug: 'consulting-firms',
-  status: 'published',
-  plural: 'consulting firms',
-  subject: 'consulting firm',
-
-  seo: {
-    title: 'AI business management software for consulting firms | Verity',
-    description:
-      'Verity connects pursuits, engagement staffing, utilisation, deliverables, expenses and realisation into one operational system for consultancies.',
-    keywords: [
-      'AI software for consulting firms',
-      'consulting firm management software',
-      'engagement staffing and utilisation software',
-      'professional services delivery and realisation tracking',
-    ],
+  "schema": 2,
+  "slug": "consulting-firms",
+  "status": "published",
+  "plural": "consulting firms",
+  "subject": "consulting firm",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Consulting firm software for Indian consultancies | Verity",
+    "description": "Engagements, staffing, scope creep, deliverables and milestone invoicing: how a consulting firm loses margin without noticing, and the Verity screens that bring it back.",
+    "keywords": [
+      "consulting firm software India",
+      "consultancy project and utilisation tracking",
+      "milestone invoicing for consultants",
+      "engagement and deliverable tracker",
+      "boutique consulting practice management"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for consulting firms',
-    headline: 'You won the work in March and staffed it with whoever was free in April.',
-    lede:
-      'A consultancy sells specific expertise and delivers with available people. Verity connects the pursuit, the staffing commitment and the delivery record so the gap between them stops being invisible.',
-    note: 'Runs alongside your existing accounting and document tools.',
-    panel: {
-      title: 'Engagements',
-      meta: 'All active · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active engagements', value: '27', note: '₹6.4 Cr contracted' },
-        { label: 'Utilisation', value: '68%', note: 'against 75% target' },
-        { label: 'Over budget', value: '6', note: 'no variation raised' },
-        { label: 'Unbilled', value: '₹34 L', note: 'beyond 45 days' },
-      ],
-      rows: [
-        { name: '6 engagements past budget without a variation', meta: 'Combined overrun ₹52 L', active: true },
-        { name: 'Three consultants below 40% utilisation this month', meta: 'While two engagements are short-staffed', active: true },
-        { name: 'Deliverable overdue on a milestone-billed engagement', meta: 'Billing blocked · ₹18 L', active: true },
-        { name: 'Pursuit resourced against people already committed', meta: 'Start date in 3 weeks', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own engagements in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for consulting firms",
+    "headline": "A consulting firm sells expertise by the week. The margin leaks in the weeks nobody counted.",
+    "lede": "A consultancy has few products and many promises: a scope in a proposal, a team on a project, a deliverable on a date, an invoice at a milestone. Every one of these can drift. A consultant is on two projects at once, a client adds a workstream, a deliverable waits for sign-off, a milestone invoice goes out three weeks after the milestone. Verity gives each engagement one record with its scope, team, time, deliverables and invoices, so the firm sees drift while it can still be fixed.",
+    "oneLine": "One system that knows every engagement, every consultant's week, every deliverable and sign-off, and every rupee billed or waiting to be billed, and tells you what needs a partner today.",
+    "note": "Built for firms where the same few people sell, deliver and chase the invoice. Entry takes seconds, and most records come from work already being done.",
+    "screen": "owner",
+    "screenNote": "engagements, utilisation, deliverables, billing and pipeline"
   },
-
-  overview: {
-    heading: 'A consultancy sells named expertise and delivers with whoever is available.',
-    paragraphs: [
-      'The proposal names people. The delivery uses whoever is free when the work actually starts, because the pursuit closed later than expected or another engagement overran. That substitution is normal and usually fine, but it is also where margin, quality and client satisfaction all quietly move — and almost no firm records it well enough to see the pattern.',
-      'Utilisation is the number every consultancy watches and the one that hides the most. A firm at sixty-eight percent against a seventy-five percent target sounds mildly under-utilised. The reality is usually that three people are at forty percent while two engagements are short-staffed, which is a scheduling failure rather than a demand failure and has a completely different fix.',
-      'Budget overrun is the third. Consulting engagements are scoped against an assumed effort, and additional analysis, extra workshops and an expanded stakeholder group are absorbed because raising a variation feels like a commercial confrontation. Six engagements past budget with no variation raised is not six mistakes; it is a firm-level habit.',
-      'The fourth is that milestone billing depends on deliverables, so a deliverable running late blocks cash that has already been earned in effort.',
-      'Verity holds the pursuit, the engagement, the staffing commitment, the deliverables, the effort and the billing position as one set of records.',
+  "today": {
+    "heading": "Most consulting firms are strong on thinking and light on the machinery behind it.",
+    "paragraphs": [
+      "The work is varied: strategy, operations, finance, HR, technology, sustainability, market entry. Each engagement has a scope, a team, a plan and a fee. The commercial shape is always the same: sell, staff, deliver, bill, collect.",
+      "In small and mid-sized firms, those five steps are held together by the partners. The pipeline is in their heads, the staffing is on a spreadsheet, the status of each project is a call, and milestone invoices go out when someone remembers.",
+      "The market is crowded and priced hard. One research estimate puts India's management consulting market at about USD 8.2 billion in 2025, and says IT services majors can undercut pure-play firms by 20 to 30 percent while clients increasingly accept outcome-based fee clauses. A small firm has little margin to waste."
     ],
+    "stack": [
+      "Partners' memory and a pipeline sheet",
+      "Excel for staffing and timesheets",
+      "Word and PowerPoint for proposals and deliverables",
+      "Email and WhatsApp with clients",
+      "The accountant's sheet for invoices"
+    ],
+    "stackNote": "Each one is fine for its job. None of them tell the partner, early, that a project has used 80 percent of its fee at 50 percent of its scope."
   },
-
-  terminology: [
-    ['Pursuits, proposals, engagements', 'Work'],
-    ['Deliverables, milestones, workshops', 'Records'],
-    ['Clients, sponsors, stakeholders', 'Relationships'],
-    ['Partners, principals, consultants, analysts', 'People'],
-    ['Variations, approvals, sign-offs', 'Workflows'],
-    ['Practices, sectors, offices', 'Locations'],
-    ['Rates, budgets, realisation', 'Control'],
+  "painsHeading": "Where a consulting firm actually loses margin and time.",
+  "painsLede": "These are the situations partners and engagement managers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Pipeline",
+      "title": "Proposals sent and then forgotten",
+      "scene": "A proposal went to a manufacturing client three weeks ago. The partner thought the associate was following up. The associate thought the partner would call.",
+      "cost": "Large engagements are won on follow-up as much as on content. A proposal with no next step is a project quietly lost to a faster competitor.",
+      "fix": "Each opportunity is a record with the client, the contact, the fee, the stage and the next step with an owner and a date. Verity shows opportunities with no recent activity and creates a follow-up task. Partners still make the call.",
+      "screen": "pipeline"
+    },
+    {
+      "area": "Engagements",
+      "title": "Scope in the proposal is not the scope in the project",
+      "scene": "The proposal said three stakeholder workshops and one report. The client now expects six workshops, a dashboard and a board presentation, and the team has agreed to each in a meeting.",
+      "cost": "Unpaid work and a team that is tired by the middle of the project. Scope creep is a common complaint in consulting, and the more the firm says yes, the harder a later yes-or-no becomes.",
+      "fix": "The engagement record holds the agreed scope, the fee and the plan. Extra requests are logged as scope changes with hours estimated and a decision: accept, charge or decline. Verity shows hours against scope so the partner sees creep early.",
+      "screen": "engagements"
+    },
+    {
+      "area": "Engagements",
+      "title": "Project status is a phone call",
+      "scene": "Ask three engagement managers where their projects stand and you get three sentences. One project is amber, but no one has written down why.",
+      "cost": "Problems reach the partner after the client has noticed. Decisions about staffing and escalation come late.",
+      "fix": "Each engagement shows a status, milestones, risks and the next client touchpoint, updated by the manager in a minute. The partner's board shows all engagements by status, with the ones that slipped first.",
+      "screen": "engagements"
+    },
+    {
+      "area": "People",
+      "title": "Consultants double-booked or on the bench",
+      "scene": "One consultant is promised to two projects in the same fortnight. Another has had no billable work for three weeks, but nobody noticed because the staffing sheet is a month old.",
+      "cost": "Missed commitments on one side and unpaid time on the other. A bench week is a cost that no client will ever pay.",
+      "fix": "Each person's allocation across engagements is a plan with dates and percentages. Verity highlights over-allocation and open capacity for the next eight weeks, so the partner staffs new work and fixes conflicts before they hurt.",
+      "screen": "staffing"
+    },
+    {
+      "area": "People",
+      "title": "Utilisation known only at year end",
+      "scene": "The partners suspect that the firm's billable share is low, but the data is in timesheets that were filled in at the end of each month, if at all.",
+      "cost": "Hiring, pricing and bench decisions are made without knowing how many hours were actually sold. Example arithmetic: a team of 10 with a utilisation 8 points lower than planned loses about 320 hours a month, or about ₹8 lakh at ₹2,500 an hour.",
+      "fix": "Staff log time against engagements in a few taps. Verity shows billable and non-billable hours per person and per engagement, against plan, every week.",
+      "screen": "staffing"
+    },
+    {
+      "area": "Money",
+      "title": "Fixed-fee projects that quietly run at a loss",
+      "scene": "A ₹12 lakh fixed-fee diagnostic was planned at 400 hours. By week 6 it has used 380 and the client wants a second phase \"to wrap up\".",
+      "cost": "Margin disappears one extra week at a time. Example arithmetic: 150 extra hours at an internal cost of ₹1,500 an hour is ₹2.25 lakh of unpaid work.",
+      "fix": "Fee, planned hours, hours used and cost to date sit on the engagement. Verity warns the manager at the thresholds you set, such as 70 percent of hours used with 50 percent of milestones done.",
+      "screen": "engagements"
+    },
+    {
+      "area": "Money",
+      "title": "Milestone invoices raised weeks late",
+      "scene": "The inception report was accepted on the 3rd. The invoice went out on the 28th because the associate was waiting for a PO number and the partner was travelling.",
+      "cost": "Cash arrives a month later than it should. For a firm with 15 clients, that is a permanent working capital gap.",
+      "fix": "Each milestone is linked to a deliverable and an invoice amount. When the deliverable is marked accepted, Verity creates an invoice task for the engagement manager with the amount, PO details and contact. The firm raises the invoice; Verity tracks it.",
+      "screen": "billing"
+    },
+    {
+      "area": "Money",
+      "title": "Receivables chased from memory",
+      "scene": "A client is 80 days past due. The last reminder was a polite message eight weeks ago. The partner is reluctant to chase because he is also pitching for the next project.",
+      "cost": "Cash tied up, and an uncomfortable conversation delayed until it is bigger. Under Section 43B(h), a buyer who pays a micro or small enterprise late may lose the tax deduction for that year, so your client may care more than you think, if you are registered as a micro or small enterprise.",
+      "fix": "Verity ages invoices by client, shows the agreed payment terms and creates follow-up tasks for the right person with the history of earlier reminders. Whoever chases is not the person who has to sell.",
+      "screen": "billing",
+      "source": {
+        "name": "ClearTax, Section 43B(h), 2026",
+        "url": "https://cleartax.in/s/section-43bh-of-income-tax-act"
+      }
+    },
+    {
+      "area": "Deliverables",
+      "title": "Deliverables with no owner and no version",
+      "scene": "The final deck exists as \"final_v6\", \"final_v6_partner\" and \"final_v7_client_changes\". A reviewer edits the older one. The client receives the wrong version.",
+      "cost": "Rework, an embarrassing correction and a partner's last-hour review.",
+      "fix": "Each deliverable is a record with an owner, a due date, a version history and a state: draft, in review, with client, accepted. Verity shows who is holding it and flags the ones that are late.",
+      "screen": "deliverables"
+    },
+    {
+      "area": "Deliverables",
+      "title": "Client sign-off that drifts",
+      "scene": "A draft report sits with the client's CFO for three weeks. The project plan assumed two days. The team has nothing to do and the next milestone slips.",
+      "cost": "Delayed milestones mean delayed invoices, and a team that costs money while waiting.",
+      "fix": "Each deliverable has a client reviewer and a review date. Verity shows items waiting on the client and for how long, so the engagement manager can escalate with facts. The next milestone date moves visibly.",
+      "screen": "deliverables"
+    },
+    {
+      "area": "Knowledge",
+      "title": "Knowledge locked in individual laptops",
+      "scene": "A senior consultant built a pricing model for a retailer last year. A new project in the same sector starts from scratch because nobody knows it exists.",
+      "cost": "Hours spent redoing work, inconsistent quality and weaker proposals.",
+      "fix": "Reusable material, such as templates, frameworks, benchmarks and past reports, is stored as records tagged by sector and topic with permissions for client confidentiality. People search and find it, with the engagement it came from.",
+      "screen": "deliverables"
+    },
+    {
+      "area": "Compliance",
+      "title": "Confidentiality across clients",
+      "scene": "A team member working on two competing clients has access to both folders. A shared drive link meant for one client is forwarded to another.",
+      "cost": "A breach of an NDA is a serious loss of trust, and in a small market, a reputation problem. The Digital Personal Data Protection Rules, notified in November 2025, add duties for personal data when most provisions apply about 18 months later.",
+      "fix": "Access to an engagement and its documents follows the team on it. A conflict flag shows when one person is on competing clients, and every document view is logged.",
+      "screen": "engagements",
+      "source": {
+        "name": "Mondaq, DPDP Rules 2025, 2025",
+        "url": "https://www.mondaq.com/india/data-protection/1708164/digital-personal-data-protection-rules-2025-notified"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Expenses and subcontractors that are not billed back",
+      "scene": "Flights, a research subscription and an associate consultant's invoice are paid by the firm. Some are billable under the contract and some are not. The list is on three emails.",
+      "cost": "Recoverable costs that are never recovered, and margins that look better than they are until the accounts are closed.",
+      "fix": "Each expense and subcontractor invoice is recorded against an engagement with a billable flag. Verity shows unbilled recoverable costs by client and adds them to the next invoice task.",
+      "screen": "billing"
+    },
+    {
+      "area": "People",
+      "title": "Hiring decisions based on a hunch",
+      "scene": "The firm is busy, so the partners decide to hire two analysts. A quarter later the pipeline is thin and the new hires are on the bench.",
+      "cost": "A salary line that does not match the work. In a firm of 12, two idle people is a visible dent.",
+      "fix": "Verity shows the signed pipeline, the probability-weighted pipeline and the capacity for the next quarter on one screen, so hiring follows work that is likely to come.",
+      "screen": "pipeline"
+    },
+    {
+      "area": "Clients",
+      "title": "Repeat clients not noticed",
+      "scene": "A client you did a diagnostic for in March is now planning a rollout. Nobody has been in touch, and another firm has been called in.",
+      "cost": "The cheapest business a consulting firm wins is its own past clients.",
+      "fix": "Each client has a relationship record with engagements, contacts, outcomes and the next touchpoint. Verity lists past clients with no contact for your set number of months and creates a task for the partner who knows them.",
+      "screen": "pipeline"
+    },
+    {
+      "area": "Owner",
+      "title": "The partner cannot see the whole firm",
+      "scene": "At the monthly partner meeting, every partner reports their own projects. Nobody has a combined view of margin, utilisation, receivables and pipeline.",
+      "cost": "Decisions about hiring, pricing and which clients to chase are argued, not read from a page.",
+      "fix": "The owner's screen shows engagements by status and margin, utilisation, unbilled work, receivables and pipeline, live from the records the team already updates.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'The commercial problems present as scheduling problems.',
-  challengesLede:
-    'Consulting difficulties come from a gap between what was sold, who was promised and who actually delivered.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The market size and fee-pressure figures come from a market research publisher's estimate, not audited accounts. The payment rule is summarised from a tax-help site; confirm it with the Act and your adviser. No reliable utilisation or margin benchmark for Indian boutique consultancies was found, so none is quoted.",
+  "facts": [
     {
-      problem: 'Staffing does not match what was sold',
-      detail:
-        'The proposal named a senior team. Delivery used whoever was available, and the client noticed before the firm did.',
-      outcome:
-        'Proposed staffing and actual staffing are both recorded against the engagement, so substitution is visible and can be discussed rather than discovered.',
+      "figure": "USD 8.17 billion",
+      "text": "estimated size of India's management consulting services market in 2025, forecast to grow at about 12.7 percent a year from 2026 to 2031.",
+      "source": {
+        "name": "Mordor Intelligence, 2026",
+        "url": "https://www.mordorintelligence.com/industry-reports/india-management-consulting-services-market"
+      }
     },
     {
-      problem: 'Utilisation hides distribution',
-      detail:
-        'A firm-level figure conceals that some people are idle while engagements are short, which is a scheduling problem wearing a demand problem’s clothes.',
-      outcome:
-        'Committed and actual hours per person are records, so idle capacity and short engagements appear in the same view.',
+      "figure": "20 to 30%",
+      "text": "the amount by which IT services majors can undercut pure-play consulting firms using delivery-centre scale, according to the same report. Clients also increasingly accept outcome-based fee clauses.",
+      "source": {
+        "name": "Mordor Intelligence, 2026",
+        "url": "https://www.mordorintelligence.com/industry-reports/india-management-consulting-services-market"
+      }
     },
     {
-      problem: 'Budget overruns without variations',
-      detail:
-        'Extra analysis and additional stakeholders are absorbed because raising a variation is uncomfortable, and the pattern repeats across engagements.',
-      outcome:
-        'Effort against budget is visible per engagement, so an overrun raises a variation decision rather than an absorbed cost.',
+      "figure": "45 to 50%",
+      "text": "the estimated share of 2025 revenue held by the top ten firms, so most smaller firms compete in what is left.",
+      "source": {
+        "name": "Mordor Intelligence, 2026",
+        "url": "https://www.mordorintelligence.com/industry-reports/india-management-consulting-services-market"
+      }
     },
     {
-      problem: 'Pursuits are resourced against people already committed',
-      detail:
-        'A proposal promises a team whose time is already sold, and the conflict surfaces at the start date.',
-      outcome:
-        'Pursuits carry provisional resourcing against the same capacity model, so a conflict is visible at proposal rather than at kickoff.',
-    },
-    {
-      problem: 'Deliverables slip and block billing',
-      detail:
-        'A milestone-billed engagement cannot invoice because a deliverable is late, and cash earned in effort sits unbilled.',
-      outcome:
-        'Deliverables are records with owners and dates linked to billing milestones, so a slip is visible with its cash consequence.',
-    },
-    {
-      problem: 'Realisation by client is unknown',
-      detail:
-        'Rate cards are discounted per engagement and effort is not compared against the fee, so nobody knows which clients are genuinely profitable.',
-      outcome:
-        'Effort at cost against fee produces realisation per engagement, client and practice.',
-    },
+      "figure": "45 days",
+      "text": "the longest credit period generally allowed under a written agreement when buying from a micro or small enterprise, with 15 days if there is no agreement. Late payment generally defers the buyer's tax deduction to the year of payment, from 1 April 2024.",
+      "source": {
+        "name": "ClearTax, Section 43B(h), 2026",
+        "url": "https://cleartax.in/s/section-43bh-of-income-tax-act"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system across pursuits, staffing, delivery and realisation.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your firm's own language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Pursuits, engagements and workstreams',
-      line:
-        'Each is work with a client, a scope, a budget, a team, deliverables, a state and the effort recorded against it.',
-      why:
-        'The engagement is the commercial and delivery unit at once, and holding it as a record is what connects the two.',
-      example:
-        'Twenty-seven active engagements with six past budget and no variation raised.',
+      "id": "owner",
+      "title": "Firm / This week",
+      "meta": "9 live engagements",
+      "heading": "The managing partner's view",
+      "caption": "Engagement status and margin, utilisation, unbilled work, receivables and pipeline on one screen, with the items that need a partner listed below. It replaces the monthly meeting where each partner reports separately.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Utilisation, 4 weeks",
+              "value": "68%",
+              "note": "target 75%"
+            },
+            {
+              "label": "Unbilled work",
+              "value": "₹14.6 lakh",
+              "note": "3 milestones accepted"
+            },
+            {
+              "label": "Overdue invoices",
+              "value": "₹22.4 lakh",
+              "note": "5 clients"
+            },
+            {
+              "label": "Weighted pipeline",
+              "value": "₹58 lakh",
+              "note": "next 90 days"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Hours used against plan, live engagements"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Retail pricing diagnostic",
+              "value": 95,
+              "display": "95% of hours, 60% of scope",
+              "tone": "muted"
+            },
+            {
+              "label": "Plant operations review",
+              "value": 58,
+              "display": "58% of hours, 55% of scope"
+            },
+            {
+              "label": "ESG reporting set-up",
+              "value": 40,
+              "display": "40% of hours, 45% of scope"
+            },
+            {
+              "label": "HR policy redesign",
+              "value": 72,
+              "display": "72% of hours, 70% of scope"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Retail pricing diagnostic is likely to use all planned hours before the second workshop.",
+          "action": "Review scope"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Milestone 2 accepted 3 Oct, no invoice",
+              "meta": "Plant operations review, ₹4.5 lakh",
+              "tag": [
+                "Invoice",
+                "late",
+                "Raised",
+                "ok"
+              ]
+            },
+            {
+              "name": "Two consultants over 100% next week",
+              "meta": "Anil and Ritu",
+              "tag": [
+                "Restaff",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Partners, consultants and analysts',
-      line:
-        'The team is modelled once with grades, rates, skills and availability, and every engagement records who was proposed and who delivered.',
-      why:
-        'People are the entire cost base and the entire product, and a consultancy that cannot see their commitments cannot schedule.',
-      example:
-        'Three consultants below forty percent while two engagements are short-staffed, in the same view.',
+      "id": "pipeline",
+      "title": "Pipeline",
+      "meta": "Open opportunities",
+      "heading": "From proposal to signed work",
+      "caption": "Every proposal with its fee, stage, next step and owner. Opportunities with no recent activity are flagged. Past clients with no contact are listed so the cheapest work is not missed.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Proposal sent",
+              "cards": [
+                {
+                  "title": "Supply chain review, Kapoor Foods",
+                  "meta": "₹18 lakh, sent 21 days ago",
+                  "tag": [
+                    "Follow up",
+                    "late",
+                    "Called",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Pricing study, Zenith Retail",
+                  "meta": "₹9 lakh, sent 6 days ago",
+                  "tag": [
+                    "Waiting",
+                    "info"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Negotiation",
+              "cards": [
+                {
+                  "title": "ESG roadmap, Rao Cement",
+                  "meta": "₹24 lakh, scope under discussion",
+                  "tag": [
+                    "Partner call",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Signed",
+              "cards": [
+                {
+                  "title": "HR policy, Lotus Hospitals",
+                  "meta": "₹11 lakh, starts 3 Nov",
+                  "tag": [
+                    "Staff",
+                    "flag",
+                    "Staffed",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Past client, no contact in 7 months",
+              "meta": "Mehra Auto Components, diagnostic in March",
+              "tag": [
+                "Reach out",
+                "flag",
+                "Call booked",
+                "ok"
+              ]
+            },
+            {
+              "name": "Capacity next quarter",
+              "meta": "2 consultants free from 15 Dec",
+              "tag": [
+                "Plan",
+                "info"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Deliverables, milestones and documents',
-      line:
-        'Deliverables are records with owners, dates, review steps and the billing milestone they unlock.',
-      why:
-        'In milestone-billed work, a deliverable is a cash event as much as a delivery event.',
-      example:
-        'An overdue deliverable blocking eighteen lakh of billing, visible with its owner.',
+      "id": "engagements",
+      "title": "Engagements",
+      "meta": "Live projects",
+      "heading": "Scope, hours and status for each project",
+      "caption": "Each engagement with its fee, planned hours, hours used, milestones and status. Scope changes are logged with a decision, so extra work is accepted, priced or declined on purpose.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Engagement",
+            "Fee",
+            "Hours used",
+            "Milestones",
+            "Lead",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Retail pricing diagnostic",
+              "₹12 lakh fixed",
+              "380 of 400",
+              "2 of 4",
+              "Neha",
+              [
+                "Over pace",
+                "late",
+                "Scope agreed",
+                "ok"
+              ]
+            ],
+            [
+              "Plant operations review",
+              "₹15 lakh fixed",
+              "290 of 500",
+              "2 of 4",
+              "Vikram",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "ESG reporting set-up",
+              "₹9 lakh fixed",
+              "160 of 400",
+              "1 of 3",
+              "Anil",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "HR policy redesign",
+              "₹11 lakh fixed",
+              "310 of 430",
+              "2 of 3",
+              "Ritu",
+              [
+                "Watch",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Retail pricing diagnostic",
+          "sub": "Zenith Retail, 10 weeks, 4 milestones",
+          "fields": [
+            [
+              "Agreed scope",
+              "3 workshops, 1 report"
+            ],
+            [
+              "Requested",
+              "6 workshops, dashboard, board deck"
+            ],
+            [
+              "Hours estimate for extras",
+              "120"
+            ],
+            [
+              "Decision",
+              [
+                "Pending",
+                "flag",
+                "Charge as phase 2",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "12 Oct",
+              "Client asked for dashboard in call"
+            ],
+            [
+              "5 Oct",
+              "Workshop 3 held"
+            ],
+            [
+              "Note",
+              "Client reviewer: CFO, slow on sign-off"
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients, sponsors and stakeholders',
-      line:
-        'Clients are records with their engagements, sponsors, rate agreements, history and balances.',
-      why:
-        'Consulting revenue is repeat and sponsor-driven, and a sponsor changing roles is the most common cause of a pipeline drying up.',
-      example:
-        'A client with four engagements across two practices, with realisation measured across all of them.',
+      "id": "staffing",
+      "title": "Staffing and utilisation",
+      "meta": "Next 8 weeks",
+      "heading": "Who is on what, and who is free",
+      "caption": "Each person's allocation across engagements by week, with over-allocation and free capacity marked. Logged time sits beside the plan, so utilisation is known every week.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "This week",
+            "Next week",
+            "Week +4",
+            "4-week use",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Neha, Manager",
+              "100%",
+              "100%",
+              "60%",
+              "82%",
+              [
+                "Full",
+                "ok"
+              ]
+            ],
+            [
+              "Anil, Consultant",
+              "120%",
+              "110%",
+              "40%",
+              "79%",
+              [
+                "Over",
+                "late",
+                "Restaffed",
+                "ok"
+              ]
+            ],
+            [
+              "Ritu, Consultant",
+              "110%",
+              "100%",
+              "70%",
+              "74%",
+              [
+                "Over",
+                "flag"
+              ]
+            ],
+            [
+              "Arjun, Analyst",
+              "40%",
+              "30%",
+              "0%",
+              "41%",
+              [
+                "Bench",
+                "info",
+                "Assigned",
+                "ok"
+              ]
+            ],
+            [
+              "Divya, Analyst",
+              "80%",
+              "80%",
+              "80%",
+              "72%",
+              [
+                "On track",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Billable share of logged hours, last 4 weeks"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Billable on client work",
+              "value": 68,
+              "display": "68%"
+            },
+            {
+              "label": "Proposals and pipeline",
+              "value": 14,
+              "display": "14%",
+              "tone": "muted"
+            },
+            {
+              "label": "Internal and training",
+              "value": 11,
+              "display": "11%",
+              "tone": "muted"
+            },
+            {
+              "label": "Bench",
+              "value": 7,
+              "display": "7%",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Variations, approvals and sign-offs',
-      line:
-        'Scope variations, rate exceptions, write-offs and deliverable sign-offs move through defined steps with recorded decisions.',
-      why:
-        'The variation conversation is the one consultancies avoid, and making it a step rather than a confrontation is what makes it happen.',
-      example:
-        'An engagement passing budget raises a variation with the effort attached rather than absorbing it.',
+      "id": "deliverables",
+      "title": "Deliverables",
+      "meta": "Open deliverables",
+      "heading": "Drafts, reviews and client sign-off",
+      "caption": "Every deliverable with its owner, version and state, and how long it has been with the client. A reusable template or benchmark is a record too, tagged by sector and kept with its confidentiality rules.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Deliverable",
+            "Engagement",
+            "Owner",
+            "Version",
+            "State",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Pricing report",
+              "Retail pricing",
+              "Neha",
+              "v4",
+              "With client 11 days",
+              [
+                "Chase CFO",
+                "late",
+                "Accepted",
+                "ok"
+              ]
+            ],
+            [
+              "Plant benchmarking deck",
+              "Plant operations",
+              "Vikram",
+              "v2",
+              "In review",
+              [
+                "Partner review",
+                "flag"
+              ]
+            ],
+            [
+              "ESG data template",
+              "ESG set-up",
+              "Anil",
+              "v3",
+              "With client 2 days",
+              [
+                "Waiting",
+                "info"
+              ]
+            ],
+            [
+              "Policy handbook draft",
+              "HR redesign",
+              "Ritu",
+              "v1",
+              "Draft",
+              [
+                "Due 20 Oct",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Partner review of benchmarking deck",
+              "meta": "Vikram, due 17 Oct",
+              "done": false
+            },
+            {
+              "text": "Client references removed from template",
+              "meta": "Anil, done 9 Oct",
+              "done": true
+            },
+            {
+              "text": "Template saved to sector library, retail",
+              "meta": "Neha, due 25 Oct",
+              "done": false
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'intelligence',
-      title: 'Utilisation, realisation and pipeline reporting',
-      line:
-        'Utilisation by person and grade, realisation by engagement and client, budget performance, deliverable timeliness and pipeline against capacity come from the operational records.',
-      why:
-        'Consultancies report revenue and utilisation, and rarely realisation, which is where the profitability actually is.',
-      example:
-        'Realisation by client after discounts and overruns, which frequently reorders which clients are worth pursuing.',
-    },
-    {
-      id: 'communication',
-      title: 'Decisions attached to the engagement',
-      line:
-        'Notes, notifications and activity attach to the engagement, deliverable or client they concern.',
-      why:
-        'A scope decision taken verbally in a steering meeting is the one that causes the dispute at closure.',
-      example:
-        'A client’s agreement to reduce a workstream, recorded on the engagement rather than in an inbox.',
-    },
-    {
-      id: 'control',
-      title: 'Rates, budgets and access',
-      line:
-        'One permission model and one audit trail, with rate and budget changes as recorded decisions.',
-      why:
-        'Rate discounting is where consulting margin is given away, and it should be visible rather than negotiated privately.',
-      example:
-        'Rate exceptions recorded against the engagement with the approver and the reason.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the firm a question',
-      line:
-        'Verity AI answers from your own engagement, staffing, effort and billing records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking cross delivery, scheduling and commerce, which is why they are usually asked at a partners’ meeting.',
-      example:
-        '"Which engagements are past budget without a variation?" returns six, with reviews assigned to engagement leads.',
-    },
-    {
-      id: 'locations',
-      title: 'Practices, sectors and offices',
-      line:
-        'Organisational units roll into the firm, with permissions and reporting following the same structure.',
-      why:
-        'Multi-practice firms share people across sectors, and only identical recording makes utilisation and realisation comparable.',
-      example:
-        'Utilisation and realisation by practice, from one set of records.',
-    },
+      "id": "billing",
+      "title": "Billing",
+      "meta": "This quarter",
+      "heading": "Milestones, invoices and expenses",
+      "caption": "Every accepted milestone with its invoice, payment terms and status, plus expenses and subcontractors that can be billed back. Accepted milestones with no invoice are the first thing shown.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client",
+            "Milestone",
+            "Amount",
+            "Accepted",
+            "Invoice",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Rao Cement",
+              "Inception report",
+              "₹4.5 lakh",
+              "3 Oct",
+              "Not raised",
+              [
+                "Invoice",
+                "late",
+                "Raised",
+                "ok"
+              ]
+            ],
+            [
+              "Zenith Retail",
+              "Workshop phase",
+              "₹3.0 lakh",
+              "20 Sep",
+              "Raised 22 Sep",
+              [
+                "Overdue 24 days",
+                "flag",
+                "Reminded",
+                "info"
+              ]
+            ],
+            [
+              "Lotus Hospitals",
+              "Kick-off",
+              "₹3.3 lakh",
+              "Not yet",
+              "Planned 3 Nov",
+              [
+                "Planned",
+                "info"
+              ]
+            ],
+            [
+              "Kapoor Foods",
+              "Final report",
+              "₹6.0 lakh",
+              "28 Aug",
+              "Raised 30 Aug",
+              [
+                "Overdue 47 days",
+                "late"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Flights and hotel, Plant operations",
+              "meta": "₹86,400, billable under contract",
+              "tag": [
+                "Add to invoice",
+                "flag"
+              ]
+            },
+            {
+              "name": "Associate consultant, ESG data",
+              "meta": "₹1.2 lakh, passed through at cost plus 10%",
+              "tag": [
+                "Bill back",
+                "flag",
+                "Added",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'From pursuit to realisation.',
-  workflowsLede:
-    'These already run. As connected records, the gap between what was sold and what was delivered becomes visible.',
-  workflows: [
+  "dayHeading": "The same Thursday in a project-heavy month, before and after.",
+  "dayLede": "What changes is not the consulting. It is that scope, time, deliverables and invoices are on the same record.",
+  "day": [
     {
-      name: 'Pursuit to signed engagement',
-      steps: [
-        'Opportunity recorded against the client and sponsor',
-        'Scope, deliverables and fee basis drafted',
-        'Proposed team checked against existing commitments',
-        'Proposal issued and its state tracked',
-        'Engagement signed with budget, team and milestones recorded',
-        'Provisional resourcing converted to commitments',
-      ],
-      note:
-        'Checking the proposed team against commitments at proposal time is what prevents a kickoff conflict.',
+      "time": "9:00",
+      "before": "The partner opens email and a sheet to see who is on which project.",
+      "after": "The staffing screen shows two people over-allocated next week and one on the bench, with a suggested swap."
     },
     {
-      name: 'Staffing and substitution',
-      steps: [
-        'Engagement staffed against the commitments made',
-        'Substitutions recorded where the proposed person is unavailable',
-        'Client informed where the substitution is material',
-        'Actual staffing tracked against proposed',
-        'Pattern reviewed across engagements',
-      ],
-      note:
-        'Substitution is normal; a firm that cannot see how often it happens cannot manage its consequences.',
+      "time": "11:30",
+      "before": "A client asks for a dashboard in a workshop and the team says yes.",
+      "after": "The manager logs a scope change with an hours estimate and sends a short note on how it will be handled. The partner decides."
     },
     {
-      name: 'Delivery and deliverables',
-      steps: [
-        'Workstreams and deliverables created with owners and dates',
-        'Effort recorded against workstreams',
-        'Internal review completed before client submission',
-        'Client sign-off tracked as a step',
-        'Milestone released for billing on acceptance',
-      ],
-      note:
-        'Tying the billing milestone to the deliverable is what makes a slip visible as a cash event.',
+      "time": "2:00",
+      "before": "A draft report sits with the client for a third week and nobody has counted.",
+      "after": "The deliverables screen shows 11 days with the CFO and prompts an escalation call."
     },
     {
-      name: 'Budget and variation',
-      steps: [
-        'Effort compared against budget as the engagement runs',
-        'Threshold breach flagged with the remaining scope',
-        'Variation raised with the additional effort quantified',
-        'Client agreement recorded, or a decision to absorb recorded',
-        'Budget updated and realisation recalculated',
-      ],
-      note:
-        'The point is that absorbing an overrun becomes an explicit decision rather than a default.',
+      "time": "4:30",
+      "before": "A milestone is accepted by email and the invoice waits for someone to remember.",
+      "after": "Accepting the milestone creates an invoice task with amount and PO details."
     },
     {
-      name: 'Capacity and pipeline planning',
-      steps: [
-        'Committed hours aggregated by person and period',
-        'Weighted pipeline added against the same periods',
-        'Gaps and overcommitment identified ahead',
-        'Recruitment, subcontracting or pursuit decisions raised',
-        'Decisions recorded against the plan',
-      ],
-      note:
-        'Idle people and short engagements in the same month is a scheduling failure, and it only appears if both are in one view.',
+      "time": "6:00",
+      "before": "A partner finds out at the end of the week that a project has used its hours.",
+      "after": "The engagement warned the manager at 70 percent of hours, two weeks ago."
     },
     {
-      name: 'Billing and realisation',
-      steps: [
-        'Milestones or time-based fees raised as due',
-        'Unbilled effort aged against the engagement',
-        'Invoice prepared and routed for partner review',
-        'Write-offs above threshold routed for approval',
-        'Realisation calculated against effort at cost',
-      ],
-      note:
-        'Realisation, not revenue, is the number that tells a consultancy which work to do more of.',
-    },
+      "time": "Month end",
+      "before": "Receivables are chased from memory and the bench is a surprise.",
+      "after": "The overdue list has reminder histories, and utilisation was visible every week."
+    }
   ],
-
-  ai: {
-    heading: 'Ask what the utilisation number is hiding.',
-    lede:
-      'Verity AI reads the same engagement, staffing, effort and billing records the firm runs on. It answers from your own practice, respects permissions, and can turn an answer into reviews and resourcing decisions.',
-    panelMeta: 'Grounded in your engagement records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which engagements are past budget without a variation raised?',
-      'Who is below target utilisation while engagements are short-staffed?',
-      'Which deliverables are overdue and blocking a billing milestone?',
-      'What is realisation by client after discounts and overruns?',
-      'Which pursuits are resourced against people already committed?',
-      'How often are proposed teams substituted at delivery?',
-      'How much work is unbilled beyond forty-five days?',
-      'What is committed capacity against weighted pipeline next quarter?',
-      'Summarise engagement health across the firm.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We sit with your partners and managers through a real project week, build Verity around how you sell, staff and bill, bring your data in, then stay on.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Sit with a partner, two engagement managers and whoever raises invoices. Follow one engagement from proposal to final invoice, and note where scope, time, deliverables and money are held today.",
+        "you": "Two to three hours of a partner's time and an hour from each manager. Your pipeline sheet, two recent proposals, staffing sheet and invoice tracker.",
+        "get": "A written map of how your firm works: service lines, engagement types, fee models, staffing rules, deliverable stages and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up engagement templates by service line, scope and change logging, milestone and fee structures, time codes, utilisation targets, deliverable states, billable expense rules, conflict flags and permissions for partners, managers, consultants and finance.",
+        "you": "Review the setup with one partner and two managers. Tell us where a stage, a fee model or a rule is wrong.",
+        "get": "A working Verity with your engagement types, fee models and staffing rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your pipeline, live engagements with scope and milestones, staffing plan, open invoices and clients from the sheets and files you use. Train partners, managers and consultants on their own screens during real work.",
+        "you": "Your pipeline and staffing sheets in whatever form they exist, and a check of each live engagement's scope and fee. An hour with each role.",
+        "get": "Your live engagements, people and invoices inside Verity, and a team that has logged a week of time on it."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first months of utilisation, margin and receivables with you, tune the thresholds and stages, and handle changes when you add a service line, a partner or an office.",
+        "you": "A short monthly review with the managing partner.",
+        "get": "A system that keeps matching how the firm runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Your pipeline sheet and two recent proposals",
+      "Staffing plan and last three months of timesheets",
+      "List of live engagements with scope, fee and milestones",
+      "Open invoices and payment terms by client",
+      "Standard contract and fee model templates"
+    ],
+    "time": "About 10 to 12 hours of a partner's time across the four weeks, mostly in week 1. Managers and finance need a few more.",
+    "after": "Nobody is hired to run Verity. Time, scope changes and milestones are recorded as part of work the team already does."
   },
-
-  automationHeading: 'The conversations that get postponed.',
-  automationLede:
-    'Each runs from the engagement records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your firm a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own engagements, time, deliverables and invoices, and only what the asker is allowed to see. Ask in plain language, then turn the answer into tasks.",
+    "examples": [
+      {
+        "q": "Which engagements have used more than 80 percent of hours with less than 70 percent of milestones done?",
+        "a": "Two. The retail pricing diagnostic is the furthest ahead of its scope.",
+        "rows": [
+          [
+            "Retail pricing diagnostic",
+            "95% hours, 60% scope"
+          ],
+          [
+            "HR policy redesign",
+            "72% hours, 70% scope (watch)"
+          ]
+        ],
+        "action": "Create a scope review task for each lead"
+      },
+      {
+        "q": "Which accepted milestones have no invoice?",
+        "a": "Two, worth ₹7.5 lakh. The older one was accepted on 3 October.",
+        "rows": [
+          [
+            "Rao Cement inception report",
+            "₹4.5 lakh"
+          ],
+          [
+            "Plant operations phase 1",
+            "₹3.0 lakh"
+          ]
+        ],
+        "action": "Create invoice tasks for the engagement managers"
+      },
+      {
+        "q": "Who has capacity from December and what are we likely to win?",
+        "a": "Two consultants are free from 15 December. Weighted pipeline is ₹58 lakh over 90 days, enough to staff both if Rao Cement closes.",
+        "action": "Draft a staffing plan for partner review"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Partners still speak to clients; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'Effort passes a share of the engagement budget',
-      steps: [
-        'Engagement flagged with effort against budget and remaining scope',
-        'Variation review assigned to the engagement lead',
-        'Decision recorded — variation raised or absorption agreed',
-      ],
+      "when": "A proposal has no activity for your set number of days",
+      "then": [
+        "Flagged on the pipeline",
+        "Task to the owner with the last contact",
+        "Outcome recorded: won, lost or paused"
+      ]
     },
     {
-      trigger: 'A deliverable passes its due date',
-      steps: [
-        'Deliverable flagged with the milestone it blocks',
-        'Owner notified with the billing consequence attached',
-        'Escalated to the engagement lead',
-      ],
+      "when": "Hours used reach your threshold against scope done",
+      "then": [
+        "Warning to the engagement lead",
+        "Scope review task created",
+        "Partner shown on the dashboard"
+      ]
     },
     {
-      trigger: 'A proposal names people already committed',
-      steps: [
-        'Conflict flagged against the pursuit and the period',
-        'Resourcing decision raised before submission',
-        'Outcome recorded against the pursuit',
-      ],
+      "when": "A deliverable is with the client beyond the planned days",
+      "then": [
+        "Marked as waiting on client",
+        "Escalation task to the manager",
+        "Milestone date shown as at risk"
+      ]
     },
     {
-      trigger: 'A consultant falls below utilisation threshold',
-      steps: [
-        'Availability surfaced against short-staffed engagements',
-        'Reallocation task assigned to the resourcing owner',
-        'Outcome recorded against the period',
-      ],
+      "when": "A milestone is marked accepted",
+      "then": [
+        "Invoice task created with amount and PO details",
+        "Recoverable expenses listed",
+        "Status tracked until paid"
+      ]
     },
     {
-      trigger: 'Work remains unbilled beyond threshold',
-      steps: [
-        'Unbilled position aged against the engagement',
-        'Billing task assigned to the responsible partner',
-        'Escalated past the second threshold',
-      ],
+      "when": "An invoice passes its due date",
+      "then": [
+        "Added to the follow-up list",
+        "Task to the person who is not selling",
+        "Reminder history kept on the invoice"
+      ]
     },
     {
-      trigger: 'A rate exception is requested',
-      steps: [
-        'Request held at the approval step with realisation impact',
-        'Routed to the partner with the client history attached',
-        'Decision recorded against the engagement',
-      ],
-    },
+      "when": "A person is over-allocated in any coming week",
+      "then": [
+        "Alert to the partner staffing the work",
+        "Free capacity listed",
+        "Change recorded on the plan"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the partners can actually see.',
-  intelligenceLede:
-    'Delivery and commercial performance from the same records.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a consulting firm has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything. It keeps the records these rules depend on in order, so you are not searching when a client, an auditor or an authority asks.",
+    "note": "Rules change and depend on your firm's structure and your clients. Confirm current requirements with your accountant and legal adviser.",
+    "items": [
+      {
+        "name": "Payment terms and the MSME rule",
+        "what": "Where a buyer purchases from a micro or small enterprise, payment is generally due within 15 days, or the agreed period up to 45 days under a written agreement. Late payment generally defers the buyer's tax deduction to the year of payment, from 1 April 2024. This matters if you are a registered micro or small enterprise or if you buy from one, such as an associate consultant.",
+        "how": "Each client and subcontractor has its terms on the record, and invoices age against them.",
+        "source": {
+          "name": "ClearTax, Section 43B(h), 2026",
+          "url": "https://cleartax.in/s/section-43bh-of-income-tax-act"
+        }
+      },
+      {
+        "name": "Data protection",
+        "what": "The Digital Personal Data Protection Rules were notified on 13 November 2025, with most duties due about 18 months later. If you handle personal data for clients, such as employee records in an HR project, check with your adviser how the rules apply.",
+        "how": "Engagement documents have permissions by team, and every view and change is logged.",
+        "source": {
+          "name": "Mondaq, 2025",
+          "url": "https://www.mondaq.com/india/data-protection/1708164/digital-personal-data-protection-rules-2025-notified"
+        }
+      },
+      {
+        "name": "Client contracts and confidentiality",
+        "what": "Consulting work is usually governed by an engagement letter, a statement of work and a non-disclosure agreement. Terms on ownership, liability and confidentiality differ for each client.",
+        "how": "The signed agreements are stored on the engagement with their key dates, and team access follows the NDA."
+      },
+      {
+        "name": "Tax on professional fees",
+        "what": "Fees are generally subject to GST and clients may deduct tax at source. The details depend on your registration and your client.",
+        "how": "Invoice tasks carry the details your accountant needs. Your accountant prepares returns and Verity files nothing."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A consultant should not see other people's pay or another client's folder. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Engagements',
-      points: [
-        'Active engagements by state, value and practice',
-        'Effort against budget and remaining scope',
-        'Engagements over budget without variations',
-        'Deliverable timeliness and sign-off status',
-      ],
+      "role": "Managing partner",
+      "question": "Is the firm profitable, busy and getting paid?",
+      "sees": "Margin by engagement, utilisation, unbilled work, receivables and pipeline."
     },
     {
-      area: 'People',
-      points: [
-        'Utilisation by person, grade and practice',
-        'Committed hours against availability',
-        'Proposed against actual staffing',
-        'Idle capacity alongside short-staffed engagements',
-      ],
+      "role": "Partner",
+      "question": "How are my engagements and my pipeline?",
+      "sees": "Own engagements, scope changes, deliverables with the client, proposals and past clients to call."
     },
     {
-      area: 'Commercial',
-      points: [
-        'Realisation by engagement, client and practice',
-        'Rate exceptions and discounts granted',
-        'Unbilled effort by age',
-        'Write-offs and their approvals',
-      ],
+      "role": "Engagement manager",
+      "question": "What is on track and what is slipping?",
+      "sees": "Hours against scope, milestones, deliverables, risks and team capacity."
     },
     {
-      area: 'Pipeline',
-      points: [
-        'Weighted pipeline against capacity by period',
-        'Pursuits with resourcing conflicts',
-        'Win rate by client, sector and pursuit type',
-        'Conversion time from proposal to signature',
-      ],
+      "role": "Consultant or analyst",
+      "question": "What am I on this week?",
+      "sees": "Own allocations, tasks, deliverables and time entry."
     },
     {
-      area: 'Clients',
-      points: [
-        'Engagement history and total value per client',
-        'Realisation across all their engagements',
-        'Sponsor changes and their pipeline effect',
-        'Outstanding balances and ageing',
-      ],
-    },
+      "role": "Finance",
+      "question": "What can I bill and what is owed?",
+      "sees": "Accepted milestones, billable expenses, invoice status and ageing."
+    }
   ],
-  intelligenceNote:
-    'Verity holds the engagement records. Your accounting and document tools continue to hold the accounts and the work product.',
-
-  rolesHeading: 'One firm, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
-  roles: [
-    {
-      role: 'Managing partner',
-      question: 'Is the firm profitable and deliverable?',
-      focus: 'Realisation by client and practice, utilisation distribution, engagements over budget, pipeline against capacity.',
-    },
-    {
-      role: 'Practice lead',
-      question: 'What is at risk in my practice?',
-      focus: 'Engagements over budget, deliverables overdue, staffing gaps, pursuits with conflicts.',
-    },
-    {
-      role: 'Engagement lead',
-      question: 'Is this engagement on track?',
-      focus: 'Effort against budget, deliverables and sign-offs, team allocation, variations outstanding.',
-    },
-    {
-      role: 'Resourcing manager',
-      question: 'Who is free and who is needed?',
-      focus: 'Committed hours by person and period, short-staffed engagements, pursuit resourcing conflicts.',
-    },
-    {
-      role: 'Consultant',
-      question: 'What am I on and what do I owe?',
-      focus: 'Assigned workstreams and deliverables, effort to record, review points, upcoming allocation.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Word, PowerPoint and Excel for your deliverables.",
+      "The accounting software your finance person uses. We agree during setup how data reaches Verity.",
+      "Email and WhatsApp for clients. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your proposal and contract templates."
+    ],
+    "not": [
+      "Write your proposals or deliverables.",
+      "Send invoices or reminders to clients on its own.",
+      "Run payroll or file returns.",
+      "Replace the partner's judgement on scope, price or staffing."
+    ],
+    "migration": "We bring your pipeline, live engagements, staffing plan, open invoices and client list across from the sheets and files you use now, in stages, so projects keep moving while it happens."
+  },
+  "faqHeading": "Questions consulting partners ask.",
+  "faqs": [
+    [
+      "We are a firm of eight. Is this too much?",
+      "A small firm feels every unbilled week. We set up only what you need, in the same four weeks, and leave out what you do not."
+    ],
+    [
+      "Will my consultants actually log time?",
+      "Only if it takes seconds, so we set it up as a few taps per day against the engagements they are on, with a short list of codes. We start with what matters and add detail later."
+    ],
+    [
+      "Does Verity write proposals or reports?",
+      "No. You keep using Word and PowerPoint. Verity holds the fee, scope, versions, reviewers and states around them."
+    ],
+    [
+      "How does it help with scope creep?",
+      "The agreed scope and hours sit on the engagement. Extra requests are logged as changes with an hours estimate, and the partner decides to accept, charge or decline. Hours against scope are visible all the time."
+    ],
+    [
+      "Can it handle fixed-fee, time-and-materials and retainer work in one place?",
+      "Yes. Each engagement has its own fee model, and the same screens compare fee, hours and cost for all of them."
+    ],
+    [
+      "Can it keep clients' work confidential from each other?",
+      "Access follows the engagement team. A conflict flag shows when one person is on competing clients, and views are logged."
+    ],
+    [
+      "Does it send invoices?",
+      "No. Verity creates the invoice task with the amount and details, and your finance person raises the invoice. It tracks the status until payment."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role and engagement, and every change is recorded with who made it and when."
+    ],
+    [
+      "How soon will I see something useful?",
+      "The pipeline, unbilled milestones and receivables need only your existing data, so we aim to have them first. Utilisation becomes reliable after a few weeks of logged time."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of people and what you want set up. Message us and we will give you a clear number after a short conversation about how your firm runs."
+    ]
   ],
-
-  useCasesHeading: 'What consultancies use Verity for',
-  useCases: [
-    {
-      name: 'Proposed against actual staffing',
-      body: 'Both recorded on the engagement, so substitution is visible as a pattern rather than noticed by the client first.',
-    },
-    {
-      name: 'Utilisation distribution',
-      body: 'Committed and actual hours per person, so idle capacity and short-staffed engagements appear in one view rather than behind a firm-level average.',
-    },
-    {
-      name: 'Budget and variation discipline',
-      body: 'Effort against budget per engagement, so passing it raises a variation decision rather than an absorbed cost.',
-    },
-    {
-      name: 'Deliverable-linked billing',
-      body: 'Deliverables tied to the milestones they unlock, so a slip is visible with its cash consequence.',
-    },
-    {
-      name: 'Pursuit resourcing',
-      body: 'Provisional resourcing on pursuits against the same capacity model, so conflicts surface at proposal rather than kickoff.',
-    },
-    {
-      name: 'Realisation by client',
-      body: 'Effort at cost against fee after discounts and overruns, which frequently reorders which clients are worth pursuing.',
-    },
-    {
-      name: 'Rate exception control',
-      body: 'Discounts recorded as approvals with their realisation impact, rather than negotiated privately per engagement.',
-    },
-    {
-      name: 'Asking the firm questions',
-      body: 'Plain-language questions across delivery, scheduling and commerce, with reviews assigned in the same step.',
-    },
+  "related": [
+    "law-firms",
+    "ca-firms",
+    "accounting-firms",
+    "marketing-agencies",
+    "it-services-companies",
+    "recruitment-agencies"
   ],
-
-  migration:
-    'Your accounting, document and collaboration tools continue to run and are mapped during implementation. Clients, active engagements, teams, rates and open pursuits are brought across, and Verity is introduced as the engagement and resourcing layer.',
-
-  faqHeading: 'Questions consultancies ask',
-  faqs: [
-    [
-      'What can AI software do for a consulting firm?',
-      'Verity AI answers questions from your own engagement, staffing, effort and billing records: which engagements are past budget without a variation, who is below utilisation while engagements are short-staffed, which deliverables are blocking a billing milestone, what realisation looks like by client. Each answer can become a review or a resourcing decision.',
-    ],
-    [
-      'Does Verity replace our accounting software?',
-      'No. Accounting continues and is mapped during implementation. Verity holds the operational and commercial record — pursuits, engagements, staffing, deliverables, effort, variations, unbilled ageing and realisation.',
-    ],
-    [
-      'How does it help with utilisation?',
-      'Committed and actual hours are held per person, so the firm-level figure resolves into distribution. Three people at forty percent while two engagements are short-staffed is a scheduling failure with a different fix from a demand shortfall, and only the distribution shows it.',
-    ],
-    [
-      'Can it show which clients are actually profitable?',
-      'Effort at cost is compared against the fee after discounts and overruns, producing realisation by engagement, client and practice — which is a different ranking from revenue and usually a more useful one.',
-    ],
-    [
-      'Does it help with scope variations?',
-      'Effort against budget is visible as the engagement runs, so passing a threshold raises a variation decision with the additional effort quantified. Absorbing an overrun becomes an explicit, recorded choice rather than the default.',
-    ],
-    [
-      'Can it prevent resourcing conflicts on new work?',
-      'Pursuits carry provisional resourcing against the same capacity model as delivered engagements, so a proposal naming people whose time is already sold surfaces as a conflict before submission rather than at kickoff.',
-    ],
-    [
-      'Does it track deliverables?',
-      'Deliverables are records with owners, dates, review steps and the billing milestone they unlock, so a late deliverable is visible alongside the cash it is blocking.',
-    ],
-    [
-      'Is it suitable for a small consultancy?',
-      'A ten-person firm has the same substitution, overrun and unbilled problems, and a single overrunning engagement is a larger share of its year.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the firm pursues and delivers, configuration of grades, rates and stages, migration of clients and active engagements, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with the engagements past budget.',
-  ctaLede:
-    'Most firms have several and have raised variations on none of them. Tell us how effort is tracked today and we will show you what visibility changes.',
-
-  related: ['marketing-agencies', 'accounting-firms', 'law-firms', 'it-services-companies', 'recruitment-agencies', 'design-agencies'],
+  "ctaHeading": "Start with the milestones you have not invoiced.",
+  "ctaLede": "Tell us how your firm runs and we will show you the unbilled milestones, the engagements running past their hours and the idle weeks it would find, using your own numbers."
 };

@@ -1,181 +1,1057 @@
 export default {
-  slug: 'facility-management',
-  status: 'published',
-  plural: 'facility management companies',
-  subject: 'facility management company',
-
-  seo: {
-    title: 'AI business software for facility management | Verity',
-    description:
-      'Verity gives facility management companies one system for response times, planned and reactive work, deployed staff, assets and contract margin.',
-    keywords: [
-      'AI software for facility management companies',
-      'facility management software',
-      'service level and response time tracking',
-      'planned preventive maintenance software',
-    ],
+  "schema": 2,
+  "slug": "facility-management",
+  "status": "published",
+  "plural": "facility management companies",
+  "subject": "facility management company",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Software for facility management companies in India | Verity",
+    "description": "The 15 leaks in a facility management business, from SLA penalties and staff rostering across sites to consumables and complaint tickets, and the Verity screens that fix each.",
+    "keywords": [
+      "facility management software India",
+      "housekeeping and security staff rostering",
+      "SLA tracking for FM contracts",
+      "complaint ticket tracking for facilities",
+      "consumables stock across client sites"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for facility management',
-    headline: 'The contract is written in response times, and nobody is counting them until the review.',
-    lede:
-      'Facility management is paid against service levels and eroded by reactive work. Verity counts the response clock and shows what planned maintenance would have prevented.',
-    note: 'Verity runs the company. Building systems and access control stay where they are.',
-    panel: {
-      title: 'Portfolio',
-      meta: 'This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sites under contract', value: '34', note: '11 clients' },
-        { label: 'Response within target', value: '89%', note: 'contract target 95%' },
-        { label: 'Reactive share of work', value: '61%', note: 'planned 39%' },
-        { label: 'Contracts below margin', value: '4', note: 'reactive-heavy' },
-      ],
-      rows: [
-        { name: '2 clients below contracted response target', meta: 'Review due next month', active: true },
-        { name: '61% of work reactive', meta: 'Planned maintenance slipping', active: true },
-        { name: '4 contracts below target margin', meta: 'Callout volume the cause', active: true },
-        { name: '19 assets past service interval', meta: 'Failure risk on 7 sites', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own portfolio in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for facility management companies",
+    "headline": "Forty-one sites. Three hundred people. One missed shift, and the client deducts the invoice.",
+    "lede": "A facility management company sells people and consumables by the month, under a contract with response times, and every site is somebody else's building. Verity ties each contract, its SLAs, the roster at every site, the stock of consumables, the complaints that come in and the invoice at the end, so a missed shift or a late ticket shows before the client's invoice review.",
+    "oneLine": "One system that knows every contract and its SLAs, every guard and housekeeper on every shift, every consumable issued and every complaint until it is closed.",
+    "note": "Built for supervisors who work on their phones at client sites. Records come from the attendance, tickets and issues they already handle.",
+    "screen": "owner",
+    "screenNote": "contracts, SLAs, rosters, consumables and tickets"
+  },
+  "today": {
+    "heading": "Most facility management companies are good at showing up and weak at proving it.",
+    "paragraphs": [
+      "The work is visible to the client: clean washrooms, a guard at the gate, a lift that runs. What is hard to see, for both you and the client, is the proof: who was on the post at 2 am, which task was done at which floor, how many tickets were closed inside the SLA and what each site actually cost against its monthly charge.",
+      "That proof lives in many places. Attendance is on paper registers or a supervisor's phone. Consumables are issued from a store and noted in a book. Complaints arrive as calls, emails and messages. Invoices are made at head office from sheets that arrive on the 3rd of the month, if they arrive.",
+      "Estimates of the size of India's facility management market vary widely by scope, with one 2026 research estimate at about USD 19 billion in 2025. In a market that large and that fragmented, the companies that can prove delivery site by site keep their contracts."
+    ],
+    "stack": [
+      "Paper attendance registers or a supervisor's app",
+      "Excel at head office for rosters and billing",
+      "WhatsApp groups per site",
+      "Complaint calls and emails to a help desk",
+      "Accounts and payroll run by an accountant or a vendor"
+    ],
+    "stackNote": "Each one works inside its own limits. None of them tells you that site 17 had two vacant posts last week and the client's SLA clause says a penalty applies."
+  },
+  "painsHeading": "Where a facility management business actually loses money.",
+  "painsLede": "These are the situations owners, operations heads and site supervisors describe again and again. For each one: what it looks like on an ordinary week, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Staffing",
+      "title": "A post is vacant and the client notices before you do",
+      "scene": "A guard does not turn up for the night shift at the bank branch. The supervisor is eleven kilometres away. By the time a replacement arrives, the branch manager has already phoned your head office.",
+      "cost": "Most contracts treat a vacant post as a deduction or a penalty, and a pattern of vacancies is the main reason clients change vendors.",
+      "fix": "Each post on each site is a record with a shift, a required headcount and a person. When a person is not marked present by shift start, the post shows vacant and a task goes to the nearest relief person and the supervisor.",
+      "screen": "roster"
     },
-  },
-
-  overview: {
-    heading: 'You are paid for availability and judged on how fast you answer.',
-    paragraphs: [
-      'A facility management company operates buildings it does not own, under contracts written as service levels. Response time, resolution time and uptime are the deliverable, which makes the clock on every request a contractual instrument rather than an internal courtesy. Eighty-nine per cent response against a ninety-five per cent target is a contract in breach, and it is usually discovered at a quarterly review rather than in the week it started slipping.',
-      'The second characteristic is the balance between planned and reactive work. Sixty-one per cent reactive means planned preventive maintenance is being displaced by callouts, and displaced planned maintenance produces more callouts next month. It is a cycle that shows in the margin before it shows anywhere else.',
-      'The third is a deployed workforce. Staff are stationed or mobile across many client sites, and the company’s cost is people it cannot see, working in buildings it does not control.',
-      'The fourth is assets. Every site has equipment with service intervals, warranties and failure histories, and nineteen assets past their service interval is a list of the next month’s emergencies.',
-      'The fifth is contract profitability. Four contracts below target margin because of callout volume is a renegotiation the company can only make with the evidence.',
-      'Verity holds the response clock, the planned-against-reactive balance, deployed staff and asset condition against contract profitability.',
+    {
+      "area": "Staffing",
+      "title": "Rosters are made in Excel and change by phone call",
+      "scene": "A housekeeping lady is on leave for her daughter's wedding. The supervisor calls three people before one agrees. The Excel roster at head office does not change, and payroll is based on it.",
+      "cost": "Wrong wages, arguments at month end and a client invoice that shows people who were not there.",
+      "fix": "One roster per site and shift, with changes recorded as who replaced whom and why. The month's attendance and wage inputs come from the same record that the client invoice is built from.",
+      "screen": "roster"
+    },
+    {
+      "area": "Staffing",
+      "title": "Attendance is claimed but cannot be proved",
+      "scene": "A client's audit team asks for the guard attendance for August. The register has overwriting on four days and one supervisor's initials are missing.",
+      "cost": "An invoice with a disputed attendance count is the largest single source of delay in payment and a standard excuse to hold part of it.",
+      "fix": "Attendance is taken daily by post, by the supervisor, with the time and the person who recorded it. Corrections need a reason and an approver, so the register shown to the client is the one with a history.",
+      "screen": "roster"
+    },
+    {
+      "area": "Contracts",
+      "title": "SLA terms are in the contract and nowhere else",
+      "scene": "The contract says toilets cleaned every two hours, a complaint answered in 30 minutes and closed in four hours, a fire drill each quarter. The supervisor has never seen the contract. Only the operations head knows the clauses.",
+      "cost": "A published guide on FM contracts says targets like \"prompt response\" cannot be measured, so they cannot be enforced. Where they can be measured, the client does the measuring and you find out at invoicing.",
+      "fix": "Each contract is a record with its clauses turned into measurable SLAs: response time, closing time, task frequency, headcount. Each SLA shows the live result for the month and the site where it is slipping.",
+      "screen": "contracts",
+      "source": {
+        "name": "Oxmaint, FM contract SLA metrics that actually get measured, 2026",
+        "url": "https://oxmaint.com/industries/facility-management/fm-contract-sla-metrics-actually-measured"
+      }
+    },
+    {
+      "area": "Contracts",
+      "title": "SLA penalties are deducted and nobody checks them",
+      "scene": "The client's accounts pay 94 percent of the invoice with a note about SLA deductions. Nobody can match the deduction to a ticket or a vacant post.",
+      "cost": "Example arithmetic: a ₹6 lakh monthly invoice with 6 percent deducted is ₹36,000 a month, or about ₹4.3 lakh a year, on one site. Part of it may be wrongly applied, and you cannot argue without the record.",
+      "fix": "Each SLA miss is recorded with the date, the cause and the evidence. When a deduction arrives, Verity lines it up against the misses, so you accept the valid ones and challenge the rest with the ticket history.",
+      "screen": "contracts"
+    },
+    {
+      "area": "Contracts",
+      "title": "Contract renewals and rate revisions sneak up",
+      "scene": "A three-year contract ends in November. Minimum wages have gone up twice since it was signed. The renewal discussion starts the week before expiry.",
+      "cost": "Working on old rates while wages rise cuts the margin. A lapsed contract with no renewal in writing is a risk to payment.",
+      "fix": "Each contract has its start, end, notice and review dates, and the wage rates it assumed. Tasks open 90 days before expiry with the current cost per post against the contract rate, so the renewal talk starts with numbers.",
+      "screen": "contracts"
+    },
+    {
+      "area": "Tickets",
+      "title": "Complaints arrive in five places and close in none",
+      "scene": "A tenant calls about a water leak, a manager emails about the lobby, and a client's facilities head sends a message about the AC. The help desk writes each on a different paper.",
+      "cost": "A complaint that is not logged cannot be closed inside the SLA, and the client counts only the ones they had to ask about twice.",
+      "fix": "Every complaint becomes a ticket with the site, location, category, time received, owner and due time. Tickets near their SLA time are flagged, and closing needs a note and, where needed, a photo.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Tickets",
+      "title": "Repeat problems are fixed again and again",
+      "scene": "The same washroom drain chokes every 10 days. Each time a ticket is closed. Nobody asks why.",
+      "cost": "Labour and consumables are spent on the same fix, and the client sees a vendor that only reacts.",
+      "fix": "Tickets are grouped by site, location and category. Repeats are shown, and a repeat opens a root cause task for the supervisor or a technician with a due date.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Maintenance",
+      "title": "Preventive maintenance of client equipment slips",
+      "scene": "The contract includes pumps, DG sets, lifts and HVAC. The service schedule is on a calendar at head office. A DG set fails during a power cut because its service was a month late.",
+      "cost": "A failure during peak use is blamed on the vendor, and emergency call-outs cost more than planned visits.",
+      "fix": "Each piece of equipment is an asset record with its site, service schedule and history. A service due date becomes a task for the technician or the vendor, and completion needs the checklist and a signature.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Consumables",
+      "title": "Consumables run out at one site and pile up at another",
+      "scene": "Phenyl, hand wash, tissue rolls and garbage bags are issued from a central store. Site 9 is out by the 20th. Site 22 has four months of stock.",
+      "cost": "A client's washrooms without soap is a complaint within hours, and over-issue at some sites quietly eats the margin.",
+      "fix": "Each site has a monthly allowance by item based on its headcount and footfall. Issues are recorded against the site, and Verity compares use against allowance, flags sites that are over or under and drafts a restock.",
+      "screen": "stock"
+    },
+    {
+      "area": "Consumables",
+      "title": "Machines and tools are lost between sites",
+      "scene": "Scrubber-driers, vacuum cleaners and walkie-talkies move between sites. When a scrubber breaks nobody remembers where it was last.",
+      "cost": "Replacement purchases of items that were only misplaced, and contract-required equipment missing at a site.",
+      "fix": "Each machine is an asset with its current site and holder, service dates and issues. A transfer between sites is recorded when it happens, and the contract's equipment list is checked against what is actually there.",
+      "screen": "stock"
+    },
+    {
+      "area": "Compliance",
+      "title": "Wages, PF and ESI inputs depend on rosters nobody trusts",
+      "scene": "Wages for 300 people depend on attendance sheets that arrive late from 41 sites. PF and ESI contributions are based on the same sheets. A principal employer's auditor asks for proof of contributions.",
+      "cost": "Under the labour codes in force since 21 November 2025, contract labour is restricted for core activities and clients are asked to confirm vendors' compliance. A vendor that cannot show records loses contracts or has payments held.",
+      "fix": "Verified attendance by person and site is the single input for the month's wage run, which your accountant or payroll provider does. Registrations, contribution proofs and licence dates are records with owners, and a client's request for proof is a task with the documents attached.",
+      "screen": "owner",
+      "source": {
+        "name": "BDO India alert on the Labour Codes, 2025",
+        "url": "https://www.bdo.in/en-gb/insights/alerts-updates/alert-implementation-of-labour-codes-key-provisions-notified-effective-21-november-2025"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Guard licences, training and police verification expire quietly",
+      "scene": "A private security licence is valid for years, then needs renewing with the agency's training tie-up and records. A guard's police verification is one month from expiring and nobody has noticed.",
+      "cost": "A lapsed licence or an untrained guard can end a security contract, and in some states the licence runs for only one year.",
+      "fix": "The agency licence, each guard's training and verification dates are records with owners. A date 60 days away becomes a task, and a post cannot be shown as fully compliant while a guard's paperwork is expired.",
+      "screen": "roster",
+      "source": {
+        "name": "SetIndiaBiz, PSARA renewal, 2026",
+        "url": "https://setindiabiz.com/blog/psara-renewal"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Invoices are built late and from memory",
+      "scene": "Invoices are prepared at head office after the supervisors' sheets arrive, usually after the 5th. Extra work, such as a deep clean before a client event, is not recorded and not billed.",
+      "cost": "A late invoice is a late payment. Unbilled extra work is margin given away, and each client invoice gets a different treatment.",
+      "fix": "Billable items for the month, including headcount, extra jobs and consumable charges that the contract allows, accumulate on the contract record. A draft billing summary is ready on the last day, and your accountant raises the invoice.",
+      "screen": "contracts"
+    },
+    {
+      "area": "Money",
+      "title": "A site's real margin is not known until the contract ends",
+      "scene": "The company bills ₹6.5 lakh a month for a campus. Wages, statutory costs, consumables, supervisor travel and machines are spread across other accounts. Nobody can say if that campus pays.",
+      "cost": "A contract can sit at a loss for two years. By the time the loss is found, it has to be repriced or exited.",
+      "fix": "Each contract shows billed against cost to date for people, consumables, machines and travel, by month. A contract whose margin falls below your line is flagged to the owner.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "Supervisors and owner see different pictures",
+      "scene": "The owner depends on supervisor calls in the evening. A supervisor may cover four sites. Problems are known to the person who happens to be there.",
+      "cost": "Slow response and uneven service. A client's complaint reaches the owner before the supervisor's report does.",
+      "fix": "One owner view each morning shows vacant posts, tickets near SLA, sites with low stock, contracts coming up for renewal and margin by contract, with the person responsible and the next step.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "Market size estimates for facility management in India differ widely by firm because they define the market differently; the figure below is one research vendor's. The PSARA and SLA items come from consultant and software vendor pages, not official text. Confirm the labour code and licence rules with your adviser and state authority.",
+  "facts": [
+    {
+      "figure": "About USD 19 billion",
+      "text": "estimated size of the India facility management market in 2025, growing at about 8.6% a year to 2032, with soft services such as cleaning and security about 47% of the mix in 2024.",
+      "source": {
+        "name": "Ken Research, 2026",
+        "url": "https://www.kenresearch.com/india-facility-management-market"
+      }
+    },
+    {
+      "figure": "21 November 2025",
+      "text": "the date key provisions of the four Labour Codes took effect, with contract labour engagement restricted for core activities of a business, subject to exceptions.",
+      "source": {
+        "name": "BDO India, 2025",
+        "url": "https://www.bdo.in/en-gb/insights/alerts-updates/alert-implementation-of-labour-codes-key-provisions-notified-effective-21-november-2025"
+      }
+    },
+    {
+      "figure": "45 days",
+      "text": "before expiry is when a private security agency licence renewal application generally has to be filed, with the licence usually valid for 5 years and renewal depending on continued guard training.",
+      "source": {
+        "name": "SetIndiaBiz, 2026",
+        "url": "https://setindiabiz.com/blog/psara-renewal"
+      }
+    },
+    {
+      "figure": "Cannot be measured, cannot be enforced",
+      "text": "is how a 2026 FM software vendor guide describes SLA targets such as \"prompt response\".",
+      "source": {
+        "name": "Oxmaint, a software vendor, 2026",
+        "url": "https://oxmaint.com/industries/facility-management/fm-contract-sla-metrics-actually-measured"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Five views, each built for one job. Sites, posts, services and terms are set up in your company's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Facility / Today",
+      "meta": "Contracts: 24. Sites: 41",
+      "heading": "The owner's morning view",
+      "caption": "Vacant posts, tickets near SLA, low stock, contracts coming up for renewal and margin by contract on one screen, with the items needing a decision under it. It replaces the evening round of supervisor calls.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Posts vacant now",
+              "value": "6",
+              "note": "of 312 posts"
+            },
+            {
+              "label": "Tickets near SLA",
+              "value": "9",
+              "note": "3 already late"
+            },
+            {
+              "label": "SLA deductions, month",
+              "value": "₹58,000",
+              "note": "4 contracts"
+            },
+            {
+              "label": "Renewals in 90 days",
+              "value": "3",
+              "note": "₹19 lakh a month"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Contract",
+            "Billed a month",
+            "Cost to date",
+            "Margin",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Tech park A",
+              "₹14.2 lakh",
+              "₹12.6 lakh",
+              "11%",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Bank branches (12)",
+              "₹9.8 lakh",
+              "₹9.3 lakh",
+              "5%",
+              [
+                "Thin",
+                "flag"
+              ]
+            ],
+            [
+              "University campus",
+              "₹6.5 lakh",
+              "₹6.9 lakh",
+              "-6%",
+              [
+                "Loss",
+                "late",
+                "Repricing",
+                "info"
+              ]
+            ],
+            [
+              "Hospital wing",
+              "₹7.4 lakh",
+              "₹6.3 lakh",
+              "15%",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "University campus: cost per post is above the contract rate since the wage revision. Renewal in 74 days.",
+          "action": "Open renewal"
+        }
+      ]
+    },
+    {
+      "id": "roster",
+      "title": "Roster and compliance",
+      "meta": "Tonight, Tech park A",
+      "heading": "Posts, shifts and who is on them",
+      "caption": "Each post has a shift, a required headcount and a person. Absence shows as vacant with a relief task, and licences, training and verification dates sit on the same person.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Post",
+            "Shift",
+            "Assigned",
+            "Status",
+            "Relief"
+          ],
+          "rows": [
+            [
+              "Main gate",
+              "10 pm to 6 am",
+              "Ramesh K.",
+              [
+                "Present",
+                "ok"
+              ],
+              "-"
+            ],
+            [
+              "Block B lobby",
+              "10 pm to 6 am",
+              "Suresh P.",
+              [
+                "Absent",
+                "late",
+                "Relief on way",
+                "info"
+              ],
+              "Anil S."
+            ],
+            [
+              "Washrooms, floor 3 to 5",
+              "6 am to 2 pm",
+              "Savitha",
+              [
+                "Present",
+                "ok"
+              ],
+              "-"
+            ],
+            [
+              "Control room",
+              "2 pm to 10 pm",
+              "Imran",
+              [
+                "Late 20 min",
+                "flag",
+                "Present",
+                "ok"
+              ],
+              "-"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "Role",
+            "Training",
+            "Police verification",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Ramesh K.",
+              "Guard",
+              "Valid",
+              "Valid",
+              [
+                "Clear",
+                "ok"
+              ]
+            ],
+            [
+              "Suresh P.",
+              "Guard",
+              "Fire drill due",
+              "Expires in 28 days",
+              [
+                "Renew",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            ],
+            [
+              "Imran",
+              "Control room",
+              "Valid",
+              "Valid",
+              [
+                "Clear",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contracts",
+      "title": "Contracts and SLAs",
+      "meta": "University campus",
+      "heading": "SLAs, deductions and renewals in one place",
+      "caption": "Each contract's SLAs turned into live measures for the month, the deductions the client applied matched against recorded misses, and the renewal date with cost against rate.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "SLA",
+            "Target",
+            "This month",
+            "Misses",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Complaint response",
+              "30 min",
+              "26 min average",
+              "7",
+              [
+                "Within",
+                "ok"
+              ]
+            ],
+            [
+              "Complaint closed",
+              "4 hours",
+              "5.1 h average",
+              "18",
+              [
+                "Slipping",
+                "late"
+              ]
+            ],
+            [
+              "Washroom round",
+              "Every 2 h",
+              "92% done",
+              "21",
+              [
+                "Check",
+                "flag"
+              ]
+            ],
+            [
+              "Vacant posts",
+              "0 per shift",
+              "4 days with 1",
+              "4",
+              [
+                "Penalty clause",
+                "late",
+                "Evidence added",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Deduction",
+            "Client amount",
+            "Matched to misses",
+            "Difference",
+            "Status"
+          ],
+          "rows": [
+            [
+              "September invoice",
+              "₹41,000",
+              "₹28,500",
+              "₹12,500",
+              [
+                "Challenge",
+                "flag",
+                "Raised",
+                "info"
+              ]
+            ],
+            [
+              "August invoice",
+              "₹22,000",
+              "₹22,000",
+              "₹0",
+              [
+                "Accepted",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Contract ends 29 Dec. Cost per post is 7% above the contract rate.",
+          "action": "Start renewal"
+        }
+      ]
+    },
+    {
+      "id": "tickets",
+      "title": "Tickets and maintenance",
+      "meta": "Open tickets, all sites",
+      "heading": "Every complaint until it is closed",
+      "caption": "Each complaint has a site, a location, a time received, an owner and a due time. Repeats are grouped, and planned equipment service is a ticket too, with a checklist.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "New",
+              "cards": [
+                {
+                  "title": "Water leak, floor 4 pantry",
+                  "meta": "Tech park A, 11:05, due 15:05",
+                  "tag": [
+                    "Assign",
+                    "flag",
+                    "Assigned",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "AC not cooling, conference room",
+                  "meta": "Bank branch 7, due 14:30",
+                  "tag": [
+                    "Near SLA",
+                    "late",
+                    "Vendor called",
+                    "info"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "In progress",
+              "cards": [
+                {
+                  "title": "Drain choke, washroom 2",
+                  "meta": "Campus, 3rd time in 10 days",
+                  "tag": [
+                    "Repeat",
+                    "flag",
+                    "Root cause task",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "DG set quarterly service",
+                  "meta": "Hospital wing, due 20 Oct",
+                  "tag": [
+                    "Planned",
+                    "info"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "9 tickets are within 30 minutes of their SLA time. 3 are already late.",
+          "action": "Review"
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "title": "Consumables and machines",
+      "meta": "Month to date",
+      "heading": "Consumables and machines by site",
+      "caption": "Each site's allowance by item against use, the central store's stock and the restock it needs, and where each machine is and when it was last serviced.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Site",
+            "Item",
+            "Allowance",
+            "Used",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Campus",
+              "Hand wash (L)",
+              "40",
+              "52",
+              [
+                "30% over",
+                "late",
+                "Checked",
+                "info"
+              ]
+            ],
+            [
+              "Tech park A",
+              "Tissue rolls",
+              "600",
+              "410",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Bank branch 7",
+              "Phenyl (L)",
+              "12",
+              "4",
+              [
+                "Low use",
+                "muted"
+              ]
+            ],
+            [
+              "Hospital wing",
+              "Garbage bags",
+              "900",
+              "880",
+              [
+                "Reorder",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Machine",
+            "Current site",
+            "Holder",
+            "Last service",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Scrubber-drier 2",
+              "Campus",
+              "Supervisor Rao",
+              "12 Aug",
+              [
+                "Due",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            ],
+            [
+              "Vacuum 6",
+              "Tech park A",
+              "Savitha",
+              "3 Sep",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Scrubber-drier 4",
+              "Not confirmed",
+              "-",
+              "-",
+              [
+                "Missing",
+                "late",
+                "Found at hospital",
+                "info"
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Monday, before and after.",
+  "dayLede": "The cleaning and the guarding are still done by people on their feet. What changes is that the day leaves a record the client can see, and the record does the chasing.",
+  "day": [
+    {
+      "time": "6:00",
+      "before": "Supervisors call in absentees. You phone around for reliefs.",
+      "after": "Vacant posts appear at shift start, with the nearest relief person already notified."
+    },
+    {
+      "time": "9:30",
+      "before": "A client's facilities head emails about a leak. It goes to one person's inbox.",
+      "after": "It is a ticket with a due time. The leak is assigned, and the supervisor sees the clock."
+    },
+    {
+      "time": "12:00",
+      "before": "A site supervisor says the hand wash is finished.",
+      "after": "The allowance screen showed the site at 130 percent last week, so the extra delivery is already approved with a reason."
+    },
+    {
+      "time": "3:30",
+      "before": "The client's accounts say they deducted for SLA misses and attach nothing.",
+      "after": "The deduction is matched to four recorded misses. Two are accepted and one is challenged with the ticket history."
+    },
+    {
+      "time": "6:30",
+      "before": "The owner phones three supervisors to learn how the day went.",
+      "after": "The owner screen shows two tickets late and one vacancy that was filled in 40 minutes."
+    },
+    {
+      "time": "Month end",
+      "before": "Invoices wait for sheets from sites.",
+      "after": "Attendance, extra jobs and consumables are on the contract record, and the draft billing summary is ready on the last day."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time at your head office and at two client sites, build Verity around how your contracts, rosters and tickets really run, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at head office and a shift at two client sites. Follow one contract from signing to monthly invoice, one post from roster to attendance, and one complaint from call to closing.",
+        "you": "Two to three hours of yours, plus an hour with the operations head and a supervisor. Two contracts and a month of attendance.",
+        "get": "A written map of your business: contracts and SLAs, sites and posts, roster patterns, consumables, ticket categories and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your contracts and their SLAs, sites and posts, shifts, ticket categories and due times, consumable allowances, assets and equipment schedules, and build the five screens around your own terms.",
+        "you": "Check SLAs and allowances with your operations head. Tell us where a clause or a rule is wrong.",
+        "get": "A working Verity with your real contracts, sites and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in people, posts, rosters, contract terms, equipment lists and stock from your sheets and registers. Train supervisors on their sites and the help desk and billing teams at their desks.",
+        "you": "Your staff list with roles, current rosters and contract copies. One hour with each role.",
+        "get": "Your live sites and rosters inside Verity and supervisors who have run a real week."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first month of SLAs and tickets with you, tune due times and allowances, and handle changes when you win a contract or add a site.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the business runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Contracts, sites, service levels', 'Work'],
-    ['Requests, callouts, work orders', 'Workflows'],
-    ['Clients, tenants, occupiers', 'Relationships'],
-    ['Assets, plant, equipment', 'Records'],
-    ['Technicians, stationed staff, supervisors', 'People'],
-    ['Spares, consumables, tooling', 'Inventory'],
-    ['Compliance, permits, audit', 'Control'],
-  ],
-
-  challengesHeading: 'A clock on every request and a margin eroded by callouts.',
-  challengesLede:
-    'Facility management difficulties come from being measured on speed and paid a fixed fee.',
-  challenges: [
-    { problem: 'Service level performance is known too late', detail: 'Response and resolution are counted at the review rather than as they happen.', outcome: 'The clock runs on every request against its contract target, visible live.' },
-    { problem: 'Planned maintenance is displaced by callouts', detail: 'Reactive work consumes the day and the preventive schedule slips, producing more reactive work.', outcome: 'Planned and reactive work are measured against each other per contract and per technician.' },
-    { problem: 'Deployed staff are hard to see', detail: 'Technicians work across client sites and their day is only visible if they report it.', outcome: 'Work orders carry site, time and outcome, so deployment is visible from the work itself.' },
-    { problem: 'Assets fail without warning that existed', detail: 'Service intervals pass, failure histories are not consulted, and breakdowns look unpredictable.', outcome: 'Assets carry intervals, warranties and failure history, with overdue service surfaced.' },
-    { problem: 'Contract margin erodes invisibly', detail: 'A fixed fee against rising callout volume loses money quietly across a whole contract term.', outcome: 'Cost to serve per contract is attributed from work orders, so margin is current.' },
-    { problem: 'Compliance work is assumed rather than evidenced', detail: 'Statutory inspections and permits are required per site and hard to prove at audit.', outcome: 'Compliance tasks are scheduled, completed and evidenced against the site.' },
-  ],
-
-  modulesLede: 'One system across contracts, work orders, staff and assets.',
-  modules: [
-    { id: 'workflows', title: 'Requests, work orders and the response clock', line: 'Every request carries its site, contract target, response and resolution clock, assignment and outcome.', why: 'The service level is the product and it is only manageable while the clock is running.', example: 'Eighty-nine per cent response against a ninety-five per cent target.' },
-    { id: 'work', title: 'Contracts, sites and service levels', line: 'Each contract carries its sites, scope, service level targets, planned maintenance schedule and commercial terms.', why: 'Different clients buy different targets, and the same request has different urgency by contract.', example: 'Two clients below contracted response target.' },
-    { id: 'records', title: 'Assets, plant and service history', line: 'Assets carry location, service interval, warranty, failure history and current condition.', why: 'Assets past their service interval are the next month’s emergency callouts.', example: 'Nineteen assets past service interval across seven sites.' },
-    { id: 'people', title: 'Technicians, stationed staff and deployment', line: 'Staff carry site assignment, skills, certifications, availability and work completed.', why: 'A deployed workforce is only visible through the work it records.', example: 'Planned against reactive hours per technician.' },
-    { id: 'relationships', title: 'Clients, tenants and occupiers', line: 'Clients carry their contracts, service level performance, requests raised and commercial position.', why: 'The person raising a request is often not the person holding the contract.', example: 'Requests by tenant against contract performance by client.' },
-    { id: 'inventory', title: 'Spares, consumables and tooling', line: 'Spares held centrally and at sites are recorded against assets and work orders.', why: 'A callout that fails for a missing part is a second callout and a second cost.', example: 'Spares consumption by asset type and site.' },
-    { id: 'control', title: 'Compliance, permits and audit evidence', line: 'One permission model and one audit trail, with statutory inspections and permits carried as scheduled obligations.', why: 'Operating someone else’s building carries obligations that must be evidenced.', example: 'Statutory inspection completion by site.' },
-    { id: 'intelligence', title: 'Service level, cost and asset reporting', line: 'Response and resolution performance, planned against reactive balance, cost to serve, asset failure rates and compliance completeness come from the records.', why: 'The company is judged on service levels and paid a fixed fee, so both need measuring together.', example: 'Cost to serve per contract against fee.' },
-    { id: 'ai', title: 'Ask the portfolio a question', line: 'Verity AI answers from your own contract, work order, asset and staff records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about which contracts are slipping and why.', example: '"Which contracts are below their response target?" returns two with the callout causes.' },
-    { id: 'communication', title: 'Client and occupier contact', line: 'Request updates, escalations and client reporting attach to the work order and contract.', why: 'A client who is told is a client who does not escalate.', example: 'An escalation recorded against the work order and contract.' },
-    { id: 'locations', title: 'Sites, buildings and zones', line: 'Sites carry their buildings, zones, assets, stationed staff and access requirements.', why: 'Work is located and access-constrained, and both affect response time.', example: 'Response performance by site and zone.' },
-    { id: 'orders', title: 'Contract billing, extras and recovery', line: 'Contract fees, chargeable extras and out-of-scope work carry a billing state.', why: 'Work outside scope is the recoverable part of a reactive-heavy month.', example: 'Out-of-scope work performed against work billed.' },
-  ],
-
-  workflowsHeading: 'Receive, dispatch, resolve, evidence, report.',
-  workflowsLede: 'These already happen. Recorded, service levels and margin stop being a quarterly surprise.',
-  workflows: [
-    { name: 'Request to resolution', steps: ['Request received against site and contract', 'Response clock started against the contract target', 'Assigned by skill, location and availability', 'Attended with outcome and parts recorded', 'Resolution recorded and clock closed'], note: 'Starting the clock at receipt rather than at assignment is what makes the measure honest.' },
-    { name: 'Planned maintenance', steps: ['Schedule generated from asset intervals and contract scope', 'Tasks allocated across technicians and sites', 'Completion recorded with readings and evidence', 'Findings converted into follow-up work', 'Schedule adherence reported'], note: 'Planned maintenance displaced by reactive work is the leading indicator of next month’s callouts.' },
-    { name: 'Asset lifecycle', steps: ['Asset registered with location, interval and warranty', 'Service history recorded against it', 'Failures logged with cause', 'Replacement or overhaul recommended from history', 'Client decision recorded'], note: 'Failure history is the evidence for a replacement conversation with the client.' },
-    { name: 'Compliance cycle', steps: ['Statutory obligations mapped per site', 'Inspections scheduled with owners', 'Completion evidenced with documents', 'Non-conformities raised and closed', 'Position reportable per site and client'], note: 'Compliance evidence has to exist per site, not per company.' },
-    { name: 'Contract review', steps: ['Service level performance compiled', 'Planned against reactive balance reviewed', 'Cost to serve compared with fee', 'Out-of-scope work identified for recovery', 'Renewal or renegotiation position prepared'], note: 'A renegotiation is only winnable with the callout evidence behind it.' },
-  ],
-
-  ai: {
-    heading: 'Ask about service levels and cost to serve.',
-    lede: 'Verity AI reads the same contract, work order, asset and staff records the company creates as it operates. It answers from your own portfolio, respects permissions, and can turn an answer into a dispatch or a client conversation.',
-    panelMeta: 'Grounded in your portfolio records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which contracts are below their response target this month?',
-      'What is the planned against reactive balance by contract?',
-      'Which assets are past their service interval?',
-      'Which contracts are below target margin and why?',
-      'Which sites generate the most callouts?',
-      'What out-of-scope work has been done and not billed?',
-      'Which statutory inspections are outstanding?',
-      'Which assets have failed more than twice this year?',
-      'Summarise service level and margin position by client.',
+    "bring": [
+      "Contract copies for live sites with SLA clauses",
+      "Current rosters and a month of attendance",
+      "Staff list with role, site and licence dates",
+      "Consumable list with usual monthly use per site",
+      "Equipment lists with service dates"
     ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. Your operations head and a few supervisors need a few more.",
+    "after": "Nobody is hired to run Verity. Attendance, tickets and issues are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The clock, the schedule and the asset.',
-  automationLede: 'Each runs from the company’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A request approaches its response target', steps: ['Escalated with site and contract', 'Reassignment options surfaced', 'Client update recorded'] },
-    { trigger: 'Planned maintenance slips its scheduled window', steps: ['Flagged against contract and asset', 'Rescheduling assigned', 'Adherence position updated'] },
-    { trigger: 'An asset passes its service interval', steps: ['Flagged with failure history', 'Work order raised', 'Completion recorded against the asset'] },
-    { trigger: 'An asset fails repeatedly', steps: ['Failure pattern surfaced with cost', 'Replacement recommendation raised', 'Client decision recorded'] },
-    { trigger: 'Out-of-scope work is recorded', steps: ['Chargeable state assigned', 'Client approval raised', 'Billing position updated'] },
+  "ai": {
+    "heading": "Ask your business a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own contracts, rosters, tickets and stock. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which contracts are most at risk of SLA deductions this month?",
+        "a": "Three. The university campus has 18 tickets closed late and 4 days with a vacant post; the bank branches are slipping on response time.",
+        "rows": [
+          [
+            "University campus",
+            "22 misses"
+          ],
+          [
+            "Bank branches",
+            "11 misses"
+          ],
+          [
+            "Tech park A",
+            "4 misses"
+          ]
+        ],
+        "action": "Create review tasks for each site supervisor"
+      },
+      {
+        "q": "Which sites are using more consumables than their allowance?",
+        "a": "Five sites are over by more than 20 percent, the campus is highest on hand wash at 30 percent over.",
+        "rows": [
+          [
+            "Campus hand wash",
+            "+30%"
+          ],
+          [
+            "Hospital wing garbage bags",
+            "+24%"
+          ],
+          [
+            "Tech park B tissue",
+            "+22%"
+          ]
+        ],
+        "action": "Create check tasks for the site supervisors"
+      },
+      {
+        "q": "Which contracts end in the next 90 days and what is their margin?",
+        "a": "Three contracts worth ₹19 lakh a month. The campus is at a loss against the current rate.",
+        "rows": [
+          [
+            "University campus",
+            "-6%"
+          ],
+          [
+            "Bank branches",
+            "5%"
+          ],
+          [
+            "Hospital wing",
+            "15%"
+          ]
+        ],
+        "action": "Open renewal tasks with cost per post"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your people still talk to clients and each other; Verity makes sure the right person knows what to do and when.",
+  "automations": [
+    {
+      "when": "A post is not marked present by shift start",
+      "then": [
+        "Post shown vacant",
+        "Task to the nearest relief and the supervisor",
+        "Outcome and delay recorded for the SLA"
+      ]
+    },
+    {
+      "when": "A ticket is within 30 minutes of its SLA time",
+      "then": [
+        "Flagged on the help desk screen",
+        "Reminder to the owner of the ticket",
+        "Closing note and time recorded"
+      ]
+    },
+    {
+      "when": "The same location raises a repeat ticket",
+      "then": [
+        "Grouped with earlier tickets",
+        "Root cause task to the supervisor",
+        "Result recorded against the location"
+      ]
+    },
+    {
+      "when": "A site uses more than its consumable allowance",
+      "then": [
+        "Site and item flagged",
+        "Check task to the supervisor",
+        "Restock held or approved with a reason"
+      ]
+    },
+    {
+      "when": "A licence, training or verification date is 60 days away",
+      "then": [
+        "Task to the owner of that record",
+        "Document and last date shown",
+        "Updated date recorded when done"
+      ]
+    },
+    {
+      "when": "A client deducts from an invoice",
+      "then": [
+        "Deduction listed against recorded SLA misses",
+        "Difference flagged for challenge",
+        "Outcome recorded on the contract"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the company can see.',
-  intelligenceLede: 'Service levels, cost and asset condition from operational records.',
-  intelligence: [
-    { area: 'Service levels', points: ['Response and resolution against target', 'Performance by client, site and request type', 'Breaches and their causes', 'Trend across the contract term'] },
-    { area: 'Work balance', points: ['Planned against reactive by contract', 'Schedule adherence', 'Callout volume by site', 'Technician hours by work type'] },
-    { area: 'Assets', points: ['Service interval compliance', 'Failure rates by asset type', 'Repeat failures and cost', 'Warranty and replacement position'] },
-    { area: 'Commercial', points: ['Cost to serve against contract fee', 'Margin by contract', 'Out-of-scope work performed and recovered', 'Renewal risk indicators'] },
+  "rules": {
+    "heading": "The rules a facility management company has to keep up with.",
+    "lede": "Verity does not give legal advice, does not run payroll and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by state. Confirm current requirements with your adviser and the relevant authority.",
+    "items": [
+      {
+        "name": "Labour codes and contract labour",
+        "what": "Key provisions of the four Labour Codes took effect on 21 November 2025. Contract labour engagement is restricted for core activities of a business, subject to exceptions, and principal employers generally expect vendors to prove compliance with wages, PF and ESI. State rules differ.",
+        "how": "Verified attendance by person and site is the single input for wages, and registrations and contribution proofs are records with owners that can be shared when a client asks.",
+        "source": {
+          "name": "BDO India alert on the Labour Codes",
+          "url": "https://www.bdo.in/en-gb/insights/alerts-updates/alert-implementation-of-labour-codes-key-provisions-notified-effective-21-november-2025"
+        }
+      },
+      {
+        "name": "Minimum wages",
+        "what": "Minimum wages for housekeeping and security staff are set by state governments and are revised from time to time, so a long contract can fall behind current rates.",
+        "how": "Each contract stores the wage rates it assumed, and Verity compares the cost per post with the contract rate so the gap shows before renewal."
+      },
+      {
+        "name": "Private security agency licence",
+        "what": "Agencies supplying guards generally need a licence under the Private Security Agencies (Regulation) Act, usually valid for five years, with renewal applied for well before expiry and tied to continued guard training. Some states differ.",
+        "how": "The licence, each guard's training and police verification are records with dates, and tasks open well before they lapse.",
+        "source": {
+          "name": "SetIndiaBiz, PSARA renewal",
+          "url": "https://setindiabiz.com/blog/psara-renewal"
+        }
+      },
+      {
+        "name": "Contract terms and SLA penalties",
+        "what": "SLA penalties are a matter of the contract, and under the Indian Contract Act a stated sum is not always recoverable in full, so evidence of each miss matters. Ask your lawyer about your own clauses.",
+        "how": "Every SLA miss and its cause is recorded with evidence, so a deduction can be accepted or challenged on facts.",
+        "source": {
+          "name": "Vidhikarya on SLA breach",
+          "url": "https://www.vidhikarya.com/legal-blog/sla-breach-indian-bpo-it"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A guard should not see wages. A supervisor should not see another site's margin. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Which contracts pay and which are at risk?",
+      "sees": "Margin by contract, SLA misses, deductions, vacant posts, renewals and cash due from clients."
+    },
+    {
+      "role": "Operations head",
+      "question": "What needs fixing today?",
+      "sees": "Vacant posts, tickets near SLA, repeat problems, sites over allowance and licences coming due."
+    },
+    {
+      "role": "Site supervisor",
+      "question": "What do I need to do on my site today?",
+      "sees": "Posts and shifts, absentees and reliefs, open tickets, equipment tasks and consumable use."
+    },
+    {
+      "role": "Help desk",
+      "question": "Which complaint is next and for whom?",
+      "sees": "Incoming complaints, categories, owners, due times and closing notes."
+    },
+    {
+      "role": "Accountant",
+      "question": "What do we bill and pay?",
+      "sees": "Verified attendance, extra jobs, consumable charges, client deductions, statutory proofs and wage inputs."
+    }
   ],
-  intelligenceNote: 'Verity records the company’s operations. Building management systems and access control continue as they are.',
-
-  rolesHeading: 'One company, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Managing director', question: 'Which contracts are healthy?', focus: 'Service level performance, cost to serve against fee, margin by contract, renewal risk.' },
-    { role: 'Operations manager', question: 'Is today’s work covered?', focus: 'Open requests against clocks, technician deployment, planned maintenance due, escalations.' },
-    { role: 'Technician', question: 'What am I attending and with what?', focus: 'Assigned work orders, site access, asset history, spares required.' },
-    { role: 'Account manager', question: 'What do I take to the client review?', focus: 'Service level evidence, callout patterns, asset recommendations, out-of-scope recovery.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your payroll provider or accountant, who runs wages and statutory payments. We agree during setup how attendance reaches them.",
+      "Your accounts and billing package. We agree how invoices and receipts reach Verity.",
+      "Phone, WhatsApp and email with clients. Staff reply",
+      "Verity records the ticket and the outcome.",
+      "The client's own building management and access systems."
+    ],
+    "not": [
+      "Run payroll or pay wages.",
+      "Raise invoices or file returns.",
+      "Track guard locations by GPS or run access control.",
+      "Send messages to clients or staff on its own."
+    ],
+    "migration": "We bring in your people, posts, rosters, contract terms, equipment lists and stock from the registers, sheets and phones you use now, one site at a time, so service does not stop."
+  },
+  "faqHeading": "Questions facility management companies ask.",
+  "faqs": [
+    [
+      "My supervisors work from a phone at client sites. Will it work for them?",
+      "The daily record is short: who is present, tickets opened and closed, items issued. We train supervisors on their own sites, and we start with attendance and tickets only."
+    ],
+    [
+      "Does Verity run payroll for my 300 staff?",
+      "No. Your accountant or payroll provider does that. Verity keeps the verified attendance by person and site, and your payroll provider uses it as the input."
+    ],
+    [
+      "Can the client see tickets and SLAs?",
+      "Only if you decide so. Access is by role, and a client view of tickets and SLA results for their own site can be agreed during setup."
+    ],
+    [
+      "How does it handle different SLAs for different clients?",
+      "Each contract has its own SLAs, due times and allowances. A bank branch and a hospital wing can have very different targets in the same system."
+    ],
+    [
+      "Can it work out whether a contract is making money?",
+      "Yes, once billing and costs for people, consumables and machines are recorded. Each contract shows billed against cost to date, so a drop in margin shows early."
+    ],
+    [
+      "We have guards, housekeeping and technicians. Is that one system?",
+      "Yes. Posts and shifts are set up for each service line, and the same screens cover rosters, tickets and stock."
+    ],
+    [
+      "Does it track vehicles or guard location?",
+      "No. It records posts, shifts and attendance. It does not track vehicles or locations by GPS."
+    ],
+    [
+      "How do you bring in current rosters and contracts?",
+      "From your sheets and registers. We load posts, people and contract terms for each site, then check one site with the supervisor before go-live."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. A supervisor sees their sites, the help desk sees tickets and the owner and accountant see money. Every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of sites, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your business runs."
+    ]
   ],
-
-  useCasesHeading: 'What facility management companies use Verity for',
-  useCases: [
-    { name: 'Live service level performance', body: 'Response and resolution clocks running per request against each contract’s target, so a slipping contract is visible in the week rather than at the quarterly review.' },
-    { name: 'Protecting planned maintenance', body: 'Planned and reactive work measured against each other, so displacement of the preventive schedule is caught before it produces the next wave of callouts.' },
-    { name: 'Seeing a deployed workforce', body: 'Work orders carrying site, time, outcome and parts, so a mobile and stationed workforce is visible through the work it records.' },
-    { name: 'Asset condition and failure history', body: 'Service intervals, warranties and failure records per asset, turning breakdowns into a schedule and a replacement case.' },
-    { name: 'Contract profitability', body: 'Cost to serve attributed from work orders against contract fee, so renegotiation is backed by callout evidence.' },
-    { name: 'Compliance evidence per site', body: 'Statutory inspections and permits scheduled, completed and evidenced against the site they belong to.' },
-    { name: 'Asking about the portfolio', body: 'Plain-language questions across contracts, work orders, assets and margin, with dispatch and escalation raised in the same step.' },
+  "related": [
+    "cleaning-services",
+    "property-management",
+    "contractors",
+    "construction-companies",
+    "laundry-services",
+    "repair-services"
   ],
-
-  migration: 'Building management systems and access control continue and are mapped during implementation. Contracts and service levels, sites, asset registers with service history, staff and certifications, open work orders and compliance schedules are brought across.',
-
-  faqHeading: 'Questions facility management companies ask',
-  faqs: [
-    ['What can AI software do for a facility management company?', 'Verity AI answers questions from your own contract, work order, asset and staff records: which contracts are below their response target, what the planned against reactive balance is, which assets are past service interval, which contracts are below margin and why. Each answer can become a dispatch or a client conversation.'],
-    ['How does it help with service level agreements?', 'Every request carries its contract’s response and resolution targets with a clock running from receipt, so performance is a live number rather than a figure compiled for a review after the breaches have happened.'],
-    ['Why does the planned to reactive ratio matter?', 'Because they feed each other. Reactive work consumes the day, planned maintenance slips, and the equipment that was not serviced generates the next month’s callouts. Measuring the balance is what breaks the cycle.'],
-    ['Can it track staff across many client sites?', 'Deployment is visible through the work itself: every work order carries the site, the person, the time and the outcome, which gives the company a picture of a workforce it cannot physically see.'],
-    ['Does it manage asset maintenance?', 'Assets carry location, service interval, warranty and failure history, with overdue services surfaced as work orders and repeat failures raised as replacement recommendations.'],
-    ['How does it show contract profitability?', 'Cost to serve is attributed from the work orders actually performed and compared with the contract fee, which makes a reactive-heavy contract visible while there is still term left to renegotiate.'],
-    ['Does it replace building management systems?', 'No. Building systems and access control continue as they are. Verity holds the company around them — contracts, requests, work orders, staff, assets and commercial position.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of contracts, service level targets, asset registers and compliance obligations, configuration, migration, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the response clock.',
-  ctaLede: 'It is what the contract is written in. Tell us how requests are received and timed today.',
-
-  related: ['property-management', 'cleaning-services', 'repair-services', 'construction-companies', 'contractors', 'building-material-suppliers'],
+  "ctaHeading": "Start with the vacant posts and the late tickets.",
+  "ctaLede": "Tell us how your contracts run and we will show you the vacant posts, the SLA misses and the deductions it would find, using your own numbers."
 };

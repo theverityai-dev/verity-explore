@@ -1,182 +1,1048 @@
 export default {
-  slug: 'insurance-agencies',
-  status: 'published',
-  plural: 'insurance agencies',
-  subject: 'insurance agency',
-
-  seo: {
-    title: 'AI business management software for insurance agencies | Verity',
-    description:
-      'Verity connects renewal pipelines, policy documentation, claims support, insurer commission recovery and suitability records into one operational system.',
-    keywords: [
-      'AI software for insurance agencies',
-      'insurance agency management software',
-      'policy renewal and lapse tracking',
-      'commission recovery and claims support software',
-    ],
+  "schema": 2,
+  "slug": "insurance-agencies",
+  "status": "published",
+  "plural": "insurance agencies",
+  "subject": "insurance agency",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Insurance agency software for Indian agents and brokers | Verity",
+    "description": "Renewals that lapse, policy papers lost, commission statements that do not tally, claims nobody follows: how an agency loses income, and the Verity screens that fix it.",
+    "keywords": [
+      "insurance agency software India",
+      "policy renewal tracking for agents",
+      "commission tracking insurance agent",
+      "claims follow-up for insurance agents",
+      "insurance agent CRM"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for insurance agencies',
-    headline: 'A policy that lapses is a client you already had.',
-    lede:
-      'Renewals are the whole business and they run on dates. Verity tracks the renewal pipeline, the documentation behind each policy and the commission you are owed for it.',
-    note: 'Verity runs the agency. Insurer systems stay where they are.',
-    panel: {
-      title: 'Book',
-      meta: 'Next 90 days',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Policies in force', value: '2,140', note: '₹6.4 Cr premium' },
-        { label: 'Renewals in 90 days', value: '384', note: '96 not yet contacted' },
-        { label: 'Commission unreconciled', value: '₹8.2 L', note: '5 insurers' },
-        { label: 'Claims in progress', value: '46', note: '11 awaiting documents' },
-      ],
-      rows: [
-        { name: '96 renewals inside 90 days with no contact recorded', meta: 'Lapse risk on existing clients', active: true },
-        { name: '₹8.2 L of commission unreconciled', meta: 'Across five insurers and three months', active: true },
-        { name: '11 claims stalled on client documents', meta: 'Client experience at the moment it matters most', active: true },
-        { name: 'Policies without recorded suitability basis', meta: '38 · sold over 12 months', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own book in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for insurance agencies",
+    "headline": "An insurance agency earns on renewals. Most of the income is lost to dates nobody watched.",
+    "lede": "An agency lives on a long list of policies: motor, health, life, home, shop, group. Every policy has an expiry, a premium, a renewal and, one day, a claim. When the renewal call is made in time, the customer stays and the commission comes again. When it is not, the policy lapses or moves to someone else. Verity gives each customer one record with every policy, paper, premium date, claim and commission line, so the next renewal is a task and not a surprise.",
+    "oneLine": "One system that knows every customer, every policy and its expiry, every claim in progress and every commission owed, and tells you who to call today.",
+    "note": "Built for agencies where the owner, the service person and the sales person are often the same few people. Verity does not sell, quote or issue policies.",
+    "screen": "owner",
+    "screenNote": "renewals, policies, claims and commission"
+  },
+  "today": {
+    "heading": "Most agencies hold thousands of customers in a diary and a spreadsheet.",
+    "paragraphs": [
+      "The renewal is the heartbeat of the business. A motor policy runs for a year, a health policy for a year, a term policy for decades with a yearly premium. The first sale is hard work. The renewal should be easy, and it is where most of the long-term income sits.",
+      "In practice, the renewal list is a sheet that someone updates when they have time. Policy documents live in email, on WhatsApp and in drawers. Claims are followed on the phone. Commission arrives in statements from several insurers, each in a different format.",
+      "The distribution business is large and increasingly regulated. The IRDAI annual report for 2024-25, as reported, shows the individual agent network at about 31.23 lakh, and individual agents sourcing 49.44 percent of individual life new business premium. In September 2026 IRDAI also released a consultation paper that proposes new limits on commission and rewards. Neither a growing network nor a change in remuneration rules forgives a missed renewal."
+    ],
+    "stack": [
+      "Excel sheet of customers and renewal dates",
+      "Insurer portals, one login per insurer",
+      "WhatsApp and phone for customers",
+      "Email and phone gallery for policy documents",
+      "Insurer commission statements in PDF or Excel"
+    ],
+    "stackNote": "Each portal knows its own policies. Nothing joins them into one customer, one renewal calendar and one commission total."
+  },
+  "painsHeading": "Where an insurance agency actually loses income.",
+  "painsLede": "These are the situations agency owners and service teams describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Renewals",
+      "title": "Renewals missed because the date is in a sheet",
+      "scene": "A customer's motor policy expired on Sunday. The sheet had the date, but nobody opened it that week. On Tuesday he calls to ask about a claim for a dent on Monday.",
+      "cost": "A lapsed policy means no cover, an angry customer and a renewal that moves elsewhere. Example arithmetic: 600 motor and health renewals a year at ₹1,500 average commission, with one in ten lapsing, is ₹90,000 of income lost, plus the customers.",
+      "fix": "Every policy has an expiry date and a renewal owner. Verity lists renewals due in the next 15, 30 and 60 days, with the customer, premium and last contact, and creates a call task at the intervals you set. Your team makes the call.",
+      "screen": "renewals"
     },
-  },
-
-  overview: {
-    heading: 'The book renews or it shrinks.',
-    paragraphs: [
-      'An insurance agency’s value is its book, and a book is a set of dated renewals. Every policy has a date on which it either renews or lapses, and a lapse is not a lost sale — it is the loss of a client the agency already had, already knew and had already paid to acquire.',
-      'Renewals therefore need to be worked as a pipeline rather than processed as they arrive. Ninety-six renewals inside ninety days with no contact recorded is a lapse rate forming, and it is entirely visible in advance.',
-      'The second fact is commission. Insurers pay commission on premium and it arrives in statements that have to be reconciled against the policies the agency actually placed. Eight point two lakh unreconciled across five insurers is money earned and not verified.',
-      'The third is claims. A client experiences the agency almost entirely at claim time, and claims stall on documents the client has not sent. Eleven stalled claims is eleven clients forming an opinion at the worst possible moment.',
-      'The fourth is documentation. What was recommended and on what basis is a record the agency needs years later.',
-      'Verity works the renewal pipeline, reconciles commission, supports claims and keeps the documentation.',
+    {
+      "area": "Customers",
+      "title": "Ten policies for one family and no single view",
+      "scene": "A family has two motor policies, three health policies with different insurers, a term plan and a shop policy. Each lives under a different name and a different phone number.",
+      "cost": "The agency cannot see the whole relationship, misses cover gaps and cross-sell chances, and cannot say how valuable the family is.",
+      "fix": "Customers are linked into households and businesses, with every policy, insurer, sum insured and expiry in one record. The service person sees the whole family before every call.",
+      "screen": "policies"
+    },
+    {
+      "area": "Documents",
+      "title": "Policy documents lost when a customer needs them",
+      "scene": "A customer needs his health policy schedule for a hospital admission at night. The agent searches WhatsApp, email and a folder named \"Policies 2023\".",
+      "cost": "A delay at the hospital desk, and a customer who remembers it. The policy wording, the endorsement and the premium receipt should be a tap away.",
+      "fix": "Each policy has its schedule, wording, endorsements and receipts attached as documents with permissions and history. The right paper is found in seconds by the right person.",
+      "screen": "policies"
+    },
+    {
+      "area": "Claims",
+      "title": "Claims followed by phone and memory",
+      "scene": "A claim was lodged three weeks ago for a cracked windscreen and a hospital cashless request for another customer. Nobody can say which documents the insurer asked for or when they were sent.",
+      "cost": "Claims are where the customer decides whether the agent was worth it. A claim that drags without anyone owning the next step costs the relationship, and the commission on future years.",
+      "fix": "Each claim is a record linked to the policy with the date of loss, the insurer's reference, documents requested and sent, the status and the next step with an owner and a date. Claims waiting too long are flagged. Staff talk to the insurer and the customer; Verity makes sure someone does.",
+      "screen": "claims"
+    },
+    {
+      "area": "Claims",
+      "title": "Missing documents delay the claim",
+      "scene": "The insurer asks for a discharge summary and a bank cancelled cheque. The customer sends them in two WhatsApp messages. One is lost.",
+      "cost": "Repeated requests, delays and a customer who blames the agent.",
+      "fix": "A claim checklist is created by claim type, showing what was requested, what has been received and what is still needed. Each item has a date and the person who handled it.",
+      "screen": "claims"
+    },
+    {
+      "area": "Money",
+      "title": "Commission statements that do not tally",
+      "scene": "Five insurers pay commission in five formats. The totals do not match the policies sold. Nobody checks whether the commission on a renewal matches the agreed rate.",
+      "cost": "Income not received, commission clawed back without notice and an owner who cannot tell which line of business earns.",
+      "fix": "Expected commission is calculated from each policy's premium, product and the rate you record. Statements received are entered or imported by agreement during setup, and Verity compares expected with received by insurer, policy and month, flagging gaps and clawbacks.",
+      "screen": "commission"
+    },
+    {
+      "area": "Compliance",
+      "title": "Rules on commission and rewards are changing",
+      "scene": "IRDAI released a consultation paper on 23 September 2026 proposing limits on commission and rewards, with gifts and reimbursements counted toward the limit. Comments are open until 25 October 2026. The agency has no clear picture of how much of its income comes from which product.",
+      "cost": "A change in limits will hit the product mix differently for each agency. Without product-wise data, the owner cannot see the impact until the money has already moved. The paper is a proposal, not a final rule.",
+      "fix": "Commission income is recorded by insurer, product line, new versus renewal and agent. Verity shows what share each makes, so the owner can see what a change in the limit would touch in their own numbers.",
+      "screen": "commission",
+      "source": {
+        "name": "Finnovate, IRDAI distribution reforms 2026",
+        "url": "https://www.finnovate.in/learn/blog/irdai-insurance-distribution-reforms-2026"
+      }
+    },
+    {
+      "area": "Renewals",
+      "title": "Renewal premium goes up and the customer goes elsewhere",
+      "scene": "A health policy renews at a higher premium. The customer asks whether it is worth switching. The agent has not reviewed options since the year before.",
+      "cost": "Health renewals are a large part of an agency's long-term book. A customer who gets a price shock without a conversation is a customer who calls a competitor.",
+      "fix": "Renewal tasks include last year's premium, claims history and the notes from the last review. The service person can prepare the conversation, and the outcome (renewed, changed insurer, lost) is recorded with the reason.",
+      "screen": "renewals"
+    },
+    {
+      "area": "Renewals",
+      "title": "Customers who stop paying premiums on long-term plans",
+      "scene": "A term life customer misses a premium and the grace period runs out. The agent finds out when the policy has lapsed.",
+      "cost": "The customer loses cover, and the agent loses the renewal commission. These are plans where the customer will not buy again.",
+      "fix": "Premium due dates and grace periods are on the policy. Verity creates a call task before the due date and again if it is missed, and records whether the customer paid, delayed or let it go.",
+      "screen": "renewals"
+    },
+    {
+      "area": "Customers",
+      "title": "Cross-sell chances that never get asked",
+      "scene": "A customer with a motor policy and a term plan has never been asked about health cover, though his father has just been admitted for surgery.",
+      "cost": "The cheapest new sale is to an existing customer, and each unasked question is a sale given to someone else.",
+      "fix": "The household record shows which cover types each customer holds. Verity lists customers with no health, term or home cover, and life events noted at calls create follow-up tasks. The agent does the advising; Verity helps decide whom to call.",
+      "screen": "policies"
+    },
+    {
+      "area": "Sales",
+      "title": "Leads from referrals and walk-ins that go cold",
+      "scene": "A shop owner enquires about a fire policy. The agent says he will send a quote. Two weeks later nobody has called.",
+      "cost": "A new customer is worth many years of commission, and delay hands them to the next agent.",
+      "fix": "Each lead is a record with a source, a product, an owner and a next step. Verity lists leads with no contact in your set days and tracks the stage from quote to policy.",
+      "screen": "owner"
+    },
+    {
+      "area": "People",
+      "title": "Staff leave and take customer knowledge with them",
+      "scene": "A service executive leaves after four years. He handled 900 renewals. The replacement does not know which customers need a reminder in Hindi, which pay by cheque and which hate calls before 11.",
+      "cost": "Renewals dip right after the handover, which is when the agency can least afford it.",
+      "fix": "Preferences, notes, tasks and history are on the customer record. Reassigning a book moves its tasks and notes to the new person.",
+      "screen": "owner"
+    },
+    {
+      "area": "People",
+      "title": "Sub-agents and POSPs whose work cannot be tracked",
+      "scene": "An agency works with sub-agents and POSPs who bring in business. Their policies, commission shares and payment dates are on separate sheets.",
+      "cost": "Disputes about who sold what, and an owner who cannot see which sub-agent is worth keeping. As of FY 2024-25, there were 27,18,487 POSPs, according to a report on the IRDAI annual report, so this model is common.",
+      "fix": "Each policy records who sourced it, and commission shares are calculated per person. Verity shows each sub-agent's policies, renewals and earnings, and the payment due to them.",
+      "screen": "commission",
+      "source": {
+        "name": "Outlook Money on IRDAI Annual Report 2024-25",
+        "url": "https://www.outlookmoney.com/personal-finance/irdai-report-202425-growth-in-savings-health-and-digital-adoption"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Licence, certification and compliance dates held in a drawer",
+      "scene": "An agent's licence renewal, the training requirement and the code of conduct are on separate dates. A new sub-agent is onboarded without checking.",
+      "cost": "A lapsed licence can stop a person from selling and expose the agency to a regulatory notice. IRDAI rules also change often, and the 2025 insurance law amendments have introduced penalties for unregistered agents.",
+      "fix": "Each licensed person's licence, insurer appointments and training dates are records with expiry dates and owners. Verity raises tasks well in advance and shows sales by anyone whose licence status is not clear.",
+      "screen": "owner"
+    },
+    {
+      "area": "Compliance",
+      "title": "Customer data on phones and unprotected folders",
+      "scene": "Aadhaar copies, health documents and bank details are in WhatsApp backups and on staff phones.",
+      "cost": "A leak in a business of sensitive health and financial data is serious. The Digital Personal Data Protection Rules were notified in November 2025, with most duties due about 18 months later.",
+      "fix": "Customer records and documents have permissions by role and a log of who viewed or downloaded them. Closing a leaver's access is one step.",
+      "screen": "policies",
+      "source": {
+        "name": "Mondaq, DPDP Rules 2025, 2025",
+        "url": "https://www.mondaq.com/india/data-protection/1708164/digital-personal-data-protection-rules-2025-notified"
+      }
+    },
+    {
+      "area": "Owner",
+      "title": "The owner cannot see the book as a whole",
+      "scene": "At the end of a quarter, the owner asks how many policies are up for renewal, how many lapsed, what the retention rate is and how much commission is pending. The answer takes a week of sheets.",
+      "cost": "Hiring, targets and which insurers to push are decided on feeling.",
+      "fix": "The owner's screen shows renewals due and lapsed, retention, claims open, commission expected against received and leads in progress, live from the records.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The agent figures are from press reports of the IRDAI Annual Report 2024-25, not the report itself. The commission proposals are IRDAI's consultation paper of 23 September 2026, as summarised by a finance site, and are not final rules. Confirm anything regulatory with IRDAI and your insurers.",
+  "facts": [
+    {
+      "figure": "31.23 lakh",
+      "text": "individual insurance agents in the network at the end of FY 2024-25, up 7.87 percent, according to the IRDAI annual report as reported. The agency competes with a very large field.",
+      "source": {
+        "name": "Outlook Money, 2025",
+        "url": "https://www.outlookmoney.com/personal-finance/irdai-report-202425-growth-in-savings-health-and-digital-adoption"
+      }
+    },
+    {
+      "figure": "49.44%",
+      "text": "the share of individual life new business premium sourced by individual agents in FY 2024-25, down from 50.90 percent the year before, with corporate agents at 34.69 percent.",
+      "source": {
+        "name": "Outlook Money, citing IRDAI Annual Report 2024-25",
+        "url": "https://www.outlookmoney.com/personal-finance/life-insurance-new-business-fy25-individual-agents-account-for-4944-per-cent-premium-share"
+      }
+    },
+    {
+      "figure": "₹1,17,504.82 crore",
+      "text": "health insurance premium in FY 2024-25, up 9.12 percent, so health renewals are a growing part of most agency books.",
+      "source": {
+        "name": "Outlook Money, 2025",
+        "url": "https://www.outlookmoney.com/personal-finance/irdai-report-202425-growth-in-savings-health-and-digital-adoption"
+      }
+    },
+    {
+      "figure": "25 October 2026",
+      "text": "the last date for comments on IRDAI's consultation paper Recalibrating Economics of Insurance Distribution, released on 23 September 2026. It proposes product-wise commission ceilings and counting rewards toward them. It is not final.",
+      "source": {
+        "name": "Finnovate, 2026",
+        "url": "https://www.finnovate.in/learn/blog/irdai-insurance-distribution-reforms-2026"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your agency's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Agency / Today",
+      "meta": "3,420 active policies",
+      "heading": "The owner's morning view",
+      "caption": "Renewals due, lapses, claims open, commission expected against received and leads in progress on one screen, with the items that need a decision below. It replaces the Monday sheet.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Renewals due, 30 days",
+              "value": "214",
+              "note": "38 not yet called"
+            },
+            {
+              "label": "Lapsed this month",
+              "value": "17",
+              "note": "6 recoverable"
+            },
+            {
+              "label": "Claims open",
+              "value": "23",
+              "note": "5 waiting over 14 days"
+            },
+            {
+              "label": "Commission unmatched",
+              "value": "₹86,400",
+              "note": "3 insurers"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Commission income by line, this quarter"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Motor",
+              "value": 45,
+              "display": "₹4.1 lakh"
+            },
+            {
+              "label": "Health",
+              "value": 35,
+              "display": "₹3.2 lakh"
+            },
+            {
+              "label": "Life, renewals",
+              "value": 14,
+              "display": "₹1.3 lakh"
+            },
+            {
+              "label": "Life, first year",
+              "value": 6,
+              "display": "₹0.5 lakh",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "A licence for one sub-agent expires in 21 days. Sales are recorded against this person.",
+          "action": "Check renewal"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Motor policy expired 2 days ago",
+              "meta": "Suresh Nair, Hyundai i20, ₹14,200",
+              "tag": [
+                "Call now",
+                "late",
+                "Renewed",
+                "ok"
+              ]
+            },
+            {
+              "name": "Health premium due in 5 days",
+              "meta": "Kapoor family floater, ₹38,000",
+              "tag": [
+                "Remind",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renewals",
+      "title": "Renewals",
+      "meta": "Next 30 days",
+      "heading": "Who to call and when",
+      "caption": "Every policy due for renewal or premium, ordered by expiry date, with the customer, premium, last premium change and the person responsible. Outcomes are recorded: renewed, switched, lapsed, lost and why.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Policy",
+            "Expiry",
+            "Premium",
+            "Owner",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Suresh Nair",
+              "Motor, Hyundai i20",
+              "14 Oct (expired)",
+              "₹14,200",
+              "Kavya",
+              [
+                "Call now",
+                "late",
+                "Renewed",
+                "ok"
+              ]
+            ],
+            [
+              "Kapoor family",
+              "Health floater",
+              "21 Oct",
+              "₹38,000",
+              "Imran",
+              [
+                "Remind",
+                "flag",
+                "Paid",
+                "ok"
+              ]
+            ],
+            [
+              "Anita Rao",
+              "Term plan, premium",
+              "28 Oct",
+              "₹24,500",
+              "Kavya",
+              [
+                "Due",
+                "info"
+              ]
+            ],
+            [
+              "Mehta Traders",
+              "Shop fire policy",
+              "2 Nov",
+              "₹9,800",
+              "Imran",
+              [
+                "Quote renewal",
+                "flag"
+              ]
+            ],
+            [
+              "Dr Joshi",
+              "Health, parents",
+              "9 Nov",
+              "₹52,000",
+              "Kavya",
+              [
+                "Premium up 18%",
+                "late",
+                "Options sent",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "38 renewals in the next 30 days have not been called. Oldest due in 4 days.",
+          "action": "Assign all"
+        }
+      ]
+    },
+    {
+      "id": "policies",
+      "title": "Customers and policies",
+      "meta": "Household: Kapoor family",
+      "heading": "One customer, every policy",
+      "caption": "Every policy, insurer, sum insured and expiry for a household, with schedules, endorsements and receipts attached. Cover gaps are visible, and access follows role.",
+      "blocks": [
+        {
+          "type": "record",
+          "title": "Kapoor family",
+          "sub": "4 members, customer since 2018",
+          "fields": [
+            [
+              "Service owner",
+              "Imran"
+            ],
+            [
+              "Policies",
+              "7 across 4 insurers"
+            ],
+            [
+              "Preferred contact",
+              "WhatsApp, evenings"
+            ],
+            [
+              "Gap",
+              [
+                "No home cover",
+                "flag",
+                "Quoted",
+                "info"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "12 Oct",
+              "Called about health renewal, asked for options"
+            ],
+            [
+              "3 Sep",
+              "Motor claim closed, windscreen"
+            ],
+            [
+              "Note",
+              "Father admitted for surgery in July"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Policy",
+            "Insurer",
+            "Sum insured",
+            "Expiry",
+            "Documents",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Health floater",
+              "Insurer A",
+              "₹10 lakh",
+              "21 Oct",
+              "Schedule, wording",
+              [
+                "Due",
+                "flag",
+                "Renewed",
+                "ok"
+              ]
+            ],
+            [
+              "Motor, Honda City",
+              "Insurer B",
+              "₹7.2 lakh",
+              "3 Mar",
+              "Schedule, RC copy",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Term plan, Mr Kapoor",
+              "Insurer C",
+              "₹1 crore",
+              "Yearly premium 5 Jan",
+              "Policy bond",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Health, parents",
+              "Insurer A",
+              "₹5 lakh",
+              "9 Nov",
+              "Schedule missing",
+              [
+                "Add document",
+                "late",
+                "Added",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "claims",
+      "title": "Claims",
+      "meta": "Open claims",
+      "heading": "Every claim and its next step",
+      "caption": "Each claim with the policy, the insurer's reference, documents asked and sent, status and the next step with an owner and a date. Claims that wait too long are flagged first.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Lodged",
+              "cards": [
+                {
+                  "title": "Windscreen, Hyundai i20",
+                  "meta": "Suresh Nair, ref MT/4471",
+                  "tag": [
+                    "Surveyor due",
+                    "info"
+                  ]
+                },
+                {
+                  "title": "Cashless request, knee surgery",
+                  "meta": "Anita Rao, hospital Pune",
+                  "tag": [
+                    "Pre-auth waiting",
+                    "flag",
+                    "Approved",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Documents",
+              "cards": [
+                {
+                  "title": "Hospital claim, Kapoor family",
+                  "meta": "Discharge summary missing, 9 days",
+                  "tag": [
+                    "Chase",
+                    "late",
+                    "Sent",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "With insurer",
+              "cards": [
+                {
+                  "title": "Shop fire claim, Mehta Traders",
+                  "meta": "Survey done, assessor report waiting",
+                  "tag": [
+                    "Follow up",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Settled",
+              "cards": [
+                {
+                  "title": "Bike theft, Aman S.",
+                  "meta": "Paid 8 Oct",
+                  "tag": [
+                    "Closed",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Discharge summary",
+              "meta": "Requested 4 Oct, received 12 Oct",
+              "done": true
+            },
+            {
+              "text": "Cancelled cheque",
+              "meta": "Requested 4 Oct",
+              "done": false
+            },
+            {
+              "text": "Final bill with breakup",
+              "meta": "Requested 10 Oct",
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "commission",
+      "title": "Commission",
+      "meta": "September",
+      "heading": "What you should earn and what arrived",
+      "caption": "Expected commission from each policy and the rate you recorded, against what each insurer paid. Differences and clawbacks are listed, with the share due to each sub-agent.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Insurer",
+            "Expected",
+            "Received",
+            "Gap",
+            "Clawback",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Insurer A",
+              "₹2.6 lakh",
+              "₹2.4 lakh",
+              "-₹20,000",
+              "Nil",
+              [
+                "Query",
+                "flag",
+                "Raised",
+                "info"
+              ]
+            ],
+            [
+              "Insurer B",
+              "₹3.1 lakh",
+              "₹3.1 lakh",
+              "Nil",
+              "₹4,200",
+              [
+                "Matched",
+                "ok"
+              ]
+            ],
+            [
+              "Insurer C",
+              "₹1.8 lakh",
+              "₹1.52 lakh",
+              "-₹28,000",
+              "Nil",
+              [
+                "Query",
+                "late",
+                "Credited",
+                "ok"
+              ]
+            ],
+            [
+              "Insurer D",
+              "₹0.9 lakh",
+              "₹0.9 lakh",
+              "Nil",
+              "Nil",
+              [
+                "Matched",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Commission share by source, this quarter"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Own team",
+              "value": 62,
+              "display": "62%"
+            },
+            {
+              "label": "Sub-agent Rakesh",
+              "value": 21,
+              "display": "21%"
+            },
+            {
+              "label": "POSP Meena",
+              "value": 12,
+              "display": "12%",
+              "tone": "muted"
+            },
+            {
+              "label": "Referrals",
+              "value": 5,
+              "display": "5%",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same renewal week, before and after.",
+  "dayLede": "What changes is not the selling. It is that every date, paper and commission line is in one record, and the record does the reminding.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "The team opens the sheet and guesses which renewals to call first.",
+      "after": "The renewals screen lists 38 not yet called, ordered by expiry date, each with an owner."
+    },
+    {
+      "time": "11:00",
+      "before": "A customer needs his health policy schedule for a hospital admission, and the agent searches three places.",
+      "after": "The schedule opens from the customer record in seconds."
+    },
+    {
+      "time": "1:00",
+      "before": "A claim has been with the insurer for three weeks and nobody knows what is pending.",
+      "after": "The claims board shows a discharge summary missing for nine days, and a chase task is already open."
+    },
+    {
+      "time": "3:30",
+      "before": "A customer says the new premium is too high and asks what else is possible.",
+      "after": "The record shows last year's premium, claims and options discussed, so the conversation starts from facts."
+    },
+    {
+      "time": "6:00",
+      "before": "A policy lapsed over the weekend.",
+      "after": "The task was created before the expiry, and the call outcome is recorded."
+    },
+    {
+      "time": "Month end",
+      "before": "Commission statements are compared by hand, if at all.",
+      "after": "Expected against received is on one screen by insurer, with gaps and clawbacks listed."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time with your team through a renewal week, build Verity around how you serve customers, bring your data in, then stay on.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Sit with the owner, a service person and whoever matches commission. Follow a policy from sale to renewal to claim, and note where dates, papers and money are held today.",
+        "you": "Two to three hours of the owner's time and an hour from each service person. A sample of policy records, a recent commission statement from each insurer and your renewal sheet.",
+        "get": "A written map of your agency: lines of business, insurers, renewal cycle, claim steps, commission rates, team and sub-agents, and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up customers and households, policy types, renewal and premium reminders, claim checklists by type, commission rates by insurer and product, sub-agent shares, licence and certification dates, and permissions for owner, service staff, accounts and sub-agents.",
+        "you": "Review the setup with one service person and the person who handles commission. Tell us where a rate, a stage or a checklist is wrong.",
+        "get": "A working Verity with your policies, renewal cycle, claim steps and commission rules, ready for data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your customers, policies with expiries, documents you have on hand, open claims and commission rates from your sheets and exports. Train the team on their own screens with real renewals.",
+        "you": "Your customer and renewal sheets in whatever form they exist, and a check of the next 60 days of renewals. An hour with each role.",
+        "get": "Your customers, policies and open claims inside Verity, and a team that has run a week of renewals on it."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first renewal cycle with you, tune the reminders and commission checks, and handle changes when you add an insurer, a product or a sub-agent.",
+        "you": "A short monthly review with the owner.",
+        "get": "A system that keeps matching how the agency runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Policies, covers, endorsements', 'Records'],
-    ['Renewals, new business, lapses', 'Work'],
-    ['Clients, households, corporate accounts', 'Relationships'],
-    ['Insurers, underwriters, surveyors', 'Suppliers'],
-    ['Claims, documents, settlements', 'Workflows'],
-    ['Advisors, support staff', 'People'],
-    ['Branches, territories', 'Locations'],
-  ],
-
-  challengesHeading: 'Dates, documents and money owed.',
-  challengesLede:
-    'Insurance agency difficulties come from a book that renews on dates and income that arrives in statements.',
-  challenges: [
-    { problem: 'Renewals are processed rather than worked', detail: 'Renewal notices arrive and are handled as they come, so policies lapse that a conversation would have kept.', outcome: 'Renewals are a dated pipeline with owners and contact history, worked ahead of the date.' },
-    { problem: 'Commission statements are not reconciled', detail: 'Insurer statements arrive net of adjustments and are accepted rather than matched against placed policies.', outcome: 'Commission is expected per policy and reconciled against statements, with variances raised.' },
-    { problem: 'Claims stall on client documents', detail: 'A claim waits for paperwork the client has not sent, at the moment the client is judging the agency most harshly.', outcome: 'Claim document requirements are checklist items with an age and an owner.' },
-    { problem: 'The suitability basis is not recorded', detail: 'What was recommended and why exists in a conversation, and is needed years later.', outcome: 'Recommendation and basis are recorded against the policy at the point the policy is sold.' },
-    { problem: 'Client households are fragmented across policies', detail: 'The same household holds several policies recorded separately, so cross-sell and total value are invisible.', outcome: 'Policies attach to a client or household record, so the whole relationship is visible.' },
-    { problem: 'Lapse reasons are never captured', detail: 'A policy lapses and nobody records whether it was price, service or a competitor.', outcome: 'Lapse reasons are recorded, so the pattern is addressable.' },
-  ],
-
-  modulesLede: 'One system across the book, renewals, claims and commission.',
-  modules: [
-    { id: 'records', title: 'Policies, covers and endorsements', line: 'Each policy carries its insurer, cover, premium, renewal date, documents, commission basis and recommendation record.', why: 'The policy is the unit of the book and of the income.', example: 'Two thousand one hundred and forty policies with their renewal dates as a pipeline.' },
-    { id: 'work', title: 'Renewals, new business and lapses', line: 'Renewals are work with a date, an owner, contact history and an outcome; lapses record a reason.', why: 'A renewal worked ahead of its date is a different outcome from one processed at it.', example: 'Ninety-six renewals inside ninety days with no contact recorded.' },
-    { id: 'workflows', title: 'Claims, documents and settlements', line: 'Claims move through defined steps with document checklists, insurer interaction and settlement recorded.', why: 'Claims are where the client forms their opinion of the agency.', example: 'Eleven claims stalled on client documents, chased with an age.' },
-    { id: 'relationships', title: 'Clients, households and corporate accounts', line: 'Clients carry their policies, household members, renewal dates, claims, contact history and total premium.', why: 'A household with five policies is one relationship and five separate records in most agencies.', example: 'Total premium and cover gaps visible per household.' },
-    { id: 'suppliers', title: 'Insurers and underwriters', line: 'Insurers carry their products, commission bases, statement cycles, settlement reliability and balances.', why: 'Commission is earned from insurers and arrives in statements that need matching.', example: 'Eight point two lakh unreconciled across five insurers.' },
-    { id: 'people', title: 'Advisors and support staff', line: 'Staff are modelled once, and every policy, renewal, claim and recommendation carries who owns it.', why: 'Renewal and retention rates vary by advisor and are worth knowing.', example: 'Retention rate by advisor across their book.' },
-    { id: 'control', title: 'Suitability, disclosure and audit', line: 'One permission model and one audit trail, with recommendation basis and disclosures recorded at sale.', why: 'The record of what was recommended and why is needed long after the conversation.', example: 'Thirty-eight policies without a recorded suitability basis.' },
-    { id: 'intelligence', title: 'Retention, commission and claims reporting', line: 'Renewal and lapse rates, lapse reasons, commission expected against received, claim cycle times and household coverage come from the records.', why: 'The book’s value is its retention rate, and retention is measurable in advance.', example: 'Renewals contacted against renewals due, by advisor and month.' },
-    { id: 'ai', title: 'Ask the book a question', line: 'Verity AI answers from your own policy, renewal, claim and commission records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about dates approaching and money owed.', example: '"Which renewals inside ninety days have no contact?" returns ninety-six with calls assigned.' },
-    { id: 'communication', title: 'Client contact on the policy', line: 'Calls, notices and correspondence attach to the policy, claim or client they concern.', why: 'A renewal conversation is better for knowing what was last discussed.', example: 'The last renewal conversation visible before this one.' },
-    { id: 'orders', title: 'Premium, collection and refunds', line: 'Premium collection, instalments and refunds are recorded against the policy and client.', why: 'Premium not collected is cover at risk and commission not earned.', example: 'Instalments outstanding against policies still in force.' },
-    { id: 'locations', title: 'Branches and territories', line: 'Branches roll into the agency with books, advisors and reporting following the same structure.', why: 'Retention and mix vary by territory and advisor.', example: 'Retention and product mix by branch.' },
-  ],
-
-  workflowsHeading: 'A book worked ahead of its dates.',
-  workflowsLede: 'These already happen. Worked as a pipeline, the book stops shrinking quietly.',
-  workflows: [
-    { name: 'Renewal pipeline', steps: ['Renewals due identified by date', 'Owner assigned per renewal', 'Client contacted ahead of the date with history attached', 'Cover reviewed and alternatives quoted where relevant', 'Renewal completed or lapse recorded with a reason'], note: 'A renewal worked three weeks ahead is a conversation; worked on the day it is an administrative event.' },
-    { name: 'New business and suitability', steps: ['Client requirement and circumstances recorded', 'Options considered and recommendation made', 'Basis for the recommendation recorded', 'Policy placed with the insurer', 'Documents issued and stored against the policy'], note: 'The basis is the record that matters years later, and it takes a moment at the time.' },
-    { name: 'Claim support', steps: ['Claim recorded against the policy and client', 'Document requirements listed with owners', 'Client documents chased with an age', 'Insurer interaction recorded', 'Settlement recorded and client informed'], note: 'A claim stalled on documents is the agency’s reputation being decided.' },
-    { name: 'Commission reconciliation', steps: ['Expected commission recorded per policy at placement', 'Insurer statement received', 'Matched against expected commission by policy', 'Variances raised with the insurer', 'Settlement recorded against the insurer'], note: 'Statements are accepted far more often than they are checked.' },
-    { name: 'Household review', steps: ['Policies grouped by client and household', 'Total premium and cover assembled', 'Gaps and overlaps identified', 'Review conversation assigned', 'Outcome recorded against the household'], note: 'Cross-sell to an existing household is the cheapest new business an agency can write.' },
-  ],
-
-  ai: {
-    heading: 'Ask what is renewing and what is owed.',
-    lede: 'Verity AI reads the same policy, renewal, claim and commission records the agency creates as it works. It answers across your book, respects permissions, and can turn an answer into calls and queries.',
-    panelMeta: 'Grounded in your book records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which renewals inside ninety days have no contact recorded?',
-      'What commission is unreconciled and with which insurers?',
-      'Which claims are stalled on client documents?',
-      'What is our lapse rate and what reasons were recorded?',
-      'Which households have cover gaps across their policies?',
-      'Which policies have no recorded suitability basis?',
-      'What is retention by advisor and branch?',
-      'Which insurers settle commission least reliably?',
-      'Summarise the renewal pipeline and commission position.',
+    "bring": [
+      "Your customer and policy list with expiry dates",
+      "A recent commission statement from each insurer",
+      "Your renewal sheet and any claim list",
+      "Sub-agent and POSP arrangements",
+      "Licence and certificate dates for everyone who sells"
     ],
+    "time": "About 8 to 10 hours of the owner's time across the four weeks, mostly in week 1. Service staff and accounts need a few more.",
+    "after": "Nobody is hired to run Verity. Policies, claims and call outcomes are recorded as part of work the team already does."
   },
-
-  automationHeading: 'Dates and statements.',
-  automationLede: 'Each runs from the agency’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A renewal date approaches', steps: ['Renewal raised with owner and client history', 'Contact task created ahead of the date', 'Escalated if uncontacted as the date nears'] },
-    { trigger: 'A commission statement is received', steps: ['Matched against expected commission by policy', 'Variances raised with the insurer', 'Settlement recorded'] },
-    { trigger: 'A claim document remains outstanding', steps: ['Aged against the claim', 'Client chased and the contact recorded', 'Escalated to the advisor'] },
-    { trigger: 'A policy lapses', steps: ['Reason recorded', 'Win-back task assigned', 'Pattern aggregated by reason and advisor'] },
-    { trigger: 'A policy is placed', steps: ['Expected commission recorded', 'Suitability basis required before completion', 'Documents stored against the policy'] },
+  "ai": {
+    "heading": "Ask your agency a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own customers, policies, claims and commission records, and only what the asker is allowed to see. Ask in plain language, then turn the answer into tasks.",
+    "examples": [
+      {
+        "q": "Which renewals are due in the next 15 days and not yet called?",
+        "a": "38 of 214 due in 30 days are uncalled, 17 of them within 15 days. Kavya has 22 and Imran has 16.",
+        "rows": [
+          [
+            "Motor",
+            "19"
+          ],
+          [
+            "Health",
+            "14"
+          ],
+          [
+            "Life premiums",
+            "5"
+          ]
+        ],
+        "action": "Create call tasks for each owner"
+      },
+      {
+        "q": "Which insurer's commission is below what we expect this quarter?",
+        "a": "Insurer C is short by ₹28,000 and Insurer A by ₹20,000. Both involve renewal commission on health policies.",
+        "rows": [
+          [
+            "Insurer C",
+            "₹28,000 short"
+          ],
+          [
+            "Insurer A",
+            "₹20,000 short"
+          ],
+          [
+            "Insurer B",
+            "clawback ₹4,200"
+          ]
+        ],
+        "action": "Create query tasks for accounts"
+      },
+      {
+        "q": "Which customers have a motor or term policy but no health cover?",
+        "a": "126 households. 31 have a member above 55.",
+        "action": "Create cross-sell call tasks for the service owners"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your team still calls customers and deals with insurers; Verity makes sure the right person knows what to do and when.",
+  "automations": [
+    {
+      "when": "A policy is within your set days of expiry",
+      "then": [
+        "Task to the renewal owner",
+        "Last premium, claims and notes attached",
+        "Outcome recorded: renewed, switched, lapsed or lost"
+      ]
+    },
+    {
+      "when": "A premium due date or grace period approaches",
+      "then": [
+        "Call task before the date",
+        "Second task if missed",
+        "Customer response noted"
+      ]
+    },
+    {
+      "when": "A claim is logged or changes status",
+      "then": [
+        "Checklist created by claim type",
+        "Next step and date set",
+        "Flagged if waiting beyond your limit"
+      ]
+    },
+    {
+      "when": "A commission statement is received",
+      "then": [
+        "Expected against received calculated by insurer",
+        "Gaps and clawbacks listed",
+        "Query task to accounts"
+      ]
+    },
+    {
+      "when": "A licence or certificate date approaches",
+      "then": [
+        "Task to the owner",
+        "Escalation to the principal",
+        "Sales shown by anyone whose status is unclear"
+      ]
+    },
+    {
+      "when": "A lead has no contact for your set days",
+      "then": [
+        "Flagged on the list",
+        "Reminder to the owner",
+        "Stage and outcome recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the principal can see.',
-  intelligenceLede: 'Retention, commission and claims from the book’s own records.',
-  intelligence: [
-    { area: 'Retention', points: ['Renewal rate by product, advisor and branch', 'Renewals contacted against due', 'Lapse reasons recorded', 'Win-back outcomes'] },
-    { area: 'Commission', points: ['Expected against received by insurer', 'Unreconciled variances and their age', 'Settlement reliability by insurer', 'Commission per advisor and product'] },
-    { area: 'Claims', points: ['Claims by stage and age', 'Documents outstanding and their owners', 'Cycle time to settlement', 'Client experience at claim'] },
-    { area: 'Clients', points: ['Premium and policies per household', 'Cover gaps and overlaps', 'Cross-sell conversion', 'Contact history and review cycles'] },
-    { area: 'Compliance', points: ['Suitability basis recorded per policy', 'Disclosures made and stored', 'Documents complete by policy', 'Access and change history'] },
+  "rules": {
+    "heading": "The rules an insurance agency has to keep up with.",
+    "lede": "Verity does not give insurance or legal advice, does not sell or issue policies and does not file anything. It keeps the records these rules depend on in order, so you are not searching when an insurer or a regulator asks.",
+    "note": "IRDAI rules change often and differ for agents, corporate agents and brokers. Several points below are proposals. Confirm current requirements with IRDAI, your insurers and your compliance adviser.",
+    "items": [
+      {
+        "name": "Agent and POSP licensing",
+        "what": "Insurance agents and POSPs are generally required to hold a licence or registration and to meet training and conduct requirements. Reports on the 2025 amendments mention penalties for unregistered agents, but the exact provisions and enactment status were not confirmed here.",
+        "how": "Each person's licence, insurer appointments and training dates are records with expiry dates and an owner.",
+        "source": {
+          "name": "Outlook Money on the IRDAI Annual Report 2024-25",
+          "url": "https://www.outlookmoney.com/personal-finance/irdai-report-202425-growth-in-savings-health-and-digital-adoption"
+        }
+      },
+      {
+        "name": "Commission and reward rules",
+        "what": "IRDAI released a consultation paper on 23 September 2026 proposing product-wise commission ceilings and counting rewards and gifts toward them, with comments open until 25 October 2026. It is a proposal, not a final rule. A separate legislative change in 2025 was reported to let IRDAI fix agents' commission.",
+        "how": "Commission is recorded by insurer, product and source, so the effect of any change can be read from your own numbers.",
+        "source": {
+          "name": "Finnovate, 2026",
+          "url": "https://www.finnovate.in/learn/blog/irdai-insurance-distribution-reforms-2026"
+        }
+      },
+      {
+        "name": "Policyholder protection and grievances",
+        "what": "IRDAI regulations on policyholder protection, in force from 2024 according to summaries, generally expect insurers to run claim and grievance systems, with escalation to the Insurance Ombudsman. The agent's duty is to serve the customer fairly and keep records of what was said and done.",
+        "how": "Each claim and complaint is a record with dates, documents and outcomes, so the agency can show what it did."
+      },
+      {
+        "name": "Data protection",
+        "what": "The Digital Personal Data Protection Rules were notified on 13 November 2025, with most duties due about 18 months later. Health and identity documents are sensitive.",
+        "how": "Customer records and documents have role permissions and logged access.",
+        "source": {
+          "name": "Mondaq, 2025",
+          "url": "https://www.mondaq.com/india/data-protection/1708164/digital-personal-data-protection-rules-2025-notified"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A sub-agent should only see their own customers. A service executive should not see the owner's commission total. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Is the book growing, renewing and paid correctly?",
+      "sees": "Renewals due and lapsed, retention, claims open, commission expected against received and leads."
+    },
+    {
+      "role": "Service executive",
+      "question": "Whom do I call today?",
+      "sees": "Renewals and premiums due, customer notes, documents and claim tasks."
+    },
+    {
+      "role": "Claims handler",
+      "question": "What is pending for each claim?",
+      "sees": "Open claims, documents requested and received, insurer references and next steps."
+    },
+    {
+      "role": "Accounts",
+      "question": "What did each insurer pay and what is owed to sub-agents?",
+      "sees": "Commission statements, gaps, clawbacks and sub-agent shares."
+    },
+    {
+      "role": "Sub-agent",
+      "question": "What have I sold and what do I earn?",
+      "sees": "Own customers, renewals and commission share, and nothing else."
+    }
   ],
-  intelligenceNote: 'Verity records the agency’s book and process. Insurer systems and statutory filings continue as they are.',
-
-  rolesHeading: 'One book, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Principal', question: 'Is the book growing or shrinking?', focus: 'Renewal and lapse rates, lapse reasons, commission reconciliation, retention by advisor.' },
-    { role: 'Advisor', question: 'Who am I calling this week?', focus: 'Renewals due with history, claims in progress, household gaps, contact outstanding.' },
-    { role: 'Claims support', question: 'What is stalled?', focus: 'Claims by stage, documents outstanding, insurer responses, client updates due.' },
-    { role: 'Accounts', question: 'What are we owed?', focus: 'Expected against received commission, variances by insurer, premium collection, refunds.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Insurer portals for quotes, issuance and endorsements. We agree during setup how data reaches Verity.",
+      "Your accounting software and your accountant.",
+      "WhatsApp and phone for customers. Staff reply",
+      "Verity tracks who owes a reply.",
+      "IRDAI and insurer training and licensing portals."
+    ],
+    "not": [
+      "Quote, sell or issue policies, or settle claims.",
+      "Collect premiums or hold customer money.",
+      "Send renewal messages to customers on its own.",
+      "Give insurance, legal or tax advice."
+    ],
+    "migration": "We bring your customers, policies with expiries, open claims, commission rates and sub-agent arrangements across from your sheets, portals and drawers, in stages, so renewals continue without a gap."
+  },
+  "faqHeading": "Questions agency owners ask.",
+  "faqs": [
+    [
+      "Does Verity sell or issue policies?",
+      "No. You keep using the insurer portals to quote and issue. Verity holds the customer, the policy record, the dates, the documents, the claims and the commission around them."
+    ],
+    [
+      "Will it connect to insurer portals?",
+      "We agree how data reaches Verity during setup, whether by regular export, entry by your team or another route that suits each insurer. We do not promise a specific integration before we have seen your setup."
+    ],
+    [
+      "Will it send renewal reminders to my customers?",
+      "No. Your team calls or messages the customer. Verity creates the task at the right time, shows the history and records the outcome."
+    ],
+    [
+      "I am a small agency with 800 policies. Is this too much?",
+      "A small agency has the same renewals and fewer people to remember them. We set up only what you need, in the same four weeks, and leave out what you do not."
+    ],
+    [
+      "Can it check my commission?",
+      "Yes, once you record the rates agreed with each insurer and enter or share the statements as agreed in setup. Verity compares expected with received and lists the gaps and clawbacks."
+    ],
+    [
+      "How will it help if commission rules change?",
+      "Commission is recorded by insurer, product and source, so you can read from your own numbers what a change would touch. Verity does not interpret the rules; your adviser does."
+    ],
+    [
+      "Can sub-agents and POSPs use it?",
+      "If you choose, each can see only their own customers, renewals and commission share. Access is set by role."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, and every view and change is recorded with who made it and when."
+    ],
+    [
+      "How soon will I see something useful?",
+      "The renewals list, missing documents and open claims need only your existing data, so we aim to have them first. Commission matching becomes useful once the rates are set and a few statements are in."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of users, policies and what you want set up. Message us and we will give you a clear number after a short conversation about how your agency runs."
+    ]
   ],
-
-  useCasesHeading: 'What insurance agencies use Verity for',
-  useCases: [
-    { name: 'Renewal pipeline', body: 'Renewals worked as a dated pipeline with owners and contact history rather than processed as notices arrive.' },
-    { name: 'Commission reconciliation', body: 'Expected commission recorded at placement and matched against insurer statements, so variances are raised rather than accepted.' },
-    { name: 'Claim document chasing', body: 'Claim requirements as checklist items with an age, at the moment the client is judging the agency most.' },
-    { name: 'Suitability records', body: 'Recommendation and basis recorded at sale, available years later when it is needed.' },
-    { name: 'Household view', body: 'Policies grouped by household, making cover gaps and cross-sell visible.' },
-    { name: 'Lapse reason capture', body: 'Reasons recorded at lapse, turning attrition into an addressable pattern.' },
-    { name: 'Asking about the book', body: 'Plain-language questions across renewals, claims, commission and households, with calls assigned in the same step.' },
+  "related": [
+    "financial-advisors",
+    "ca-firms",
+    "accounting-firms",
+    "law-firms",
+    "real-estate-agencies",
+    "travel-agencies"
   ],
-
-  migration: 'Insurer portals and statutory arrangements continue and are mapped during implementation. Clients, policies with renewal dates, commission bases, open claims and documents are brought across.',
-
-  faqHeading: 'Questions agencies ask',
-  faqs: [
-    ['What can AI software do for an insurance agency?', 'Verity AI answers questions from your own policy, renewal, claim and commission records: which renewals inside ninety days have no contact, what commission is unreconciled, which claims are stalled on documents, what your lapse reasons are. Each answer can become a call or a query.'],
-    ['Why work renewals as a pipeline?', 'Because a lapse is the loss of a client you already had and already paid to acquire. A renewal worked three weeks ahead is a conversation; the same renewal handled on the date is an administrative event with a much worse outcome.'],
-    ['Can it reconcile commission?', 'Expected commission is recorded per policy at placement and matched against insurer statements, so adjustments and shortfalls are raised as variances rather than accepted because the statement arrived net.'],
-    ['How does it help with claims?', 'Claims carry document checklists with owners and ages, so paperwork the client has not sent is chased rather than waited for — which matters because the claim is when the client forms their view of the agency.'],
-    ['Does it keep suitability records?', 'The recommendation and the basis for it are recorded against the policy at the point the policy is sold, which takes a moment then and is the record that matters years later.'],
-    ['Can we see whole households?', 'Policies attach to a client and household record, so total premium, cover gaps and overlaps are visible — and cross-sell to an existing household is the cheapest business an agency writes.'],
-    ['Does Verity replace insurer systems?', 'No. Insurer portals and statutory arrangements continue and are mapped during implementation. Verity holds the book, the renewal pipeline, claims support, commission reconciliation and the records behind them.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the book and commission arrangements, configuration, migration of clients, policies and renewal dates, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the renewals nobody has called.',
-  ctaLede: 'Every one of them is a client you already have. Tell us how renewals are worked today.',
-
-  related: ['financial-advisors', 'accounting-firms', 'ca-firms', 'law-firms', 'real-estate-agencies', 'consulting-firms'],
+  "ctaHeading": "Start with the renewals due this month.",
+  "ctaLede": "Tell us how your agency runs and we will show you the uncalled renewals, the missing documents and the commission gaps it would find, using your own numbers."
 };

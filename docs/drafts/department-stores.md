@@ -77,7 +77,7 @@ Lede: These are the situations department store owners and floor managers descri
 ### 2. Sale-or-return stock passes its return date
 - area: Brands
 - scene: A brand sends a hundred winter jackets on sale-or-return with a 60 day window. They sit on a rail. Day 61 arrives, nobody remembers the date, and the stock is now yours to carry or to discount.
-- cost: The point of sale-or-return is that you do not carry the risk. A missed date turns that stock into your inventory at cost, and the discount to clear it comes from your margin.
+- cost: The idea of sale-or-return is that you do not carry the risk. A missed date turns that stock into your inventory at cost, and the discount to clear it comes from your margin.
 - fix: Each consignment is a record with its quantity, its return-by date and what has sold. Verity lists what is within 15 days of its date, with the sold and unsold count, and assigns the return task to the person who handles that brand.
 - screen: counters
 

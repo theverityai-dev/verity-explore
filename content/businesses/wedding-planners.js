@@ -1,530 +1,1015 @@
 export default {
-  slug: 'wedding-planners',
-  status: 'published',
-  plural: 'wedding planners',
-  subject: 'wedding planning business',
-
-  seo: {
-    title: 'AI business management software for wedding planners | Verity',
-    description:
-      'Verity connects client budgets against actuals, vendor bookings and payment milestones, scope changes and run-of-day coordination into one operational system.',
-    keywords: [
-      'AI software for wedding planners',
-      'wedding planning management software',
-      'event vendor coordination and payment tracking',
-      'client budget versus actual tracking',
-    ],
+  "schema": 2,
+  "slug": "wedding-planners",
+  "status": "published",
+  "plural": "wedding planners",
+  "subject": "wedding planning business",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Wedding planner software for Indian planners | Verity",
+    "description": "Event timelines, vendor advances and balances, guest lists and task checklists: the quiet losses in a wedding planning business and the Verity screens that fix them.",
+    "keywords": [
+      "wedding planner software India",
+      "wedding event timeline and run of show",
+      "vendor advance and balance tracking",
+      "wedding guest list and RSVP tracking",
+      "wedding planner client budget tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for wedding planners',
-    headline: 'Twenty vendors, one date, and a budget that has been agreed four times.',
-    lede:
-      'A planner’s product is coordination and a budget kept. Verity holds the vendor bookings, the payment milestones and every change to the budget against the event.',
-    note: 'Runs alongside your existing accounting arrangement.',
-    panel: {
-      title: 'Events',
-      meta: 'Next 90 days',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Events booked', value: '14', note: '₹9.6 Cr client budgets' },
-        { label: 'Vendor payments due', value: '₹1.4 Cr', note: '31 milestones in 30 days' },
-        { label: 'Budget variance', value: '4 events', note: 'above agreed budget' },
-        { label: 'Unconfirmed vendors', value: '18', note: 'against booked dates' },
-      ],
-      rows: [
-        { name: '18 vendors unconfirmed against events inside 60 days', meta: 'Four are on the same date', active: true },
-        { name: '4 events running above the agreed client budget', meta: 'No change order signed on three', active: true },
-        { name: '31 vendor payment milestones due within 30 days', meta: '₹1.4 Cr · client funds not all received', active: true },
-        { name: 'Scope added by client without cost impact recorded', meta: '9 changes across 3 events', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own events in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "suppliers",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for wedding planners",
+    "headline": "A wedding is one date, thirty vendors, and a family that cannot be told \"we forgot\".",
+    "lede": "A planner runs several weddings at once, each with its own date, budget, vendors, guest list and three or four functions over as many days. Money moves in both directions, in instalments, and the dates cannot move. Verity connects the client, the timeline, the vendors and the money, so a missing advance, an unconfirmed vendor or a late task shows up weeks before the day instead of on it.",
+    "oneLine": "One system that knows every wedding's timeline, every vendor and what has been paid to them, every guest and every task, and tells you what needs attention this week.",
+    "note": "Your quotes, designs and chats with families stay where they are. Verity records the decisions, dates, money and tasks around them.",
+    "screen": "owner",
+    "screenNote": "weddings, timelines, vendors, money and guests"
   },
-
-  overview: {
-    heading: 'A planner is judged on a date they do not control and a budget they did not set.',
-    paragraphs: [
-      'Wedding planning is coordination as a product. The planner does not usually own the venue, the catering, the décor, the photography or the music — they book, sequence and pay a set of independent vendors so that everything arrives on one day that cannot move. The value is that the client does not have to hold twenty relationships and a hundred dependencies.',
-      'The commercial risk is that the planner sits between the client’s money and the vendors’ payment schedules. Vendors want advances and milestone payments on their own terms; the client pays on theirs. A planner with one point four crore of vendor milestones due in a month and client funds not fully received is carrying a timing risk that nobody has quantified.',
-      'The second is scope. Weddings change constantly, and every change is emotionally charged, verbal and rarely costed at the moment it is agreed. Nine changes across three events with no recorded cost impact is a budget conversation that will happen later, badly.',
-      'The third is confirmation. A vendor who is verbally booked and not confirmed is not booked, and eighteen unconfirmed vendors against events inside sixty days is the planner’s real risk profile.',
-      'The fourth is that the day itself is a sequence with dependencies, and the run of day exists as a document rather than as a set of owned steps.',
-      'Verity holds the event, its budget, its vendors, its payment milestones and its changes as one record.',
+  "today": {
+    "heading": "Most planners hold a dozen weddings in their head and a hundred threads in WhatsApp.",
+    "paragraphs": [
+      "The glamour is visible. The mandap, the sangeet, the entry on the day. What is hard to see is everything behind it: which vendor has confirmed in writing, who has paid an advance and who is waiting, what the family has approved and what they only said on a call, and how many guests have given a room preference.",
+      "That information exists in pieces. A group chat per wedding. A spreadsheet for the budget. Photos of signed papers. A notebook of the run of show. The planner carries the rest, and when the planner is on site at one wedding, nobody else can answer questions about another.",
+      "The scale is large. A fund house blog on the 2025 season projects about 4.6 million weddings in a 45-day window and ₹6 to 6.5 lakh crore of spend, with venue and catering taking 30 to 35 percent of a typical budget. Planners work in a peak that compresses the whole year's weddings into a few weeks."
     ],
+    "stack": [
+      "WhatsApp group per wedding",
+      "Excel for budget, guests and vendor payments",
+      "Google Drive or phone photos for contracts",
+      "Notebook or print-out for the run of show",
+      "Calls with families"
+    ],
+    "stackNote": "Each works until the week of the wedding. Then every question needs five chats to answer."
   },
-
-  terminology: [
-    ['Events, functions, ceremonies', 'Work'],
-    ['Clients, families, guests', 'Relationships'],
-    ['Vendors, venues, artists', 'Suppliers'],
-    ['Budgets, change orders, approvals', 'Workflows'],
-    ['Contracts, moodboards, run sheets', 'Records'],
-    ['Planners, coordinators, day staff', 'People'],
-    ['Venues, sites, cities', 'Locations'],
+  "painsHeading": "Where a wedding planning business actually loses money.",
+  "painsLede": "These are the situations planners describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Sales",
+      "title": "Enquiries go cold while you are on site at another wedding",
+      "scene": "A couple writes on Instagram on Sunday night for a December wedding in Udaipur. You are at a venue recce. The reply goes out on Wednesday. They have already spoken to two other planners.",
+      "cost": "A destination wedding enquiry can be worth a large fee. The first planner to reply with a clear plan is often the one who wins.",
+      "fix": "Each enquiry is a record with date, city, guest count, budget range, source and owner. Verity lists enquiries with no reply and tasks the person responsible. Staff reply; the outcome is recorded.",
+      "screen": "enquiries"
+    },
+    {
+      "area": "Sales",
+      "title": "Quotes are rebuilt from scratch and scope drifts",
+      "scene": "A family asks to add a mehendi evening and a second venue to a quote you sent three weeks ago. The new quote is built from memory. Nobody can say what the original included.",
+      "cost": "Work that was never priced, or a quote that undercuts you. Both come from not having one record of what was promised.",
+      "fix": "Each quote is a record with its version, scope and price, and each change is a new version with who approved it. Verity shows what changed between quotes, so the team delivers what was agreed.",
+      "screen": "enquiries"
+    },
+    {
+      "area": "Client",
+      "title": "The budget changes in calls and nobody records it",
+      "scene": "The father agrees to upgrade the floral decor on a call. The mother wants the same for the bride's side. Two weeks later the total is ₹4 lakh above the budget and each person remembers a different promise.",
+      "cost": "Example arithmetic: ₹4 lakh over a ₹40 lakh budget is a 10 percent overrun that you either absorb or argue about on the eve of the wedding.",
+      "fix": "Every change request is a record with who asked, the cost, who approved and the date. Verity shows the running budget against what has been committed and what has been paid.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Vendors",
+      "title": "A vendor advance is not paid, and the vendor gives your date to someone else",
+      "scene": "The photographer's advance was due on the 10th. The client said they would transfer it, then travelled. On the 15th the photographer says he now has another booking on that date.",
+      "cost": "A missing vendor on a fixed date is the hardest problem to repair, and it falls on the planner.",
+      "fix": "Each vendor has a booking record with the date, the amount, the advance due date and who must pay it, you or the client. Verity lists advances due in the next seven days and those overdue, and tasks the person who owes the payment.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Money",
+      "title": "Money moves in both directions and nobody can see the balance",
+      "scene": "The client has paid ₹12 lakh. You have paid vendors ₹9 lakh. The caterer wants a further ₹3 lakh by Friday. You are not sure if the client has paid for the extra lighting yet.",
+      "cost": "Planners fund the gap from their own pocket, and cash flow in a peak season is where small planning businesses get into trouble.",
+      "fix": "Each wedding shows what the client has paid, what is due from them, what vendors have been paid and what is due to them, by date. Verity highlights weeks where payments out run payments in.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Vendors",
+      "title": "Vendors are not confirmed in writing",
+      "scene": "The decorator confirmed on a call. The sound vendor said yes in a voice note. The pandit sent a message that is hard to find. Two days before the sangeet, you cannot show anyone what was agreed.",
+      "cost": "Disputes over scope and price at the worst possible time. A dozen vendors per wedding means a dozen chances for the details to differ.",
+      "fix": "Each vendor's confirmed scope, price, timings, contact and signed document are attached to their booking record. Verity marks a vendor \"confirmed\" only when the paper is attached, and lists those still unconfirmed.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Timeline",
+      "title": "The timeline for the day lives in one head",
+      "scene": "The run of show for the sangeet is in your notebook. The baraat is at 6:30 pm, the DJ needs power at 5, the caterer's setup starts at 3. Your assistant is on another wedding and asks you for the timings every hour.",
+      "cost": "Late starts, double-booked staff and tense families. Entrepreneur India, quoting a planner, described a wedding as a dozen vendors, multiple contracts and a hard payments schedule needing constant oversight.",
+      "fix": "Each function has a timeline of cues with owners, times and vendors. The team sees the same plan on their screens, and changes are recorded with who made them.",
+      "screen": "timeline"
+    },
+    {
+      "area": "Timeline",
+      "title": "Tasks across functions slip through",
+      "scene": "Haldi, mehendi, sangeet, wedding, reception. Each has its own list: favours packed, seating chart printed, car for the groom's family, welcome hampers. Half of it is in someone's message to someone.",
+      "cost": "A missing item on the day is remembered far longer than a hundred things that went well.",
+      "fix": "Every task has an owner, a function, a due date and a state. Verity shows what is overdue for the next three events, and tasks roll up to the lead planner by wedding.",
+      "screen": "timeline"
+    },
+    {
+      "area": "Guests",
+      "title": "Guest lists, RSVPs and room allotments live in sheets",
+      "scene": "Four hundred guests, a hundred and twenty travelling in. The family sends a new list every week. Rooms are allotted from a sheet that three people edit. Arrivals are listed in a chat.",
+      "cost": "A guest with no room, a wrong head count to the caterer, or a missed pickup. These are the complaints families remember.",
+      "fix": "Each guest is a record with side, RSVP, dietary needs, travel and room. Verity totals head counts by function for the caterer and the venue, and lists arrivals by day and time for the transport team.",
+      "screen": "guests"
+    },
+    {
+      "area": "Guests",
+      "title": "Head counts change but the caterer and venue are told late",
+      "scene": "The final list has fifty fewer guests than the number given to the caterer a month ago. Nobody told the caterer. The minimum count in the contract has now been crossed.",
+      "cost": "Example arithmetic: fifty plates at ₹1,800 is ₹90,000 that may be payable for food nobody eats, or saved if the caterer is told in time.",
+      "fix": "Head counts per function are on the wedding record with a date for the last change. Verity compares the current count with the number given to each vendor, and tasks the planner to send the update.",
+      "screen": "guests"
+    },
+    {
+      "area": "Team",
+      "title": "Teams are stretched across weddings in the same week",
+      "scene": "Three weddings in the same week and two coordinators. One of them is on site at a venue in Jaipur and also asked to confirm decor at a second one in Delhi.",
+      "cost": "Burnout, mistakes and a good coordinator who leaves after the season.",
+      "fix": "Each person's assignments across weddings are on one schedule. Verity shows overloaded days and who is free, and a wedding cannot be staffed twice for the same hour without a warning.",
+      "screen": "owner"
+    },
+    {
+      "area": "Money",
+      "title": "On-the-day changes and extra spends are not logged",
+      "scene": "On the day of the reception the family asks for extra flowers and a longer DJ slot. The planner says yes. Nobody writes it down. The bill is argued about a month later.",
+      "cost": "Unbilled extras reduce the margin on a wedding already run tight.",
+      "fix": "On-the-day requests are logged in two taps on the phone with the amount and the person who approved. Verity adds them to the wedding's running total and raises them in the final invoice task.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Money",
+      "title": "Invoices and settlements pile up after the event",
+      "scene": "The wedding is over and the planner is on the next one. Vendors send final bills. Some are different from the quote. The client's final payment waits for a reconciliation nobody has time to do.",
+      "cost": "Late final payments, a client who feels surprised, and your accountant asking for papers months later. Planners in India generally charge 18 percent GST on event management, and ITC depends on matching vendor invoices.",
+      "fix": "Each vendor's final bill is attached to the booking and compared with the quote. Verity shows the variance, the amount to bill the client and the settlement status of every vendor.",
+      "screen": "vendors"
+    },
+    {
+      "area": "Client",
+      "title": "Past clients are forgotten between weddings",
+      "scene": "A bride you planned for in 2023 has a younger sister getting married in March. You do not know. A venue you worked with last year has a new manager. The contact book is a phone full of unnamed numbers.",
+      "cost": "Referrals and repeat work are the cheapest business a planner gets. Missing them is invisible.",
+      "fix": "Clients, families, vendors and venues are relationship records with every wedding and conversation attached. Verity lists clients to check in with after the event, and flags a vendor's reliability notes from past weddings.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'Coordination fails where nobody wrote it down.',
-  challengesLede:
-    'Planning problems come from verbal agreements, unconfirmed vendors and a budget that moves without being restated.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The wedding figures come from a fund house blog that cites industry estimates, not audited accounts, and the average budget varies a lot between sources. The GST rate is from a tax guide with no date, so confirm it with your accountant.",
+  "facts": [
     {
-      problem: 'Vendors are verbally booked and not confirmed',
-      detail:
-        'A vendor is discussed, agreed and assumed. Whether they are actually contracted for the date is known only when someone checks.',
-      outcome:
-        'Vendor booking is a workflow with a confirmation state, so unconfirmed vendors against a date are visible as risk.',
+      "figure": "46 lakh",
+      "text": "weddings were projected for the 45-day peak season starting in November 2025, roughly 100,000 a day, so a planner's busiest weeks overlap.",
+      "source": {
+        "name": "Kotak Mutual Fund, India's Fourth-Largest Industry, 2025",
+        "url": "https://www.kotakmf.com/Information/blogs/indias-fourth-largest-industry-wedding-blitz"
+      }
     },
     {
-      problem: 'Scope changes are agreed emotionally and costed later',
-      detail:
-        'A client adds an element in a conversation, the planner accommodates it, and the cost surfaces in a budget review weeks later.',
-      outcome:
-        'Changes are raised as change orders with cost impact at the moment they are agreed.',
+      "figure": "₹6 to 6.5 lakh crore",
+      "text": "is the spend the same season was expected to add to the economy, against ₹5.9 lakh crore a year earlier.",
+      "source": {
+        "name": "Kotak Mutual Fund, 2025",
+        "url": "https://www.kotakmf.com/Information/blogs/indias-fourth-largest-industry-wedding-blitz"
+      }
     },
     {
-      problem: 'Vendor payments and client receipts are unsynchronised',
-      detail:
-        'Vendors demand milestone payments on their schedule and clients pay on theirs, and the planner absorbs the timing gap.',
-      outcome:
-        'Both schedules sit on the event, so a funding gap is visible before it becomes the planner’s money.',
+      "figure": "30 to 35%",
+      "text": "of a typical wedding budget goes to venue and catering, the biggest line a planner has to manage. Decor and entertainment take 10 to 15%.",
+      "source": {
+        "name": "Kotak Mutual Fund, 2025",
+        "url": "https://www.kotakmf.com/Information/blogs/indias-fourth-largest-industry-wedding-blitz"
+      }
     },
     {
-      problem: 'The budget is agreed several times',
-      detail:
-        'The original budget, the revised budget and the current spend exist in different documents and different conversations.',
-      outcome:
-        'One budget record with a change history, so what was agreed and when is unambiguous.',
-    },
-    {
-      problem: 'Run of day exists as a document',
-      detail:
-        'The sequence for the day is a document that everyone has a different version of, with no owners against steps.',
-      outcome:
-        'The run of day is work with owners, times and dependencies, so a slip is visible as it happens.',
-    },
-    {
-      problem: 'Vendor performance is never recorded',
-      detail:
-        'Planners recommend vendors from experience, and the experience is anecdotal rather than recorded across events.',
-      outcome:
-        'Vendors carry their delivery, punctuality and issue history across events.',
-    },
+      "figure": "18%",
+      "text": "is the GST generally charged on full event management, including wedding planning, under SAC 998596, with input credit available against valid vendor invoices.",
+      "source": {
+        "name": "ClearTax, GST on event management, undated",
+        "url": "https://cleartax.in/s/gst-on-event-management"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system across events, budgets, vendors and the day itself.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Five views, each built for one job. Names, columns and terms are set up in your planning business's own language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Events, functions and the run of day',
-      line:
-        'Each event is work with a client, date, venue, functions, budget, vendor set, timeline and state.',
-      why:
-        'Everything the planner does hangs off the event, and it currently hangs off a folder.',
-      example:
-        'Fourteen events in ninety days with their vendor confirmation and budget position visible together.',
+      "id": "owner",
+      "title": "Weddings / This week",
+      "meta": "6 weddings in the next 60 days",
+      "heading": "The owner's morning view",
+      "caption": "Every wedding with days to go, tasks open, money due, vendors unconfirmed and who is on site, on one screen, with the items needing a decision listed under it.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Weddings in 60 days",
+              "value": "6",
+              "note": "next: 8 Nov, Udaipur"
+            },
+            {
+              "label": "Vendor advances due",
+              "value": "₹5.4 lakh",
+              "note": "9 vendors, 7 days"
+            },
+            {
+              "label": "Client payments overdue",
+              "value": "₹3.8 lakh",
+              "note": "2 weddings"
+            },
+            {
+              "label": "Vendors unconfirmed",
+              "value": "11",
+              "note": "in 3 weddings"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Wedding",
+            "Date",
+            "Open tasks",
+            "Money out vs in",
+            "Team",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Mehra and Kapoor, Udaipur",
+              "8 Nov",
+              "23",
+              "Out ₹9 lakh, in ₹12 lakh",
+              "Isha, Rohan",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Nair and Joseph, Kochi",
+              "22 Nov",
+              "41",
+              "Out ₹6.5 lakh, in ₹5 lakh",
+              "Isha",
+              [
+                "Gap ₹1.5 lakh",
+                "late",
+                "Client paid",
+                "ok"
+              ]
+            ],
+            [
+              "Rao and Bhatia, Jaipur",
+              "30 Nov",
+              "57",
+              "Out ₹14 lakh, in ₹16 lakh",
+              "Rohan, Sana",
+              [
+                "3 vendors open",
+                "flag"
+              ]
+            ],
+            [
+              "Das and Menon, Goa",
+              "6 Dec",
+              "66",
+              "Out ₹3 lakh, in ₹6 lakh",
+              "Sana",
+              [
+                "On track",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Sana is on site in Jaipur 28 to 30 Nov and also assigned to confirm decor in Goa on 29 Nov.",
+          "action": "Reassign"
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Budgets, change orders and approvals',
-      line:
-        'The agreed budget, changes to it, vendor payment milestones and client receipts are defined steps with recorded decisions.',
-      why:
-        'Costing a change when it is agreed is the difference between a planner’s margin and a difficult conversation.',
-      example:
-        'Nine changes across three events with cost impact recorded and signed rather than absorbed.',
+      "id": "enquiries",
+      "title": "Enquiries and quotes",
+      "meta": "Open",
+      "heading": "From first message to signed quote",
+      "caption": "Each enquiry has a city, date, guest count, budget and owner. Quotes are versions with what changed and who approved. Anything unanswered is flagged. Staff reply to the family; Verity makes sure someone does.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "New",
+              "cards": [
+                {
+                  "title": "Destination, Udaipur, 250 guests",
+                  "meta": "Dec 14 to 16, Instagram, budget ₹55 lakh",
+                  "tag": [
+                    "No reply 2 days",
+                    "late",
+                    "Call done",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Reception only, Pune, 400 guests",
+                  "meta": "Jan 10, referral",
+                  "tag": [
+                    "Reply",
+                    "flag",
+                    "Quoted",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Quote sent",
+              "cards": [
+                {
+                  "title": "Haldi and wedding, Kochi",
+                  "meta": "Quote v3, +mehendi evening",
+                  "tag": [
+                    "Follow up",
+                    "flag"
+                  ]
+                },
+                {
+                  "title": "Sangeet, Hyderabad",
+                  "meta": "Quote v1 sent 5 Oct",
+                  "tag": [
+                    "Waiting",
+                    "info"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Signed",
+              "cards": [
+                {
+                  "title": "Rao and Bhatia, Jaipur",
+                  "meta": "Advance ₹5 lakh received",
+                  "tag": [
+                    "Booked",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Quote",
+            "Version",
+            "Change",
+            "Price",
+            "Approved by"
+          ],
+          "rows": [
+            [
+              "Haldi and wedding, Kochi",
+              "v1",
+              "Base",
+              "₹28 lakh",
+              "Mr. Nair"
+            ],
+            [
+              "Haldi and wedding, Kochi",
+              "v2",
+              "Second venue",
+              "₹31 lakh",
+              "Mr. Nair"
+            ],
+            [
+              "Haldi and wedding, Kochi",
+              "v3",
+              "Mehendi evening",
+              "₹33.5 lakh",
+              [
+                "Waiting",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'suppliers',
-      title: 'Vendors, venues and artists',
-      line:
-        'Vendors are relationships with their bookings, contracts, payment terms, delivery history, punctuality and issue record.',
-      why:
-        'The planner’s product is the vendor set, so vendor reliability is the product’s quality.',
-      example:
-        'Eighteen vendors unconfirmed against dates inside sixty days, four on the same day.',
+      "id": "vendors",
+      "title": "Vendors and money",
+      "meta": "Mehra and Kapoor, Udaipur, 8 Nov",
+      "heading": "Vendors, advances, balances and the running budget",
+      "caption": "Every vendor with scope, confirmed paper, advance, balance and who pays. The running budget shows committed, paid and the change requests approved so far, with the on-the-day extras added later.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Vendor",
+            "Scope",
+            "Price",
+            "Advance",
+            "Balance",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Royal Floral Studio",
+              "Decor, 3 events",
+              "₹9.2 lakh",
+              "₹3 lakh paid",
+              "₹6.2 lakh due 5 Nov",
+              [
+                "Confirmed",
+                "ok"
+              ]
+            ],
+            [
+              "Lens & Light",
+              "Photo and video",
+              "₹4.5 lakh",
+              "₹1.5 lakh due 15 Oct",
+              "₹3 lakh",
+              [
+                "Advance due",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            ],
+            [
+              "Sound House",
+              "DJ, lights, 2 nights",
+              "₹2.8 lakh",
+              "₹1 lakh paid",
+              "₹1.8 lakh",
+              [
+                "No paper",
+                "flag",
+                "Signed",
+                "ok"
+              ]
+            ],
+            [
+              "Spice Route Caterers",
+              "Catering, 3 functions",
+              "₹13 lakh",
+              "₹4 lakh paid",
+              "₹9 lakh due 6 Nov",
+              [
+                "Count changed",
+                "flag",
+                "Updated",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Client paid",
+              "value": 80,
+              "display": "₹12 lakh of ₹15 lakh due so far"
+            },
+            {
+              "label": "Vendors paid",
+              "value": 60,
+              "display": "₹9 lakh of ₹15 lakh committed",
+              "tone": "muted"
+            },
+            {
+              "label": "Approved changes",
+              "value": 15,
+              "display": "+₹4 lakh over the quote",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Lens & Light advance of ₹1.5 lakh was due on 15 Oct. The client agreed to pay it. The vendor has another request for the date.",
+          "action": "Chase client"
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients and families',
-      line:
-        'Clients are records with their event, budget, preferences, decisions, communications and payment position.',
-      why:
-        'Weddings involve several decision-makers, and what was agreed with whom matters enormously.',
-      example:
-        'A decision recorded against the client with who agreed it and when.',
+      "id": "timeline",
+      "title": "Run of show and tasks",
+      "meta": "Sangeet, 7 Nov",
+      "heading": "The run of show and the tasks behind it",
+      "caption": "The cues for the evening with times, owners and the vendors involved, and the checklist behind each function. The team sees the same plan, and every change is recorded with who made it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Time",
+            "Cue",
+            "Owner",
+            "Vendor",
+            "Status"
+          ],
+          "rows": [
+            [
+              "3:00 pm",
+              "Caterer setup begins",
+              "Rohan",
+              "Spice Route",
+              [
+                "Confirmed",
+                "ok"
+              ]
+            ],
+            [
+              "5:00 pm",
+              "Power and sound check",
+              "Isha",
+              "Sound House",
+              [
+                "Paper missing",
+                "flag",
+                "Signed",
+                "ok"
+              ]
+            ],
+            [
+              "6:30 pm",
+              "Baraat entry",
+              "Rohan",
+              "Band, dhol",
+              [
+                "Time moved",
+                "late",
+                "Told",
+                "ok"
+              ]
+            ],
+            [
+              "8:00 pm",
+              "Dinner opens",
+              "Isha",
+              "Spice Route",
+              [
+                "Count 310",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Welcome hampers packed, 80 rooms",
+              "meta": "Sana, due 5 Nov",
+              "done": false
+            },
+            {
+              "text": "Seating chart printed",
+              "meta": "Isha, due 6 Nov",
+              "done": false
+            },
+            {
+              "text": "Cars for groom's family, 6 vehicles",
+              "meta": "Rohan, done",
+              "done": true
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Contracts, moodboards and run sheets',
-      line:
-        'Vendor contracts, design references and run sheets attach to the event they belong to with versions retained.',
-      why:
-        'Disputes on the day are settled by what the contract and the run sheet actually said.',
-      example:
-        'The signed vendor contract on the event record, referenced when delivery differs.',
-    },
-    {
-      id: 'people',
-      title: 'Planners, coordinators and day staff',
-      line:
-        'The team is modelled once, and every vendor booking, change order and run-of-day step shows who owns it.',
-      why:
-        'On the day, ownership of each step is the entire mechanism of coordination.',
-      example:
-        'Run-of-day steps with named owners rather than a document everyone has read differently.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Budget, margin and vendor reporting',
-      line:
-        'Budget against actual per event, change order recovery, vendor payment against client receipts, vendor reliability and event margin come from the operational records.',
-      why:
-        'A planner needs to know which events made money and which vendor sets worked, and both are usually impressions.',
-      example:
-        'Margin by event type and size, so pricing reflects what events actually cost to deliver.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the event book a question',
-      line:
-        'Verity AI answers from your own event, vendor, budget and payment records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking are about confirmations missing and money moving in the wrong order.',
-      example:
-        '"Which vendors are unconfirmed against events inside sixty days?" returns eighteen with follow-ups assigned.',
-    },
-    {
-      id: 'communication',
-      title: 'What the client agreed and when',
-      line:
-        'Decisions, approvals and correspondence attach to the event or change they concern.',
-      why:
-        'Wedding decisions are made in conversations across several family members, and the record is the only version.',
-      example:
-        'A change agreed on a call, recorded with the person who agreed it.',
-    },
-    {
-      id: 'control',
-      title: 'Who can commit and approve spend',
-      line:
-        'One permission model and one audit trail, with vendor commitments and budget changes as recorded decisions.',
-      why:
-        'Coordinators commit client money to vendors, and that authority should be explicit.',
-      example:
-        'A vendor booking above threshold routed to the lead planner and recorded.',
-    },
-    {
-      id: 'locations',
-      title: 'Venues, sites and cities',
-      line:
-        'Venues and sites are locations with their own constraints, contacts and history.',
-      why:
-        'Venue constraints repeat across events, and the last event at the same venue is the best briefing for the next.',
-      example:
-        'Access and timing constraints from the previous event at the same venue.',
-    },
+      "id": "guests",
+      "title": "Guests",
+      "meta": "Mehra and Kapoor, Udaipur",
+      "heading": "Guests, counts by function and arrivals",
+      "caption": "Each guest has side, RSVP, diet, travel and room. Head counts by function go to the caterer and venue, and arrivals by day go to the transport team. A change to a count is compared with the number last sent to each vendor.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Invited",
+              "value": "410",
+              "note": "both sides"
+            },
+            {
+              "label": "Confirmed",
+              "value": "338",
+              "note": "72 pending"
+            },
+            {
+              "label": "Travelling in",
+              "value": "124",
+              "note": "rooms for 118"
+            },
+            {
+              "label": "Vegetarian / Jain",
+              "value": "142",
+              "note": "for the caterer"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Function",
+            "Count now",
+            "Sent to caterer",
+            "Difference",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Haldi, 6 Nov",
+              "180",
+              "200",
+              "-20",
+              [
+                "Update",
+                "flag",
+                "Sent",
+                "ok"
+              ]
+            ],
+            [
+              "Sangeet, 7 Nov",
+              "310",
+              "360",
+              "-50",
+              [
+                "Update",
+                "late",
+                "Sent",
+                "ok"
+              ]
+            ],
+            [
+              "Wedding, 8 Nov",
+              "338",
+              "350",
+              "-12",
+              [
+                "Update",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Arrivals on 6 Nov",
+              "meta": "42 guests, Udaipur airport, 3 flights",
+              "tag": [
+                "Cars to book",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'One date, twenty vendors, everything recorded.',
-  workflowsLede:
-    'These already happen. As records they stop depending on the planner’s memory on the day.',
-  workflows: [
+  "dayHeading": "The same week before a wedding, before and after.",
+  "dayLede": "What changes is not the wedding. It is that the week leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Brief to signed budget',
-      steps: [
-        'Client brief recorded with date, venue, scale and expectations',
-        'Budget prepared against comparable past events and their actual costs',
-        'Vendor set proposed with indicative costs',
-        'Budget agreed and signed with the version retained',
-        'Payment schedule agreed on both sides',
-      ],
-      note:
-        'Quoting from what comparable events actually cost is the largest available improvement in planner margin.',
+      "time": "9:00 am",
+      "before": "You check five chats to see which vendors have confirmed.",
+      "after": "The vendor screen shows eleven confirmed with paper and two without. The two are tasks with the right people."
     },
     {
-      name: 'Vendor booking and confirmation',
-      steps: [
-        'Vendor selected against the budget line and past performance',
-        'Terms agreed and contract issued',
-        'Confirmation tracked to signature and advance',
-        'Unconfirmed vendors flagged against the event date',
-        'Payment milestones created from the contract',
-      ],
-      note:
-        'A verbally agreed vendor is not a booked vendor, and the difference is only visible if confirmation is a state.',
+      "time": "11:00 am",
+      "before": "A vendor says his advance has not arrived. You are not sure who was meant to pay.",
+      "after": "The booking says the client pays this one, the due date was the 15th and the reminder went out. You call the client with the facts."
     },
     {
-      name: 'Change order',
-      steps: [
-        'Change requested by the client and recorded with who asked',
-        'Cost and feasibility impact assessed immediately',
-        'Change order raised with the revised budget',
-        'Client approval recorded',
-        'Vendor instructions issued and the budget updated',
-      ],
-      note:
-        'Costing at the moment of agreement is what prevents the budget being renegotiated at the end.',
+      "time": "1:00 pm",
+      "before": "The father asks for a better entry. You say yes on the phone.",
+      "after": "You log it as a change with the cost. He sees the new total and approves, and it is on the record."
     },
     {
-      name: 'Payment synchronisation',
-      steps: [
-        'Vendor milestones and client receipts both scheduled on the event',
-        'Funding position projected forward',
-        'Gaps flagged before the planner has to bridge them',
-        'Client reminders issued ahead of vendor deadlines',
-        'Payments made and recorded against milestones',
-      ],
-      note:
-        'The planner sits between two payment schedules, and only a projection shows when that becomes their problem.',
+      "time": "4:00 pm",
+      "before": "The guest list changes again. The caterer still has the old number.",
+      "after": "Verity shows the count is 50 lower than what the caterer was sent. A task goes to you to send the update today."
     },
     {
-      name: 'Run of day',
-      steps: [
-        'Sequence built with times, dependencies and owners',
-        'Vendor arrival and setup windows confirmed',
-        'Steps marked as they complete on the day',
-        'Slips flagged against dependent steps',
-        'Issues recorded against vendors for later review',
-      ],
-      note:
-        'A step with an owner and a time is coordination; a document everyone has read is hope.',
+      "time": "7:00 pm",
+      "before": "The on-site coordinator calls to ask for the run of show.",
+      "after": "The coordinator has the cues, the owners and the vendor numbers on the phone, and changes appear for everyone."
     },
     {
-      name: 'Event closure and review',
-      steps: [
-        'Final costs reconciled against the budget',
-        'Change order recovery reviewed',
-        'Vendor performance and issues recorded',
-        'Margin calculated for the event',
-        'Learnings recorded against venue and vendor records',
-      ],
-      note:
-        'The next event is priced and staffed from this record rather than from memory.',
-    },
+      "time": "After the wedding",
+      "before": "Final bills trickle in over weeks and the client waits.",
+      "after": "Each final bill is compared with the quote the day it arrives, and the client's final invoice task is already open."
+    }
   ],
-
-  ai: {
-    heading: 'Ask what is unconfirmed and what is unfunded.',
-    lede:
-      'Verity AI reads the same event, vendor, budget and payment records the business creates as it plans. It answers from your own event book, respects permissions, and can turn an answer into follow-ups.',
-    panelMeta: 'Grounded in your event records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which vendors are unconfirmed against events inside sixty days?',
-      'Which events are running above their agreed budget?',
-      'Which vendor payment milestones fall due before the client funds arrive?',
-      'Which changes were agreed without a recorded cost impact?',
-      'What did comparable past events actually cost against what we quoted?',
-      'Which vendors have the most recorded issues across events?',
-      'Where do two events share a vendor on the same date?',
-      'What is margin by event type and size?',
-      'Summarise risk across the next ninety days.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We follow a real wedding with you, build Verity around how your team really plans, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Go through one running wedding and one finished one with you. Map the stages from enquiry to settlement, the functions, the vendor types, how money moves both ways and who does what on the day.",
+        "you": "Two to three hours of yours and your lead coordinator's. Two wedding files, your quote template and your vendor list.",
+        "get": "A written map of your business: stages, wedding structure, vendor categories, payment rules and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up wedding records with functions and dates, vendor categories, quote versions, advance and balance rules, guest fields, task templates for each function and your team, and build the five screens around your terms.",
+        "you": "Check the setup with your coordinators. Tell us where a task template or a payment rule is wrong.",
+        "get": "A working Verity with your real vendors, task lists and rules, ready for a live wedding."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your vendor and venue list, client list, and one or two running weddings with their budgets, guests and payments. Train the team using a live wedding, not a test.",
+        "you": "Your vendor contacts, the active wedding sheets and a check of the payment dates. One hour with each role.",
+        "get": "Your running weddings and vendors inside Verity, and a team that has used it through a week of real work."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weddings with you, tune the task templates and payment rules, and handle changes when you add a service, a city or a team member.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how you plan, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Two wedding files, one running and one finished",
+      "Your quote template and recent quotes",
+      "Vendor and venue list with contacts",
+      "Guest list sheets",
+      "Payment records for current weddings"
+    ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. Your lead coordinator needs a few more.",
+    "after": "Nobody is hired to run Verity. Decisions, payments and tasks are recorded as part of the work your team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The confirmations and the cash.',
-  automationLede:
-    'Each runs from the event and vendor records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your business a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own weddings, vendors, money and tasks. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which vendor advances are due in the next week and who owes them?",
+        "a": "9 advances worth ₹5.4 lakh are due in seven days. 5 are the client's to pay and 4 are yours.",
+        "rows": [
+          [
+            "Client to pay",
+            "₹3.1 lakh"
+          ],
+          [
+            "We pay",
+            "₹2.3 lakh"
+          ],
+          [
+            "Already overdue",
+            "₹1.5 lakh"
+          ]
+        ],
+        "action": "Create a task for each payer"
+      },
+      {
+        "q": "Which weddings have more money going out than coming in?",
+        "a": "Nair and Joseph, Kochi, is ₹1.5 lakh short. Das and Menon, Goa, is ahead by ₹3 lakh.",
+        "rows": [
+          [
+            "Nair and Joseph",
+            "-₹1.5 lakh"
+          ],
+          [
+            "Mehra and Kapoor",
+            "+₹3 lakh"
+          ],
+          [
+            "Rao and Bhatia",
+            "+₹2 lakh"
+          ]
+        ],
+        "action": "Task to chase the Kochi client"
+      },
+      {
+        "q": "Where do guest counts differ from what vendors were told?",
+        "a": "3 functions in Udaipur are below what the caterer was sent, by 20, 50 and 12 plates.",
+        "action": "Task to send the updated counts today"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to families and vendors; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'A vendor remains unconfirmed as the event approaches',
-      steps: [
-        'Vendor flagged against the event date and budget line',
-        'Confirmation follow-up assigned',
-        'Escalated to the lead planner as the date nears',
-      ],
+      "when": "A new enquiry arrives",
+      "then": [
+        "Record created with city, date and budget",
+        "Owner assigned",
+        "Flagged if no reply in a day"
+      ]
     },
     {
-      trigger: 'A client requests a change',
-      steps: [
-        'Change recorded with who requested it',
-        'Cost impact assessed and change order raised',
-        'Approval tracked before vendor instructions are issued',
-      ],
+      "when": "A vendor advance is due in seven days",
+      "then": [
+        "Task to the person who owes it, you or the client",
+        "Vendor and date shown on the task",
+        "Payment recorded when done"
+      ]
     },
     {
-      trigger: 'A vendor milestone falls due before client funds arrive',
-      steps: [
-        'Funding gap flagged on the event',
-        'Client reminder issued ahead of the vendor deadline',
-        'Escalated if the gap remains',
-      ],
+      "when": "A change request is approved",
+      "then": [
+        "Added to the wedding's running total",
+        "Vendor scope updated",
+        "New quote version saved with the approver"
+      ]
     },
     {
-      trigger: 'Event spend passes the agreed budget',
-      steps: [
-        'Event flagged with variance and its causes',
-        'Change order or absorption decision raised',
-        'Decision recorded against the event',
-      ],
+      "when": "A guest count changes after it was sent to a vendor",
+      "then": [
+        "Difference shown by function",
+        "Task to send the update",
+        "Sent date recorded"
+      ]
     },
     {
-      trigger: 'A vendor is committed to overlapping events',
-      steps: [
-        'Conflict flagged with both events named',
-        'Resolution assigned to the lead planner',
-        'Outcome recorded against both events',
-      ],
+      "when": "A task is overdue for the next event",
+      "then": [
+        "Flagged to the lead planner",
+        "Owner reminded",
+        "Moved or closed with a reason"
+      ]
     },
     {
-      trigger: 'An event completes',
-      steps: [
-        'Cost reconciliation task raised against the budget',
-        'Vendor performance review assigned',
-        'Margin recorded for future pricing',
-      ],
-    },
+      "when": "A wedding is over",
+      "then": [
+        "Final bills requested from vendors",
+        "Variance against quote shown",
+        "Client settlement task and a check-in task for later created"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the planner can actually see.',
-  intelligenceLede:
-    'Budget, confirmation and vendor performance from the event records themselves.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a wedding planning business has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by city, state and venue. Confirm current requirements with your accountant, a lawyer or the relevant authority.",
+    "items": [
+      {
+        "name": "GST on event management",
+        "what": "Full event management, including wedding planning, generally attracts 18 percent GST under SAC 998596. A registered planner can generally claim input credit on vendor GST against valid invoices, and some services such as outdoor catering are charged at their own rates. Whether registration is mandatory depends on your turnover.",
+        "how": "Each vendor invoice is attached to the booking and compared with the quote, and each client invoice records what was billed and when. Your accountant prepares the returns; Verity does not file them.",
+        "source": {
+          "name": "ClearTax on GST for event management",
+          "url": "https://cleartax.in/s/gst-on-event-management"
+        }
+      },
+      {
+        "name": "Vendor and client contracts",
+        "what": "There is no single rule for planners, but written scope, payment dates and cancellation terms with both clients and vendors are what you rely on in a dispute. Confirm contract terms with a lawyer.",
+        "how": "Each signed document is attached to the booking record with its date, and a vendor is not marked confirmed until the paper is there."
+      },
+      {
+        "name": "Guests' personal data",
+        "what": "The Digital Personal Data Protection Rules were notified on 13 November 2025. Notice, consent and safeguard duties for businesses holding personal data are generally due from 13 May 2027. Guest lists with phone numbers, passports or diet notes are personal data.",
+        "how": "Guest records sit on the wedding with access by role, and every change is logged.",
+        "source": {
+          "name": "AZB & Partners on the DPDP phases",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Venue, music and local permissions",
+        "what": "Venues, processions on public roads, loudspeakers and live music may need permissions or licences that vary by city and state. Your venue contract often says who must obtain them.",
+        "how": "Each permission is a task with an owner and a date before the event, and the approval is attached to the wedding."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A vendor coordinator should not see the client's total budget. A junior should not edit payment rules. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Budget',
-      points: [
-        'Agreed budget against current commitment and spend',
-        'Change orders raised, approved and absorbed',
-        'Variance by category and event',
-        'Margin by event type and size',
-      ],
+      "role": "Owner",
+      "question": "Are my weddings on track, and where is cash short?",
+      "sees": "Every wedding with days to go, money in and out, vendor risks and team load."
     },
     {
-      area: 'Vendors',
-      points: [
-        'Confirmation status against event dates',
-        'Delivery, punctuality and issues across events',
-        'Payment milestones due and paid',
-        'Conflicts across simultaneous events',
-      ],
+      "role": "Lead planner",
+      "question": "What needs attention on this wedding?",
+      "sees": "The timeline, change requests, unconfirmed vendors, guest counts and the budget."
     },
     {
-      area: 'Cash',
-      points: [
-        'Client receipts against schedule',
-        'Vendor milestones against receipts',
-        'Funding gaps projected forward',
-        'Outstanding balances at event completion',
-      ],
+      "role": "Coordinator",
+      "question": "What do I do today and on site?",
+      "sees": "Their tasks, the run of show, vendor contacts and logging on-the-day requests."
     },
     {
-      area: 'Delivery',
-      points: [
-        'Run-of-day completion and slips',
-        'Issues recorded on the day by vendor',
-        'Venue constraints and history',
-        'Client satisfaction and complaints recorded',
-      ],
+      "role": "Accounts",
+      "question": "What was billed, paid and owed?",
+      "sees": "Client invoices, vendor bills against quotes, advances and balances, by wedding."
     },
+    {
+      "role": "Vendor or venue contact",
+      "question": "What is expected of me?",
+      "sees": "Only the scope, timings and payment dates on their own booking, if you choose to share them."
+    }
   ],
-  intelligenceNote:
-    'All of this comes from records the planner creates while planning — bookings, changes, payments and the run of day.',
-
-  rolesHeading: 'One event book, three different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each opens on what they need.',
-  roles: [
-    {
-      role: 'Principal planner',
-      question: 'What is at risk and what is it making?',
-      focus: 'Unconfirmed vendors, budget variance, funding gaps, margin by event type.',
-    },
-    {
-      role: 'Event coordinator',
-      question: 'What is unconfirmed on my events?',
-      focus: 'Vendor confirmations, change orders outstanding, payment milestones, run-of-day preparation.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is due and what has come in?',
-      focus: 'Client receipts against schedule, vendor milestones due, funding gaps, balances at closure.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your design tools, mood boards and quote documents. We attach the final version to the record.",
+      "WhatsApp and calls with families and vendors. Staff reply",
+      "Verity tracks what was decided.",
+      "Your accountant or bookkeeper, who still prepares your returns.",
+      "Your vendors' own billing."
+    ],
+    "not": [
+      "Run your billing or take payments from families.",
+      "Take online bookings or enquiries for you.",
+      "Send messages to guests, families or vendors on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your vendor and venue contacts, client list and running wedding files across from the sheets, chats and folders you use now, in stages, so planning continues while it happens."
+  },
+  "faqHeading": "Questions wedding planners ask.",
+  "faqs": [
+    [
+      "I manage everything in WhatsApp groups. Will my clients and vendors have to use something new?",
+      "No. Families and vendors keep using chat. Your team records the decisions, dates and payments in Verity as part of the work, so the facts live in one place and the chats stay chats."
+    ],
+    [
+      "Can it track what I owe vendors and what clients owe me?",
+      "Yes. Each vendor booking has an advance, balance, due dates and who pays, you or the client. Each wedding shows money in and out by date, so a gap is visible weeks before it hurts."
+    ],
+    [
+      "Does it handle several functions across several days?",
+      "Yes. A wedding has functions such as haldi, mehendi, sangeet and reception, each with its own timeline, tasks, vendors and head count."
+    ],
+    [
+      "Can it manage guest lists and RSVPs?",
+      "It keeps guests as records with side, RSVP, diet, travel and room, and totals counts by function. It does not send invitations or collect RSVPs online; your team does that and records the answer."
+    ],
+    [
+      "We are a team of four. Is this too much?",
+      "A small team has the same number of vendors per wedding and fewer hands. We set up only what you need in the same four weeks, and leave out what you do not."
+    ],
+    [
+      "Can it help me with the run of show on the day?",
+      "Yes. Cues with times, owners and vendors are shown on the phones of your team on site, and changes appear for everyone."
+    ],
+    [
+      "Can it send reminders to vendors and families?",
+      "Verity assigns the reminder as a task to the right person on your team, who sends it and records the answer. It does not message anyone on its own."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so coordinators, accounts and any shared vendor view each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "How quickly will I see something useful?",
+      "The vendor advance list and the unconfirmed vendor list need only your running weddings, so we aim to have them first. Team load and past-client patterns become reliable after a season of recorded weddings."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the size of your team and the number of weddings a year. Message us and we will give you a clear number after a short conversation about how you plan."
+    ]
   ],
-
-  useCasesHeading: 'What wedding planners use Verity for',
-  useCases: [
-    {
-      name: 'Vendor confirmation tracking',
-      body: 'Booking as a workflow with a confirmation state, so a verbally agreed vendor is visibly different from a contracted one.',
-    },
-    {
-      name: 'Change orders at the moment of agreement',
-      body: 'Client changes costed and raised when they are agreed rather than surfacing in a budget review weeks later.',
-    },
-    {
-      name: 'Payment synchronisation',
-      body: 'Vendor milestones and client receipts both on the event, so a funding gap is visible before it becomes the planner’s money.',
-    },
-    {
-      name: 'One budget with a change history',
-      body: 'The agreed budget, its revisions and current commitment on one record, so what was agreed and when is unambiguous.',
-    },
-    {
-      name: 'Run of day with owners',
-      body: 'The sequence as work with times, dependencies and named owners rather than a document with several versions.',
-    },
-    {
-      name: 'Vendor performance across events',
-      body: 'Delivery, punctuality and issues recorded per vendor, so recommendations rest on history rather than impression.',
-    },
-    {
-      name: 'Event margin',
-      body: 'Cost reconciled against budget per event, so pricing reflects what comparable events actually cost to deliver.',
-    },
-    {
-      name: 'Asking about risk',
-      body: 'Plain-language questions across confirmations, budgets, payments and conflicts, with follow-ups assigned in the same step.',
-    },
+  "related": [
+    "event-venues",
+    "catering-businesses",
+    "photographers",
+    "hotels",
+    "tour-operators",
+    "interior-designers"
   ],
-
-  migration:
-    'Your accounting arrangement continues to run and is mapped during implementation. Clients, booked events, vendors and their terms, budgets and payment schedules are brought across, and Verity is configured around how the business already plans.',
-
-  faqHeading: 'Questions planners ask',
-  faqs: [
-    [
-      'What can AI software do for a wedding planning business?',
-      'Verity AI answers questions from your own event, vendor, budget and payment records: which vendors are unconfirmed against events inside sixty days, which events are above budget, which vendor milestones fall due before client funds arrive, which changes were agreed without a cost impact. Each answer can become a follow-up.',
-    ],
-    [
-      'How is this different from event software for caterers?',
-      'A caterer delivers with its own crew, stock and equipment. A planner coordinates other people’s vendors and manages a client’s budget, so the record has to be the vendor set, the confirmation state, the payment schedules on both sides and every change to the budget.',
-    ],
-    [
-      'How does it handle scope changes?',
-      'A change is recorded with who requested it, costed immediately, and raised as a change order with the revised budget for client approval — which is what prevents the whole budget being renegotiated after the event.',
-    ],
-    [
-      'Can it show funding gaps?',
-      'Vendor payment milestones and client receipt schedules both sit on the event, so the position is projected forward and a gap is visible before the planner has to bridge it out of their own funds.',
-    ],
-    [
-      'Does it track vendor reliability?',
-      'Vendors carry their delivery, punctuality and issue history across every event, so recommendations and selection rest on a record rather than on the most recent memorable experience.',
-    ],
-    [
-      'Can it manage the run of day?',
-      'The sequence is work with times, dependencies and named owners, and steps are marked as they complete, so a slip is visible against the steps that depend on it rather than discovered downstream.',
-    ],
-    [
-      'Does Verity replace our accounting software?',
-      'No. Accounting continues and is mapped during implementation. Verity holds the events, budgets, vendors, confirmations, payment schedules and the reporting across them.',
-    ],
-    [
-      'Is it suitable for a small planning business?',
-      'A planner running fourteen events a year still coordinates hundreds of vendor commitments and payment milestones, and carries the timing risk between two payment schedules on every one.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how events are quoted and coordinated, configuration of budget categories and vendor terms, migration of booked events and vendors, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with what is unconfirmed.',
-  ctaLede:
-    'Verbally booked vendors on dates inside two months are the planner’s real risk. Tell us how confirmations are tracked today.',
-
-  related: ['catering-businesses', 'event-venues', 'photographers', 'hotels', 'marketing-agencies', 'travel-agencies'],
+  "ctaHeading": "Start with the vendor advances due this week.",
+  "ctaLede": "Tell us how you plan and we will show you the unpaid advances, the unconfirmed vendors and the guest counts that changed, using one of your own running weddings."
 };

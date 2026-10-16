@@ -1,181 +1,1065 @@
 export default {
-  slug: 'gift-shops',
-  status: 'published',
-  plural: 'gift shops',
-  subject: 'gift shop',
-
-  seo: {
-    title: 'AI business management software for gift shops | Verity',
-    description:
-      'Verity connects occasion-driven demand, post-season dead stock, personalisation and wrapping services, and corporate gifting orders into one operational system.',
-    keywords: [
-      'AI software for gift shops',
-      'gift shop management software',
-      'seasonal stock and occasion demand planning',
-      'corporate gifting order management',
-    ],
+  "schema": 2,
+  "slug": "gift-shops",
+  "status": "published",
+  "plural": "gift shops",
+  "subject": "gift shop",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Gift shop software: festival stock and custom orders | Verity",
+    "description": "The 15 quiet leaks in a gift shop, from festival stock that goes unsold to lost corporate quotes and forgotten custom orders, and the Verity screens that fix them.",
+    "keywords": [
+      "gift shop management software India",
+      "gift shop inventory festival season",
+      "corporate gifting order tracking",
+      "custom gift order tracking",
+      "gift hamper costing software"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for gift retail',
-    headline: 'Everything sells in three weeks. What is left has no second chance.',
-    lede:
-      'Gift retail is a series of short, dated peaks, and stock bought for one occasion rarely sells after it. Verity plans against the calendar and clears against it.',
-    note: 'Runs alongside your existing billing setup.',
-    panel: {
-      title: 'Shop',
-      meta: 'This season',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Season sales', value: '₹18.4 L', note: '64% in three weeks' },
-        { label: 'Occasion stock left', value: '₹4.2 L', note: 'from prior occasions' },
-        { label: 'Personalisation orders', value: '86', note: '11 past promised date' },
-        { label: 'Corporate orders', value: '9', note: '₹6.4 L · 3 unconfirmed' },
-      ],
-      rows: [
-        { name: '11 personalisation orders past their promised date', meta: 'Gifts for fixed occasions', active: true },
-        { name: '₹4.2 L of occasion-specific stock unsold', meta: 'No natural demand until next year', active: true },
-        { name: '3 corporate orders unconfirmed inside lead time', meta: 'Personalisation cannot start', active: true },
-        { name: 'Fast lines out of stock during the peak week', meta: 'Reordered after the peak passed', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own shop in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "orders",
+    "logistics",
+    "workforce",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for gift shops",
+    "headline": "A gift shop earns most of its year in a few weeks. The rest is how well you remember what sold.",
+    "lede": "A gift shop sells rakhis, diyas, soft toys, personalised mugs and corporate hampers, and each has its own peak and its own leftover. Custom orders have names and deadlines, corporate buyers want quotes in a day, and a hamper has a cost nobody has added up. Verity connects the stock, the season, the custom order and the customer, so you can plan the peak and see what is left after it.",
+    "oneLine": "One system that knows every item on the shelf, every custom order and its deadline, every corporate quote and every occasion your customers shop for, and tells you what needs attention today.",
+    "note": "Built for a shop where the owner is also the buyer, the packer and the person at the counter. Records come from the sales, orders and deliveries you already handle.",
+    "screen": "owner",
+    "screenNote": "festivals, custom orders, corporate buyers and hampers"
+  },
+  "today": {
+    "heading": "Most gift shops know their festivals well and their numbers badly.",
+    "paragraphs": [
+      "The shop is easy to see. The rakhi rush, the Diwali boxes, the last-minute Valentine’s hamper, the stack of personalised mugs for a wedding. What is hard to see is what sits behind it: which items sold through and which are left, what each hamper really costs to make, which custom order is due tomorrow and which corporate quote is still waiting.",
+      "That information exists in pieces. The billing screen knows the sale. Wholesale purchases are on slips and a few are cash. Custom orders are on a pad or a chat. Corporate enquiries sit in an inbox. The owner holds the rest in memory.",
+      "The market is modest and seasonal. One 2025 estimate puts India’s gifting market at about USD 816 million, with corporate gifting about 36 percent of it, and local shops the largest physical channel at 28 percent. A shop that knows its season and its buyers has an edge over a website."
+    ],
+    "stack": [
+      "Billing screen at the counter",
+      "Wholesale purchase slips and a few cash buys",
+      "Order pad or WhatsApp for custom and corporate orders",
+      "Excel or notebook for stock",
+      "The owner’s memory of what sold last Diwali"
+    ],
+    "stackNote": "Each one does its own job well enough. None of them talk to each other, and nobody has time to join them."
+  },
+  "painsHeading": "Where a gift shop actually loses money.",
+  "painsLede": "These are the situations gift shop owners and managers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Stock",
+      "title": "Festival stock bought on a hunch",
+      "scene": "Raksha Bandhan, Ganesh Chaturthi, Diwali and the wedding season come one after another. You buy rakhis, idols, diyas and gift boxes in the weeks before each. Last year’s best seller is on your mind, but the numbers are not written down.",
+      "cost": "Example arithmetic: ₹2 lakh of festival stock with a quarter unsold is ₹50,000 tied up in items that will sit until next year or sell at a loss.",
+      "fix": "Each item’s sales by week for each festival are recorded. Verity shows last year’s sell-through next to this year’s opening stock and suggests how much to order for each peak, with the supplier’s lead time.",
+      "screen": "season"
     },
-  },
-
-  overview: {
-    heading: 'The calendar is the business.',
-    paragraphs: [
-      'A gift shop’s year is not smooth. It is a handful of dated occasions, each producing a short and intense peak, separated by long ordinary periods. A large share of annual revenue arrives in a few weeks, which means buying, staffing and cash are all decided by how well the shop reads a calendar it already knows.',
-      'The distinguishing problem is what happens afterwards. Occasion-specific stock has no natural demand once the date passes; it is not slow-moving, it is out of season for a year. Four point two lakh left from prior occasions is capital held with no realistic route to sale.',
-      'The second is that peaks are unforgiving. A fast line out of stock during the peak week is a lost sale that cannot be recovered by reordering afterwards, because the demand was tied to a date.',
-      'The third is personalisation. Engraving, wrapping and made-to-order gifts carry promise dates tied to occasions that cannot move, and a late order is a ruined gift rather than a late delivery.',
-      'The fourth is corporate gifting, which is high value, deadline-bound and dependent on the client confirming quantities and artwork in time for production.',
-      'Verity plans against the occasion calendar, tracks personalisation promises and holds corporate orders to their lead times.',
+    {
+      "area": "Stock",
+      "title": "What is left after the festival",
+      "scene": "The day after Diwali, a corner of the shop holds diyas, string lights and boxes nobody will buy for another year. Someone says they will mark them down. Nobody does, and the stock slowly fades and gets damaged.",
+      "cost": "Seasonal stock loses its value on the day the season ends. Each week you wait costs you more.",
+      "fix": "Verity tracks stock remaining after the season by item and value held. It suggests a markdown date, a bundle or a carry-over, and shows what you actually did last year, so the leftover is a decision and not a pile.",
+      "screen": "season"
+    },
+    {
+      "area": "Stock",
+      "title": "Breakage and shrink in fragile items",
+      "scene": "Glass photo frames, ceramic mugs and decorative items arrive cracked or break on the shelf. A shop assistant moves a box and something rattles. Nobody records which items break and where.",
+      "cost": "Fragile stock bought and never sold, and a pattern nobody sees: the same supplier, the same type of packing, the same shelf.",
+      "fix": "Breakage is logged with a reason in two taps, with the item, supplier and shelf. Verity totals it by supplier and item so a bad pack or a bad shelf shows up, and a credit claim to the supplier has the evidence.",
+      "screen": "season"
+    },
+    {
+      "area": "Custom orders",
+      "title": "A personalised gift with a deadline and a typo",
+      "scene": "A customer orders a mug with a name and a date, a photo cushion for an anniversary, or a name plate for a house. The details are on a pad. The name is spelled differently on the proof. The order is due the next morning.",
+      "cost": "A wrong or late custom item cannot be resold, and the customer is angry on the one day they needed it. The cost is the item, the redo and the customer.",
+      "fix": "Each custom order is a record with the customer, the item, the exact text, the photo, the proof approved, the due date and the status. Staff see what is waiting for approval, what is in production and what is due today.",
+      "screen": "custom"
+    },
+    {
+      "area": "Custom orders",
+      "title": "Gifts that have to arrive on a day",
+      "scene": "A birthday cake topper and gift must reach a house at 6 pm. A bouquet and a hamper go to an office at 10 am. A delivery boy has three drops and no list, and the customer calls to ask where it is.",
+      "cost": "A missed delivery on an occasion day is a lost customer, and often a refund. Phone calls to find out where things are take up the same hour you need for packing.",
+      "fix": "Each delivery is a task with the address, the time window, the person carrying it and the status. The counter sees what has left, what has arrived and what is late, and the customer’s call is answered from the record.",
+      "screen": "custom"
+    },
+    {
+      "area": "Corporate",
+      "title": "Corporate gifting enquiries answered late",
+      "scene": "An office manager wants fifty Diwali boxes by the 20th. She emails three shops and picks the one that replies first with a clear quote. Yours was in the inbox and you saw it at night.",
+      "cost": "Corporate gifting is about a third of the gifting market in one estimate, and corporate orders are the largest tickets a gift shop sees. They are lost to slow replies and unclear quotes far more often than to price.",
+      "fix": "Each enquiry is a record with an owner, quantity, budget, items, the quote and the next step. Verity lists the ones with no reply and tells the person responsible. Staff still send the quote, and the outcome is recorded.",
+      "screen": "corporate",
+      "source": {
+        "name": "IMARC Group, India gifting market, 2025",
+        "url": "https://www.imarcgroup.com/india-gifting-market"
+      }
+    },
+    {
+      "area": "Corporate",
+      "title": "Sample approvals and changes that go round and round",
+      "scene": "A company asks for a sample box, changes the chocolate, adds a logo card, then changes the quantity. Each change is a message in a different chat. By the third round nobody is sure what was agreed.",
+      "cost": "The wrong box goes out, or the right one goes late, or you quietly absorb the cost of changes nobody priced.",
+      "fix": "The order record holds the approved sample, the changes with dates, the final quantity and price, and who approved it. Changes after approval are flagged and priced, so the final bill matches what was agreed.",
+      "screen": "corporate"
+    },
+    {
+      "area": "Corporate",
+      "title": "Corporate payments that take months",
+      "scene": "A firm takes the delivery in October and pays after sixty days. The invoice is in the accounts person’s inbox, someone is on leave, and the follow-up is a call you keep postponing.",
+      "cost": "Example arithmetic: ₹3 lakh of corporate invoices outstanding for 60 days is cash you needed to buy next season’s stock.",
+      "fix": "Corporate buyers are accounts with invoices, due dates and balances. Verity shows what is owed and for how long, and gives the owner a task to chase on the schedule you set, with every promise to pay recorded.",
+      "screen": "corporate"
+    },
+    {
+      "area": "Hampers",
+      "title": "A hamper whose cost nobody has added up",
+      "scene": "A Diwali hamper holds a box, dry fruits, a candle, a diya set, chocolates and a card. Each was bought at a different rate from a different supplier. The price on the shelf was set by gut feel and a look at the competitor.",
+      "cost": "Example arithmetic: if a hamper sells at ₹1,499 and the parts cost ₹1,050, packing ₹120 and a ₹90 card and ribbon, the hamper earns about ₹240, not the ₹450 you thought.",
+      "fix": "A hamper is a record built from its parts, each at its latest purchase cost. Verity shows the cost, the margin at the price you set, and what changes if the dry fruit rate moves, and takes parts out of stock when a hamper is packed.",
+      "screen": "hampers"
+    },
+    {
+      "area": "Hampers",
+      "title": "Price tags, bargaining and discounts nobody approved",
+      "scene": "A customer asks for 20 percent off a set. A friend of the owner gets a special price. A salesperson matches a nearby shop. Each is a small human decision, and none is written down.",
+      "cost": "Margin lost and a door open to misuse, with no way to see patterns by person, item or week.",
+      "fix": "Discounts above a limit need a one-tap approval with a reason. Verity totals them by person, item and week, and shows which items are being sold below the margin you set.",
+      "screen": "hampers"
+    },
+    {
+      "area": "Money",
+      "title": "Different tax rates on items that sit in one bill",
+      "scene": "Handicrafts and paper gift boxes moved to a lower GST rate from 22 September 2025, while other items such as many decorative goods may sit at a different rate. A hamper holds items at more than one rate, and staff are unsure how to show it.",
+      "cost": "A wrong rate on a bill, confused customers and hours of correction by your accountant. Rates and classifications can change again, and sources disagree on some items.",
+      "fix": "Each item carries its tax category, and a mixed bill is split by line as it is made. A hamper records its parts, so your accountant can see what was in it. A rate change is one update to an item’s setup.",
+      "screen": "hampers",
+      "source": {
+        "name": "taxo.online summary of CBIC Notification 09/2025-Central Tax (Rate), 2025",
+        "url": "https://taxo.online/latest-news/17-09-2025-cbic-issued-various-notifications-to-give-effect-to-the-recommendations-of-the-56th-council-meeting-in-respect-to-rate-on-goods/"
+      }
+    },
+    {
+      "area": "Customers",
+      "title": "The birthday and anniversary customers forget until it is too late",
+      "scene": "A man buys an anniversary gift every October for his wife. A woman sends a hamper to her brother each Rakhi. You know them by face. The staff member who knew the occasions has left, and nobody calls before the date.",
+      "cost": "Occasion buyers are the surest repeat sales in a gift shop. When no one reminds them, they buy from whichever shop or website comes first.",
+      "fix": "A customer record holds the occasions they shop for, the usual budget and what they bought before. Verity lists customers with an occasion coming in the next two weeks, and a task goes to the person who knows them.",
+      "screen": "customers"
+    },
+    {
+      "area": "Customers",
+      "title": "Wedding and event orders in bulk, with a long tail of details",
+      "scene": "A family orders return gifts for two hundred guests, a welcome hamper for sixty and a few special items for the couple. The details come over several weeks and several chats.",
+      "cost": "Large orders go wrong in the details: the wrong count, the wrong date, a part missing. The family remembers.",
+      "fix": "The order is a record with phases, quantities by item, the delivery date, the advance and the balance. Staff see what is packed, what is waiting on a supplier and what is due, and the family’s message is answered from the record.",
+      "screen": "customers"
+    },
+    {
+      "area": "Money",
+      "title": "Day-end takings do not tie to the bills",
+      "scene": "At closing, cash, card and UPI are counted against the billing report and are off by a few hundred rupees. Nobody can say whether a bill was missed, a refund was given or an advance was recorded in the wrong place.",
+      "cost": "Small daily gaps compound, and the owner stops trusting the numbers on the screen. Advances on custom orders make it worse.",
+      "fix": "The day’s sales and advances by payment mode are compared with what was collected. A mismatch is flagged with the shift and amount, and the person closing records the reason.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "Seasonal staff, a second counter and an owner who is the system",
+      "scene": "You hire extra hands for the festival rush and train them in an afternoon. A second counter in a mall or a stall at an exhibition keeps its own sheet. You know what is low, what is due and who owes you. You are also packing.",
+      "cost": "The business cannot grow past what one person can hold in their head, and stock sits idle at one counter while another runs out.",
+      "fix": "Each morning Verity shows a short list of what needs a decision, each with an owner. Counters and stalls are locations in one system with stock, sales and orders side by side, and seasonal staff open only what their role needs.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "All three market figures come from one paid market research publisher and its scope for physical gifting is not stated in detail. The channel shares are for 2025. The GST item is a summary of a notification, and sources disagree on some gift items, so confirm each item’s rate with your accountant.",
+  "facts": [
+    {
+      "figure": "USD 816 million",
+      "text": "estimated size of India’s gifting market in 2025, projected to reach about USD 1.09 billion by 2034, growing around 3.1 percent a year.",
+      "source": {
+        "name": "IMARC Group, India gifting market, 2025",
+        "url": "https://www.imarcgroup.com/india-gifting-market"
+      }
+    },
+    {
+      "figure": "36.2%",
+      "text": "share of gifting that is corporate in 2025, growing faster than personal gifting.",
+      "source": {
+        "name": "IMARC Group, India gifting market, 2025",
+        "url": "https://www.imarcgroup.com/india-gifting-market"
+      }
+    },
+    {
+      "figure": "28.4%",
+      "text": "share of gifting sold through local shops in 2025, the largest physical channel, against 31.7 percent online.",
+      "source": {
+        "name": "IMARC Group, India gifting market, 2025",
+        "url": "https://www.imarcgroup.com/india-gifting-market"
+      }
+    },
+    {
+      "figure": "12% to 5%",
+      "text": "GST on handicrafts and paper gift boxes from 22 September 2025, while rates on other gift items differ, so a mixed bill can carry more than one rate.",
+      "source": {
+        "name": "taxo.online, summarising CBIC Notification 09/2025-Central Tax (Rate), 2025",
+        "url": "https://taxo.online/latest-news/17-09-2025-cbic-issued-various-notifications-to-give-effect-to-the-recommendations-of-the-56th-council-meeting-in-respect-to-rate-on-goods/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your shop’s own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Gift shop / Today",
+      "meta": "Shop: Jayanagar",
+      "heading": "The owner’s morning view",
+      "caption": "Sales, advances, custom orders due, corporate quotes waiting and anything that does not tie, on one screen, with the items that need a decision listed under it.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Sales yesterday",
+              "value": "₹52,600",
+              "note": "74 bills"
+            },
+            {
+              "label": "Custom orders due",
+              "value": "9",
+              "note": "3 today"
+            },
+            {
+              "label": "Corporate quotes waiting",
+              "value": "4",
+              "note": "1 over 24 hours"
+            },
+            {
+              "label": "Festival stock left",
+              "value": "₹1.2 lakh",
+              "note": "at cost"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Sales by channel, this week"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Walk-in",
+              "value": 54,
+              "display": "₹1.9 lakh"
+            },
+            {
+              "label": "Custom orders",
+              "value": 26,
+              "display": "₹92,000"
+            },
+            {
+              "label": "Corporate",
+              "value": 41,
+              "display": "₹1.4 lakh"
+            },
+            {
+              "label": "Marketplace listing",
+              "value": 12,
+              "display": "₹42,000",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Cash and UPI differ from bills and advances by ₹420. 2 entries unmatched.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Diwali diya sets below plan",
+              "meta": "46 left, 120 sold this week",
+              "tag": [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            },
+            {
+              "name": "Mug with name, due 11 am",
+              "meta": "Proof not yet approved",
+              "tag": [
+                "Chase",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "season",
+      "title": "Season stock",
+      "meta": "Diwali",
+      "heading": "Festival stock and what is left after it",
+      "caption": "Stock against the same weeks last year, what sold through, what is left and what to do with it. Breakage and supplier credits sit beside it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "On shelf",
+            "Sold this week",
+            "Sold same week last year",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Diya set, 12 pc",
+              "46",
+              "120",
+              "98",
+              [
+                "Short",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Gift box, large",
+              "120",
+              "36",
+              "40",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "String lights",
+              "210",
+              "28",
+              "61",
+              [
+                "Slow",
+                "flag",
+                "Bundled",
+                "ok"
+              ]
+            ],
+            [
+              "Rakhi leftover, premium",
+              "64",
+              "0",
+              "0",
+              [
+                "Carry over",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Breakage logged this month, by supplier"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Glassware supplier",
+              "value": 58,
+              "display": "14 pcs",
+              "tone": "muted"
+            },
+            {
+              "label": "Ceramic mugs",
+              "value": 31,
+              "display": "8 pcs",
+              "tone": "muted"
+            },
+            {
+              "label": "Photo frames",
+              "value": 19,
+              "display": "5 pcs",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "title": "Custom orders and deliveries",
+      "meta": "Today and tomorrow",
+      "heading": "Personalised orders and deliveries on a deadline",
+      "caption": "Each personalised item with the exact text, the proof, the due time and the status, and each delivery with an address, a window and a person carrying it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Order",
+            "Customer",
+            "Details",
+            "Due",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Mug, name and date",
+              "Divya S.",
+              "Names: Arjun and Diya, 12.10.2020",
+              "Today 11 am",
+              [
+                "Proof pending",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Photo cushion",
+              "Rohit K.",
+              "Photo received",
+              "Tomorrow 5 pm",
+              [
+                "In production",
+                "info"
+              ]
+            ],
+            [
+              "Name plate",
+              "Mrs. Iyer",
+              "Brass, 2 lines",
+              "Tomorrow noon",
+              [
+                "Ready",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Deliver hamper to Indiranagar office, 10 am",
+              "meta": "Suresh, bike 1",
+              "done": true
+            },
+            {
+              "text": "Deliver cake topper and gift, Koramangala, 6 pm",
+              "meta": "Ravi, bike 2",
+              "done": false
+            },
+            {
+              "text": "Call customer about address for HSR delivery",
+              "meta": "Counter",
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corporate",
+      "title": "Corporate gifting",
+      "meta": "Diwali orders",
+      "heading": "Corporate enquiries, samples and payments",
+      "caption": "Each company enquiry with an owner, quantity, budget, sample status and quote. Delivered orders show their invoice, due date and balance.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Enquiry",
+              "cards": [
+                {
+                  "title": "50 Diwali boxes, Rao & Co.",
+                  "meta": "Budget ₹900 each, needs by 20 Oct",
+                  "tag": [
+                    "No reply 26 h",
+                    "late",
+                    "Quoted",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "120 hampers, TechNova",
+                  "meta": "Logo card, sample asked",
+                  "tag": [
+                    "Sample",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Delivered, unpaid",
+              "cards": [
+                {
+                  "title": "Greenleaf Foods, 80 boxes",
+                  "meta": "₹1.1 lakh, due in 12 days",
+                  "tag": [
+                    "Due soon",
+                    "info"
+                  ]
+                },
+                {
+                  "title": "Apex Consulting, 40 hampers",
+                  "meta": "₹68,000, 48 days",
+                  "tag": [
+                    "Chase",
+                    "late",
+                    "Promised 30 Oct",
+                    "info"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hampers",
+      "title": "Hampers and pricing",
+      "meta": "Cost from latest purchase rates",
+      "heading": "What a hamper really costs and earns",
+      "caption": "A hamper built from its parts at today’s purchase cost, the margin at the price you set, and the approvals for discounts waiting on you.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Part",
+            "Qty",
+            "Cost",
+            "Last change",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Gift box, medium",
+              "1",
+              "₹95",
+              "No change",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Dry fruits, 250 g",
+              "1",
+              "₹410",
+              [
+                "+8%",
+                "late"
+              ],
+              [
+                "Review",
+                "flag"
+              ]
+            ],
+            [
+              "Candle set",
+              "1",
+              "₹160",
+              "No change",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Chocolates, 100 g",
+              "1",
+              "₹180",
+              "No change",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Packing, card, ribbon",
+              "1",
+              "₹210",
+              "No change",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Diwali hamper costs ₹1,055 against a price of ₹1,499. Margin ₹444, down from ₹482 after the dry fruit rate rise.",
+          "action": "Review price"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "20% off on 5 hampers, asked by counter",
+              "meta": "Reason: neighbour, repeat buyer",
+              "tag": [
+                "Approve?",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "title": "Customers",
+      "meta": "Occasions in the next 14 days",
+      "heading": "Occasions, repeat buyers and big events",
+      "caption": "Customers with a birthday, anniversary or festival coming, with their usual budget and last purchase, and large event orders with their phases.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Occasion",
+            "Date",
+            "Usual spend",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Vikram P.",
+              "Wedding anniversary",
+              "23 Oct",
+              "₹2,500",
+              [
+                "Call",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            ],
+            [
+              "Neha T.",
+              "Brother’s birthday",
+              "27 Oct",
+              "₹1,200",
+              [
+                "Message",
+                "flag"
+              ]
+            ],
+            [
+              "Mrs. Fernandes",
+              "Diwali, 10 hampers",
+              "20 Oct",
+              "₹12,000",
+              [
+                "Call",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Menon wedding, return gifts",
+          "sub": "200 boxes, delivery 14 Nov",
+          "fields": [
+            [
+              "Advance",
+              "₹60,000"
+            ],
+            [
+              "Balance",
+              "₹1.4 lakh"
+            ],
+            [
+              "Packed",
+              "80 of 200"
+            ],
+            [
+              "Waiting",
+              [
+                "Brass trays",
+                "late",
+                "Arrived",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "12 Oct",
+              "Advance received"
+            ],
+            [
+              "10 Oct",
+              "Design approved by family"
+            ],
+            [
+              "Note",
+              "Add a thank-you card in Tamil"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Diwali week day, before and after.",
+  "dayLede": "What changes is not the gifts. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "10:00",
+      "before": "You open up and check the shelves. You think the diya sets are low but do not know by how much.",
+      "after": "The Today screen shows 46 left against a plan of 120 a week, and an order is drafted."
+    },
+    {
+      "time": "11:30",
+      "before": "A mug is due at 11 and the customer has not approved the proof. You find out at 11:10.",
+      "after": "The order showed proof pending at 9. The counter chased, the proof was approved, and the mug went out on time."
+    },
+    {
+      "time": "1:00",
+      "before": "A company asks for fifty boxes. You reply in the evening.",
+      "after": "The enquiry is on the corporate board with an owner and a reminder. The quote goes out before lunch."
+    },
+    {
+      "time": "4:00",
+      "before": "A customer asks for a special price. The counter calls you at the packing table.",
+      "after": "It lands as a one-tap approval on your phone with the reason attached."
+    },
+    {
+      "time": "8:30",
+      "before": "You count cash against the bills and advances. It is ₹420 off.",
+      "after": "Verity shows the two entries that do not tie. You settle them in a minute."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks which items were at which tax rate and what the corporate buyers owe.",
+      "after": "Each bill carries the item’s tax category and every corporate invoice has its due date and balance."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time in your shop, build Verity around how your gift shop really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a morning and an afternoon in your shop, ideally close to a festival. Watch how a custom order, a corporate quote and a hamper move through, how stock arrives and how the day is counted, and note which leaks matter most.",
+        "you": "Two to three hours of yours and your senior assistant’s. Access to your billing reports, last festival’s purchases and your corporate buyer list.",
+        "get": "A written map of your shop: the item range by season, your suppliers, your hampers with their parts, your custom-order steps and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your items with tax categories, festival calendars, reorder points, suppliers, hamper recipes, custom-order steps, delivery tasks, discount limits and corporate accounts, and build the six screens around your own terms.",
+        "you": "Check the setup with your senior assistant. Tell us where a hamper recipe or a rule is wrong.",
+        "get": "A working Verity with your real items, hampers, buyers and staff, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your item list, supplier rates, corporate buyers with balances, customer contacts with occasions and open custom orders from the sheets and notebooks you use. Train the counter and packing teams during a real shift.",
+        "you": "Your stock list in whatever form it exists, your customer and buyer contacts, and an opening stock count. One hour with each role.",
+        "get": "Your items, orders and buyers inside Verity, and a team that has used it through a busy day."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune the reorder points and chase rules, and prepare with you for the next festival.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the shop runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Occasions, seasons, ranges', 'Records'],
-    ['Sales, personalisation orders, corporate orders', 'Orders'],
-    ['Customers, corporate accounts', 'Relationships'],
-    ['Engraving, wrapping, assembly', 'Work'],
-    ['Suppliers, importers, artisans', 'Suppliers'],
-    ['Shop staff, seasonal staff', 'People'],
-    ['Shop, storeroom, workroom', 'Locations'],
-  ],
-
-  challengesHeading: 'Short peaks and stock with an expiry that is a date.',
-  challengesLede:
-    'Gift retail difficulties come from concentrated demand and stock whose value ends when the occasion does.',
-  challenges: [
-    { problem: 'Occasion stock has no second chance', detail: 'What does not sell before the date has no natural demand for a year, and it is bought again next season anyway.', outcome: 'Stock is tagged to its occasion, so residual value and clearance timing are planned rather than discovered.' },
-    { problem: 'Peak stockouts cannot be recovered', detail: 'Reordering a fast line after the peak week is pointless, because the demand belonged to the date.', outcome: 'Peak availability is planned from last year’s daily pattern rather than from a general reorder point.' },
-    { problem: 'Personalisation promises tie to fixed dates', detail: 'An engraved gift promised for an anniversary is worthless the day after, and the promise lives on a slip.', outcome: 'Personalisation is work with a promised date, an owner and a state, visible as at-risk before the date.' },
-    { problem: 'Corporate orders stall on client confirmation', detail: 'Quantities and artwork are agreed late, compressing production against a fixed delivery date.', outcome: 'Confirmation is a tracked step against the required lead time rather than the delivery date.' },
-    { problem: 'Staffing is planned as though the year were smooth', detail: 'Peak weeks need several times normal cover and are rostered from a standard pattern.', outcome: 'Staffing is planned against last year’s hourly pattern for the same occasion.' },
-    { problem: 'Buying repeats last year without last year’s numbers', detail: 'Occasion buying is done on memory, so the same lines are over-bought and the same ones sell out.', outcome: 'Sell-through by occasion and line is recorded, so next year’s buy starts from evidence.' },
-  ],
-
-  modulesLede: 'One system across the occasion calendar, personalisation and corporate orders.',
-  modules: [
-    { id: 'records', title: 'Occasions, ranges and calendars', line: 'Occasions are records with their dates, ranges, historical demand pattern and lead times.', why: 'The calendar is known a year ahead and is the only useful planning basis in the format.', example: 'Last year’s daily sales pattern for the same occasion, driving this year’s buy and roster.' },
-    { id: 'inventory', title: 'Stock tagged to occasions', line: 'Stock carries its occasion, season, cost, movement and residual value after the date.', why: 'Occasion stock is a different asset from year-round stock and cannot share a threshold.', example: 'Four point two lakh of prior-occasion stock, identified with a clearance plan rather than left on a shelf.' },
-    { id: 'work', title: 'Personalisation, wrapping and assembly', line: 'Each is work with a customer, a specification, a promised date, an owner and a state.', why: 'A gift promised for a date is worthless afterwards, which makes these promises unusually strict.', example: 'Eleven personalisation orders past their promised date, visible before the customer arrives.' },
-    { id: 'orders', title: 'Retail, personalisation and corporate orders', line: 'Orders record their items, personalisation, promised dates, deposits and state.', why: 'Corporate gifting is a different order type with lead times and artwork approvals.', example: 'Three corporate orders unconfirmed inside the production lead time.' },
-    { id: 'relationships', title: 'Customers and corporate accounts', line: 'Customers and corporate accounts carry their purchase history, occasions bought for and preferences.', why: 'Gift customers return for the same occasion each year, which is a predictable prompt.', example: 'Customers who bought for the same occasion last year, contacted before it.' },
-    { id: 'suppliers', title: 'Suppliers, importers and artisans', line: 'Suppliers carry lead times, minimum orders, delivery reliability against occasion dates and balances.', why: 'A supplier delivering to its own lead time rather than your occasion date misses the peak entirely.', example: 'Delivery measured against the occasion rather than against a general lead time.' },
-    { id: 'workforce', title: 'Peak staffing', line: 'Rostering and attendance connect to the hours and occasions they covered.', why: 'Gift retail staffing is extremely uneven and is usually rostered as if it were not.', example: 'Peak-week staffing built from last year’s hourly pattern.' },
-    { id: 'intelligence', title: 'Occasion, residual and promise reporting', line: 'Sell-through by occasion and line, residual stock value, personalisation delivery, corporate lead time adherence and peak staffing come from the records.', why: 'The whole year is decided in a few weeks, so post-occasion analysis is the only way next year improves.', example: 'Sell-through by line for the occasion, informing next year’s buy.' },
-    { id: 'ai', title: 'Ask the calendar a question', line: 'Verity AI answers from your own occasion, stock, order and customer records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about dates approaching and promises outstanding.', example: '"Which personalisation orders are at risk?" returns eleven with production assigned.' },
-    { id: 'workflows', title: 'Deposits, approvals and clearance', line: 'Deposits, artwork approvals, discounts and clearance move through defined steps with recorded decisions.', why: 'Corporate artwork approval is the gate that decides whether production makes the date.', example: 'Artwork approval tracked as a step with the lead time it consumes.' },
-    { id: 'people', title: 'Shop and seasonal staff', line: 'Staff including seasonal cover are modelled once, with every sale and personalisation order attributed.', why: 'Peak weeks run on temporary staff who need the same records as permanent ones.', example: 'Personalisation orders by the person who took them.' },
-    { id: 'locations', title: 'Shop, storeroom and workroom', line: 'Locations roll into the business with stock, work and reporting following the same structure.', why: 'Personalisation happens in a workroom whose queue is a real constraint at peak.', example: 'Workroom queue against promised dates during the peak.' },
-  ],
-
-  workflowsHeading: 'Planning against a calendar you already know.',
-  workflowsLede: 'These already happen. Recorded against the occasion, next year starts from evidence.',
-  workflows: [
-    { name: 'Occasion planning', steps: ['Last year’s sell-through by line pulled for the occasion', 'Daily demand pattern reviewed', 'Buy planned against evidence rather than memory', 'Supplier orders placed against the occasion date', 'Staffing planned from the historical hourly pattern'], note: 'The calendar is known twelve months ahead, which makes this the most plannable retail there is.' },
-    { name: 'Peak trading', steps: ['Availability tracked daily on the top lines', 'Stock moved from storeroom as needed', 'Out-of-stock recorded with the day', 'Staffing adjusted against actual footfall', 'Daily sell-through compared with the plan'], note: 'A stockout during the peak week cannot be recovered afterwards.' },
-    { name: 'Personalisation order', steps: ['Order taken with specification and promised date', 'Deposit recorded', 'Workroom queue position and owner assigned', 'Progress tracked against the date', 'Completion recorded and customer notified'], note: 'A gift late for its occasion is a failure rather than a delay.' },
-    { name: 'Corporate gifting order', steps: ['Enquiry recorded with quantity, budget and delivery date', 'Production lead time calculated backwards from it', 'Quantities and artwork confirmation tracked against that date', 'Production scheduled and progress recorded', 'Delivery completed and balance collected'], note: 'Confirming against the lead time rather than the delivery date is what makes the date achievable.' },
-    { name: 'Post-occasion clearance', steps: ['Residual stock identified by occasion', 'Realistic residual value assessed', 'Clearance or hold-for-next-year decision taken', 'Markdown applied and recorded', 'Result fed into next year’s buying'], note: 'Holding occasion stock for a year has a cost that is rarely compared with clearing it now.' },
-  ],
-
-  ai: {
-    heading: 'Ask against the calendar.',
-    lede: 'Verity AI reads the same occasion, stock, order and customer records the shop creates as it trades. It answers from your own shop, respects permissions, and can turn an answer into production and buying decisions.',
-    panelMeta: 'Grounded in your shop records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which personalisation orders are at risk against their promised date?',
-      'Which corporate orders are unconfirmed inside the production lead time?',
-      'What sold out during the peak week last year?',
-      'What residual stock remains from prior occasions?',
-      'Which customers bought for this occasion last year?',
-      'What was sell-through by line for the last occasion?',
-      'How does staffing need to change for the peak week?',
-      'Which suppliers deliver late against occasion dates?',
-      'Summarise readiness for the coming occasion.',
+    "bring": [
+      "Your item list with prices and the suppliers you buy from",
+      "Last festival’s purchase slips and sales if you have them",
+      "Your hamper recipes and packing costs",
+      "Corporate buyers with any balances",
+      "Customer contacts with the occasions you know"
     ],
+    "time": "About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your senior assistant needs a few more.",
+    "after": "Nobody is hired to run Verity. Sales, orders and deliveries are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The dates that do not move.',
-  automationLede: 'Each runs from the shop’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A personalisation order approaches its promised date', steps: ['Flagged with workroom queue position', 'Escalated to the owner', 'Customer update raised if it will be late'] },
-    { trigger: 'A corporate order is unconfirmed inside lead time', steps: ['Flagged with the production time remaining', 'Confirmation chase assigned', 'Date risk communicated'] },
-    { trigger: 'An occasion approaches', steps: ['Last year’s pattern surfaced for buying and staffing', 'Supplier orders checked against the date', 'Peak roster prepared'] },
-    { trigger: 'A top line falls below cover during peak', steps: ['Flagged with days of peak remaining', 'Storeroom stock or urgent order raised', 'Out-of-stock recorded if it occurs'] },
-    { trigger: 'An occasion passes', steps: ['Residual stock identified and valued', 'Clearance or hold decision raised', 'Sell-through recorded for next year'] },
+  "ai": {
+    "heading": "Ask your gift shop a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own stock, orders, buyer and customer records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which festival items are still on the shelf and what are they worth?",
+        "a": "₹1.2 lakh at cost is left from the festival. String lights and premium rakhis are the largest groups.",
+        "rows": [
+          [
+            "String lights",
+            "₹52,000"
+          ],
+          [
+            "Premium rakhis",
+            "₹34,000"
+          ],
+          [
+            "Gift boxes, large",
+            "₹21,000"
+          ],
+          [
+            "Other",
+            "₹13,000"
+          ]
+        ],
+        "action": "Create a markdown task for each group"
+      },
+      {
+        "q": "Which corporate quotes have had no reply in 24 hours?",
+        "a": "Two. Rao & Co. has waited 26 hours for 50 Diwali boxes and TechNova needs a sample decision.",
+        "action": "Assign both to the owner of the enquiry"
+      },
+      {
+        "q": "Which customers have an occasion in the next two weeks?",
+        "a": "11 customers have a birthday or anniversary coming. Four of them spent over ₹2,000 last time.",
+        "rows": [
+          [
+            "Anniversaries",
+            "5"
+          ],
+          [
+            "Birthdays",
+            "4"
+          ],
+          [
+            "Festival hampers",
+            "2"
+          ]
+        ],
+        "action": "Create call tasks for the person who knows each customer"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers and suppliers; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "An item falls below its reorder point in a festival week",
+      "then": [
+        "Checked against the same week last year",
+        "Order drafted with the supplier’s lead time",
+        "Stock updated when the delivery is received"
+      ]
+    },
+    {
+      "when": "A custom order proof is not approved by its cut-off time",
+      "then": [
+        "Flagged on the custom orders screen",
+        "Task to the counter to chase the customer",
+        "Approval or delay recorded against the order"
+      ]
+    },
+    {
+      "when": "A corporate enquiry has no reply in a few hours",
+      "then": [
+        "Flagged on the corporate board",
+        "Reminder to the owner of the enquiry",
+        "Quote and outcome recorded"
+      ]
+    },
+    {
+      "when": "A corporate invoice passes its due date",
+      "then": [
+        "Added to the owed list by age",
+        "Task to the owner on your schedule",
+        "Promise to pay recorded"
+      ]
+    },
+    {
+      "when": "A discount goes above your limit",
+      "then": [
+        "Held for approval",
+        "Routed to the owner with the reason",
+        "Decision recorded against the bill"
+      ]
+    },
+    {
+      "when": "A customer’s occasion is two weeks away",
+      "then": [
+        "Added to the occasions list with their usual budget",
+        "Task to the person who knows them",
+        "Outcome recorded: bought, declined or unreachable"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the owner can see.',
-  intelligenceLede: 'A year decided in a few weeks, measured against the calendar.',
-  intelligence: [
-    { area: 'Occasions', points: ['Sell-through by line and occasion', 'Daily demand pattern within the peak', 'Stockouts during peak weeks', 'Year-on-year comparison by occasion'] },
-    { area: 'Residual stock', points: ['Value remaining by occasion', 'Realistic residual demand', 'Clearance recovery against cost', 'Stock held over to next year'] },
-    { area: 'Promises', points: ['Personalisation orders against promised dates', 'Workroom queue and capacity', 'Late deliveries and their causes', 'Corporate lead time adherence'] },
-    { area: 'Customers', points: ['Repeat buying by occasion', 'Corporate account value and frequency', 'Customers to prompt before each occasion', 'Average spend by occasion'] },
-    { area: 'Operations', points: ['Peak staffing against footfall', 'Supplier delivery against occasion dates', 'Deposits held on undelivered orders', 'Discounting during clearance'] },
+  "rules": {
+    "heading": "The rules a gift shop has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your accountant is not rebuilding them from a bill book.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.",
+    "items": [
+      {
+        "name": "GST on gift items",
+        "what": "From 22 September 2025, handicrafts and paper gift boxes generally moved from 12 to 5 percent, and some other gift items are at 18 percent. Sources disagree on a few items such as toys, candles and hampers, so check the tariff line for each.",
+        "how": "Each item carries its tax category and a mixed bill is split by line, so the split your accountant needs is already clean. A hamper records its parts.",
+        "source": {
+          "name": "taxo.online, 2025",
+          "url": "https://taxo.online/latest-news/17-09-2025-cbic-issued-various-notifications-to-give-effect-to-the-recommendations-of-the-56th-council-meeting-in-respect-to-rate-on-goods/"
+        }
+      },
+      {
+        "name": "Selling at or below MRP",
+        "what": "For packed goods, the Legal Metrology rules generally bar a dealer from selling above the printed retail price, with narrow exceptions for a valid tax revision.",
+        "how": "Each item records its MRP and the price charged, and a bill above it is flagged before it closes.",
+        "source": {
+          "name": "IndiaLaw, 2025",
+          "url": "https://www.indialaw.in/blog/criminal/overpricing-beyond-mrp-violates-consumer-law/"
+        }
+      },
+      {
+        "name": "Customer data and consent",
+        "what": "Phone numbers, addresses and the occasions people shop for are personal data. India’s data protection rules were notified on 13 November 2025, and most duties start in phases, with the main ones about 18 months later.",
+        "how": "Customer data sits in one permissioned place, with who viewed or changed it recorded, instead of in personal phones and notebooks.",
+        "source": {
+          "name": "AZB Partners, 2025",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Food items inside hampers",
+        "what": "If your hampers include packed food such as dry fruits or chocolates, the food safety rules for sellers of food may apply to you. Details depend on your turnover and category, so check with your adviser.",
+        "how": "Any registration or licence is stored as a record with its number and renewal date, and food parts in a hamper are tracked by batch expiry."
+      },
+      {
+        "name": "Shops and establishments registration and staff records",
+        "what": "Most states require a shops and establishments registration and records of working hours, weekly offs and leave. Details differ by state, so check your own.",
+        "how": "The registration is stored with its renewal date and owner, and shifts, attendance and leave are recorded against each person, including seasonal staff."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A packer should not see everyone’s pay. The counter should not edit supplier rates. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Which seasons and items pay, and who owes us?",
+      "sees": "Sales and margin by festival, item and hamper, corporate balances, custom orders and every counter side by side."
+    },
+    {
+      "role": "Manager",
+      "question": "What needs sorting this week?",
+      "sees": "Stock short for the next peak, custom orders due, quotes waiting, approvals and deliveries."
+    },
+    {
+      "role": "Counter staff",
+      "question": "What does this customer need?",
+      "sees": "The customer’s occasions and last purchase, open custom orders, and today’s follow-ups."
+    },
+    {
+      "role": "Packing and delivery",
+      "question": "What goes out and when?",
+      "sees": "Orders to pack by due time, hamper recipes, delivery tasks with addresses and windows."
+    },
+    {
+      "role": "Accountant",
+      "question": "What was bought, sold and owed?",
+      "sees": "Sales by payment mode and tax category, supplier invoices matched to deliveries, corporate balances and advances."
+    }
   ],
-  intelligenceNote: 'All of it comes from recording sales and orders against the occasion they belong to.',
-
-  rolesHeading: 'A seasonal business, three views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Owner', question: 'Am I buying and staffing for the right peak?', focus: 'Sell-through by occasion, residual stock, peak staffing, supplier reliability against dates.' },
-    { role: 'Shop staff', question: 'What is promised and what is in stock?', focus: 'Personalisation orders due, availability on top lines, customer history by occasion.' },
-    { role: 'Workroom', question: 'What is in the queue and by when?', focus: 'Personalisation and corporate orders by promised date, specifications, capacity against the peak.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing screen at the counter. We agree during setup how bills and payments reach Verity.",
+      "The marketplaces or social pages you sell on. We record their orders by channel.",
+      "WhatsApp and Instagram for customers and suppliers. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Run your billing counter or take online orders.",
+      "Host an online shop or take payment for orders.",
+      "Send messages to customers, buyers or suppliers on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your item list, supplier rates, corporate buyers, customer occasions and open custom orders across from the sheets, phones and notebooks you use now, in stages, so the shop keeps selling while it happens."
+  },
+  "faqHeading": "Questions gift shop owners ask.",
+  "faqs": [
+    [
+      "My business is mostly a few festival weeks. Is it worth setting up?",
+      "The peak weeks are where the leaks cost the most, and the quiet months are when you plan for them. We set it up in four weeks so it is working before your next peak, and the season history it builds is what makes next year’s buying easier."
+    ],
+    [
+      "Does Verity replace my billing system?",
+      "No. Your billing screen keeps taking bills and payments. We agree during setup how those bills reach Verity, which then does the stock, supplier, order and customer work around them."
+    ],
+    [
+      "Can it handle personalised orders?",
+      "Yes. Each custom order is a record with the exact text, the photo, the proof, the due time and the status, so nothing depends on a pad or a chat."
+    ],
+    [
+      "Can it cost a hamper?",
+      "Yes. A hamper is built from its parts at their latest purchase cost, so a rate rise on one part shows up as a changed margin on the hamper."
+    ],
+    [
+      "Can it take online orders?",
+      "No. If you sell through a marketplace or a social page today, that keeps working. Verity makes sure every order and enquiry has an owner and a next step."
+    ],
+    [
+      "I have a shop and a mall kiosk. Can I see them together?",
+      "Yes. Each is a location in one system, with stock, sales and orders side by side. Stock can move between them against a recorded transfer."
+    ],
+    [
+      "I hire extra hands for the festival. Can they use it?",
+      "Yes. A seasonal person gets a role that opens only what they need, and you switch it off when the season ends."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so counter staff, packers, managers and your accountant each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of counters, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your shop runs."
+    ]
   ],
-
-  useCasesHeading: 'What gift shops use Verity for',
-  useCases: [
-    { name: 'Occasion-based planning', body: 'Buying and staffing planned from last year’s sell-through and daily pattern rather than from memory.' },
-    { name: 'Peak availability', body: 'Daily availability on top lines during the peak, since a stockout there cannot be recovered afterwards.' },
-    { name: 'Personalisation promises', body: 'Orders as work with promised dates and workroom queue position, visible as at-risk before the occasion.' },
-    { name: 'Corporate lead times', body: 'Confirmation and artwork tracked against production lead time rather than delivery date.' },
-    { name: 'Residual stock decisions', body: 'Occasion-tagged stock valued realistically after the date, so holding for a year is compared with clearing now.' },
-    { name: 'Occasion customer prompts', body: 'Customers who bought for an occasion last year contacted before it comes round.' },
-    { name: 'Asking against the calendar', body: 'Plain-language questions across occasions, stock, promises and customers, with actions raised in the same step.' },
+  "related": [
+    "retail-stores",
+    "bookstores",
+    "home-decor-stores",
+    "wedding-planners",
+    "event-venues",
+    "department-stores"
   ],
-
-  migration: 'Your billing setup continues and is mapped during implementation. Stock with occasion tags, suppliers, corporate accounts and open personalisation orders are brought across, and Verity is configured around the shop’s calendar.',
-
-  faqHeading: 'Questions gift retailers ask',
-  faqs: [
-    ['What can AI software do for a gift shop?', 'Verity AI answers questions from your own occasion, stock, order and customer records: which personalisation orders are at risk, which corporate orders are unconfirmed inside lead time, what sold out during last year’s peak, what residual stock remains. Each answer can become a production or buying decision.'],
-    ['Why plan by occasion?', 'Because the year is a handful of dated peaks with long ordinary periods between them, and most annual revenue arrives in a few weeks. The calendar is known twelve months ahead, which makes this among the most plannable retail formats — and it is usually planned from memory.'],
-    ['What makes occasion stock different?', 'It is not slow-moving; it is out of season for a year the day after the date. That changes the clearance decision entirely, because holding it has a cost that is rarely compared against clearing it now.'],
-    ['How does it help with personalisation?', 'Personalisation is work with a specification, a promised date, a workroom queue position and an owner. A gift late for its occasion is a failure rather than a delay, so being able to see it at risk beforehand matters more than in most retail.'],
-    ['Can it handle corporate gifting?', 'Corporate orders carry quantities, artwork approvals and delivery dates, and confirmation is tracked against the production lead time calculated backwards from delivery — which is what makes the date achievable.'],
-    ['Does it help with peak staffing?', 'Last year’s hourly pattern for the same occasion drives this year’s roster, rather than staffing a peak week from a standard pattern.'],
-    ['Does Verity replace our billing software?', 'No. Billing continues and is mapped during implementation. Verity holds the occasion calendar, stock, personalisation, corporate orders and the reporting across them.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the occasion calendar and production process, configuration, migration of stock and open orders, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the next occasion.',
-  ctaLede: 'You already know the date. Tell us what you know about last year and we will show you the plan.',
-
-  related: ['home-decor-stores', 'bookstores', 'retail-stores', 'jewellery-stores', 'printing-businesses', 'cosmetics-stores'],
+  "ctaHeading": "Start with the festival stock you did not sell last year.",
+  "ctaLede": "Tell us how your gift shop runs and we will show you the leftover stock, the corporate quotes waiting and the custom orders at risk, using your own numbers."
 };

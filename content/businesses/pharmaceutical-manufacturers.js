@@ -1,181 +1,1194 @@
 export default {
-  slug: 'pharmaceutical-manufacturers',
-  status: 'published',
-  plural: 'pharmaceutical manufacturers',
-  subject: 'pharmaceutical manufacturer',
-
-  seo: {
-    title: 'AI business software for pharmaceutical manufacturers | Verity',
-    description:
-      'Verity gives pharmaceutical manufacturers one system for batch record completeness, deviations and corrective actions, release status, stability and recall traceability.',
-    keywords: [
-      'AI software for pharmaceutical manufacturers',
-      'pharmaceutical manufacturing management software',
-      'batch record and deviation tracking software',
-      'pharma release and recall traceability',
-    ],
+  "schema": 2,
+  "slug": "pharmaceutical-manufacturers",
+  "status": "published",
+  "plural": "pharmaceutical manufacturers",
+  "subject": "pharma plant",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Pharma manufacturer software for Indian plants | Verity",
+    "description": "Batch manufacturing records, QC holds and release, deviations and the paperwork behind revised Schedule M: the leaks in a pharma plant and the Verity screens that fix them.",
+    "keywords": [
+      "pharma manufacturing software India",
+      "batch manufacturing record tracking",
+      "QC hold and batch release",
+      "deviation and change control records",
+      "revised Schedule M documentation"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for pharmaceutical manufacturers',
-    headline: 'The batch is made. Until the record is complete, it does not exist.',
-    lede:
-      'In pharmaceutical manufacturing the documentation is not evidence of the product, it is a condition of it. Verity keeps the record complete as the batch is made.',
-    note: 'Verity runs the operation around your validated systems. Regulated process equipment stays where it is.',
-    panel: {
-      title: 'Site',
-      meta: 'Current position',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Batches awaiting release', value: '23', note: '9 on documentation' },
-        { label: 'Open deviations', value: '17', note: '6 past target closure' },
-        { label: 'Corrective actions overdue', value: '8', note: 'across 5 deviations' },
-        { label: 'Stability protocols active', value: '31', note: '4 pulls due this month' },
-      ],
-      rows: [
-        { name: '9 batches held on incomplete documentation', meta: 'Product made, value unrealisable', active: true },
-        { name: '6 deviations past target closure', meta: 'Ageing without owner escalation', active: true },
-        { name: '8 corrective actions overdue', meta: 'Effectiveness not yet verified', active: true },
-        { name: '4 stability pulls due this month', meta: 'Protocol schedule', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own site in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "orders",
+    "suppliers",
+    "logistics",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for pharmaceutical manufacturers",
+    "headline": "In a pharma plant, a batch is only as good as the record that proves it.",
+    "lede": "A tablet can be perfect and the batch still fail an inspection if the record behind it is incomplete. Batch manufacturing records, raw material approvals, quality control results, deviations and release sign-offs are what a regulator, a contract customer or a court reads. Verity ties these records to the batch, the lot, the people and the dates, so the paper trail is built as work is done rather than rebuilt afterwards.",
+    "oneLine": "One system that knows every approved material, every batch record, every hold, every deviation and every sign-off.",
+    "note": "Built for a plant where documentation is already strict. Verity does not replace your quality system; it keeps its records connected and its dates visible.",
+    "screen": "owner",
+    "screenNote": "batches, holds, deviations, documents and dues"
+  },
+  "today": {
+    "heading": "Most pharma plants have a quality system on paper and a lot of people holding it together.",
+    "paragraphs": [
+      "Batch records are issued from a master, filled in by hand on the floor, reviewed by production and then by quality. Between the floor and the file, pages get stuck, signatures are missing and corrections are made late.",
+      "Quality control has its own world: sample registers, instrument logs, results, out-of-specification investigations and stability studies. These connect to the batch only when someone writes the batch number on a result.",
+      "Deviations, change controls and complaints each have a register. A deviation raised in March may still be open in September because nobody owns the due date.",
+      "Revised Schedule M raised the documentation bar. For smaller units the effort is often carried by a few quality and production people who also do their normal jobs."
+    ],
+    "stack": [
+      "Master and batch records on paper",
+      "QC registers and instrument logs",
+      "Excel for stock, deviations and training",
+      "Accounts software",
+      "WhatsApp and email with customers and suppliers"
+    ],
+    "stackNote": "Each is needed. What is missing is one view that links a batch to its material, tests, deviations and release."
+  },
+  "painsHeading": "Where a pharma plant actually loses time, stock and standing.",
+  "painsLede": "These are the situations plant heads, quality heads and owners describe again and again. For each: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Batch records",
+      "title": "Batch records come back incomplete",
+      "scene": "A batch record returns to quality with two missing signatures, one overwritten entry and a missing weighing slip. Production has moved on to the next batch.",
+      "cost": "A batch that cannot be released waits. Records that look altered also draw questions. Reporting on one Supreme Court matter notes that failures in manufacturing and testing records can amount to an offence under the Drugs and Cosmetics Act.",
+      "fix": "Each batch record is a set of steps with a person, a time and a check. A step cannot be closed without the entry, and a missing step is listed for the shift in charge before the batch moves on.",
+      "screen": "batches",
+      "source": {
+        "name": "Raw Law on a Supreme Court ruling, 2026",
+        "url": "https://rawlaw.in/supreme-court-of-india-upholds-prosecution-of-pharma-manufacturer-for-schedule-m-violations-non-maintenance-of-manufacturing-records-attracts-section-18avi-read-with-section-27/"
+      }
     },
-  },
-
-  overview: {
-    heading: 'The record is the product, and an incomplete one is unsaleable inventory.',
-    paragraphs: [
-      'Pharmaceutical manufacturing has a characteristic no other manufacturing shares: a physically perfect batch with an incomplete record cannot be released. Nine batches held on documentation is finished value that cannot be invoiced, and the cause is almost never the product. It is a missing signature, an unattached result, an unclosed line clearance.',
-      'The second characteristic is deviations. Anything that departs from the approved procedure has to be recorded, investigated, assessed for impact and closed, and six deviations past their target closure is regulatory exposure accumulating quietly alongside held product.',
-      'The third is that corrective actions have to be shown to have worked. Eight overdue corrective actions is a commitment made to a regulator or an auditor that has not been discharged, and effectiveness verification is the part most often missed.',
-      'The fourth is stability. Products are on protocols with scheduled pulls, and a missed pull invalidates a data set that cannot be reconstructed.',
-      'The fifth is traceability in both directions: from a finished pack back to its raw material lots, and from a raw material lot forward to every batch and customer it reached.',
-      'Verity keeps the batch record complete as work happens, ages deviations and corrective actions against owners, and holds traceability in both directions.',
+    {
+      "area": "Stores",
+      "title": "Raw materials get used before they are approved",
+      "scene": "A new lot of an excipient arrives in a hurry. The sample goes to QC but the line needs it today. The lot is issued with an under test label that nobody checks.",
+      "cost": "A batch made from an unapproved lot may have to be quarantined or destroyed. The cost is the batch and the trust of the customer.",
+      "fix": "Each material lot has a status: quarantine, approved or rejected. Issuing is blocked unless the lot is approved. QC result entry changes the status, with who and when.",
+      "screen": "batches"
+    },
+    {
+      "area": "Quality control",
+      "title": "The QC result is in one place and the batch in another",
+      "scene": "The assay result for batch 24-118 is on an instrument printout. The batch record has the result written, but not the sample ID. A reviewer cannot tell which sample it was.",
+      "cost": "Review stretches to days. In an audit, a result you cannot trace to a sample is a finding.",
+      "fix": "Samples are recorded against batch and test, with the analyst, the instrument and the result. The batch record shows all results with their sample IDs, and the release screen shows which tests are pending.",
+      "screen": "qc"
+    },
+    {
+      "area": "Quality control",
+      "title": "Out-of-specification results are handled in a hurry",
+      "scene": "A dissolution result comes back low. The analyst repeats the test and records only the repeat. The investigation is a short note.",
+      "cost": "A repeat without a documented reason is a data integrity risk and a likely audit finding.",
+      "fix": "Each out-of-specification result opens an investigation record with its phases: lab check, review, decision. Every retest is linked to the original result and cannot hide it, and open ones are listed by age.",
+      "screen": "qc"
+    },
+    {
+      "area": "Deviations",
+      "title": "Deviations sit open for months",
+      "scene": "A temperature excursion in the packing area was logged in March. The root cause was never agreed, so the corrective action is blank.",
+      "cost": "Open deviations block batch release and show up at audits as a lack of control.",
+      "fix": "Each deviation is a record with batch, area, owner, classification, root cause, action and due date. Verity lists open deviations by age and owner, and links each to the batches it affects.",
+      "screen": "deviations"
+    },
+    {
+      "area": "Change control",
+      "title": "Changes are made without a trail",
+      "scene": "A supplier changes, a mixing time is shortened, a new packing line is used. The change is agreed on a call and put into practice the next week.",
+      "cost": "A change nobody assessed can alter product quality and leaves no justification at inspection.",
+      "fix": "Each change is a request with an assessment, approvals by the right roles, and the batches made under it. The master record only changes after approval, and the history stays.",
+      "screen": "deviations"
+    },
+    {
+      "area": "Compliance",
+      "title": "Revised Schedule M asks for more than the old paperwork",
+      "scene": "A unit that met the old rules now needs a Pharmaceutical Quality System, quality risk management, qualification and validation, complaint and recall procedures, and change control, as the updated Schedule M expects. The MSME timeline was set to 31 December 2025 for units that filed an upgrade plan.",
+      "cost": "Units that cannot show the system face audits, penalties and possibly closure, per reports on the upgrade timeline.",
+      "fix": "Each requirement is a task with an owner, a due date and evidence. Verity shows readiness by area, the open gaps and the documents each gap needs, so the quality head can show where the plant stands.",
+      "screen": "gmp",
+      "source": {
+        "name": "India Briefing, India extends GMP compliance deadline, 2025",
+        "url": "https://www.india-briefing.com/news/india-extends-gmp-compliance-deadline-to-december-2025-35679.html"
+      }
+    },
+    {
+      "area": "Equipment",
+      "title": "Equipment calibration and validation lapse quietly",
+      "scene": "A balance or a tablet press was due for calibration last month. The sticker still shows an old date. A batch is weighed on it.",
+      "cost": "Results from an uncalibrated instrument can invalidate a batch. The cost is the batch and an investigation.",
+      "fix": "Each instrument and machine is an asset record with calibration, qualification and maintenance dates. Verity blocks use in the batch record when the date has passed, and opens tasks weeks ahead.",
+      "screen": "gmp"
+    },
+    {
+      "area": "People",
+      "title": "Training records do not match who is doing the job",
+      "scene": "A new operator is placed on granulation in his first week. His training on the SOP is dated after the batch. The training matrix is a spreadsheet updated before audits.",
+      "cost": "Work by an untrained person is a finding and, if it affects a batch, a deviation.",
+      "fix": "Each person's SOP training, with version and sign-off, is a record. A batch step asks for someone cleared for that SOP, and Verity lists people whose training is overdue or whose SOP version has changed.",
+      "screen": "gmp"
+    },
+    {
+      "area": "Complaints and recall",
+      "title": "A complaint or recall drill is slow",
+      "scene": "A distributor reports a defect in one batch. The team must find the batch, the customers, the remaining stock and the retained samples. It takes two days of calls.",
+      "cost": "A slow response increases exposure to the customer and the regulator. Regulators publish alerts of batches that fail testing, and failures are batch-specific.",
+      "fix": "A complaint is a record linked to batch, customer, dispatch and retained sample. Verity lists the affected batches, stock held, quantity shipped and customers, with tasks for each call.",
+      "screen": "batches",
+      "source": {
+        "name": "ETV Bharat on the July 2026 CDSCO alert",
+        "url": "https://www.etvbharat.com/en/bharat/cdsco-flags-280-drug-samples-as-nsq-or-spurious-in-july-enn26082107816"
+      }
+    },
+    {
+      "area": "Quality control",
+      "title": "Retained samples and stability studies are hard to track",
+      "scene": "Retained samples are on a shelf in a cold room with handwritten labels. A stability pull is due this week; the person who knows is on leave.",
+      "cost": "A missing retained sample cannot be tested when a complaint arrives. A missed stability pull leaves a gap in the data.",
+      "fix": "Each retained sample and stability pull is a record with batch, storage location and due date. Verity raises tasks at each pull and shows where each sample is.",
+      "screen": "qc"
+    },
+    {
+      "area": "Customers",
+      "title": "Contract and loan-licence customers need documents on time",
+      "scene": "A contract customer wants the batch record summary and certificate for a lot by Friday. Quality is in the middle of an audit.",
+      "cost": "A missed document date delays the customer's release, and the next order goes elsewhere.",
+      "fix": "Each order lists the documents required for release, with status and owner. Verity flags missing ones and shows delivery risk before the date.",
+      "screen": "orders"
+    },
+    {
+      "area": "Money",
+      "title": "Customers pay late and raw material is bought on short terms",
+      "scene": "A distributor owes ₹32 lakh for more than 75 days. The plant pays the API supplier in 30.",
+      "cost": "Since 1 April 2024, a buyer paying a micro or small supplier beyond the agreed period, capped at 45 days, generally cannot deduct the amount until paid. That affects the plant when it buys from small suppliers, and its own buyers when it sells to them.",
+      "fix": "Invoices and supplier bills are tracked against due dates and the limit where it applies. Verity lists overdue dues by customer and age, and bills nearing the limit.",
+      "screen": "orders",
+      "source": {
+        "name": "SetIndiaBiz, MSME 45 day payment rule, 2025",
+        "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
+      }
+    },
+    {
+      "area": "Owner",
+      "title": "The owner sees quality problems after they cost money",
+      "scene": "Rejected batches, open deviations and held stock are known by the quality head. The owner sees the cost on the month end report.",
+      "cost": "Decisions about capacity and customers run on late numbers.",
+      "fix": "One morning screen with batches released, on hold or rejected, open deviations by age, calibration and training due, deliveries and dues.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The Schedule M timeline comes from a trade explainer; sources disagreed on one filing date, so check CDSCO. The NSQ numbers are a press report of a regulator's monthly alert, and the alert says failures are batch-specific. The legal point is from a law blog summary of a court ruling, not the judgment.",
+  "facts": [
+    {
+      "figure": "20%",
+      "text": "of the world's supply of generic medicines by volume comes from India, which ranks third in pharmaceutical production by volume according to IBEF.",
+      "source": {
+        "name": "IBEF, Pharmaceutical industry in India, 2026",
+        "url": "https://www.ibef.org/industry/pharmaceutical-india"
+      }
+    },
+    {
+      "figure": "280",
+      "text": "drug samples were flagged as not of standard quality or spurious in July 2026, 40 by central labs and 240 by state labs; the regulator said failures are batch-specific.",
+      "source": {
+        "name": "ETV Bharat, 2026",
+        "url": "https://www.etvbharat.com/en/bharat/cdsco-flags-280-drug-samples-as-nsq-or-spurious-in-july-enn26082107816"
+      }
+    },
+    {
+      "figure": "31 December 2025",
+      "text": "was the deadline set for eligible MSME pharma units to meet revised Schedule M, after a Form A upgrade plan, with large manufacturers due by 28 June 2024.",
+      "source": {
+        "name": "India Briefing, 2025",
+        "url": "https://www.india-briefing.com/news/india-extends-gmp-compliance-deadline-to-december-2025-35679.html"
+      }
+    },
+    {
+      "figure": "2 years",
+      "text": "is the imprisonment term under section 27(d) of the Drugs and Cosmetics Act that, as reported, applies when manufacturing and testing records are not maintained or are manipulated in breach of Schedules M and U.",
+      "source": {
+        "name": "Raw Law, 2026",
+        "url": "https://rawlaw.in/supreme-court-of-india-upholds-prosecution-of-pharma-manufacturer-for-schedule-m-violations-non-maintenance-of-manufacturing-records-attracts-section-18avi-read-with-section-27/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your plant's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Plant / Today",
+      "meta": "Unit: Baddi",
+      "heading": "The owner's morning view",
+      "caption": "Batch status, quality holds, open deviations, calibration and training due, deliveries and dues on one screen. It replaces the daily call to the quality head.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Batches in process",
+              "value": "7",
+              "note": "2 in packing"
+            },
+            {
+              "label": "On QC hold",
+              "value": "3",
+              "note": "1 over 5 days"
+            },
+            {
+              "label": "Open deviations",
+              "value": "9",
+              "note": "2 past due"
+            },
+            {
+              "label": "Overdue dues",
+              "value": "₹52.4 lakh",
+              "note": "4 customers"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Batches released by week, last 4 weeks"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Week 38",
+              "value": 72,
+              "display": "18 batches"
+            },
+            {
+              "label": "Week 39",
+              "value": 60,
+              "display": "15 batches"
+            },
+            {
+              "label": "Week 40",
+              "value": 44,
+              "display": "11 batches",
+              "tone": "muted"
+            },
+            {
+              "label": "Week 41",
+              "value": 52,
+              "display": "13 batches"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Two deviations are past their due date and block release of batch 24-121.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Balance B-03 calibration due in 6 days",
+              "meta": "Weighing room 2",
+              "tag": [
+                "Book",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            },
+            {
+              "name": "Training overdue: granulation SOP v5",
+              "meta": "3 operators",
+              "tag": [
+                "Assign",
+                "late",
+                "Scheduled",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "batches",
+      "title": "Batch records and release",
+      "meta": "Tablets, last 7 days",
+      "heading": "From material to release",
+      "caption": "Each batch shows the approved lots it used, steps done, QC results received and release status. Missing entries and pending tests are listed before the batch moves on.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Batch",
+            "Product",
+            "Steps",
+            "QC",
+            "Status"
+          ],
+          "rows": [
+            [
+              "24-118",
+              "Product P 500 mg",
+              "Complete",
+              "All passed",
+              [
+                "Ready for release",
+                "ok"
+              ]
+            ],
+            [
+              "24-119",
+              "Product P 500 mg",
+              "2 entries missing",
+              "Assay pending",
+              [
+                "Incomplete",
+                "late",
+                "Complete",
+                "ok"
+              ]
+            ],
+            [
+              "24-120",
+              "Product Q 10 mg",
+              "Complete",
+              "Dissolution OOS",
+              [
+                "Hold",
+                "flag",
+                "Investigation open",
+                "info"
+              ]
+            ],
+            [
+              "24-121",
+              "Product R syrup",
+              "Complete",
+              "Passed",
+              [
+                "Blocked: 2 deviations",
+                "late",
+                "Cleared",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Batch 24-120 / Product Q 10 mg",
+          "sub": "Batch size 300,000 tablets",
+          "fields": [
+            [
+              "Material lots",
+              "API-884, EXC-231, EXC-240"
+            ],
+            [
+              "Lot status",
+              "All approved"
+            ],
+            [
+              "Result",
+              "Dissolution 71% vs Q 80%"
+            ],
+            [
+              "Retest",
+              "Linked, in investigation"
+            ],
+            [
+              "Status",
+              [
+                "On hold",
+                "late",
+                "Released after investigation",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "8 Oct",
+              "Batch manufactured, steps complete"
+            ],
+            [
+              "10 Oct",
+              "Sample taken, analyst Rao"
+            ],
+            [
+              "12 Oct",
+              "OOS raised"
+            ],
+            [
+              "Next",
+              "Lab phase review due 16 Oct"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qc",
+      "title": "Quality control",
+      "meta": "Today and this week",
+      "heading": "Samples, out-of-specification and stability",
+      "caption": "Samples against tests, out-of-specification investigations with their phase and age, and retained sample and stability pulls with their locations and dates.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Sample",
+            "Batch",
+            "Test",
+            "Analyst",
+            "Status"
+          ],
+          "rows": [
+            [
+              "S-5521",
+              "24-119",
+              "Assay",
+              "Rao",
+              [
+                "Pending",
+                "flag",
+                "Result entered",
+                "ok"
+              ]
+            ],
+            [
+              "S-5524",
+              "24-120",
+              "Dissolution",
+              "Rao",
+              [
+                "OOS",
+                "late",
+                "Investigating",
+                "info"
+              ]
+            ],
+            [
+              "S-5527",
+              "24-121",
+              "Related substances",
+              "Menon",
+              [
+                "Passed",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Batch",
+            "Location",
+            "Due",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Stability pull, 6 months",
+              "23-088",
+              "Chamber 2",
+              "18 Oct",
+              [
+                "Due this week",
+                "flag",
+                "Pulled",
+                "ok"
+              ]
+            ],
+            [
+              "Retained sample",
+              "24-118",
+              "Cold room, shelf 4",
+              "Keep",
+              [
+                "Stored",
+                "ok"
+              ]
+            ],
+            [
+              "Stability pull, 3 months",
+              "24-040",
+              "Chamber 1",
+              "30 Oct",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "OOS-31 has been open 4 days. Lab phase review is the next step.",
+          "action": "Open"
+        }
+      ]
+    },
+    {
+      "id": "deviations",
+      "title": "Deviations and change",
+      "meta": "Open items",
+      "heading": "Deviations, changes and complaints",
+      "caption": "Every deviation, change request and complaint has an owner, a classification and a due date. Each links to the batches it affects and stays open until the action is done and checked.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Investigation",
+              "cards": [
+                {
+                  "title": "DEV-142 Packing area temperature",
+                  "meta": "Raised 21 Mar, owner Quality",
+                  "tag": [
+                    "Past due",
+                    "late",
+                    "Closed",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "DEV-155 Missing weighing slip",
+                  "meta": "Batch 24-119, owner Production",
+                  "tag": [
+                    "In review",
+                    "info"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Action",
+              "cards": [
+                {
+                  "title": "CC-27 New blister line",
+                  "meta": "Assessment signed by 3 of 4",
+                  "tag": [
+                    "Waiting QA head",
+                    "flag",
+                    "Approved",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "CMP-09 Cracked tablets, Distributor",
+                  "meta": "Batch 24-091, samples traced",
+                  "tag": [
+                    "Reply due",
+                    "late"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Batches affected",
+            "Age",
+            "Owner",
+            "Status"
+          ],
+          "rows": [
+            [
+              "DEV-142",
+              "24-088, 24-089",
+              "210 days",
+              "Quality",
+              [
+                "Past due",
+                "late"
+              ]
+            ],
+            [
+              "DEV-155",
+              "24-119",
+              "4 days",
+              "Production",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "CC-27",
+              "None yet",
+              "9 days",
+              "QA head",
+              [
+                "Pending",
+                "flag"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gmp",
+      "title": "GMP and readiness",
+      "meta": "Revised Schedule M tracker",
+      "heading": "Documents, training, calibration and readiness",
+      "caption": "Each requirement of the updated GMP standard is a task with an owner, a due date and evidence. Calibration, qualification and training dates sit beside it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Area",
+            "Open tasks",
+            "Owner",
+            "Due",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Pharmaceutical quality system",
+              "3",
+              "QA head",
+              "30 Nov",
+              [
+                "In progress",
+                "info"
+              ]
+            ],
+            [
+              "Quality risk management",
+              "2",
+              "QA head",
+              "15 Dec",
+              [
+                "Behind",
+                "late",
+                "Back on plan",
+                "ok"
+              ]
+            ],
+            [
+              "Qualification and validation",
+              "5",
+              "Engineering",
+              "31 Jan",
+              [
+                "In progress",
+                "info"
+              ]
+            ],
+            [
+              "Complaint and recall procedures",
+              "1",
+              "Quality",
+              "Done",
+              [
+                "Complete",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Instrument or machine",
+            "Last calibrated",
+            "Due",
+            "Owner",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Balance B-03",
+              "14 Apr",
+              "14 Oct",
+              "Maintenance",
+              [
+                "Due this week",
+                "late",
+                "Booked 17 Oct",
+                "ok"
+              ]
+            ],
+            [
+              "Tablet press TP-2",
+              "Jun",
+              "Dec",
+              "Maintenance",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "HPLC-1",
+              "Aug",
+              "Feb",
+              "QC",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Granulation SOP v5 read and signed: Dinesh",
+              "meta": "Due 20 Oct",
+              "done": false
+            },
+            {
+              "text": "Gowning training, new joiners",
+              "meta": "Completed 8 Oct",
+              "done": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "title": "Orders and dues",
+      "meta": "This week",
+      "heading": "Orders, documents and dues",
+      "caption": "Each order with its release documents, batch status and promised date. Dues by customer and age, with the owner of each relationship.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Order",
+            "Customer",
+            "Product",
+            "Documents",
+            "Promise"
+          ],
+          "rows": [
+            [
+              "PO-4410",
+              "Contract customer A",
+              "Product P",
+              "2 of 3 ready",
+              [
+                "Missing summary",
+                "late",
+                "Sent",
+                "ok"
+              ]
+            ],
+            [
+              "PO-4414",
+              "Distributor B",
+              "Product Q",
+              "Waiting batch",
+              [
+                "Batch on hold",
+                "flag",
+                "Replaced by 24-122",
+                "ok"
+              ]
+            ],
+            [
+              "PO-4417",
+              "Distributor C",
+              "Product R",
+              "Ready",
+              [
+                "Fri",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Owed",
+            "Age",
+            "Owner",
+            "Next step"
+          ],
+          "rows": [
+            [
+              "Distributor B",
+              "₹32.0 lakh",
+              "78 days",
+              "Kavita",
+              [
+                "Call due",
+                "late",
+                "Promised 24 Oct",
+                "info"
+              ]
+            ],
+            [
+              "Contract customer A",
+              "₹14.1 lakh",
+              "50 days",
+              "Kavita",
+              [
+                "Reminder",
+                "flag"
+              ]
+            ],
+            [
+              "Distributor C",
+              "₹6.3 lakh",
+              "22 days",
+              "Arun",
+              [
+                "On track",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Monday, before and after.",
+  "dayLede": "What changes is not the product. It is that each step leaves a connected record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "8:30",
+      "before": "Quality and production meet to find out which batches are waiting and why.",
+      "after": "The Today screen shows 3 batches on hold, 9 open deviations and the two blocking release."
+    },
+    {
+      "time": "10:30",
+      "before": "A lot is issued under test because the line needs it.",
+      "after": "Issue is blocked until the lot is approved, and QC result entry unlocks it."
+    },
+    {
+      "time": "12:00",
+      "before": "A reviewer finds a batch record missing two entries and chases the shift.",
+      "after": "Missing entries were listed before the batch moved on, and the shift fixed them the same day."
+    },
+    {
+      "time": "3:00",
+      "before": "An out-of-specification result is retested without a trail.",
+      "after": "The retest is linked to the original and the investigation shows its phase and age."
+    },
+    {
+      "time": "5:30",
+      "before": "A calibration date was missed and a batch was weighed on that balance.",
+      "after": "A task opened weeks earlier and the batch step would not accept the balance after its date."
+    },
+    {
+      "time": "Month end",
+      "before": "The audit file is built from many registers.",
+      "after": "Batches, deviations, training and calibration are already linked."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time on your floor, in quality control and in stores, build Verity around how your plant really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day in your plant. Follow a material lot from receipt to approval, a batch from issue to release, and a deviation from raising to closing, and note where records are made and lost.",
+        "you": "Two to three hours of yours, the quality head's and the production head's. A few batch records, registers and the audit finding list.",
+        "get": "A written map of your plant: products, batch record steps, material approval flow, QC tests, deviation and change process, and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up products and batch record steps, lot status rules, QC tests and ranges, deviation and change workflows, calibration and training records, the readiness tracker and the six screens in your own terms.",
+        "you": "Check the setup with the quality and production heads. Tell us where a step, range or approval is wrong.",
+        "get": "A working Verity with your real products, rules and people, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your material and product lists, open deviations and changes, calibration and training dates and open dues from your registers and accounts export. Train production, QC, stores, QA and accounts at their stations.",
+        "you": "Your registers in whatever form they exist, an opening stock by lot and status, and the dues list. One hour with each role.",
+        "get": "Your plant's data inside Verity and a team that has used it through a real batch and release."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks of holds, deviations and readiness with you, tune workflows, and change setup when you add a product or a line.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the plant runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Products, strengths, presentations', 'Work'],
-    ['Batches, stages, line clearance', 'Workflows'],
-    ['Deviations, investigations, corrective actions', 'Records'],
-    ['Active ingredients, excipients, packaging', 'Inventory'],
-    ['Release, quarantine, rejection', 'Control'],
-    ['Distributors, institutions, markets', 'Relationships'],
-    ['Operators, analysts, quality staff', 'People'],
-  ],
-
-  challengesHeading: 'Complete documentation is the release condition.',
-  challengesLede:
-    'Pharmaceutical difficulties come from a product whose record is part of the product.',
-  challenges: [
-    { problem: 'Batches wait on documentation, not on product', detail: 'Manufacturing is complete and release is blocked by missing entries or signatures.', outcome: 'Record completeness is visible per batch as it is made, so gaps are closed at the stage.' },
-    { problem: 'Deviations age without escalation', detail: 'Investigations run past target closure with no owner being pressed.', outcome: 'Deviations carry owner, target date and ageing, with escalation at threshold.' },
-    { problem: 'Corrective action effectiveness is never verified', detail: 'The action is completed and whether it worked is not assessed.', outcome: 'Effectiveness verification is a scheduled step with its own owner and evidence.' },
-    { problem: 'Stability pulls are missed', detail: 'A scheduled pull passes and the data point cannot be recovered.', outcome: 'Protocols generate scheduled pulls with owners and completion evidence.' },
-    { problem: 'Traceability is reconstructed under pressure', detail: 'A recall question requires assembling lot genealogy from several systems.', outcome: 'Forward and backward traceability is a query against the records, not a project.' },
-    { problem: 'Training and authorisation lapse silently', detail: 'A person performs a step they are no longer qualified for.', outcome: 'Authorisation and training currency sit against the person and the step.' },
-  ],
-
-  modulesLede: 'One system across batches, quality events, release and traceability.',
-  modules: [
-    { id: 'workflows', title: 'Batches, stages and record completeness', line: 'Each batch carries its stages, line clearance, in-process checks, entries, signatures and current completeness against the required record.', why: 'Completeness at the stage is what prevents a held batch at release.', example: 'Nine batches held on incomplete documentation.' },
-    { id: 'records', title: 'Deviations, investigations and corrective actions', line: 'Quality events carry classification, impact assessment, investigation, owner, target closure, actions and effectiveness verification.', why: 'Ageing quality events are regulatory exposure and held product at the same time.', example: 'Six deviations past target closure with eight overdue actions.' },
-    { id: 'control', title: 'Release, quarantine and authority', line: 'One permission model and one audit trail, with quarantine, release and rejection as controlled states carried by authorised people.', why: 'Release authority is personal and auditable, and the state of every batch must be unambiguous.', example: 'Twenty-three batches awaiting release by state and blocker.' },
-    { id: 'inventory', title: 'Actives, excipients, packaging and lots', line: 'Materials are held by lot with supplier, analysis, retest date, quarantine state and consumption per batch.', why: 'Traceability starts at the material lot and its release status.', example: 'Material lots consumed by batch with release status.' },
-    { id: 'intelligence', title: 'Release, quality event and traceability reporting', line: 'Held batches by cause, deviation ageing, action closure, stability adherence and traceability queries come from the records.', why: 'Site performance is measured in release cycle time and quality event closure.', example: 'Release cycle time by product and blocker type.' },
-    { id: 'work', title: 'Products, strengths and presentations', line: 'Each product carries its specification, required batch record structure, stability protocols and market authorisations.', why: 'What a batch record must contain is a property of the product and its markets.', example: 'Required record structure by product and market.' },
-    { id: 'people', title: 'Operators, analysts and quality staff', line: 'Staff carry training currency, authorisations per step, and the batches and analyses they performed.', why: 'A step performed without current authorisation is a deviation by itself.', example: 'Authorisation currency against steps performed.' },
-    { id: 'ai', title: 'Ask the site a question', line: 'Verity AI answers from your own batch, quality event, material and release records, respects permissions, and can create assigned follow-ups.', why: 'The questions that matter are about what is held and what is ageing.', example: '"Which batches are held and on what?" returns twenty-three by blocker.' },
-    { id: 'locations', title: 'Sites, lines, rooms and stores', line: 'Locations carry classification, line clearance status, equipment and current batch occupancy.', why: 'Line clearance is a record with a place and a time attached.', example: 'Line clearance status by room and line.' },
-    { id: 'suppliers', title: 'Material suppliers and qualification', line: 'Suppliers carry qualification status, audit history, lot performance and change notifications.', why: 'A supplier change is a regulatory event, not only a commercial one.', example: 'Supplier qualification status against materials in use.' },
-    { id: 'logistics', title: 'Dispatch, distribution and recall reach', line: 'Dispatch records connect released batches to distributors, institutions and markets.', why: 'Recall reach is only as good as the record of where the batch went.', example: 'Forward traceability from a lot to every customer reached.' },
-    { id: 'communication', title: 'Regulatory and customer correspondence', line: 'Queries, notifications and commitments attach to the batch, product or event they concern.', why: 'A commitment made in correspondence has to become a tracked obligation.', example: 'Regulatory commitments recorded against the events they arose from.' },
-  ],
-
-  workflowsHeading: 'Dispense, manufacture, test, review, release.',
-  workflowsLede: 'These already happen. Recorded as they happen, release stops waiting on paperwork.',
-  workflows: [
-    { name: 'Batch manufacture', steps: ['Line clearance recorded before start', 'Materials dispensed from released lots', 'Stage entries and in-process checks captured as performed', 'Deviations raised at the point they occur', 'Record completeness confirmed at stage close'], note: 'Capturing entries as they are performed is what prevents reconstruction at review.' },
-    { name: 'Deviation and investigation', steps: ['Event recorded with classification and immediate action', 'Impact assessed on batches and products', 'Investigation assigned with target closure', 'Corrective actions defined with owners', 'Effectiveness verified and event closed'], note: 'Effectiveness verification is the step most often left undone.' },
-    { name: 'Batch review and release', steps: ['Record completeness checked against requirement', 'Analytical results attached and reviewed', 'Open deviations affecting the batch assessed', 'Release decision made by authorised person', 'State recorded and stock made available'], note: 'A batch cannot be released while an affecting deviation is open.' },
-    { name: 'Stability programme', steps: ['Protocol defined per product and presentation', 'Pulls scheduled with owners', 'Samples pulled and tested on schedule', 'Results recorded against the protocol', 'Trends reviewed and reported'], note: 'A missed pull creates a gap that cannot be filled later.' },
-    { name: 'Traceability and recall', steps: ['Material lot or finished batch identified', 'Backward genealogy assembled to source lots', 'Forward reach assembled to customers and markets', 'Affected quantity determined', 'Notification and retrieval tracked'], note: 'Both directions have to be answerable within hours, not days.' },
-  ],
-
-  ai: {
-    heading: 'Ask about held batches and open events.',
-    lede: 'Verity AI reads the same batch, quality event, material and release records the site creates as it operates. It answers from your own site, respects permissions, and can turn an answer into an assigned investigation or closure task.',
-    panelMeta: 'Grounded in your site records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which batches are held and on what blocker?',
-      'Which deviations are past target closure and who owns them?',
-      'Which corrective actions are overdue on effectiveness verification?',
-      'Which stability pulls are due or missed?',
-      'Which batches used this material lot?',
-      'Which customers received batches from this lot?',
-      'What is release cycle time by product?',
-      'Which staff performed steps outside current authorisation?',
-      'Summarise release and quality event position.',
+    "bring": [
+      "Your product list with batch record formats",
+      "Registers for material approval, deviations, changes and complaints",
+      "The calibration and training lists",
+      "Any audit or inspection findings",
+      "Open orders and dues"
     ],
+    "time": "About 10 to 14 hours of your own time across the four weeks, mostly in week 1. The quality head, production head and stores in charge need a few more.",
+    "after": "Nobody is hired to run Verity. Approvals, results, deviations and sign-offs are recorded as part of work the plant already does, and the reports come from those records."
   },
-
-  automationHeading: 'Completeness, ageing and schedules.',
-  automationLede: 'Each runs from the site’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A batch stage closes with incomplete entries', steps: ['Gaps listed against the stage', 'Owner assigned before progression', 'Completeness updated on entry'] },
-    { trigger: 'A deviation approaches target closure', steps: ['Escalated to the owner and quality', 'Affected batches listed', 'Extension or closure recorded'] },
-    { trigger: 'A corrective action passes its due date', steps: ['Flagged with the originating event', 'Escalation raised', 'Effectiveness verification scheduled on completion'] },
-    { trigger: 'A stability pull becomes due', steps: ['Task raised with protocol and owner', 'Sample and test recorded', 'Result attached to the protocol'] },
-    { trigger: 'A person’s authorisation lapses', steps: ['Affected steps and schedules flagged', 'Retraining assigned', 'Authorisation restored on completion'] },
+  "ai": {
+    "heading": "Ask your plant a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own batches, QC results, deviations and training. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which batches are waiting for release and why?",
+        "a": "Three batches are held. One is waiting for an assay, one has an open OOS investigation, and one is blocked by two past due deviations.",
+        "rows": [
+          [
+            "Assay pending",
+            "1"
+          ],
+          [
+            "OOS open",
+            "1"
+          ],
+          [
+            "Deviations blocking",
+            "1"
+          ]
+        ],
+        "action": "Create tasks for QC and QA"
+      },
+      {
+        "q": "Which deviations are past their due date?",
+        "a": "Two, DEV-142 at 210 days and DEV-139 at 64 days. Both affect released batches.",
+        "action": "Notify the owners and schedule a review"
+      },
+      {
+        "q": "Who is overdue on training for the new granulation SOP?",
+        "a": "Three operators, two on night shift.",
+        "rows": [
+          [
+            "Night shift",
+            "2"
+          ],
+          [
+            "Day shift",
+            "1"
+          ]
+        ],
+        "action": "Book training sessions"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers, suppliers and the regulator; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "A material lot arrives",
+      "then": [
+        "Status set to quarantine",
+        "QC sampling task created",
+        "Issue blocked until approved"
+      ]
+    },
+    {
+      "when": "A QC result is outside its limit",
+      "then": [
+        "Batch placed on hold",
+        "Investigation record opened with phases",
+        "Owner and due date assigned"
+      ]
+    },
+    {
+      "when": "A deviation passes its due date",
+      "then": [
+        "Listed on the quality head's screen",
+        "Escalated to the QA head",
+        "Batches it affects marked as blocked for release"
+      ]
+    },
+    {
+      "when": "A calibration, qualification or training date is 30 days away",
+      "then": [
+        "Task to the owner",
+        "Instrument use blocked in the batch record after the date",
+        "Next date set when done"
+      ]
+    },
+    {
+      "when": "A complaint is logged",
+      "then": [
+        "Batch, customers and stock listed",
+        "Retained sample location shown",
+        "Tasks created for each customer call and for the investigation"
+      ]
+    },
+    {
+      "when": "A release document is missing for an order",
+      "then": [
+        "Flagged on the order",
+        "Task to the document owner",
+        "Delivery risk shown to the planner"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the site can see.',
-  intelligenceLede: 'Release, quality events and traceability from operating records.',
-  intelligence: [
-    { area: 'Release', points: ['Batches by state and blocker', 'Release cycle time by product', 'Documentation gaps by stage', 'Value held awaiting release'] },
-    { area: 'Quality events', points: ['Deviations by classification and age', 'Investigation closure performance', 'Corrective action completion and effectiveness', 'Recurring event patterns'] },
-    { area: 'Materials', points: ['Lot release status and retest dates', 'Supplier qualification currency', 'Lot performance in manufacture', 'Quarantined stock by value'] },
-    { area: 'Traceability', points: ['Backward genealogy per batch', 'Forward reach per lot', 'Stability protocol adherence', 'Market and authorisation coverage'] },
+  "rules": {
+    "heading": "The rules a pharma plant has to keep up with.",
+    "lede": "Verity does not give legal or regulatory advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by licence and product type. Confirm current requirements with your regulatory adviser or the licensing authority.",
+    "items": [
+      {
+        "name": "Revised Schedule M (GMP)",
+        "what": "Revised Schedule M was notified on 28 December 2023. It expects a pharmaceutical quality system, quality risk management, qualification and validation, complaint and recall procedures and change control, among others. Larger manufacturers had until 28 June 2024, and eligible MSME units until 31 December 2025 after filing an upgrade plan. Check your own category and status with CDSCO.",
+        "how": "Each requirement is a task with an owner, a date and evidence, and Verity shows readiness by area.",
+        "source": {
+          "name": "India Briefing",
+          "url": "https://www.india-briefing.com/news/india-extends-gmp-compliance-deadline-to-december-2025-35679.html"
+        }
+      },
+      {
+        "name": "Manufacturing records under Rule 74 and Schedules M and U",
+        "what": "The Drugs Rules, 1945 and their schedules set documentation duties for manufacturers, including batch and testing records. A reported Supreme Court matter treated non-maintenance and manipulation of such records as a breach under section 18(a)(vi) of the Drugs and Cosmetics Act, punishable under section 27(d). Check the retention periods in the current rules.",
+        "how": "Batch steps, results and sign-offs are recorded with person and time, and corrections are kept as history.",
+        "source": {
+          "name": "Raw Law",
+          "url": "https://rawlaw.in/supreme-court-of-india-upholds-prosecution-of-pharma-manufacturer-for-schedule-m-violations-non-maintenance-of-manufacturing-records-attracts-section-18avi-read-with-section-27/"
+        }
+      },
+      {
+        "name": "Testing, alerts and recalls",
+        "what": "CDSCO and state laboratories test samples from the market and publish monthly alerts of batches not of standard quality, and these findings are batch-specific. Recall and complaint procedures are part of the GMP expectations.",
+        "how": "A complaint or alert is a record linked to the batch, customers and stock, so the response is traceable.",
+        "source": {
+          "name": "ETV Bharat",
+          "url": "https://www.etvbharat.com/en/bharat/cdsco-flags-280-drug-samples-as-nsq-or-spurious-in-july-enn26082107816"
+        }
+      },
+      {
+        "name": "Manufacturing licences and renewals",
+        "what": "A pharma unit holds manufacturing licences for its product categories, with renewals and conditions set by the state and central licensing authorities. Confirm your licence terms.",
+        "how": "Each licence is a record with number, category, conditions and renewal date, and renewals are tasks with an owner."
+      },
+      {
+        "name": "Payment terms for micro and small suppliers",
+        "what": "From 1 April 2024, a buyer that owes a micro or small seller generally must pay within the agreed period, capped at 45 days, or the amount is not deductible until paid.",
+        "how": "Supplier bills show due dates against that limit.",
+        "source": {
+          "name": "SetIndiaBiz",
+          "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "An operator should not edit a QC result. Sales should not release a batch. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Is the plant compliant, productive and getting paid?",
+      "sees": "Batches released and held, open deviations, readiness, deliveries and dues."
+    },
+    {
+      "role": "Quality assurance head",
+      "question": "What is open, past due or blocking release?",
+      "sees": "Deviations, changes, complaints, audit items and readiness by area."
+    },
+    {
+      "role": "Quality control head",
+      "question": "What is tested, pending or out of specification?",
+      "sees": "Samples, results, OOS investigations, retained samples and stability pulls."
+    },
+    {
+      "role": "Production head",
+      "question": "What is running and what is waiting?",
+      "sees": "Batch records, missing entries, lots approved, equipment status and training."
+    },
+    {
+      "role": "Stores and accounts",
+      "question": "What came in, what is approved and what is owed?",
+      "sees": "Lots by status, dispatches, supplier bills, customer dues."
+    }
   ],
-  intelligenceNote: 'Verity records the site’s operations around your validated systems. Regulated process equipment continues as it is.',
-
-  rolesHeading: 'One site, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Site head', question: 'What is held and why?', focus: 'Batches awaiting release by blocker, value held, deviation ageing, release cycle time.' },
-    { role: 'Production', question: 'Is the record complete as we go?', focus: 'Stage entries, line clearance, in-process checks, deviations raised at source.' },
-    { role: 'Quality assurance', question: 'What can be released?', focus: 'Record review, open deviations affecting batches, release decisions, authorisation currency.' },
-    { role: 'Regulatory', question: 'Are commitments discharged?', focus: 'Corrective action closure and effectiveness, stability adherence, traceability readiness, correspondence commitments.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your accounts software. We agree during setup how invoices and payments reach Verity.",
+      "Your laboratory instruments and their own software. We record results against the batch.",
+      "Your regulatory consultant, who still prepares and files what the authorities need.",
+      "Email and phone with customers and suppliers. Staff talk",
+      "Verity tracks who owes a reply."
+    ],
+    "not": [
+      "Run your instruments or control your machines.",
+      "Make quality decisions or release a batch for you.",
+      "File anything with the regulator.",
+      "Give regulatory, legal or medical advice."
+    ],
+    "migration": "We bring your products, material lists, open deviations and changes, calibration and training dates, stock by lot and open dues across from the registers and accounts export you use now, in stages, so production keeps running while it happens."
+  },
+  "faqHeading": "Questions pharma owners and quality heads ask.",
+  "faqs": [
+    [
+      "We already have a quality system. Does Verity replace it?",
+      "No. Your procedures stay yours. Verity keeps their records connected, so a batch, its materials, results, deviations and sign-offs can be seen together, with dates and owners."
+    ],
+    [
+      "Can it hold electronic batch records?",
+      "It records the steps, entries, people and times for a batch, and keeps corrections as history. How that fits your own validation approach is for your quality team; we agree it during setup."
+    ],
+    [
+      "Will operators on the floor really fill it in?",
+      "Only if it takes seconds at the point of work, so entry is where the work happens, in steps they already follow. We train during a real batch and start with the records that matter most."
+    ],
+    [
+      "Does it help with revised Schedule M?",
+      "It gives you a tracker with an owner, date and evidence for each requirement, and links the records to it. It does not decide whether you comply, and it does not replace your adviser."
+    ],
+    [
+      "Can it block use of an unapproved material lot?",
+      "Yes. A lot has a status, and issuing it to a batch is blocked until QC approves it. The change of status records who and when."
+    ],
+    [
+      "Does it replace my accounts software?",
+      "No. Your accounts stay where they are. We agree during setup how invoices and payments reach Verity, which then handles batches, quality, documents and dues."
+    ],
+    [
+      "Can I see more than one unit?",
+      "Yes. Each is a location in one system, with batches, holds, deviations and dues side by side."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so production, QC, QA, sales and accounts each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "How quickly will I see something useful?",
+      "The deviation list, calibration and training dates and overdue dues need only your existing data, so we aim to have them first. Batch and QC patterns become reliable after a few weeks of recorded work."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of units, people and what you want set up. Message us and we will give you a clear number after a short conversation about how your plant runs."
+    ]
   ],
-
-  useCasesHeading: 'What pharmaceutical manufacturers use Verity for',
-  useCases: [
-    { name: 'Keeping the batch record complete as it is made', body: 'Entries, checks and signatures captured at the stage with completeness visible, so release is not blocked by documentation on a physically finished batch.' },
-    { name: 'Ageing deviations against owners', body: 'Quality events carrying classification, impact, owner and target closure with escalation at threshold, so investigations do not drift past their dates.' },
-    { name: 'Verifying corrective action effectiveness', body: 'Effectiveness verification scheduled as its own step with evidence, closing the part of the cycle most often left open.' },
-    { name: 'Stability protocol adherence', body: 'Pulls generated on schedule with owners and results attached, because a missed pull is a gap that cannot be filled later.' },
-    { name: 'Traceability in both directions', body: 'Backward genealogy from a batch to its source lots and forward reach from a lot to every customer, answerable as a query.' },
-    { name: 'Authorisation currency', body: 'Training and step authorisation held against people, so a step performed without current qualification is prevented rather than found.' },
-    { name: 'Asking about the site', body: 'Plain-language questions across held batches, quality events, materials and traceability, with investigations assigned in the same step.' },
+  "related": [
+    "manufacturers",
+    "chemical-manufacturers",
+    "medical-distributors",
+    "pharmacies",
+    "packaging-companies",
+    "exporters"
   ],
-
-  migration: 'Validated process and analytical systems continue and are mapped during implementation. Products and record structures, material lots with release status, batch history, open deviations and corrective actions, stability protocols and distribution records are brought across.',
-
-  faqHeading: 'Questions pharmaceutical manufacturers ask',
-  faqs: [
-    ['What can AI software do for a pharmaceutical manufacturer?', 'Verity AI answers questions from your own batch, quality event, material and release records: which batches are held and on what blocker, which deviations are past target closure, which corrective actions are overdue on effectiveness verification, which customers received batches from a given lot. Each answer can become an assigned investigation or closure task.'],
-    ['Why treat documentation as the constraint?', 'Because a physically perfect batch with an incomplete record cannot be released. The value is already spent and unrealisable, and the cause is usually a missing entry or signature rather than anything about the product.'],
-    ['How does it handle deviations?', 'Every event carries its classification, immediate action, impact assessment, investigation owner, target closure, corrective actions and effectiveness verification, with ageing visible and escalation at threshold.'],
-    ['What about corrective action effectiveness?', 'Effectiveness verification is scheduled as its own step with an owner and evidence, which is the part of the cycle most often completed on paper and not in practice.'],
-    ['Can it answer a recall question quickly?', 'Traceability runs both ways: backward from a finished batch to every source material lot, and forward from a lot to every batch, distributor and market it reached. Both are queries against the records rather than reconstruction projects.'],
-    ['Does it manage stability programmes?', 'Protocols generate scheduled pulls with owners, and results are recorded against the protocol, so adherence is visible and a missed pull is caught rather than discovered at review.'],
-    ['Does it replace validated systems?', 'No. Validated process and analytical systems continue as they are and are mapped during implementation. Verity holds the operation around them — batches, records, quality events, release states, materials and traceability.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of products, batch record structures, quality event processes and stability protocols, configuration, migration, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the batches held on documentation.',
-  ctaLede: 'They are finished product you cannot invoice. Tell us what blocks release most often today.',
-
-  related: ['chemical-manufacturers', 'medical-distributors', 'manufacturers', 'pharmacies', 'diagnostic-labs', 'exporters'],
+  "ctaHeading": "Start with the deviations that are still open.",
+  "ctaLede": "Tell us how your plant runs and we will show you the held batches, the overdue deviations and the dues it would find, using your own numbers."
 };

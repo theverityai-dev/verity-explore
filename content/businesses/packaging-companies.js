@@ -1,180 +1,1036 @@
 export default {
-  slug: 'packaging-companies',
-  status: 'published',
-  plural: 'packaging companies',
-  subject: 'packaging company',
-
-  seo: {
-    title: 'AI business management software for packaging companies | Verity',
-    description:
-      'Verity gives packaging companies one system for artwork versions and approvals, tooling and dies, make-ready waste, short-run economics and substrate consumption.',
-    keywords: [
-      'AI software for packaging companies',
-      'packaging manufacturer management software',
-      'artwork approval and version control software',
-      'print job costing and make-ready waste software',
-    ],
+  "schema": 2,
+  "slug": "packaging-companies",
+  "status": "published",
+  "plural": "packaging companies",
+  "subject": "packaging unit",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Packaging company software for Indian converters | Verity",
+    "description": "Job costing by spec, dies and tooling, board and film wastage, and delivery dates that slip: the leaks in a packaging unit and the Verity screens that fix them.",
+    "keywords": [
+      "packaging company software India",
+      "job costing by specification",
+      "die and tooling tracking",
+      "corrugated and flexible packaging wastage",
+      "packaging delivery schedule software"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for packaging companies',
-    headline: 'You printed forty thousand of the version the customer replaced on Tuesday.',
-    lede:
-      'Packaging is made to a customer’s artwork, on a customer’s tooling, at a setup cost the run has to absorb. Verity holds all three against the job.',
-    note: 'Verity runs the plant and the order book. Prepress and press controls stay where they are.',
-    panel: {
-      title: 'Plant',
-      meta: 'This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Jobs run', value: '218', note: '74 customers' },
-        { label: 'Make-ready waste', value: '6.8%', note: 'of substrate consumed' },
-        { label: 'Jobs below viable run', value: '41', note: 'setup not recovered' },
-        { label: 'Artwork versions in use', value: '3', note: 'on one product' },
-      ],
-      rows: [
-        { name: '3 artwork versions live on one product', meta: 'Approval chain unclear', active: true },
-        { name: '41 jobs below viable run length', meta: 'Setup cost exceeds margin', active: true },
-        { name: 'Make-ready waste 6.8% against 4% target', meta: 'Concentrated on two presses', active: true },
-        { name: '7 tools past service or unlocated', meta: 'Customer-owned dies', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own plant in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "orders",
+    "suppliers",
+    "logistics",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for packaging companies",
+    "headline": "In packaging, the spec is the price. A box quoted wrong stays wrong for the whole run.",
+    "lede": "Every packaging job starts as a specification: size, board or film, print, finish, quantity. Quote it a little low, let wastage run a little high, miss the die that was already made, and a full order leaves the factory at a loss. Verity ties the quote, the job, the material, the tooling and the delivery to one record, so you can see what each job really earned.",
+    "oneLine": "One system that knows every spec, every die and plate, every reel of material and every promised delivery date.",
+    "note": "Built for a shop floor with machine operators, not data entry staff. Records come from the job card, the material issue and the dispatch note.",
+    "screen": "owner",
+    "screenNote": "jobs, material, tooling, deliveries and dues"
+  },
+  "today": {
+    "heading": "Most packaging units are busy and still unsure which jobs made money.",
+    "paragraphs": [
+      "A customer sends a sample or a drawing. Someone estimates a price from experience. The order is confirmed on a call or a message. The job card goes to the floor. The estimate stays in one file and the actual cost is never put next to it.",
+      "Material is the biggest cost. Board, paper, film, ink and adhesive are bought on rates that change, issued by reel or sheet, and wasted in setup and trim. The loss is a number nobody sees per job.",
+      "Tooling is a hidden asset. A die, a printing plate or a cylinder made for one customer is needed again six months later. Where it is, whose it is and what it cost to make are often answered by asking the machine operator."
+    ],
+    "stack": [
+      "Estimate sheets in Excel",
+      "Job cards on paper",
+      "Stores register for board, film and ink",
+      "Accounts software",
+      "WhatsApp with customers, drivers and suppliers"
+    ],
+    "stackNote": "Each works alone. The quote, the cost and the delivery are never on one page."
+  },
+  "painsHeading": "Where a packaging company actually loses money.",
+  "painsLede": "These are the situations packaging owners and plant heads describe again and again. For each: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Quoting",
+      "title": "A job is quoted on feel and the real cost is never compared",
+      "scene": "A buyer asks for 20,000 printed cartons. The estimate is done from last year's similar job. The board rate has changed twice since.",
+      "cost": "Example arithmetic: a ₹6 carton quoted at ₹6.40 with actual cost of ₹6.20 earns ₹0.20 a piece, so ₹4,000 on the order. A 3 percent wastage overrun alone wipes that out.",
+      "fix": "Each quote is a record built from spec, material at the latest rate, wastage allowance, tooling and conversion cost. When the job closes, Verity shows quoted against actual cost and margin by job and by customer.",
+      "screen": "jobs"
     },
-  },
-
-  overview: {
-    heading: 'Every job is a setup, and the setup is where the money goes.',
-    paragraphs: [
-      'A packaging company converts substrate into a customer’s specific product, which means every job carries a setup: plates or dies mounted, colours matched, registration achieved, and substrate wasted before the first good unit. Six point eight per cent make-ready waste against a four per cent target is material bought and destroyed, and it concentrates on specific presses and specific job types rather than spreading evenly.',
-      'The second characteristic is that setup cost is fixed per job and recovered per unit. Forty-one jobs below viable run length is a set of orders accepted at prices that never covered their own setup, and that only becomes visible when setup is costed against the run rather than absorbed as overhead.',
-      'The third is artwork. The product is defined by a customer file that changes, and three live versions on one product is the condition in which a large run gets printed to a superseded design. Which version was approved, by whom and when is the difference between a reprint the customer pays for and one the company absorbs.',
-      'The fourth is tooling. Dies, plates and cylinders are often customer-owned, have a life, and need to be located before a job can run. Seven tools past service or unlocated is seven jobs that cannot start on time.',
-      'Verity holds artwork versions and approvals, tooling location and life, and setup against run economics on the job record.',
+    {
+      "area": "Production",
+      "title": "Wastage in setup and trim runs above the allowance",
+      "scene": "A print job takes 300 sheets to get colour right on a short run. The corrugator trim on a particular size is higher than the estimate allowed. Nobody records either.",
+      "cost": "Material is usually the largest cost in a converter. A point or two of extra wastage across all jobs is a visible dent in a thin margin.",
+      "fix": "Each job records material issued, good output and waste, with a reason such as setup, trim or damage. Verity shows wastage by job, machine and operator against the allowance used in the quote.",
+      "screen": "material"
+    },
+    {
+      "area": "Costing",
+      "title": "Board and film prices move and the price list does not",
+      "scene": "Kraft paper rises, film goes up with crude, and ink changes. One trade account of the 2021 board surge reports raw material costs of corrugated box makers up by at least 70 percent in about 14 months, with converters asking brand owners to share the increase.",
+      "cost": "A box maker who cannot show a customer the cost movement on a given job has a weak case for a revision.",
+      "fix": "Every purchase records its rate. Verity compares current material rates with the rate in each open quote, flags jobs where cost has moved beyond your limit, and gives the documented numbers for a price revision conversation.",
+      "screen": "material",
+      "source": {
+        "name": "PrintWeek India, Survival of corrugated packaging industry at stake, 2021",
+        "url": "https://www.printweek.in/features/survival-of-corrugated-packaging-industry-at-stake-55335"
+      }
+    },
+    {
+      "area": "Tooling",
+      "title": "Dies, plates and cylinders are lost or made twice",
+      "scene": "A repeat order for a customer's carton needs the die made last year. It is not where the register says. A new one is made, and the old one turns up later.",
+      "cost": "A die or a set of printing plates can be a real expense, and a duplicate or a delayed job is avoidable.",
+      "fix": "Each die, plate set and cylinder is an asset record with customer, spec, location, number of impressions run and what it cost. A job picks its tooling from the record and the location changes when it is issued and returned.",
+      "screen": "tooling"
+    },
+    {
+      "area": "Tooling",
+      "title": "Tooling cost is never charged to the customer",
+      "scene": "The die and plate cost is absorbed into the first order. A customer cancels after the first run and the tooling cost stays with you.",
+      "cost": "Unrecovered tooling is a straight loss. It also hides which customers are costly to serve.",
+      "fix": "Tooling cost is recorded against the customer and the spec, with what was charged and what remains to be recovered. Verity lists tooling unrecovered by customer.",
+      "screen": "tooling"
+    },
+    {
+      "area": "Customers",
+      "title": "Sample approvals and artwork changes get lost",
+      "scene": "The customer changes a colour on WhatsApp after the plates are made. The approved artwork is one version, the file on the computer is another, and the operator prints from the old one.",
+      "cost": "A full reprint of a job is a direct loss, and an argument over who approved what.",
+      "fix": "Each job holds the approved artwork version, the sign-off by the customer with date, and changes with who requested them. The job card shows only the approved version.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Delivery",
+      "title": "Delivery dates are promised before the machine slot is checked",
+      "scene": "Sales confirms Thursday. The press is booked until Wednesday and the sheets have not been cut. The job moves to Saturday and the customer's line stops.",
+      "cost": "Packaging goes into the customer's own production. Lateness can halt their line, and it costs you the next order.",
+      "fix": "Each job shows spec, material availability, machine slot and promised date. The planner sees conflicts before a date is committed, and late-running jobs are listed with the reason.",
+      "screen": "deliveries"
+    },
+    {
+      "area": "Delivery",
+      "title": "Part deliveries and returns are not tracked",
+      "scene": "A customer takes 8,000 of a 20,000 order and asks for the rest in lots. Each lot has its own challan. A box batch is rejected for print quality and nobody records the quantity or the reason.",
+      "cost": "Open balances are forgotten, and rejections are argued from memory instead of from the batch.",
+      "fix": "Each dispatch is recorded against the job with quantity and challan. Verity shows balance to deliver, and a rejection is a record with batch, quantity and reason, linked to the job.",
+      "screen": "deliveries"
+    },
+    {
+      "area": "Quality",
+      "title": "Quality complaints cannot be traced to a reel or a shift",
+      "scene": "A food company complains about seal strength on a flexible pack. The reel lot, the laminator shift and the operator are not recorded on the job.",
+      "cost": "A complaint with no root cause becomes a credit note and a repeat problem.",
+      "fix": "Jobs record reel and board lots issued, machine and operator, and the in-process checks. A complaint links to the job and shows the lots and shift behind it.",
+      "screen": "jobs"
+    },
+    {
+      "area": "Equipment",
+      "title": "Machines stop for reasons no one writes down",
+      "scene": "A printing press loses two hours a shift for plate changes, web breaks and waiting for material. The day report says output was low.",
+      "cost": "Hours lost repeat day after day because the causes are not named.",
+      "fix": "Stops are recorded with reason and duration. Verity shows downtime by machine and cause, and links scheduled maintenance tasks to each machine.",
+      "screen": "material"
+    },
+    {
+      "area": "Money",
+      "title": "Customers pay slowly, and small packaging firms pay slowly too",
+      "scene": "A large buyer pays at 90 days. You pay your board supplier at 30. A small converter selling to you waits longer than it should.",
+      "cost": "Since 1 April 2024, a buyer paying a micro or small enterprise supplier beyond the agreed period, capped at 45 days, generally cannot deduct the amount until paid. If you are the small supplier, this matters to your customer. If you are the buyer, it matters to you.",
+      "fix": "Invoices and supplier bills are tracked against their due dates and the 45 day limit where it applies. Verity lists overdue amounts by customer and age with the person who owns the relationship, and shows supplier bills nearing the limit.",
+      "screen": "owner",
+      "source": {
+        "name": "SetIndiaBiz, MSME 45 day payment rule, 2025",
+        "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Packaging rules for plastic keep changing",
+      "scene": "A customer asks for your CPCB registration details on flexible packaging, or whether the pack carries the new QR code. The answer depends on who finds the certificate.",
+      "cost": "Customers who are brand owners must put registration details on their packs, and they rely on their packaging supplier for correct information. An error or a delay delays their packs.",
+      "fix": "Each registration, certificate and test report is a record with its number and expiry. Jobs for regulated products carry the needed information, and Verity lists those where details are missing.",
+      "screen": "tooling",
+      "source": {
+        "name": "Packaging Europe, 2025",
+        "url": "https://packagingeurope.com/news/india-updates-plastic-waste-rules-for-packaging-traceability-and-compliance/12439.article"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Food-contact packaging needs records you do not have",
+      "scene": "A biscuit maker asks for proof that the board, ink and film you supply are suitable for food contact. The test reports are with the supplier or in a folder.",
+      "cost": "Without the documents, you lose food-sector customers or hold up deliveries while you search.",
+      "fix": "Material lots link to supplier test reports. Verity shows, for each food-contact job, which lots were used and which reports are on file, and flags gaps.",
+      "screen": "material"
+    },
+    {
+      "area": "Owner",
+      "title": "The owner learns which jobs paid at the end of the quarter",
+      "scene": "The accountant shows margin by month. Nobody can say which customers and specs earn the most per machine hour.",
+      "cost": "Decisions about which jobs to chase or drop run on feel.",
+      "fix": "One morning screen with jobs closed, margin by job and customer, material wastage, tooling at risk, deliveries due and overdue dues.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "Market size estimates for packaging vary widely between research firms, so only one segment figure is used and it is a vendor estimate. The 70 percent board price rise is from 2021 trade press and describes a past surge. The plastic labelling summary is from trade press; confirm the final rules with CPCB.",
+  "facts": [
+    {
+      "figure": "USD 19.42 billion",
+      "text": "is the estimated size of India's paper packaging market in 2025 according to IMARC, which forecasts USD 28.55 billion by 2034.",
+      "source": {
+        "name": "IMARC Group, India paper packaging market, 2025",
+        "url": "https://imarcgroup.com/india-paper-packaging-market"
+      }
+    },
+    {
+      "figure": "70%",
+      "text": "is the rise in raw material costs reported for corrugated case makers between January 2020 and March 2021, when converters asked brand owners for fair price revisions.",
+      "source": {
+        "name": "PrintWeek India, 2021",
+        "url": "https://www.printweek.in/features/survival-of-corrugated-packaging-industry-at-stake-55335"
+      }
+    },
+    {
+      "figure": "1 July 2025",
+      "text": "is the date from which producers, importers and brand owners must show their CPCB registration details on plastic pack through a barcode or QR code, or by one of the allowed alternatives.",
+      "source": {
+        "name": "Packaging Europe, 2025",
+        "url": "https://packagingeurope.com/news/india-updates-plastic-waste-rules-for-packaging-traceability-and-compliance/12439.article"
+      }
+    },
+    {
+      "figure": "45 days",
+      "text": "is the longest period a buyer generally has to pay a micro or small enterprise supplier before the amount is disallowed as a deduction, from 1 April 2024.",
+      "source": {
+        "name": "SetIndiaBiz, MSME 45 day payment rule, 2025",
+        "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Five views, each built for one job. Names, columns and terms are set up in your unit's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Unit / Today",
+      "meta": "Unit: Bhiwandi",
+      "heading": "The owner's morning view",
+      "caption": "Margin by job, material wastage, tooling at risk, deliveries due and overdue dues on one screen, with the items that need a decision under it. It replaces the evening call to the plant head.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Jobs closed",
+              "value": "11",
+              "note": "this week"
+            },
+            {
+              "label": "Average wastage",
+              "value": "6.8%",
+              "note": "allowance 5.5%"
+            },
+            {
+              "label": "Deliveries due today",
+              "value": "4",
+              "note": "1 at risk"
+            },
+            {
+              "label": "Overdue dues",
+              "value": "₹38.5 lakh",
+              "note": "6 customers"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Margin per job against the quote, last 5 closed"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "JC-2281 Shah Foods",
+              "value": 72,
+              "display": "+₹0.40 per pc"
+            },
+            {
+              "label": "JC-2284 Pinnacle Pharma",
+              "value": 55,
+              "display": "+₹0.28"
+            },
+            {
+              "label": "JC-2287 Kiran Agro",
+              "value": 18,
+              "display": "+₹0.04",
+              "tone": "muted"
+            },
+            {
+              "label": "JC-2290 Metro Retail",
+              "value": 2,
+              "display": "-₹0.11 (loss)",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Board rate is 6% above the rate used in 5 open quotes.",
+          "action": "Review quotes"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Delivery JC-2296 at risk for Thursday",
+              "meta": "Press 2 busy until Wednesday night",
+              "tag": [
+                "Re-plan",
+                "late",
+                "Moved",
+                "ok"
+              ]
+            },
+            {
+              "name": "Die D-114 not returned from Kiran Agro job",
+              "meta": "Last seen on press 1",
+              "tag": [
+                "Trace",
+                "flag",
+                "Found",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jobs",
+      "title": "Jobs and costing",
+      "meta": "Closed this week",
+      "heading": "Quote, job and what it actually earned",
+      "caption": "For each job, the quoted cost beside the actual material, conversion and tooling. The approved artwork, customer sign-off and the lots used sit on the same record.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Job",
+            "Customer",
+            "Quoted",
+            "Actual",
+            "Margin"
+          ],
+          "rows": [
+            [
+              "JC-2281",
+              "Shah Foods",
+              "₹6.40 / pc",
+              "₹6.00",
+              "+₹0.40"
+            ],
+            [
+              "JC-2287",
+              "Kiran Agro",
+              "₹14.20 / pc",
+              "₹14.16",
+              [
+                "+₹0.04",
+                "flag"
+              ]
+            ],
+            [
+              "JC-2290",
+              "Metro Retail",
+              "₹3.10 / pc",
+              "₹3.21",
+              [
+                "-₹0.11",
+                "late",
+                "Quote revised",
+                "ok"
+              ]
+            ],
+            [
+              "JC-2292",
+              "Pinnacle Pharma",
+              "₹9.80 / pc",
+              "₹9.52",
+              "+₹0.28"
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "JC-2290 / Metro Retail, shipper carton",
+          "sub": "20,000 pcs, 3 ply, 2 colour print",
+          "fields": [
+            [
+              "Artwork",
+              "v3, approved 4 Oct"
+            ],
+            [
+              "Board lot",
+              "B-8841"
+            ],
+            [
+              "Wastage",
+              "8.2% vs 5.5% allowed"
+            ],
+            [
+              "Tooling",
+              "Die D-142, plates P-142"
+            ],
+            [
+              "Status",
+              [
+                "Loss-making",
+                "late",
+                "Cost reviewed",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "4 Oct",
+              "Customer approved artwork v3"
+            ],
+            [
+              "8 Oct",
+              "Press 2, setup waste high"
+            ],
+            [
+              "10 Oct",
+              "Delivered in 2 lots"
+            ],
+            [
+              "Note",
+              "Quote used old board rate"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material",
+      "title": "Material and wastage",
+      "meta": "Last 7 days",
+      "heading": "Board, film and ink, and where wastage goes",
+      "caption": "Material issued against good output, wastage with its reason, and each machine's stops. Current supplier rates sit against the rates used in open quotes.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Material",
+            "Issued",
+            "Good output",
+            "Waste",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Kraft board 180 gsm",
+              "14.2 t",
+              "13.1 t",
+              "7.7%",
+              [
+                "High",
+                "late",
+                "Trim reviewed",
+                "ok"
+              ]
+            ],
+            [
+              "BOPP film 20 mic",
+              "3.8 t",
+              "3.6 t",
+              "5.3%",
+              [
+                "Within range",
+                "ok"
+              ]
+            ],
+            [
+              "Flexo ink, cyan",
+              "220 kg",
+              "205 kg",
+              "6.8%",
+              [
+                "High",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Waste reasons logged this week"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Setup",
+              "value": 46,
+              "display": "1.9 t"
+            },
+            {
+              "label": "Trim",
+              "value": 34,
+              "display": "1.4 t"
+            },
+            {
+              "label": "Damage",
+              "value": 14,
+              "display": "0.6 t",
+              "tone": "muted"
+            },
+            {
+              "label": "Machine stop",
+              "value": 10,
+              "display": "0.4 t",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Kraft board rate is up 6% since August. 5 open quotes still use the old rate.",
+          "action": "Review"
+        }
+      ]
+    },
+    {
+      "id": "tooling",
+      "title": "Tooling and papers",
+      "meta": "By customer",
+      "heading": "Dies, plates and cylinders, and registrations",
+      "caption": "Every die, plate set and cylinder with its customer, location, impressions run and cost recovered. Registrations and test reports have an owner and an expiry.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Tool",
+            "Customer",
+            "Location",
+            "Impressions",
+            "Cost recovered"
+          ],
+          "rows": [
+            [
+              "Die D-114",
+              "Kiran Agro",
+              "Press 1",
+              [
+                "62,000",
+                "info"
+              ],
+              "₹18,000 of ₹18,000"
+            ],
+            [
+              "Die D-142",
+              "Metro Retail",
+              "Rack C3",
+              "20,000",
+              "₹4,000 of ₹22,000"
+            ],
+            [
+              "Plates P-142",
+              "Metro Retail",
+              "Rack C3",
+              "20,000",
+              [
+                "₹0 of ₹9,500",
+                "flag",
+                "Raised in next order",
+                "ok"
+              ]
+            ],
+            [
+              "Cylinder Y-07",
+              "Pinnacle Pharma",
+              "Rack F1",
+              "1,40,000",
+              "Fully recovered"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Registration or report",
+            "Owner",
+            "Expiry",
+            "Status"
+          ],
+          "rows": [
+            [
+              "CPCB registration",
+              "Compliance",
+              "Check date",
+              [
+                "Check",
+                "flag",
+                "Recorded",
+                "ok"
+              ]
+            ],
+            [
+              "Food-contact test, BOPP film",
+              "Quality head",
+              "Nov",
+              [
+                "Due",
+                "late",
+                "Requested",
+                "info"
+              ]
+            ],
+            [
+              "Factory licence",
+              "Owner",
+              "Mar",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deliveries",
+      "title": "Deliveries",
+      "meta": "This week",
+      "heading": "Promised dates and part deliveries",
+      "caption": "Each job against its machine slot, material and promised date. Part deliveries, balances and rejected lots sit on the job.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Job",
+            "Customer",
+            "Ordered",
+            "Delivered",
+            "Promise"
+          ],
+          "rows": [
+            [
+              "JC-2296",
+              "Shah Foods",
+              "25,000",
+              "10,000",
+              [
+                "At risk",
+                "late",
+                "Re-planned Fri",
+                "ok"
+              ]
+            ],
+            [
+              "JC-2297",
+              "Kiran Agro",
+              "8,000",
+              "0",
+              "Thu"
+            ],
+            [
+              "JC-2298",
+              "Metro Retail",
+              "40,000",
+              "20,000",
+              [
+                "Balance Mon",
+                "info"
+              ]
+            ],
+            [
+              "JC-2299",
+              "Pinnacle Pharma",
+              "12,000",
+              "12,000",
+              [
+                "Done",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Printing",
+              "cards": [
+                {
+                  "title": "JC-2297 Kiran Agro",
+                  "meta": "Press 1, ends Wed 6 pm",
+                  "tag": [
+                    "On time",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "JC-2296 Shah Foods",
+                  "meta": "Press 2, waiting for board",
+                  "tag": [
+                    "Waiting",
+                    "late",
+                    "Board in",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Finishing",
+              "cards": [
+                {
+                  "title": "JC-2298 Metro Retail",
+                  "meta": "Die cutting, 20,000 left",
+                  "tag": [
+                    "Running",
+                    "info"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Tuesday, before and after.",
+  "dayLede": "What changes is not the board or the film. It is that each job leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "8:30",
+      "before": "The plant head asks each operator what ran last night. Wastage is known by feel.",
+      "after": "The Today screen shows 11 jobs closed, wastage at 6.8 percent against 5.5, and the jobs that caused it."
+    },
+    {
+      "time": "10:30",
+      "before": "A buyer wants a rate for a repeat carton. The estimate is rebuilt from an old file.",
+      "after": "The last quote and the actual cost of that job open together, with the board rate updated."
+    },
+    {
+      "time": "1:00",
+      "before": "A die cannot be found for a repeat order.",
+      "after": "The die record shows rack C3 and the 20,000 impressions run."
+    },
+    {
+      "time": "3:30",
+      "before": "Sales confirms Thursday without checking the press.",
+      "after": "The job shows the press booked until Wednesday and a conflict is flagged before the date goes to the customer."
+    },
+    {
+      "time": "6:00",
+      "before": "A complaint about seal strength has no lot or shift on the job.",
+      "after": "The job shows reel lot, machine and shift, and the check results."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks which jobs made money.",
+      "after": "Margin is already shown by job, customer and machine."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time on your floor, at the estimating desk and at the dispatch gate, build Verity around how your unit really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a shift in your unit. Follow a job from enquiry and estimate to material issue, printing, finishing and delivery, and see where its cost and records are lost.",
+        "you": "Two to three hours of yours and your plant head's. A few estimates, job cards and a month of dispatches.",
+        "get": "A written map of your unit: product types, how a quote is built, material and wastage allowances, tooling, machine slots, and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up customers, specs and estimate rules, material list and rates, wastage allowances, tooling records, job cards, machine slots, delivery rules and the six screens in your own terms.",
+        "you": "Check the setup with the estimating head and the plant head. Tell us where a rule or an allowance is wrong.",
+        "get": "A working Verity with your real specs, rules and people, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your customers, open jobs, material stock, tooling list and open dues from your sheets and accounts export. Train the estimating desk, stores, machine leads, dispatch and accounts at their own stations.",
+        "you": "Your tooling list in whatever form it exists, a stock count and the dues list. One hour with each role.",
+        "get": "Your unit's data inside Verity and a team that has used it through live jobs."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks of margin and wastage with you, tune allowances, and change setup when you add a machine or a product type.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the unit runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Jobs, runs, repeats', 'Work'],
-    ['Artwork, versions, approvals', 'Records'],
-    ['Dies, plates, cylinders, tooling', 'Inventory'],
-    ['Substrate, ink, adhesive', 'Inventory'],
-    ['Make-ready, setup, changeover', 'Workflows'],
-    ['Brand owners, converters, traders', 'Relationships'],
-    ['Press operators, prepress, finishing', 'People'],
-  ],
-
-  challengesHeading: 'Fixed setup, variable runs, and artwork that keeps moving.',
-  challengesLede:
-    'Packaging difficulties come from making a customer’s design on a customer’s tooling.',
-  challenges: [
-    { problem: 'Superseded artwork gets printed', detail: 'A version changes and the job runs on the file already at the press.', outcome: 'Artwork carries versions and approvals, with the approved version bound to the job.' },
-    { problem: 'Setup cost is absorbed rather than costed', detail: 'Short runs are priced on material and per-unit rate with make-ready treated as overhead.', outcome: 'Setup is costed against the job, so viable run length is known before acceptance.' },
-    { problem: 'Make-ready waste has no owner', detail: 'Waste is measured in total and not attributed to press, operator or job type.', outcome: 'Waste is recorded per job with press, operator and cause.' },
-    { problem: 'Tooling cannot be found or is out of life', detail: 'Customer-owned dies and plates are stored, borrowed and worn without a location record.', outcome: 'Tooling carries location, ownership, impressions run and service state.' },
-    { problem: 'Repeat jobs are re-estimated from scratch', detail: 'A job that ran last year is quoted again without reference to what it actually consumed.', outcome: 'Actual consumption and waste from previous runs sit against the repeat.' },
-    { problem: 'Colour matching consumes unrecorded time', detail: 'Achieving an approved match takes press time nobody bills or measures.', outcome: 'Colour approval time is recorded against the job as part of setup.' },
-  ],
-
-  modulesLede: 'One system across jobs, artwork, tooling and consumption.',
-  modules: [
-    { id: 'work', title: 'Jobs, runs and repeats', line: 'Each job carries its artwork version, tooling, substrate, run length, setup cost, actual consumption and margin, linked to previous runs of the same product.', why: 'A repeat job’s best estimate is what the last one actually consumed.', example: 'Forty-one jobs below viable run length.' },
-    { id: 'records', title: 'Artwork, versions and approvals', line: 'Artwork carries version, approver, approval date and the jobs bound to it, with superseded versions marked.', why: 'Printing a superseded version is the most expensive error in the business.', example: 'Three artwork versions live on one product.' },
-    { id: 'inventory', title: 'Tooling, dies, plates and cylinders', line: 'Tools carry ownership, location, impressions run, service state and the jobs that need them.', why: 'Customer-owned tooling has to be findable and fit before a job can be scheduled.', example: 'Seven tools past service or unlocated.' },
-    { id: 'workflows', title: 'Make-ready, setup and changeover', line: 'Setup time, colour approval, waste before first good unit and changeover are recorded per job and press.', why: 'The setup is the cost that decides whether a run was worth taking.', example: 'Make-ready waste concentrated on two presses.' },
-    { id: 'orders', title: 'Estimates, orders and job costing', line: 'Estimates carry setup, substrate, run rate and margin, compared with actual consumption at job close.', why: 'The gap between estimate and actual is the pricing correction.', example: 'Estimated against actual consumption per job.' },
-    { id: 'relationships', title: 'Brand owners, converters and traders', line: 'Customers carry their products, artwork, tooling, run patterns and approval contacts.', why: 'Approval authority sits with a specific person on the customer’s side.', example: 'Approval chain by customer and product.' },
-    { id: 'people', title: 'Prepress, press operators and finishing', line: 'Staff carry shift, press assignment, jobs run, setup times and waste.', why: 'Make-ready performance varies by operator and is improvable once measured.', example: 'Setup time and waste by operator and press.' },
-    { id: 'intelligence', title: 'Waste, setup and margin reporting', line: 'Waste by press and job type, setup recovery, viable run length, tooling utilisation and repeat accuracy come from the records.', why: 'The business is a setup-cost business and needs to measure setup.', example: 'Setup recovery by customer and run length.' },
-    { id: 'ai', title: 'Ask the plant a question', line: 'Verity AI answers from your own job, artwork, tooling and consumption records, respects permissions, and can create assigned follow-ups.', why: 'The questions that matter are about which jobs lose money and which artwork is live.', example: '"Which jobs ran below viable length?" returns forty-one with customers and setup cost.' },
-    { id: 'suppliers', title: 'Substrate, ink and consumable suppliers', line: 'Suppliers carry substrate specifications, lot behaviour on press, lead times and pricing.', why: 'Substrate that runs badly costs more than its price difference in waste.', example: 'Waste rate by substrate lot and supplier.' },
-    { id: 'control', title: 'Approvals, specification and authority', line: 'One permission model and one audit trail covering artwork release, specification change and job start authority.', why: 'A job started without a bound approved version is an avoidable liability.', example: 'Job start blocked without an approved artwork version.' },
-    { id: 'logistics', title: 'Dispatch, pallets and delivery', line: 'Dispatch records carry pallet configuration, quantities, date and customer receipt.', why: 'Packaging is delivered in configurations that customers’ lines depend on.', example: 'Delivered configuration recorded against the order.' },
-  ],
-
-  workflowsHeading: 'Estimate, approve, mount, run, close.',
-  workflowsLede: 'These already happen. Recorded, setup stops being invisible.',
-  workflows: [
-    { name: 'Estimating a job', steps: ['Specification and run length captured', 'Tooling availability and condition checked', 'Setup, substrate and run rate costed', 'Viable run length compared with the enquiry', 'Estimate issued with margin position'], note: 'Comparing enquiry length with viable length before quoting is what prevents an unrecoverable job.' },
-    { name: 'Artwork approval', steps: ['Version received from the customer', 'Proof produced and issued to the approver', 'Approval recorded with person and date', 'Version bound to the job', 'Prior versions marked superseded'], note: 'Binding the approved version to the job is what stops a superseded print run.' },
-    { name: 'Setup and make-ready', steps: ['Tooling located and mounted', 'Colour matched and approved', 'Waste before first good unit recorded', 'Setup time captured', 'Run released'], note: 'Recording waste before the first good unit is where the improvable number lives.' },
-    { name: 'Production run', steps: ['Substrate issued by lot', 'Output and in-run waste recorded', 'Quality checks captured', 'Finishing and packing completed', 'Actual consumption reconciled against estimate'], note: 'The reconciliation at close is what corrects the next estimate.' },
-    { name: 'Tooling lifecycle', steps: ['Tool registered with ownership and location', 'Impressions recorded per run', 'Service or replacement raised at threshold', 'Customer informed where tooling is theirs', 'Location updated on movement'], note: 'Customer-owned tooling is an obligation as well as an asset.' },
-  ],
-
-  ai: {
-    heading: 'Ask about setup and artwork.',
-    lede: 'Verity AI reads the same job, artwork, tooling and consumption records the plant creates as it runs. It answers from your own plant, respects permissions, and can turn an answer into a pricing or scheduling decision.',
-    panelMeta: 'Grounded in your plant records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which jobs ran below viable run length?',
-      'Which products have more than one live artwork version?',
-      'What is make-ready waste by press and operator?',
-      'Which tools are past service or unlocated?',
-      'How did actual consumption compare with estimate by job?',
-      'Which substrate lots produced the most waste?',
-      'What is setup recovery by customer?',
-      'Which repeat jobs are quoted below what they last consumed?',
-      'Summarise waste, setup and margin position.',
+    "bring": [
+      "Your last month of estimates and job cards",
+      "A tooling list with customers",
+      "Stores register with material rates",
+      "The licence and registration list with dates",
+      "Open orders and dues"
     ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. The estimating head, plant head and accounts person need a few more.",
+    "after": "Nobody is hired to run Verity. Material issue, wastage and dispatch are recorded as part of work the unit already does, and the reports come from those records."
   },
-
-  automationHeading: 'Artwork, viability and waste.',
-  automationLede: 'Each runs from the plant’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A job is scheduled without an approved artwork version', steps: ['Job start blocked', 'Approval chased with the customer contact', 'Version bound on approval'] },
-    { trigger: 'An enquiry falls below viable run length', steps: ['Flagged with setup cost and margin', 'Minimum quantity or price surfaced', 'Decision recorded on the estimate'] },
-    { trigger: 'Make-ready waste exceeds target on a job', steps: ['Recorded against press, operator and substrate', 'Cause captured', 'Pattern surfaced across recent jobs'] },
-    { trigger: 'A tool reaches its impression threshold', steps: ['Service or replacement raised', 'Owner notified where customer-owned', 'Jobs needing it flagged'] },
-    { trigger: 'Actual consumption exceeds estimate', steps: ['Variance recorded at job close', 'Estimate basis flagged for revision', 'Repeat pricing updated'] },
+  "ai": {
+    "heading": "Ask your unit a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own quotes, jobs, material and tooling. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which customers earned us the least per piece this quarter?",
+        "a": "Three customers are below 1 percent margin. Two of them are on quotes made before the August board rate.",
+        "rows": [
+          [
+            "Metro Retail",
+            "-0.4%"
+          ],
+          [
+            "Kiran Agro",
+            "0.3%"
+          ],
+          [
+            "Shah Foods",
+            "0.7%"
+          ]
+        ],
+        "action": "Create quote review tasks for sales"
+      },
+      {
+        "q": "Why was wastage above allowance last week?",
+        "a": "Setup waste on short runs on Press 2 is the main cause, followed by trim on the 3 ply size 420 by 310.",
+        "rows": [
+          [
+            "Setup",
+            "1.9 t"
+          ],
+          [
+            "Trim",
+            "1.4 t"
+          ],
+          [
+            "Damage",
+            "0.6 t"
+          ],
+          [
+            "Machine stop",
+            "0.4 t"
+          ]
+        ]
+      },
+      {
+        "q": "Which tooling is not fully recovered from the customer?",
+        "a": "Four items totalling ₹46,500, with Metro Retail the largest.",
+        "action": "Add tooling charge to the next quote for each customer"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers and suppliers; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "A job closes with wastage above its allowance",
+      "then": [
+        "Reason prompted from the operator",
+        "Task to the plant head if above limit",
+        "Allowance reviewed if it repeats"
+      ]
+    },
+    {
+      "when": "A material rate rises beyond your limit",
+      "then": [
+        "Open quotes using the old rate listed",
+        "Task to the estimating head",
+        "New rate applied to quotes when approved"
+      ]
+    },
+    {
+      "when": "A job is created for a repeat spec",
+      "then": [
+        "Previous tooling and its location shown",
+        "Reserved for the job",
+        "Location updated when issued and returned"
+      ]
+    },
+    {
+      "when": "A promised date conflicts with the machine slot or material",
+      "then": [
+        "Flagged to the planner",
+        "Options shown: re-plan or part delivery",
+        "Customer call task to sales"
+      ]
+    },
+    {
+      "when": "A rejected lot is recorded",
+      "then": [
+        "Linked to the job, reel lot and shift",
+        "Task to the quality head",
+        "Credit or reprint decision recorded"
+      ]
+    },
+    {
+      "when": "A registration or test report is 60 days from expiry",
+      "then": [
+        "Task to the named owner",
+        "Documents needed listed",
+        "Next date set when done"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the plant can see.',
-  intelligenceLede: 'Setup, waste and margin from job records.',
-  intelligence: [
-    { area: 'Setup', points: ['Setup time by press and job type', 'Make-ready waste against target', 'Colour approval time', 'Setup recovery by run length'] },
-    { area: 'Jobs', points: ['Estimated against actual consumption', 'Margin by job and customer', 'Jobs below viable run length', 'Repeat accuracy'] },
-    { area: 'Artwork', points: ['Live versions by product', 'Approval turnaround by customer', 'Jobs bound to approved versions', 'Reprints caused by version error'] },
-    { area: 'Tooling', points: ['Location and ownership', 'Impressions and service state', 'Utilisation by tool', 'Jobs delayed by tooling'] },
+  "rules": {
+    "heading": "The rules a packaging company has to keep up with.",
+    "lede": "Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by product, material and state. Confirm current requirements with your consultant or the relevant authority.",
+    "items": [
+      {
+        "name": "Plastic packaging registration and labelling",
+        "what": "Producers, importers and brand owners of plastic packaging generally register with the Central Pollution Control Board, and from 1 July 2025 must show registration details on pack through a barcode or QR code, or an allowed alternative. Whether you are a producer, a brand owner or a supplier to one depends on what you do. The rules were amended several times in 2025 and 2026, so confirm the current text.",
+        "how": "Registrations and certificates are records with number and expiry, and jobs for regulated products list the required details.",
+        "source": {
+          "name": "Packaging Europe",
+          "url": "https://packagingeurope.com/news/india-updates-plastic-waste-rules-for-packaging-traceability-and-compliance/12439.article"
+        }
+      },
+      {
+        "name": "Food-contact packaging standards",
+        "what": "FSSAI's Packaging Regulations, 2018, generally set standards for materials that touch food, including limits on migration and a bar on some recycled materials. Your food-sector customers rely on you for proof. Check the material standards for your product.",
+        "how": "Material lots link to supplier test reports, so each food-contact job shows what was used and which reports are on file."
+      },
+      {
+        "name": "Payment terms for micro and small suppliers",
+        "what": "From 1 April 2024, a buyer that owes a micro or small seller generally must pay within the agreed period, capped at 45 days, or the amount is not deductible until paid.",
+        "how": "Supplier bills and customer invoices show due dates against that limit.",
+        "source": {
+          "name": "SetIndiaBiz",
+          "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
+        }
+      },
+      {
+        "name": "Factory, pollution and fire registrations",
+        "what": "A packaging unit generally holds a factory licence, state pollution control consent where applicable, and fire and electrical clearances, each with its own renewal date.",
+        "how": "Each is a record with authority, expiry and owner, and renewal tasks open weeks ahead."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A machine operator should not see customer margins. Sales should not change a wastage allowance. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Which jobs and customers pay, and what is at risk?",
+      "sees": "Margin by job and customer, wastage, tooling not recovered, deliveries and dues."
+    },
+    {
+      "role": "Estimating head",
+      "question": "Is each quote built on current rates and real wastage?",
+      "sees": "Quotes against actuals, material rate changes and open quotes affected."
+    },
+    {
+      "role": "Plant head",
+      "question": "What ran, what stopped and what is due?",
+      "sees": "Machine slots, wastage, downtime, material shortages and delivery risks."
+    },
+    {
+      "role": "Stores and dispatch",
+      "question": "What came in, what went out and what is owed?",
+      "sees": "Material lots, tooling locations, part deliveries and challans."
+    },
+    {
+      "role": "Accounts",
+      "question": "What was bought, sold and owed?",
+      "sees": "Invoices tied to dispatches, supplier bills against due dates, and customer dues by age."
+    }
   ],
-  intelligenceNote: 'Verity records the plant’s operations. Prepress and press control systems continue as they are.',
-
-  rolesHeading: 'One plant, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Managing director', question: 'Which jobs are worth running?', focus: 'Setup recovery, margin by job and customer, waste against target, viable run lengths.' },
-    { role: 'Production planner', question: 'What can I schedule?', focus: 'Approved artwork, tooling availability, press capacity, changeover sequence.' },
-    { role: 'Prepress', question: 'Which version is approved?', focus: 'Artwork versions, approval chain, proofs issued, jobs bound to versions.' },
-    { role: 'Estimator', question: 'What should this job cost?', focus: 'Setup and run rates, previous actual consumption, substrate pricing, viable quantity.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your accounts software. We agree during setup how invoices and payments reach Verity.",
+      "Your design and artwork tools. We store the approved version on the job.",
+      "Your testing laboratory or supplier reports. We record them against the lot.",
+      "WhatsApp and phone with buyers and drivers. Staff talk",
+      "Verity tracks who owes a reply."
+    ],
+    "not": [
+      "Control your printing or converting machines.",
+      "Design artwork or structural packaging.",
+      "File registrations or returns for you.",
+      "Send messages to customers or suppliers on its own."
+    ],
+    "migration": "We bring your customers, specs, open jobs, tooling list, material stock and open dues across from the sheets, registers and accounts export you use now, in stages, so production keeps running while it happens."
+  },
+  "faqHeading": "Questions packaging owners ask.",
+  "faqs": [
+    [
+      "My operators are busy. Will they record material and waste?",
+      "Only if it takes seconds, so entry is at the material issue window and the end of each job with a few reasons to pick from. We train during live jobs and start with the records that matter most."
+    ],
+    [
+      "Can Verity tell me what each job really earned?",
+      "Yes, once quotes, material issued and wastage are recorded. Each job shows quoted against actual cost and margin, by customer and by machine."
+    ],
+    [
+      "Does it make my estimates?",
+      "It holds your estimate rules, rates and allowances and builds the quote from them. You still decide the price, and Verity shows the margin it implies."
+    ],
+    [
+      "Can it track my dies and plates?",
+      "Yes. Each is a record with customer, location, impressions run and cost recovered, and a repeat job picks it up automatically."
+    ],
+    [
+      "Does it replace my accounts software?",
+      "No. Your accounts stay where they are. We agree during setup how invoices and payments reach Verity, which then handles quotes, jobs, material, tooling and deliveries."
+    ],
+    [
+      "I run flexible packaging, not corrugated. Will it fit?",
+      "Yes. Specs, material lots, wastage, tooling and delivery work the same way. We set the fields in your own terms, such as film, lamination and reel lots."
+    ],
+    [
+      "Can I see two units together?",
+      "Yes. Each is a location in one system, with jobs, wastage, deliveries and dues side by side, and customers are the same across both."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so operators, sales, estimating and accounts each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "How quickly will I see something useful?",
+      "The tooling list, overdue dues and material rate changes need only your existing data, so we aim to have them first. Wastage and margin patterns become reliable after a few weeks of recorded jobs."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of units, people and what you want set up. Message us and we will give you a clear number after a short conversation about how your unit runs."
+    ]
   ],
-
-  useCasesHeading: 'What packaging companies use Verity for',
-  useCases: [
-    { name: 'Binding jobs to approved artwork', body: 'Versions with approver and date, bound to the job before it starts, so a large run cannot be printed to a superseded design.' },
-    { name: 'Costing setup against the run', body: 'Make-ready costed per job rather than absorbed as overhead, which makes viable run length a number the estimator can use.' },
-    { name: 'Attributing make-ready waste', body: 'Waste before the first good unit recorded with press, operator, substrate and cause, so improvement has a target.' },
-    { name: 'Tracking customer-owned tooling', body: 'Dies, plates and cylinders with ownership, location, impressions and service state, so a job is not delayed looking for a tool.' },
-    { name: 'Pricing repeats from actuals', body: 'Previous consumption and waste attached to the product, so a repeat job is quoted from what it really used.' },
-    { name: 'Substrate performance on press', body: 'Waste rates recorded by substrate lot and supplier, because material that runs badly costs more than its price advantage.' },
-    { name: 'Asking about the plant', body: 'Plain-language questions across jobs, artwork, tooling and waste, with pricing and scheduling decisions raised in the same step.' },
+  "related": [
+    "manufacturers",
+    "printing-businesses",
+    "food-manufacturers",
+    "chemical-manufacturers",
+    "industrial-suppliers",
+    "distributors"
   ],
-
-  migration: 'Prepress and press control systems continue and are mapped during implementation. Customers and products, artwork versions and approval history, tooling registers, job history with actual consumption, substrate records and estimates are brought across.',
-
-  faqHeading: 'Questions packaging companies ask',
-  faqs: [
-    ['What can AI software do for a packaging company?', 'Verity AI answers questions from your own job, artwork, tooling and consumption records: which jobs ran below viable run length, which products have more than one live artwork version, what make-ready waste is by press and operator, which tools are past service. Each answer can become a pricing or scheduling decision.'],
-    ['How does it prevent printing the wrong artwork version?', 'Artwork carries versions with the approver and approval date, and the approved version is bound to the job. A job scheduled without a bound approved version is blocked, and superseded versions are marked when a new one is approved.'],
-    ['Why cost setup per job?', 'Because setup is fixed per job and recovered per unit. Treating make-ready as overhead hides the fact that short runs can be accepted at prices that never covered their own setup, which is only visible when the cost sits on the job.'],
-    ['How is make-ready waste improved?', 'Waste before the first good unit is recorded per job with the press, operator, substrate and cause, which turns a plant-wide percentage into a specific and addressable pattern.'],
-    ['Can it manage customer-owned tooling?', 'Tools carry ownership, location, impressions run and service state, with the jobs that need them attached, so tooling is findable and fit before a job is scheduled.'],
-    ['Does it help with repeat pricing?', 'Actual consumption, waste and setup time from previous runs sit against the product, so a repeat is estimated from what it really used rather than re-estimated from assumptions.'],
-    ['Does it replace prepress software?', 'No. Prepress and press control systems continue as they are. Verity holds the plant and the order book around them — jobs, artwork versions, tooling, setup, consumption and margin.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of job types, setup structures, artwork approval chains and tooling registers, configuration, migration of job and artwork history, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the jobs below viable run length.',
-  ctaLede: 'They are the ones the setup ate. Tell us how setup is costed today.',
-
-  related: ['manufacturers', 'printing-businesses', 'food-manufacturers', 'furniture-manufacturers', 'industrial-suppliers', 'exporters'],
+  "ctaHeading": "Start with the job that lost money.",
+  "ctaLede": "Tell us how your unit runs and we will show you the quoted against actual margin, the tooling not recovered and the dues it would find, using your own numbers."
 };

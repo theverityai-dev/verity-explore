@@ -1,181 +1,1120 @@
 export default {
-  slug: 'skill-training-institutes',
-  status: 'published',
-  plural: 'skill training institutes',
-  subject: 'skill training institute',
-
-  seo: {
-    title: 'AI business management software for skill training institutes | Verity',
-    description:
-      'Verity connects placement outcomes, employer relationships, batch and lab capacity, certification body requirements and funding scheme compliance into one system.',
-    keywords: [
-      'AI software for skill training institutes',
-      'skill development institute management software',
-      'placement outcome and employer relationship tracking',
-      'batch capacity and certification compliance software',
-    ],
+  "schema": 2,
+  "slug": "skill-training-institutes",
+  "status": "published",
+  "plural": "skill training institutes",
+  "subject": "skill training institute",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Skill training institute software for Indian institutes | Verity",
+    "description": "Batches, trainers, assessments, certificates, placements and scheme records in one place. The 15 gaps a skill institute fights each batch and the screens that close them.",
+    "keywords": [
+      "skill training institute management software India",
+      "training batch and trainer scheduling",
+      "assessment and certification tracking",
+      "placement tracking after training",
+      "skill scheme records"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for skill training',
-    headline: 'You are selling a job, and the placement rate is the only thing that proves it.',
-    lede:
-      'Skill training is bought for an outcome and measured on placement. Verity tracks the outcome, the employers who provide it and the batch economics behind both.',
-    note: 'Verity runs the institute. Training content and assessment platforms stay where they are.',
-    panel: {
-      title: 'Institute',
-      meta: 'Current cycle',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Trainees enrolled', value: '840', note: 'across 26 batches' },
-        { label: 'Placement rate', value: '58%', note: 'within 90 days of completion' },
-        { label: 'Employers engaged', value: '46', note: '14 inactive this cycle' },
-        { label: 'Batches below viable', value: '5', note: 'lab and trainer committed' },
-      ],
-      rows: [
-        { name: '14 employers who hired last cycle have not this cycle', meta: 'The placement pipeline narrowing', active: true },
-        { name: '5 batches below viable size', meta: 'Lab slots and trainer committed', active: true },
-        { name: 'Placement outcomes unverified for 86 completions', meta: 'Claimed rate not evidenced', active: true },
-        { name: 'Certification body requirements not fully documented', meta: '2 programmes · audit due', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own institute in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for skill training institutes",
+    "headline": "A skill institute is judged on who finishes, who is certified and who gets a job. Most keep that in three different files.",
+    "lede": "A skill training institute fills batches, keeps trainers, books assessments, issues certificates and then has to show where its candidates ended up. Scheme funding and awarding bodies ask for proof at each step: enrolment, attendance, assessment, certificate and outcome. Verity keeps one record for each candidate from first enquiry to the job, so the proof exists before anyone asks for it.",
+    "oneLine": "One record for every candidate, batch and trainer, and one list each morning of the batches to start, assessments to book, certificates to issue and candidates to trace.",
+    "note": "Built for institutes with a small office and trainers on contract. The records come from the attendance and assessment work you already do.",
+    "screen": "owner",
+    "screenNote": "batches, trainers, assessments, certificates and placements"
+  },
+  "today": {
+    "heading": "Most skill institutes do the training well and the paperwork twice.",
+    "paragraphs": [
+      "A batch of thirty candidates in electrician, retail, tailoring, healthcare assistant or IT basics has to be enrolled, taught, attended, assessed and certified. Each step has its own form, its own portal or its own awarding body. After that, the institute is asked where each candidate went.",
+      "Proof matters because it is audited. A CAG audit of the Skill India mission, tabled in December 2025, covered 2015 to 2022 in eight states. It reported that of 56.14 lakh candidates under short-term training and special projects, 23.18 lakh, or 41%, were placed, found unreliable placement records in several states, and found biometric attendance devices missing or not working at 24 centres.",
+      "The pieces live in different places: enrolment forms, an attendance register or biometric export, trainer files, assessment lists from the awarding body, certificate numbers, and a phone list for following up on jobs. Nobody has one view of a candidate from the first form to the first salary."
+    ],
+    "stack": [
+      "Enrolment forms and Excel batch lists",
+      "Biometric or paper attendance exports",
+      "Awarding body and scheme portals",
+      "WhatsApp groups for candidates and trainers",
+      "Phone calls to trace placements"
+    ],
+    "stackNote": "Each one is needed. None of them agrees with the others unless someone sits down and reconciles them."
+  },
+  "painsHeading": "Where a skill institute actually loses batches, money and proof.",
+  "painsLede": "These are the situations owners, centre managers and trainers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Candidates",
+      "title": "Mobilisation: candidates enrol, then do not turn up",
+      "scene": "A batch of thirty is planned for Monday. Forty-two names were taken from a community drive. Twenty-one come on day one, some with the wrong documents, and the batch is renegotiated on the spot.",
+      "cost": "Example arithmetic: a batch costs ₹60,000 a month in trainer, space and consumables. A batch running at 21 against a planned 30 loses the margin on nine candidates every month it runs.",
+      "fix": "Each prospect is a record with source, documents needed, age and education checks and a next step. Verity lists prospects who have not confirmed, those missing papers and the seats at risk of going empty, with a task for the mobiliser. Staff speak to candidates; the outcome is recorded.",
+      "screen": "batches"
     },
-  },
-
-  overview: {
-    heading: 'The product is a job, and the proof is a placement you can evidence.',
-    paragraphs: [
-      'A skill training institute sells an outcome. Trainees enrol because they expect employment, employers engage because they need candidates, and funders support programmes on the basis of placement rates. All three depend on a placement figure that has to be verifiable, and eighty-six completions with unverified outcomes is a claimed rate rather than an evidenced one.',
-      'The second characteristic is the employer relationship, which is the actual supply of placements. Fourteen employers who hired last cycle and have not this cycle is the placement pipeline narrowing before the placement rate falls.',
-      'The third is batch and lab economics. Practical training needs equipment and lab slots as well as a trainer, which makes an under-filled batch more expensive than in classroom-only teaching.',
-      'The fourth is certification. Programmes are accredited by bodies with documentation requirements that are audited, and evidence has to exist as records made during delivery.',
-      'The fifth is funding compliance, where schemes attach conditions to enrolment, attendance and outcomes.',
-      'Verity tracks placement with evidence, holds the employer relationships that supply it, and manages batch and lab economics.',
+    {
+      "area": "Candidates",
+      "title": "Eligibility and documents are checked after the batch starts",
+      "scene": "A candidate is below the minimum age, or lacks the required education for the course. It is noticed at assessment when the awarding body's list rejects him.",
+      "cost": "A candidate trained but not certifiable is a month of cost with no outcome. The CAG report noted enrolment that ignored prescribed criteria such as age and education.",
+      "fix": "Each course has an eligibility checklist. Verity shows each candidate's documents received, verified or wrong, who checked them and when, and blocks the batch list from closing until the gaps are resolved.",
+      "screen": "candidates",
+      "source": {
+        "name": "The Federal on the CAG audit of Skill India, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "area": "Candidates",
+      "title": "Attendance proof is patchy",
+      "scene": "The biometric device is down for a week. Attendance for those days is written on paper and typed later. A monitoring visit asks for the log for a specific Tuesday.",
+      "cost": "Under schemes that require attendance proof, a gap can threaten payment. The CAG audit found biometric devices missing or not working at 24 centres and the same photographs used as evidence for different trainings.",
+      "fix": "Attendance is recorded by candidate and session, with how it was captured and who confirmed it. Verity flags sessions with no capture, candidates below the required percentage and days where a device was down, so the gap is explained on the day, not a year later.",
+      "screen": "candidates",
+      "source": {
+        "name": "The Federal on the CAG audit of Skill India, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "area": "Candidates",
+      "title": "Candidates drop out mid-course",
+      "scene": "A candidate gets a daily-wage job in week three and stops coming. The trainer knows. The office does not. At the end, the batch has twenty-four in the register and nineteen at the assessment.",
+      "cost": "Each dropout is a lost outcome and, under many schemes, lost revenue. Retained candidates are what the batch is paid or judged on.",
+      "fix": "Candidates who miss more than your limit are listed with their pattern, and a task goes to the trainer or counsellor. The reason for leaving is recorded, so patterns by course, trainer or location can be seen.",
+      "screen": "candidates"
+    },
+    {
+      "area": "Trainers",
+      "title": "Trainers are on contract and their qualifications are in a folder",
+      "scene": "A trainer's certification for a job role expired in June. Another is teaching two courses in the same slot. A monitoring visit asks for the trainer's qualifications, ToT certificate and experience.",
+      "cost": "Schemes generally expect certified trainers, and a gap can invalidate a batch. The CAG report noted weak controls over trainer and assessor records.",
+      "fix": "Each trainer is a record with qualifications, certifications, expiry dates, the courses they can teach and their batches. Verity flags expiring certificates, clashes and batches without a qualified trainer.",
+      "screen": "trainers"
+    },
+    {
+      "area": "Trainers",
+      "title": "Trainer hours and pay are argued",
+      "scene": "A trainer is paid per hour on contract. The batch register says 120 hours, the trainer says 128. Practical sessions in a workshop are counted differently from classroom hours.",
+      "cost": "Disputes over a few hours sour relationships with contract trainers, who are not easy to replace.",
+      "fix": "Each session is recorded with the trainer, hours, type and the batch, whether taken, replaced or cancelled. Verity totals hours by trainer and batch for the month. The institute still runs its own payroll.",
+      "screen": "trainers"
+    },
+    {
+      "area": "Operations",
+      "title": "Practical lab, tools and consumables run out mid-batch",
+      "scene": "A welding batch runs short of electrodes in week two. A beauty batch has too few kits. A tailoring batch shares one machine between four candidates.",
+      "cost": "A candidate who cannot practise is a candidate who fails the practical assessment, and the institute pays for training that does not stick.",
+      "fix": "Each course has a list of tools and consumables per candidate. Verity compares what a batch needs with stock on hand, flags shortages before the batch starts and records what each batch used.",
+      "screen": "batches"
+    },
+    {
+      "area": "Assessments",
+      "title": "Assessments are booked late or against the wrong list",
+      "scene": "The assessment agency's date is fixed with little notice. The candidate list sent to them has three names missing and two spelt differently from the Aadhaar. On the day, five candidates cannot be assessed.",
+      "cost": "A missed assessment delays certification by weeks, and delays any payment tied to it. Under PMKVY 4.0, only NCVET-approved agencies handle assessments, with stricter timelines.",
+      "fix": "Each assessment is a record with the awarding body, assessment agency, date, venue and candidate list. Verity checks names, IDs and attendance against the list before it is sent, and lists candidates not ready. Staff submit on the awarding body's portal.",
+      "screen": "assessments",
+      "source": {
+        "name": "National Skills Network on PMKVY 4.0, 2025",
+        "url": "https://nationalskillsnetwork.in/pmkvy-4-0-explained-all-you-need-to-know-about-indias-flagship-skill-scheme/"
+      }
+    },
+    {
+      "area": "Assessments",
+      "title": "Results and certificates take months and go missing",
+      "scene": "A candidate passed in June. By October there is still no certificate, and nobody can say whether it was issued, delayed or lost. The candidate has a job offer that needs it.",
+      "cost": "A candidate without a certificate cannot prove the training, and the institute's reputation suffers. PMKVY 4.0 certificates are described as QR-coded and managed through the Skill India Digital Hub.",
+      "fix": "Each candidate's result and certificate status is on their record: assessed, passed, certificate requested, issued, collected. Verity lists passes with no certificate after your target number of days and who is chasing.",
+      "screen": "assessments"
+    },
+    {
+      "area": "Placements",
+      "title": "Placement is promised and not traced",
+      "scene": "Brochures say 80% placement. The register shows the names of those who got a job in the first month and then nothing. Six months later nobody knows where most candidates are.",
+      "cost": "The CAG audit reported that 41% of 56.14 lakh candidates were placed in the programmes it examined, and that records were unreliable. An institute that cannot show its own placement trail cannot defend its claims.",
+      "fix": "Each candidate has a placement record: employer, role, start date, pay band and proof such as an offer letter. Verity schedules follow-up calls at one, three and six months, assigns them to a named person and records the answer, including candidates who cannot be reached.",
+      "screen": "placements",
+      "source": {
+        "name": "The Federal on the CAG audit of Skill India, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "area": "Placements",
+      "title": "Employer relations are in a phone book",
+      "scene": "The centre manager knows five employers personally. A new job role has no local employer. A company asks for fifteen candidates by Friday and the list is made from memory.",
+      "cost": "Good employers are the reason candidates finish, and a missed opportunity is a placement lost.",
+      "fix": "Each employer is a record with the roles they hire for, past hires, contacts and the next step. Verity matches certified candidates to open requirements and records each interview and outcome.",
+      "screen": "placements"
+    },
+    {
+      "area": "Funding",
+      "title": "Scheme and funding records are rebuilt for every audit",
+      "scene": "A monitoring visit or an audit asks for the full file on a batch: enrolment, attendance, trainer, assessment, certificates and outcomes. The centre assembles it from five places over a week.",
+      "cost": "Staff time, and the risk of a payment being held for a gap. The CAG report found weak documentation and data quality problems, including 94.53% of bank account records being zeros, null or blank in the sample it examined.",
+      "fix": "Each batch has a file built from the records as work happens: enrolment, attendance, trainer, assessment, certificates, outcomes and the scheme reference. Verity shows gaps in a batch's file while there is time to fix them. Staff submit on the scheme portals.",
+      "screen": "owner",
+      "source": {
+        "name": "The Federal on the CAG audit of Skill India, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "area": "Funding",
+      "title": "Candidate bank, Aadhaar and contact details are wrong",
+      "scene": "A stipend or reimbursement cannot be paid because the bank account is missing a digit. A candidate's phone number belongs to a relative. Follow-up calls reach the wrong person.",
+      "cost": "Payments fail, candidates are lost and placement tracing becomes impossible. The CAG report found many bank and email records unusable.",
+      "fix": "Contact and bank fields are validated when entered and flagged when missing or in a wrong format. Verity lists candidates with no working contact so staff can fix them while the candidate is still in the batch.",
+      "screen": "candidates",
+      "source": {
+        "name": "The Federal on the CAG audit of Skill India, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Awarding body affiliation and centre approvals lapse",
+      "scene": "The centre's affiliation with an awarding body is due for renewal. The infrastructure inspection checklist has not been looked at in a year. A new course is announced before the approval comes through.",
+      "cost": "A batch run without valid affiliation cannot lead to a valid certificate.",
+      "fix": "Each affiliation, approval and course is a record with its body, renewal date and owner. Verity raises tasks ahead of the dates and shows which courses are approved, due or lapsed. The institute applies through the awarding body.",
+      "screen": "owner",
+      "source": {
+        "name": "NCVET on awarding bodies",
+        "url": "https://ncvet.gov.in/?p=2119"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Children's and young candidates' data",
+      "scene": "Candidates include 17-year-olds. Photos and Aadhaar copies are shared on WhatsApp and kept on phones. A trainer leaves with a copy of the candidate list.",
+      "cost": "Under the DPDP Act, a minor's data generally needs verifiable parental consent, and a breach of any candidate's data is a serious matter.",
+      "fix": "Verity has one permission model. Staff see only the batches and fields their role allows, and every view and change is recorded. Consents and ID copies are stored against the candidate.",
+      "screen": "candidates"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The PMKVY totals are as reported by a financial news site citing the ministry. The CAG findings are as reported by The Federal, not the audit report itself, and cover 2015 to 2022. Scheme rules change, so confirm the current ones with your scheme or awarding body.",
+  "facts": [
+    {
+      "figure": "41%",
+      "text": "of 56.14 lakh candidates under short-term training and special projects were placed, according to a CAG audit covering 2015 to 2022, which also found placement records unreliable in several states.",
+      "source": {
+        "name": "The Federal, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "figure": "24 centres",
+      "text": "where biometric attendance devices were missing or not working in the CAG audit sample, and identical photographs were used as evidence for different trainings.",
+      "source": {
+        "name": "The Federal, 2025",
+        "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+      }
+    },
+    {
+      "figure": "1.29 crore",
+      "text": "people certified under PMKVY as of 30 June 2025, out of 1.6 crore trained, as reported from the Ministry of Skill Development and Entrepreneurship.",
+      "source": {
+        "name": "Angel One, 2025",
+        "url": "https://www.angelone.in/news/market-updates/nsdc-and-pmkvy-schemes-train-3-3-crore-for-future-skills-in-india"
+      }
+    },
+    {
+      "figure": "2023 to 2026",
+      "text": "the period of PMKVY 4.0, under which only NCVET-approved agencies handle assessments, certificates carry QR codes and the Skill India Digital Hub manages the lifecycle from registration to certification.",
+      "source": {
+        "name": "National Skills Network, 2025",
+        "url": "https://nationalskillsnetwork.in/pmkvy-4-0-explained-all-you-need-to-know-about-indias-flagship-skill-scheme/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your institute's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Institute / Today",
+      "meta": "Two centres, 9 batches running",
+      "heading": "The centre manager's morning view",
+      "caption": "Batches running and starting, candidates at risk, assessments and certificates pending, placement follow-ups due and approvals nearing expiry, with items needing a decision listed under it.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Candidates in training",
+              "value": "214",
+              "note": "9 batches"
+            },
+            {
+              "label": "At risk of dropping out",
+              "value": "17",
+              "note": "missed 4 of last 8"
+            },
+            {
+              "label": "Certificates pending",
+              "value": "26",
+              "note": "passed, not issued"
+            },
+            {
+              "label": "Placement calls due",
+              "value": "38",
+              "note": "this week"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Candidates by course status"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "In training",
+              "value": 100,
+              "display": "214"
+            },
+            {
+              "label": "Assessed, passed",
+              "value": 38,
+              "display": "81"
+            },
+            {
+              "label": "Certificate issued",
+              "value": 29,
+              "display": "62"
+            },
+            {
+              "label": "Placed (confirmed)",
+              "value": 14,
+              "display": "30",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Batch EL-07 file has 3 gaps: 2 attendance days with no capture, 1 trainer certificate expiring.",
+          "action": "Fix"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Affiliation renewal, Retail Associate course",
+              "meta": "Due 15 Nov, owner Centre manager",
+              "tag": [
+                "Start",
+                "flag",
+                "Applied",
+                "ok"
+              ]
+            },
+            {
+              "name": "Welding batch starts Monday: 22 of 30 confirmed",
+              "meta": "Mobiliser to call 8",
+              "tag": [
+                "Call",
+                "late",
+                "Confirmed",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "batches",
+      "title": "Batches",
+      "meta": "Starting this month",
+      "heading": "Batches, mobilisation and materials",
+      "caption": "Each batch with candidates confirmed against its plan, the trainer, and the tools and consumables it needs against stock, so shortages are known before the batch starts.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Batch",
+            "Course",
+            "Planned",
+            "Confirmed",
+            "Trainer",
+            "Start"
+          ],
+          "rows": [
+            [
+              "WD-04",
+              "Welding",
+              "30",
+              "22",
+              [
+                "Mobilise",
+                "late",
+                "28 confirmed",
+                "ok"
+              ],
+              "20 Oct"
+            ],
+            [
+              "EL-08",
+              "Electrician",
+              "30",
+              "30",
+              "Mr. Rao",
+              "3 Nov"
+            ],
+            [
+              "RT-02",
+              "Retail associate",
+              "25",
+              "18",
+              [
+                "Mobilise",
+                "flag"
+              ],
+              "3 Nov"
+            ],
+            [
+              "TL-05",
+              "Tailoring",
+              "20",
+              "20",
+              "Ms. Devi",
+              "10 Nov"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Material",
+            "Needed",
+            "In stock",
+            "Short",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Welding electrodes (kg)",
+              "60",
+              "35",
+              "25",
+              [
+                "Order",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Safety goggles",
+              "30",
+              "32",
+              "0",
+              "OK"
+            ],
+            [
+              "Sewing machines",
+              "10",
+              "8",
+              "2",
+              [
+                "Borrow",
+                "flag"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candidates",
+      "title": "Candidates",
+      "meta": "Batch EL-07, week 6 of 12",
+      "heading": "Documents, attendance and dropout risk",
+      "caption": "Each candidate's documents, attendance with how it was captured, and dropout risk. A gap in contact or bank details is flagged while the candidate is still in the batch.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Candidate",
+            "Documents",
+            "Attendance",
+            "Contact",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Mohan L., 19",
+              "Complete",
+              "92%",
+              "Verified",
+              "On track"
+            ],
+            [
+              "Sunita R., 17",
+              "Parent ID missing",
+              "88%",
+              "Verified",
+              [
+                "Consent",
+                "late",
+                "Received",
+                "ok"
+              ]
+            ],
+            [
+              "Irfan A., 22",
+              "Complete",
+              "64%",
+              "Not reachable",
+              [
+                "At risk",
+                "flag",
+                "Spoke, new job",
+                "info"
+              ]
+            ],
+            [
+              "Kavita P., 20",
+              "Bank detail wrong",
+              "81%",
+              "Verified",
+              [
+                "Fix",
+                "late",
+                "Fixed",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Attendance captured, all sessions this week",
+              "meta": "2 days no capture, device down",
+              "done": false
+            },
+            {
+              "text": "Eligibility checks complete",
+              "meta": "29 of 30",
+              "done": false
+            },
+            {
+              "text": "ID copies stored and access limited",
+              "meta": "Done",
+              "done": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trainers",
+      "title": "Trainers",
+      "meta": "This month",
+      "heading": "Trainers, certificates and hours",
+      "caption": "Each trainer's qualifications, certificate expiry, courses and batches, and hours taken against the batch plan. Clashes and batches without a qualified trainer are flagged.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Trainer",
+            "Course",
+            "Certificate expires",
+            "Hours this month",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Mr. Rao",
+              "Electrician",
+              "Mar 2027",
+              "86",
+              "OK"
+            ],
+            [
+              "Ms. Devi",
+              "Tailoring",
+              "Dec 2026",
+              "72",
+              [
+                "Renew in 60 days",
+                "flag"
+              ]
+            ],
+            [
+              "Mr. Singh",
+              "Welding",
+              "June 2026",
+              "64",
+              [
+                "Expired",
+                "late",
+                "Renewed",
+                "ok"
+              ]
+            ],
+            [
+              "Ms. Kumar",
+              "Retail",
+              "Aug 2027",
+              "58",
+              "OK"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Mr. Singh is rostered on WD-04 and EL-07 on Tuesday 2 pm. One needs cover.",
+          "action": "Assign"
+        }
+      ]
+    },
+    {
+      "id": "assessments",
+      "title": "Assessments and certificates",
+      "meta": "Next 30 days",
+      "heading": "Assessments, results and certificates",
+      "caption": "Each assessment with the awarding body, date and candidate list checked against attendance and ID, then results and certificate status for each candidate until it is collected.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Batch",
+            "Body",
+            "Date",
+            "List checked",
+            "Candidates",
+            "Status"
+          ],
+          "rows": [
+            [
+              "EL-07",
+              "Awarding body A",
+              "28 Oct",
+              [
+                "2 names differ",
+                "late",
+                "Fixed",
+                "ok"
+              ],
+              "28",
+              "Booked"
+            ],
+            [
+              "TL-04",
+              "Awarding body B",
+              "5 Nov",
+              "Yes",
+              "19",
+              [
+                "Booked",
+                "ok"
+              ]
+            ],
+            [
+              "RT-01",
+              "Awarding body A",
+              "None",
+              "None",
+              "22",
+              [
+                "Not booked",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Candidate",
+            "Batch",
+            "Result",
+            "Certificate",
+            "Days waiting"
+          ],
+          "rows": [
+            [
+              "Mohan L.",
+              "EL-06",
+              "Passed",
+              [
+                "Requested",
+                "late",
+                "Issued",
+                "ok"
+              ],
+              "41"
+            ],
+            [
+              "Anita S.",
+              "EL-06",
+              "Passed",
+              "Issued",
+              "8"
+            ],
+            [
+              "Suresh D.",
+              "TL-03",
+              "Passed",
+              [
+                "Requested",
+                "flag"
+              ],
+              "29"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "placements",
+      "title": "Placements",
+      "meta": "Batches that finished in the last 6 months",
+      "heading": "Employers, follow-ups and outcomes",
+      "caption": "Each certified candidate's employer, start date and the follow-up calls at one, three and six months, with those who cannot be reached listed. Employers are matched to candidates for open requirements.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Candidate",
+            "Course",
+            "Employer",
+            "1 month",
+            "3 months",
+            "6 months"
+          ],
+          "rows": [
+            [
+              "Ajay K.",
+              "Electrician",
+              "Sunrise Infra",
+              "Working",
+              "Working",
+              [
+                "Due",
+                "flag",
+                "Working",
+                "ok"
+              ]
+            ],
+            [
+              "Priya M.",
+              "Retail",
+              "BigMart",
+              "Working",
+              [
+                "Call due",
+                "late",
+                "Left, new job",
+                "info"
+              ],
+              "Due"
+            ],
+            [
+              "Rahim S.",
+              "Welding",
+              "Not placed",
+              "None",
+              [
+                "Unreachable",
+                "late",
+                "Reached",
+                "ok"
+              ],
+              "None"
+            ],
+            [
+              "Latha V.",
+              "Tailoring",
+              "Self-employed",
+              "Working",
+              "Working",
+              "Due"
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Sunrise Infra: needs 15 electricians by Friday",
+              "meta": "11 certified candidates match",
+              "tag": [
+                "Share",
+                "flag",
+                "Shared",
+                "ok"
+              ]
+            },
+            {
+              "name": "Placement rate, last 3 batches: 62% confirmed",
+              "meta": "Proof on file for 48 of 62 claimed",
+              "tag": [
+                "Fill gaps",
+                "info"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Monday, before and after.",
+  "dayLede": "What changes is not the training. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "8:30",
+      "before": "A new batch begins. The trainer has the list from last week and half the names do not match who is in the room.",
+      "after": "The batch screen shows who confirmed, who is missing papers and who is below age. The trainer teaches from the same list the office has."
+    },
+    {
+      "time": "10:00",
+      "before": "The biometric device is down. Attendance is written on paper and typed up the next day.",
+      "after": "The session is marked with a manual capture, who confirmed it and why. The record explains the gap."
+    },
+    {
+      "time": "12:00",
+      "before": "A candidate stops coming. The trainer knows. The office finds out at assessment.",
+      "after": "The candidate appeared on the at-risk list in week three, and a task went to the counsellor."
+    },
+    {
+      "time": "3:00",
+      "before": "A job opening comes in. The manager recalls two candidates from memory.",
+      "after": "Certified candidates matching the role are listed with their placement status, and the manager shares the list."
+    },
+    {
+      "time": "5:00",
+      "before": "A monitoring visit asks for a batch file from last year.",
+      "after": "The batch file is complete, with the gaps already fixed."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks how many hours each trainer taught and the answers differ.",
+      "after": "Hours by trainer and batch are on a record that both read."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time at your centre during a live batch, build Verity around how your enrolment, training, assessment and placement really run, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at the centre and sit through a batch start, an attendance session and an assessment day if one is due. Follow a candidate from the first enquiry to a placement call and list the gaps.",
+        "you": "Two to three hours of the owner's and the centre manager's time. Your course list, batch history, trainer files and the scheme or awarding body rules you follow.",
+        "get": "A written map of your institute: courses, awarding bodies, batches, trainers, assessment steps, placement process and the first problems we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your courses and eligibility checks, batches and rules, trainers and certificates, materials per course, assessment and certificate steps, placement follow-up schedule and scheme references. Build the six screens in your institute's terms.",
+        "you": "Check the setup with the centre manager and one trainer. Tell us where a rule or a step is wrong.",
+        "get": "A working Verity with your real courses, trainers and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in candidate lists, batch history, trainer files, assessment results and placement sheets from the files you use. Train the office, trainers and the placement officer during a live batch.",
+        "you": "The data in whatever form it exists, and any open assessments or certificates as of today. One hour with each role.",
+        "get": "Your candidates, batches and trainers inside Verity, and a team that has used it through a working week."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune the limits, and handle new batches, new courses and the first assessment cycle.",
+        "you": "A short monthly review with the owner and the centre manager.",
+        "get": "A system that keeps matching how the institute runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Programmes, batches, modules', 'Work'],
-    ['Trainees, alumni, candidates', 'Relationships'],
-    ['Employers, recruiters, partners', 'Relationships'],
-    ['Placements, outcomes, verification', 'Workflows'],
-    ['Labs, equipment, consumables', 'Inventory'],
-    ['Trainers, assessors, placement staff', 'People'],
-    ['Certification, funding, audit evidence', 'Control'],
-  ],
-
-  challengesHeading: 'An outcome you must evidence and a pipeline you must maintain.',
-  challengesLede:
-    'Skill training difficulties come from selling employment and depending on employers to supply it.',
-  challenges: [
-    { problem: 'Placement outcomes are claimed rather than evidenced', detail: 'A placement rate is reported from what trainees said, and verification is partial.', outcome: 'Placements carry employer, role, start date and verification state, so the rate is evidenced.' },
-    { problem: 'The employer pipeline narrows quietly', detail: 'Employers who hired previously stop, and it becomes visible when placement falls.', outcome: 'Employer engagement is tracked per cycle, so a narrowing pipeline is visible early.' },
-    { problem: 'Batches run below viability against lab cost', detail: 'Practical training commits lab slots and equipment as well as a trainer.', outcome: 'Viability includes lab and equipment cost, so under-filled batches are a decision before the cycle.' },
-    { problem: 'Certification evidence is assembled at audit', detail: 'Accreditation bodies require documentation that should have been created during delivery.', outcome: 'Evidence requirements are checklist items completed as the programme runs.' },
-    { problem: 'Funding conditions attach to attendance and outcomes', detail: 'Scheme funding depends on enrolment, attendance and placement conditions tracked separately.', outcome: 'Funding conditions are recorded against the programme with compliance reportable.' },
-    { problem: 'Alumni are not maintained as a placement asset', detail: 'Placed alumni are the institute’s best route to more employers and are rarely contacted.', outcome: 'Alumni are records with employer, role and progression, usable for future placement.' },
-  ],
-
-  modulesLede: 'One system across delivery, placement, employers and compliance.',
-  modules: [
-    { id: 'work', title: 'Programmes, batches and modules', line: 'Each batch is work with a programme, trainer, lab requirement, schedule, enrolment and viability threshold including equipment cost.', why: 'Practical training commits more than a trainer, which changes the viability calculation.', example: 'Five batches below viable size with lab slots and trainer committed.' },
-    { id: 'workflows', title: 'Placements, outcomes and verification', line: 'Placements carry employer, role, salary band, start date, verification state and retention at intervals.', why: 'The placement rate is the product and has to be evidenced rather than claimed.', example: 'Eighty-six completions with unverified outcomes.' },
-    { id: 'relationships', title: 'Employers, trainees and alumni', line: 'Employers carry their hiring history, requirements and engagement per cycle; trainees carry their programme, attendance, assessment and placement.', why: 'Employers supply the outcome and alumni open the next employer.', example: 'Fourteen employers who hired last cycle and have not this one.' },
-    { id: 'inventory', title: 'Labs, equipment and consumables', line: 'Lab capacity, equipment condition and consumables per trainee are recorded against batches.', why: 'Practical training consumes materials per trainee and equipment hours per batch.', example: 'Consumable cost per trainee by programme.' },
-    { id: 'control', title: 'Certification, funding and audit evidence', line: 'One permission model and one audit trail, with certification requirements and funding conditions as reportable states.', why: 'Accreditation and funding both audit records made during delivery.', example: 'Certification evidence completeness by programme ahead of audit.' },
-    { id: 'people', title: 'Trainers, assessors and placement staff', line: 'Staff are modelled once, with batches, assessments and placements attributed.', why: 'Placement outcomes vary by trainer and by placement officer.', example: 'Placement rate by trainer cohort and placement officer.' },
-    { id: 'intelligence', title: 'Placement, viability and compliance reporting', line: 'Verified placement rates, employer engagement, batch viability, consumable cost and certification completeness come from the records.', why: 'The institute is judged on placement and funded on compliance, and both are recordable.', example: 'Verified placement rate by programme and cohort.' },
-    { id: 'ai', title: 'Ask the institute a question', line: 'Verity AI answers from your own trainee, batch, employer and placement records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about employers and verification.', example: '"Which employers hired last cycle and not this one?" returns fourteen with contact assigned.' },
-    { id: 'communication', title: 'Employer and trainee contact', line: 'Employer engagement, trainee follow-up and verification contact attach to the record they concern.', why: 'Verification and employer engagement are both contact activities.', example: 'A placement verification call recorded against the trainee and employer.' },
-    { id: 'records', title: 'Assessments and certification documents', line: 'Assessments, certificates and required documentation attach to the trainee and programme.', why: 'Certification bodies audit documentation created during delivery.', example: 'Assessment records complete per trainee before certification.' },
-    { id: 'locations', title: 'Centres, labs and classrooms', line: 'Locations carry lab capacity, equipment and batch allocation.', why: 'Lab capacity constrains how many practical batches can run.', example: 'Lab utilisation against practical batch demand.' },
-    { id: 'orders', title: 'Fees, funding and instalments', line: 'Trainee fees, scheme funding and instalments are recorded against trainees and programmes.', why: 'Funded and self-paid trainees follow different rules in the same batch.', example: 'Funded and self-paid trainees tracked separately within one batch.' },
-  ],
-
-  workflowsHeading: 'Enrol, train, assess, place, verify.',
-  workflowsLede: 'These already happen. Recorded, the placement rate becomes evidence.',
-  workflows: [
-    { name: 'Batch formation', steps: ['Programme scheduled with trainer and lab requirement', 'Viability calculated including equipment and consumables', 'Enrolment tracked against the threshold', 'Merge, defer or proceed decided before the cycle', 'Funding eligibility confirmed per trainee'], note: 'Practical training viability must include lab and consumable cost, not just trainer cost.' },
-    { name: 'Delivery and assessment', steps: ['Attendance recorded against funding conditions', 'Modules delivered with consumables recorded', 'Assessments conducted and documented', 'Certification requirements completed as they arise', 'Completion recorded with evidence'], note: 'Creating evidence during delivery is the difference between an audit and a reconstruction.' },
-    { name: 'Placement', steps: ['Employer requirements captured', 'Candidates matched from completing cohorts', 'Interviews arranged and outcomes recorded', 'Offer and start date recorded', 'Verification obtained from the employer or trainee'], note: 'Verification is what turns a claimed rate into an evidenced one.' },
-    { name: 'Employer engagement', steps: ['Employer hiring history reviewed by cycle', 'Employers who have not engaged this cycle identified', 'Contact assigned with previous hires attached', 'Requirements captured for the coming cohort', 'Outcome recorded'], note: 'The pipeline narrows before the placement rate falls, and only the record shows it.' },
-    { name: 'Compliance and audit', steps: ['Certification and funding requirements mapped', 'Evidence created during delivery', 'Completeness reported per programme', 'Gaps raised as exceptions with owners', 'Audit submission assembled from records'], note: 'Funding and accreditation both audit what was recorded at the time.' },
-  ],
-
-  ai: {
-    heading: 'Ask about placement and employers.',
-    lede: 'Verity AI reads the same trainee, batch, employer and placement records the institute creates as it works. It answers from your own institute, respects permissions, and can turn an answer into contact and decisions.',
-    panelMeta: 'Grounded in your institute records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which employers hired last cycle and have not this cycle?',
-      'Which placements are unverified?',
-      'Which batches are below viable size including lab cost?',
-      'What is verified placement rate by programme and cohort?',
-      'Which certification evidence is missing ahead of audit?',
-      'What is consumable cost per trainee by programme?',
-      'Which funding conditions are at risk on attendance?',
-      'Which alumni are placed with employers we could re-engage?',
-      'Summarise placement and compliance position.',
+    "bring": [
+      "The course list with awarding bodies and scheme references",
+      "Batch history for the last year",
+      "Trainer files with qualifications and certificates",
+      "Assessment and certificate lists",
+      "The placement sheet or phone list you use"
     ],
+    "time": "About 9 to 12 hours of the owner's or centre manager's time across the four weeks, mostly in weeks 1 and 3. The placement officer and a senior trainer need a few more.",
+    "after": "Nobody is hired to run Verity. Enrolment, attendance and placement calls are recorded as part of work the team already does, and the lists and batch files come from those records."
   },
-
-  automationHeading: 'Pipeline and evidence.',
-  automationLede: 'Each runs from the institute’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'An employer does not engage in a cycle', steps: ['Flagged with previous hiring history', 'Contact assigned to the placement team', 'Requirements captured or outcome recorded'] },
-    { trigger: 'A trainee completes without verified placement', steps: ['Verification task raised', 'Employer or trainee contacted', 'Outcome and evidence recorded'] },
-    { trigger: 'Batch enrolment stays below viability', steps: ['Flagged with trainer, lab and consumable cost', 'Merge or defer decision raised', 'Outcome recorded'] },
-    { trigger: 'Attendance falls below a funding condition', steps: ['Trainee and programme flagged', 'Intervention assigned', 'Compliance position updated'] },
-    { trigger: 'Certification evidence is incomplete', steps: ['Exception raised against the programme', 'Owner assigned', 'Completeness updated on receipt'] },
+  "ai": {
+    "heading": "Ask your institute a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own candidate, batch, trainer, assessment and placement records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which candidates passed more than 30 days ago and have no certificate yet?",
+        "a": "11 candidates across three batches. Seven are from EL-06.",
+        "rows": [
+          [
+            "EL-06",
+            "7"
+          ],
+          [
+            "TL-03",
+            "3"
+          ],
+          [
+            "RT-01",
+            "1"
+          ],
+          [
+            "Over 45 days",
+            "4"
+          ]
+        ],
+        "action": "Create chase tasks for the certificates desk"
+      },
+      {
+        "q": "Which batch files have gaps before the next monitoring visit?",
+        "a": "Three batches. EL-07 has two attendance days with no capture and an expiring trainer certificate.",
+        "rows": [
+          [
+            "Attendance gaps",
+            "2 batches"
+          ],
+          [
+            "Trainer certificate expiring",
+            "1 batch"
+          ],
+          [
+            "Assessment list mismatch",
+            "1 batch"
+          ]
+        ],
+        "action": "Assign gap-fix tasks"
+      },
+      {
+        "q": "What is our placement trail for the last three batches?",
+        "a": "62% confirmed with proof for 48 of 62 claimed. Fourteen claimed placements have no proof on file.",
+        "rows": [
+          [
+            "Confirmed with proof",
+            "48"
+          ],
+          [
+            "Claimed, no proof",
+            "14"
+          ],
+          [
+            "Unreachable",
+            "9"
+          ],
+          [
+            "Not placed",
+            "31"
+          ]
+        ],
+        "action": "Create follow-up calls for the 14"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to candidates and employers; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "A prospect has not confirmed a week before the batch starts",
+      "then": [
+        "Added to the mobiliser's list",
+        "Documents missing shown",
+        "Confirmed or dropped recorded"
+      ]
+    },
+    {
+      "when": "A candidate misses four sessions",
+      "then": [
+        "Trainer and counsellor get a task",
+        "Pattern shown on the task",
+        "Reason for leaving recorded if they stop"
+      ]
+    },
+    {
+      "when": "A session has no attendance capture",
+      "then": [
+        "Flagged on the batch file",
+        "Task to the centre manager",
+        "Manual capture recorded with the reason"
+      ]
+    },
+    {
+      "when": "A trainer certificate is near expiry",
+      "then": [
+        "Task to the centre manager",
+        "Courses and batches affected shown",
+        "New date set when renewed"
+      ]
+    },
+    {
+      "when": "A candidate passes",
+      "then": [
+        "Certificate request created",
+        "Days waiting counted",
+        "Issue date recorded"
+      ]
+    },
+    {
+      "when": "A candidate is one, three or six months past certification",
+      "then": [
+        "Placement call task to the named person",
+        "Last known status shown",
+        "Outcome recorded, including unreachable"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the institute can see.',
-  intelligenceLede: 'Outcome, pipeline and compliance from delivery records.',
-  intelligence: [
-    { area: 'Placement', points: ['Verified placement rate by programme and cohort', 'Time to placement after completion', 'Salary bands and role types', 'Retention at intervals after placement'] },
-    { area: 'Employers', points: ['Hiring by employer and cycle', 'Employers engaged and lapsed', 'Requirements by employer', 'Conversion from interview to offer'] },
-    { area: 'Delivery', points: ['Batch viability including lab cost', 'Attendance against funding conditions', 'Assessment completion', 'Consumable cost per trainee'] },
-    { area: 'Compliance', points: ['Certification evidence completeness', 'Funding condition adherence', 'Audit exceptions and closure', 'Documentation by programme'] },
+  "rules": {
+    "heading": "The rules a skill training institute has to keep up with.",
+    "lede": "Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Scheme rules, payment terms and awarding body norms change, and they differ by scheme and state. Confirm current requirements with your scheme, awarding body or adviser.",
+    "items": [
+      {
+        "name": "NCVET and awarding bodies",
+        "what": "NCVET recognises awarding bodies that certify learners in approved qualifications, set affiliation or accreditation criteria for training partners and onboard assessment agencies. A training entity is generally affiliated or accredited by a recognised awarding body and works under its norms.",
+        "how": "Each affiliation, course approval and renewal date is a record with an owner, and tasks are raised before it lapses.",
+        "source": {
+          "name": "NCVET",
+          "url": "https://ncvet.gov.in/?p=2119"
+        }
+      },
+      {
+        "name": "Scheme norms such as PMKVY 4.0",
+        "what": "PMKVY 4.0 is reported to run from 2023 to 2026, with assessments by NCVET-approved agencies, QR-coded certificates and Skill India Digital Hub tracking from registration to certification. Placement has been described as delinked from training, but sources differ on how outcomes are tracked, so check the current scheme guidelines.",
+        "how": "Each batch file holds enrolment, attendance, trainer, assessment and certificate records, and gaps are flagged. Staff submit on the scheme portals.",
+        "source": {
+          "name": "National Skills Network, 2025",
+          "url": "https://nationalskillsnetwork.in/pmkvy-4-0-explained-all-you-need-to-know-about-indias-flagship-skill-scheme/"
+        }
+      },
+      {
+        "name": "Attendance and monitoring evidence",
+        "what": "Schemes generally expect attendance evidence such as biometric records, and the CAG audit flagged missing or non-working devices at 24 centres.",
+        "how": "Every session records how attendance was captured and who confirmed it, and gaps are explained when they happen.",
+        "source": {
+          "name": "The Federal",
+          "url": "https://thefederal.com/category/business/skill-india-exposed-as-a-non-starter-in-cag-audit-of-rs-10000-cr-spend-222084"
+        }
+      },
+      {
+        "name": "Candidate data under the DPDP Act",
+        "what": "Personal data of candidates, including Aadhaar copies and bank details, is generally covered by the DPDP Act, and a minor's data needs verifiable parental consent.",
+        "how": "Role-based access and an audit trail show who saw or changed each record, and consents are recorded with their purpose."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A trainer should not see bank details. The placement officer should not edit attendance. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Are batches full, certified and placed?",
+      "sees": "Batches against plan, certificates pending, placement trail, affiliations due and batch file gaps."
+    },
+    {
+      "role": "Centre manager",
+      "question": "What needs sorting this week?",
+      "sees": "Trainer clashes, attendance gaps, assessment bookings, materials short and expiring certificates."
+    },
+    {
+      "role": "Trainer",
+      "question": "Who is coming and where are they in training?",
+      "sees": "Their batches, attendance, practical progress and candidates at risk."
+    },
+    {
+      "role": "Placement officer",
+      "question": "Who is placed, who is traced and who is waiting?",
+      "sees": "Certified candidates, employer requirements, follow-up calls due and proofs on file."
+    },
+    {
+      "role": "Accountant",
+      "question": "What is owed and what is claimed?",
+      "sees": "Trainer hours, scheme claims linked to batch files and materials spend per batch."
+    }
   ],
-  intelligenceNote: 'Verity records the institute’s operations. Training content and assessment platforms continue as they are.',
-
-  rolesHeading: 'One institute, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Director', question: 'Is the placement outcome real and holding?', focus: 'Verified placement rate, employer engagement, batch viability, compliance readiness.' },
-    { role: 'Placement officer', question: 'Which employers and which candidates?', focus: 'Employer requirements and engagement, candidates completing, interviews and offers, verification outstanding.' },
-    { role: 'Trainer', question: 'Is my batch on track?', focus: 'Attendance and funding conditions, assessments, consumables, completion evidence.' },
-    { role: 'Compliance', question: 'Are we audit-ready?', focus: 'Certification evidence completeness, funding conditions, exceptions and closure, documentation gaps.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "The scheme, awarding body and assessment agency portals. Your staff submit there.",
+      "Your biometric attendance device. We agree during setup how its records reach Verity.",
+      "WhatsApp and phone with candidates and employers. Staff send",
+      "Verity tracks who was told.",
+      "Your accountant, who prepares returns and claims."
+    ],
+    "not": [
+      "Conduct assessments or issue awarding body certificates.",
+      "Submit data to scheme portals on your behalf.",
+      "Send messages to candidates or employers on its own.",
+      "Run payroll for your trainers."
+    ],
+    "migration": "We bring in candidate lists, batch history, trainer files and placement sheets from the files you use now, course by course, so training carries on while it happens."
+  },
+  "faqHeading": "Questions skill institute owners ask.",
+  "faqs": [
+    [
+      "Do you connect to the Skill India Digital Hub or my scheme portal?",
+      "We do not claim integrations with named portals. During setup we agree how your data reaches Verity and how your team submits to the portal. Verity keeps the records the portal asks for ready and flags gaps."
+    ],
+    [
+      "Can it handle several courses with different awarding bodies?",
+      "Yes. Each course carries its awarding body, eligibility rules, hours and assessment steps. The records and screens are the same for all of them."
+    ],
+    [
+      "We use a biometric device. Will it work with Verity?",
+      "We agree during setup how attendance reaches Verity from your device. We do not supply or certify any hardware."
+    ],
+    [
+      "Does Verity run assessments or issue certificates?",
+      "No. The assessment agency and awarding body do. Verity records the assessment, the result and the certificate status, and lists the ones that have not arrived."
+    ],
+    [
+      "How does it help with placement claims?",
+      "Each placement is a record with employer, role, start date and proof, and follow-up calls are scheduled at one, three and six months. You can show what is confirmed and what is not."
+    ],
+    [
+      "Will trainers have to enter a lot?",
+      "Trainers mark attendance and add a short note on practical progress. We train them at a live batch, not in a classroom."
+    ],
+    [
+      "We have more than one centre. Can they be seen together?",
+      "Yes. Each centre is a location in one system, with batches, candidates and placements side by side. A trainer who works at two is one record."
+    ],
+    [
+      "Who can see candidate data?",
+      "Only the people you allow. Access is set by role and batch, and every view and change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of candidates, centres and what you want set up. Message us and we will give you a clear number after a short conversation about how your institute runs."
+    ]
   ],
-
-  useCasesHeading: 'What skill training institutes use Verity for',
-  useCases: [
-    { name: 'Verified placement rates', body: 'Placements carrying employer, role, start date and verification, so the rate the institute markets is evidenced rather than claimed.' },
-    { name: 'Employer pipeline maintenance', body: 'Engagement tracked per cycle, so a narrowing pipeline is visible before the placement rate falls.' },
-    { name: 'Batch viability with lab cost', body: 'Viability calculated including equipment and consumables, since practical training commits more than a trainer.' },
-    { name: 'Compliance evidence during delivery', body: 'Certification and funding requirements completed as the programme runs rather than reconstructed at audit.' },
-    { name: 'Consumable cost per trainee', body: 'Materials recorded against batches, making practical programme economics visible.' },
-    { name: 'Alumni as a placement asset', body: 'Placed alumni with employer and role, usable to open further employer relationships.' },
-    { name: 'Asking about outcomes', body: 'Plain-language questions across placement, employers, batches and compliance, with contact raised in the same step.' },
+  "related": [
+    "vocational-training-centres",
+    "colleges",
+    "coaching-institutes",
+    "language-institutes",
+    "test-preparation-centres",
+    "universities"
   ],
-
-  migration: 'Training content and assessment platforms continue and are mapped during implementation. Trainees, batches, employers with hiring history, placements and compliance requirements are brought across.',
-
-  faqHeading: 'Questions skill training institutes ask',
-  faqs: [
-    ['What can AI software do for a skill training institute?', 'Verity AI answers questions from your own trainee, batch, employer and placement records: which employers hired last cycle and not this one, which placements are unverified, which batches are below viable size including lab cost, which certification evidence is missing. Each answer can become contact or a decision.'],
-    ['Why does verification matter so much?', 'Because the placement rate is the product. Trainees enrol for it, employers judge on it and funders support programmes on the basis of it — and a rate reported from what trainees said is a claim rather than evidence.'],
-    ['How does employer tracking help?', 'Employers supply the placements. Engagement recorded per cycle shows the pipeline narrowing before the placement rate falls, which is months of warning rather than a surprise at the end of a cohort.'],
-    ['Why include lab cost in viability?', 'Because practical training commits equipment hours and consumables per trainee as well as a trainer. A batch that would be viable in a classroom can be loss-making in a lab.'],
-    ['Can it help with certification audits?', 'Certification and funding requirements are checklist items completed during delivery with completeness reportable, so an audit is a submission from records rather than a reconstruction.'],
-    ['Does it track funding conditions?', 'Scheme conditions on enrolment, attendance and outcomes are recorded against the programme with compliance reportable and at-risk trainees flagged during delivery.'],
-    ['Can alumni help with placement?', 'Placed alumni are records with employer, role and progression, which makes them a route to further employer relationships rather than a list nobody maintains.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of programmes, viability, certification and funding requirements, configuration, migration of trainees, employers and placements, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the employers who stopped hiring.',
-  ctaLede: 'They are the placement rate falling before it falls. Tell us how employer engagement is tracked today.',
-
-  related: ['vocational-training-centres', 'coaching-institutes', 'recruitment-agencies', 'colleges', 'edtech-companies', 'language-institutes'],
+  "ctaHeading": "Start with the candidates you cannot trace.",
+  "ctaLede": "Tell us how your institute runs and we will show you the at-risk candidates, the batch file gaps and the placement trail it would find, using your own numbers."
 };

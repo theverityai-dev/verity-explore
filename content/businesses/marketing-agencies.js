@@ -1,575 +1,1063 @@
 export default {
-  slug: 'marketing-agencies',
-  status: 'published',
-  plural: 'marketing agencies',
-  subject: 'marketing agency',
-
-  seo: {
-    title: 'AI business management software for marketing agencies | Verity',
-    description:
-      'Verity connects clients, retainers, project delivery, team capacity, approvals and billing into one system, so account profitability stops being a guess.',
-    keywords: [
-      'AI software for marketing agencies',
-      'agency management software',
-      'agency resource and capacity planning',
-      'client retainer and project management software',
-      'creative agency operations software',
-    ],
+  "schema": 2,
+  "slug": "marketing-agencies",
+  "status": "published",
+  "plural": "marketing agencies",
+  "subject": "marketing agency",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Marketing agency management software for Indian agencies | Verity",
+    "description": "Briefs, client approvals, retainer hours and monthly reports in one place. See the 14 leaks in a marketing agency and the Verity screens that close them.",
+    "keywords": [
+      "marketing agency management software India",
+      "client approval tracking for agencies",
+      "retainer hours and scope creep tracking",
+      "marketing campaign brief management",
+      "agency monthly reporting workflow"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for marketing agencies',
-    headline: 'The account looks fine. It is consuming twice the delivery it pays for.',
-    lede:
-      'Agencies measure revenue and almost never measure what earning it cost. Verity connects the client, the retainer, the work delivered against it and the people who did it, on one record.',
-    note: 'Verity runs agency operations. It is not a campaign or advertising platform.',
-    panel: {
-      title: 'Agency',
-      meta: 'All accounts · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active accounts', value: '24', note: '17 on retainer' },
-        { label: 'Committed capacity', value: '118%', note: 'against next month' },
-        { label: 'Over-servicing', value: '6 accounts', note: 'beyond retainer scope' },
-        { label: 'Unbilled work', value: '₹28 L', note: 'across 9 projects' },
-      ],
-      rows: [
-        { name: 'Account consuming 210% of its retainer hours', meta: 'No scope variation recorded · 4 months running', active: true },
-        { name: 'Next month committed at 118% of capacity', meta: 'Two pitches still outstanding', active: true },
-        { name: '5 deliverables awaiting client approval past due', meta: 'Blocking three dependent tasks', active: true },
-        { name: 'Project closed but not billed', meta: '₹6.4 L · completed 31 days ago', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own agency in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for marketing agencies",
+    "headline": "Your team shipped the campaign. The client says they never approved it.",
+    "lede": "A marketing agency sells time and judgment, and both are hard to see. A brief arrives as a voice note, a design goes through five rounds in three chats, and a retainer quietly grows to twice what was agreed. Verity keeps the brief, the approval, the hours and the report on the same client record, so you can prove what was asked, what was approved and what it cost you.",
+    "oneLine": "One system that knows every client, every campaign, every approval and every hour, and tells you which retainer is losing money before the month ends.",
+    "note": "Your design tools, ad accounts and analytics stay where they are. Verity runs the agency around them.",
+    "screen": "owner",
+    "screenNote": "clients, campaigns, retainers and team load"
   },
-
-  overview: {
-    heading: 'Agencies instrument their clients’ businesses and not their own.',
-    paragraphs: [
-      'A marketing agency sells the output of its people. It signs retainers and projects, delivers work against them, and either makes a margin or does not. The commercial question — which accounts are profitable and which are quietly subsidised — depends entirely on knowing what each account actually consumed, and most agencies do not know.',
-      'The reason is structural. Delivery work sits in a project tool, the client relationship in a spreadsheet or a CRM, the contract in a drive, the invoice in an accounting package, and capacity in nobody’s system at all. Each of those is fine on its own; none of them can answer whether the account that pays a comfortable monthly retainer is consuming forty percent more delivery than it did a year ago.',
-      'Over-servicing is the characteristic agency failure, and it never happens deliberately. A client asks for one more round. A revision becomes a rewrite. Something outside the scope is done because saying no felt disproportionate. Individually each is reasonable, and collectively they are the difference between a good year and a flat one.',
-      'The second failure is capacity. Work is sold against availability that nobody has calculated, so a team is committed at a hundred and eighteen percent of its month before two outstanding pitches are counted.',
-      'Verity holds the client, the retainer, the work delivered against it, the people who delivered it, the approvals and the billing position as one set of records. The commercial and the delivery sides stop being separate conversations.',
+  "today": {
+    "heading": "The work is creative and the back office is a group chat.",
+    "paragraphs": [
+      "A marketing agency of ten to sixty people usually has good people and a thin system. Briefs come by call, WhatsApp or email. A designer works from the last message they remember. A client replies \"looks good\" in a chat at 11 pm, and the post goes live at 9 am.",
+      "The facts that decide profit sit in separate places. The retainer amount is in the contract. The hours are in somebody's head or a timesheet that is filled on Friday. The approvals are in email. The monthly report is a slide deck built by hand from five dashboards. The founder is the only person who sees the whole client.",
+      "So the agency finds out late. The client who asked for \"one small change\" for the sixth time. The retainer that took 140 hours against 90 sold. The invoice that is 75 days old while the team still works on the next campaign. The campaign that went live with a claim the client had not cleared."
     ],
+    "stack": [
+      "WhatsApp groups per client",
+      "Email threads for approvals",
+      "Task board or a shared sheet",
+      "Dashboards from each ad platform",
+      "Timesheet or invoice spreadsheet"
+    ],
+    "stackNote": "Each tool is fine for its own job. Nothing connects the client, the brief, the approval, the hours and the invoice."
   },
-
-  terminology: [
-    ['Clients, accounts, retainers', 'Relationships'],
-    ['Projects, campaigns, deliverables', 'Work'],
-    ['Briefs, assets, contracts, decks', 'Records'],
-    ['Strategists, creatives, account managers', 'People'],
-    ['Client approvals, sign-offs, revisions', 'Workflows'],
-    ['Freelancers, production partners, vendors', 'Suppliers'],
-    ['Teams, studios, offices', 'Locations'],
+  "painsHeading": "Where a marketing agency actually loses money.",
+  "painsLede": "These are the situations agency owners and account heads describe again and again. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Briefs",
+      "title": "The brief is a voice note",
+      "scene": "A founder calls the account manager after dinner: \"Do something for the Diwali sale, same as last year but better.\" The account manager passes it to the designer by WhatsApp. Nobody writes down the audience, budget, deadline or what success looks like.",
+      "cost": "Work built on a vague brief is redone. Example arithmetic: two redo rounds on a ₹40,000 project at ₹1,000 an hour of team cost is about 16 wasted hours, roughly ₹16,000.",
+      "fix": "Every campaign starts as a brief record with goal, audience, budget, deliverables, deadline and owner. The brief must be marked complete before work is assigned, and every task links back to it.",
+      "screen": "briefs"
+    },
+    {
+      "area": "Briefs",
+      "title": "Two launches, one designer",
+      "scene": "Three clients want launches in the same week. The designer is booked on two of them without anyone noticing. On Wednesday one client is told the creative will be a day late.",
+      "cost": "A late launch costs goodwill, and the extra hours to catch up are usually unpaid overtime.",
+      "fix": "Tasks carry an owner, an estimate and a date. Verity shows each person's load by week against the campaign calendar, so a clash shows when the work is planned, not on the day it is due.",
+      "screen": "briefs"
+    },
+    {
+      "area": "Approvals",
+      "title": "Approvals live in email and chats",
+      "scene": "A post is sent for approval on Monday. The client replies on WhatsApp to one line, by email to another, and the founder says \"go ahead\" on a call. The scheduled post goes out with the old line.",
+      "cost": "Wrong-version posts mean corrections, apologies and sometimes a client who takes the account elsewhere.",
+      "fix": "Each deliverable has versions and an approval state: with team, with client, changes requested, approved. The approving person and date are recorded on the version, so only an approved version is released.",
+      "screen": "approvals"
+    },
+    {
+      "area": "Approvals",
+      "title": "\"We never approved that\"",
+      "scene": "A client disputes a campaign line after launch. The agency has screenshots in three chats and cannot show which version was cleared, by whom, or when.",
+      "cost": "Rework done for free, and a weaker position when the invoice is questioned.",
+      "fix": "The approval history is part of the record: who approved which version, with comments and time. When a dispute comes, you open the deliverable and the trail is there.",
+      "screen": "approvals"
+    },
+    {
+      "area": "Retainers",
+      "title": "The retainer that keeps growing",
+      "scene": "A ₹1.2 lakh monthly retainer was agreed for twelve posts, one report and a monthly call. By month four it includes stories, two reels, a newsletter and weekend replies to comments.",
+      "cost": "Example arithmetic: if the team spends 130 hours on a retainer sold for 80, and an hour costs ₹900, the agency absorbs about ₹45,000 a month. A trade opinion piece describes the same pattern of retainers staying fixed while scope grows (PRmoment, 2024).",
+      "fix": "Each retainer lists what is included. Work logged against it shows hours used against hours sold, and anything outside the list is marked as extra with an approval step before it is done.",
+      "screen": "hours"
+    },
+    {
+      "area": "Retainers",
+      "title": "Nobody knows which clients make money",
+      "scene": "Revenue by client is easy. Cost by client is not. Time is logged on Friday from memory, shared across clients, and the founder's own time is not logged at all.",
+      "cost": "You keep working hard for the accounts that lose money and discount the ones that pay well.",
+      "fix": "Time is logged against the client and campaign as work happens. Verity shows revenue, hours and cost per client, so the least profitable accounts are visible and can be repriced or let go.",
+      "screen": "hours"
+    },
+    {
+      "area": "Reporting",
+      "title": "Monthly reports built by hand",
+      "scene": "On the 3rd of every month, an executive opens five platform dashboards, copies numbers into a deck and writes a summary. It takes most of a day per client, and the client reads one page.",
+      "cost": "Example arithmetic: 12 clients at 6 hours each is 72 hours a month, close to two weeks of one person.",
+      "fix": "Each report is a recurring task with a due date, an owner and a checklist. Numbers entered or brought in for the month sit on the client record, so last month's report is the starting point, and late reports show on the owner's screen.",
+      "screen": "reporting"
+    },
+    {
+      "area": "Reporting",
+      "title": "The client sees results late and asks why",
+      "scene": "A client messages on the 18th asking how the campaign is doing. The account manager has to log in to three platforms to answer. The answer arrives next morning.",
+      "cost": "Slow answers feel like hiding something, and trust is a large part of why clients stay. One survey quoted in trade press says a campaign's delivery, not budget, is the main reason clients leave, though that survey is not Indian.",
+      "fix": "Ask Verity AI a plain question about a client's campaigns and it answers from the records and figures you have entered. The account manager can reply in minutes with the source on screen.",
+      "screen": "reporting"
+    },
+    {
+      "area": "Access",
+      "title": "Client logins and ad accounts sit with one person",
+      "scene": "The page admin rights, the ad account and the domain login for a client are held by one executive. She resigns on a Friday. On Monday nobody can pause a running ad.",
+      "cost": "Running spend nobody can stop, and a handover scramble with the client watching.",
+      "fix": "Each client record lists the accounts you manage, who holds admin access, and when it was last reviewed. A departing person triggers a handover task for every account they own.",
+      "screen": "compliance"
+    },
+    {
+      "area": "Compliance",
+      "title": "Influencer posts without the right disclosure",
+      "scene": "A creator posts a paid reel with the disclosure buried in hashtags. The brand's name is on it, and so is the agency's.",
+      "cost": "ASCI's scorecard found 69 of the top 100 influencers failed its guidelines, so the risk is common. A takedown request or notice lands on the brand and the agency.",
+      "fix": "Each creator deliverable has a checklist that includes the disclosure, the claims cleared with the client, and the date of posting. The task is not closed until a reviewer ticks it and the live link is recorded.",
+      "screen": "compliance",
+      "source": {
+        "name": "exchange4media on ASCI study, 2025",
+        "url": "https://www.exchange4media.com/advertising-news/69-of-indias-top-100-influencers-dont-comply-with-guidelines-asci-study-140688.html"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Client data in personal phones and sheets",
+      "scene": "A customer list from a client's loyalty scheme is shared by email, saved on three laptops and used in an ad audience. When the client leaves, nobody deletes it.",
+      "cost": "New data protection rules put duties on the businesses and the processors that handle personal data, with most duties starting about 18 months after the November 2025 notification. Stray copies of client data become a risk for you and the client.",
+      "fix": "Client files are records with permissions and an audit trail, so you can show who opened what. Retention dates are set per client and a task appears when a contract ends and data should be returned or deleted.",
+      "screen": "compliance",
+      "source": {
+        "name": "Scconline on DPDP Rules 2025",
+        "url": "https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Invoices raised late, paid later",
+      "scene": "The retainer invoice goes out on the 12th instead of the 1st. The client's finance team pays in 75 days. The agency pays salaries and freelancers on the 5th.",
+      "cost": "Agency executives have described payment cycles of 60 to 90 days after billing, so the agency lends the client money. Example arithmetic: ₹20 lakh a month in billing paid at 75 days means about ₹50 lakh is always owed to you.",
+      "fix": "Each retainer has a billing date and an invoice status on the client record. Verity shows what is due, raised and overdue by client, and creates a follow-up task for the account owner. Your accountant raises the invoice; Verity makes sure it is raised on time.",
+      "screen": "owner",
+      "source": {
+        "name": "Storyboard18, 2022",
+        "url": "https://www.storyboard18.com/how-it-works/late-payers-and-defaulters-why-clients-dont-pay-their-ad-agencies-on-time-1622.htm"
+      }
+    },
+    {
+      "area": "Clients",
+      "title": "A client is about to leave and nobody saw it",
+      "scene": "Replies slow down, the monthly call gets cancelled twice, and a junior contact stops copying the head of marketing. The notice arrives anyway.",
+      "cost": "Winning a new client costs far more time than keeping one. Losing a ₹1.5 lakh retainer is ₹18 lakh a year gone.",
+      "fix": "Each client shows its last meeting, open issues, approvals waiting and report status. Clients with a pattern of slow replies, missed reviews or open complaints show on a watch list with an owner and a next step.",
+      "screen": "owner"
+    },
+    {
+      "area": "Vendors",
+      "title": "Freelancers, vendors and payouts in a scramble",
+      "scene": "A photographer, a video editor and two writers are hired for one campaign. Their rates are in chats, their invoices come late, and it is not clear which campaign each was for.",
+      "cost": "Overpaying, paying twice or discovering the cost after the client invoice has gone out.",
+      "fix": "Vendors are records with rates, work assigned and invoices received against the campaign. The campaign shows its real cost to date, before the client invoice is raised.",
+      "screen": "briefs"
+    }
   ],
-
-  challengesHeading: 'The commercial problems present as delivery problems.',
-  challengesLede:
-    'An overloaded team, a slipping deadline and a difficult client are usually the same underlying fact: nobody measured what the account consumes.',
-  challenges: [
+  "factsHeading": "The numbers behind these problems.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The creator figure is a vendor's estimate. The payment-cycle figure is from 2022 trade press. The scope creep figure is from a general project study (PMI, 2018, seen through a secondary summary), not a marketing agency survey. Confirm DPDP dates on the official notification.",
+  "facts": [
     {
-      problem: 'Account profitability is a guess',
-      detail:
-        'Revenue per account is known precisely. Delivery effort against it is known approximately, if at all, so margin is inferred rather than measured.',
-      outcome:
-        'Work is recorded against the account that requested it, so consumption against retainer is a number rather than an impression.',
+      "figure": "69 of 100",
+      "text": "top influencers failed ASCI's disclosure guidelines in its 2025 scorecard, and only 29% of posts reviewed carried adequate disclosure.",
+      "source": {
+        "name": "exchange4media on ASCI study, 2025",
+        "url": "https://www.exchange4media.com/advertising-news/69-of-indias-top-100-influencers-dont-comply-with-guidelines-asci-study-140688.html"
+      }
     },
     {
-      problem: 'Over-servicing accumulates invisibly',
-      detail:
-        'Extra rounds, out-of-scope requests and goodwill work are absorbed one at a time and never add up anywhere.',
-      outcome:
-        'Out-of-scope work is raised as a variation against the account, so it is either agreed and charged or recorded as a decision not to.',
+      "figure": "₹3,000 to 3,500 crore",
+      "text": "estimated size of India's influencer marketing sector in 2025, with e-commerce 23% and FMCG 19% of annual spend. This is a vendor estimate.",
+      "source": {
+        "name": "Kofluence report via The Week, 2025",
+        "url": "https://www.theweek.in/wire-updates/business/2025/07/08/dcm19-kofluence.html"
+      }
     },
     {
-      problem: 'Capacity is committed before it is checked',
-      detail:
-        'New work is sold against a team’s availability that nobody has actually calculated, and the overload appears three weeks later as missed deadlines.',
-      outcome:
-        'Assigned work per person and per period is a record, so the commitment is made against real remaining capacity.',
+      "figure": "60 to 90 days",
+      "text": "the average payment cycle after an agency raises a bill, according to agency executives.",
+      "source": {
+        "name": "Storyboard18, 2022",
+        "url": "https://www.storyboard18.com/how-it-works/late-payers-and-defaulters-why-clients-dont-pay-their-ad-agencies-on-time-1622.htm"
+      }
     },
     {
-      problem: 'Client approvals stall the whole chain',
-      detail:
-        'A deliverable waits on a client sign-off that nobody is tracking, and the dependent work sits idle while the deadline stays fixed.',
-      outcome:
-        'Approvals are workflow steps with an owner and an age, so a stalled sign-off is visible and chaseable.',
-    },
-    {
-      problem: 'Client context is scattered',
-      detail:
-        'The history of an account lives across a chat tool, an inbox, a drive and the account manager who has been there longest.',
-      outcome:
-        'Briefs, decisions, assets and correspondence attach to the account and the project they concern.',
-    },
-    {
-      problem: 'Work finishes and is billed late',
-      detail:
-        'A project completes, everyone moves on, and the invoice is raised a month later because it was nobody’s specific task.',
-      outcome:
-        'Completed and unbilled work is aged against the account, so it surfaces as an exception rather than in a quarterly review.',
-    },
+      "figure": "52%",
+      "text": "of projects had scope creep or uncontrolled changes, in PMI's 2018 Pulse of the Profession, as summarised by a project management course site.",
+      "source": {
+        "name": "Online PM Courses on PMI, 2018",
+        "url": "https://onlinepmcourses.com/success-disruptive-times-pmi-pulse-profession/"
+      }
+    }
   ],
-
-  modulesLede:
-    'Verity runs the agency’s operation. Campaign delivery platforms stay where they are.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your agency's own language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Projects, campaigns and deliverables',
-      line:
-        'Work is held with its account, scope, owner, state, dependencies and the effort recorded against it.',
-      why:
-        'The delivery record is what connects a client’s payment to what the agency actually spent producing the output.',
-      example:
-        'A campaign with eleven deliverables shows which are done, which are waiting on client approval and what each has consumed.',
+      "id": "owner",
+      "title": "Agency / This week",
+      "meta": "All clients",
+      "heading": "The founder's morning view",
+      "caption": "Retainer health, overdue invoices, approvals waiting and clients at risk, on one screen. It replaces the Monday status meeting.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Retainers under water",
+              "value": "4 of 18",
+              "note": "hours over sold"
+            },
+            {
+              "label": "Invoices overdue",
+              "value": "₹11.4 L",
+              "note": "6 clients"
+            },
+            {
+              "label": "Approvals waiting",
+              "value": "23",
+              "note": "9 older than 3 days"
+            },
+            {
+              "label": "Reports due",
+              "value": "7",
+              "note": "this week"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Hours used against hours sold, this month"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Kaveri Jewels",
+              "value": 78,
+              "display": "62 of 80 h"
+            },
+            {
+              "label": "Brewline Cafés",
+              "value": 100,
+              "display": "96 of 70 h",
+              "tone": "muted"
+            },
+            {
+              "label": "Nirmal Hospital",
+              "value": 64,
+              "display": "45 of 70 h"
+            },
+            {
+              "label": "Orbit Fitness",
+              "value": 112,
+              "display": "134 of 120 h",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Brewline Cafés is at 137% of sold hours with 9 days left in the month.",
+          "action": "Review scope"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Orbit Fitness, invoice of 3 Oct",
+              "meta": "₹1.8 lakh, 41 days old",
+              "tag": [
+                "Follow up",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            },
+            {
+              "name": "Nirmal Hospital, slow replies",
+              "meta": "2 reviews cancelled in 3 weeks",
+              "tag": [
+                "Watch",
+                "flag",
+                "Call booked",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients, accounts and retainers',
-      line:
-        'Each account is a record with its contract terms, retainer scope, projects, contacts, approvals and billing position.',
-      why:
-        'The account is the commercial unit. Held as a record, it can be assessed; held across four tools, it cannot.',
-      example:
-        'An account’s retainer scope sits next to the work delivered against it, which is the only way over-servicing becomes visible.',
+      "id": "briefs",
+      "title": "Campaigns",
+      "meta": "Next 3 weeks",
+      "heading": "Campaign briefs and who is loaded",
+      "caption": "Every campaign starts from a complete brief. Tasks are on a board by stage, and each person's load is visible before work is assigned.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Brief ready",
+              "cards": [
+                {
+                  "title": "Diwali sale, Kaveri Jewels",
+                  "meta": "Goal: 400 store visits. Due 24 Oct",
+                  "tag": [
+                    "Complete",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Winter menu launch, Brewline",
+                  "meta": "Audience and budget missing",
+                  "tag": [
+                    "Incomplete",
+                    "late",
+                    "Clarified",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "In production",
+              "cards": [
+                {
+                  "title": "Reels x4, Orbit Fitness",
+                  "meta": "Video editor, 6 days",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Landing page, Nirmal Hospital",
+                  "meta": "Developer, 5 days",
+                  "tag": [
+                    "Clash with 2 tasks",
+                    "flag",
+                    "Moved",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "This week",
+            "Next week",
+            "Clients",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Meera (designer)",
+              "46 h",
+              "31 h",
+              "Kaveri, Brewline",
+              [
+                "Over 40 h",
+                "late",
+                "Rebalanced",
+                "ok"
+              ]
+            ],
+            [
+              "Joel (video)",
+              "34 h",
+              "38 h",
+              "Orbit",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Ishita (writer)",
+              "29 h",
+              "24 h",
+              "3 clients",
+              [
+                "Free 11 h",
+                "info"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Strategists, creatives and account managers',
-      line:
-        'The team is modelled once, and every project, task and deliverable shows who owns it and who worked on it.',
-      why:
-        'An agency’s entire cost base is its people, and allocating them well requires knowing what each is already carrying.',
-      example:
-        'Assigned work per person for the coming month, so a new project is committed against real availability.',
+      "id": "approvals",
+      "title": "Approvals",
+      "meta": "All clients",
+      "heading": "What the client has and has not approved",
+      "caption": "Each deliverable has versions, a state and a named approver. Anything released was approved by a person on a date, and the trail is one click away.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Deliverable",
+            "Version",
+            "Client approver",
+            "State",
+            "Waiting"
+          ],
+          "rows": [
+            [
+              "Diwali carousel, 6 slides",
+              "v3",
+              "Mr Kaveri",
+              [
+                "With client",
+                "info"
+              ],
+              "2 days"
+            ],
+            [
+              "Menu launch reel",
+              "v2",
+              "Anita (Brewline)",
+              [
+                "Changes asked",
+                "flag",
+                "Approved",
+                "ok"
+              ],
+              "4 days"
+            ],
+            [
+              "Hospital brochure copy",
+              "v4",
+              "Dr Nirmal",
+              [
+                "Approved 14 Oct",
+                "ok"
+              ],
+              "Done"
+            ],
+            [
+              "Gym offer post",
+              "v1",
+              "Rohan (Orbit)",
+              [
+                "No reply",
+                "late",
+                "Reminder sent by Joel",
+                "ok"
+              ],
+              "5 days"
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Menu launch reel, Brewline Cafés",
+          "sub": "Version 2 of 3",
+          "fields": [
+            [
+              "Approver",
+              "Anita Rao"
+            ],
+            [
+              "Scheduled",
+              "Fri 17 Oct, 9 am"
+            ],
+            [
+              "Claims cleared",
+              "'Freshly roasted' confirmed by client"
+            ],
+            [
+              "State",
+              [
+                "Changes asked",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "14 Oct",
+              "v1 sent to client"
+            ],
+            [
+              "15 Oct",
+              "Changes asked: swap last frame"
+            ],
+            [
+              "16 Oct",
+              "v2 sent"
+            ],
+            [
+              "Rule",
+              "Cannot be scheduled until approved"
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Approvals, revisions and sign-offs',
-      line:
-        'Client approvals, internal reviews, scope variations and revision rounds are defined steps with owners and recorded decisions.',
-      why:
-        'Revision rounds are where agency margin is consumed, and they are almost never counted against what the contract allows.',
-      example:
-        'A fourth revision round on a two-round scope raises a variation rather than being absorbed silently.',
+      "id": "hours",
+      "title": "Retainers",
+      "meta": "October",
+      "heading": "Retainers, scope and real profit",
+      "caption": "What each retainer includes, the hours spent against it, and anything done outside it. Extra work needs a yes before it is done, and it appears on the next invoice conversation.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client",
+            "Retainer",
+            "Hours sold",
+            "Hours used",
+            "Margin",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Brewline Cafés",
+              "₹1.2 L",
+              "70",
+              "96",
+              "18%",
+              [
+                "Over scope",
+                "late",
+                "Extra approved",
+                "ok"
+              ]
+            ],
+            [
+              "Kaveri Jewels",
+              "₹2.0 L",
+              "80",
+              "62",
+              "44%",
+              [
+                "Healthy",
+                "ok"
+              ]
+            ],
+            [
+              "Orbit Fitness",
+              "₹1.5 L",
+              "120",
+              "134",
+              "21%",
+              [
+                "Near limit",
+                "flag"
+              ]
+            ],
+            [
+              "Nirmal Hospital",
+              "₹1.6 L",
+              "70",
+              "45",
+              "51%",
+              [
+                "Healthy",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Weekly newsletter, Brewline",
+              "meta": "Not in retainer. Extra quote sent by Arjun",
+              "done": false
+            },
+            {
+              "text": "Stories x8, Orbit Fitness",
+              "meta": "Outside scope. Approved as paid extra",
+              "done": true
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Briefs, contracts and assets',
-      line:
-        'Documents attach to the account or project they belong to, with version history, permissions and retention.',
-      why:
-        'The brief that was agreed and the contract that defines scope are the two documents everyone needs and nobody can find during a disagreement.',
-      example:
-        'The signed statement of work sits on the account record, so a scope discussion starts from the document rather than from memory.',
+      "id": "reporting",
+      "title": "Reports",
+      "meta": "Due this week",
+      "heading": "Monthly reports that start themselves",
+      "caption": "Each report is a recurring task with a due date, owner and checklist. The month's numbers sit on the client record, and Verity AI answers questions from them.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client",
+            "Report",
+            "Due",
+            "Owner",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Kaveri Jewels",
+              "Oct performance",
+              "3 Nov",
+              "Ishita",
+              [
+                "Draft",
+                "info"
+              ]
+            ],
+            [
+              "Brewline Cafés",
+              "Oct performance",
+              "3 Nov",
+              "Arjun",
+              [
+                "Not started",
+                "late",
+                "Started",
+                "ok"
+              ]
+            ],
+            [
+              "Nirmal Hospital",
+              "Quarterly review",
+              "5 Nov",
+              "Ishita",
+              [
+                "Numbers added",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "ask",
+          "question": "How did Orbit Fitness's lead cost change over the last three months?",
+          "answer": "Cost per lead moved from ₹310 to ₹265 to ₹240. Lead count fell from 190 to 160 in October after the reel budget was cut.",
+          "action": "Add to October report"
+        }
+      ]
     },
     {
-      id: 'communication',
-      title: 'Decisions attached to the work',
-      line:
-        'Comments, notifications and activity attach to the project or deliverable they concern.',
-      why:
-        'Agency context lives in chat threads, which means it is unavailable to anyone who joins the account later.',
-      example:
-        'The client’s decision to change direction is recorded against the deliverable, not buried in a channel.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Agency reporting from live records',
-      line:
-        'Account consumption against retainer, capacity commitment, delivery against deadline, unbilled ageing and utilisation come from the operational records.',
-      why:
-        'Agencies report revenue monthly and effort never, which is why the profitable accounts and the subsidised ones look identical.',
-      example:
-        'Consumption against retainer by account, current, rather than reconstructed at contract renewal.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the agency a question',
-      line:
-        'Verity AI answers from your own account, project, capacity and billing records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking span delivery and commerce at once, which is exactly why they are asked at a leadership meeting and rarely answered.',
-      example:
-        '"Which accounts are consuming more than their retainer?" returns six, and one instruction assigns scope reviews to the account leads.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Freelancers and production partners',
-      line:
-        'External contributors are relationships with their engagements, costs, deliverables and outstanding balances, connected to the projects they support.',
-      why:
-        'Agencies pass a meaningful share of delivery to freelancers and rarely attribute that cost back to the account that caused it.',
-      example:
-        'Freelance cost recorded against the project makes the true delivery cost of an account visible.',
-    },
-    {
-      id: 'control',
-      title: 'Access across accounts',
-      line:
-        'One permission model and one audit trail, with account access set deliberately.',
-      why:
-        'Agencies frequently hold competing clients, and access boundaries need to be enforced rather than assumed.',
-      example:
-        'Competing accounts can be restricted to their own teams, with every access recorded.',
-    },
-    {
-      id: 'commandCentre',
-      title: 'The agency as it is running',
-      line:
-        'One live view of what is moving, what is blocked, who owns it and what needs attention.',
-      why:
-        'Weekly status meetings exist because no such view exists, and most of that meeting is establishing facts.',
-      example:
-        'Deliverables due, approvals stalled, accounts over retainer and capacity committed, in one picture.',
-    },
-    {
-      id: 'locations',
-      title: 'Teams, studios and offices',
-      line:
-        'Organisational units roll into the agency, with permissions and reporting following the same structure.',
-      why:
-        'A multi-office or multi-discipline agency cannot compare utilisation or margin unless work is recorded identically.',
-      example:
-        'Utilisation and account margin by team, from the same records rather than from separate reports.',
-    },
+      "id": "compliance",
+      "title": "Access and compliance",
+      "meta": "Due in the next 60 days",
+      "heading": "Client access, disclosures and data",
+      "caption": "Who holds admin access to each client account, which creator posts still need a disclosure check, and which client data should be returned or deleted.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client account",
+            "Held by",
+            "Last reviewed",
+            "Backup admin",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Brewline, Instagram page",
+              "Arjun",
+              "14 Jun",
+              "None",
+              [
+                "Single person",
+                "late",
+                "Backup added",
+                "ok"
+              ]
+            ],
+            [
+              "Kaveri, ad account",
+              "Meera",
+              "2 Sep",
+              "Founder",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Orbit, domain",
+              "Client",
+              "n/a",
+              "n/a",
+              [
+                "Client holds",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Creator reel for Orbit: disclosure shown at the start",
+              "meta": "Reviewer Ishita, live link recorded",
+              "done": true
+            },
+            {
+              "text": "Creator story for Brewline: material connection stated",
+              "meta": "Check before 9 am post",
+              "done": false
+            },
+            {
+              "text": "Old Nirmal Hospital contact list: delete or return",
+              "meta": "Contract ended 30 Sep",
+              "done": false
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'From brief to billing, recorded at each step.',
-  workflowsLede:
-    'These already happen in your agency. In Verity each step is a state, so the ones that stall are visible before they cost margin.',
-  workflows: [
+  "dayHeading": "The same Tuesday, before and after.",
+  "dayLede": "What changes is not the creative. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'New business to signed account',
-      steps: [
-        'Opportunity recorded against a prospective client record',
-        'Scope and commercial terms drafted',
-        'Capacity checked against the delivery period',
-        'Proposal issued and its state tracked',
-        'Statement of work signed and attached to the account',
-        'Account opened with retainer scope and team assigned',
-      ],
-      note:
-        'Checking capacity before committing is the step most often skipped and most expensive to skip.',
+      "time": "9:30",
+      "before": "The founder asks the team on WhatsApp what is going out today and who has approved it.",
+      "after": "The week view shows three posts due, two approved, one waiting on a client reply with an owner named."
     },
     {
-      name: 'Project delivery',
-      steps: [
-        'Project created against the account with its deliverables',
-        'Work assigned with owners and due dates',
-        'Effort recorded against each deliverable',
-        'Internal review completed before client submission',
-        'Client approval tracked as a workflow step',
-        'Revisions recorded against the agreed round allowance',
-        'Project completed and marked ready to bill',
-      ],
-      note:
-        'Revision rounds are counted against the contract rather than absorbed.',
+      "time": "11:00",
+      "before": "A client sends a long voice note asking for a \"small\" new reel. The account manager says yes.",
+      "after": "The request is logged against the retainer, shows it is outside scope, and goes to the account head for a quote before work starts."
     },
     {
-      name: 'Scope variation',
-      steps: [
-        'Request identified as outside the agreed scope',
-        'Variation raised with the effort and commercial basis',
-        'Approval routed to the account lead',
-        'Client agreement recorded against the account',
-        'Retainer or project scope updated, or a decision not to charge recorded',
-      ],
-      note:
-        'Over-servicing becomes either recoverable revenue or an explicit, visible choice.',
+      "time": "1:00",
+      "before": "Two designers start the same banner because two people asked.",
+      "after": "The task has one owner and one linked brief, so the second request becomes a comment on it."
     },
     {
-      name: 'Capacity planning',
-      steps: [
-        'Committed work aggregated by person and period',
-        'Outstanding proposals weighted against the same period',
-        'Overcommitment flagged before it is sold',
-        'Freelance or reallocation decisions raised',
-        'Assignments adjusted and recorded',
-      ],
-      note:
-        'The number that stops an agency overselling is the one it currently does not calculate.',
+      "time": "3:30",
+      "before": "A client asks how the campaign is doing. Someone logs in to three platforms to find out.",
+      "after": "The account manager asks Verity AI, gets the figures entered for the month and replies in minutes."
     },
     {
-      name: 'Client approval chasing',
-      steps: [
-        'Deliverable submitted and approval step opened',
-        'Age tracked against the approval',
-        'Reminder raised to the client contact',
-        'Dependent work flagged as blocked',
-        'Approval recorded and the chain released',
-      ],
-      note:
-        'A stalled client sign-off becomes visible with the work it is blocking, which changes the conversation.',
+      "time": "6:00",
+      "before": "The account manager cannot recall which version was approved for tomorrow's post.",
+      "after": "The scheduled item shows version 3, approved by the client on Monday, with the comment history."
     },
     {
-      name: 'Billing and recovery',
-      steps: [
-        'Completed and unbilled work aged against the account',
-        'Invoice prepared and routed for review',
-        'Issued and recorded against the account',
-        'Payment applied and ageing updated',
-        'Collection follow-up assigned where terms are exceeded',
-      ],
-      note:
-        'Ageing begins when work completes rather than when someone remembers to invoice.',
-    },
+      "time": "Month end",
+      "before": "Reports are built in a rush, hours are guessed and invoices go out on the 12th.",
+      "after": "Reports were due on the 3rd and tracked, hours were logged as work happened, and each invoice has a billing date."
+    }
   ],
-
-  ai: {
-    heading: 'Ask what the agency actually costs to run.',
-    lede:
-      'Verity AI reads the same account, project, capacity and billing records the agency works in. It answers from your own operation, respects account access boundaries, and can turn an answer into work assigned to the right lead.',
-    panelMeta: 'Grounded in your agency records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which accounts are consuming more delivery than their retainer covers?',
-      'How committed is the team for next month?',
-      'Which deliverables are stalled on client approval, and for how long?',
-      'How much completed work is unbilled, and on which accounts?',
-      'Which accounts have exceeded their agreed revision rounds?',
-      'What is utilisation by person this month?',
-      'Which projects are past their deadline, and what is blocking them?',
-      'What did freelance cost add to each account this quarter?',
-      'Summarise account health across the agency.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We study how your briefs, approvals and hours really move, build Verity around that, bring in your client data, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Sit in on a client call, a production day and a month-end report cycle. Trace one campaign from brief to invoice and note where it slips.",
+        "you": "Two to three hours of yours and your head of accounts. A few live client folders, the current retainer list and a recent timesheet.",
+        "get": "A written map of your agency: clients, retainer terms, approval path, report calendar and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up client and campaign records, brief templates, approval states, retainer inclusions, report calendars, vendor records and the six screens in your own terms.",
+        "you": "Check the setup with one account manager and one designer. Tell us where a stage or a rule is wrong.",
+        "get": "A working Verity with your real clients, retainers and approval paths, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in client details, retainer terms, open campaigns and vendor rates from your sheets and folders. Train each role on its own screen using a live client.",
+        "you": "Your client list and retainer sheet in whatever form it exists. One hour with each role.",
+        "get": "Your clients, campaigns and retainers inside Verity, and a team that has run a real approval and a real report through it."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first month of hours and approvals with you, tune the limits, and handle changes when you add a client, a service or a team.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the agency runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Your client list with retainer terms and renewal dates",
+      "Two recent campaign briefs, however informal",
+      "Last month's timesheets or task board export",
+      "A list of the client accounts and logins you manage",
+      "Your list of freelancers and their rates"
+    ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. Your head of accounts needs a few more.",
+    "after": "Nobody is hired to run Verity. Briefs, approvals and hours are recorded as part of work the team already does, and reports come from those records."
   },
-
-  automationHeading: 'The checks that protect margin.',
-  automationLede:
-    'These run from the agency’s own records at the point the condition occurs.',
-  automations: [
+  "ai": {
+    "heading": "Ask your agency a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own client, task, approval and time records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which retainers are over their sold hours this month?",
+        "a": "Four of 18 are over. Brewline Cafés is the worst at 137%, followed by Orbit Fitness at 112%.",
+        "rows": [
+          [
+            "Brewline Cafés",
+            "96 of 70 h"
+          ],
+          [
+            "Orbit Fitness",
+            "134 of 120 h"
+          ],
+          [
+            "Zing Foods",
+            "58 of 50 h"
+          ],
+          [
+            "Pixel Dental",
+            "41 of 40 h"
+          ]
+        ],
+        "action": "Create scope review tasks for each account head"
+      },
+      {
+        "q": "What is waiting on clients for more than three days?",
+        "a": "Nine items. Six are with two clients, which suggests a slow approver rather than slow work.",
+        "rows": [
+          [
+            "Kaveri Jewels",
+            "3 items"
+          ],
+          [
+            "Brewline Cafés",
+            "3 items"
+          ],
+          [
+            "Others",
+            "3 items"
+          ]
+        ],
+        "action": "Create follow-up tasks for the account managers"
+      },
+      {
+        "q": "Which client accounts depend on one person for admin access?",
+        "a": "Five accounts. Three belong to Arjun and two to Meera.",
+        "action": "Create backup-admin tasks"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your team still talks to clients and creators; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'An account passes its retainer scope',
-      steps: [
-        'Account flagged as over-serviced with the consumption attached',
-        'Review task assigned to the account lead',
-        'Scope variation raised or a decision recorded',
-      ],
+      "when": "A campaign brief is saved with a missing audience, budget or deadline",
+      "then": [
+        "Marked incomplete",
+        "Task to the account manager to fill the gaps",
+        "Work cannot be assigned until it is complete"
+      ]
     },
     {
-      trigger: 'A deliverable is submitted for client approval',
-      steps: [
-        'Approval step opened with an age against it',
-        'Reminder raised as it passes the threshold',
-        'Dependent work flagged as blocked',
-      ],
+      "when": "A deliverable is sent to the client and nothing comes back in three days",
+      "then": [
+        "Flagged on the approvals screen",
+        "Reminder task to the account owner",
+        "Outcome recorded: approved, changes asked or escalated"
+      ]
     },
     {
-      trigger: 'Committed work exceeds available capacity',
-      steps: [
-        'Overcommitment flagged for the period',
-        'Reallocation or freelance task created',
-        'Outstanding proposals surfaced against the same period',
-      ],
+      "when": "Logged hours on a retainer pass 90% of sold hours",
+      "then": [
+        "Account head alerted",
+        "Extra work held for a quote",
+        "Decision recorded on the retainer"
+      ]
     },
     {
-      trigger: 'A revision round exceeds the agreed allowance',
-      steps: [
-        'Round recorded against the deliverable',
-        'Variation raised against the account',
-        'Decision recorded — charged or absorbed',
-      ],
+      "when": "A monthly report is due in five days and has no numbers added",
+      "then": [
+        "Task to the report owner",
+        "Shown on the founder's screen",
+        "Marked done when the report is shared"
+      ]
     },
     {
-      trigger: 'A project completes',
-      steps: [
-        'Unbilled position aged against the account',
-        'Billing task assigned to the account lead',
-        'Escalated if it passes the second threshold',
-      ],
+      "when": "A creator post is due to go live",
+      "then": [
+        "Disclosure and claims checklist assigned to a reviewer",
+        "Live link recorded after posting",
+        "Task closed only when both are done"
+      ]
     },
     {
-      trigger: 'An account balance passes its payment terms',
-      steps: [
-        'Balance aged on the account record',
-        'Collection follow-up assigned to the account lead',
-        'Escalated with the delivery history attached',
-      ],
-    },
+      "when": "A team member who holds client admin access leaves",
+      "then": [
+        "Handover task for each account",
+        "Backup admin named on the record",
+        "Access review date set"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What agency leadership can actually see.',
-  intelligenceLede:
-    'Commercial and delivery performance from the same records, which is the point.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a marketing agency has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by situation. Confirm current requirements with your accountant or lawyer.",
+    "items": [
+      {
+        "name": "ASCI and CCPA rules on influencer and endorsement posts",
+        "what": "ASCI's influencer guidelines and the CCPA's 2022 misleading advertisement guidelines generally require clear disclosure of any material connection between an influencer and a brand, and due diligence before an endorsement. The CCPA guidelines name advertisers and agencies.",
+        "how": "Creator deliverables carry a checklist for disclosure and claims, with a reviewer and the live link recorded.",
+        "source": {
+          "name": "Khaitan & Co on CCPA guidelines",
+          "url": "https://khaitanco.com/thought-leaderships/CCPA-releases-guidelines-for-Prevention-of-Misleading-Advertisements-and-Endorsements-for-Misleading-Advertisements-2022"
+        }
+      },
+      {
+        "name": "Digital Personal Data Protection Rules, 2025",
+        "what": "The Rules were notified on 14 November 2025. Most duties, including notice, security safeguards, breach reporting and retention, generally start 18 months after publication, and they cover data fiduciaries and processors. An agency handling a client's customer data may be a processor.",
+        "how": "Client data is stored as records with permissions and an audit trail, retention dates are set per client, and a deletion or return task is created when a contract ends.",
+        "source": {
+          "name": "Scconline on DPDP Rules",
+          "url": "https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/"
+        }
+      },
+      {
+        "name": "Written contracts and scope",
+        "what": "Your client contract generally decides what the retainer includes, how changes are charged and who owns the work. Verity does not draft contracts.",
+        "how": "The retainer record lists inclusions and the contract date, and extra work needs an approval step so the paper matches the practice."
+      },
+      {
+        "name": "GST and TDS on agency fees",
+        "what": "Agency services generally attract GST and clients may deduct TDS on fees. Treatment depends on whether you act as principal or agent on media. Your accountant decides and files.",
+        "how": "Each invoice record shows the client, amount, billing date and payment state, so your accountant has clean records."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A designer should not see everyone's retainer margins. A client contact should not see another client. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Accounts',
-      points: [
-        'Consumption against retainer scope',
-        'Accounts over-serviced and by how much',
-        'Revenue and delivery cost per account',
-        'Scope variations raised, agreed and absorbed',
-      ],
+      "role": "Founder",
+      "question": "Which clients make money and which are at risk?",
+      "sees": "Retainer margin, overdue invoices, clients on the watch list and team load."
     },
     {
-      area: 'Capacity',
-      points: [
-        'Committed work per person and period',
-        'Utilisation against available hours',
-        'Overcommitment ahead of the period',
-        'Freelance dependency by account and team',
-      ],
+      "role": "Account manager",
+      "question": "What is due, waiting or out of scope?",
+      "sees": "Briefs, approvals, extra-work requests and report dates for their clients."
     },
     {
-      area: 'Delivery',
-      points: [
-        'Deliverables due, completed and late',
-        'Approvals stalled and the work they block',
-        'Revision rounds against allowance',
-        'Cycle time from brief to sign-off',
-      ],
+      "role": "Creative lead or designer",
+      "question": "What am I working on and from which brief?",
+      "sees": "Assigned tasks, the linked brief, the approved version and the deadline."
     },
     {
-      area: 'Commercial',
-      points: [
-        'Unbilled work aged by account',
-        'Outstanding balances with ageing bands',
-        'Revenue by account, team and period',
-        'New business won against capacity committed',
-      ],
+      "role": "Freelancer or vendor",
+      "question": "What is my job and by when?",
+      "sees": "Only the tasks and files assigned to them, and their own invoices."
     },
     {
-      area: 'People',
-      points: [
-        'Assigned work per person',
-        'Effort recorded by account and project',
-        'Distribution of load across the team',
-        'Accounts dependent on a single individual',
-      ],
-    },
-    {
-      area: 'Operations',
-      points: [
-        'Exceptions raised and time to close',
-        'Approvals awaiting a decision',
-        'Documents and sign-offs outstanding',
-        'Team or office comparison',
-      ],
-    },
+      "role": "Accountant",
+      "question": "What was billed, paid and owed?",
+      "sees": "Invoices by client and date, payment state, vendor bills and retainer terms."
+    }
   ],
-  intelligenceNote:
-    'These come from the delivery records the agency creates as it works. Campaign performance stays in whatever platforms you use for it.',
-
-  rolesHeading: 'One agency, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, with account access set deliberately.',
-  roles: [
-    {
-      role: 'Founder',
-      question: 'Which accounts are actually making money?',
-      focus: 'Consumption against retainer, delivery cost per account, utilisation, unbilled ageing, capacity committed.',
-    },
-    {
-      role: 'Account lead',
-      question: 'Is my account healthy?',
-      focus: 'Scope consumed, variations outstanding, approvals stalled, deliverables late, account balance.',
-    },
-    {
-      role: 'Delivery lead',
-      question: 'Can we actually do this?',
-      focus: 'Committed work by person and period, overcommitment, freelance requirements, deadlines at risk.',
-    },
-    {
-      role: 'Creative or strategist',
-      question: 'What do I owe and by when?',
-      focus: 'Assigned deliverables, review states, revision rounds, briefs and assets on the project.',
-    },
-    {
-      role: 'Operations',
-      question: 'What is stalled and what is unbilled?',
-      focus: 'Approvals past due, unbilled ageing, outstanding sign-offs, exceptions awaiting resolution.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your design, editing and scheduling tools. We agree during setup how work and files reach Verity.",
+      "Your ad platforms and analytics dashboards. Numbers for the month are brought into the client record.",
+      "WhatsApp and email with clients. Your team replies",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still raises tax invoices and files returns."
+    ],
+    "not": [
+      "Send posts, messages or reports to clients on its own.",
+      "Run your ad accounts or schedule posts.",
+      "Run your payroll or file your returns.",
+      "Draft your client contracts or give legal advice."
+    ],
+    "migration": "We bring client details, retainer terms, open campaigns, vendor rates and current access lists across from your sheets and folders, in stages, so campaigns keep moving while it happens."
+  },
+  "faqHeading": "Questions agency owners ask.",
+  "faqs": [
+    [
+      "My team hates timesheets. Will they actually log hours?",
+      "Only if it takes seconds. We set it up so time is logged from the task itself, with a client and campaign already filled in. We start with the clients where scope is slipping, not a form for everything."
+    ],
+    [
+      "Do clients get a login?",
+      "Only if you want them to. By default your team uses Verity and the client keeps replying the way they do now. The approval is recorded by your team against the client's name and date. A client view can be agreed during setup."
+    ],
+    [
+      "Does Verity send the reports or approvals to clients?",
+      "No. Your team sends them. Verity assigns the task, shows when it is late and records the outcome."
+    ],
+    [
+      "We already use a task board. Why add this?",
+      "A task board knows tasks. It does not know the client's retainer, the approval trail or the hours against what was sold. We agree during setup how existing tasks reach Verity, or you move them."
+    ],
+    [
+      "Can it handle campaigns with many freelancers?",
+      "Yes. Freelancers and vendors are records with rates, assigned work and invoices received, and they see only their own tasks."
+    ],
+    [
+      "Can I see profit per client?",
+      "Yes, once hours and retainer terms are in. Verity shows revenue, hours, team cost and margin per client. Team cost uses the rates you set."
+    ],
+    [
+      "Does it work for small agencies of five or six people?",
+      "Yes. A small team has the same scope and approval problems with fewer people to notice them. We set up only what you need in the same four weeks."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role and by client, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of people, clients and what you want set up. Message us and we will give you a clear number after a short conversation about how your agency runs."
+    ]
   ],
-
-  useCasesHeading: 'What agencies use Verity for',
-  useCases: [
-    {
-      name: 'Account profitability',
-      body: 'Delivery effort recorded against the account that caused it, so retainer consumption and true account margin become numbers rather than impressions.',
-    },
-    {
-      name: 'Over-servicing control',
-      body: 'Out-of-scope work raised as a variation with an approval, so goodwill is either recovered or is an explicit decision.',
-    },
-    {
-      name: 'Capacity planning',
-      body: 'Committed work aggregated by person and period, so new business is sold against availability that has actually been calculated.',
-    },
-    {
-      name: 'Client approval tracking',
-      body: 'Sign-offs as workflow steps with an age and the dependent work they block, so a stalled client becomes a visible, chaseable fact.',
-    },
-    {
-      name: 'Revision round control',
-      body: 'Rounds counted against the agreed allowance, which is where a large share of agency margin is currently consumed.',
-    },
-    {
-      name: 'Brief, contract and asset management',
-      body: 'Statements of work, briefs and assets attached to the account and project with versions and permissions.',
-    },
-    {
-      name: 'Freelance and production cost',
-      body: 'External delivery cost recorded against the project, so the true cost of servicing an account includes what was passed outside.',
-    },
-    {
-      name: 'Unbilled and collection management',
-      body: 'Completed work aged from the moment it finishes, so invoicing does not depend on someone remembering.',
-    },
-    {
-      name: 'Asking the agency questions',
-      body: 'Plain-language questions across accounts, delivery, capacity and billing at once, with follow-ups assigned in the same step.',
-    },
+  "related": [
+    "advertising-agencies",
+    "content-agencies",
+    "design-agencies",
+    "pr-agencies",
+    "consulting-firms",
+    "web-development-agencies"
   ],
-
-  migration:
-    'The project tool, the client spreadsheet, the contracts drive and the accounting package are mapped during implementation. Accounts, active projects and open balances are brought across, and Verity is introduced as the operational layer over them while delivery continues.',
-
-  faqHeading: 'Questions agencies ask',
-  faqs: [
-    [
-      'Is Verity a campaign or advertising platform?',
-      'No. Verity runs the agency’s own operation — accounts, retainers, projects, deliverables, capacity, approvals, documents and billing position. Campaign delivery and media platforms stay where they are.',
-    ],
-    [
-      'What can AI software do for a marketing agency?',
-      'Verity AI answers questions from your own account, project, capacity and billing records: which accounts are consuming more than their retainer covers, how committed the team is next month, which deliverables are stalled on client approval, how much completed work is unbilled. Each answer can become work assigned to the right lead.',
-    ],
-    [
-      'Can Verity show which accounts are profitable?',
-      'It shows delivery effort recorded against each account alongside the retainer or project value and any freelance cost attributed to it. That makes consumption against scope visible, which is the part agencies usually cannot see.',
-    ],
-    [
-      'How does it help with over-servicing?',
-      'Work outside the agreed scope is raised as a variation with an approval, so it is either agreed with the client and charged, or recorded as a deliberate decision to absorb it. Either way it stops being invisible.',
-    ],
-    [
-      'Can it help us plan capacity?',
-      'Committed work is aggregated by person and period, so the team’s real availability is a number before new work is sold against it, rather than an overload discovered three weeks later.',
-    ],
-    [
-      'Does it track client approvals?',
-      'Approvals are workflow steps with an owner and an age, and the work depending on them is flagged as blocked. A sign-off sitting with a client for eleven days is visible alongside the deadline it is endangering.',
-    ],
-    [
-      'How is access handled when we hold competing clients?',
-      'Verity has one permission model and one audit trail, and account access is set deliberately rather than by default, so competing accounts can be restricted to their own teams with every access recorded.',
-    ],
-    [
-      'Does Verity replace our accounting software?',
-      'No. Verity holds the operational and commercial record — accounts, scope, delivery, unbilled ageing and collection follow-up — and is introduced alongside your accounting arrangements rather than in place of them.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the agency actually delivers, configuration, migration of accounts and active projects, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with the account you suspect is subsidised.',
-  ctaLede:
-    'Every agency has one. Tell us how you deliver today and we will show you what measuring it looks like in Verity.',
-
-  related: ['advertising-agencies', 'design-agencies', 'pr-agencies', 'content-agencies', 'consulting-firms', 'software-agencies'],
+  "ctaHeading": "Start with the retainer that is quietly losing money.",
+  "ctaLede": "Tell us how your agency runs and we will show you the over-scope retainers, the approvals with no trail and the reports that are late, using your own numbers."
 };

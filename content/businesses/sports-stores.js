@@ -1,181 +1,1029 @@
 export default {
-  slug: 'sports-stores',
-  status: 'published',
-  plural: 'sports stores',
-  subject: 'sports retail business',
-
-  seo: {
-    title: 'AI business management software for sports stores | Verity',
-    description:
-      'Verity connects sport-by-sport seasonality, size and specification stock, club and team bulk orders, equipment servicing and supplier terms into one system.',
-    keywords: [
-      'AI software for sports stores',
-      'sports retail management software',
-      'team and club bulk order management',
-      'equipment servicing and seasonal stock software',
-    ],
+  "schema": 2,
+  "slug": "sports-stores",
+  "status": "published",
+  "plural": "sports stores",
+  "subject": "sports store",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Sports store software: sizes, school orders, season stock | Verity",
+    "description": "The 15 quiet leaks in a sports store, from wrong sizes and dead season stock to unpaid school orders and lost warranty claims, and the Verity screens that fix them.",
+    "keywords": [
+      "sports shop management software India",
+      "sports store inventory sizes and models",
+      "cricket shop school bulk order tracking",
+      "sports goods warranty claim tracking",
+      "multi-outlet sports store software"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for sports retail',
-    headline: 'Six sports, six seasons, and one stockroom.',
-    lede:
-      'Every sport peaks at a different time and needs different stock, and team orders arrive in bursts with fixed dates. Verity plans each season separately and holds the team orders to their deadlines.',
-    note: 'Runs alongside your existing billing setup.',
-    panel: {
-      title: 'Store',
-      meta: 'This quarter',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Sales', value: '₹24 L', note: 'across 6 sport categories' },
-        { label: 'Team orders open', value: '14', note: '₹8.6 L · fixed dates' },
-        { label: 'Off-season stock', value: '₹11 L', note: 'held to next season' },
-        { label: 'Servicing jobs', value: '38', note: '9 past promised date' },
-      ],
-      rows: [
-        { name: '14 team orders with fixed season-start dates', meta: 'Three unconfirmed on sizes and numbers', active: true },
-        { name: '9 servicing jobs past their promised date', meta: 'Players need equipment for fixtures', active: true },
-        { name: 'Peak sport stocked out during its opening weeks', meta: 'Ordered against the annual pattern', active: true },
-        { name: '₹11 L of off-season stock held', meta: 'Financing cost across the gap', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own store in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "orders",
+    "workforce",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for sports stores",
+    "headline": "A sports store carries a hundred sizes of a few things. The money is in having the right size at the right month.",
+    "lede": "A sports store sells to a school coach in April, a cricket-mad twelve-year-old in May, a badminton club in winter and a gym-goer all year. Each wants a particular size, weight or model, and each season leaves stock that nobody wants. Verity connects the shelf, the season, the bulk order and the customer, so you can see which size is about to run out and which stock has stopped moving.",
+    "oneLine": "One system that knows every size on the shelf, every school and club that buys from you, every brand claim in progress and every rupee owed, and tells you what needs attention today.",
+    "note": "Built for a counter that is crowded on weekends and has no time for data entry. Records come from the sales, deliveries and orders you already handle.",
+    "screen": "owner",
+    "screenNote": "sports, brands, institutions and outlets"
+  },
+  "today": {
+    "heading": "Most sports stores know their customers by face and their stock by feel.",
+    "paragraphs": [
+      "The counter is easy to see. A father trying three pairs of football boots, a coach asking for a quote on twenty cricket kits, a teenager comparing two rackets. What is hard to see is what sits behind it: which sizes are gone and which are piled up, which model sold well last year and is now a slow mover, which school has not paid for last term’s order, and which brand is owed a warranty claim.",
+      "That information exists in pieces. The billing screen knows the sale. The brand distributors’ price lists arrive on WhatsApp. School orders are in a notebook or a phone gallery. A racket waiting for restringing has a paper tag. The owner holds the rest in memory.",
+      "Sports demand has seasons, and stock bought for one season can sit through the next. Cricket sales usually rise in May when school vacations start, and bulk orders from makers can take months, so the buying decision is made long before the customer walks in."
+    ],
+    "stack": [
+      "Billing screen at the counter",
+      "Distributor price lists and order slips",
+      "Notebook or Excel for school and club orders",
+      "WhatsApp for customers and brand reps",
+      "Paper tags for repairs and claims"
+    ],
+    "stackNote": "Each one does its own job well enough. None of them talk to each other, and nobody has time to join them."
+  },
+  "painsHeading": "Where a sports store actually loses money.",
+  "painsLede": "These are the situations sports store owners and managers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Stock",
+      "title": "The size or weight the customer needs is the one you do not have",
+      "scene": "A parent wants football boots in size 4 for a school trial on Monday. You hold three pairs in size 8 and none in size 4. A cricketer wants a bat in a lighter weight than the ones on the rack. Stock was bought in round numbers, not in the sizes that actually sell.",
+      "cost": "Example arithmetic: if ten customers a month walk out because the size is missing, and an average sale is ₹1,800, that is ₹18,000 a month of sales that were right in front of you.",
+      "fix": "Every item is stocked by size, weight or model. Verity shows sell-through by size, so a re-order follows what sold and not a round-number guess, and shows which sizes ran out and how many customers asked.",
+      "screen": "stock"
     },
-  },
-
-  overview: {
-    heading: 'Every sport is a separate season sharing one shop.',
-    paragraphs: [
-      'A sports store carries several categories whose demand peaks at completely different times of year. Each one has its own season start, its own buying lead time and its own dead period, and managing them against a single annual pattern guarantees stockouts in one category and dead stock in another.',
-      'The second characteristic is team and club business. Schools, clubs and corporate teams order in bulk against fixed season-start dates, usually with names, numbers and size breakdowns that arrive late. Fourteen open team orders with three unconfirmed is a production and delivery risk against dates that will not move.',
-      'The third is specification. Sports equipment is bought on fit and spec — size, weight, grip, flex — and a customer who cannot get their specification buys nothing rather than something close.',
-      'The fourth is servicing. Restringing, repairs and fitting are promised against fixtures, and a racket that is not ready for Saturday is worse than useless.',
-      'The fifth is that off-season stock is held across a long gap with a real financing cost that nobody attributes to the category holding it.',
-      'Verity manages each sport as its own season, holds team orders to their dates, and tracks servicing promises.',
+    {
+      "area": "Stock",
+      "title": "Season stock bought too early, or too late",
+      "scene": "Cricket gear needs to be in the shop before the school vacations start. Badminton picks up in the cooler months. A World Cup or a league win suddenly puts team jerseys on every kid’s wish list. You order on a hunch, and either the season starts with empty racks or ends with a pile.",
+      "cost": "Cricket equipment sales have been reported to rise by 20 to 25 percent in May, when school vacations start, and bulk orders from makers can take months. Stock that arrives after the peak sits on the shelf with cash tied up in it.",
+      "fix": "Each item’s sales by week for the last two years are laid against this year’s stock. Verity flags what to order and when to be on the shelf before the season, and shows how much is still in stock a month after the peak.",
+      "screen": "stock",
+      "source": {
+        "name": "Business Today, Cricket gear makers may face shortage, 2011",
+        "url": "https://www.businesstoday.in/story/cricket-gear-makers-may-face-shortage-sg-slazenger-puma-and-adidas/1/14607.html"
+      }
+    },
+    {
+      "area": "Stock",
+      "title": "Last year’s models that have stopped moving",
+      "scene": "A racket model from two seasons ago, a boot colour that did not sell, a bat in a weight nobody asks for. They sit in the corner, get dusty and slowly go out of fashion. Nobody has looked at them in months.",
+      "cost": "Sports stock can lose value quickly once a new model arrives or a season passes. Each old model is cash you cannot use for the size that is selling.",
+      "fix": "Verity lists items by days since the last sale and value held. The slow movers are shown with a suggested action, such as a bundle, a markdown or a return to the distributor where the terms allow it, and each one has an owner.",
+      "screen": "stock"
+    },
+    {
+      "area": "Institutions",
+      "title": "School and club orders that are never fully paid",
+      "scene": "A school orders thirty cricket kits and forty football sets for its sports day, and pays half. The coach says the rest will come when the accounts office clears it. Three months later the balance is in a notebook, a different one from last year’s.",
+      "cost": "Example arithmetic: a ₹2.4 lakh school order with 40 percent pending for 90 days is ₹96,000 of your cash sitting in someone else’s account, and it happens with every school in the city.",
+      "fix": "Each school, club and academy is a customer with orders, invoices and balances. Verity shows what is owed by whom and for how long, sends the accounts contact a task to chase on a schedule you set, and records each promise to pay.",
+      "screen": "institutions"
+    },
+    {
+      "area": "Institutions",
+      "title": "Quotes to coaches and clubs that go unanswered",
+      "scene": "A coach messages for a quote on twenty cricket kits. You reply late, or give a price from memory, or lose the thread in a WhatsApp group. The academy buys from the shop that replied first.",
+      "cost": "Bulk and institutional orders are the largest tickets a sports store sees. They are lost to slow replies and mixed-up details far more often than to price.",
+      "fix": "Each enquiry is a record with an owner, the items, the quantities, the quote and the next step. Verity lists those with no reply and tells the person responsible. Staff still send the quote, and the outcome is recorded.",
+      "screen": "institutions"
+    },
+    {
+      "area": "Customers",
+      "title": "Repeat buyers are known to the counter and not to the shop",
+      "scene": "A regular badminton player buys a racket and strings every few months. A cricket coach sends you five students a year. The staff member who knows them leaves for another shop and takes the relationship along.",
+      "cost": "Repeat customers and the coaches who recommend you are your cheapest sales. When nobody records who they are, you only find out they have stopped coming after they have gone.",
+      "fix": "Purchases are linked to a customer record with their sport, usual brand and size, and any coach or academy who sent them. When someone goes quiet beyond their usual gap, they appear on a list and a task goes to the person who knows them.",
+      "screen": "customers"
+    },
+    {
+      "area": "Customers",
+      "title": "Growing children need a new size every year and nobody reminds the parent",
+      "scene": "A child’s football boots, shin guards, cricket pads and school tracksuit are all outgrown in a year. The parent buys from whichever shop comes to mind first. You sold the last pair and have no way to remember.",
+      "cost": "A child who grows is a customer who is certain to return, and the shop that reaches out first usually keeps the sale.",
+      "fix": "The child’s sport, last size and date of purchase sit on the family record. Before the new school year or season, Verity lists children likely to need the next size, and the counter team follows up with the parent.",
+      "screen": "customers"
+    },
+    {
+      "area": "Claims and jobs",
+      "title": "Warranty claims that are lost between the customer and the brand",
+      "scene": "A racket frame cracks in month three, a shoe sole splits, a bat handle comes off. The customer brings the invoice, or says they lost it. You tell them you will talk to the brand and the repair is forgotten until the customer returns, annoyed.",
+      "cost": "Unresolved claims cost you the customer and sometimes the next ten people they tell. Claims that the brand would have honoured but were never filed in time are a direct loss.",
+      "fix": "Each warranty claim is a record linked to the original sale, with the brand, the date, the photos and the status. Verity shows claims awaiting the brand’s reply and flags those near the brand’s claim window, so none is lost.",
+      "screen": "claims"
+    },
+    {
+      "area": "Claims and jobs",
+      "title": "Stringing, repairs and custom printing tracked on paper tags",
+      "scene": "Rackets are left for stringing, bats for knocking in, jerseys for name printing. Each has a paper tag. A customer calls to ask if it is ready and someone has to rummage through a drawer.",
+      "cost": "Lost or mixed-up items, late deliveries, and a person on the shop floor searching for tags while a customer waits at the counter.",
+      "fix": "Each job is a record with the customer, the item, the work, the promised date and the status. The counter sees what is ready, what is late and what is waiting for the customer, and the customer’s message is a task rather than a search.",
+      "screen": "claims"
+    },
+    {
+      "area": "Suppliers",
+      "title": "Brand price lists, schemes and rate changes arrive on WhatsApp",
+      "scene": "A distributor sends a new price list as a photo. A brand runs a scheme on a certain boot for two weeks. A rate changes after the GST change and your shelf still shows the old price on some items.",
+      "cost": "Selling below the new cost, missing a scheme you qualified for, or holding stock at an old price while the market has moved. Each is small, and all of them add up.",
+      "fix": "Every purchase records the rate. Verity shows price changes by supplier and item, flags where your selling price is now below the margin you set, and keeps schemes as records with dates, targets and progress.",
+      "screen": "suppliers"
+    },
+    {
+      "area": "Suppliers",
+      "title": "GST rate changes leave old stock and old prices mixed",
+      "scene": "Most sports goods moved from 12 percent to 5 percent GST from 22 September 2025, while general exercise equipment such as treadmills and dumbbells stayed at 18 percent, and sportswear and shoes now depend on whether the price is above ₹2,500. Your shelf holds items from before and after, and staff are unsure which price and tax rate to show.",
+      "cost": "Wrong tax treatment on a bill, confused customers and hours of correction by your accountant at month end. Rates and thresholds can change again.",
+      "fix": "Each item carries its tax category and each purchase and sale records the rate that applied. Your accountant sees the split already clean, and a rate change is one update to the item’s setup, not a re-label of the shelf.",
+      "screen": "suppliers",
+      "source": {
+        "name": "All India Radio News, GST Bachat Utsav, 2025",
+        "url": "https://www.newsonair.gov.in/gst-bachat-utsav-tax-on-sports-goods-and-bicycles-slashed-to-5-under-next-gen-gst-reforms/"
+      }
+    },
+    {
+      "area": "Suppliers",
+      "title": "Short deliveries and damaged goods in transit",
+      "scene": "A box of bats arrives with two cracked blades. A carton of shoes has three pairs in the wrong size. The delivery slip says the full count, and the person who signed it was busy with a customer.",
+      "cost": "You pay for goods that never came or came damaged, and the claim goes in late or not at all.",
+      "fix": "Deliveries are received against the order with the quantity and condition that actually arrived, with a photo if needed. Verity compares order, receipt and invoice and flags any mismatch before the bill is paid, and tracks the credit note until it arrives.",
+      "screen": "suppliers"
+    },
+    {
+      "area": "Money",
+      "title": "Discounts, bargaining and tournament-season rush",
+      "scene": "A buyer asks for 10 percent off on a bundle. A salesperson agrees to match another shop. A friend of the owner gets a special rate. During the rush before a tournament, the discounts get larger and nobody records them.",
+      "cost": "Example arithmetic: a regular 5 percent extra discount on a month of ₹8 lakh sales is ₹40,000, and none of it was a decision you took.",
+      "fix": "Discounts above a limit need a one-tap approval with a reason. Verity totals all discounts by person, item and week so the pattern shows, and you see which items are sold with the thinnest margin.",
+      "screen": "owner"
+    },
+    {
+      "area": "Money",
+      "title": "Day-end takings do not tie to the bills",
+      "scene": "At closing, cash, card and UPI are counted against the billing report and are off by a few hundred rupees. Nobody can say whether a bill was missed, a refund was given or the float was wrong.",
+      "cost": "Small daily gaps compound, and the owner stops trusting the numbers on the screen.",
+      "fix": "The day’s sales by payment mode are compared with what was collected. A mismatch is flagged with the shift and amount, and the person closing records the reason.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "The owner is the system, and a second outlet doubles it",
+      "scene": "You remember which sizes are running out, which school owes you money and which brand claim is open. You are also on the floor. A second outlet, or a stall at a tournament, keeps its own sheet and sends it over WhatsApp at night.",
+      "cost": "The business cannot grow past what one person can hold in their head, and stock sits idle in one place while another runs out.",
+      "fix": "Each morning Verity shows a short list of what needs a decision, each with an owner. Outlets and stalls are locations in one system, with stock, sales and balances side by side, and stock can move between them against a recorded transfer.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The cricket seasonality figure is from 2011 and is shown with its year. The 68.9 percent is offline share for sports apparel only, from paid market research. The US$43.81 billion is a projection whose source the article does not name. The GST summary comes from a government broadcaster and a notification summary, so confirm rates for each item with your accountant.",
+  "facts": [
+    {
+      "figure": "5%",
+      "text": "GST on most sports goods from 22 September 2025, down from 12 percent. General exercise equipment such as treadmills and dumbbells is reported to stay at 18 percent.",
+      "source": {
+        "name": "All India Radio News, 2025",
+        "url": "https://www.newsonair.gov.in/gst-bachat-utsav-tax-on-sports-goods-and-bicycles-slashed-to-5-under-next-gen-gst-reforms/"
+      }
+    },
+    {
+      "figure": "20 to 25%",
+      "text": "usual rise in cricket equipment sales each May when school vacations start, with bulk orders from makers taking at least 5 to 6 months to process.",
+      "source": {
+        "name": "Business Today, 2011",
+        "url": "https://www.businesstoday.in/story/cricket-gear-makers-may-face-shortage-sg-slazenger-puma-and-adidas/1/14607.html"
+      }
+    },
+    {
+      "figure": "68.9%",
+      "text": "share of sports apparel sales in India that goes through offline channels in 2025, still the largest channel.",
+      "source": {
+        "name": "IMARC Group, India sports apparel market, 2025",
+        "url": "https://www.imarcgroup.com/india-sports-apparel-market"
+      }
+    },
+    {
+      "figure": "US$43.81 billion",
+      "text": "projected size of India’s sports retail industry by 2028, at 7.82% a year, with the article naming weak infrastructure and a shortage of skilled staff as challenges.",
+      "source": {
+        "name": "Indian Retailer, 2023",
+        "url": "https://www.indianretailer.com/article/retail-business/retail-trends/indias-sports-retail-industry-set-soar-projected-reach-4381"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your store’s own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Sports store / Today",
+      "meta": "Outlet: Koramangala",
+      "heading": "The owner’s morning view",
+      "caption": "Sales, margin after discounts, what schools owe, stock that needs a decision and anything that does not tie, on one screen. It replaces the evening message from the closing staff.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Sales yesterday",
+              "value": "₹86,400",
+              "note": "41 bills"
+            },
+            {
+              "label": "Discounts given",
+              "value": "₹6,150",
+              "note": "7.1% of sales"
+            },
+            {
+              "label": "Owed by schools and clubs",
+              "value": "₹3.2 lakh",
+              "note": "₹1.1 lakh over 60 days"
+            },
+            {
+              "label": "Slow movers",
+              "value": "58 items",
+              "note": "₹2.4 lakh at cost"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Discounts given yesterday, by person"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Rahul, counter",
+              "value": 62,
+              "display": "₹3,800"
+            },
+            {
+              "label": "Imran, floor",
+              "value": 28,
+              "display": "₹1,700"
+            },
+            {
+              "label": "Owner",
+              "value": 11,
+              "display": "₹650",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Cash and UPI differ from bills by ₹280. 1 bill unmatched on the evening shift.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Cricket kit stock below summer plan",
+              "meta": "6 kits on shelf, 22 sold in the same weeks last year",
+              "tag": [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            },
+            {
+              "name": "St. Paul’s School, 3 months pending",
+              "meta": "₹96,000 balance, accounts contact Mrs. Fernandes",
+              "tag": [
+                "Chase",
+                "late",
+                "Promised 25 Oct",
+                "info"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "title": "Stock and season",
+      "meta": "Footwear, bats and rackets",
+      "heading": "Sizes, models and the season ahead",
+      "caption": "What is on the shelf by size and model, how fast it moved in the same weeks last year, what is a slow mover, and what to order before the next season starts.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "In stock",
+            "Sold last May",
+            "Sizes missing",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Cricket bat, English willow",
+              "9",
+              "28",
+              "2h 7oz, 2h 9oz",
+              [
+                "Short",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Football boots, junior",
+              "14",
+              "21",
+              "Sizes 3, 4, 5",
+              [
+                "Reorder",
+                "flag"
+              ]
+            ],
+            [
+              "Badminton racket, mid-range",
+              "31",
+              "12",
+              "None",
+              [
+                "Slow",
+                "muted"
+              ]
+            ],
+            [
+              "Cricket pads, youth",
+              "11",
+              "19",
+              "Small",
+              [
+                "Reorder",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Days since last sale, slow movers"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Racket model 2023, 12 pcs",
+              "value": 95,
+              "display": "212 days",
+              "tone": "muted"
+            },
+            {
+              "label": "Boots, last season colour, 9 pairs",
+              "value": 78,
+              "display": "174 days",
+              "tone": "muted"
+            },
+            {
+              "label": "Bat 2h 10oz, 4 pcs",
+              "value": 60,
+              "display": "134 days",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "institutions",
+      "title": "Institutions",
+      "meta": "Open quotes and unpaid orders",
+      "heading": "Schools, clubs and academy orders",
+      "caption": "Every enquiry and order from a school, club or academy with an owner, a quote and a due date. Unpaid balances and promises to pay are on the same board.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Quote asked",
+              "cards": [
+                {
+                  "title": "20 cricket kits, Greenfield Academy",
+                  "meta": "Needs by 12 Nov, asked via WhatsApp",
+                  "tag": [
+                    "No reply 5 h",
+                    "late",
+                    "Quoted",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Jerseys with names, 35 pcs",
+                  "meta": "Sri Sai Football Club",
+                  "tag": [
+                    "Draft quote",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Delivered, unpaid",
+              "cards": [
+                {
+                  "title": "St. Paul’s School, sports day order",
+                  "meta": "₹96,000 pending, 94 days",
+                  "tag": [
+                    "Chase",
+                    "late",
+                    "Promised 25 Oct",
+                    "info"
+                  ]
+                },
+                {
+                  "title": "Lakshya Badminton Club",
+                  "meta": "₹18,500 pending, 41 days",
+                  "tag": [
+                    "Chase",
+                    "flag"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "title": "Customers",
+      "meta": "Repeat buyers and next-size reminders",
+      "heading": "Players, parents and the coaches who send them",
+      "caption": "A customer record with the sport, usual brand and size, who referred them and what is due. Children who are likely to need the next size before the season show up on a list the counter can work through.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Sport",
+            "Last bought",
+            "Likely need",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Aarav (parent: Neha K.)",
+              "Football",
+              "Boots size 3, Jun 2025",
+              "Size 4 boots",
+              [
+                "Call",
+                "flag",
+                "Booked",
+                "ok"
+              ]
+            ],
+            [
+              "Dev M.",
+              "Cricket",
+              "Pads small, Mar 2025",
+              "Pads medium",
+              [
+                "Call",
+                "flag",
+                "Declined",
+                "muted"
+              ]
+            ],
+            [
+              "Ishita R.",
+              "Badminton",
+              "Racket and restring, 4 months ago",
+              "Restring",
+              [
+                "Message",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Coach Suresh Rao",
+          "sub": "Referred 9 students this year. Academy: Greenfield Academy",
+          "fields": [
+            [
+              "Sport",
+              "Cricket"
+            ],
+            [
+              "Students referred",
+              "9"
+            ],
+            [
+              "Spend from referrals",
+              "₹71,600"
+            ],
+            [
+              "Usual brand",
+              "SG, SS"
+            ],
+            [
+              "Next",
+              [
+                "Quote pending",
+                "late",
+                "Quote sent",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "14 Oct",
+              "Asked for 20 kits quote"
+            ],
+            [
+              "2 Sep",
+              "Two students bought bats"
+            ],
+            [
+              "Note",
+              "Prefers cash discount over a bundle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "claims",
+      "title": "Claims and jobs",
+      "meta": "Open items",
+      "heading": "Warranty claims, stringing and custom jobs",
+      "caption": "Each warranty claim is tied to the original sale and the brand. Each stringing, repair and printing job has a customer, a promised date and a status. Late and waiting items show first.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Customer",
+            "Type",
+            "Due",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Racket frame crack",
+              "Karan B.",
+              "Brand claim",
+              "Reply by 22 Oct",
+              [
+                "Awaiting brand",
+                "late",
+                "Replaced",
+                "ok"
+              ]
+            ],
+            [
+              "Football boots sole",
+              "Meera P.",
+              "Brand claim",
+              "Window ends 30 Oct",
+              [
+                "File today",
+                "flag",
+                "Filed",
+                "ok"
+              ]
+            ],
+            [
+              "Racket stringing",
+              "Ishita R.",
+              "Job",
+              "Today 6 pm",
+              [
+                "Ready",
+                "ok"
+              ]
+            ],
+            [
+              "Jersey name printing, 35 pcs",
+              "Sri Sai FC",
+              "Job",
+              "8 Nov",
+              [
+                "Printing",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "2 claims are within 10 days of the brand’s claim window. 1 customer has called twice.",
+          "action": "Work the list"
+        }
+      ]
+    },
+    {
+      "id": "suppliers",
+      "title": "Suppliers",
+      "meta": "Last 30 days",
+      "heading": "Brand prices, schemes and deliveries",
+      "caption": "What each brand and distributor last charged, how their rates have changed, which schemes you are on, and whether what arrived matched what was ordered and billed.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Supplier",
+            "Item",
+            "Last rate",
+            "Change",
+            "Delivery check"
+          ],
+          "rows": [
+            [
+              "Meerut Sports Co.",
+              "Bat, English willow",
+              "₹4,200",
+              [
+                "+6%",
+                "late"
+              ],
+              [
+                "Matched",
+                "ok"
+              ]
+            ],
+            [
+              "Jalandhar Traders",
+              "Cricket pads, youth",
+              "₹1,350",
+              [
+                "No change",
+                "ok"
+              ],
+              [
+                "2 pairs damaged",
+                "late",
+                "Credit due",
+                "info"
+              ]
+            ],
+            [
+              "Pune Footwear Dist.",
+              "Boots, junior",
+              "₹1,620",
+              [
+                "-4%",
+                "ok"
+              ],
+              [
+                "3 pairs wrong size",
+                "flag",
+                "Swapped",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Bat rate rose 6% since June. 14 bats now sell below your set margin.",
+          "action": "Review prices"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Saturday, before and after.",
+  "dayLede": "What changes is not the sports kit. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "You open the shutter and glance at the racks. You think junior boots are low, but not which sizes.",
+      "after": "The Today screen shows junior boots missing in sizes 3 to 5, and an order is drafted for Monday’s delivery."
+    },
+    {
+      "time": "11:00",
+      "before": "A coach messages for a quote on twenty kits. It sits in a chat while you serve a queue.",
+      "after": "The enquiry is on the institutions board with an owner and a reminder. The quote goes out before lunch."
+    },
+    {
+      "time": "1:00",
+      "before": "A parent asks for the bill of a racket that cracked. Nobody can find it.",
+      "after": "The sale is on the customer record. The claim is filed and the brand’s window date is on it."
+    },
+    {
+      "time": "4:00",
+      "before": "A customer asks for 15 percent off and the counter calls you on the floor.",
+      "after": "It arrives as a one-tap approval on your phone with the reason attached."
+    },
+    {
+      "time": "8:30",
+      "before": "You count cash and UPI against the bill book. It is ₹280 off, and nobody knows why.",
+      "after": "Verity shows the one bill that does not tie. The closer notes it in a minute."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks which items were sold at which tax rate. You rebuild it from slips.",
+      "after": "Each bill already carries the item’s rate, so the split is clean when the month closes."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time on your shop floor, build Verity around how your store really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a weekend afternoon and a quiet weekday in your store. Watch how a sale, a school order and a repair move through, how stock arrives and how the day is counted, and note which leaks matter most.",
+        "you": "Two to three hours of yours and your senior salesperson’s. Access to your billing reports, a season of purchase invoices and your school and club list.",
+        "get": "A written map of your store: the sports and brands you carry, the size and model grid, your suppliers, your institutions and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your items by size and model, tax categories, reorder points, suppliers, discount limits, institutions with their terms and the job and claim types, and build the six screens around your own terms.",
+        "you": "Check the setup with your senior salesperson. Tell us where an item, a size run or a rule is wrong.",
+        "get": "A working Verity with your real items, institutions, staff and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your stock levels, school and club list with balances, customer contacts and open warranty claims from the sheets and notebooks you use. Train the counter team at the counter during a real weekend.",
+        "you": "Your institution list and balances, and an opening stock count by size. One hour with each role.",
+        "get": "Your stock, institutions and claims inside Verity, and a team that has used it through a busy weekend."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune the reorder points and chase rules, and handle changes when a new brand, a new season or a new outlet arrives.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the store runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Sports, categories, seasons', 'Records'],
-    ['Sizes, specifications, variants', 'Inventory'],
-    ['Team orders, individual sales, returns', 'Orders'],
-    ['Clubs, schools, teams, individuals', 'Relationships'],
-    ['Restringing, fitting, repairs', 'Work'],
-    ['Brands, distributors', 'Suppliers'],
-    ['Store, stockroom, workshop', 'Locations'],
-  ],
-
-  challengesHeading: 'Several seasons, one shop, fixed dates.',
-  challengesLede:
-    'Sports retail difficulties come from managing distinct seasonal businesses as one and from team orders that arrive late against dates that do not move.',
-  challenges: [
-    { problem: 'One annual pattern across several seasons', detail: 'Each sport peaks at a different time and is ordered against a general reorder discipline, producing stockouts and dead stock simultaneously.', outcome: 'Each sport carries its own season calendar, lead times and thresholds.' },
-    { problem: 'Team orders confirm late against fixed dates', detail: 'Names, numbers and size breakdowns arrive close to the season start, compressing production.', outcome: 'Confirmation is tracked against the production lead time rather than the delivery date.' },
-    { problem: 'Specification stockouts lose the whole sale', detail: 'A customer needing a particular size, weight or grip buys nothing rather than something approximate.', outcome: 'Stock is held at specification level, so availability reflects what customers actually ask for.' },
-    { problem: 'Servicing promises tie to fixtures', detail: 'Restringing and repairs are promised for a match date and tracked on a tag.', outcome: 'Servicing is work with a promised date, an owner and a state.' },
-    { problem: 'Off-season holding cost is unattributed', detail: 'Stock held across a long gap costs financing that is treated as general expense.', outcome: 'Holding period and cost attach to the category holding them.' },
-    { problem: 'Team relationships are personal', detail: 'Club and school business depends on a relationship with one coach or administrator and leaves when they do.', outcome: 'Clubs are records with their order history, sizes and contacts held by the business.' },
-  ],
-
-  modulesLede: 'One system across seasons, specifications, team orders and servicing.',
-  modules: [
-    { id: 'records', title: 'Sports, seasons and calendars', line: 'Each sport carries its season dates, buying lead times, historical demand pattern and category thresholds.', why: 'Managing six seasons as one annual cycle is the format’s characteristic mistake.', example: 'A sport stocked out in its opening weeks because it was ordered on the store’s general pattern.' },
-    { id: 'inventory', title: 'Stock by size and specification', line: 'Stock is held per item, size and specification with cost, season, holding period and location.', why: 'Sports purchases are specification-driven, and an approximate match is not a sale.', example: 'Availability at specification level rather than at product level.' },
-    { id: 'orders', title: 'Team orders and individual sales', line: 'Team orders carry their club, size breakdown, personalisation, delivery date and confirmation state; sales record specification and customer.', why: 'Team orders are a different order type with fixed dates and late-arriving detail.', example: 'Three team orders unconfirmed inside the production lead time.' },
-    { id: 'relationships', title: 'Clubs, schools and individuals', line: 'Clubs carry their contacts, order history, size profiles and season timing; individuals carry their specifications and purchases.', why: 'Team business repeats annually and should not depend on one relationship.', example: 'Last season’s size breakdown for a club, used to prompt this season’s order.' },
-    { id: 'work', title: 'Restringing, fitting and repairs', line: 'Servicing is work with a customer, an item, a promised date, an owner and a state.', why: 'Equipment is promised against a fixture, which is a hard date.', example: 'Nine servicing jobs past their promised date with fixtures approaching.' },
-    { id: 'suppliers', title: 'Brands and distributors', line: 'Suppliers carry lead times against season starts, minimum orders, delivery reliability and balances.', why: 'A supplier delivering to its own lead time misses a season start entirely.', example: 'Delivery measured against season start rather than against a general lead time.' },
-    { id: 'intelligence', title: 'Season, specification and holding reporting', line: 'Sell-through by sport and season, specification-level availability, team order performance, servicing turnaround and holding cost come from the records.', why: 'Six seasons need six sets of numbers, not one.', example: 'Holding cost by category across the off-season gap.' },
-    { id: 'ai', title: 'Ask the store a question', line: 'Verity AI answers from your own stock, order, club and servicing records, respects permissions, and can create assigned follow-ups.', why: 'The valuable questions are about approaching season starts and unconfirmed team orders.', example: '"Which team orders are unconfirmed inside lead time?" returns three with chases assigned.' },
-    { id: 'workflows', title: 'Confirmations, deposits and approvals', line: 'Team order confirmation, deposits, discounts and returns move through defined steps with recorded decisions.', why: 'Bulk orders carry deposits and personalisation that cannot be reversed.', example: 'Personalisation held until the size breakdown is confirmed.' },
-    { id: 'people', title: 'Store staff and workshop', line: 'Staff are modelled once, and every sale, team order and servicing job carries who owns it.', why: 'Specification advice and servicing turnaround both vary by person.', example: 'Servicing turnaround by workshop staff member.' },
-    { id: 'locations', title: 'Store, stockroom and workshop', line: 'Locations roll into the business with stock, work and reporting following the same structure.', why: 'The workshop queue is a real constraint during a season start.', example: 'Workshop queue against promised fixture dates.' },
-    { id: 'control', title: 'Who can discount and commit', line: 'One permission model and one audit trail across every record.', why: 'Team order pricing is negotiated and personalisation is irreversible.', example: 'A team order discount recorded as an approval with the order value.' },
-  ],
-
-  workflowsHeading: 'Six seasons and a workshop.',
-  workflowsLede: 'These already happen. Recorded per sport, each season gets its own plan.',
-  workflows: [
-    { name: 'Season preparation', steps: ['Season start and historical pattern pulled per sport', 'Buying lead times applied backwards from it', 'Orders placed against the season start', 'Stock received and specification availability checked', 'Peak weeks staffed against the pattern'], note: 'Each sport needs its own backward plan; a single annual cycle serves none of them well.' },
-    { name: 'Team order', steps: ['Enquiry recorded with club, quantity and season start', 'Production lead time calculated backwards', 'Size breakdown and personalisation confirmation tracked', 'Deposit taken and production released', 'Delivery completed against the season start', 'Balance collected and order closed'], note: 'Tracking confirmation against lead time rather than delivery date is what makes the date achievable.' },
-    { name: 'Specification sale', steps: ['Customer requirement recorded with specification', 'Availability checked at specification level', 'Alternative or order raised where unavailable', 'Sale recorded against the customer with their spec', 'Specification retained for future prompts'], note: 'Recording the specification is what makes a future arrival worth a call.' },
-    { name: 'Servicing job', steps: ['Item received with specification and fixture date', 'Job assigned with a promised date', 'Workshop queue position tracked', 'Completion recorded and customer notified', 'Turnaround measured against promise'], note: 'A fixture date is a hard deadline; the queue has to respect it.' },
-    { name: 'Off-season holding', steps: ['Stock at season end identified by sport', 'Holding period and cost calculated across the gap', 'Clearance against hold decision taken with the cost visible', 'Decision recorded against the category', 'Next season buy adjusted accordingly'], note: 'Holding for eight months is a decision with a cost, and it is usually taken by default.' },
-  ],
-
-  ai: {
-    heading: 'Ask season by season.',
-    lede: 'Verity AI reads the same stock, order, club and servicing records the store creates as it trades. It answers per sport, respects permissions, and can turn an answer into ordering and chasing.',
-    panelMeta: 'Grounded in your store records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which team orders are unconfirmed inside their production lead time?',
-      'Which sports have season starts approaching and what did they sell last year?',
-      'Which servicing jobs are past their promised date?',
-      'What specifications are we most often out of?',
-      'What is off-season holding cost by category?',
-      'Which clubs ordered last season and have not yet this season?',
-      'Which suppliers deliver late against season starts?',
-      'What is sell-through by sport and season?',
-      'Summarise readiness across the coming season starts.',
+    "bring": [
+      "Your item list by brand with prices and, if you have them, size runs",
+      "A season of purchase invoices and distributor price lists",
+      "Your school, club and academy list with any balances",
+      "Open warranty claims and repair tags",
+      "Your discount rules and any supplier schemes you are on"
     ],
+    "time": "About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your senior salesperson needs a few more.",
+    "after": "Nobody is hired to run Verity. Sales, deliveries and jobs are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'Season starts and fixture dates.',
-  automationLede: 'Each runs from the store’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A season start approaches', steps: ['Last year’s pattern surfaced for the sport', 'Supplier orders checked against the start date', 'Clubs from last season prompted'] },
-    { trigger: 'A team order is unconfirmed inside lead time', steps: ['Flagged with production time remaining', 'Confirmation chase assigned', 'Date risk communicated to the club'] },
-    { trigger: 'A servicing job approaches its promised date', steps: ['Flagged with queue position and fixture', 'Escalated to the workshop owner', 'Customer update raised if late'] },
-    { trigger: 'A specification is repeatedly unavailable', steps: ['Recorded against the item and spec', 'Stocking review assigned', 'Decision recorded for the next buy'] },
-    { trigger: 'A season ends with stock held', steps: ['Holding cost calculated across the gap', 'Clearance or hold decision raised', 'Outcome recorded against the category'] },
+  "ai": {
+    "heading": "Ask your store a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own sales, stock, institution and customer records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which schools and clubs owe us money for more than 60 days?",
+        "a": "Four institutions owe ₹1.1 lakh past 60 days. St. Paul’s School is the largest at ₹96,000.",
+        "rows": [
+          [
+            "St. Paul’s School",
+            "₹96,000"
+          ],
+          [
+            "Lakshya Badminton Club",
+            "₹18,500"
+          ],
+          [
+            "Others",
+            "₹4,200"
+          ]
+        ],
+        "action": "Create a chase task for each account contact"
+      },
+      {
+        "q": "Which junior sizes will we run out of before the summer break?",
+        "a": "Boots in sizes 3, 4 and 5 and youth cricket pads in small will run out in about three weeks at last year’s pace. Everything else covers the break.",
+        "action": "Draft the order for the next delivery"
+      },
+      {
+        "q": "Which items have not sold in 150 days and what do they cost us?",
+        "a": "58 items have not sold in 150 days and hold ₹2.4 lakh at cost. Rackets from the 2023 model are the largest group.",
+        "rows": [
+          [
+            "Rackets 2023 model",
+            "₹71,000"
+          ],
+          [
+            "Boots last season colour",
+            "₹58,000"
+          ],
+          [
+            "Bats 2h 10oz",
+            "₹32,000"
+          ],
+          [
+            "Other",
+            "₹79,000"
+          ]
+        ]
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers, schools and brands; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "A size or model falls below its reorder point",
+      "then": [
+        "Checked against the same weeks last season",
+        "Order drafted for the next delivery",
+        "Stock updated when the delivery is received"
+      ]
+    },
+    {
+      "when": "A school or club invoice goes past its due date",
+      "then": [
+        "Added to the owed list by age",
+        "Task to the account contact on your schedule",
+        "Promise to pay recorded"
+      ]
+    },
+    {
+      "when": "A quote request has no reply in a few hours",
+      "then": [
+        "Flagged on the institutions board",
+        "Reminder to the owner of the enquiry",
+        "Quote and outcome recorded"
+      ]
+    },
+    {
+      "when": "A warranty claim nears the brand’s claim window",
+      "then": [
+        "Flagged with days left",
+        "Task to file with the sale and photos",
+        "Brand’s reply and result recorded"
+      ]
+    },
+    {
+      "when": "A discount goes above your limit",
+      "then": [
+        "Held for approval",
+        "Routed to the owner with the reason",
+        "Decision recorded against the bill"
+      ]
+    },
+    {
+      "when": "A child’s usual replacement time for a size comes up",
+      "then": [
+        "Added to the next-size list with last size",
+        "Task to the person who served them",
+        "Outcome recorded: bought, declined or unreachable"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the owner can see per sport.',
-  intelligenceLede: 'Six seasons measured separately, from the store’s own records.',
-  intelligence: [
-    { area: 'Seasons', points: ['Sell-through by sport and season', 'Stockouts during season starts', 'Buying lead times met against start dates', 'Year-on-year comparison by sport'] },
-    { area: 'Team business', points: ['Orders by club with confirmation timing', 'Delivery against season starts', 'Repeat clubs and lapsed ones', 'Deposits held and balances due'] },
-    { area: 'Specification', points: ['Availability at specification level', 'Requests unavailable and their specs', 'Substitution and lost sales', 'Specification profile of the customer base'] },
-    { area: 'Servicing', points: ['Jobs by state and promised date', 'Turnaround by workshop staff', 'Late jobs and their causes', 'Servicing revenue by sport'] },
-    { area: 'Capital', points: ['Off-season holding value and cost by category', 'Clearance recovery against holding', 'Stock ageing across seasons', 'Supplier reliability against start dates'] },
+  "rules": {
+    "heading": "The rules a sports store has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.",
+    "items": [
+      {
+        "name": "GST on sports goods and sportswear",
+        "what": "From 22 September 2025, most sports goods generally moved from 12 to 5 percent. General exercise equipment such as treadmills and dumbbells generally stays at 18 percent, and sportswear and shoes are generally taxed at 5 percent up to ₹2,500 per piece or pair and 18 percent above that. Protective gear falls under other headings. Check each item.",
+        "how": "Each item carries its tax category, and each purchase and sale records the rate that applied, so the split your accountant needs is clean at month end.",
+        "source": {
+          "name": "TaxGarden, 2026",
+          "url": "https://taxgarden.in/blog/gst-on-sports-goods-fitness-equipment-india-2026-rates-hsn"
+        }
+      },
+      {
+        "name": "Selling at or below MRP",
+        "what": "For packed goods, the Legal Metrology rules generally bar a dealer from selling above the printed retail price, apart from a valid tax revision in the month of packing or the next month.",
+        "how": "Each item records its MRP and the price charged, and a bill above MRP is flagged for the manager before it is closed.",
+        "source": {
+          "name": "IndiaLaw, 2025",
+          "url": "https://www.indialaw.in/blog/criminal/overpricing-beyond-mrp-violates-consumer-law/"
+        }
+      },
+      {
+        "name": "Customer data and consent",
+        "what": "Phone numbers, children’s sport details and purchase history are personal data. India’s data protection rules were notified on 13 November 2025, and most duties start to apply in phases, with the main ones about 18 months later.",
+        "how": "Customer data sits in one permissioned place, with who viewed or changed it recorded, instead of in personal phones and chat groups.",
+        "source": {
+          "name": "AZB Partners, 2025",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      },
+      {
+        "name": "Shops and establishments registration and staff records",
+        "what": "Most states require a shops and establishments registration and records of working hours, weekly offs and leave. Details differ by state, so check your own.",
+        "how": "Registration is stored with its renewal date and owner, and shifts, attendance and leave are recorded against each person."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A salesperson should not see everyone’s pay. The counter should not edit supplier rates. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Is the store making money, and where is it going?",
+      "sees": "Sales and margin by sport and brand, discounts, what institutions owe, slow-moving stock and every outlet side by side."
+    },
+    {
+      "role": "Store manager",
+      "question": "What needs sorting this week?",
+      "sees": "Sizes short for the season, deliveries to check, approvals waiting, claims near their window and jobs that are late."
+    },
+    {
+      "role": "Salesperson",
+      "question": "What does this customer need?",
+      "sees": "The customer’s sport, usual size and brand, last purchase, open jobs and the next-size reminders assigned to them."
+    },
+    {
+      "role": "Accounts and institutions lead",
+      "question": "Who owes us and what did we promise?",
+      "sees": "Schools and clubs by balance and age, quotes and orders, and each promise to pay with a date."
+    },
+    {
+      "role": "Accountant",
+      "question": "What was bought, sold and owed?",
+      "sees": "Sales by payment mode and tax rate, supplier invoices matched to deliveries, and discounts and credit notes."
+    }
   ],
-  intelligenceNote: 'All of it comes from recording sales, team orders and servicing against the sport and season they belong to.',
-
-  rolesHeading: 'One shop, three views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Owner', question: 'Is each season planned properly?', focus: 'Sell-through by sport, holding cost by category, team order performance, supplier reliability against start dates.' },
-    { role: 'Store staff', question: 'Do we have their specification?', focus: 'Availability at spec level, customer specifications and history, alternatives, servicing status.' },
-    { role: 'Workshop', question: 'What is due before which fixture?', focus: 'Servicing queue by promised date, specifications, completion to record, turnaround.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing screen at the counter. We agree during setup how bills and payments reach Verity.",
+      "Your distributors’ and brands’ own order channels. We record what you order and receive.",
+      "WhatsApp for customers, coaches and brand reps. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Run your billing counter or take orders at the till.",
+      "Take online orders or run an online shop for you.",
+      "Send messages to customers, schools or brands on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your stock by size, institution list with balances, customer contacts and open claims across from the sheets, phones and notebooks you use now, in stages, so the store keeps selling while it happens."
+  },
+  "faqHeading": "Questions sports store owners ask.",
+  "faqs": [
+    [
+      "Will my salespeople record sizes and discounts at a busy counter?",
+      "Only if it takes seconds, so we set recording up as a few taps that sit beside the bill they already make. We train on a real weekend, not in a classroom, and we start with the few details that matter most."
+    ],
+    [
+      "Does Verity replace my billing system?",
+      "No. Your billing screen keeps taking bills and payments. We agree during setup how those bills reach Verity, which then does the stock, supplier, institution and customer work around them."
+    ],
+    [
+      "Can it take orders from schools or customers online?",
+      "No. If schools order by phone or message today, that continues. Verity makes sure every enquiry has an owner and a next step, and your team replies."
+    ],
+    [
+      "I have one small store with two staff. Is this too much?",
+      "A small store has the same leaks and less time to notice them. We set up only what you need in the same four weeks and leave out what you do not."
+    ],
+    [
+      "Can it handle sizes and models?",
+      "Yes. Items are set up by sport, brand, model and size or weight, so you see what is missing by size and not just by product."
+    ],
+    [
+      "Can it track warranty claims with the brands?",
+      "Yes. Each claim is a record linked to the original sale, with the brand, the date and the status. Your staff file the claim with the brand; Verity makes sure none is forgotten."
+    ],
+    [
+      "I run a store and a tournament stall. Can I see them together?",
+      "Yes. Each is a location in one system, with stock, sales and balances side by side. Stock can move between them against a recorded transfer."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so salespeople, managers and your accountant each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of outlets, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your store runs."
+    ]
   ],
-
-  useCasesHeading: 'What sports retailers use Verity for',
-  useCases: [
-    { name: 'Season-by-season planning', body: 'Each sport carrying its own calendar, lead times and thresholds rather than sharing one annual cycle.' },
-    { name: 'Team order lead times', body: 'Size and personalisation confirmation tracked against production lead time rather than the season start date.' },
-    { name: 'Specification-level availability', body: 'Stock held by size, weight and grip, since a customer needing a specification buys nothing rather than something close.' },
-    { name: 'Servicing against fixtures', body: 'Restringing and repairs as work with promised dates tied to matches, visible before the fixture.' },
-    { name: 'Off-season holding cost', body: 'Financing across the seasonal gap attributed to the category holding the stock, so the hold-or-clear decision has a number.' },
-    { name: 'Club relationship continuity', body: 'Clubs as records with their size breakdowns and history, so annual business does not depend on one coach.' },
-    { name: 'Asking per season', body: 'Plain-language questions across sports, team orders, specifications and servicing, with actions raised in the same step.' },
+  "related": [
+    "shoe-stores",
+    "gyms",
+    "fitness-studios",
+    "fashion-stores",
+    "electronics-stores",
+    "retail-stores"
   ],
-
-  migration: 'Your billing setup continues and is mapped during implementation. Stock at specification level, clubs with their history, suppliers and open team orders are brought across, and Verity is configured around the store’s season calendar.',
-
-  faqHeading: 'Questions sports retailers ask',
-  faqs: [
-    ['What can AI software do for a sports store?', 'Verity AI answers questions from your own stock, order, club and servicing records: which team orders are unconfirmed inside lead time, which season starts are approaching and what they sold last year, which servicing jobs are late, what specifications you are most often out of. Each answer can become an order or a chase.'],
-    ['Why manage each sport separately?', 'Because each has its own season start, buying lead time and dead period. Managing six seasonal businesses against one annual pattern produces stockouts in the sport that is starting and dead stock in the one that has finished, simultaneously.'],
-    ['How does it help with team orders?', 'Team orders carry a fixed season-start date and the size breakdown and personalisation details usually arrive late. Confirmation is tracked against the production lead time calculated backwards, so the compression is visible while it can still be managed.'],
-    ['Why track specification rather than product?', 'Because sports purchases are specification-driven. A customer who needs a particular size, weight or grip buys nothing rather than something approximate, so availability at product level overstates what you can actually sell.'],
-    ['Does it handle servicing?', 'Restringing, fitting and repairs are work with a customer, an item, a promised date tied to a fixture and a workshop queue position, so a job at risk is visible before the match rather than on the day.'],
-    ['Can it show off-season holding cost?', 'Holding period and financing cost attach to the category holding the stock, so the decision to hold across an eight-month gap is compared against clearing now rather than taken by default.'],
-    ['Does Verity replace our billing software?', 'No. Billing continues and is mapped during implementation. Verity holds the seasons, specification stock, team orders, servicing and the reporting across them.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the season calendar and team order process, configuration, migration of stock, clubs and open orders, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the season that is about to begin.',
-  ctaLede: 'You know the date and you have last year’s numbers. Tell us how each sport is planned today.',
-
-  related: ['shoe-stores', 'fashion-stores', 'retail-stores', 'gyms', 'fitness-studios', 'schools'],
+  "ctaHeading": "Start with the sizes you keep running out of.",
+  "ctaLede": "Tell us how your store runs and we will show you the size gaps, the slow movers and the unpaid school orders it would find, using your own numbers."
 };

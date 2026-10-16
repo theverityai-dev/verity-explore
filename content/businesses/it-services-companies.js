@@ -1,549 +1,1023 @@
 export default {
-  slug: 'it-services-companies',
-  status: 'published',
-  plural: 'IT services companies',
-  subject: 'IT services company',
-
-  seo: {
-    title: 'AI business management software for IT services companies | Verity',
-    description:
-      'Verity connects support tickets and SLAs, contracted scope, engineer allocation across accounts, client assets and billing models into one operational system.',
-    keywords: [
-      'AI software for IT services companies',
-      'managed services provider software',
-      'SLA and ticket tracking software',
-      'IT services resource allocation and contract management',
-    ],
+  "schema": 2,
+  "slug": "it-services-companies",
+  "status": "published",
+  "plural": "IT services companies",
+  "subject": "IT services company",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "IT services company management software for India | Verity",
+    "description": "Resource allocation, bench, SLAs, tickets and milestone billing in one system. See the 15 leaks in an IT services company and the Verity screens that close them.",
+    "keywords": [
+      "IT services company management software India",
+      "resource allocation and bench tracking",
+      "SLA and ticket tracking",
+      "milestone billing tracking",
+      "IT contract renewal and AMC tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for IT services',
-    headline: 'The contract says four hours. The engineer who knows that client is on another site.',
-    lede:
-      'An IT services business sells response commitments and delivers them with shared engineers. Verity connects the contract, the ticket, the asset and the person, so an SLA breach is predictable rather than reported.',
-    note: 'Verity runs the services business. Your monitoring and toolset stay where they are.',
-    panel: {
-      title: 'Service desk',
-      meta: 'All accounts · Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Open tickets', value: '142', note: 'across 38 accounts' },
-        { label: 'At SLA risk', value: '11', note: 'inside 2 hours of breach' },
-        { label: 'Out of contract', value: '23', note: 'billable, unbilled' },
-        { label: 'Engineer coverage', value: '3 accounts', note: 'single-engineer dependency' },
-      ],
-      rows: [
-        { name: '11 tickets within two hours of SLA breach', meta: 'Four need the same engineer', active: true },
-        { name: '23 tickets outside contracted scope, none billed', meta: '₹3.4 L of effort this month', active: true },
-        { name: 'Three accounts depend on one engineer', meta: 'No documented handover', active: true },
-        { name: 'Client assets out of support with no renewal raised', meta: '46 devices · warranty expired', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own service desk in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for IT services companies",
+    "headline": "Twelve people on the bench, two clients waiting for staff, and a milestone nobody invoiced.",
+    "lede": "An IT services company sells people's time and delivered milestones, and earns when they match demand. Staff sit idle while a client waits, an SLA clock runs out in a mailbox, and a finished milestone waits a month for a sign-off. Verity connects the project, the people, the tickets and the invoice milestone, so you see the gap while it is still cheap to close.",
+    "oneLine": "One system that knows every project, every engineer's allocation, every open ticket and every milestone, and tells you what is idle, late or unbilled before the month ends.",
+    "note": "Your ticketing tool, code repositories and accounts package stay where they are. Verity runs the company around them.",
+    "screen": "owner",
+    "screenNote": "projects, bench, SLAs and milestones due"
   },
-
-  overview: {
-    heading: 'You sell a response time and deliver it from a shared pool of people.',
-    paragraphs: [
-      'A managed services business makes a commitment per account — response within a defined time, a scope of covered work, an agreed number of hours or devices — and then delivers all of those commitments from one team of engineers who are shared across every account. The tension between contracted commitments and shared capacity is the entire operational problem.',
-      'The commitment is measurable, which makes IT services unusual among professional businesses: an SLA either was or was not met, per ticket. What is usually not measurable is why. A breach happens because the engineer who knows that client’s environment was at another site, or because a ticket was misrouted, or because nobody escalated. Those causes are recorded nowhere, so the same breach repeats.',
-      'The second characteristic loss is out-of-scope work. Clients ask for things outside the contract, engineers do them because refusing is awkward and the request is small, and the effort is never billed. Twenty-three tickets a month outside contracted scope is a meaningful sum in a business with thin service margins, and most providers can only estimate it.',
-      'The third is key-person dependency. Three accounts depending on one engineer is a commercial risk that is entirely invisible until that person takes leave or resigns, because environment knowledge lives in their head rather than in documentation attached to the account.',
-      'Verity holds the contract, the ticket, the SLA clock, the asset, the engineer and the billing position as one set of records.',
+  "today": {
+    "heading": "The delivery is tracked and the business around it is not.",
+    "paragraphs": [
+      "Engineers work in repositories and project boards. The project manager runs the sprint. That part is organised. What sits outside is the business view: who is free next month, which contract promises a four-hour response, which milestone is done but not signed off, and what each project actually earns after the team's cost.",
+      "The information lives in a resource sheet kept by one person, a ticket tool per client, contracts in a folder, timesheets in another tool and the invoice schedule in the finance team's sheet. The delivery head and the finance head hold the connection in their heads, and they disagree on dates.",
+      "So the company finds out late. A bench of ten that was visible two months ago. A premium SLA breached on a Sunday because no one watched the clock. A milestone completed in March and invoiced in May. And a small vendor paid late, which now has a tax effect. Nasscom's figures show industry revenue growing 6.1% in FY26 while headcount grew 2.3%, so the pressure to use each person well is real."
     ],
+    "stack": [
+      "Resource allocation sheet",
+      "Ticketing tool per client",
+      "Timesheet tool",
+      "Contracts folder",
+      "Invoice schedule spreadsheet"
+    ],
+    "stackNote": "Each tool is fine for its job. Nothing connects the contract, the people, the tickets and the invoice."
   },
-
-  terminology: [
-    ['Tickets, incidents, requests, changes', 'Work'],
-    ['Contracts, SLAs, covered scope', 'Records'],
-    ['Clients, sites, end users', 'Relationships'],
-    ['Engineers, on-call rota, escalation tiers', 'People'],
-    ['Client devices, licences, warranties', 'Inventory'],
-    ['Escalations, approvals, change control', 'Workflows'],
-    ['Accounts, sites, regions', 'Locations'],
+  "painsHeading": "Where an IT services company actually loses money.",
+  "painsLede": "These are the situations delivery heads, project managers and finance leads describe again and again. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Resources",
+      "title": "The bench is invisible until it is expensive",
+      "scene": "A project ends on the 15th. The people from it have no next assignment. The resource sheet is updated on the 28th, when the delivery head finds eleven people unassigned.",
+      "cost": "Example arithmetic: eleven engineers at ₹1.2 lakh a month of cost sitting idle for a month is about ₹13 lakh. Reports on large Indian IT firms say bench has shrunk from over 20% to 8 to 15%, so an idle bench is one of the first things a client asks about.",
+      "fix": "Every person has an allocation by project and date. Verity shows who rolls off in the next 30, 60 and 90 days, who is unassigned now and for how long, and what open demand could use them.",
+      "screen": "resources",
+      "source": {
+        "name": "Lets Data Science, 2026",
+        "url": "https://letsdatascience.com/news/india-it-services-shrinks-bench-strength-significantly-490bf566"
+      }
+    },
+    {
+      "area": "Resources",
+      "title": "One engineer, three projects, at 100% each",
+      "scene": "A senior developer is allocated 100% to a client project and also named at 50% on two others. Each project manager believes they have her.",
+      "cost": "Over-allocation breaks deadlines on all three jobs and burns out the person everyone depends on.",
+      "fix": "Allocation is entered as a percentage by project, and a person above 100% is flagged on the delivery head's screen with the clashing projects named.",
+      "screen": "resources"
+    },
+    {
+      "area": "Resources",
+      "title": "Who can do this job?",
+      "scene": "A client needs a cloud migration engineer in two weeks. The delivery head recalls two names but not whether they are free, or who has done it before.",
+      "cost": "Hiring from outside for a skill you already have costs more and takes longer. Losing the deal because you could not staff it costs more still.",
+      "fix": "Each person's skills, certifications and past projects are on their record. A request for a skill and a start date lists who matches, when they are free and who would have to be moved.",
+      "screen": "resources"
+    },
+    {
+      "area": "Resources",
+      "title": "Notice period with no knowledge transfer",
+      "scene": "A lead engineer resigns with 60 days of notice. His handover is a few meetings and a document no one reads. A client asks a question about a module only he understood.",
+      "cost": "Delays, errors and sometimes a client who loses trust in the team.",
+      "fix": "A resignation creates a handover plan: projects owned, systems and credentials held, documents to write and the person taking over each. The plan is tracked to completion before the last day.",
+      "screen": "resources"
+    },
+    {
+      "area": "Service desk",
+      "title": "Tickets live in a shared inbox",
+      "scene": "A client's support mailbox gets 60 mails a day. Priorities are judged by whoever reads first. A \"system down\" mail sits behind a password reset for two hours.",
+      "cost": "Slow response on a serious ticket costs trust and, under many contracts, a service credit.",
+      "fix": "Every request becomes a ticket with a client, priority, owner and a clock set by the contract's SLA. The queue is sorted by time left, not by arrival order.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Service desk",
+      "title": "SLA breaches found at the monthly review",
+      "scene": "A contract promises a four-hour response and a one-day fix for critical incidents. Weekend tickets are watched by whoever remembers. The client's review lists three breaches.",
+      "cost": "Service credits, difficult renewals, and a reputation for being slow when it matters.",
+      "fix": "Each ticket shows time to first response and time to resolution against the contract. Tickets nearing a breach are flagged to the owner and the service manager, and the monthly SLA view is built from the records.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Service desk",
+      "title": "The same incident, again and again",
+      "scene": "A client's batch job fails every month-end. Each time a different engineer restarts it and closes the ticket. No one writes down the cause.",
+      "cost": "The same hours are spent every month on a problem that should have been fixed once.",
+      "fix": "Tickets link to a problem record with the cause and the fix. A ticket that matches an open problem is tagged, and the count of repeat tickets by cause is shown to the service manager.",
+      "screen": "tickets"
+    },
+    {
+      "area": "Milestones",
+      "title": "A finished milestone that nobody invoiced",
+      "scene": "Phase 2 of a fixed-price project was delivered in March. The client's sign-off was verbal. The invoice for the milestone was raised in May.",
+      "cost": "Cash arrives two months later than it could have. At ₹25 lakh per milestone, that is real working capital the company has to find elsewhere.",
+      "fix": "Each contract has milestones with a delivery date, acceptance state and invoice state. A milestone marked delivered with no acceptance after a set number of days is chased, and an accepted milestone with no invoice raises a task for finance.",
+      "screen": "milestones"
+    },
+    {
+      "area": "Milestones",
+      "title": "Acceptance never recorded",
+      "scene": "The client's manager says the module is fine on a call. Later, a new manager disputes that it was ever accepted and holds the payment.",
+      "cost": "A payment held on a technicality can be delayed for months.",
+      "fix": "Acceptance is a recorded step with the approver's name, date and the document or message attached. The milestone cannot move to invoicing without it.",
+      "screen": "milestones"
+    },
+    {
+      "area": "Milestones",
+      "title": "Time-and-material hours that do not match the invoice",
+      "scene": "Timesheets are filled on Fridays from memory. The invoice is based on a spreadsheet summary that the client's team questions line by line.",
+      "cost": "Disputed hours are written off and the next invoice takes longer to approve.",
+      "fix": "Hours are logged against the project and task as work happens, with a manager approval step. The invoice view sums approved hours by person and rate, so the finance team prepares the bill from agreed numbers.",
+      "screen": "milestones"
+    },
+    {
+      "area": "Vendors",
+      "title": "Small vendors and freelancers paid late",
+      "scene": "A specialist subcontractor is paid when the client pays you. Their bill is 70 days old. They are a registered micro enterprise.",
+      "cost": "Under Section 43B(h) of the Income-tax Act, amounts owed to micro and small suppliers beyond the allowed period are generally disallowed as a deduction until paid. The statutory limit is 45 days from acceptance. It can also lead to disputes with the vendor.",
+      "fix": "Vendor bills are records with the date of acceptance, the vendor's registration status and the due date. Bills approaching the limit are listed for the finance head with the vendor and amount.",
+      "screen": "contracts",
+      "source": {
+        "name": "TaxGuru on Section 43B(h)",
+        "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+      }
+    },
+    {
+      "area": "Contracts",
+      "title": "Contracts, AMC and licences lapse quietly",
+      "scene": "A support contract ended on the 31st. The client's team kept raising tickets. For six weeks the company worked free while a renewal sat in a manager's inbox.",
+      "cost": "Unpaid support, and a weak position when renewing because the client has got used to free service.",
+      "fix": "Every contract and AMC is a record with start, end, scope, SLA terms and a renewal owner. Renewal tasks appear 90, 60 and 30 days before expiry, and expired contracts are flagged on any new ticket.",
+      "screen": "contracts"
+    },
+    {
+      "area": "Projects",
+      "title": "Scope on a fixed-price project drifts",
+      "scene": "A client adds three small features by chat. The project manager says yes each time. The fixed fee has not moved and the team has worked 400 hours over the plan.",
+      "cost": "Example arithmetic: 400 extra hours at ₹1,000 a hour of cost is ₹4 lakh of margin gone on one project.",
+      "fix": "Each project has a scope list and a change request step. Hours against the estimate are visible to the delivery head weekly, and a change either becomes a priced change request or is declined on the record.",
+      "screen": "owner"
+    },
+    {
+      "area": "Compliance",
+      "title": "Overtime and weekend support with no record",
+      "scene": "A support engineer works extra hours on a go-live weekend. The overtime is agreed on a call and noted nowhere. A month later HR and the engineer disagree.",
+      "cost": "The Labour Codes took effect on 21 November 2025 and generally require consent for overtime, paid at twice the regular wage, though the central and state rules were still being finalised in 2026. Undocumented overtime is a dispute waiting to happen.",
+      "fix": "Extra hours are logged against the person and the project with a manager approval and the reason. HR sees the month's overtime and the consent record before payroll is prepared in your own payroll process.",
+      "screen": "contracts",
+      "source": {
+        "name": "DLA Piper on the Labour Codes",
+        "url": "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2025/government-of-india-notifies-the-labour-codes-ushers-a-new-era-of-compliances"
+      }
+    },
+    {
+      "area": "Compliance",
+      "title": "Security incidents and client data",
+      "scene": "A server at a client site shows unusual logins at night. No one knows who should report it, to whom, or within what time. The access logs are kept for a week.",
+      "cost": "CERT-In's directions, effective 27 June 2022, generally expect covered entities to report listed incidents within six hours of noticing and to keep ICT logs for 180 days. The DPDP Rules add data duties from about 18 months after November 2025.",
+      "fix": "Each client system has an owner, a named incident contact and a log retention date on the record. A reported incident creates a log with time noticed, who was told and when, so the six-hour clock is visible.",
+      "screen": "contracts",
+      "source": {
+        "name": "PSA Legal on CERT-In directions",
+        "url": "https://psalegal.com/new-cert-in-directions-overview-and-implications/"
+      }
+    }
   ],
-
-  challengesHeading: 'A measurable commitment delivered from a shared pool.',
-  challengesLede:
-    'IT services difficulties come from contracts that are specific and capacity that is not.',
-  challenges: [
+  "factsHeading": "The numbers behind these problems.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The bench figure is from a secondary aggregator quoting an ET report on large firms, and not on mid-size companies. Nasscom figures are as reported by PTI. Section 43B(h) and the Labour Codes are changing areas; confirm with your accountant.",
+  "facts": [
     {
-      problem: 'SLA breaches are reported, not predicted',
-      detail:
-        'The monthly report says how many were missed. Nothing said which were about to be missed while there was still time to act.',
-      outcome:
-        'The SLA clock runs on the ticket against the account’s contract, so tickets approaching breach surface with time remaining.',
+      "figure": "6.1% vs 2.3%",
+      "text": "Nasscom's FY26 estimate for Indian tech revenue growth against headcount growth. Revenue is USD 315 billion; core IT services is USD 149 billion.",
+      "source": {
+        "name": "ETV Bharat on Nasscom, 2026",
+        "url": "https://www.etvbharat.com/en/business/india-fy26-tech-revenues-hit-usd-315-billion-enn26022404879"
+      }
     },
     {
-      problem: 'Out-of-scope work is done and never billed',
-      detail:
-        'A client asks for something outside the contract, an engineer obliges, and the effort disappears into the service margin.',
-      outcome:
-        'Tickets are checked against contracted scope, so out-of-scope work is flagged as billable or as a recorded decision to absorb it.',
+      "figure": "20% to 8 to 15%",
+      "text": "the reported shrinking of bench strength at large Indian IT firms, according to industry experts quoted by ET.",
+      "source": {
+        "name": "Lets Data Science, 2026",
+        "url": "https://letsdatascience.com/news/india-it-services-shrinks-bench-strength-significantly-490bf566"
+      }
     },
     {
-      problem: 'Key-person dependency is invisible',
-      detail:
-        'Certain accounts only run because one engineer knows the environment, and this is discovered when they are unavailable.',
-      outcome:
-        'Ticket ownership by account and engineer is recorded, so concentration surfaces as a measured risk with documentation gaps named.',
+      "figure": "45 days",
+      "text": "the outer limit to pay a micro or small supplier for goods or services, after which the amount is generally not deductible until paid, under Section 43B(h) from AY 2024-25.",
+      "source": {
+        "name": "TaxGuru",
+        "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+      }
     },
     {
-      problem: 'Breach causes are never recorded',
-      detail:
-        'A missed SLA is counted but its cause — misrouting, availability, waiting on the client, waiting on a vendor — is not, so the same breach recurs.',
-      outcome:
-        'Cause is recorded at resolution, so recurring causes become a list rather than a monthly number.',
-    },
-    {
-      problem: 'Client assets fall out of support unnoticed',
-      detail:
-        'Devices go out of warranty and licences lapse, and it becomes visible when something fails and cannot be replaced.',
-      outcome:
-        'Client assets are records with warranty and licence dates, so renewals are raised ahead of expiry.',
-    },
-    {
-      problem: 'Account profitability is unknown',
-      detail:
-        'A fixed monthly fee against unmeasured effort means some accounts are subsidised by others and nobody can say which.',
-      outcome:
-        'Effort recorded against the account produces cost against contracted fee, so loss-making accounts are identified.',
-    },
+      "figure": "6 hours",
+      "text": "the time within which listed cyber incidents must generally be reported to CERT-In after noticing them, with logs kept for 180 days, under directions effective 27 June 2022.",
+      "source": {
+        "name": "PSA Legal, 2022",
+        "url": "https://psalegal.com/new-cert-in-directions-overview-and-implications/"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system across contracts, tickets, engineers, assets and billing.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your company's own language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Tickets, incidents, requests and changes',
-      line:
-        'Every ticket is work with an account, a category, a priority, an owner, an SLA clock, recorded effort and a resolution with a cause.',
-      why:
-        'The ticket is where the contractual commitment, the engineer’s time and the client’s experience all meet.',
-      example:
-        'Eleven tickets within two hours of breach, four of them needing the same engineer.',
+      "id": "owner",
+      "title": "Company / This week",
+      "meta": "All projects",
+      "heading": "The delivery head's morning view",
+      "caption": "Bench, over-allocated people, SLAs at risk, milestones to invoice and projects over estimate, on one screen. It replaces the Monday delivery review.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "On bench now",
+              "value": "11",
+              "note": "5 free next month"
+            },
+            {
+              "label": "Over-allocated",
+              "value": "4",
+              "note": "above 100%"
+            },
+            {
+              "label": "SLAs at risk",
+              "value": "3",
+              "note": "next 24 hours"
+            },
+            {
+              "label": "Milestones unbilled",
+              "value": "₹48 L",
+              "note": "3 accepted"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Hours used against estimate, fixed-price projects"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Ledgerly migration",
+              "value": 131,
+              "display": "1,310 of 1,000 h",
+              "tone": "muted"
+            },
+            {
+              "label": "RetailOne portal",
+              "value": 88,
+              "display": "880 of 1,000 h"
+            },
+            {
+              "label": "Medlink integration",
+              "value": 102,
+              "display": "510 of 500 h",
+              "tone": "muted"
+            },
+            {
+              "label": "Axis support build",
+              "value": 61,
+              "display": "305 of 500 h"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Ledgerly migration is 310 hours over estimate with 2 unpriced change requests.",
+          "action": "Review changes"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Cloud engineer needed, RetailOne, start 3 Nov",
+              "meta": "2 matches on bench from 27 Oct",
+              "tag": [
+                "Unfilled",
+                "flag",
+                "Allocated",
+                "ok"
+              ]
+            },
+            {
+              "name": "Milestone 2, Medlink",
+              "meta": "Accepted 10 Oct, not invoiced",
+              "tag": [
+                "Invoice",
+                "late",
+                "Raised",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Contracts, SLAs and covered scope',
-      line:
-        'Each account carries its contract terms, response and resolution targets, covered scope, included hours and renewal dates.',
-      why:
-        'Scope is what separates billable work from absorbed work, and it has to be checkable at the moment a ticket is logged.',
-      example:
-        'Twenty-three tickets outside contracted scope this month, quantified as effort.',
+      "id": "resources",
+      "title": "Resources",
+      "meta": "Next 90 days",
+      "heading": "Who is free, who is stretched, who can do the job",
+      "caption": "Allocation by person and project, roll-offs, the bench and a skills search. A person above 100% is flagged, and open demand shows who could fill it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "Skills",
+            "Allocation",
+            "Roll-off",
+            "Free from",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Nikhil Rao",
+              "Cloud, DevOps",
+              "100% Ledgerly, 50% RetailOne",
+              "n/a",
+              "n/a",
+              [
+                "150%",
+                "late",
+                "Rebalanced",
+                "ok"
+              ]
+            ],
+            [
+              "Shreya Iyer",
+              "Java, APIs",
+              "100% Medlink",
+              "31 Oct",
+              "3 Nov",
+              [
+                "Roll-off soon",
+                "info"
+              ]
+            ],
+            [
+              "Karan Shah",
+              "QA automation",
+              "Unassigned",
+              "n/a",
+              "Now",
+              [
+                "Bench 18 days",
+                "flag",
+                "Allocated",
+                "ok"
+              ]
+            ],
+            [
+              "Divya Pillai",
+              "React, Node",
+              "80% RetailOne",
+              "15 Dec",
+              "16 Dec",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Demand: cloud migration engineer",
+          "sub": "RetailOne. Start 3 Nov. 3 months",
+          "fields": [
+            [
+              "Skills needed",
+              "Cloud, DevOps"
+            ],
+            [
+              "Matches",
+              "Karan (partial), Shreya (cross-train)"
+            ],
+            [
+              "Gap",
+              [
+                "No exact match",
+                "flag",
+                "Hire approved",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "Today",
+              "Request raised by project manager"
+            ],
+            [
+              "Next",
+              "Delivery head decides move or hire"
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Engineers, tiers and on-call rota',
-      line:
-        'The team is modelled once with skills, account familiarity, availability and on-call assignment, and every ticket shows who owns it.',
-      why:
-        'Delivery capacity is shared across accounts with specific commitments, and matching the two is the daily job.',
-      example:
-        'Three accounts with a single-engineer dependency, surfaced with the documentation gaps named.',
+      "id": "tickets",
+      "title": "Service desk",
+      "meta": "Open tickets, all clients",
+      "heading": "Service desk against the contract clock",
+      "caption": "Every ticket with its priority, owner and time left under the SLA. Repeat tickets are linked to a problem so the cause is fixed once.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Ticket",
+            "Client",
+            "Priority",
+            "Owner",
+            "SLA time left",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Payment API down",
+              "RetailOne",
+              "Critical",
+              "Aarav",
+              "1 h 10 m",
+              [
+                "At risk",
+                "late",
+                "Fixed",
+                "ok"
+              ]
+            ],
+            [
+              "Month-end batch failed",
+              "Ledgerly",
+              "High",
+              "Meena",
+              "3 h 20 m",
+              [
+                "Repeat issue",
+                "flag"
+              ]
+            ],
+            [
+              "Report export error",
+              "Medlink",
+              "Medium",
+              "Rohan",
+              "1 day",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Password reset",
+              "Axis",
+              "Low",
+              "Meena",
+              "2 days",
+              [
+                "On track",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Repeat: month-end batch",
+              "value": 80,
+              "display": "8 tickets in 6 months",
+              "tone": "muted"
+            },
+            {
+              "label": "Repeat: report export",
+              "value": 40,
+              "display": "4 tickets"
+            },
+            {
+              "label": "Repeat: login lockout",
+              "value": 30,
+              "display": "3 tickets"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Month-end batch for Ledgerly has failed 8 times. A problem record is open with no owner.",
+          "action": "Assign owner"
+        }
+      ]
     },
     {
-      id: 'inventory',
-      title: 'Client devices, licences and warranties',
-      line:
-        'Client assets are records with their site, configuration, warranty and licence dates, and the tickets raised against them.',
-      why:
-        'An asset’s ticket history is the difference between another repair and a replacement recommendation.',
-      example:
-        'Forty-six devices out of warranty with no renewal raised, alongside the tickets they have generated.',
+      "id": "milestones",
+      "title": "Milestones and hours",
+      "meta": "Fixed-price and time-and-material",
+      "heading": "Delivery, acceptance and the invoice",
+      "caption": "Each milestone with delivery, client acceptance and invoice state. Hours on time-and-material work are approved before the invoice is prepared. Verity does not run billing; your finance team does.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Milestone",
+            "Client",
+            "Value",
+            "Delivered",
+            "Accepted",
+            "Invoice"
+          ],
+          "rows": [
+            [
+              "M2 Integration",
+              "Medlink",
+              "₹18 L",
+              "28 Sep",
+              [
+                "10 Oct",
+                "ok"
+              ],
+              [
+                "Not raised",
+                "late",
+                "Raised",
+                "ok"
+              ]
+            ],
+            [
+              "M3 Reports",
+              "Medlink",
+              "₹12 L",
+              "15 Oct",
+              [
+                "Awaiting",
+                "flag"
+              ],
+              "Not due"
+            ],
+            [
+              "Phase 2",
+              "Ledgerly",
+              "₹25 L",
+              "14 Mar",
+              [
+                "Verbal only",
+                "late",
+                "Document added",
+                "ok"
+              ],
+              "Held"
+            ],
+            [
+              "Sprint 14 hours",
+              "RetailOne",
+              "₹7.6 L",
+              "31 Oct",
+              [
+                "Hours approved",
+                "ok"
+              ],
+              [
+                "Ready",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Phase 2 for Ledgerly was delivered in March with only verbal acceptance. Get written sign-off before billing.",
+          "action": "Request sign-off"
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients, sites and end users',
-      line:
-        'Clients are records with their contracts, sites, users, ticket history, escalations, satisfaction and balances.',
-      why:
-        'Renewal decisions are made on service experience, and the evidence for that experience is the ticket history.',
-      example:
-        'An account approaching renewal with its breach history and escalation record in one view.',
-    },
-    {
-      id: 'workflows',
-      title: 'Escalation, change control and approvals',
-      line:
-        'Escalation tiers, change approvals, out-of-scope authorisation and after-hours work move through defined steps with recorded decisions.',
-      why:
-        'Escalation that depends on someone deciding to escalate is escalation that happens too late.',
-      example:
-        'A ticket approaching breach escalates automatically to the tier that can resolve it.',
-    },
-    {
-      id: 'intelligence',
-      title: 'SLA, scope and account reporting',
-      line:
-        'SLA attainment and breach causes, out-of-scope effort, account cost against fee, asset lifecycle and engineer load come from the operational records.',
-      why:
-        'Providers report SLA attainment to clients and rarely report account profitability to themselves.',
-      example:
-        'Cost against contracted fee per account, which usually identifies two or three that should be repriced.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the service desk a question',
-      line:
-        'Verity AI answers from your own ticket, contract, asset and engineer records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The useful questions cross contract, capacity and history at once, which is exactly what a ticket queue view cannot do.',
-      example:
-        '"Which tickets are at SLA risk and who can actually resolve them?" returns eleven with reassignments proposed.',
-    },
-    {
-      id: 'communication',
-      title: 'Client updates on the ticket',
-      line:
-        'Notes, updates and activity attach to the ticket, asset or account they concern.',
-      why:
-        'Most client dissatisfaction in managed services is about not being updated rather than about resolution time.',
-      example:
-        'An update recorded on the ticket, so the next engineer and the client see the same history.',
-    },
-    {
-      id: 'control',
-      title: 'Access, change approval and audit',
-      line:
-        'One permission model and one audit trail across every record, with change approvals recorded.',
-      why:
-        'A services provider holds administrative access to client environments, which makes attribution a professional obligation.',
-      example:
-        'Every change carries the approver, the engineer and the time.',
-    },
-    {
-      id: 'locations',
-      title: 'Accounts, sites and regions',
-      line:
-        'Client sites and internal regions are locations, with tickets, assets and reporting following the same structure.',
-      why:
-        'On-site work has travel time and coverage constraints that only appear if sites are modelled.',
-      example:
-        'Engineer coverage by region against the accounts committed there.',
-    },
+      "id": "contracts",
+      "title": "Contracts and compliance",
+      "meta": "Due in the next 90 days",
+      "heading": "Contracts, vendors, and compliance records",
+      "caption": "Every contract, AMC and vendor bill with a date and an owner, plus overtime records and the security incident contacts for each client.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Party",
+            "End or due",
+            "Owner",
+            "Value",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Support contract",
+              "Axis",
+              "31 Oct",
+              "Meena",
+              "₹9 L/yr",
+              [
+                "Renewal due",
+                "late",
+                "Renewed",
+                "ok"
+              ]
+            ],
+            [
+              "AMC",
+              "Medlink",
+              "15 Dec",
+              "Rohan",
+              "₹6 L/yr",
+              [
+                "60 days",
+                "info"
+              ]
+            ],
+            [
+              "Vendor bill, QA freelancer",
+              "Pixel Test (micro)",
+              "Accepted 12 Aug",
+              "Finance",
+              "₹1.4 L",
+              [
+                "Day 62 of 45",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            ],
+            [
+              "Vendor bill, design",
+              "Studio Plum (small)",
+              "Accepted 1 Oct",
+              "Finance",
+              "₹0.8 L",
+              [
+                "Day 15 of 45",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Weekend go-live overtime approved, RetailOne team",
+              "meta": "Consent recorded for 5 people",
+              "done": true
+            },
+            {
+              "text": "Incident contact named, Ledgerly",
+              "meta": "Log retention 180 days confirmed",
+              "done": false
+            },
+            {
+              "text": "Handover plan, resigning lead engineer",
+              "meta": "Last day 20 Nov",
+              "done": false
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'From logged to resolved, with the clock running.',
-  workflowsLede:
-    'These already run. As records with contract terms attached, the commitment becomes manageable rather than reportable.',
-  workflows: [
+  "dayHeading": "The same Monday, before and after.",
+  "dayLede": "What changes is not the engineering. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Ticket intake to assignment',
-      steps: [
-        'Ticket logged against the account, site and asset',
-        'Contract terms applied and the SLA clock started',
-        'Scope checked against the contract',
-        'Priority set and owner assigned by skill and availability',
-        'Out-of-scope work flagged for authorisation before it starts',
-      ],
-      note:
-        'Checking scope at intake is what turns absorbed work into either billable work or a deliberate decision.',
+      "time": "9:30",
+      "before": "The delivery head asks each project manager who will be free next month.",
+      "after": "The resources screen shows eleven on the bench, five rolling off, and the open demand they could fill."
     },
     {
-      name: 'SLA management',
-      steps: [
-        'Clock tracked against response and resolution targets',
-        'Tickets approaching breach surfaced with time remaining',
-        'Escalation to the next tier triggered automatically',
-        'Client updated and the update recorded',
-        'Breach cause recorded at resolution',
-      ],
-      note:
-        'The difference between predicting a breach and reporting one is roughly two hours, which is usually enough.',
+      "time": "11:00",
+      "before": "A client wants a cloud engineer in two weeks. The head remembers two names.",
+      "after": "A skills search shows who matches, when they are free and who would be moved."
     },
     {
-      name: 'Out-of-scope request',
-      steps: [
-        'Request identified as outside contracted scope',
-        'Effort estimated and authorisation raised',
-        'Client approval recorded, or a decision to absorb recorded',
-        'Work performed with effort recorded against the ticket',
-        'Billable effort released for invoicing',
-      ],
-      note:
-        'Making absorption a recorded decision is what stops it being the default.',
+      "time": "1:00",
+      "before": "A critical ticket sits in the shared inbox behind two routine ones.",
+      "after": "The queue is sorted by SLA time left and the critical ticket is already with its owner."
     },
     {
-      name: 'Asset lifecycle',
-      steps: [
-        'Client assets recorded with warranty and licence dates',
-        'Ticket history accumulated against each asset',
-        'Renewal or replacement flagged ahead of expiry',
-        'Recommendation raised to the account with the history attached',
-        'Decision and any procurement recorded',
-      ],
-      note:
-        'An asset with a ticket history is a replacement conversation with evidence rather than an upsell.',
+      "time": "3:30",
+      "before": "A project manager agrees to a \"small\" change on a fixed-price job.",
+      "after": "The change is logged as a request with an estimate, and the delivery head sees the hours against plan."
     },
     {
-      name: 'Account review and renewal',
-      steps: [
-        'Ticket volume, SLA attainment and breach causes pulled by account',
-        'Effort against contracted fee calculated',
-        'Out-of-scope work and absorption reviewed',
-        'Repricing or scope change prepared for renewal',
-        'Decision recorded against the contract',
-      ],
-      note:
-        'Renewal is the only moment a mispriced account can be fixed, and it needs the effort data to be a conversation.',
+      "time": "5:30",
+      "before": "Finance asks whether the milestone is accepted. No one is sure.",
+      "after": "The milestone shows delivered on the 28th, accepted on the 10th with the client's note attached, and a task to invoice."
     },
     {
-      name: 'Key-person risk reduction',
-      steps: [
-        'Ticket ownership concentration measured by account and engineer',
-        'Accounts with single-engineer dependency identified',
-        'Documentation gaps named against the account',
-        'Secondary engineer assigned and shadowing scheduled',
-        'Concentration re-measured after the period',
-      ],
-      note:
-        'This is a commercial risk that is invisible until it is a crisis, and entirely measurable before then.',
-    },
+      "time": "Month end",
+      "before": "Timesheets, SLA reports and invoices are rebuilt from three tools.",
+      "after": "Approved hours, SLA results and milestone states are already on the records, so finance starts from clean numbers."
+    }
   ],
-
-  ai: {
-    heading: 'Ask before the clock runs out.',
-    lede:
-      'Verity AI reads the same ticket, contract, asset and engineer records the desk runs on. It answers from your own accounts, respects permissions, and can turn an answer into reassignments and escalations.',
-    panelMeta: 'Grounded in your service records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which tickets are at SLA risk, and who can actually resolve them?',
-      'How much out-of-scope work was done this month, and for which accounts?',
-      'Which accounts depend on a single engineer?',
-      'What are the recurring causes of SLA breaches?',
-      'Which accounts cost more to serve than their contracted fee?',
-      'Which client assets are out of warranty with open tickets?',
-      'Which accounts have the worst escalation history before renewal?',
-      'What is engineer load by account and region?',
-      'Summarise SLA attainment and scope leakage this month.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We follow a project from contract to invoice, build Verity around how your people, tickets and milestones really move, bring in your data, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Sit in on a delivery review and a service desk shift. Trace one contract from signature to milestone invoice, and one ticket from mail to closure.",
+        "you": "Two to three hours of yours, your delivery head's and your finance lead's. Your resource sheet, a sample contract and a recent invoice schedule.",
+        "get": "A written map of your company: projects, people, skills, contracts, SLAs, milestones and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up client and contract records, projects and milestones, allocation, skills, ticket priorities with SLA clocks, change requests, vendor bills and the six screens in your own terms.",
+        "you": "Check the setup with a project manager and the service manager. Tell us where a priority, SLA or rule is wrong.",
+        "get": "A working Verity with your real clients, contracts and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in people and skills, current allocations, open contracts, milestone schedules and open tickets from your sheets and tools. Train each role on its own screen using live projects.",
+        "you": "Your resource sheet and contract list in whatever form they exist. One hour with each role.",
+        "get": "Your people, contracts and milestones inside Verity, and a team that has used it through a real week."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first month of allocation, SLA and milestone data with you, tune the limits, and handle changes when you add a client, a service line or a team.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the company runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Your resource or allocation sheet with skills",
+      "Three client contracts, including one with SLAs",
+      "Your milestone or invoice schedule",
+      "A month of ticket data in whatever form it exists",
+      "Your list of vendors and freelancers with registration status"
+    ],
+    "time": "About 10 to 14 hours of your own time across the four weeks, mostly in week 1. Your delivery head, service manager and finance lead need a few more each.",
+    "after": "Nobody is hired to run Verity. Allocations, tickets and milestones are recorded as part of work the team already does, and views come from those records."
   },
-
-  automationHeading: 'The escalations that should not wait for a decision.',
-  automationLede:
-    'Each runs from the ticket and contract records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your company a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own people, ticket, contract and milestone records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Who will be on the bench in the next 30 days?",
+        "a": "Sixteen people. Eleven are free now and five roll off by 15 November. Three match open demand.",
+        "rows": [
+          [
+            "Free now",
+            "11"
+          ],
+          [
+            "Rolling off by 15 Nov",
+            "5"
+          ],
+          [
+            "Match open demand",
+            "3"
+          ],
+          [
+            "No match",
+            "13"
+          ]
+        ],
+        "action": "Create allocation tasks for the delivery head"
+      },
+      {
+        "q": "Which tickets will breach their SLA in the next four hours?",
+        "a": "Three tickets across two clients. The payment API ticket for RetailOne has 1 hour 10 minutes left.",
+        "rows": [
+          [
+            "RetailOne",
+            "1"
+          ],
+          [
+            "Ledgerly",
+            "2"
+          ]
+        ],
+        "action": "Escalate to the service manager"
+      },
+      {
+        "q": "Which accepted milestones have not been invoiced?",
+        "a": "Three milestones worth ₹48 lakh. The oldest was accepted 38 days ago.",
+        "action": "Create invoice tasks for finance"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your team still talks to clients and engineers; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'A ticket approaches its SLA target',
-      steps: [
-        'Ticket flagged with time remaining and current owner',
-        'Escalated to the next tier automatically',
-        'Client update task raised',
-        'Cause recorded at resolution',
-      ],
+      "when": "A person is allocated above 100% across projects",
+      "then": [
+        "Flag on the delivery head's screen",
+        "Clashing projects named",
+        "Decision recorded when rebalanced"
+      ]
     },
     {
-      trigger: 'A request falls outside contracted scope',
-      steps: [
-        'Ticket flagged as out of scope with estimated effort',
-        'Authorisation raised to the account owner',
-        'Billable effort released or absorption recorded',
-      ],
+      "when": "A project is due to end within 30 days",
+      "then": [
+        "Roll-off listed for the resourcing view",
+        "Open demand matched",
+        "Task to the delivery head for next assignment"
+      ]
     },
     {
-      trigger: 'An asset approaches warranty or licence expiry',
-      steps: [
-        'Asset flagged with its ticket history',
-        'Renewal or replacement recommendation raised',
-        'Decision recorded against the account',
-      ],
+      "when": "A ticket reaches 75% of its SLA time",
+      "then": [
+        "Flag to the owner and service manager",
+        "Escalation task if still unresolved",
+        "Breach recorded with the reason"
+      ]
     },
     {
-      trigger: 'Ticket ownership concentrates on one engineer',
-      steps: [
-        'Dependency flagged by account',
-        'Documentation gaps identified',
-        'Secondary engineer assignment task raised',
-      ],
+      "when": "A milestone is marked delivered and acceptance is not recorded after a set number of days",
+      "then": [
+        "Task to the project manager to get written sign-off",
+        "Shown to the delivery head",
+        "Invoice step opens on acceptance"
+      ]
     },
     {
-      trigger: 'Effort on an account exceeds its contracted fee',
-      steps: [
-        'Account flagged with effort against fee',
-        'Review assigned ahead of renewal',
-        'Repricing or scope decision recorded',
-      ],
+      "when": "An accepted milestone has no invoice",
+      "then": [
+        "Task to finance",
+        "Shown on the owner's screen",
+        "Invoice date recorded"
+      ]
     },
     {
-      trigger: 'A change is requested on a client environment',
-      steps: [
-        'Change held at the approval step',
-        'Routed with the affected assets attached',
-        'Approval, execution and outcome recorded',
-      ],
-    },
+      "when": "A contract or AMC is 90 days from expiry",
+      "then": [
+        "Renewal task to the owner",
+        "Scope and SLA terms shown",
+        "Outcome recorded: renewed, changed or ended"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the services director can actually see.',
-  intelligenceLede:
-    'Commitment attainment and account economics from the same records.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules an IT services company has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by situation. Confirm current requirements with your accountant or lawyer.",
+    "items": [
+      {
+        "name": "MSME payment terms and Section 43B(h)",
+        "what": "From AY 2024-25, amounts owed to micro and small suppliers beyond the allowed period, which cannot exceed 45 days from acceptance of goods or services, are generally disallowed as a deduction until paid. Medium enterprises are excluded.",
+        "how": "Vendor bills carry the acceptance date, the vendor's registration status and a due date, with bills near the limit listed for finance.",
+        "source": {
+          "name": "TaxGuru",
+          "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+        }
+      },
+      {
+        "name": "CERT-In directions, 2022",
+        "what": "Issued on 28 April 2022 and effective 27 June 2022, they generally expect covered entities to report listed cyber incidents within six hours of noticing them and to keep ICT logs for 180 days within India.",
+        "how": "Each client system has an owner, an incident contact and a log retention date. A reported incident records the time noticed and who was told.",
+        "source": {
+          "name": "PSA Legal",
+          "url": "https://psalegal.com/new-cert-in-directions-overview-and-implications/"
+        }
+      },
+      {
+        "name": "Labour Codes and overtime",
+        "what": "The four Labour Codes took effect on 21 November 2025. Overtime generally needs the worker's consent and is paid at twice the regular wage. Central and some state rules were still being finalised in 2026.",
+        "how": "Extra hours are logged with the reason, approver and consent. Verity does not run payroll.",
+        "source": {
+          "name": "DLA Piper",
+          "url": "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2025/government-of-india-notifies-the-labour-codes-ushers-a-new-era-of-compliances"
+        }
+      },
+      {
+        "name": "Digital Personal Data Protection Rules, 2025",
+        "what": "Notified on 14 November 2025. Most duties apply 18 months after publication and cover data fiduciaries and processors. An IT services company that handles client personal data may be a processor.",
+        "how": "Client data access is by role with an audit trail, and retention dates are set per client.",
+        "source": {
+          "name": "Scconline",
+          "url": "https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/"
+        }
+      },
+      {
+        "name": "GST and export of services",
+        "what": "Invoices to clients outside India may be zero-rated under conditions, and rules on receiving foreign payments are set by the RBI and have been changing. Your accountant and bank decide and file.",
+        "how": "Each invoice record carries the client, country, amount, invoice date and payment state."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "An engineer should not see everyone's billing rates. A client should not see another client. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Service',
-      points: [
-        'SLA attainment by account, priority and period',
-        'Tickets at risk and time remaining',
-        'Breach causes and their frequency',
-        'First-time resolution and reopen rates',
-      ],
+      "role": "Managing director",
+      "question": "Is the company making money on its projects?",
+      "sees": "Bench cost, project margin, unbilled milestones, renewals and client risk."
     },
     {
-      area: 'Scope',
-      points: [
-        'Out-of-scope effort by account',
-        'Authorised against absorbed work',
-        'Billable effort released for invoicing',
-        'Scope disputes and their outcomes',
-      ],
+      "role": "Delivery head",
+      "question": "Who is free, who is stretched, what is at risk?",
+      "sees": "Allocation, roll-offs, skills search, hours against estimate and change requests."
     },
     {
-      area: 'Accounts',
-      points: [
-        'Effort at cost against contracted fee',
-        'Ticket volume trend by account',
-        'Escalation history ahead of renewal',
-        'Outstanding balances and ageing',
-      ],
+      "role": "Project manager",
+      "question": "Where is my project against the plan?",
+      "sees": "Milestones, hours, tickets for the project, change requests and the team."
     },
     {
-      area: 'Capacity',
-      points: [
-        'Engineer load by account and region',
-        'Single-engineer dependency by account',
-        'On-call and after-hours load',
-        'Utilisation against contracted commitments',
-      ],
+      "role": "Service manager",
+      "question": "Which tickets are about to breach?",
+      "sees": "Queue by SLA time, repeat problems, owners and monthly SLA results."
     },
     {
-      area: 'Assets',
-      points: [
-        'Client assets by site, age and support status',
-        'Assets out of warranty or licence',
-        'Ticket volume by asset and model',
-        'Replacement recommendations and outcomes',
-      ],
-    },
+      "role": "Finance lead",
+      "question": "What can I invoice and what do I owe?",
+      "sees": "Accepted milestones, approved hours, vendor bills with due dates and overdue client invoices."
+    }
   ],
-  intelligenceNote:
-    'Verity holds the service and commercial records. Monitoring, remote management and security tooling continue to do their own jobs.',
-
-  rolesHeading: 'One desk, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
-  roles: [
-    {
-      role: 'Services director',
-      question: 'Which accounts are we losing money on?',
-      focus: 'Effort against contracted fee, out-of-scope leakage, SLA attainment, renewal risk.',
-    },
-    {
-      role: 'Service desk manager',
-      question: 'What is about to breach?',
-      focus: 'Tickets at SLA risk, engineer availability, escalations open, reassignments needed.',
-    },
-    {
-      role: 'Engineer',
-      question: 'What is mine and what is urgent?',
-      focus: 'Assigned tickets by SLA remaining, asset history, change approvals, updates due.',
-    },
-    {
-      role: 'Account manager',
-      question: 'How is my client actually being served?',
-      focus: 'SLA history, escalations, out-of-scope work, asset lifecycle, renewal position.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is billable and what is owed?',
-      focus: 'Billable out-of-scope effort, contract invoicing, balances ageing, absorption recorded.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your ticketing tool where it is the front door for clients. We agree during setup how tickets and SLA clocks reach Verity.",
+      "Your code repositories and project boards, where engineers work.",
+      "Your accounts package, which still raises invoices and files returns.",
+      "Email and chat with clients. Your team replies",
+      "Verity tracks who owes a reply."
+    ],
+    "not": [
+      "Host or monitor your clients' systems.",
+      "Send invoices, reminders or messages to clients on its own.",
+      "Run your payroll or file your returns.",
+      "Give legal advice on contracts or data protection."
+    ],
+    "migration": "We bring people and skills, allocations, contracts, milestone schedules, open tickets and vendor bills across from your sheets and tools, in stages, so projects keep running while it happens."
+  },
+  "faqHeading": "Questions IT company owners ask.",
+  "faqs": [
+    [
+      "We already use a ticketing tool. Why Verity?",
+      "Your ticketing tool knows tickets. It does not know the contract, who is free to be assigned, or the milestone that is waiting. We agree during setup how tickets reach Verity so SLA clocks and repeat problems appear next to the rest of the business."
+    ],
+    [
+      "Does Verity replace our project boards?",
+      "No. Engineers keep their boards. Verity holds the business view: contracts, allocations, hours against estimate, milestones and invoices."
+    ],
+    [
+      "Can it handle fixed-price and time-and-material together?",
+      "Yes. Fixed-price work has milestones and hours against estimate; time-and-material work has approved hours by person and rate. Each is set up in your terms."
+    ],
+    [
+      "How does it show the bench?",
+      "From allocations. Each person is allocated to projects by percentage and date, so the unassigned or rolling-off list is a result, not a separate sheet."
+    ],
+    [
+      "Will it send SLA alerts to clients?",
+      "No. It alerts your team, who talk to the client. Verity records the response and the outcome."
+    ],
+    [
+      "Can it show profit by project?",
+      "Yes, once hours, rates and contract values are in. Verity shows revenue, hours, team cost and margin per project. Team cost uses the rates you set."
+    ],
+    [
+      "We are 40 people. Is that large enough?",
+      "A 40-person company has the same bench, SLA and milestone gaps with less slack to absorb them. We set up what you need in the same four weeks."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role and by client, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of people, clients and what you want set up. Message us and we will give you a clear number after a short conversation about how your company runs."
+    ]
   ],
-
-  useCasesHeading: 'What IT services companies use Verity for',
-  useCases: [
-    {
-      name: 'SLA risk prediction',
-      body: 'The clock running on the ticket against the account’s contract, so tickets approaching breach surface with time remaining rather than in a monthly report.',
-    },
-    {
-      name: 'Scope leakage control',
-      body: 'Tickets checked against contracted scope at intake, so out-of-scope work becomes billable or a recorded decision to absorb it.',
-    },
-    {
-      name: 'Breach cause analysis',
-      body: 'Cause recorded at resolution, so recurring failures become an addressable list rather than a monthly count.',
-    },
-    {
-      name: 'Key-person dependency',
-      body: 'Ticket ownership concentration by account, exposing a commercial risk that is otherwise invisible until someone resigns.',
-    },
-    {
-      name: 'Account profitability',
-      body: 'Effort at cost against contracted fee, identifying the accounts subsidised by the rest before renewal rather than after.',
-    },
-    {
-      name: 'Client asset lifecycle',
-      body: 'Assets with warranty, licence dates and ticket history, so renewal and replacement conversations carry evidence.',
-    },
-    {
-      name: 'Automatic escalation',
-      body: 'Escalation triggered by the clock rather than by someone deciding to escalate, which is usually too late.',
-    },
-    {
-      name: 'Asking the desk questions',
-      body: 'Plain-language questions across contracts, tickets, capacity and assets, with reassignments raised in the same step.',
-    },
+  "related": [
+    "software-agencies",
+    "saas-companies",
+    "cybersecurity-companies",
+    "consulting-firms",
+    "app-developers",
+    "data-companies"
   ],
-
-  migration:
-    'Your monitoring, remote management and security tooling continue to run and are mapped during implementation. Accounts, contracts, SLAs, client assets and open tickets are brought across, and Verity is introduced as the service and commercial layer over them.',
-
-  faqHeading: 'Questions IT services providers ask',
-  faqs: [
-    [
-      'What can AI software do for an IT services company?',
-      'Verity AI answers questions from your own ticket, contract, asset and engineer records: which tickets are at SLA risk and who can actually resolve them, how much out-of-scope work was done and for which accounts, which accounts depend on a single engineer, which cost more to serve than their fee. Each answer can become a reassignment or an escalation.',
-    ],
-    [
-      'Does Verity replace our monitoring or RMM tooling?',
-      'No. Those continue to do their own jobs and are mapped during implementation. Verity is the service and commercial layer — contracts, tickets and SLAs, engineer allocation, client assets, scope control, account economics and reporting.',
-    ],
-    [
-      'How does it help with SLA attainment?',
-      'The clock runs on the ticket against the account’s contracted targets, so tickets approaching breach surface with time remaining and escalate automatically. Cause is recorded at resolution, so recurring failures become addressable.',
-    ],
-    [
-      'Can it stop out-of-scope work being given away?',
-      'Scope is checked at intake against the contract, so a request outside it is flagged with estimated effort and raised for authorisation. The work becomes billable, or absorbing it becomes a recorded decision rather than the default.',
-    ],
-    [
-      'Can we see which accounts are profitable?',
-      'Effort recorded against tickets is costed and compared with the contracted fee per account, which usually identifies two or three accounts being subsidised by the rest — in time to reprice them at renewal.',
-    ],
-    [
-      'Does it track client assets?',
-      'Client devices and licences are records with their site, configuration, warranty and licence dates and their ticket history, so renewals are raised ahead of expiry and replacement recommendations carry evidence.',
-    ],
-    [
-      'Can it surface key-person risk?',
-      'Ticket ownership concentration is measured by account and engineer, so accounts running on one person’s knowledge are identified with their documentation gaps named, rather than discovered when that person is unavailable.',
-    ],
-    [
-      'How is access to client environments controlled?',
-      'Verity has one permission model and one audit trail, and changes to client environments move through recorded approval steps with the engineer, approver and time attached.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of contracts, SLAs and the service desk, configuration, migration of accounts, assets and open tickets, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with scope leakage or SLA risk.',
-  ctaLede:
-    'One is margin you are giving away and the other is the renewal conversation you will have next year. Tell us which matters more right now.',
-
-  related: ['software-agencies', 'consulting-firms', 'saas-companies', 'recruitment-agencies', 'cybersecurity-companies', 'startups'],
+  "ctaHeading": "Start with the bench and the unbilled milestones.",
+  "ctaLede": "Tell us how your company runs and we will show you the idle people, the tickets near breach and the accepted milestones with no invoice, using your own numbers."
 };

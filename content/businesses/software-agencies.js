@@ -1,540 +1,1126 @@
 export default {
-  slug: 'software-agencies',
-  status: 'published',
-  plural: 'software agencies',
-  subject: 'software agency',
-
-  seo: {
-    title: 'AI business management software for software agencies | Verity',
-    description:
-      'Verity connects estimates against actuals, change requests, developer allocation, milestone acceptance and post-delivery warranty into one operational system.',
-    keywords: [
-      'AI software for software agencies',
-      'software development agency management',
-      'estimate versus actual and change request tracking',
-      'developer allocation and milestone acceptance software',
-    ],
+  "schema": 2,
+  "slug": "software-agencies",
+  "status": "published",
+  "plural": "software agencies",
+  "subject": "software agency",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Software agency management software for Indian dev shops | Verity",
+    "description": "Sprints, scope changes, timesheets and fixed-price budgets in one system. See the 14 leaks in a software agency and the Verity screens that close each one.",
+    "keywords": [
+      "software agency management software India",
+      "fixed price project budget tracking",
+      "change request and scope tracking",
+      "developer timesheet tracking",
+      "sprint and client dependency tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for software agencies',
-    headline: 'The estimate was wrong in a specific, repeatable way, and nobody wrote it down.',
-    lede:
-      'Agencies quote fixed prices against estimates and learn nothing from how wrong they were. Verity records estimate against actual per work type, so the next quote is better than the last.',
-    note: 'Verity runs the agency. Your issue tracker and repositories stay where they are.',
-    panel: {
-      title: 'Projects',
-      meta: 'All projects · This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Active projects', value: '14', note: '₹3.8 Cr contracted' },
-        { label: 'Over estimate', value: '5', note: 'no change request raised' },
-        { label: 'Milestones unaccepted', value: '9', note: 'blocking ₹64 L billing' },
-        { label: 'In warranty', value: '11', note: 'unbudgeted support' },
-      ],
-      rows: [
-        { name: '5 projects past estimate with no change request', meta: 'Combined overrun 640 hours', active: true },
-        { name: '9 delivered milestones awaiting client acceptance', meta: 'Billing blocked · oldest 31 days', active: true },
-        { name: 'Warranty work consuming a developer full time', meta: 'Across 11 delivered projects', active: true },
-        { name: 'Two developers committed to overlapping sprints', meta: 'Both projects assume full availability', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own projects in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for software agencies",
+    "headline": "The sprint finished on time. The fixed-price budget finished two weeks ago.",
+    "lede": "A software agency prices a project before it knows what it is. Then the client changes the scope by chat, the API keys arrive late, the sprint slips for a reason nobody wrote down, and the timesheet is filled in on Friday. Verity ties the estimate, the sprint, the change request and the hours to one project record, so you can see the overrun in week three and not in week twelve.",
+    "oneLine": "One system that knows every project's estimate, every change request, every sprint and every hour, and tells you which fixed-price job is burning money before the client does.",
+    "note": "Your code, repositories and task boards stay where they are. Verity runs the company around them.",
+    "screen": "owner",
+    "screenNote": "projects, budgets, sprints and utilisation"
   },
-
-  overview: {
-    heading: 'An agency quotes against estimates and never audits them.',
-    paragraphs: [
-      'A software agency sells fixed-price projects, time-and-materials work, or something between. Fixed price is quoted from an estimate, and the entire commercial outcome depends on whether that estimate was right. Most agencies do not record actual effort against estimate at a granularity that teaches them anything, so the same category of work is under-quoted repeatedly.',
-      'The second characteristic loss is the unraised change request. Clients ask for things outside the agreed scope, developers build them because refusing feels disproportionate, and the effort is absorbed. Five projects past estimate with no change request raised is not five mistakes; it is a firm-level habit that eliminates the margin the estimate was supposed to protect.',
-      'The third is acceptance. Milestone-billed work cannot be invoiced until the client accepts, and acceptance requests sit unanswered while the agency continues to fund the next phase. Nine delivered milestones blocking sixty-four lakh is a cash position, not a delivery problem.',
-      'The fourth is warranty. Post-delivery bug fixing is contractually owed, unbudgeted and delivered by the same developers who are supposed to be on new work. It is the most reliably underestimated cost an agency carries.',
-      'The fifth is allocation: two developers promised to overlapping sprints because each project assumed full availability.',
-      'Verity records estimate against actual, change requests, acceptance and warranty against the projects that generate them.',
+  "today": {
+    "heading": "The developers manage the code well. The commercial side of each project is a guess.",
+    "paragraphs": [
+      "A software agency of fifteen to eighty people runs a dozen projects at once, a mix of fixed-price builds, time-and-material work and monthly support. Developers live in the repository and the sprint board. Project managers run standups, estimate tasks and chase clients.",
+      "The commercial facts live elsewhere. The fixed price was quoted on a call and a spreadsheet. Change requests are chat messages. Client dependencies, such as content, designs and access, are tracked by whoever remembers. Timesheets are filled on Friday from memory. The founder holds the project margins in their head.",
+      "So the agency finds out late. A fixed-price project that has used 85% of its budget at 50% of its scope. A change that was agreed in a call and never priced. A sprint that failed because the client's API access arrived late, with the team blamed. A client invoice disputed because the hours do not match the sprint. General project data shows how common this is: PMI's 2018 Pulse of the Profession reported scope creep or uncontrolled change on 52% of projects."
     ],
+    "stack": [
+      "Task board per project",
+      "Git hosting",
+      "Chat groups with clients",
+      "Timesheet tool or spreadsheet",
+      "Quotation and invoice sheets"
+    ],
+    "stackNote": "Each tool is fine for its job. Nothing joins the estimate, the change, the sprint, the hours and the invoice."
   },
-
-  terminology: [
-    ['Projects, phases, sprints, milestones', 'Work'],
-    ['Clients, product owners, stakeholders', 'Relationships'],
-    ['Estimates, change requests, acceptance', 'Workflows'],
-    ['Developers, designers, QA, leads', 'People'],
-    ['Specifications, contracts, acceptance criteria', 'Records'],
-    ['Teams, practices, offices', 'Locations'],
-    ['Warranty, support, maintenance', 'Control'],
+  "painsHeading": "Where a software agency actually loses money.",
+  "painsLede": "These are the situations founders, delivery heads and project managers describe again and again. For each one: what it looks like, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Fixed price",
+      "title": "The fixed price was a guess",
+      "scene": "A client wants an app \"like the one on the Play Store\". A 200-hour estimate is made on a call and rounded up by 20%. The fixed price goes out the same afternoon. Nobody records what was included.",
+      "cost": "A price set before the scope is known is the root of most overruns. Example arithmetic: if the real build is 330 hours and the cost is ₹1,000 an hour, the overrun is 130 hours, or ₹1.3 lakh, against a margin that was perhaps ₹1.5 lakh.",
+      "fix": "Every project starts from a scope list with an estimate per item and the assumptions behind them. The fixed price is tied to that list. Anything outside it is, by definition, a change.",
+      "screen": "budget"
+    },
+    {
+      "area": "Fixed price",
+      "title": "Nobody sees the budget burning",
+      "scene": "A project has a 1,000-hour budget. Developers log time on Fridays. The project manager sees the total at month end and finds it at 880 hours with half the features done.",
+      "cost": "By the time it is visible, little can be done. A trade guide for agencies says that by the time a fixed-price project is noticed running hot, it is usually well past the middle with much still to deliver.",
+      "fix": "Hours are logged against the project and scope item as work happens. Verity shows hours used against the budget next to the share of scope delivered, so a project that is burning faster than it delivers is flagged weekly to the delivery head.",
+      "screen": "budget"
+    },
+    {
+      "area": "Scope",
+      "title": "Changes agreed in chat and never priced",
+      "scene": "A client asks on a call for a new report and a second login role. The account manager says \"sure, we'll see\". It goes into the sprint without a ticket for the change.",
+      "cost": "Each small yes is unpaid work. PMI's 2018 Pulse of the Profession found scope creep or uncontrolled change on 52% of the projects it surveyed.",
+      "fix": "Any request outside the scope list becomes a change request with an estimate, a price and a client approver. Work on it does not start until it is approved, or until the delivery head accepts it as a free gesture, which is recorded.",
+      "screen": "scope",
+      "source": {
+        "name": "Online PM Courses on PMI Pulse of the Profession, 2018",
+        "url": "https://onlinepmcourses.com/success-disruptive-times-pmi-pulse-profession/"
+      }
+    },
+    {
+      "area": "Scope",
+      "title": "Bug fixes and new features blur together",
+      "scene": "The warranty period ends in 30 days. The client raises 14 items. Seven are real defects, five are new features, two are \"it should work like this\" opinions.",
+      "cost": "New work gets done free under the label of a bug fix, and a real defect gets argued about.",
+      "fix": "Every item raised after delivery is classified as defect, change or support. The warranty end date is on the project, and anything classed as a change goes to the change request flow.",
+      "screen": "scope"
+    },
+    {
+      "area": "Sprints",
+      "title": "The client's delay becomes your delay",
+      "scene": "The sprint needed the client's payment gateway keys on Monday. They came the following Thursday. The sprint is reported as missed, and the client asks why.",
+      "cost": "Idle days for developers on a fixed-price project are paid for by the agency, and the client's delay goes unrecorded.",
+      "fix": "Client dependencies, such as access, content, designs and decisions, are tracked with an owner on the client's side and a needed-by date. A late one is recorded with the days lost, so the plan is changed and the delay is on the record.",
+      "screen": "sprints"
+    },
+    {
+      "area": "Sprints",
+      "title": "Sprint carry-over with no explanation",
+      "scene": "Six of fourteen stories carry over to the next sprint. The retro says \"estimates were off\". Nobody can tell whether it was scope, dependencies, sickness, or a production issue.",
+      "cost": "Repeating the same causes means repeating the same slips.",
+      "fix": "Each story that carries over records a reason from a short list: estimate, client dependency, defect, change, absence or other. The delivery head sees the causes across projects over the last several sprints.",
+      "screen": "sprints"
+    },
+    {
+      "area": "Sprints",
+      "title": "One developer, two sprints, no one counted",
+      "scene": "A senior developer is assigned to two sprints at 100% each. A third client calls her for an urgent fix. She works late, delivers all three late and resigns.",
+      "cost": "Overloading the best developer loses the project and then the person.",
+      "fix": "Allocation is shown by person, project and week with leave and holidays. Anyone above 100% is flagged to the delivery head, and the request for an urgent fix is logged against a project, not given verbally.",
+      "screen": "sprints"
+    },
+    {
+      "area": "Timesheets",
+      "title": "Timesheets filled on Friday from memory",
+      "scene": "At 6 pm on Friday, twelve developers fill in a week of hours. Most pick even numbers. Debugging for a client's issue goes in under another project.",
+      "cost": "Wrong data produces wrong margins and disputes over the invoice. Example arithmetic: 10% of hours booked to the wrong project on 12 projects can hide a ₹3 to 4 lakh loss on one of them.",
+      "fix": "Time is logged from the task, with project and scope item already filled, during or just after the work. Weekly approval by the project manager closes the week.",
+      "screen": "timesheets"
+    },
+    {
+      "area": "Timesheets",
+      "title": "Non-billable time is invisible",
+      "scene": "Pre-sales calls, code reviews for other teams, hiring interviews and environment fixes take about a fifth of the senior team's week. None of it is logged.",
+      "cost": "Hourly rates are set as if all hours were billable, so the company is quietly underpriced.",
+      "fix": "Non-billable categories such as pre-sales, internal tools and hiring are logged like projects. Verity shows billable and non-billable hours by person and week, giving the true utilisation to price against.",
+      "screen": "timesheets"
+    },
+    {
+      "area": "Timesheets",
+      "title": "Time-and-material invoices that the client questions",
+      "scene": "The monthly invoice lists 640 hours. The client's manager asks what was done in week two. The project manager reconstructs it from commit messages.",
+      "cost": "Weeks of delay on a payment and a weaker relationship.",
+      "fix": "Approved hours carry the task or scope item they were spent on. The invoice summary your finance team prepares comes from approved hours by person, rate and task, so the answer is already on the record.",
+      "screen": "timesheets"
+    },
+    {
+      "area": "Handover",
+      "title": "Code, repositories and credentials in one person's name",
+      "scene": "The client's cloud account, the app store login and the production database password are held by one developer. She leaves, and a hotfix cannot be deployed.",
+      "cost": "A delayed fix on a live system and an awkward call to the client.",
+      "fix": "Each project lists the accounts, repositories and environments, the person who holds admin access, a backup holder and the last review date. A resignation creates a handover task for each item.",
+      "screen": "handover"
+    },
+    {
+      "area": "Handover",
+      "title": "Who owns the code was never written down",
+      "scene": "A client has paid in full and wants the source code and the right to host and modify it. The agreement says only \"development services\". A freelancer wrote a core module.",
+      "cost": "Under the Copyright Act, an assignment must be in writing, and if it does not state a period it is generally taken as five years, and if it does not state a territory, India only. Disputes at handover are costly and slow down payment.",
+      "fix": "Each project has an ownership record: the agreement with the client, agreements with every freelancer, what rights were assigned and for how long, and the licences of third-party components. A project cannot be marked handed over without it.",
+      "screen": "handover",
+      "source": {
+        "name": "Copyright Act 1957, Section 19, Advocatekhoj",
+        "url": "https://www.advocatekhoj.com/library/bareacts/copyright/19.php"
+      }
+    },
+    {
+      "area": "Handover",
+      "title": "Real customer data in test environments",
+      "scene": "To reproduce a bug, a developer copies a client's production database to a laptop. It stays there for four months after the project ends.",
+      "cost": "The DPDP Rules, notified in November 2025, set duties on those who process personal data, including security safeguards, breach reporting and deletion on the controller's instruction. Most duties start about 18 months after publication.",
+      "fix": "Each project records which environments hold client data, who has access, and a deletion date. A project that closes creates tasks to remove copies and access, with a sign-off from the delivery head.",
+      "screen": "handover",
+      "source": {
+        "name": "Scconline on DPDP Rules 2025",
+        "url": "https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Cash: milestone payments, foreign clients and tax on fees",
+      "scene": "A US client pays 60 days after invoice. A domestic client deducts tax on fees and sends the certificate months later. A freelancer developer is owed money that is overdue.",
+      "cost": "Cash gaps are bridged by the agency. Where a micro or small vendor is paid after the allowed period, Section 43B(h) generally disallows the expense until it is paid; the limit is 45 days from acceptance.",
+      "fix": "Project billing events and vendor bills are records with dates and states. Verity lists what is due from clients and to vendors, by age. Your accountant handles tax deducted, certificates and foreign receipts; the records are ready.",
+      "screen": "owner",
+      "source": {
+        "name": "TaxGuru on Section 43B(h)",
+        "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+      }
+    }
   ],
-
-  challengesHeading: 'The estimate is the product and nobody grades it.',
-  challengesLede:
-    'Agency difficulties come from quoting against estimates that are never compared with what actually happened.',
-  challenges: [
+  "factsHeading": "The numbers behind these problems.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The scope creep figure is for projects in general, not only software, and was seen through a secondary summary. Nasscom figures are as reported by PTI. No Indian survey on fixed-price overruns in software agencies was found, so those pains use labelled example arithmetic.",
+  "facts": [
     {
-      problem: 'Estimates are never compared with actuals',
-      detail:
-        'Effort is tracked loosely, so the agency cannot say which categories of work it systematically under-quotes.',
-      outcome:
-        'Actual effort is recorded against the estimate at the level it was made, so estimating improves from evidence.',
+      "figure": "52%",
+      "text": "of projects experienced scope creep or uncontrolled change, in PMI's 2018 Pulse of the Profession, as summarised by a project management course site. This is across industries.",
+      "source": {
+        "name": "Online PM Courses on PMI, 2018",
+        "url": "https://onlinepmcourses.com/success-disruptive-times-pmi-pulse-profession/"
+      }
     },
     {
-      problem: 'Change requests are not raised',
-      detail:
-        'Out-of-scope work is built because the request seemed small, and the effort disappears into the fixed price.',
-      outcome:
-        'Out-of-scope work is identified against the specification and raised as a change request with effort attached.',
+      "figure": "USD 149 billion",
+      "text": "Nasscom's FY26 estimate for core IT services in India, in an industry where revenue grew 6.1% and headcount 2.3%.",
+      "source": {
+        "name": "ETV Bharat on Nasscom, 2026",
+        "url": "https://www.etvbharat.com/en/business/india-fy26-tech-revenues-hit-usd-315-billion-enn26022404879"
+      }
     },
     {
-      problem: 'Acceptance blocks billing indefinitely',
-      detail:
-        'Delivered milestones await client sign-off with nobody chasing, while the agency funds the following phase.',
-      outcome:
-        'Acceptance is a workflow step with an age and an owner, so unaccepted milestones are chased as a cash matter.',
+      "figure": "5 years",
+      "text": "the period for which an assignment of copyright is generally taken to last when none is stated, and India alone when no territory is stated. It must be in writing.",
+      "source": {
+        "name": "Copyright Act 1957, Section 19, Advocatekhoj",
+        "url": "https://www.advocatekhoj.com/library/bareacts/copyright/19.php"
+      }
     },
     {
-      problem: 'Warranty work is unbudgeted and invisible',
-      detail:
-        'Post-delivery fixes are owed under contract and delivered by developers who were allocated to new work.',
-      outcome:
-        'Warranty work is recorded against the delivered project, so its true cost and its effect on capacity are visible.',
-    },
-    {
-      problem: 'Developers are committed twice',
-      detail:
-        'Two projects plan against the same person’s full availability, and the conflict surfaces at sprint start.',
-      outcome:
-        'Allocation is recorded against people and periods, so overlap is visible when the second commitment is made.',
-    },
-    {
-      problem: 'Acceptance criteria are informal',
-      detail:
-        'What "done" means is agreed in conversation, so acceptance becomes a negotiation rather than a check.',
-      outcome:
-        'Acceptance criteria are recorded with the milestone, so acceptance is a verification against something written.',
-    },
+      "figure": "10% or 2%",
+      "text": "the usual TDS rates on professional and technical service fees respectively, above ₹50,000 a year, so how a client treats your fees affects your cash.",
+      "source": {
+        "name": "ClearTax on Section 194J",
+        "url": "https://cleartax.in/s/section-194j"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system across estimates, delivery, change and warranty.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your agency's own language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Projects, phases, sprints and milestones',
-      line:
-        'Each is work with a client, an estimate, allocated people, acceptance criteria, actual effort and a state.',
-      why:
-        'The estimate and the actual have to sit on the same record or the comparison never happens.',
-      example:
-        'Five projects past estimate by six hundred and forty hours with no change request raised.',
+      "id": "owner",
+      "title": "Agency / This week",
+      "meta": "All projects",
+      "heading": "The founder's morning view",
+      "caption": "Fixed-price projects burning ahead of delivery, change requests waiting, utilisation and what clients owe, on one screen. It replaces the Monday project review.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Fixed-price at risk",
+              "value": "3 of 9",
+              "note": "burn ahead of scope"
+            },
+            {
+              "label": "Change requests open",
+              "value": "11",
+              "note": "₹6.4 L unpriced"
+            },
+            {
+              "label": "Billable utilisation",
+              "value": "71%",
+              "note": "target 78%"
+            },
+            {
+              "label": "Owed by clients",
+              "value": "₹34 L",
+              "note": "₹12 L past 45 days"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Budget used against scope delivered, fixed-price projects"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Ledgerly app: budget used",
+              "value": 88,
+              "display": "880 of 1,000 h",
+              "tone": "muted"
+            },
+            {
+              "label": "Ledgerly app: scope done",
+              "value": 52,
+              "display": "52%"
+            },
+            {
+              "label": "HealthPlus portal: budget",
+              "value": 47,
+              "display": "376 of 800 h"
+            },
+            {
+              "label": "HealthPlus portal: scope",
+              "value": 50,
+              "display": "50%"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Ledgerly app has used 88% of its budget with 52% of scope delivered. 4 change requests are unpriced.",
+          "action": "Review project"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Gateway keys, Ledgerly",
+              "meta": "Client dependency, needed 13 Oct, 6 days late",
+              "tag": [
+                "Chase",
+                "late",
+                "Received",
+                "ok"
+              ]
+            },
+            {
+              "name": "Developer Nisha at 140% across 2 sprints",
+              "meta": "Ledgerly and HealthPlus",
+              "tag": [
+                "Over",
+                "flag",
+                "Rebalanced",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Estimates, change requests and acceptance',
-      line:
-        'Estimation, scope change, milestone delivery, acceptance and warranty claims move through defined steps with recorded decisions.',
-      why:
-        'These are the commercial gates, and the two that matter most — change and acceptance — are usually conversations.',
-      example:
-        'A change request raised with effort attached rather than absorbed into the fixed price.',
+      "id": "budget",
+      "title": "Fixed-price projects",
+      "meta": "Ledgerly app",
+      "heading": "Estimate, budget burn and what is left",
+      "caption": "The scope list with estimates, hours used per item and the share delivered. The budget line moves with approved change requests only.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Scope item",
+            "Estimate",
+            "Used",
+            "Delivered",
+            "Variance",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Login and roles",
+              "80 h",
+              "94 h",
+              "100%",
+              "+14 h",
+              [
+                "Done",
+                "ok"
+              ]
+            ],
+            [
+              "Ledger screens",
+              "240 h",
+              "310 h",
+              "70%",
+              "+70 h",
+              [
+                "Over",
+                "late"
+              ]
+            ],
+            [
+              "Reports",
+              "160 h",
+              "120 h",
+              "35%",
+              "-40 h",
+              [
+                "On track",
+                "info"
+              ]
+            ],
+            [
+              "Payments",
+              "120 h",
+              "140 h",
+              "20%",
+              "Forecast +80 h",
+              [
+                "At risk",
+                "flag",
+                "Replanned",
+                "ok"
+              ]
+            ],
+            [
+              "Admin panel",
+              "100 h",
+              "30 h",
+              "0%",
+              "n/a",
+              [
+                "Not started",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "At the current pace the project needs about 1,380 hours against 1,000 budgeted.",
+          "action": "Plan response"
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Developers, designers, QA and leads',
-      line:
-        'The team is modelled once with skills and availability, and every allocation, task and warranty fix shows who owns it.',
-      why:
-        'Allocation is the constraint, and warranty work silently consumes it.',
-      example:
-        'A developer effectively full time on warranty across eleven delivered projects.',
+      "id": "scope",
+      "title": "Scope and changes",
+      "meta": "All open items",
+      "heading": "Change requests and defects, kept apart",
+      "caption": "Every request after kick-off is a defect, a change or support. Changes carry an estimate, a price and a client approver. Defects are checked against the warranty end date.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Request",
+            "Project",
+            "Type",
+            "Estimate",
+            "Client approver",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Second login role",
+              "Ledgerly",
+              "Change",
+              "24 h, ₹36,000",
+              "Rahul Mehta",
+              [
+                "Quote sent",
+                "info",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "New report",
+              "Ledgerly",
+              "Change",
+              "40 h, ₹60,000",
+              "Rahul Mehta",
+              [
+                "Not priced",
+                "late",
+                "Quoted",
+                "ok"
+              ]
+            ],
+            [
+              "Page crashes on save",
+              "HealthPlus",
+              "Defect",
+              "6 h",
+              "n/a",
+              [
+                "In warranty",
+                "ok"
+              ]
+            ],
+            [
+              "Export to Excel",
+              "HealthPlus",
+              "Change",
+              "16 h, ₹24,000",
+              "Dr Anita Rao",
+              [
+                "Declined",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "HealthPlus portal",
+          "sub": "Warranty ends 14 Nov",
+          "fields": [
+            [
+              "Raised after delivery",
+              "14 items"
+            ],
+            [
+              "Defects",
+              "7"
+            ],
+            [
+              "Changes",
+              "5"
+            ],
+            [
+              "Support questions",
+              "2"
+            ]
+          ],
+          "timeline": [
+            [
+              "30 Oct",
+              "Review items with client"
+            ],
+            [
+              "5 Nov",
+              "Changes quoted"
+            ],
+            [
+              "14 Nov",
+              "Warranty ends"
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients, product owners and stakeholders',
-      line:
-        'Clients are records with their projects, contracts, acceptance behaviour, change history and balances.',
-      why:
-        'Client acceptance speed and change behaviour are the two facts that most affect agency cash and margin.',
-      example:
-        'A client whose acceptance averages thirty-one days, visible before the next fixed-price quote.',
+      "id": "sprints",
+      "title": "Sprints",
+      "meta": "Current sprint and next two weeks",
+      "heading": "Sprint health, dependencies and who is loaded",
+      "caption": "Stories done and carried over with a reason, client dependencies with their needed-by dates, and each developer's allocation across sprints.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Dependency",
+            "Project",
+            "Client owner",
+            "Needed by",
+            "Days late",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Payment gateway keys",
+              "Ledgerly",
+              "Rahul Mehta",
+              "13 Oct",
+              "6",
+              [
+                "Late",
+                "late",
+                "Received",
+                "ok"
+              ]
+            ],
+            [
+              "Sample patient data",
+              "HealthPlus",
+              "Dr Anita Rao",
+              "20 Oct",
+              "0",
+              [
+                "Due",
+                "info"
+              ]
+            ],
+            [
+              "Brand assets",
+              "Ledgerly",
+              "Meera Kulkarni",
+              "18 Oct",
+              "2",
+              [
+                "Late",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Carry-over: client dependency",
+              "value": 50,
+              "display": "3 stories"
+            },
+            {
+              "label": "Carry-over: estimate",
+              "value": 33,
+              "display": "2 stories",
+              "tone": "muted"
+            },
+            {
+              "label": "Carry-over: defect",
+              "value": 17,
+              "display": "1 story",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Developer",
+            "This week",
+            "Projects",
+            "Leave",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Nisha",
+              "140%",
+              "Ledgerly, HealthPlus",
+              "None",
+              [
+                "Over",
+                "late",
+                "Rebalanced",
+                "ok"
+              ]
+            ],
+            [
+              "Arun",
+              "90%",
+              "Ledgerly",
+              "19 Oct",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Specifications, contracts and acceptance criteria',
-      line:
-        'Specifications, contracts and acceptance criteria attach to the project and milestone with versions retained.',
-      why:
-        'Scope disputes and acceptance disputes both resolve to what was written down.',
-      example:
-        'The acceptance criteria for a milestone, referenced when the client raises a new expectation.',
+      "id": "timesheets",
+      "title": "Timesheets",
+      "meta": "This week",
+      "heading": "Hours as they happen, billable or not",
+      "caption": "Hours logged from the task against project and scope item, approved by the project manager. Billable and non-billable time shown side by side.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Developer",
+            "Billable",
+            "Non-billable",
+            "Total",
+            "Approved",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Nisha",
+              "38 h",
+              "8 h",
+              "46 h",
+              "Yes",
+              [
+                "Over 45 h",
+                "flag"
+              ]
+            ],
+            [
+              "Arun",
+              "32 h",
+              "6 h",
+              "38 h",
+              "Yes",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Farhan",
+              "24 h",
+              "14 h",
+              "38 h",
+              "No",
+              [
+                "Pending",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Priya",
+              "30 h",
+              "4 h",
+              "34 h",
+              "Yes",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Billable",
+              "value": 71,
+              "display": "71%"
+            },
+            {
+              "label": "Pre-sales",
+              "value": 10,
+              "display": "10%",
+              "tone": "muted"
+            },
+            {
+              "label": "Code review and hiring",
+              "value": 12,
+              "display": "12%",
+              "tone": "muted"
+            },
+            {
+              "label": "Internal tools",
+              "value": 7,
+              "display": "7%",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'control',
-      title: 'Warranty, support and post-delivery obligation',
-      line:
-        'Warranty periods, obligations and the work delivered under them are recorded against the project, with one audit trail.',
-      why:
-        'Warranty is a contractual obligation that behaves like an unbudgeted support contract.',
-      example:
-        'Warranty effort recorded against the delivered project rather than absorbed into general capacity.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Estimation, margin and capacity reporting',
-      line:
-        'Estimate against actual by work type, change request recovery, acceptance lead times, warranty cost, allocation conflicts and project margin come from the operational records.',
-      why:
-        'An agency that cannot grade its estimates cannot improve the single number its business depends on.',
-      example:
-        'Estimate accuracy by work type, which is the most valuable report a fixed-price agency can have.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the delivery book a question',
-      line:
-        'Verity AI answers from your own project, effort, change and acceptance records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions worth asking are about overruns without change requests and cash blocked on acceptance.',
-      example:
-        '"Which projects are past estimate with no change request?" returns five with reviews assigned.',
-    },
-    {
-      id: 'communication',
-      title: 'Client decisions on the project',
-      line:
-        'Requests, approvals and clarifications attach to the project or milestone they concern.',
-      why:
-        'A scope decision taken in a call is the one disputed at acceptance.',
-      example:
-        'A client’s agreement to defer a feature, recorded on the milestone.',
-    },
-    {
-      id: 'locations',
-      title: 'Teams, practices and offices',
-      line:
-        'Organisational units roll into the agency, with allocation and reporting following the same structure.',
-      why:
-        'Estimation accuracy and margin vary by team, and only identical recording makes them comparable.',
-      example:
-        'Estimate accuracy and margin by team and practice.',
-    },
+      "id": "handover",
+      "title": "Handover and close",
+      "meta": "Projects closing in the next 60 days",
+      "heading": "Access, ownership and data to remove",
+      "caption": "For each project, who holds admin access, the ownership agreements, where client data sits and what must be removed at close.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Project",
+            "Admin holder",
+            "Backup",
+            "Ownership paper",
+            "Client data copies",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Ledgerly app",
+              "Nisha",
+              "None",
+              "Client agreement only",
+              [
+                "2 laptops",
+                "flag",
+                "Removed",
+                "ok"
+              ],
+              [
+                "Gap",
+                "late",
+                "Backup added",
+                "ok"
+              ]
+            ],
+            [
+              "HealthPlus portal",
+              "Arun",
+              "Priya",
+              "Freelancer agreement missing",
+              "1 test server",
+              [
+                "Gap",
+                "flag"
+              ]
+            ],
+            [
+              "Retail POS app",
+              "Priya",
+              "Arun",
+              "Complete",
+              "None",
+              [
+                "Ready",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Freelancer agreement for reports module",
+              "meta": "Period and territory stated",
+              "done": false
+            },
+            {
+              "text": "Delete HealthPlus test data",
+              "meta": "Due when project closes, 14 Nov",
+              "done": false
+            },
+            {
+              "text": "Third-party licences listed, Retail POS",
+              "meta": "Reviewed by Arun",
+              "done": true
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'Estimate, build, change, accept.',
-  workflowsLede:
-    'These already happen. Recorded together, the estimate finally gets graded.',
-  workflows: [
+  "dayHeading": "The same Wednesday, before and after.",
+  "dayLede": "What changes is not the code. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Estimate to signed project',
-      steps: [
-        'Requirement recorded with the client',
-        'Estimate prepared by work type against historical actuals',
-        'Team availability checked for the delivery window',
-        'Proposal issued with milestones and acceptance criteria',
-        'Contract signed with warranty terms recorded',
-        'Allocation committed against the plan',
-      ],
-      note:
-        'Estimating from historical actuals by work type is the difference between an estimate and a hope.',
+      "time": "9:30",
+      "before": "The delivery head asks each project manager how their sprint is going.",
+      "after": "The sprints view shows two dependencies late, three stories at risk and one developer over 100%."
     },
     {
-      name: 'Delivery and effort',
-      steps: [
-        'Work allocated to people against the estimate',
-        'Effort recorded against the estimated items',
-        'Variance surfaced as it accumulates',
-        'Estimate accuracy captured at completion by work type',
-        'Learnings fed into the estimation baseline',
-      ],
-      note:
-        'The comparison has to be at the level the estimate was made, or it teaches nothing.',
+      "time": "11:00",
+      "before": "A client asks for \"one more report\" on a call. The account manager says yes.",
+      "after": "The request is logged as a change with an estimate, and goes to the client approver for a price."
     },
     {
-      name: 'Change request',
-      steps: [
-        'Request identified as outside the specification',
-        'Effort estimated and impact on the schedule assessed',
-        'Change request raised with cost and time',
-        'Client approval recorded, or a decision to absorb recorded',
-        'Estimate and schedule updated accordingly',
-      ],
-      note:
-        'Absorbing scope becomes a recorded decision rather than the default behaviour of a helpful team.',
+      "time": "1:00",
+      "before": "The team waits for payment gateway keys that were promised last week.",
+      "after": "The dependency was flagged six days ago with the client contact named, and the delay is on the record."
     },
     {
-      name: 'Milestone acceptance',
-      steps: [
-        'Milestone delivered against its acceptance criteria',
-        'Acceptance requested with the criteria attached',
-        'Age tracked against the client’s acceptance behaviour',
-        'Reminders and escalation issued',
-        'Acceptance recorded and billing released',
-      ],
-      note:
-        'Unaccepted milestones are a cash problem, and they are usually treated as a delivery detail.',
+      "time": "3:30",
+      "before": "A developer fixes a client \"bug\" that is really a new feature.",
+      "after": "The item was classed as a change, so it waits for a quote."
     },
     {
-      name: 'Warranty period',
-      steps: [
-        'Warranty period recorded at delivery with its obligations',
-        'Defects raised and classified as warranty or new work',
-        'Warranty effort recorded against the delivered project',
-        'New work identified and quoted separately',
-        'Warranty cost reported per project and per client',
-      ],
-      note:
-        'Classifying a defect as warranty or new work at the point it is raised is what keeps warranty bounded.',
+      "time": "6:00",
+      "before": "Developers log the day's hours at the end of the week.",
+      "after": "Hours were logged from the task as work happened, against the scope item."
     },
     {
-      name: 'Capacity and allocation',
-      steps: [
-        'Committed allocation aggregated by person and period',
-        'Warranty and support load included',
-        'New project plans checked against remaining availability',
-        'Conflicts flagged before commitment',
-        'Decisions recorded against the plan',
-      ],
-      note:
-        'Warranty is real allocation, and excluding it from capacity planning is why sprints start short.',
-    },
+      "time": "Month end",
+      "before": "Invoices are built from memory and disputed.",
+      "after": "Approved hours by task and delivered milestones are on the record, so finance prepares the invoice from them."
+    }
   ],
-
-  ai: {
-    heading: 'Ask how wrong the estimate was.',
-    lede:
-      'Verity AI reads the same project, effort, change and acceptance records the agency creates as it delivers. It answers from your own delivery book, respects permissions, and can turn an answer into reviews and chases.',
-    panelMeta: 'Grounded in your project records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which projects are past estimate with no change request raised?',
-      'What is estimate accuracy by work type?',
-      'Which milestones are delivered and unaccepted, and for how long?',
-      'How much developer time is going to warranty work?',
-      'Where are developers committed to overlapping periods?',
-      'Which clients accept slowest and request the most changes?',
-      'What is margin by project and by team?',
-      'Which change requests were absorbed rather than charged?',
-      'Summarise delivery risk and blocked billing.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We follow a project from quote to invoice, build Verity around how your scope, sprints and hours really move, bring in your data, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Trace one fixed-price project and one time-and-material project from quote to invoice. Sit in a sprint planning and a change discussion. Note where scope, hours and money stop lining up.",
+        "you": "Two to three hours of yours and your delivery head's. Three recent quotes with their final invoices and hours.",
+        "get": "A written map of your agency: projects, pricing models, scope lists, sprint routine, timesheets and the first gaps we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up client and project records, scope lists, change request flow, dependency tracking, allocation, timesheet categories, handover records and the six screens in your own terms.",
+        "you": "Check the setup with a project manager and a senior developer. Tell us where a stage, category or rule is wrong.",
+        "get": "A working Verity with your real projects, pricing models and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in clients, active projects, scope lists, current allocations and recent hours from your sheets and tools. Train each role on its own screen using live projects.",
+        "you": "Your project list and timesheet export in whatever form they exist. One hour with each role.",
+        "get": "Your projects, scope and hours inside Verity, and a team that has run a real change request and a real sprint through it."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first month of budgets, changes and utilisation with you, tune the limits, and handle changes when you add a client, a team or a pricing model.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the agency runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Three recent quotes with scope and final invoice",
+      "A month of timesheets",
+      "Your list of active projects with pricing model",
+      "Client agreements, including any ownership terms",
+      "A list of accounts and repositories you hold for clients"
+    ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. Your delivery head needs a few more.",
+    "after": "Nobody is hired to run Verity. Scope, hours and dependencies are recorded as part of work the team already does, and views come from those records."
   },
-
-  automationHeading: 'The conversations that get avoided.',
-  automationLede:
-    'Each runs from the project records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your agency a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own project, scope, sprint and timesheet records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which fixed-price projects are burning faster than they are delivering?",
+        "a": "Three of nine. Ledgerly is the worst, at 88% of budget with 52% of scope done.",
+        "rows": [
+          [
+            "Ledgerly app",
+            "88% budget, 52% scope"
+          ],
+          [
+            "Retail POS",
+            "71% budget, 60% scope"
+          ],
+          [
+            "Pay Hub",
+            "66% budget, 55% scope"
+          ]
+        ],
+        "action": "Create review tasks for each project manager"
+      },
+      {
+        "q": "How many hours did we spend on unpriced changes last month?",
+        "a": "142 hours across five projects, worth about ₹2.1 lakh at your standard rate.",
+        "rows": [
+          [
+            "Ledgerly",
+            "64 h"
+          ],
+          [
+            "HealthPlus",
+            "38 h"
+          ],
+          [
+            "Retail POS",
+            "22 h"
+          ],
+          [
+            "Others",
+            "18 h"
+          ]
+        ],
+        "action": "Create quote tasks for the account managers"
+      },
+      {
+        "q": "Which projects have a single person holding all admin access?",
+        "a": "Four. Two of them close within 30 days.",
+        "action": "Create backup-holder tasks"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your team still talks to clients and developers; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'Effort passes a share of the estimate',
-      steps: [
-        'Project flagged with effort against estimate and remaining scope',
-        'Change request review assigned to the delivery lead',
-        'Decision recorded — raised or absorbed',
-      ],
+      "when": "A request outside the scope list is logged",
+      "then": [
+        "Classified as defect, change or support",
+        "Estimate task to the project manager",
+        "Held for client approval before work begins"
+      ]
     },
     {
-      trigger: 'A milestone is delivered',
-      steps: [
-        'Acceptance requested with criteria attached',
-        'Age tracked against the client’s acceptance history',
-        'Escalation raised with the blocked billing named',
-      ],
+      "when": "Hours used on a fixed-price project pass 75% of budget with less than 75% of scope delivered",
+      "then": [
+        "Delivery head alerted",
+        "Recovery options listed",
+        "Decision recorded on the project"
+      ]
     },
     {
-      trigger: 'A defect is raised after delivery',
-      steps: [
-        'Classified as warranty or new work against the specification',
-        'Warranty effort recorded against the project',
-        'New work quoted separately',
-      ],
+      "when": "A client dependency passes its needed-by date",
+      "then": [
+        "Flag on the sprint view",
+        "Task to the account manager to chase",
+        "Days lost recorded"
+      ]
     },
     {
-      trigger: 'A new project plan uses committed people',
-      steps: [
-        'Conflict flagged with both commitments named',
-        'Allocation decision raised before signing',
-        'Outcome recorded against the plan',
-      ],
+      "when": "A developer's allocation goes above 100%",
+      "then": [
+        "Flag to the delivery head",
+        "Clashing projects named",
+        "Rebalancing recorded"
+      ]
     },
     {
-      trigger: 'A project completes',
-      steps: [
-        'Estimate accuracy captured by work type',
-        'Margin calculated against contracted value',
-        'Learnings recorded into the estimation baseline',
-      ],
+      "when": "A project reaches its warranty end date",
+      "then": [
+        "Open defects listed",
+        "New items routed to the change flow",
+        "Closing checklist created"
+      ]
     },
     {
-      trigger: 'Warranty load exceeds its allowance',
-      steps: [
-        'Load flagged by project and client',
-        'Support contract or scope conversation raised',
-        'Capacity plan updated to include it',
-      ],
-    },
+      "when": "A project closes",
+      "then": [
+        "Tasks to remove client data copies and access",
+        "Ownership paper checked",
+        "Handover signed off by the delivery head"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the agency can actually see.',
-  intelligenceLede:
-    'Estimation quality and delivery economics from the projects themselves.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a software agency has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by situation. Confirm current requirements with your accountant or lawyer.",
+    "items": [
+      {
+        "name": "Copyright assignment (Copyright Act, 1957, Section 19)",
+        "what": "An assignment of rights in code must be in writing and signed. If it does not state a period, it is generally taken as five years, and if it does not state a territory, as India only. Rights not used within a year can lapse unless the assignment says otherwise.",
+        "how": "Each project has an ownership record covering client and freelancer agreements, period, territory and third-party licences.",
+        "source": {
+          "name": "Advocatekhoj, bare act",
+          "url": "https://www.advocatekhoj.com/library/bareacts/copyright/19.php"
+        }
+      },
+      {
+        "name": "Digital Personal Data Protection Rules, 2025",
+        "what": "Notified on 14 November 2025. Most duties, such as security safeguards, breach reporting and retention, generally apply 18 months after publication. Processors follow the controller's instructions, including on deletion.",
+        "how": "Each project records which environments hold client data, who can access them and when they must be removed.",
+        "source": {
+          "name": "Scconline",
+          "url": "https://www.scconline.com/blog/post/2025/12/26/digital-personal-data-protection-rules-2025-key-highlights/"
+        }
+      },
+      {
+        "name": "MSME payment terms and Section 43B(h)",
+        "what": "Amounts owed to micro and small suppliers beyond the allowed period, which cannot exceed 45 days from acceptance, are generally disallowed as a deduction until paid, from AY 2024-25. Medium enterprises are excluded.",
+        "how": "Vendor and freelancer bills carry acceptance date, registration status and due date.",
+        "source": {
+          "name": "TaxGuru",
+          "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+        }
+      },
+      {
+        "name": "GST, TDS and foreign receipts",
+        "what": "Clients may deduct tax on your fees as professional or technical, and invoices to clients outside India follow separate GST and RBI rules for receiving payment, which have been changing. Your accountant and bank decide and file.",
+        "how": "Each billing event records client, country, amount, date and payment state.",
+        "source": {
+          "name": "ClearTax on Section 194J",
+          "url": "https://cleartax.in/s/section-194j"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A developer should not see everyone's rates. A client contact should not see another client's project. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Estimation',
-      points: [
-        'Estimate against actual by work type',
-        'Systematic under-estimation by category',
-        'Estimate accuracy by team and estimator',
-        'Baseline improvement over time',
-      ],
+      "role": "Founder",
+      "question": "Which projects make money and which are at risk?",
+      "sees": "Budget against scope, change requests, utilisation, receivables and client risk."
     },
     {
-      area: 'Scope',
-      points: [
-        'Change requests raised, approved and absorbed',
-        'Out-of-scope effort by project and client',
-        'Scope disputes and their resolution',
-        'Recovery rate on change requests',
-      ],
+      "role": "Delivery head",
+      "question": "Who is loaded, what is blocked, what is over?",
+      "sees": "Allocation, sprints, dependencies, change requests and warranty dates."
     },
     {
-      area: 'Cash',
-      points: [
-        'Milestones delivered and unaccepted',
-        'Acceptance lead time by client',
-        'Billing blocked by acceptance',
-        'Balances outstanding with ageing',
-      ],
+      "role": "Project manager",
+      "question": "Where is my project against its budget?",
+      "sees": "Scope list, hours used, carry-over reasons, client dependencies and change requests."
     },
     {
-      area: 'Capacity',
-      points: [
-        'Allocation by person and period',
-        'Warranty load against new work',
-        'Conflicts and overcommitment',
-        'Utilisation by team and practice',
-      ],
+      "role": "Developer",
+      "question": "What do I work on and what do I log?",
+      "sees": "Own tasks, the project scope, own timesheet and own allocation."
     },
     {
-      area: 'Margin',
-      points: [
-        'Project margin against contracted value',
-        'Margin by work type and team',
-        'Warranty cost by project and client',
-        'Client profitability across projects',
-      ],
-    },
+      "role": "Finance lead",
+      "question": "What can I invoice and what do I owe?",
+      "sees": "Approved hours, delivered milestones, approved changes and vendor bills."
+    }
   ],
-  intelligenceNote:
-    'Verity records delivery and commercial data. Your issue tracker, repositories and deployment tooling continue as they are.',
-
-  rolesHeading: 'One agency, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
-  roles: [
-    {
-      role: 'Founder',
-      question: 'Are we estimating and pricing correctly?',
-      focus: 'Estimate accuracy by work type, project margin, change request recovery, warranty cost.',
-    },
-    {
-      role: 'Delivery lead',
-      question: 'What is running over and why?',
-      focus: 'Effort against estimate, out-of-scope work, milestones unaccepted, allocation conflicts.',
-    },
-    {
-      role: 'Project manager',
-      question: 'Is this project on plan?',
-      focus: 'Effort against estimate, change requests outstanding, acceptance criteria, team allocation.',
-    },
-    {
-      role: 'Developer',
-      question: 'What am I on and what is in scope?',
-      focus: 'Assigned work with estimates, specification and acceptance criteria, warranty items, effort to record.',
-    },
-    {
-      role: 'Finance',
-      question: 'What can we bill?',
-      focus: 'Milestones accepted and unaccepted, change requests approved, balances ageing, warranty cost.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your repositories and sprint boards, where developers work. We agree during setup how tasks and hours reach Verity.",
+      "Your chat and email with clients. Your team replies",
+      "Verity tracks who owes a reply.",
+      "Your accounts package, which still raises invoices and files returns.",
+      "Your cloud accounts and build tools, which Verity does not touch."
+    ],
+    "not": [
+      "Write, review or deploy code.",
+      "Send invoices, reminders or messages to clients on its own.",
+      "Run your payroll or file your returns.",
+      "Draft client contracts or give legal advice on code ownership."
+    ],
+    "migration": "We bring clients, active projects, scope lists, allocations, recent hours and handover details across from your sheets and tools, in stages, so sprints keep running while it happens."
+  },
+  "faqHeading": "Questions software agency owners ask.",
+  "faqs": [
+    [
+      "My developers hate timesheets. Will they use it?",
+      "Only if it is quick. Time is logged from the task, with the project and scope item already filled. We start with billable work and add other categories only where you need the answer."
+    ],
+    [
+      "We already use a sprint board. Why add this?",
+      "A board knows tasks. It does not know the fixed price, the change requests, the client's dependencies or the budget. We agree during setup how tasks reach Verity, or you move them."
+    ],
+    [
+      "How does it show a fixed-price overrun early?",
+      "Each project has a scope list with estimates. Hours are logged against scope items and compared with the share delivered, so the burn is visible weekly instead of at month end."
+    ],
+    [
+      "What if a client changes scope in a chat?",
+      "The account manager logs it as a change request with an estimate. It waits for a client approver before work begins, or the delivery head records it as a free gesture."
+    ],
+    [
+      "Does it write or review code?",
+      "No. It does not touch your code or repositories. It records the project, scope, people and hours around them."
+    ],
+    [
+      "Can it handle support retainers and time-and-material together?",
+      "Yes. Retainers have hours included and used, time-and-material has approved hours by person and rate, and fixed-price has scope and budget. Each is set up in your terms."
+    ],
+    [
+      "Can clients see progress?",
+      "Only if you want them to. By default your team uses Verity and clients keep replying the way they do now. A client view can be agreed during setup."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role and project, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of people, projects and what you want set up. Message us and we will give you a clear number after a short conversation about how your agency runs."
+    ]
   ],
-
-  useCasesHeading: 'What software agencies use Verity for',
-  useCases: [
-    {
-      name: 'Estimate against actual',
-      body: 'Effort recorded at the level the estimate was made, so the agency learns which work types it systematically under-quotes.',
-    },
-    {
-      name: 'Change request discipline',
-      body: 'Out-of-scope work raised as a change request with effort attached, so absorbing scope is a decision rather than a habit.',
-    },
-    {
-      name: 'Acceptance as a cash process',
-      body: 'Delivered milestones aged against acceptance with escalation, since unaccepted work is blocked billing rather than a delivery detail.',
-    },
-    {
-      name: 'Warranty cost visibility',
-      body: 'Post-delivery fixes recorded against the project that owes them, exposing the agency’s most reliably underestimated cost.',
-    },
-    {
-      name: 'Allocation conflicts',
-      body: 'Commitments recorded by person and period including warranty load, so overlap surfaces before a sprint starts short.',
-    },
-    {
-      name: 'Acceptance criteria on the record',
-      body: 'What "done" means written against the milestone, so acceptance is a verification rather than a negotiation.',
-    },
-    {
-      name: 'Client behaviour',
-      body: 'Acceptance speed and change frequency recorded per client, informing the next fixed-price quote.',
-    },
-    {
-      name: 'Asking about delivery',
-      body: 'Plain-language questions across estimates, scope, acceptance and warranty, with reviews assigned in the same step.',
-    },
+  "related": [
+    "it-services-companies",
+    "app-developers",
+    "web-development-agencies",
+    "saas-companies",
+    "startups",
+    "ai-companies"
   ],
-
-  migration:
-    'Your issue tracker, repositories and deployment tooling continue to run and are mapped during implementation. Clients, active projects, estimates, milestones and warranty obligations are brought across, and Verity is introduced as the delivery and commercial layer.',
-
-  faqHeading: 'Questions agencies ask',
-  faqs: [
-    [
-      'Does Verity replace our issue tracker?',
-      'No. Your issue tracker, repositories and deployment tooling continue and are mapped during implementation. Verity holds the commercial and delivery record — estimates, actual effort, change requests, milestone acceptance, warranty obligations and allocation.',
-    ],
-    [
-      'What can AI software do for a software agency?',
-      'Verity AI answers questions from your own project, effort, change and acceptance records: which projects are past estimate with no change request, what estimate accuracy looks like by work type, which milestones are delivered and unaccepted, how much developer time is going to warranty. Each answer can become a review or a chase.',
-    ],
-    [
-      'How does it improve estimating?',
-      'Actual effort is recorded against the estimate at the level it was made, so the agency can see which categories of work it systematically under-quotes. For a fixed-price business that comparison is the single most valuable report available, and almost no agency produces it.',
-    ],
-    [
-      'Can it help with scope creep?',
-      'Out-of-scope work is identified against the recorded specification and raised as a change request with effort and schedule impact, so absorbing it becomes a deliberate, visible decision rather than the default behaviour of a helpful team.',
-    ],
-    [
-      'Why treat acceptance as a cash process?',
-      'Milestone-billed work cannot be invoiced until it is accepted, so unaccepted milestones are blocked cash while the agency funds the next phase. Ageing acceptance with escalation treats it as what it is.',
-    ],
-    [
-      'Does it track warranty work?',
-      'Warranty periods and obligations are recorded at delivery, defects are classified as warranty or new work when raised, and warranty effort is recorded against the project that owes it — which makes visible a cost most agencies carry without measuring.',
-    ],
-    [
-      'Can it prevent allocation conflicts?',
-      'Commitments are recorded by person and period, including warranty and support load, so a new project plan using already-committed people surfaces as a conflict before signing rather than at sprint start.',
-    ],
-    [
-      'Is it suitable for a small agency?',
-      'A ten-person agency carries the same estimation blind spot and the same warranty load, and a single overrunning fixed-price project is a much larger share of its year.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how work is estimated and delivered, configuration of work types and milestones, migration of clients and active projects, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start by grading your estimates.',
-  ctaLede:
-    'It is the number your business depends on and the one almost no agency measures. Tell us how effort is tracked today.',
-
-  related: ['it-services-companies', 'saas-companies', 'marketing-agencies', 'consulting-firms', 'startups', 'web-development-agencies'],
+  "ctaHeading": "Start with the fixed-price project that is burning.",
+  "ctaLede": "Tell us how your agency runs and we will show you the projects spending faster than they deliver, the changes nobody priced and the access held by one person, using your own numbers."
 };

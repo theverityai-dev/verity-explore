@@ -31,7 +31,7 @@ Sources (name | URL | year | verified | what it says):
 
 ## SEO
 
-- title: Gift shop software: festival stock, custom orders, corporate gifting | Verity
+- title: Gift shop software: festival stock and custom orders | Verity
 - description: The 15 quiet leaks in a gift shop, from festival stock that goes unsold to lost corporate quotes and forgotten custom orders, and the Verity screens that fix them.
 - keywords: gift shop management software India; gift shop inventory festival season; corporate gifting order tracking; custom gift order tracking; gift hamper costing software
 - plural: gift shops

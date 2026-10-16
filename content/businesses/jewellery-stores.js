@@ -1,579 +1,1142 @@
 export default {
-  slug: 'jewellery-stores',
-  status: 'published',
-  plural: 'jewellery stores',
-  subject: 'jewellery store',
-
-  seo: {
-    title: 'AI business management software for jewellery stores | Verity',
-    description:
-      'Verity connects jewellery stock, custom orders, karigar work, suppliers and high-value customers into one operational system you can ask questions of.',
-    keywords: [
-      'AI software for jewellery stores',
-      'jewellery store management software',
-      'jewellery inventory management software',
-      'CRM for jewellery stores',
-      'business software for jewellers',
-      'jewellery shop billing and stock software',
-    ],
+  "schema": 2,
+  "slug": "jewellery-stores",
+  "status": "published",
+  "plural": "jewellery stores",
+  "subject": "jewellery store",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Jewellery shop software for Indian jewellers | Verity",
+    "description": "Gold rate quotes, making charges, old gold exchange, hallmark records, savings schemes and karigar gold: the leaks in a jewellery shop and the screens that fix them.",
+    "keywords": [
+      "jewellery shop management software India",
+      "old gold exchange tracking",
+      "jewellery tag stock and HUID records",
+      "gold savings scheme tracking",
+      "karigar gold issue register"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for jewellery stores',
-    headline: 'A jewellery store is an inventory problem wearing a retail costume.',
-    lede:
-      'Most of your capital is sitting in a display case, a safe or a karigar’s workshop. Verity keeps every piece, every custom order, every supplier and every customer on one record, so you can see where the money is and what it is doing.',
-    note: 'Runs alongside what you already use. Nothing has to be replaced on day one.',
-    panel: {
-      title: 'Store',
-      meta: 'Main showroom · Today',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Stock value', value: '₹3.8 Cr', note: 'across 2,140 pieces' },
-        { label: 'Custom orders', value: '34', note: 'in the workshop' },
-        { label: 'Slow-moving', value: '₹62 L', note: 'no movement in 120 days' },
-        { label: 'Outstanding', value: '₹18.4 L', note: 'against 23 customers' },
-      ],
-      rows: [
-        { name: 'Bridal set BR-2214 promised for Thursday', meta: 'Karigar Ashok · polishing pending', active: true },
-        { name: 'Advance taken, design not confirmed', meta: '3 orders · oldest 11 days', active: true },
-        { name: 'Diamond ring stock below reorder point', meta: '0.5ct solitaire band · 2 left', active: true },
-        { name: 'Repair collected but not billed', meta: '6 jobs · since last week', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own records in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "schedule",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for jewellery stores",
+    "headline": "A jeweller sells gold by the gram. The profit hides in the milligrams and the minutes.",
+    "lede": "A jewellery shop holds lakhs of rupees in small, shiny, easy to lose things. Gold rate moves through the day, old gold comes in at a different purity from what the customer says, a piece goes to the karigar and comes back lighter, a scheme customer pays the tenth instalment and nobody remembers the first nine. Verity keeps one record for every piece, every gram and every customer, so the loss shows up while it is small.",
+    "oneLine": "One system that knows every tag, every gram with every karigar, every old gold exchange and every savings customer, and tells you what needs attention before the shop closes.",
+    "note": "Built for a counter that cannot stop to type. The records come from the weighing, valuing and handing over you already do.",
+    "screen": "owner",
+    "screenNote": "stock value, gold held outside, exchange, schemes and showrooms"
   },
-
-  overview: {
-    heading: 'Running a jewellery store means managing more than sales.',
-    paragraphs: [
-      'A jewellery business holds more value per square foot than almost any other kind of shop, and almost none of it is standardised. A piece has a design, a weight, a purity, a set of stones, a making charge, a supplier, a location and a history — and two pieces that look identical in a photograph can differ by forty thousand rupees. That is why generic retail software fails here: it was built for products with SKUs and fixed prices, and a jewellery store deals in individual items with individual stories.',
-      'Then there is the work that never touches the display case. Custom orders go out to karigars and come back weeks later. Old gold is exchanged and re-melted. Repairs, polishing and re-sizing arrive with a promise date attached and no paperwork. Approval sales go out on trust. Every one of those is inventory that has left the building without being sold, and in most stores the only record of it is a notebook entry and someone’s memory.',
-      'Customers behave differently too. A jewellery customer buys rarely and spends heavily, often for an occasion that was known about months in advance. The value of knowing that a family bought a bridal set in 2023 is not sentimental — it is that they have a younger daughter, and someone should be calling them. In most stores nobody does, because the purchase history is on a bill book.',
-      'Verity treats all of this as one operation. The piece, the custom order, the karigar, the supplier, the customer and the payment are records in the same system with one permission model and one history. Nothing has to be reconciled between systems, because there is only one.',
+  "today": {
+    "heading": "Most jewellery shops can say what the gold rate is. Fewer can say where every gram is right now.",
+    "paragraphs": [
+      "The showcase is easy to see. The ring at the front, the wedding set in the vault, the necklace on trial. What is hard to see is everything behind it: how many grams sit with karigars, what the old gold bought this month really assayed at, which designs have not moved in a year, and which scheme customers are due this week.",
+      "That information exists in pieces. The billing software knows what was sold. The stock register is a book or a sheet. Karigar issue slips are on paper. Scheme instalments are in a ledger. The owner, who is often also the buyer and the closer, holds the rest in memory.",
+      "Gold prices have been at record highs. The World Gold Council reported India's jewellery demand at 430.5 tonnes in 2025, down 24% from the year before. When fewer grams sell at a higher price, each gram of loss, each stuck design and each unpaid instalment matters more."
     ],
+    "stack": [
+      "Billing software at the counter",
+      "A stock register or Excel sheet",
+      "Paper issue and receipt slips for karigars",
+      "A scheme ledger or card",
+      "WhatsApp groups with customers and karigars"
+    ],
+    "stackNote": "Each one does its own job. None of them agree on how many grams you actually hold."
   },
-
-  terminology: [
-    ['Pieces, sets, collections', 'Records'],
-    ['Custom orders, repairs, polishing', 'Work'],
-    ['Customers, families, referrals', 'Relationships'],
-    ['Karigars, sales staff, showroom teams', 'People'],
-    ['Wholesalers, stone dealers, refiners', 'Suppliers'],
-    ['Approvals, advances, delivery promises', 'Workflows'],
-    ['Showroom, safe, workshop, exhibition', 'Locations'],
+  "painsHeading": "Where a jewellery shop actually loses money.",
+  "painsLede": "These are the situations jewellers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Pricing",
+      "title": "Quotes at yesterday's gold rate",
+      "scene": "The rate changed at 11 am. A customer was quoted at 10:30, comes back at 4 pm for a necklace and expects the old number. A new salesperson works from a rate that was updated twice on the counter board and once by phone.",
+      "cost": "Example arithmetic: on a 40 gram chain, a rate gap of ₹300 a gram is ₹12,000 given away or a sale lost. Over a month of small mismatches, that is real money with no name on it.",
+      "fix": "The day's rate is one record, changed by one person with the time stamped. Estimates take the rate and the making charge from it, and an estimate older than a limit you set is marked stale before it is turned into a sale.",
+      "screen": "pricing"
+    },
+    {
+      "area": "Pricing",
+      "title": "Making charges discounted at the counter with no trail",
+      "scene": "A regular asks for less on making. The salesperson says yes to keep the sale. Another customer, on the same design, gets a different number the next day.",
+      "cost": "Example arithmetic: on a ₹3 lakh sale with making at 12%, a two point discount is ₹6,000. Ten such sales a month is ₹60,000 that nobody approved.",
+      "fix": "Each estimate carries the making charge, the wastage and the discount asked. Above your limit it goes to the owner or manager for one tap approval with a reason, and the month's discounts are totalled by person and by design.",
+      "screen": "pricing"
+    },
+    {
+      "area": "Old gold",
+      "title": "Old gold exchange, with a purity dispute at the counter",
+      "scene": "A customer brings a chain and says it is 22 carat. The test says 20. Another brings broken pieces and wants a higher rate than the day's. The deduction for impurity and melting is argued out in the shop, and each salesperson settles it differently.",
+      "cost": "Old gold exchange is a growing share of how jewellers get gold, so each wrong purity call becomes a direct loss or an angry customer. Example arithmetic: 50 grams valued at 22 carat that tests at 20 carat is a gap of about 4 grams of fine gold, which at ₹8,000 a gram is ₹32,000.",
+      "fix": "Every exchange is a record: weight, test reading, agreed purity, rate used, deduction and who approved it. The customer's name and ID details sit on the record and the value is carried to the new bill as a credit.",
+      "screen": "exchange"
+    },
+    {
+      "area": "Old gold",
+      "title": "Old gold sits in a drawer and nobody can say what it is worth",
+      "scene": "Exchanged pieces collect in a tray. Some are melted, some are sent to a refiner, some are sold on. At month end the book says 600 grams of old gold, the tray says 540.",
+      "cost": "Gold with no record is gold that can leave unnoticed. Example arithmetic: 60 grams short at ₹8,000 a gram is ₹4.8 lakh.",
+      "fix": "Old gold lots are records with a status: received, held, sent to refiner, returned as fine gold. Verity compares what was received with what came back from the refiner and flags the shortfall by lot.",
+      "screen": "exchange"
+    },
+    {
+      "area": "Stock",
+      "title": "The tag stock never matches the book",
+      "scene": "Close of day. The sheet says 1,240 tagged pieces, the trays hold 1,236. Two are with a customer on approval and nobody noted it. One is a ring that was sold, billed, and still shows on the shelf list.",
+      "cost": "A piece missing is a loss of lakhs, and a daily reconcile that takes an hour from your best salesperson is an hour not spent selling.",
+      "fix": "Every piece is a record with its tag number, gross and net weight, and a state: in showcase, in vault, on approval, sold. Taking a piece out on approval is a two tap entry with the customer's name and a return time. The close-of-day count compares trays to the record and lists only the pieces that differ.",
+      "screen": "tagstock"
+    },
+    {
+      "area": "Compliance",
+      "title": "Hallmark and HUID records that do not match the piece",
+      "scene": "A bangle is billed as 22 carat but the HUID on the piece belongs to another item. A batch from the supplier arrives without the hallmark details written down. A customer checks the HUID on their phone and finds a mismatch.",
+      "cost": "Mandatory hallmarking has applied in 380 districts since 2 March 2026, and the Bureau of Indian Standards runs the HUID check for buyers. A mismatch is a complaint, a fine risk and a customer who tells others.",
+      "fix": "Each hallmarked piece stores its HUID, purity and tag. Verity flags pieces that show in stock without a HUID where one is required, and checks the HUID on the bill against the piece before the sale is closed.",
+      "screen": "tagstock",
+      "source": {
+        "name": "All India Radio News, Govt adds 7 more districts in 6th phase of mandatory gold hallmarking, 2026",
+        "url": "https://www.newsonair.gov.in/govt-adds-7-more-districts-in-6th-phase-of-mandatory-gold-hallmarking"
+      }
+    },
+    {
+      "area": "Stock",
+      "title": "Designs that sit for a year while the gold in them could be working",
+      "scene": "A heavy antique set was bought two years ago and still sits in the vault. A light daily wear range sold out in a month and you reordered late. Buying follows what the owner liked, not what sold.",
+      "cost": "Gold stuck in slow designs is cash that is not available and exposed to the rate. Example arithmetic: ₹25 lakh in designs that have not sold in 12 months, at an 8% yearly cost of money, is ₹2 lakh a year.",
+      "fix": "Sell-through by design, weight band and age is calculated from the tag records. The slow list shows what to melt, rework or discount, and the fast list shows what to restock before it runs out.",
+      "screen": "tagstock"
+    },
+    {
+      "area": "Karigars",
+      "title": "Gold goes to the karigar and comes back lighter",
+      "scene": "120 grams issued for a necklace. 112 grams of finished work returns, plus 4 grams of scrap. The slip says 3 grams allowed as wastage. The difference is argued from memory a month later.",
+      "cost": "Example arithmetic: a gap of 1 gram a job across 40 jobs a month is 40 grams, about ₹3.2 lakh at ₹8,000 a gram. Gold held by karigars that is not clearly on your books is also a problem when records are checked.",
+      "fix": "Each job records gold issued, finished weight, scrap returned and wastage allowed. Verity shows gold held by each karigar at any time and flags a job whose loss goes beyond the agreed wastage.",
+      "screen": "karigars"
+    },
+    {
+      "area": "Karigars",
+      "title": "Custom orders that miss the date",
+      "scene": "A bride's family orders a set for a wedding on 14 November. The design is approved on WhatsApp, the advance is in the book, the karigar is busy with another order. Nobody checks until the week before.",
+      "cost": "A missed wedding date is a lost customer and a story told to every relative. Advances taken with no tracking are also liabilities that are easy to forget.",
+      "fix": "Every order is a record with the design reference, weight estimate, advance, due date and the karigar. Orders at risk show on the board as the date nears, and the customer's fitting or pick up is a scheduled task.",
+      "screen": "karigars"
+    },
+    {
+      "area": "Schemes",
+      "title": "Savings scheme instalments on paper",
+      "scene": "A customer pays ₹5,000 a month for eleven months in a scheme ledger. One card is lost. Another customer says she paid in June. The bonus month is promised in different words by different staff.",
+      "cost": "A scheme is a promise and a liability. Disputes are costly in goodwill, and in the past, regulators have looked at such schemes. The rules for companies in this area were tightened as far back as 2014.",
+      "fix": "Each scheme member is a record with every instalment, the due date, the bonus rule and the maturity date. Verity lists members who missed an instalment, those who mature this month, and the total held against the scheme.",
+      "screen": "schemes",
+      "source": {
+        "name": "Moneylife, Jewellers winding down gold savings schemes, 2014",
+        "url": "https://moneylife.in/article/jewellers-winding-down-gold-savings-schemes/38095.html"
+      }
+    },
+    {
+      "area": "Customers",
+      "title": "Birthdays, anniversaries and regulars that nobody remembers",
+      "scene": "A family bought a mangalsutra five years ago. Their daughter is getting married. Nobody at the shop knows, and they go to the newer showroom across town.",
+      "cost": "Jewellery buying is tied to occasions and families. A shop that remembers wins the next purchase, and one that does not loses it quietly.",
+      "fix": "Customers carry family members, past purchases, important dates and the salesperson who knows them. Verity lists upcoming occasions and customers who have not visited past their usual gap, and gives the task to the right person. Staff make the call.",
+      "screen": "schemes"
+    },
+    {
+      "area": "Compliance",
+      "title": "Large cash sales and ID records scattered",
+      "scene": "A customer pays a large amount in cash for a set. The PAN is on a photocopy in one file, the Aadhaar number on a slip in another, and the exchange value in the billing software only.",
+      "cost": "Large cash dealings come with record and reporting duties, and the records are asked for when an officer or auditor visits. Hunting for them costs days.",
+      "fix": "Each large sale or exchange is linked to the customer record with the ID details and the payment mode. Verity flags sales above the limit you set so the right details are captured while the customer is still at the counter.",
+      "screen": "exchange"
+    },
+    {
+      "area": "Money",
+      "title": "Money locked in stock, loans and metal loans",
+      "scene": "Gold is up and the vault is worth more than last year, but the cash account is thin. A gold loan from the bank has an interest date. Some stock was bought on credit from a wholesaler with a due date.",
+      "cost": "Example arithmetic: ₹2 crore of stock funded at a 10% yearly cost is ₹20 lakh a year, whether or not the stock sells.",
+      "fix": "Stock value by design age, supplier payments due and loan dates sit on one screen. The owner sees how much money is tied up in slow stock against what is due in the next 30 days.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "More than one showroom and no common picture",
+      "scene": "The second showroom reports by phone at night. A piece moved between showrooms is on paper at one end and nowhere at the other. Salespeople at one showroom sell a design the other has more of.",
+      "cost": "Pieces in transit are the easiest to lose. Without side by side numbers, you cannot say which showroom earns more per gram of stock.",
+      "fix": "Showrooms are locations in one system. A transfer is a record that must be received at the other end. Sales, stock age, exchange and scheme numbers show side by side, and every morning a short list shows what needs a decision.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'The problems are not sales problems.',
-  challengesLede:
-    'Almost every difficulty in a jewellery store comes back to the same thing: high-value items whose location, state and ownership are recorded informally, if at all.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The hallmarking and demand figures come from a government broadcaster and press reports of World Gold Council data. The silver position is as of June 2026 and may change; confirm on the Bureau of Indian Standards website. The savings scheme source is from 2014.",
+  "facts": [
     {
-      problem: 'Stock is counted, not tracked',
-      detail:
-        'The annual or quarterly physical count tells you what you have. It does not tell you what moved, what has been sitting untouched for eight months, or which pieces have been out on approval since Diwali.',
-      outcome:
-        'Every piece is a record with a state and a location. Movement between showroom, safe, workshop and approval is a change on that record, not a note in a register.',
+      "figure": "380 districts",
+      "text": "covered by mandatory gold hallmarking after the sixth phase took effect on 2 March 2026. In those districts, hallmarked gold is mandatory for 14, 18, 20, 22, 23 and 24 karat.",
+      "source": {
+        "name": "All India Radio News, 2026",
+        "url": "https://www.newsonair.gov.in/govt-adds-7-more-districts-in-6th-phase-of-mandatory-gold-hallmarking"
+      }
     },
     {
-      problem: 'Custom orders live in a notebook',
-      detail:
-        'An advance is taken, a design is discussed, a karigar is briefed, a date is promised. None of that is in a system, so the only person who can answer "where is the Mehta order" is the person who took it.',
-      outcome:
-        'A custom order is work with an owner, a state and a promise date. Anyone in the store can see which stage it is at, and the order shows up as overdue before the customer notices.',
+      "figure": "60 crore+",
+      "text": "items hallmarked with a HUID since 2021, each one a piece a jeweller has to be able to match to a record.",
+      "source": {
+        "name": "All India Radio News, 2026",
+        "url": "https://www.newsonair.gov.in/govt-adds-7-more-districts-in-6th-phase-of-mandatory-gold-hallmarking"
+      }
     },
     {
-      problem: 'Slow-moving stock is discovered too late',
-      detail:
-        'Capital sits in designs that stopped selling two seasons ago, and it becomes obvious only when cash is needed for the wedding season and there is none.',
-      outcome:
-        'Movement is recorded, so ageing is a query rather than an audit. You can see what has not moved in ninety or a hundred and twenty days while there is still time to act on it.',
+      "figure": "24%",
+      "text": "fall in India's jewellery demand in 2025, to 430.5 tonnes from 563.4 tonnes, as record prices cut buying.",
+      "source": {
+        "name": "Outlook Money, citing World Gold Council, 2026",
+        "url": "https://www.outlookmoney.com/amp/story/news/record-high-prices-pull-india-gold-demand-down-11-per-cent-in-2025-wgc"
+      }
     },
     {
-      problem: 'The customer list is a bill book',
-      detail:
-        'You know your regulars by face and by family. What you cannot do is find every customer who bought a bridal set three years ago, or everyone who has not returned since 2024.',
-      outcome:
-        'Purchase history sits on the customer record. The list of people worth calling before the wedding season is something you ask for, not something you reconstruct.',
-    },
-    {
-      problem: 'Two staff members give two different answers',
-      detail:
-        'Whether a piece is available, whether an advance was taken, whether a repair is ready — the answer depends on who you ask and what they remember.',
-      outcome:
-        'One record, one state, one history. Everyone in the store reads the same answer, and the record shows who changed it and when.',
-    },
-    {
-      problem: 'Performance is known only at the end of the year',
-      detail:
-        'Which categories are actually profitable, which staff member is closing high-value sales, whether making charges are holding — these become clear at audit time, long after the decisions were needed.',
-      outcome:
-        'Reports draw from live records rather than from a compiled export, so the picture is available on a Tuesday in March instead of the following January.',
-    },
+      "figure": "Voluntary, with HUID",
+      "text": "silver hallmarking is still voluntary as of June 2026, but hallmarked silver carries a HUID from September 2025, and the Bureau of Indian Standards is studying a mandatory regime.",
+      "source": {
+        "name": "ETV Bharat, citing PTI, 2026",
+        "url": "https://www.etvbharat.com/en/business/bis-studying-implementation-challenges-for-mandatory-silver-hallmarking-says-dg-enn26060403010"
+      }
+    }
   ],
-
-  modulesLede:
-    'Verity is one system, not a bundle of tools. These are the parts of it a jewellery store actually uses, described in the terms your store already uses.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your shop's own language.",
+  "screens": [
     {
-      id: 'inventory',
-      title: 'Every piece, wherever it currently is',
-      line:
-        'Stock is held as individual records — design, weight, purity, stones, making charge, supplier and cost — with a state and a location that change as the piece moves.',
-      why:
-        'Your inventory is not interchangeable units. A jewellery store needs to know about <em>this</em> piece: where it is, what it cost, how long it has been there and whether it is committed to someone.',
-      example:
-        'A solitaire band moves from the safe to the showroom for a viewing, goes out on approval, comes back, and is finally sold. Four state changes on one record, each with a timestamp and a person against it.',
+      "id": "owner",
+      "title": "Jewellery / Today",
+      "meta": "Showroom: Main, Jaipur",
+      "heading": "The owner's morning view",
+      "caption": "Stock value, gold held outside the shop, money tied up in slow designs, exchange, scheme dues and anything that does not tie, on one screen, with the items that need a decision listed under it.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Sales yesterday",
+              "value": "₹18.6 lakh",
+              "note": "14 bills"
+            },
+            {
+              "label": "Gold with karigars",
+              "value": "412 g",
+              "note": "9 open jobs"
+            },
+            {
+              "label": "Slow stock, over 12 months",
+              "value": "₹31 lakh",
+              "note": "24 designs"
+            },
+            {
+              "label": "Scheme dues this week",
+              "value": "46",
+              "note": "members"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Stock value by age of the design"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Under 3 months",
+              "value": 38,
+              "display": "₹82 lakh"
+            },
+            {
+              "label": "3 to 6 months",
+              "value": 27,
+              "display": "₹58 lakh"
+            },
+            {
+              "label": "6 to 12 months",
+              "value": 19,
+              "display": "₹41 lakh"
+            },
+            {
+              "label": "Over 12 months",
+              "value": 14,
+              "display": "₹31 lakh",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Tag count differs by 2 pieces at close. Both are marked on approval, return due today.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Transfer to Mansarovar showroom",
+              "meta": "6 pieces sent Monday, not yet received",
+              "tag": [
+                "Receive",
+                "flag",
+                "Received",
+                "ok"
+              ]
+            },
+            {
+              "name": "Bank gold loan interest due",
+              "meta": "Friday, ₹48,000",
+              "tag": [
+                "Due",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'orders',
-      title: 'Custom orders, repairs and approvals',
-      line:
-        'Orders are records with a customer, an advance, a specification, an owner and a promised date, moving through states from confirmation to delivery.',
-      why:
-        'The custom side of a jewellery store is where the reputation is won and lost. A missed date on a bridal order costs more than the margin on the piece.',
-      example:
-        'A bridal set is confirmed with a forty percent advance. The order shows the design brief, the karigar it went to, the stones issued against it and the date it was promised — and flags when polishing has not started with three days left.',
+      "id": "pricing",
+      "title": "Rate and estimates",
+      "meta": "Gold 22 carat, rate set 10:15 by Manager",
+      "heading": "Today's rate, estimates and discounts",
+      "caption": "One rate, one time stamp. Every estimate shows the making charge, wastage and discount asked. Discounts above your limit wait for a one tap approval with a reason.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Estimate",
+            "Item",
+            "Making",
+            "Discount asked",
+            "Status"
+          ],
+          "rows": [
+            [
+              "E-2214, Mehta family",
+              "Necklace, 46 g",
+              "12%",
+              "2 points",
+              [
+                "Needs approval",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "E-2215, S. Kapoor",
+              "Bangles, 38 g",
+              "10%",
+              "None",
+              [
+                "Within limit",
+                "ok"
+              ]
+            ],
+            [
+              "E-2209, Agarwal",
+              "Chain, 22 g",
+              "9%",
+              "1 point",
+              [
+                "Rate is stale",
+                "late",
+                "Refreshed",
+                "ok"
+              ]
+            ],
+            [
+              "E-2216, Walk in",
+              "Ring, 6 g",
+              "14%",
+              "None",
+              [
+                "Within limit",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Discounts given this month, by salesperson"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Rohan",
+              "value": 82,
+              "display": "₹41,000",
+              "tone": "muted"
+            },
+            {
+              "label": "Pooja",
+              "value": 44,
+              "display": "₹22,000"
+            },
+            {
+              "label": "Manager",
+              "value": 30,
+              "display": "₹15,000"
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Customers who buy rarely and spend heavily',
-      line:
-        'Each customer is a record with their purchases, preferences, sizes, repairs, advances outstanding and every interaction the store has had with them.',
-      why:
-        'A jewellery customer is a household, not a transaction. The value of the record is in the second and third purchase, which may be years away and will be triggered by an occasion you can anticipate.',
-      example:
-        'Before the wedding season, you ask for every customer who bought bridal jewellery three or more years ago and has not been contacted since. The list is a query against records you already have.',
+      "id": "exchange",
+      "title": "Old gold exchange",
+      "meta": "This month",
+      "heading": "Old gold, assay and ID on one record",
+      "caption": "Every exchange has the weight, the test reading, the agreed purity, the rate, the deduction and who approved it. Lots are tracked until they come back from the refiner as fine gold.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Exchange",
+            "Weight",
+            "Tested",
+            "Agreed",
+            "Status"
+          ],
+          "rows": [
+            [
+              "X-318, Sharma",
+              "52.4 g",
+              "20.3 K",
+              "20 K",
+              [
+                "Dispute",
+                "flag",
+                "Agreed",
+                "ok"
+              ]
+            ],
+            [
+              "X-319, Verma",
+              "18.0 g",
+              "22.0 K",
+              "22 K",
+              [
+                "Done",
+                "ok"
+              ]
+            ],
+            [
+              "X-320, Joshi",
+              "71.2 g",
+              "18.6 K",
+              "18.5 K",
+              [
+                "Needs approval",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "X-321, Rathore",
+              "9.6 g",
+              "21.8 K",
+              "22 K",
+              [
+                "ID missing",
+                "flag",
+                "ID added",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Lot",
+            "Received",
+            "Sent to refiner",
+            "Fine gold back",
+            "Gap"
+          ],
+          "rows": [
+            [
+              "Lot 41",
+              "612 g",
+              "612 g",
+              "541.2 g",
+              [
+                "Within range",
+                "ok"
+              ]
+            ],
+            [
+              "Lot 42",
+              "480 g",
+              "480 g",
+              "401.0 g",
+              [
+                "38 g short",
+                "late",
+                "Queried",
+                "info"
+              ]
+            ],
+            [
+              "Lot 43",
+              "233 g",
+              "Not sent",
+              "Not yet",
+              [
+                "Held",
+                "info"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'suppliers',
-      title: 'Wholesalers, karigars and stone dealers',
-      line:
-        'Suppliers are relationships with their own orders, deliveries, outstanding balances and history, connected to the stock and custom work they feed.',
-      why:
-        'Your supply side is a mix of large wholesalers and individual craftspeople, and the material you issue to a karigar is inventory that has left the building.',
-      example:
-        'Gold issued to a karigar against an order is recorded as movement, not as a favour. What went out, what came back and what is still with them is visible without a phone call.',
+      "id": "tagstock",
+      "title": "Tag stock",
+      "meta": "Close of day",
+      "heading": "Every piece, its tag, its HUID, its state",
+      "caption": "Each piece is a record with weight, HUID and state. Pieces on approval have a customer and a return time. The close count lists only the pieces that differ, and the slow list shows what has not moved.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Tag",
+            "Piece",
+            "Net weight",
+            "HUID",
+            "State"
+          ],
+          "rows": [
+            [
+              "T-8841",
+              "Ring, 22K",
+              "6.2 g",
+              "Recorded",
+              [
+                "In showcase",
+                "ok"
+              ]
+            ],
+            [
+              "T-8842",
+              "Bangle pair, 22K",
+              "38.0 g",
+              "Recorded",
+              [
+                "On approval, Mehta",
+                "info",
+                "Returned",
+                "ok"
+              ]
+            ],
+            [
+              "T-8843",
+              "Necklace set, 22K",
+              "74.5 g",
+              "Missing",
+              [
+                "Check HUID",
+                "flag",
+                "Added",
+                "ok"
+              ]
+            ],
+            [
+              "T-8844",
+              "Chain, 18K",
+              "12.8 g",
+              "Recorded",
+              [
+                "Not on tray",
+                "late",
+                "Found",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Not sold in over 12 months"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Antique temple set, 112 g",
+              "meta": "Bought 26 months ago",
+              "tag": [
+                "Rework",
+                "late",
+                "Melt planned",
+                "info"
+              ]
+            },
+            {
+              "name": "Heavy kada pair, 96 g",
+              "meta": "Bought 15 months ago",
+              "tag": [
+                "Discount",
+                "flag"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'records',
-      title: 'Certificates, valuations and documents',
-      line:
-        'Documents attach to the record they belong to — a certificate to a piece, an invoice to a sale, a specification to an order — with the same permissions as everything else.',
-      why:
-        'High-value jewellery comes with paperwork that must be produced years later, usually at exactly the moment nobody can find it.',
-      example:
-        'A customer returns with a five-year-old diamond piece. The certificate, the original invoice and the two service visits since are on the same record as the piece.',
+      "id": "karigars",
+      "title": "Karigars and orders",
+      "meta": "Open jobs",
+      "heading": "Gold held by each karigar, and orders on the board",
+      "caption": "Gold issued, finished weight, scrap returned and wastage, job by job. Custom orders show their due date and advance so none goes late.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Karigar",
+            "Issued",
+            "Returned",
+            "Allowed wastage",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Rafique",
+              "120.0 g",
+              "112.2 g + 4.1 g scrap",
+              "3.0 g",
+              [
+                "Loss over limit",
+                "late",
+                "Explained",
+                "info"
+              ]
+            ],
+            [
+              "Dinesh",
+              "85.0 g",
+              "In progress",
+              "2.5 g",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Salim",
+              "60.0 g",
+              "58.9 g + 0.6 g scrap",
+              "1.5 g",
+              [
+                "Within limit",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "In making",
+              "cards": [
+                {
+                  "title": "Bridal set, Mehta",
+                  "meta": "Due 10 Nov, advance ₹1.5 lakh",
+                  "tag": [
+                    "At risk",
+                    "late",
+                    "On track",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Rani haar, Joshi",
+                  "meta": "Due 20 Nov",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ready",
+              "cards": [
+                {
+                  "title": "Gold chain, Agarwal",
+                  "meta": "Pick up Saturday",
+                  "tag": [
+                    "Call",
+                    "flag",
+                    "Called",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Showroom staff and workshop teams',
-      line:
-        'Staff, roles and responsibilities are modelled once, and every record shows who owns it and who last touched it.',
-      why:
-        'In a store where a single sale can be several lakhs, knowing which staff member is actually converting high-value walk-ins is a commercial question, not an HR one.',
-      example:
-        'Sales are attributed to the person who made them, so the difference between footfall performance and closing performance is visible.',
-    },
-    {
-      id: 'workflows',
-      title: 'Advances, approvals and delivery promises',
-      line:
-        'Discounts beyond a threshold, goods going out on approval and old gold exchanges move through defined approval steps rather than through a conversation.',
-      why:
-        'The transactions that need control in a jewellery store are the informal ones — the approval sale, the extra discount, the exchange valuation — precisely because they are the ones done on trust.',
-      example:
-        'A discount above the owner’s threshold cannot be applied silently. It becomes an approval with a requester, a reason and a decision on the record.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Reports drawn from live records',
-      line:
-        'Category performance, stock ageing, staff conversion, custom order throughput and outstanding balances come from the operational records themselves.',
-      why:
-        'A jewellery store’s most expensive mistake is buying more of what is not selling, and that is only avoidable if movement data is current.',
-      example:
-        'Ageing by category shows that light-weight daily wear turned over four times this year while a heavy traditional range has not moved since the last festive season.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the store a question',
-      line:
-        'Verity AI answers from your own records and workflows, only shows what the person asking is allowed to see, and can turn the answer into assigned follow-ups.',
-      why:
-        'The questions a jeweller wants answered are specific and awkward to query — which customers went quiet, which pieces are stuck, which orders are about to be late.',
-      example:
-        '"Which custom orders are due in the next ten days and have not started polishing?" returns three, and one instruction creates follow-ups for the staff who own them.',
-    },
-    {
-      id: 'locations',
-      title: 'Showroom, safe, workshop, exhibition',
-      line:
-        'Locations roll into the business, and permissions, reporting and exceptions follow the same structure.',
-      why:
-        'Even a single-store jeweller has stock in four places. A second branch or an exhibition stall multiplies the problem without changing its shape.',
-      example:
-        'Stock at an exhibition is a location like any other, so what went, what sold and what came back reconciles against records rather than against a packing list.',
-    },
-    {
-      id: 'control',
-      title: 'Who can see and change what',
-      line:
-        'One permission model and one audit trail across every record in the business.',
-      why:
-        'A jewellery store gives a lot of people access to a lot of value. The question of who changed a weight, a price or a stock state should never be unanswerable.',
-      example:
-        'A piece’s cost price is visible to the owner and not to showroom staff, and every change to a stock record carries the person and the time.',
-    },
-    {
-      id: 'communication',
-      title: 'The conversation stays with the record',
-      line:
-        'Comments, notifications and activity attach to the order, the piece or the customer they concern.',
-      why:
-        'Most jewellery-store context currently lives in WhatsApp threads that only two people can see.',
-      example:
-        'The customer’s change of mind about the setting is a note on the order, visible to the karigar’s supervisor, rather than a message on one salesperson’s phone.',
-    },
+      "id": "schemes",
+      "title": "Schemes and customers",
+      "meta": "Scheme: 11 plus 1",
+      "heading": "Savings scheme members and customers who matter",
+      "caption": "Every member, every instalment, the bonus rule and the maturity date. The same record shows family dates and the customers who have gone quiet, with the salesperson who knows them.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Member",
+            "Paid",
+            "Missed",
+            "Matures",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Sunita Rao",
+              "9 of 11",
+              "0",
+              "Dec",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Anil Gupta",
+              "6 of 11",
+              "2",
+              "Mar",
+              [
+                "Missed 2",
+                "late",
+                "Called",
+                "ok"
+              ]
+            ],
+            [
+              "Meena Shah",
+              "11 of 11",
+              "0",
+              "This month",
+              [
+                "Matures",
+                "flag",
+                "Redeemed",
+                "ok"
+              ]
+            ],
+            [
+              "K. Iyer",
+              "4 of 11",
+              "1",
+              "May",
+              [
+                "Missed 1",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Sharma family",
+          "sub": "Customer since 2019. Salesperson: Pooja",
+          "fields": [
+            [
+              "Last purchase",
+              "Mangalsutra, 2021"
+            ],
+            [
+              "Upcoming",
+              "Daughter's wedding, February"
+            ],
+            [
+              "Spend, 3 years",
+              "₹6.8 lakh"
+            ],
+            [
+              "Status",
+              [
+                "Quiet 14 months",
+                "late",
+                "Visited 12 Oct",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "2021",
+              "Mangalsutra and earrings"
+            ],
+            [
+              "2023",
+              "Exchange of old chain"
+            ],
+            [
+              "Note",
+              "Prefers lightweight designs"
+            ]
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'What actually happens, recorded as it happens.',
-  workflowsLede:
-    'These are the sequences a jewellery store runs every week. In Verity each step is a state change on a record, so the next person picks up where the last one left off.',
-  workflows: [
+  "dayHeading": "The same Saturday, before and after.",
+  "dayLede": "What changes is not the gold. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Custom bridal order',
-      steps: [
-        'Customer confirms a design and pays an advance',
-        'Order record created with specification, advance and promised date',
-        'Gold and stones issued against the order, recorded as stock movement',
-        'Karigar assigned; order state moves to in-workshop',
-        'Piece returns, is weighed and checked against the specification',
-        'Polishing, hallmarking and final quality check completed',
-        'Balance collected, order state moves to delivered',
-        'Purchase joins the customer’s history for future occasions',
-      ],
-      note:
-        'Every step has an owner, so a delay in the workshop is visible in the showroom before the promised date arrives.',
+      "time": "10:30",
+      "before": "A customer asks for the rate. Three people give three answers.",
+      "after": "One rate with a time stamp is shown on every screen, and estimates older than your limit are marked stale."
     },
     {
-      name: 'Piece out on approval',
-      steps: [
-        'Piece issued against a customer record, state moves to on-approval',
-        'Return-by date set; the piece is no longer available for sale',
-        'Reminder raised as the date approaches',
-        'Piece is either sold and invoiced, or returned to stock',
-        'Return closes the movement and restores availability',
-      ],
-      note:
-        'Approval stock stops being an informal arrangement and becomes inventory with a state and a deadline.',
+      "time": "12:00",
+      "before": "Old gold comes in and the purity is argued over at the counter.",
+      "after": "The test reading, agreed purity and deduction are entered on one record, and the owner approves anything outside your limit with one tap."
     },
     {
-      name: 'Old gold exchange',
-      steps: [
-        'Old gold received against a customer record with weight and purity',
-        'Valuation recorded; approval raised if it exceeds the set threshold',
-        'Exchange value applied to the new purchase',
-        'Old gold moves to the refining or melt location',
-        'Recovered material returns to stock as a new record',
-      ],
-      note:
-        'The exchange is the transaction most often done on judgement alone. Here it carries a valuation, an approver and a trail.',
+      "time": "2:00",
+      "before": "A salesperson gives a two point discount on making to close the sale.",
+      "after": "The request goes for approval with a reason, and the decision shows on the estimate."
     },
     {
-      name: 'Repair and service job',
-      steps: [
-        'Item received with a description, photograph and promised date',
-        'Job assigned to a karigar or sent to an external workshop',
-        'Work completed and checked',
-        'Customer notified; item collected and billed',
-        'Service joins the piece and customer history',
-      ],
-      note:
-        'Repairs are the work most likely to be delivered without ever being billed. As records, they are counted.',
+      "time": "5:00",
+      "before": "A bangle pair is taken home on approval. Nobody writes it down.",
+      "after": "The piece is marked on approval with the customer's name and a return time."
     },
     {
-      name: 'Purchase and stock intake',
-      steps: [
-        'Purchase order raised against a wholesaler',
-        'Goods received and checked against the order',
-        'Each piece created as a record with weight, purity, stones and cost',
-        'Pieces assigned to a location — showroom, safe or branch',
-        'Supplier balance and delivery performance updated',
-      ],
-      note:
-        'Intake is where stock accuracy is won. Recording it once at the door removes the reconciliation later.',
+      "time": "8:30",
+      "before": "Closing means an hour of counting trays against a sheet.",
+      "after": "Verity lists the two pieces that differ and the owner decides."
     },
     {
-      name: 'Festive season preparation',
-      steps: [
-        'Ageing report identifies stock that has not moved in 120 days',
-        'Category performance from last season reviewed against current stock',
-        'Purchase decisions raised against the gaps rather than against habit',
-        'Customer list built from purchase history and occasion timing',
-        'Follow-ups assigned to showroom staff with owners and dates',
-      ],
-      note:
-        'The season is planned against records instead of against the general sense that traditional sets did well last year.',
-    },
+      "time": "Month end",
+      "before": "The accountant asks for the gold register, exchange details and scheme collections. They are in four places.",
+      "after": "Each is a record, already linked to the right customer, piece or karigar."
+    }
   ],
-
-  ai: {
-    heading: 'Ask the store what is going on.',
-    lede:
-      'Verity AI answers from the records your store already owns. It is not a chatbot bolted onto a catalogue — it reads the same stock, orders, customers and workflows the rest of the system runs on, and it can act on what it finds.',
-    panelMeta: 'Grounded in your records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which pieces have not moved in the last 120 days, and what are they worth?',
-      'Which custom orders are due in the next ten days?',
-      'Which customers bought bridal jewellery three or more years ago and have not returned?',
-      'What is still with karigars against issued material?',
-      'Which categories sold best this festive season compared with last?',
-      'How much is outstanding against customers, and for how long?',
-      'Which staff member closed the highest value of sales this month?',
-      'Which pieces are out on approval past their return date?',
-      'Summarise this month’s store performance.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time at the counter and in the vault, build Verity around how your shop weighs, values and hands over gold, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a day at the counter and one with your karigar slips. Watch how a piece is tagged, how an estimate becomes a bill, how old gold is tested and how the day is counted.",
+        "you": "Two to three hours of yours and your senior salesperson's. Access to your stock register, a month of bills and the scheme ledger.",
+        "get": "A written map of your shop: the tag structure, rate and making rules, exchange practice, karigar flow, scheme terms and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up purities, tag fields, the rate record, making and discount limits, exchange fields, karigar job fields, scheme rules and showrooms, and build the six screens around your own terms.",
+        "you": "Check the setup with your senior salesperson. Tell us where a rate, limit or scheme rule is wrong.",
+        "get": "A working Verity with your real purities, limits, scheme terms and staff, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your tag stock, karigar balances, scheme members and customer list from the registers and sheets you use. Train the counter, vault and accounts people during real working hours.",
+        "you": "A physical count of tagged stock and of gold with karigars, and your scheme ledger in whatever form it exists. One hour with each role.",
+        "get": "Your stock, karigar gold, schemes and customers inside Verity, and a team that has closed a day on it."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks of numbers with you, tune the limits and wastage rules, and handle changes when you add a showroom, a scheme or a karigar.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the shop runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "A list of your tagged stock with weights",
+      "Gold balances with each karigar",
+      "Your scheme ledger or cards",
+      "A month of estimates and bills",
+      "Hallmark and HUID details if you have them"
+    ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1 and the physical counts. Your senior salesperson and accounts person need a few more.",
+    "after": "Nobody is hired to run Verity. Estimates, exchanges and karigar jobs are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The chasing is the job. Verity does that part.',
-  automationLede:
-    'These run from the records themselves, so nobody has to remember to start them.',
-  automations: [
+  "ai": {
+    "heading": "Ask your shop a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own stock, exchange, karigar and customer records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which karigars hold the most gold and are over their allowed wastage?",
+        "a": "Rafique holds the most open gold at 120 grams, and his last job was 0.9 gram over the allowed wastage. Two other karigars are within limits.",
+        "rows": [
+          [
+            "Rafique",
+            "120 g held, 0.9 g over"
+          ],
+          [
+            "Dinesh",
+            "85 g held, on track"
+          ],
+          [
+            "Salim",
+            "60 g held, within limit"
+          ]
+        ],
+        "action": "Create a review task for the manager"
+      },
+      {
+        "q": "Which designs have not sold in 12 months, and how much gold is in them?",
+        "a": "24 designs worth about ₹31 lakh have not sold in a year. The two heaviest are the antique temple set and the kada pair.",
+        "rows": [
+          [
+            "Antique temple set",
+            "112 g"
+          ],
+          [
+            "Heavy kada pair",
+            "96 g"
+          ],
+          [
+            "Other 22 designs",
+            "₹26 lakh"
+          ]
+        ],
+        "action": "Create rework or discount tasks"
+      },
+      {
+        "q": "Which scheme members matured or missed instalments this week?",
+        "a": "Meena Shah matures this month, and Anil Gupta has missed two instalments. Four more members are due within seven days.",
+        "rows": [
+          [
+            "Matures",
+            "1"
+          ],
+          [
+            "Missed two or more",
+            "1"
+          ],
+          [
+            "Due in seven days",
+            "4"
+          ]
+        ],
+        "action": "Assign follow-up calls to staff"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers and karigars; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'A custom order is confirmed with an advance',
-      steps: [
-        'Order record created with specification and promised date',
-        'Material issue recorded against the order',
-        'Karigar assigned and notified',
-        'Follow-up raised if the next stage has not started by its due date',
-      ],
+      "when": "An estimate is older than your limit or the gold rate changes",
+      "then": [
+        "Estimate marked stale",
+        "Task to the salesperson to refresh it",
+        "New rate and time recorded on the estimate"
+      ]
     },
     {
-      trigger: 'A piece goes out on approval',
-      steps: [
-        'Stock state moves to on-approval against the customer',
-        'Return-by date set on the record',
-        'Reminder raised before the date',
-        'Escalation to the owner if the piece is not back or sold',
-      ],
+      "when": "A discount or making charge goes beyond your limit",
+      "then": [
+        "Held for approval",
+        "Routed to the owner with the reason",
+        "Decision recorded on the estimate"
+      ]
     },
     {
-      trigger: 'Stock of a line falls below its reorder point',
-      steps: [
-        'Reorder flagged against the supplier who last delivered it',
-        'Purchase raised for approval',
-        'Delivery checked against the order on receipt',
-      ],
+      "when": "A piece is taken on approval and not returned by the time set",
+      "then": [
+        "Flagged on the tag stock screen",
+        "Task to the salesperson who gave it",
+        "Outcome recorded: returned, bought or extended"
+      ]
     },
     {
-      trigger: 'A discount exceeds the approval threshold',
-      steps: [
-        'Sale held at the approval step',
-        'Request routed to the owner with the reason attached',
-        'Decision recorded against the transaction',
-      ],
+      "when": "A karigar job returns with loss above the allowed wastage",
+      "then": [
+        "Job marked for review",
+        "Task to the manager",
+        "Reason recorded before the job is closed"
+      ]
     },
     {
-      trigger: 'A repair is marked ready',
-      steps: [
-        'Customer notified that the item can be collected',
-        'Billing task created so the job is not delivered unbilled',
-        'Service recorded against the piece and the customer',
-      ],
+      "when": "A scheme member misses an instalment or is about to mature",
+      "then": [
+        "Added to the dues list",
+        "Task to the salesperson who handles the member",
+        "Outcome recorded: paid, redeemed or asked to wait"
+      ]
     },
     {
-      trigger: 'A customer’s balance passes thirty days',
-      steps: [
-        'Outstanding flagged on the customer record',
-        'Follow-up assigned to the staff member who made the sale',
-        'Owner notified if it passes sixty days',
-      ],
-    },
+      "when": "An old gold lot sent to the refiner has not come back as fine gold",
+      "then": [
+        "Flagged against the refiner",
+        "Reminder task to the owner",
+        "Shortfall recorded when the gold arrives"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the owner can actually see.',
-  intelligenceLede:
-    'Not a dashboard of vanity numbers. These are the questions a jewellery business runs on, answered from live records.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a jewellery shop has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant, your Bureau of Indian Standards licence contact or the relevant authority.",
+    "items": [
+      {
+        "name": "BIS hallmarking and HUID",
+        "what": "Hallmarking of gold jewellery is generally mandatory in notified districts, now 380, for 14, 18, 20, 22, 23 and 24 karat. Each hallmarked piece carries a HUID, which buyers can check on the BIS CARE app. Confirm whether your district is covered.",
+        "how": "Each piece stores its HUID, purity and tag. Pieces without a HUID where one is required are flagged, and the HUID on a bill is matched to the piece.",
+        "source": {
+          "name": "All India Radio News",
+          "url": "https://www.newsonair.gov.in/govt-adds-7-more-districts-in-6th-phase-of-mandatory-gold-hallmarking"
+        }
+      },
+      {
+        "name": "Silver hallmarking",
+        "what": "Silver hallmarking is voluntary as of June 2026, but hallmarked silver carries a HUID from September 2025. The Bureau of Indian Standards is studying a mandatory regime and has set no date. One trade report suggested October 2026 and it is unconfirmed.",
+        "how": "Silver pieces carry the same fields as gold, so a change in the rule is a setting, not a rebuild.",
+        "source": {
+          "name": "ETV Bharat, citing PTI",
+          "url": "https://www.etvbharat.com/en/business/bis-studying-implementation-challenges-for-mandatory-silver-hallmarking-says-dg-enn26060403010"
+        }
+      },
+      {
+        "name": "Cash sales, PAN and reporting",
+        "what": "Dealers in precious metals and stones generally have record and reporting duties for large cash dealings with a customer, and PAN or ID is generally needed above set sale values. The thresholds and procedures have changed over time, so confirm the current ones with your accountant.",
+        "how": "Each large sale or exchange is linked to the customer record with ID details and payment mode, and sales above the limit you set are flagged at the counter."
+      },
+      {
+        "name": "Savings schemes",
+        "what": "Schemes that collect instalments from customers have been looked at by regulators for years, and rules for companies on accepting deposits have applied since 2014. Whether and how a scheme is permitted depends on how your business is set up, so take advice before you run or change one.",
+        "how": "Each scheme has its terms, members, instalments and maturity as records, so what you owe members is always clear.",
+        "source": {
+          "name": "Moneylife, 2014",
+          "url": "https://moneylife.in/article/jewellers-winding-down-gold-savings-schemes/38095.html"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A salesperson should not see the cost of every piece. The vault keeper should not change the rate. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Stock and capital',
-      points: [
-        'Value held, by category and by location',
-        'Ageing — what has not moved in 60, 90 or 120 days',
-        'Turnover by category across seasons',
-        'Material issued to karigars and not yet returned',
-        'Stock committed to orders versus stock available to sell',
-      ],
+      "role": "Owner",
+      "question": "Where is my gold, and what is it earning?",
+      "sees": "Stock value by age, gold with karigars, exchange gaps, discounts, scheme liabilities and every showroom side by side."
     },
     {
-      area: 'Customers',
-      points: [
-        'Highest-value customers and households',
-        'Customers who have not purchased in a defined period',
-        'Purchase history by occasion and by category',
-        'Outstanding balances and their ageing',
-        'Repairs and services against each customer',
-      ],
+      "role": "Manager",
+      "question": "What needs sorting today?",
+      "sees": "Approvals waiting, pieces on approval, orders at risk, scheme dues and the close count."
     },
     {
-      area: 'Custom orders',
-      points: [
-        'Orders in the workshop, by stage and by karigar',
-        'Orders approaching or past their promised date',
-        'Time taken from confirmation to delivery',
-        'Advances held against undelivered orders',
-      ],
+      "role": "Salesperson",
+      "question": "What do I quote and who is coming in?",
+      "sees": "Today's rate, estimates, customer history, family dates and scheme members."
     },
     {
-      area: 'Sales',
-      points: [
-        'Revenue by category, by period and by branch',
-        'Average transaction value',
-        'Conversion by staff member',
-        'Discounting patterns against approval thresholds',
-      ],
+      "role": "Vault and karigar keeper",
+      "question": "Who has what?",
+      "sees": "Tag stock, issue and return of gold, karigar balances, transfers and old gold lots."
     },
     {
-      area: 'Suppliers',
-      points: [
-        'Outstanding payable by supplier',
-        'Delivery reliability against ordered dates',
-        'Cost movement on repeat purchases',
-        'Karigar throughput and rework',
-      ],
-    },
-    {
-      area: 'Operations',
-      points: [
-        'Approval stock out past its return date',
-        'Repairs delivered but not billed',
-        'Approvals waiting on a decision',
-        'Exceptions raised and how quickly they closed',
-      ],
-    },
+      "role": "Accountant",
+      "question": "What was bought, sold and held?",
+      "sees": "Bills by payment mode, exchange values, supplier dues, scheme collections and write-offs."
+    }
   ],
-  intelligenceNote:
-    'Every one of these is drawn from records the store creates in the course of ordinary work. None of it requires separate data entry.',
-
-  rolesHeading: 'The store is shared. The view is not.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on the question they actually need answered.',
-  roles: [
-    {
-      role: 'Owner',
-      question: 'Where is my capital and what is it doing?',
-      focus: 'Stock value and ageing, category performance, outstanding balances, approvals above threshold.',
-    },
-    {
-      role: 'Showroom manager',
-      question: 'What is happening in the store today?',
-      focus: 'Orders due, approval stock out, repairs ready, staff on floor, pieces committed against sales.',
-    },
-    {
-      role: 'Sales staff',
-      question: 'What do I need to know about this customer?',
-      focus: 'Purchase history, sizes and preferences, outstanding balance, open orders and repairs.',
-    },
-    {
-      role: 'Workshop supervisor',
-      question: 'What is in the workshop and what is late?',
-      focus: 'Orders by stage and karigar, material issued and returned, promised dates at risk.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is owed, and by whom?',
-      focus: 'Customer outstanding, supplier payable, advances held, approvals awaiting a decision.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing software at the counter. We agree during setup how bills and payments reach Verity.",
+      "Your weighing scales and testing machine. Staff enter or confirm the reading.",
+      "WhatsApp for customers and karigars. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Run your billing counter or print bills.",
+      "Take online orders or host a shop for you.",
+      "Send messages to customers or karigars on its own.",
+      "File your returns or tell you how to price gold."
+    ],
+    "migration": "We bring your tag stock, karigar balances, scheme members and customers across from the registers, sheets and cards you use now, in stages, so the shop keeps trading while it happens."
+  },
+  "faqHeading": "Questions jewellers ask.",
+  "faqs": [
+    [
+      "Will my salespeople actually enter exchange and approval details at a busy counter?",
+      "Only if it takes seconds. We set exchange as a short form with a few fields and approval as one tap, and we train at the counter during real hours. We start with what matters most and add fields later."
+    ],
+    [
+      "Does Verity replace my billing software?",
+      "No. Your billing keeps making bills. We agree during setup how bills and payments reach Verity, which then does the stock, karigar, exchange, scheme and customer work around them."
+    ],
+    [
+      "Can it tell me the exact gold rate?",
+      "No. You or your manager enter the day's rate, with the time. Verity uses that one rate in every estimate and shows when it has gone stale."
+    ],
+    [
+      "Can it handle HUID and hallmark records?",
+      "Yes, as fields on each piece, matched to the bill. Verity does not check the BIS system itself. Your team verifies the HUID the way they do today."
+    ],
+    [
+      "I use karigars outside the shop. Can it track gold I give them?",
+      "Yes. Each job records issue, return, scrap and wastage, so you see the gold each karigar holds and how a job compares with the allowed loss."
+    ],
+    [
+      "Can it run my savings scheme?",
+      "It records members, instalments, bonus terms and maturity, and lists who is due or has missed. It does not collect money and does not advise whether your scheme is permitted. Take that advice from your adviser."
+    ],
+    [
+      "I have two showrooms and a small workshop. Can I see them together?",
+      "Yes. Each is a location in one system, with stock, exchange and scheme numbers side by side. A transfer is a record that must be received at the other end."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so a salesperson can see the price but not your cost, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of showrooms, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your shop runs."
+    ]
   ],
-
-  useCasesHeading: 'What jewellers use Verity for',
-  useCases: [
-    {
-      name: 'Piece-level inventory',
-      body: 'Individual pieces with weight, purity, stones, cost, location and state — rather than SKU counts that do not describe what is actually in the case.',
-    },
-    {
-      name: 'Custom order management',
-      body: 'Confirmation, advance, specification, karigar assignment, material issue and delivery date on one record that anyone in the store can read.',
-    },
-    {
-      name: 'High-value customer management',
-      body: 'Household purchase history, preferences and occasions, so the second and third sale are anticipated rather than hoped for.',
-    },
-    {
-      name: 'Approval and exchange control',
-      body: 'The informal transactions — goods on approval, old gold exchange, discounts beyond threshold — carried out as approvals with a record.',
-    },
-    {
-      name: 'Stock ageing and capital review',
-      body: 'What has not moved, what it is worth and which categories are actually turning over, available before the buying decision rather than after it.',
-    },
-    {
-      name: 'Karigar and supplier tracking',
-      body: 'Material issued and returned, orders outstanding, delivery reliability and payable balances against each supplier and craftsperson.',
-    },
-    {
-      name: 'Repair and service jobs',
-      body: 'Received, assigned, completed, notified, collected and billed — as work with an owner rather than as a tag in a drawer.',
-    },
-    {
-      name: 'Multi-location and exhibition stock',
-      body: 'Showroom, safe, workshop, branch and exhibition as locations, with movement between them recorded and reconciled.',
-    },
-    {
-      name: 'Store performance reporting',
-      body: 'Category, staff, season and branch performance drawn from live records instead of assembled at audit time.',
-    },
+  "related": [
+    "retail-stores",
+    "fashion-stores",
+    "gift-shops",
+    "department-stores",
+    "wholesalers",
+    "optical-stores"
   ],
-
-  migration:
-    'You do not have to replace your billing software or your tally on day one. Verity maps what you already run — the stock sheet, the customer book, the order register, the existing accounting system — brings across the records that matter, and introduces the operational layer alongside what already works.',
-
-  faqHeading: 'Questions jewellers ask',
-  faqs: [
-    [
-      'What can AI software actually do for a jewellery store?',
-      'Verity AI answers questions from your own stock, order and customer records rather than from general knowledge. You can ask which pieces have not moved in four months, which custom orders are due next week, or which customers have not returned since a given year, and get an answer drawn from the store’s own records — and then turn that answer into follow-ups assigned to your staff.',
-    ],
-    [
-      'Can Verity track jewellery inventory at the level of individual pieces?',
-      'Yes. Stock is held as individual records rather than as SKU counts, so a piece carries its own design, weight, purity, stones, cost, supplier, location and state. Movement between showroom, safe, workshop, approval and sale is a change on that record with a person and a timestamp against it.',
-    ],
-    [
-      'Can it manage custom orders and karigar work?',
-      'Yes. A custom order is a work record with a customer, an advance, a specification, an assigned karigar, issued material and a promised date. Material issued against the order is recorded as stock movement, so what is currently with a craftsperson is visible without a phone call.',
-    ],
-    [
-      'Does Verity handle customers who buy only once every few years?',
-      'That is the customer profile it suits best. Purchase history, preferences, sizes, repairs and outstanding balances sit on the customer record permanently, so the store can find every household that bought for a particular occasion several years ago rather than relying on memory.',
-    ],
-    [
-      'Can Verity work alongside our existing billing or accounting software?',
-      'Yes. Verity is introduced as an operational layer over what you already run. Existing systems are mapped during implementation, the records that matter are migrated, and the rest of your setup continues to work while the new layer takes over the operational side.',
-    ],
-    [
-      'Is Verity suitable for a single-store jeweller, or only for chains?',
-      'A single store already has stock in a showroom, a safe and a workshop, plus pieces out on approval. That is a multi-location problem in one building, and it is the problem Verity is built for. Multiple branches or exhibition stalls use the same structure without additional setup.',
-    ],
-    [
-      'Does Verity value stock or track gold rates?',
-      'Verity holds the cost, weight and purity you record against each piece and reports on the stock value that follows from them. It does not price stock from a live rate feed, and it does not perform statutory valuation — those remain with your existing accounting arrangements.',
-    ],
-    [
-      'How long does it take to get running?',
-      'Implementation is about four weeks: discovery and mapping of how your store actually works, configuration to match it, migration of your existing records, and then an ongoing operations partnership rather than a handover and a manual.',
-    ],
-    [
-      'Who in the store can see cost prices and margins?',
-      'That is set by the permission model. Verity has one permission layer across every record, so cost and margin can be visible to the owner and accounts while showroom staff see availability, customer history and order status.',
-    ],
-  ],
-
-  ctaHeading: 'Start with the part of the store that hurts most.',
-  ctaLede:
-    'For most jewellers that is either the custom order book or the stock that has stopped moving. Tell us which one, and we will show you what it looks like in Verity.',
-
-  related: ['fashion-stores', 'gift-shops', 'cosmetics-stores', 'electronics-stores', 'retail-stores', 'furniture-stores'],
+  "ctaHeading": "Start with the gold you cannot see.",
+  "ctaLede": "Tell us how your shop runs and we will show you the karigar balances, the slow stock and the scheme dues it would find, using your own numbers."
 };

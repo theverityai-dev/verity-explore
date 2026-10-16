@@ -1,574 +1,1195 @@
 export default {
-  slug: 'fashion-stores',
-  status: 'published',
-  plural: 'fashion stores',
-  subject: 'fashion retail business',
-
-  seo: {
-    title: 'AI business management software for fashion stores | Verity',
-    description:
-      'Verity connects size and colour stock, season buying, markdown, returns, customer history and store performance into one operational system.',
-    keywords: [
-      'AI software for fashion stores',
-      'fashion retail management software',
-      'apparel inventory size colour matrix',
-      'markdown and season buying software',
-      'clothing store management system',
-    ],
+  "schema": 2,
+  "slug": "fashion-stores",
+  "status": "published",
+  "plural": "fashion stores",
+  "subject": "fashion store",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Fashion store management software for Indian stores | Verity",
+    "description": "Size runs, ageing stock, markdown stacking, shrinkage and exchanges: what a fashion store loses each season and the Verity screens that bring each leak into view.",
+    "keywords": [
+      "fashion store management software India",
+      "apparel size curve and ageing stock tracking",
+      "clothing store markdown control",
+      "fashion retail shrinkage tracking",
+      "multi-outlet apparel store software"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for fashion retail',
-    headline: 'You did not sell out of the dress. You sold out of the sizes people wear.',
-    lede:
-      'A fashion line is a matrix of sizes and colours, and it dies unevenly. Verity tracks stock at the level the sale actually happens, so broken size runs surface while the season can still be bought into.',
-    note: 'Runs alongside your existing billing. Nothing switches off on day one.',
-    panel: {
-      title: 'Store',
-      meta: 'All stores · Current season',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Season sell-through', value: '58%', note: 'week 7 of 12' },
-        { label: 'Broken size runs', value: '84', note: 'styles missing core sizes' },
-        { label: 'Return rate', value: '11.4%', note: 'up from 8.9% last season' },
-        { label: 'Ageing stock', value: '₹34 L', note: 'from prior seasons' },
-      ],
-      rows: [
-        { name: '84 styles missing M and L while stocked in XS', meta: 'Selling well; unsellable as displayed', active: true },
-        { name: 'Return rate on one supplier double the store average', meta: 'Fit complaints recorded on 3 styles', active: true },
-        { name: 'Prior-season stock at ₹34 L with no markdown applied', meta: 'Week 7 · discount window closing', active: true },
-        { name: 'Store 3 holds sizes Store 1 is short of', meta: '26 styles · no transfer raised', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own stock in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "orders",
+    "workforce",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for fashion stores",
+    "headline": "The collection looked right in the sample room. Six weeks later the sizes have broken and the rail is full.",
+    "lede": "A fashion store buys a season in advance and sells it in a few weeks. By then the winners are out of the sizes people want, the losers are on every rail, and discounts are doing the work the buying should have done. Verity ties styles, sizes, outlets, suppliers and customers together, so you see what is selling, what is stuck and what to do while it still has a full price.",
+    "oneLine": "One system that knows every style by size and outlet, how old it is, what it earned at each markdown step, and who bought it.",
+    "note": "Built for a team that is already busy on the shop floor. The records come from the bill, the delivery and the count you already do.",
+    "screen": "owner",
+    "screenNote": "styles, sizes, outlets, suppliers and staff"
   },
-
-  overview: {
-    heading: 'Fashion is retail where the unit of stock is not the unit of decision.',
-    paragraphs: [
-      'A style is not a line. It is a grid: sizes across, colours down, with wildly different velocity in each cell. A style that shows sixty percent sell-through can be entirely unsellable, because what remains is XS and XXL in the colour nobody wanted. The aggregate number says the buy worked. The matrix says it did not.',
-      'That gap is the defining problem of fashion retail, and it drives the two decisions that determine the season. The first is buying: how deep to go on sizes, which colours to repeat, which suppliers to back. The second is markdown: when to discount, by how much, and on what. Both are made against a calendar that does not wait, and both are usually made on aggregate figures because the matrix is too laborious to look at manually.',
-      'Returns are the third factor and the one most often absorbed. Fashion carries a return rate no other retail category tolerates, and returns are not evenly distributed — they cluster by supplier, by style and by reason. A supplier whose garments run small produces returns that look like customer indecision unless the reason is recorded.',
-      'The fourth is that stock sits in the wrong store. Fashion inventory is small, transportable and highly location-sensitive: the medium that is dead at one branch is the size another branch keeps turning customers away from.',
-      'Verity holds stock at size and colour level, records returns with their reason, and puts every store on one structure so the matrix, the markdown decision and the transfer are all visible from the same records.',
+  "today": {
+    "heading": "A fashion store sells a season it bought months ago.",
+    "paragraphs": [
+      "The buying happens before anyone knows what will sell. The shop then spends the season correcting for it: moving stock between outlets, bringing forward the sale, giving a staff discount on the dead stock and asking the supplier for something fresh. All of that is decided on feel because the numbers are in a billing report that lists bills, not styles.",
+      "A 2026 study by Vector Consulting Group found that about 24% of on-shelf apparel and footwear stock was past its optimal selling window, and that only 9% of surveyed retailers use shelf throughput as a key metric for buying and replenishment. In a business where a style has a short life, those are the figures that decide the margin.",
+      "Meanwhile the paperwork moves on its own schedule. Supplier bills, challans and debit notes sit in files. The GST rate depends on the price of each piece, and since 22 September 2025 that sits close to the ₹2,500 mark for many styles. Staff incentives are worked out in a notebook."
     ],
+    "stack": [
+      "Billing report by bill and item",
+      "Supplier challans and bills",
+      "Excel stock sheets by outlet",
+      "WhatsApp groups with staff and suppliers",
+      "The owner's memory of what sold last year"
+    ],
+    "stackNote": "Each one is useful. None of them can tell you which size of which style is about to run out in which outlet."
   },
-
-  terminology: [
-    ['Styles, sizes, colours, seasons', 'Inventory'],
-    ['Sales, returns, exchanges, alterations', 'Orders'],
-    ['Customers, regulars, size profiles', 'Relationships'],
-    ['Brands, vendors, agents', 'Suppliers'],
-    ['Floor staff, stylists, store managers', 'People'],
-    ['Markdown, transfer, return authorisation', 'Workflows'],
-    ['Stores, stockrooms, warehouse', 'Locations'],
+  "painsHeading": "Where a fashion store actually loses money.",
+  "painsLede": "These are the situations fashion store owners describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Buying",
+      "title": "Buying is done on total pieces, not on what sells",
+      "scene": "Two hundred pieces of a style are ordered because it looked good and the supplier gave a rate. Another style sold out in a week and the reorder takes a month. The sizes that arrive follow the supplier's pack, not your customers.",
+      "cost": "Vector Consulting Group's 2026 study found retailers tolerate long lead times and buy opportunistically in bulk, which raises inventory. Money sits in the wrong styles while the right ones run out.",
+      "fix": "Each style is tracked from the first delivery with its sales by week, by size and by outlet. Verity shows the sell-through curve against your own past seasons, so the next order follows what sold rather than what looked good.",
+      "screen": "styles",
+      "source": {
+        "name": "Apparel Resources on Vector Consulting Group, 2026",
+        "url": "https://apparelresources.com/business-news/retail/revenue-leakage-ageing-inventory-weigh-indias-retail-expansion-push-report/"
+      }
+    },
+    {
+      "area": "Stock",
+      "title": "The size curve breaks and the leftovers are the sizes nobody wants",
+      "scene": "By week three the shirt is gone in M and L. What is left is XS, XXL and a pile of 44. Staff tell the customer it is out of stock when it is in the other outlet.",
+      "cost": "Broken runs are what get marked down first, and every missing size is a customer who leaves without buying.",
+      "fix": "Stock is held by style, size and colour in each outlet. Verity shows which styles have lost their core sizes, how many complete runs remain, and which outlet holds the size the customer wants.",
+      "screen": "styles"
+    },
+    {
+      "area": "Stock",
+      "title": "Stock is stuck in one outlet while another sells out",
+      "scene": "The Koramangala outlet has sixty kurtas of a style that sold out in Indiranagar in a week. The transfer is done when someone remembers, by courier, with a handwritten slip.",
+      "cost": "A sale lost in one place for stock that is idle in another, and transfers that go missing in between with nobody responsible.",
+      "fix": "Outlets are locations on one record. Verity lists styles that are stuck in one outlet and short in another, drafts the transfer, and holds it open until the receiving outlet signs the count.",
+      "screen": "styles"
+    },
+    {
+      "area": "Markdowns",
+      "title": "Stock ages quietly and then needs a big discount",
+      "scene": "A style that did not sell in the first month is moved to the back rail. Three months later it is in the sale at 50 percent off, with the same margin gone that the early 20 percent would have kept.",
+      "cost": "Vector Consulting Group found about 24% of on-shelf apparel and footwear stock past its optimal selling window. Each extra week takes a deeper cut to clear.",
+      "fix": "Days on floor, sell-through and cost value are shown for every style. Verity proposes a markdown ladder for ageing styles, shows the margin after each step, and routes each approval to the owner before the price changes.",
+      "screen": "pricing"
+    },
+    {
+      "area": "Markdowns",
+      "title": "Discounts stack up without anyone adding them",
+      "scene": "A festival offer, a loyalty coupon and a manager's request for a regular customer all apply to the same shirt. The cashier layers all three because the system lets her.",
+      "cost": "Example arithmetic: if a ₹1,800 shirt that costs ₹900 ends up sold at ₹1,100 after stacking, margin falls from ₹900 to ₹200 on that piece.",
+      "fix": "Discount rules are set per type, with a ceiling on the total. Anything above the ceiling waits for a one-tap approval with a reason, and Verity totals discounts by person, outlet and offer.",
+      "screen": "pricing"
+    },
+    {
+      "area": "Pricing",
+      "title": "A piece priced at ₹2,500 and one at ₹2,501 are taxed at different rates",
+      "scene": "Since 22 September 2025 apparel generally attracts 5% GST up to ₹2,500 per piece and 18% above. A shirt marked down from ₹2,700 to ₹2,400 changes rate. Staff do not know, and the billing master is set by item, not by final sale value.",
+      "cost": "A wrong rate on a few hundred bills a month becomes a notice and a customer who sees a different tax on the invoice. Your accountant corrects it later.",
+      "fix": "Verity shows price bands against the ₹2,500 mark for each style and flags any price or discount that moves a piece across it, so your team and your accountant can agree the right treatment before the bill. It does not file returns.",
+      "screen": "pricing",
+      "source": {
+        "name": "Outlook Business on the GST Council's September 2025 decision",
+        "url": "https://www.outlookbusiness.com/news/garments-priced-above-25k-to-be-costlier-will-hurt-middle-class-affordability-industry-bodies"
+      }
+    },
+    {
+      "area": "Shrinkage",
+      "title": "Pieces walk out between the rail and the till",
+      "scene": "A fitting room has two shirts under the bench. A tag is swapped from a cheap piece to an expensive one. A staff member sets aside a piece for a friend. Nobody saw it, and it shows only at the yearly count.",
+      "cost": "Trent reported shrinkage of 0.41% of sales in FY24 and V-Mart 0.5%. A retail association said losses rise during festive seasons and cricket tournaments, mostly through employees.",
+      "fix": "Cycle counts of one rack or outlet at a time are compared with the book. Verity lists each gap with the style, the value, the shift and the staff on duty, and ranks outlets and shifts by loss.",
+      "screen": "team",
+      "source": {
+        "name": "Economic Times, republished by Third Eyesight, 2024",
+        "url": "https://www.thirdeyesight.in/?p=6499"
+      }
+    },
+    {
+      "area": "Suppliers",
+      "title": "Deliveries do not match the challan, and rejects are argued",
+      "scene": "The challan says 120 pieces and the carton has 112. Twelve have stitching faults found a week later. The supplier says they were fine on dispatch.",
+      "cost": "You pay for missing pieces and carry faulty ones. Example arithmetic: ten faulty or missing pieces a delivery at ₹600 is ₹6,000 a delivery.",
+      "fix": "Goods are received against the order with the counted quantity and any faults noted with a reason. Verity compares order, receipt and bill, and raises a debit note task for the difference before the bill is paid.",
+      "screen": "buying"
+    },
+    {
+      "area": "Suppliers",
+      "title": "Small suppliers are paid late and the tax treatment changes",
+      "scene": "Your tailoring units and small garment makers are paid when cash allows. Nobody tracks which of them are registered as micro or small enterprises, or how long each bill has been open.",
+      "cost": "Under Section 43B(h) of the Income-tax Act, an amount owed to a micro or small supplier that is not paid within the allowed days is generally deductible only in the year it is paid. Traders are generally excluded. Your accountant confirms who counts.",
+      "fix": "Each supplier record carries its type and terms. Verity lists bills nearing their deadline and the suppliers who need prompt payment, and assigns the payment task to the accounts person.",
+      "screen": "buying",
+      "source": {
+        "name": "ClearTax on Section 43B(h)",
+        "url": "https://cleartax.in/s/section-43bh-of-income-tax-act"
+      }
+    },
+    {
+      "area": "Customers",
+      "title": "Exchanges and returns are given on goodwill",
+      "scene": "A customer returns a dress after a wedding with the tag tucked in. A staff member says yes to avoid an argument. The piece goes back on the rail with a stain.",
+      "cost": "A sale reversed and a piece that can no longer be sold at full price. For stores that also send pieces by courier to Instagram or WhatsApp customers, a vendor benchmark puts fashion COD return rates at 25 to 40%.",
+      "fix": "Returns and exchanges are records tied to the original bill, with a reason, the item's condition and where it goes next. Verity totals returns by style and reason, so a fit problem is visible before the next order.",
+      "screen": "customers",
+      "source": {
+        "name": "Base.com, vendor report on COD return rates, August 2026",
+        "url": "https://base.com/en-IN/blog/cod-return-rates-by-product-category-in-india-2026-report/"
+      }
+    },
+    {
+      "area": "Customers",
+      "title": "Regulars and wedding shoppers are not remembered",
+      "scene": "A customer who bought for her sister's wedding last year and for Diwali before that has not been in this season. The staff who served her left in March.",
+      "cost": "Example arithmetic: 300 repeat customers spending ₹6,000 a visit, three visits a year, is ₹54 lakh. A fifth lost quietly is ₹10.8 lakh.",
+      "fix": "Bills are tied to the customer by phone number. Verity shows each person's past styles, sizes and occasions, lists those past their usual gap, and assigns a call to a staff member.",
+      "screen": "customers"
+    },
+    {
+      "area": "People",
+      "title": "Staff incentives are worked out on paper and attrition is high",
+      "scene": "The manager keeps a notebook of who was on which day and who sold how much. At month end two salespeople disagree. A good seller who knew regulars by name leaves.",
+      "cost": "Hours of manager time each month, a salesperson who feels cheated, and the loss of customer knowledge when someone leaves.",
+      "fix": "Sales, attendance and returns are recorded against each person. Verity builds the incentive sheet from the rule you set, shows the same figures to the staff member, and holds customer notes on the customer record, not in one person's head.",
+      "screen": "team"
+    },
+    {
+      "area": "Customers",
+      "title": "Alterations and custom orders slip past the date",
+      "scene": "A customer is promised a hem on Thursday. The tailor has a backlog and nobody told the shop. The customer arrives and the piece is not ready.",
+      "cost": "A promise broken to a customer who may not come back, and a tailor who is blamed for a problem of tracking.",
+      "fix": "Each alteration is a job with the customer, the piece, the tailor and the promised date. Verity shows jobs due in the next two days and flags the ones at risk, with a task for the shop to tell the customer.",
+      "screen": "customers"
+    },
+    {
+      "area": "Sales",
+      "title": "Instagram and WhatsApp enquiries are lost in chats",
+      "scene": "A customer messages a photo of a dress asking for size and price. The reply comes six hours later or never. The details of who asked for what are in three phones.",
+      "cost": "These enquiries are often the highest intent a fashion store receives. A slow reply sends the buyer to another seller.",
+      "fix": "Each enquiry is a record with an owner, the style asked for, the size, a quote and a next step. Verity lists the ones without a reply and assigns them. Staff still reply to the customer, and the outcome is recorded.",
+      "screen": "customers"
+    },
+    {
+      "area": "Owner",
+      "title": "The owner sees outlets only after the month closes",
+      "scene": "One outlet is strong, another struggles, and the figures arrive in different formats. Rent is fixed, so the weak outlet's problem is in the stock, the staff or the location, and no one can tell which.",
+      "cost": "A month of a weak outlet before the issue is noticed, and decisions about reordering made on the strongest outlet's sales.",
+      "fix": "Outlets are locations on one system. Each morning Verity shows sales, discounts, ageing stock and shortfalls by outlet side by side, with the items needing a decision listed and owned.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'The aggregate always looks better than the matrix.',
-  challengesLede:
-    'Fashion retail difficulties come from decisions taken on style-level numbers when the business runs at size and colour level.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The Vector Consulting Group figures come through a trade press report, and we have not seen the study. The shrinkage figures are from a 2024 press report that we could read only from search results. The return-rate figure is from a software vendor's own report, so treat it as a benchmark. The GST threshold is from press and tax-advisory commentary, so confirm it with your accountant.",
+  "facts": [
     {
-      problem: 'Sell-through hides broken size runs',
-      detail:
-        'A style at sixty percent looks healthy. What is left is the sizes nobody wears, and it will not sell at any price short of clearance.',
-      outcome:
-        'Stock is held per size and colour, so a broken run is visible as a specific gap while a repeat order can still fix it.',
+      "figure": "24%",
+      "text": "of on-shelf apparel and footwear stock is past its optimal selling window, according to a Vector Consulting Group study, and only 9% of surveyed retailers use shelf throughput as a key buying metric.",
+      "source": {
+        "name": "Apparel Resources, 17 February 2026",
+        "url": "https://apparelresources.com/business-news/retail/revenue-leakage-ageing-inventory-weigh-indias-retail-expansion-push-report/"
+      }
     },
     {
-      problem: 'Markdown timing is guessed',
-      detail:
-        'Discounting starts when the season feels over rather than when the sell-through curve says the remaining stock will not clear at full price.',
-      outcome:
-        'Sell-through against week of season is a measured curve per style, so markdown becomes a timed decision with a number behind it.',
+      "figure": "₹2,500 per piece",
+      "text": "is the price line at which apparel GST generally moves between 5% and 18% from 22 September 2025. Retail and clothing associations asked for a higher threshold or a single 5% rate.",
+      "source": {
+        "name": "Outlook Business, PTI, 4 September 2025",
+        "url": "https://www.outlookbusiness.com/news/garments-priced-above-25k-to-be-costlier-will-hurt-middle-class-affordability-industry-bodies"
+      }
     },
     {
-      problem: 'Returns are absorbed rather than attributed',
-      detail:
-        'A return goes back on the rail. The reason — fit, quality, colour, changed mind — is not recorded, so a supplier whose sizing runs small looks the same as customer indecision.',
-      outcome:
-        'Returns carry a reason and attach to the style and supplier, so return rate becomes a supplier and style metric.',
+      "figure": "0.41% and 0.5%",
+      "text": "shrinkage as a share of sales at Trent and V-Mart in FY24, both higher than a year earlier. A retail association said losses rise in festive periods, mostly through employees.",
+      "source": {
+        "name": "Economic Times, republished by Third Eyesight, June 2024",
+        "url": "https://www.thirdeyesight.in/?p=6499"
+      }
     },
     {
-      problem: 'Stock is in the wrong store',
-      detail:
-        'One branch turns away a customer for a medium that another branch is holding and will eventually mark down.',
-      outcome:
-        'Availability across stores is one view at size level, and transfers are recorded movement rather than informal favours.',
-    },
-    {
-      problem: 'Buying repeats last season’s mistakes',
-      detail:
-        'Next season is bought against a general sense of what did well, because size-level performance by supplier was never assembled.',
-      outcome:
-        'Sell-through, markdown taken and return rate by style, colour and supplier come from the same records the season produced.',
-    },
-    {
-      problem: 'Prior-season stock accumulates quietly',
-      detail:
-        'What did not clear moves to the back of the store and stops appearing in any conversation until it is a large number.',
-      outcome:
-        'Ageing by season is a query, so carryover is visible by value while it is still worth clearing.',
-    },
+      "figure": "25 to 40%",
+      "text": "of fashion orders paid by cash on delivery are returned, against 12 to 18% for prepaid, according to a software vendor's 2026 report.",
+      "source": {
+        "name": "Base.com, 10 August 2026",
+        "url": "https://base.com/en-IN/blog/cod-return-rates-by-product-category-in-india-2026-report/"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system across stock, buying, returns and stores. These are the parts a fashion business works with.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your store's own language.",
+  "screens": [
     {
-      id: 'inventory',
-      title: 'Stock at size and colour',
-      line:
-        'Stock is held per style, size, colour, season, cost and location, and moves as it is received, sold, returned, transferred or marked down.',
-      why:
-        'The sale happens at size and colour level, so every decision downstream of it — repeat, transfer, markdown, clearance — has to be made there too.',
-      example:
-        'A style at fifty-eight percent sell-through that is out of M and L in three stores is a repeat order, not a success.',
+      "id": "owner",
+      "title": "Outlets / Today",
+      "meta": "3 outlets, this week",
+      "heading": "The owner's morning view",
+      "caption": "Sales, discounts given, ageing stock, shrinkage and exchanges for each outlet side by side, with the decisions waiting listed under them. It replaces the evening message from each manager.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Sales yesterday",
+              "value": "₹3.4 lakh",
+              "note": "3 outlets, 212 bills"
+            },
+            {
+              "label": "Discount given",
+              "value": "₹41,000",
+              "note": "12% of sales"
+            },
+            {
+              "label": "Stock past 90 days",
+              "value": "₹17.6 lakh",
+              "note": "at cost"
+            },
+            {
+              "label": "Count gaps this week",
+              "value": "₹8,900",
+              "note": "2 outlets"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Sales by outlet, against last week"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Indiranagar",
+              "value": 100,
+              "display": "₹1.5 lakh"
+            },
+            {
+              "label": "Koramangala",
+              "value": 72,
+              "display": "₹1.1 lakh"
+            },
+            {
+              "label": "Whitefield",
+              "value": 49,
+              "display": "₹0.8 lakh",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Whitefield sold under half of Indiranagar. 60 kurtas of one style are stuck there, and it sold out in Indiranagar.",
+          "action": "Draft transfer"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Linen shirts, 90 days on floor",
+              "meta": "31% sold, ₹2.1 lakh at cost",
+              "tag": [
+                "Mark down",
+                "flag",
+                "Approved 20%",
+                "ok"
+              ]
+            },
+            {
+              "name": "Three price changes cross the ₹2,500 mark",
+              "meta": "Check GST treatment with accountant",
+              "tag": [
+                "Review",
+                "late",
+                "Confirmed",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'orders',
-      title: 'Sales, returns and exchanges',
-      line:
-        'Transactions record their lines at size level, the customer, the staff member, the discount applied and the reason on any return.',
-      why:
-        'The return reason is the single most valuable and least recorded piece of information in fashion retail.',
-      example:
-        'Eleven percent return rate, of which four points are fit complaints concentrated on one supplier’s styles.',
+      "id": "styles",
+      "title": "Styles and sizes",
+      "meta": "Women's ethnic wear, this season",
+      "heading": "Every style by size and outlet",
+      "caption": "Sell-through by week, sizes left and which outlet holds what. Broken size runs are marked, and stuck stock is matched to the outlet where the style is selling.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Style",
+            "Received",
+            "Sold",
+            "Sell-through",
+            "Sizes left",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Chanderi kurta, rust",
+              "200",
+              "164",
+              "82%",
+              "S, XL",
+              [
+                "Reorder M, L",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Cotton A-line, indigo",
+              "180",
+              "109",
+              "61%",
+              "M to XXL",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Georgette set, olive",
+              "120",
+              "34",
+              "28%",
+              "XS, XXL",
+              [
+                "Mark down",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Block print dupatta",
+              "300",
+              "96",
+              "32%",
+              "One size",
+              [
+                "Slow",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Georgette set, olive: stock by outlet"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Indiranagar",
+              "value": 22,
+              "display": "18 pcs"
+            },
+            {
+              "label": "Koramangala",
+              "value": 42,
+              "display": "34 pcs"
+            },
+            {
+              "label": "Whitefield",
+              "value": 83,
+              "display": "68 pcs",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Transfer: Whitefield to Indiranagar, 30 pcs",
+              "meta": "Cotton A-line, M and L",
+              "tag": [
+                "Draft",
+                "flag",
+                "Received 29",
+                "info"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'suppliers',
-      title: 'Brands, vendors and agents',
-      line:
-        'Suppliers are relationships with their orders, delivery performance, sell-through, markdown taken, return rate and outstanding balances.',
-      why:
-        'Fashion buying is a series of bets on suppliers, and the evidence for the next bet is the last season’s numbers by supplier.',
-      example:
-        'A supplier whose styles sell well but return at twice the average is a different commercial proposition from the headline sell-through.',
+      "id": "pricing",
+      "title": "Pricing and discounts",
+      "meta": "This week",
+      "heading": "Markdowns, discount stacking and price bands",
+      "caption": "A markdown ladder for ageing styles, the discounts given with their approvals, and any price that crosses the ₹2,500 line. Every change is a dated record with who approved it.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Style",
+            "Days on floor",
+            "Now",
+            "Proposed",
+            "Margin after",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Georgette set, olive",
+              "78",
+              "₹3,200",
+              "₹2,560",
+              "28%",
+              [
+                "Propose",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Linen shirt, sky",
+              "91",
+              "₹1,800",
+              "₹1,440",
+              "31%",
+              [
+                "Propose",
+                "flag",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Block print dupatta",
+              "64",
+              "₹1,200",
+              "₹1,080",
+              "42%",
+              [
+                "Wait 2 weeks",
+                "muted"
+              ]
+            ],
+            [
+              "Chanderi kurta, rust",
+              "33",
+              "₹2,700",
+              "₹2,700",
+              "55%",
+              [
+                "Hold",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Discount given this week, by type"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Season offer",
+              "value": 58,
+              "display": "₹24,000"
+            },
+            {
+              "label": "Loyalty coupon",
+              "value": 24,
+              "display": "₹10,000",
+              "tone": "muted"
+            },
+            {
+              "label": "Manager discretion",
+              "value": 14,
+              "display": "₹6,000",
+              "tone": "muted"
+            },
+            {
+              "label": "Staff purchase",
+              "value": 5,
+              "display": "₹2,000",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Georgette set moves from ₹3,200 to ₹2,560, still above ₹2,500. A further step below it would change the rate. Your accountant should confirm before billing.",
+          "action": "Send to accountant"
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Customers and their sizes',
-      line:
-        'Customers are records with their purchases, sizes, preferences, returns and interaction history.',
-      why:
-        'Fashion has genuine repeat custom driven by fit, and knowing a customer’s size profile is what makes a call about new stock worth making.',
-      example:
-        'A new arrival in a customer’s size and preferred category is a specific reason to contact them rather than a broadcast.',
+      "id": "buying",
+      "title": "Suppliers and buying",
+      "meta": "Open deliveries and dues",
+      "heading": "Deliveries, rejects and what is owed",
+      "caption": "Each delivery checked against its challan and bill, rejects noted with a reason, and dues sorted by deadline. Small suppliers with a tighter deadline are marked.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Supplier",
+            "Delivery",
+            "Ordered",
+            "Received",
+            "Faulty",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Shree Textiles",
+              "12 Oct",
+              "120",
+              "112",
+              "6",
+              [
+                "Short 8, faulty 6",
+                "late",
+                "Debit note raised",
+                "ok"
+              ]
+            ],
+            [
+              "Meenakshi Garments",
+              "9 Oct",
+              "80",
+              "80",
+              "0",
+              [
+                "Matched",
+                "ok"
+              ]
+            ],
+            [
+              "Rama Tailoring Unit",
+              "7 Oct",
+              "60",
+              "58",
+              "2",
+              [
+                "Short 2",
+                "flag",
+                "Credit asked",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Supplier",
+            "Type",
+            "Bill",
+            "Due",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Rama Tailoring Unit",
+              "Small enterprise",
+              "₹1.2 lakh",
+              "Pay within 4 days",
+              [
+                "Pay now",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            ],
+            [
+              "Shree Textiles",
+              "Trader",
+              "₹2.8 lakh",
+              "30 Oct",
+              [
+                "On hold for debit note",
+                "info"
+              ]
+            ],
+            [
+              "Meenakshi Garments",
+              "Small enterprise",
+              "₹96,000",
+              "Pay within 9 days",
+              [
+                "Plan",
+                "flag"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Markdown, transfer and return authorisation',
-      line:
-        'Markdowns, inter-store transfers, returns beyond policy and write-offs move through defined approval steps with a recorded reason.',
-      why:
-        'Markdown is the largest discretionary decision in fashion retail and is frequently taken without any record of the reasoning.',
-      example:
-        'A markdown at week seven is an approval carrying the sell-through curve that justified it.',
+      "id": "team",
+      "title": "Team and shrinkage",
+      "meta": "This month, 3 outlets",
+      "heading": "Shifts, incentives and where pieces go missing",
+      "caption": "Attendance, sales and returns for each person, with the incentive sheet built from your rule. Count gaps are ranked by outlet and shift so the first conversation starts with the numbers.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "Outlet",
+            "Days",
+            "Sales",
+            "Returns",
+            "Incentive"
+          ],
+          "rows": [
+            [
+              "Pooja N.",
+              "Indiranagar",
+              "26",
+              "₹4.8 lakh",
+              "3%",
+              [
+                "₹6,200",
+                "ok"
+              ]
+            ],
+            [
+              "Imran S.",
+              "Koramangala",
+              "25",
+              "₹3.9 lakh",
+              "5%",
+              [
+                "₹4,900",
+                "ok"
+              ]
+            ],
+            [
+              "Divya K.",
+              "Whitefield",
+              "22",
+              "₹2.1 lakh",
+              "9%",
+              [
+                "₹2,000",
+                "flag",
+                "Reviewed",
+                "info"
+              ]
+            ],
+            [
+              "Ravi P.",
+              "Indiranagar",
+              "24",
+              "₹3.4 lakh",
+              "4%",
+              [
+                "₹4,300",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Count gap this month, by outlet (value)"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Whitefield",
+              "value": 70,
+              "display": "₹14,600"
+            },
+            {
+              "label": "Koramangala",
+              "value": 31,
+              "display": "₹6,400",
+              "tone": "muted"
+            },
+            {
+              "label": "Indiranagar",
+              "value": 14,
+              "display": "₹2,900",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Fitting rooms checked, evening",
+              "meta": "Indiranagar, Ravi, 8:15",
+              "done": true
+            },
+            {
+              "text": "Cycle count: rack 4, men's shirts",
+              "meta": "Due Fri, Koramangala",
+              "done": false
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'locations',
-      title: 'Stores, stockrooms and warehouse',
-      line:
-        'Locations roll into the business, with size-level stock, permissions and reporting following the same structure.',
-      why:
-        'Fashion stock is highly location-sensitive, and the same size sells out at one branch while ageing at another.',
-      example:
-        'Twenty-six styles where one store holds what another is short of, surfaced as transfer candidates.',
-    },
-    {
-      id: 'people',
-      title: 'Floor staff and store managers',
-      line:
-        'Staff are modelled once, and every sale, return, discount and transfer carries who handled it.',
-      why:
-        'Conversion and average basket vary sharply by individual in a business built on assisted selling.',
-      example:
-        'Units per transaction and return rate by staff member, from the transactions themselves.',
-    },
-    {
-      id: 'records',
-      title: 'Style information, images and supplier terms',
-      line:
-        'Style details, images, care information and supplier agreements attach to the record they belong to.',
-      why:
-        'Buying, transferring and marking down all require knowing what the style actually is, months after the person who bought it moved on.',
-      example:
-        'A carryover style being considered for clearance carries its original cost, its images and its supplier terms.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Season reporting from live records',
-      line:
-        'Sell-through by style, size and colour, markdown taken, return rate by reason and supplier, ageing by season and store comparison come from the operational records.',
-      why:
-        'Fashion decisions are weekly and the season is short. Monthly reporting arrives after the decision window has closed.',
-      example:
-        'Sell-through against week of season per style, current, rather than compiled after the season ended.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the season a question',
-      line:
-        'Verity AI answers from your own stock, sales, return and supplier records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions that matter cross the size matrix, the calendar and the supplier at once, which is why they are rarely asked.',
-      example:
-        '"Which styles are selling well but out of core sizes?" returns eighty-four, and one instruction raises the repeat orders.',
-    },
-    {
-      id: 'control',
-      title: 'Who can discount and transfer',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Markdown authority and transfer authority are where a fashion business’s margin is decided, often at branch level.',
-      example:
-        'Cost and margin visible to buyers and owners; floor staff see availability, size profiles and customer history.',
-    },
-    {
-      id: 'communication',
-      title: 'Fit and quality notes on the style',
-      line:
-        'Comments, notifications and activity attach to the style, supplier or customer they concern.',
-      why:
-        'The knowledge that a supplier’s garments run a size small exists on the shop floor and never reaches the buyer.',
-      example:
-        'Fit complaints recorded against a style are visible at the next buying decision rather than remembered by one manager.',
-    },
+      "id": "customers",
+      "title": "Customers and orders",
+      "meta": "Open items",
+      "heading": "Regulars, exchanges, alterations and chat enquiries",
+      "caption": "Regulars past their usual gap with their past occasions and sizes, the alterations due soon, and enquiries from chat that nobody has answered. Exchanges link to the original bill with a reason.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Customer",
+            "Last visit",
+            "Past occasions",
+            "Size",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Neha Sharma",
+              "14 Feb",
+              "Wedding, Diwali",
+              "M",
+              [
+                "Call",
+                "late",
+                "Visited 11 Oct",
+                "ok"
+              ]
+            ],
+            [
+              "Ayesha Khan",
+              "2 Mar",
+              "Eid, office wear",
+              "S",
+              [
+                "Call",
+                "flag"
+              ]
+            ],
+            [
+              "Priya Menon",
+              "9 Apr",
+              "Sister's wedding",
+              "L",
+              [
+                "Message",
+                "flag",
+                "Declined",
+                "muted"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Alterations due",
+              "cards": [
+                {
+                  "title": "Hem, georgette set",
+                  "meta": "Neha S., Thu",
+                  "tag": [
+                    "At risk",
+                    "late",
+                    "Ready",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Sleeve fit, kurta",
+                  "meta": "Imran Q., Fri",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Chat enquiries",
+              "cards": [
+                {
+                  "title": "Olive set, size M, price?",
+                  "meta": "Instagram, 6 hours ago",
+                  "tag": [
+                    "No reply",
+                    "late",
+                    "Quoted",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Rust kurta in L, two pieces",
+                  "meta": "WhatsApp, today",
+                  "tag": [
+                    "Reply",
+                    "flag"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'The season, recorded as it runs.',
-  workflowsLede:
-    'These already happen. Recorded at size level, they become the numbers the next buy is made on.',
-  workflows: [
+  "dayHeading": "The same Saturday, before and after.",
+  "dayLede": "What changes is not the fashion. It is that the stock, the discounts and the customers leave a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Season intake',
-      steps: [
-        'Purchase order raised against the supplier by style, size and colour',
-        'Delivery received and checked against the order at size level',
-        'Stock taken in with season, cost and location',
-        'Allocation across stores recorded as movement',
-        'Sell-through tracking begins against week of season',
-      ],
-      note:
-        'Checking receipt at size level is what makes the sell-through curve trustworthy later.',
+      "time": "10:00",
+      "before": "The manager opens up, looks at the racks and guesses which sizes are low.",
+      "after": "The Today screen lists the styles with broken runs, the transfer drafted from the stuck outlet and the tags to correct."
     },
     {
-      name: 'Broken size run',
-      steps: [
-        'Style identified as selling with core sizes exhausted',
-        'Availability checked across other stores at size level',
-        'Transfer raised where stock exists elsewhere',
-        'Repeat order raised against the supplier where it does not',
-        'Outcome recorded against the style',
-      ],
-      note:
-        'The window for a repeat order closes long before the season does, which is why aggregate sell-through misses it.',
+      "time": "12:30",
+      "before": "A customer asks for the olive set in M. Staff say it is out of stock and she leaves.",
+      "after": "Staff see that Koramangala has two and the transfer is already open. They offer to send it, and the enquiry is recorded."
     },
     {
-      name: 'Markdown decision',
-      steps: [
-        'Sell-through compared against week of season per style',
-        'Remaining stock profiled by size and colour',
-        'Markdown proposed with the projected clearance',
-        'Approval routed above the discretion threshold',
-        'Price change recorded against the style',
-        'Result compared with the original cost',
-      ],
-      note:
-        'Markdown becomes a decision with a curve behind it rather than a reaction to a slow week.',
+      "time": "3:00",
+      "before": "A manager gives a regular 20 percent on top of the festival offer to close a sale.",
+      "after": "The stack goes over the ceiling, waits for approval with a reason, and the owner decides in one tap."
     },
     {
-      name: 'Return and reason',
-      steps: [
-        'Return recorded against the original transaction and size',
-        'Reason captured — fit, quality, colour, changed mind',
-        'Stock restored or written off depending on condition',
-        'Reason aggregated against style and supplier',
-        'Buying flagged where a supplier exceeds return thresholds',
-      ],
-      note:
-        'Without the reason a return is noise. With it, it is the earliest signal about a supplier.',
+      "time": "5:30",
+      "before": "An exchange arrives with no bill and a worn piece. Staff agree to avoid an argument.",
+      "after": "The return is linked to the bill, the reason and condition are recorded, and the piece is routed to alterations instead of the rail."
     },
     {
-      name: 'Inter-store transfer',
-      steps: [
-        'Size-level shortfall identified at one store',
-        'Holding location identified from availability',
-        'Transfer raised and approved',
-        'Stock dispatched and received',
-        'Both locations updated at size level',
-      ],
-      note:
-        'Transfers stop being informal favours between managers and become recorded movement.',
+      "time": "8:30",
+      "before": "Each outlet sends its day's sales in a message in a different format.",
+      "after": "Sales, discounts and returns by outlet are already on the Today screen, and the owner reads decisions rather than a table."
     },
     {
-      name: 'Season review and next buy',
-      steps: [
-        'Sell-through, markdown and return rate pulled by style and supplier',
-        'Size curve performance reviewed against what was bought',
-        'Carryover value by season and category assessed',
-        'Buying decisions raised against the evidence',
-        'Decisions recorded against suppliers and categories',
-      ],
-      note:
-        'The next season is bought against the last season’s matrix rather than its headline.',
-    },
+      "time": "Month end",
+      "before": "The incentive sheet, the supplier statements and the debit notes are rebuilt by hand.",
+      "after": "The incentive sheet was built from the day's records, and each delivery was matched when it arrived, so the month's purchases are already clean."
+    }
   ],
-
-  ai: {
-    heading: 'Ask the matrix, not the total.',
-    lede:
-      'Verity AI reads the same size-level stock, sales, return and supplier records the business runs on. It answers from your own stores, only shows what the person asking can see, and can turn the answer into work assigned to the buyer or the store.',
-    panelMeta: 'Grounded in your season records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which styles are selling well but out of core sizes?',
-      'What is sell-through by style against week of season?',
-      'Which suppliers have return rates above the store average, and for what reason?',
-      'Which stores hold sizes that other stores are short of?',
-      'How much prior-season stock is still held, and at what value?',
-      'Which colours underperformed across the season?',
-      'What markdown has been taken by category so far?',
-      'Which customers bought in a size and category we have just received?',
-      'Summarise where the season stands.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time in your outlets, build Verity around how you buy, price and sell, bring your data in, and stay on after go-live.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a morning and a closing in your busiest outlet, and a visit to the stockroom. Follow a delivery from challan to rack, a discount from request to bill, and an exchange from counter to rail.",
+        "you": "Two to three hours of yours and your manager's. Access to a season of billing reports, your supplier bills and the staff roster.",
+        "get": "A written map of your store: styles and sizes, outlets, suppliers, discount rules, incentive rules and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up styles with their size scales, outlets and stockrooms, discount ceilings, markdown steps, incentive rules, supplier terms and the six screens, in your own terms.",
+        "you": "Review the setup with your manager and accounts person. Tell us where a rule or a size scale is wrong.",
+        "get": "A working Verity with your real styles, outlets, staff and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in the current stock by style and size, supplier balances, repeat customers and open alterations from the sheets and registers you keep. Train sales staff, managers and the accounts person at their own stations.",
+        "you": "A stock count by outlet and your customer list in whatever form it exists. One hour with each role.",
+        "get": "Your styles, stock and customers inside Verity, and a team that has used it through a weekend."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on through your next sale and your next buying round. Tune the markdown steps and limits, add an outlet when you open one, and review the numbers with you.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how you buy and sell, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "A season of billing reports by item",
+      "Supplier bills and challans for the last two months",
+      "Your customer list, even if it is phone contacts",
+      "The staff roster and the incentive rule",
+      "The current discount and markdown practices as you run them"
+    ],
+    "time": "About 9 to 11 hours of your own time across the four weeks, mostly in week 1. Your manager and accounts person need a few more.",
+    "after": "Nobody is hired to run Verity. Bills, deliveries and counts are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The signals that arrive too late to act on.',
-  automationLede:
-    'Each runs from the size-level records at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your store a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own sales, stock, supplier and customer records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which styles are about to lose their core sizes?",
+        "a": "Five styles have fewer than two pieces left in M or L in the busiest outlet, and three of them still have stock in another outlet.",
+        "rows": [
+          [
+            "Chanderi kurta, rust",
+            "M, L low"
+          ],
+          [
+            "Cotton A-line, indigo",
+            "L low"
+          ],
+          [
+            "Linen shirt, sky",
+            "M low"
+          ]
+        ],
+        "action": "Draft transfers from the outlets that hold them"
+      },
+      {
+        "q": "Which styles should we mark down this week?",
+        "a": "Two styles are past 75 days with under 35% sold. Marking them down by 20% still leaves a margin above your floor.",
+        "rows": [
+          [
+            "Georgette set, olive",
+            "28% sold"
+          ],
+          [
+            "Linen shirt, sky",
+            "31% sold"
+          ]
+        ],
+        "action": "Send to the owner for approval"
+      },
+      {
+        "q": "Where did our discount go last week?",
+        "a": "₹41,000 was given, of which ₹24,000 was the season offer. The rest was split between loyalty coupons and manager discretion, and Whitefield gave the most by percentage.",
+        "rows": [
+          [
+            "Season offer",
+            "₹24,000"
+          ],
+          [
+            "Loyalty coupon",
+            "₹10,000"
+          ],
+          [
+            "Manager discretion",
+            "₹6,000"
+          ],
+          [
+            "Staff purchase",
+            "₹2,000"
+          ]
+        ],
+        "action": "Review manager discretion with each outlet head"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to customers and suppliers; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'A style sells out of its core sizes',
-      steps: [
-        'Broken run flagged with the sizes affected',
-        'Availability checked across other stores',
-        'Transfer or repeat order raised for the buyer',
-        'Outcome recorded against the style',
-      ],
+      "when": "A style loses its core sizes in an outlet",
+      "then": [
+        "Marked as a broken run",
+        "Transfer drafted from the outlet that holds stock",
+        "Closed when the receiving outlet signs the count"
+      ]
     },
     {
-      trigger: 'Sell-through falls behind the curve for its week of season',
-      steps: [
-        'Style flagged with its sell-through against plan',
-        'Markdown review task assigned to the buyer',
-        'Decision recorded with the projected clearance',
-      ],
+      "when": "A style passes your ageing limit with low sell-through",
+      "then": [
+        "Added to the markdown list with the margin at each step",
+        "Routed to the owner",
+        "Price change recorded with who approved it"
+      ]
     },
     {
-      trigger: 'A return is recorded with a fit or quality reason',
-      steps: [
-        'Reason attached to the style and supplier',
-        'Rate recalculated against the store average',
-        'Buying flagged where the supplier exceeds threshold',
-      ],
+      "when": "A discount stack goes over your ceiling",
+      "then": [
+        "Held for approval",
+        "Routed to the owner with the reason",
+        "Decision recorded against the bill"
+      ]
     },
     {
-      trigger: 'One store is short of a size another holds',
-      steps: [
-        'Transfer candidate surfaced with both locations',
-        'Transfer raised for approval',
-        'Movement recorded on completion',
-      ],
+      "when": "A delivery arrives short or faulty",
+      "then": [
+        "Mismatch marked against the supplier",
+        "Debit note task to the accounts person",
+        "Bill held from payment until settled"
+      ]
     },
     {
-      trigger: 'Stock passes into carryover',
-      steps: [
-        'Style flagged with season, value and remaining size profile',
-        'Clearance review assigned',
-        'Decision recorded against the style',
-      ],
+      "when": "An alteration is two days from its promised date",
+      "then": [
+        "Flagged on the alterations board",
+        "Task to the shop to tell the customer",
+        "Closed when the customer collects"
+      ]
     },
     {
-      trigger: 'A discount exceeds the threshold',
-      steps: [
-        'Transaction held at the approval step',
-        'Routed with the reason attached',
-        'Decision recorded against the sale',
-      ],
-    },
+      "when": "A regular customer passes their usual visit gap",
+      "then": [
+        "Added to the call list with past occasions and size",
+        "Task to the staff member who knows them",
+        "Outcome recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the buyer and the owner can see.',
-  intelligenceLede:
-    'Season performance drawn from records created at the size the sale happens.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a fashion store has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when someone asks.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.",
+    "items": [
+      {
+        "name": "GST rate by price per piece",
+        "what": "From 22 September 2025, apparel is generally taxed at 5% up to ₹2,500 per piece and 18% above, tested on the sale value and not automatically on the printed price. A small price change near ₹2,500 can move the rate. The GST Council and your accountant decide how discounts are treated, so confirm before relying on any single reading.",
+        "how": "Each style records its price, discount and final sale value, and Verity flags those that cross the line, so the correct rate can be agreed before billing. Verity does not file returns.",
+        "source": {
+          "name": "Outlook Business, PTI, September 2025: https://www.outlookbusiness.com/news/garments-priced-above-25k-to-be-costlier-will-hurt-middle-class-affordability-industry-bodies; TaxAJ commentary",
+          "url": "https://www.taxaj.com/learn/gst-for-apparel-and-footwear-businesses-after-slab-change-pricing-impa/"
+        }
+      },
+      {
+        "name": "Paying small suppliers within the allowed days",
+        "what": "Under Section 43B(h) of the Income-tax Act, an amount owed to a micro or small enterprise supplier is generally deductible in the same year only if paid within the 15 day default, or the agreed term up to 45 days. Wholesale and retail traders are generally outside this rule. Confirm the details with your accountant.",
+        "how": "Each supplier record carries its type and terms, and Verity lists bills near their deadline.",
+        "source": {
+          "name": "ClearTax on Section 43B(h)",
+          "url": "https://cleartax.in/s/section-43bh-of-income-tax-act"
+        }
+      },
+      {
+        "name": "Seller liability for product defects",
+        "what": "The Consumer Protection Act 2019 extends product liability to product sellers, with the relevant sections in force from 20 July 2020.",
+        "how": "Each complaint and return is a record linked to the bill, the style and the supplier, so a defect has a history and a supplier to pass it to.",
+        "source": {
+          "name": "S.S. Rana on the Act",
+          "url": "https://ssrana.in/articles/consumer-protection-act-2019/"
+        }
+      },
+      {
+        "name": "Local trade and shop registrations",
+        "what": "A store generally needs its municipal trade licence and Shops and Establishments registration, which have their own renewal dates and staff rules, and these differ by city and state.",
+        "how": "Each registration is stored with its renewal date and owner, so a renewal becomes a task weeks before it lapses."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A salesperson should not see supplier margins. The accountant should not edit stock counts. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Season',
-      points: [
-        'Sell-through by style against week of season',
-        'Performance by colour and by size curve',
-        'Carryover value by season and category',
-        'Markdown taken against original cost',
-      ],
+      "role": "Owner",
+      "question": "Which outlets, styles and discounts are making money?",
+      "sees": "Sales, margin and discount by outlet and style, ageing stock, shrinkage, supplier dues and every outlet side by side."
     },
     {
-      area: 'Stock',
-      points: [
-        'Availability at size and colour across stores',
-        'Broken size runs on selling styles',
-        'Stock ageing by season',
-        'Transfers raised and completed',
-      ],
+      "role": "Store manager",
+      "question": "What needs sorting in my outlet today?",
+      "sees": "Broken runs, transfers to receive, tags to correct, alterations due, exchanges to review and staff on shift."
     },
     {
-      area: 'Returns',
-      points: [
-        'Return rate by style, supplier and store',
-        'Reasons recorded and their distribution',
-        'Returns that could not be restored to stock',
-        'Return behaviour by customer',
-      ],
+      "role": "Buyer",
+      "question": "What should we reorder, and what should we not buy again?",
+      "sees": "Sell-through by style and size, season comparison, supplier fault rates and delivery lead times."
     },
     {
-      area: 'Suppliers',
-      points: [
-        'Sell-through and markdown by supplier',
-        'Return rate and fit complaints by supplier',
-        'Delivery reliability against ordered dates',
-        'Cost movement across repeat buys',
-      ],
+      "role": "Salesperson",
+      "question": "Who is coming, what do they want and what is pending?",
+      "sees": "Customer history and sizes, enquiries assigned to me, my sales and my incentive sheet."
     },
     {
-      area: 'Customers',
-      points: [
-        'Purchase frequency and size profile',
-        'Category and colour preference',
-        'Customers who have stopped buying',
-        'Average basket and units per transaction',
-      ],
-    },
-    {
-      area: 'Stores',
-      points: [
-        'Sales and conversion by store',
-        'Units per transaction by staff member',
-        'Discount rate against approval thresholds',
-        'Store comparison on sell-through and carryover',
-      ],
-    },
+      "role": "Accountant",
+      "question": "What was sold, bought and owed?",
+      "sees": "Sales by tax band and payment mode, supplier bills matched to deliveries, debit notes and deadlines for small suppliers."
+    }
   ],
-  intelligenceNote:
-    'All of it comes from recording sales, receipts and returns at size and colour, which is the level the business already trades at.',
-
-  rolesHeading: 'One season, five different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each role opens on what they need.',
-  roles: [
-    {
-      role: 'Owner',
-      question: 'Is the season working?',
-      focus: 'Sell-through against plan, markdown taken, carryover value, return rate, store comparison.',
-    },
-    {
-      role: 'Buyer',
-      question: 'What should I repeat and what should I mark down?',
-      focus: 'Size-level sell-through, broken runs, supplier performance and return rate, ageing by season.',
-    },
-    {
-      role: 'Store manager',
-      question: 'What is on the floor and what is missing?',
-      focus: 'Availability by size, transfer candidates, returns to process, approvals pending.',
-    },
-    {
-      role: 'Floor staff',
-      question: 'Do we have this in her size?',
-      focus: 'Availability across stores at size level, customer size profile and history, alterations outstanding.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is owed and what was written down?',
-      focus: 'Supplier payables, markdown and write-off approved, daily takings, return credits.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing system at every outlet. We agree during setup how bills and returns reach Verity.",
+      "Your visual merchandising and window displays.",
+      "WhatsApp and Instagram for customers and suppliers. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Run your billing counters or take payments.",
+      "Sell online or take orders from customers.",
+      "Send messages to customers or suppliers on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your styles, stock by size, supplier balances, repeat customers and open alterations across from the sheets, registers and phones you use now, outlet by outlet, so you keep trading while it happens."
+  },
+  "faqHeading": "Questions fashion store owners ask.",
+  "faqs": [
+    [
+      "My billing system already shows sales by item. What does Verity add?",
+      "Billing shows what sold. Verity adds what is left by size, how old it is, where it should move, what each markdown step leaves in margin, and who bought it. It reads from your billing, so staff do not enter sales twice."
+    ],
+    [
+      "Does Verity replace my billing system?",
+      "No. Your billing system keeps taking payments and raising bills. We agree during setup how bills, returns and discounts reach Verity."
+    ],
+    [
+      "How does it handle sizes and colours?",
+      "Each style has a size scale and colours you define, and stock is held by size and colour in each outlet. That is what lets Verity tell you a run has broken before the customers do."
+    ],
+    [
+      "We sell some pieces over Instagram and courier them. Can it track that?",
+      "It records each enquiry, the quote, the order and the return, and who owns it. It does not take orders or payments online and does not message customers on its own. Staff reply and Verity tracks the follow-up."
+    ],
+    [
+      "Can it help with the ₹2,500 GST line?",
+      "It shows which prices and discounts cross the line so your team and your accountant can agree the treatment. It does not decide the rate and does not file returns."
+    ],
+    [
+      "I have two outlets and a small team. Is this too much?",
+      "The leaks are the same and there is less time to see them. We set up only what you need in the same four weeks and leave out what you do not."
+    ],
+    [
+      "Will my staff record exchanges and counts?",
+      "Only if it takes seconds, so we keep the steps short and train at the shop during a real shift. We start with the few reasons that matter, not a long form."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so salespeople, managers and your accountant each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of outlets, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your store runs."
+    ]
   ],
-
-  useCasesHeading: 'What fashion retailers use Verity for',
-  useCases: [
-    {
-      name: 'Size and colour level stock',
-      body: 'Stock tracked at the level the sale happens, so a broken size run on a selling style is visible while a repeat order can still fix it.',
-    },
-    {
-      name: 'Markdown timing',
-      body: 'Sell-through measured against week of season per style, so discounting is a timed decision with a curve behind it.',
-    },
-    {
-      name: 'Return reason capture',
-      body: 'Returns carrying fit, quality, colour or changed-mind reasons attached to the style and supplier, turning noise into the earliest supplier signal.',
-    },
-    {
-      name: 'Inter-store transfers',
-      body: 'One size-level view of availability across stores, with transfers as recorded movement rather than informal favours.',
-    },
-    {
-      name: 'Season buying evidence',
-      body: 'Sell-through, markdown and return rate by supplier and colour, so the next buy is made against the last season’s matrix.',
-    },
-    {
-      name: 'Carryover control',
-      body: 'Ageing by season with remaining size profile, so prior-season stock is cleared while it is still worth clearing.',
-    },
-    {
-      name: 'Customer size profiles',
-      body: 'Purchases, sizes and preferences on the customer record, so a new arrival is a specific reason to call rather than a broadcast.',
-    },
-    {
-      name: 'Discount and transfer control',
-      body: 'Markdown and transfer authority as approvals with reasons and attribution.',
-    },
-    {
-      name: 'Asking the season questions',
-      body: 'Plain-language questions across the size matrix, calendar and supplier at once, with follow-ups assigned in the same step.',
-    },
+  "related": [
+    "clothing-boutiques",
+    "retail-stores",
+    "shoe-stores",
+    "department-stores",
+    "garment-manufacturers",
+    "tailors"
   ],
-
-  migration:
-    'Your billing software and the season buying sheets are mapped during implementation. Stock is brought across at size and colour, along with suppliers, customers and open balances, and Verity is introduced as the operational layer while the season continues.',
-
-  faqHeading: 'Questions fashion retailers ask',
-  faqs: [
-    [
-      'What can AI software do for a fashion store?',
-      'Verity AI answers questions from your own size-level stock, sales, return and supplier records: which styles are selling but out of core sizes, what sell-through looks like against week of season, which suppliers have above-average return rates and why, which stores hold sizes others are short of. Each answer can become a repeat order, a transfer or a markdown review assigned to the buyer.',
-    ],
-    [
-      'Does Verity track stock by size and colour?',
-      'Yes, and that is the point. Stock is held per style, size, colour and season, because the sale happens there and so does every decision downstream of it. Style-level totals hide broken size runs, which is the characteristic way fashion stock dies.',
-    ],
-    [
-      'Can it help decide when to mark down?',
-      'Sell-through is measured per style against week of season, with the remaining stock profiled by size and colour, so a markdown is proposed with a projected clearance rather than started when the season feels over.',
-    ],
-    [
-      'Does it record why items are returned?',
-      'Returns carry a reason — fit, quality, colour, changed mind — and attach to the style and the supplier. That converts a return rate into a supplier signal rather than an unexplained cost of doing business.',
-    ],
-    [
-      'Can we move stock between stores?',
-      'Availability across every store is one view at size level, and transfers are raised, approved and recorded as movement. A size that is dead at one branch and short at another surfaces as a transfer candidate.',
-    ],
-    [
-      'Does Verity replace our billing software?',
-      'No. Your billing setup is mapped during implementation and continues to run. Verity is the operational layer over it — stock at size level, buying, returns, transfers, markdown approvals and the reporting across them.',
-    ],
-    [
-      'Can it help with next season’s buying?',
-      'Sell-through, markdown taken and return rate by style, colour and supplier come from the records the season produced, so the next buy is made against the matrix rather than against a general sense of what did well.',
-    ],
-    [
-      'Is it suitable for a single store?',
-      'A single store still has a size matrix, a markdown calendar, a return rate and carryover stock. Those are the parts Verity handles. Additional stores add the transfer view without further setup.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how the business buys and trades, configuration, migration of stock at size and colour, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with the styles that are selling and unbuyable.',
-  ctaLede:
-    'Broken size runs on good sellers are the fastest money in fashion retail and the hardest thing to see in a style-level report. Tell us how you track stock today.',
-
-  related: ['clothing-boutiques', 'shoe-stores', 'retail-stores', 'cosmetics-stores', 'jewellery-stores', 'garment-manufacturers'],
+  "ctaHeading": "Start with the sizes that ran out while the rail was full.",
+  "ctaLede": "Tell us how you buy and sell and we will show you the broken runs, the stuck stock and the discount stacking it would find, using your own numbers."
 };

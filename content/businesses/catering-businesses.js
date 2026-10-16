@@ -1,577 +1,1220 @@
 export default {
-  slug: 'catering-businesses',
-  status: 'published',
-  plural: 'catering businesses',
-  subject: 'catering business',
-
-  seo: {
-    title: 'AI business management software for catering businesses | Verity',
-    description:
-      'Verity connects event quotations, headcount changes, off-site staffing, equipment mobilisation and per-event costing into one operational system.',
-    keywords: [
-      'AI software for catering businesses',
-      'catering management software',
-      'event catering costing and staffing software',
-      'banquet and event operations software',
-    ],
+  "schema": 2,
+  "slug": "catering-businesses",
+  "status": "published",
+  "plural": "catering businesses",
+  "subject": "catering business",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Catering management software for Indian caterers | Verity",
+    "description": "The leaks in a catering business, from headcount changes and over-cooking to staff no-shows and unpaid balances, what each costs, and the Verity screens that fix them.",
+    "keywords": [
+      "catering management software India",
+      "event order and headcount planning",
+      "caterer staff and vehicle allocation",
+      "wedding catering quotation tracking",
+      "catering ingredient purchase planning"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for catering',
-    headline: 'The headcount changed on Thursday. Everything downstream of it did not.',
-    lede:
-      'A catering business commits food, staff and equipment against a number the client keeps revising. Verity makes the event the record, so a change propagates instead of being remembered.',
-    note: 'Runs alongside your existing billing and accounting.',
-    panel: {
-      title: 'Events',
-      meta: 'Next 14 days',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Events confirmed', value: '18', note: '₹64 L contracted' },
-        { label: 'Headcount changes', value: '7', note: 'in the last week' },
-        { label: 'Staff shortfall', value: '2 events', note: 'against required crew' },
-        { label: 'Deposits held', value: '₹19 L', note: 'against undelivered events' },
-      ],
-      rows: [
-        { name: 'Saturday event headcount up 80 with no revised order', meta: 'Client confirmed Thursday · food not adjusted', active: true },
-        { name: 'Two events short of crew against requirement', meta: 'Both on the same date', active: true },
-        { name: 'Equipment double-booked across two events', meta: 'Same chafing sets · overlapping dates', active: true },
-        { name: 'Final balance unbilled on delivered event', meta: '₹4.2 L · 19 days ago', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own events in this shape.',
-    },
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "orders",
+    "suppliers",
+    "logistics",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for caterers",
+    "headline": "A caterer is paid for one evening. Everything that decides the profit happens before it.",
+    "lede": "A wedding plate is sold on a promise: this many guests, this menu, this time. Behind it are a headcount that changes on the last day, a kitchen that cooks by feel, waiters hired by phone, a van that must reach two venues, and a balance payment that arrives late. Verity puts each event on one record, from the first enquiry to the last unpaid rupee, so the plan is visible while there is still time to change it.",
+    "oneLine": "One system that knows every event, its final headcount, what to buy and cook, who is working and driving, and what the client still owes.",
+    "note": "Built for a business run from a phone and a notebook. The records come from the enquiries, menus and invoices you already handle.",
+    "screen": "owner",
+    "screenNote": "events, kitchen, crew, vehicles and money"
   },
-
-  overview: {
-    heading: 'Catering is a project business where the specification changes until the last week.',
-    paragraphs: [
-      'A catering business does not have a menu and a dining room. It has events: each one a project with a date that cannot move, a headcount that keeps moving, a menu agreed weeks earlier, a crew that has to be mobilised to a location, equipment that has to travel and come back, and a client who will judge the whole thing on one evening.',
-      'The defining problem is propagation. A headcount that changes on Thursday should change the food order, the crew requirement, the equipment list, the transport and the invoice. In most catering businesses it changes one of those — usually the food — and the rest are adjusted from memory if at all, which is why events run short of staff or over on cost.',
-      'The second is that everything happens off-site and simultaneously. Two events on the same Saturday compete for the same crew and the same chafing sets, and the conflict is usually discovered when the van is being loaded.',
-      'The third is per-event costing. A catering business only learns anything if it knows what an event actually cost — food, crew hours, transport, equipment, breakages — against what was quoted. Most know the revenue and estimate the rest, which means the loss-making event types are never identified.',
-      'Verity makes the event the record. Headcount, menu, crew, equipment, transport, costs and billing all hang off it, so a change on Thursday moves everything it should.',
+  "today": {
+    "heading": "Most caterers can cook for a thousand and still cannot say what an event earned.",
+    "paragraphs": [
+      "The event is easy to see: the stage, the buffet counters, the line at the live station. What is hard to see is everything behind it: how the quote was built, whether the headcount moved, how much was bought against how much was cooked, who was hired and who did not turn up, which van carried what, and which advance was never matched to its balance.",
+      "That information lives in pieces. The enquiry is a WhatsApp chat. The quote is a message or a printed sheet. The ingredient list is a handwritten page. The staff list is a call log. The utensils are counted by the head cook. The accounts sit with the owner or an accountant who sees them a month late.",
+      "India's wedding services market is put at USD 32.98 billion in 2025 by one market research firm, with catering the largest segment at 34.9 percent, and the same firm describes the market as highly fragmented, with local vendors such as caterers holding most of the revenue. Many caterers compete, so margin comes from running events tighter, not from selling more."
     ],
+    "stack": [
+      "WhatsApp for enquiries, clients and staff",
+      "Notebook or Excel quotes and menus",
+      "Handwritten purchase lists",
+      "Phone calls for waiters and cooks",
+      "Accountant's books, weeks behind"
+    ],
+    "stackNote": "Each one works while the owner is awake and on the phone. None of them add up an event."
   },
-
-  terminology: [
-    ['Events, functions, banquets', 'Work'],
-    ['Quotations, confirmations, final bills', 'Orders'],
-    ['Clients, planners, venues', 'Relationships'],
-    ['Ingredients, disposables, equipment', 'Inventory'],
-    ['Chefs, service crew, supervisors', 'People'],
-    ['Deposits, revisions, approvals', 'Workflows'],
-    ['Kitchen, stores, event sites', 'Locations'],
+  "painsHeading": "Where a caterer actually loses money.",
+  "painsLede": "These are the situations caterers describe again and again. For each one: what it looks like in an ordinary season, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Sales",
+      "title": "Enquiries scattered across chats and calls",
+      "scene": "A bride's father rings on Tuesday, an office manager messages on Wednesday, a college sends a mail on Thursday. Each wants a menu, a rate and a date. The owner replies when the kitchen is quiet, and by then one has gone to someone else.",
+      "cost": "Example arithmetic: five lost wedding enquiries a season, each worth a ₹3 lakh event at a 15 percent margin, is ₹2.25 lakh of profit that never reached you.",
+      "fix": "Each enquiry becomes a record with the date, venue, expected headcount, budget and an owner. Verity lists the ones with no reply or no follow-up after the tasting, and tells the person responsible. You still reply to the client.",
+      "screen": "enquiries"
+    },
+    {
+      "area": "Sales",
+      "title": "Quotes built from memory",
+      "scene": "The per-plate rate is quoted from the last similar wedding. Vegetable prices have moved since. The client adds a live counter and a dessert after the quote, and the rate is not revised.",
+      "cost": "Example arithmetic: a quote of ₹850 a plate for 500 guests is ₹4.25 lakh. If the food cost has moved ₹40 a plate since the rate was set, the event gives up ₹20,000 before any extra counter.",
+      "fix": "Each menu item carries its latest cost per plate from your purchase rates. A quote is built from the menu and headcount, and a change in the menu or the cost shows the effect on margin before the rate is confirmed.",
+      "screen": "events"
+    },
+    {
+      "area": "Planning",
+      "title": "The headcount that changes on the last day",
+      "scene": "The booking says 600. The family confirms 520 on Thursday, then 580 on Saturday morning. Cooking, staff and counters were planned for one number and the event runs on another.",
+      "cost": "Example arithmetic: with food cost near ₹180 a plate, cooking for 650 when 560 eat leaves 90 plates, about ₹16,200 of food. A vendor blog puts the cost of one error on a 1,000-plate wedding at ₹50,000 to ₹1 lakh.",
+      "fix": "The event record holds the guaranteed count, each revision with its date, and who gave it. Quantity, staff and vehicle plans follow the current count, and a late change goes to the kitchen and the crew lead as a task.",
+      "screen": "events",
+      "source": {
+        "name": "DineOpen, Best catering management software India, 2026",
+        "url": "https://www.dineopen.com/blog/best-catering-management-software-india"
+      }
+    },
+    {
+      "area": "Kitchen",
+      "title": "Cooking by feel, not by plate",
+      "scene": "The head cook knows how much dal goes in for 500 by hand. On a day with four events the same cook is in two places, and the dish for the second event is scaled from memory. One runs short at 9 pm, another is half returned.",
+      "cost": "Running short in the middle of a buffet loses the client's trust. Cooking too much loses food cost. Both come from unrecorded quantities.",
+      "fix": "Each dish is a recipe with its quantity per plate, scaled to the headcount. The kitchen sheet shows raw quantities and cooking batches for the event, and the actual use is recorded afterwards so the next scaling is closer.",
+      "screen": "kitchen"
+    },
+    {
+      "area": "Suppliers",
+      "title": "Buying for an event from the market, on the morning",
+      "scene": "Vegetables, meat, paneer and oil are bought the evening before. Prices move by the day. A second event the same morning competes for the same stock, and the purchase list is a photo of a handwritten page.",
+      "cost": "Rushed buying costs more per kilo, and over-buying ties up cash in produce that wilts. Rates paid are never compared with last time.",
+      "fix": "The event's recipes generate one purchase list, combined across events on the same dates. Rates paid go on the supplier record, and Verity flags a rate that has moved past your limit and shows which menus it touches.",
+      "screen": "kitchen"
+    },
+    {
+      "area": "People",
+      "title": "Waiters and helpers who do not turn up",
+      "scene": "Fifty waiters and helpers are arranged by calling a contractor and a few regulars. Two ask for more money on the day. Six do not come. The head waiter does not know who is meant for which counter.",
+      "cost": "Trained supply is thin in this trade. A hospitality industry article, citing a Ministry of Tourism study, put trained manpower at about 9 percent of the requirement and attrition at 20 to 25 percent, in 2013. A short crew means slow service and unhappy clients.",
+      "fix": "Each event has a crew list with roles, counters, call time and who confirmed. Verity keeps the pool of regulars with their roles, rates and past attendance, shows who is free, and builds a call list when someone drops out.",
+      "screen": "crew",
+      "source": {
+        "name": "Restaurant India, Issues and Challenges by Restaurant Industry, 2013",
+        "url": "https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121"
+      }
+    },
+    {
+      "area": "Scheduling",
+      "title": "Four events on one Saturday, one kitchen",
+      "scene": "In wedding season a Saturday has four bookings. Each wants the head cook, the best waiters and the big vessels. A clash is found on Friday night, when it is too late to say no.",
+      "cost": "A double-booked cook, kitchen or crew lead means a lower quality event or a lost one. Saying yes to the fifth enquiry without capacity risks the other four.",
+      "fix": "Events sit on one calendar with kitchen capacity, head cooks and crew leads marked per day. Verity shows a clash when a booking would push a day beyond what you can serve, before the date is confirmed.",
+      "screen": "crew"
+    },
+    {
+      "area": "Logistics",
+      "title": "Vans, vessels and chafing dishes that do not come back",
+      "scene": "A van leaves with counters, gas, vessels and 600 plates. Two venues in one evening. After the event, 40 plates, a chafing dish and a ladle are missing, and nobody knows which venue they stayed at.",
+      "cost": "Example arithmetic: a few missing items a week at an average of ₹800 each is about ₹60,000 over a season, plus the cost of an emergency hire.",
+      "fix": "Each event has a loading list with counts out and counts back. Verity records the vehicle and driver, shows what did not return, and ties the shortfall to the event so it can be recovered or written off.",
+      "screen": "upkeep"
+    },
+    {
+      "area": "Food safety",
+      "title": "Food travels for hours before it is served",
+      "scene": "The food is cooked at the base kitchen at 3 pm and served at a venue 40 km away at 8 pm. Hot food rides in open vessels. There is no time or temperature written down.",
+      "cost": "One bad plate at a wedding can mean sick guests, a police complaint and a lost reputation. Hot food is generally expected to stay above 60 degrees C and cold food below 5 degrees C, and cooked food should not sit between them for more than two hours.",
+      "fix": "Each dispatch records the cooking time, loading time, vehicle and temperature at departure and arrival, as a short checklist signed by the driver and the kitchen lead. The record exists if the client or an officer asks.",
+      "screen": "upkeep",
+      "source": {
+        "name": "Velco Legal India, FSSAI licence for caterers, 2026",
+        "url": "https://velcolegalindia.com/blog/fssai-license-caterers-event-food-services-india"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Advances, balances and extras nobody matched",
+      "scene": "An advance of ₹1.2 lakh was taken in cash and a further ₹60,000 by transfer. After the event the client adds a late-night snack and extra plates. The balance is sent in two instalments, one forgotten.",
+      "cost": "Example arithmetic: a ₹4.25 lakh event with 20 extra plates at ₹850 is ₹17,000 that is only collected if somebody wrote the extras down on the night.",
+      "fix": "The event record holds the quote, each payment received, extras added on the day and the balance. Verity shows balances by age and reminds the owner to chase, with the details at hand. You still speak to the client.",
+      "screen": "money"
+    },
+    {
+      "area": "Money",
+      "title": "Suppliers and contract labour paid in cash, with no trail",
+      "scene": "The vegetable supplier is paid in cash after each event. The contractor for waiters asks for the day's money in the evening. A decorator subcontract is settled in a handshake. At year end the accountant cannot match payments to events.",
+      "cost": "You cannot see the true cost of any event, and an arguing supplier cannot be answered with a record.",
+      "fix": "Supplier bills and labour payments are recorded against the event, with the rate, quantity and who approved. Verity shows what each event cost in food, labour, transport and subcontracts, and what is still owed to each supplier.",
+      "screen": "money"
+    },
+    {
+      "area": "Kitchen",
+      "title": "Leftover food and returned plates",
+      "scene": "At midnight there are 15 trays of rice and curry left, and nowhere to send them. At another event a family has asked to take food home. Nobody records what was cooked and what was left.",
+      "cost": "India wastes 78 to 80 million tonnes of food a year according to UNEP's 2024 index as reported in 2026, and extravagant weddings and banquets are named as a driver. For a caterer, every leftover tray is food cost with no sale.",
+      "fix": "The quantity cooked and the quantity left are recorded per dish at the end of each event. Verity compares them across events and clients, so the next cooking plan is trimmed where leftovers keep repeating.",
+      "screen": "kitchen",
+      "source": {
+        "name": "Drishti IAS on UNEP Food Waste Index 2024, 2026",
+        "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/indias-food-waste-conundrum/print_manually"
+      }
+    },
+    {
+      "area": "Customers",
+      "title": "Jain, allergy and special menu notes that get lost",
+      "scene": "A family said on the first call that a group of forty is Jain and two guests have a nut allergy. The note is in the owner's phone. On the day, the kitchen does not know.",
+      "cost": "A mistake in front of a thousand guests is the most expensive kind. An allergic reaction can mean harm to a guest and a legal matter.",
+      "fix": "Dietary and special-request notes sit on the event record and appear on the kitchen sheet and the counter plan for that event, with who took the request. Verity creates a check task for the counter lead before the event.",
+      "screen": "events"
+    },
+    {
+      "area": "Compliance",
+      "title": "Licences, medical certificates and training with no dates",
+      "scene": "The FSSAI certificate hangs in the office. Nobody is sure when the cooks' medical fitness certificates run out, whether the kitchen supervisor's training is current, or whether the venue needs a temporary permit for a large event.",
+      "cost": "A corporate or hotel client may ask for the papers before signing. A notice or a stopped event is a larger loss than the fine.",
+      "fix": "The licence, each food handler's medical fitness certificate and each supervisor's training certificate are records with an expiry date and an owner. A renewal is a task weeks before the date.",
+      "screen": "upkeep"
+    },
+    {
+      "area": "Relationships",
+      "title": "Corporate and recurring orders handled like one-offs",
+      "scene": "An office wants lunches for forty, five days a week. A school wants monthly events. The same menu and rate are re-quoted every time, the invoice is made by hand, and the billing date slips.",
+      "cost": "Recurring work is the steadiest cash a caterer has, and it is lost when a late invoice or a missed delivery makes the client look elsewhere.",
+      "fix": "A recurring order is a schedule with its menu, headcount, rate and billing day. Each delivery becomes a task for the kitchen and crew, and delivered counts feed the invoice record.",
+      "screen": "events"
+    },
+    {
+      "area": "Owner",
+      "title": "No clear picture of what each event earned",
+      "scene": "The season ends. You are tired and cash is in the account, but you cannot say which events, clients or menus made money. The profit appears in the accountant's statement three months later.",
+      "cost": "Without a margin per event nothing can be priced better, and the same loss-making kinds of event are accepted again.",
+      "fix": "Each event shows its revenue, food, labour, transport, subcontract and leftover cost, and what remains. Every morning, Verity lists the events that need a decision, each with an owner.",
+      "screen": "owner"
+    }
   ],
-
-  challengesHeading: 'One change, six consequences, one of them recorded.',
-  challengesLede:
-    'Catering failures are almost always a revision that did not reach everything it should have.',
-  challenges: [
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The market figures come from a market research firm and use its own definition of the wedding services market. The manpower figure is from 2013 and is shown with its year. The FSSAI bands are from a consultancy summary of the 2026 orders, so confirm them on FoSCoS or with your licensing authority. The food waste figure is relayed from UNEP by an education site, and covers all food, not catering alone.",
+  "facts": [
     {
-      problem: 'A headcount change does not propagate',
-      detail:
-        'The client adds eighty guests. The food order is revised; the crew requirement, equipment list and invoice are not.',
-      outcome:
-        'The event is one record, so a headcount change recalculates food, crew, equipment and billing together.',
+      "figure": "34.9%",
+      "text": "share of catering services in India's wedding services market in 2025, the largest segment, in a market of USD 32.98 billion. The market is highly fragmented, with local vendors holding most of the revenue.",
+      "source": {
+        "name": "IMARC Group, India Wedding Services Market, 2025",
+        "url": "https://imarcgroup.com/india-wedding-services-market"
+      }
     },
     {
-      problem: 'Crew and equipment are double-booked',
-      detail:
-        'Two events on the same date draw on the same people and the same equipment, and the clash is found while loading.',
-      outcome:
-        'Crew and equipment are committed against events, so a conflict is visible when the second event is confirmed.',
+      "figure": "₹1.5 crore",
+      "text": "turnover up to which a food business generally needs only basic FSSAI registration from 1 April 2026, up from ₹12 lakh. Above that, a state licence generally applies up to ₹50 crore.",
+      "source": {
+        "name": "SetIndiaBiz summary of FSSAI 2026 changes, 2026",
+        "url": "https://www.setindiabiz.com/blog/fssai-2026-reforms"
+      }
     },
     {
-      problem: 'Event cost is estimated, not measured',
-      detail:
-        'Revenue is known precisely and cost approximately, so which event types actually make money is a matter of belief.',
-      outcome:
-        'Food consumed, crew hours, transport, equipment and breakages are recorded against the event, so cost against quote is measured.',
+      "figure": "About 9%",
+      "text": "share of the hospitality industry's manpower requirement that is professionally trained, with attrition of 20 to 25 percent. This is a 2013 figure citing a Ministry of Tourism study.",
+      "source": {
+        "name": "Restaurant India, Issues and Challenges by Restaurant Industry, 2013",
+        "url": "https://www.restaurantindia.in/article/issues-and-challenges-by-restaurant-industry.6121"
+      }
     },
     {
-      problem: 'Equipment does not come back',
-      detail:
-        'Chafing sets, linen and serving equipment go out and return incompletely, and the loss is absorbed as a general expense.',
-      outcome:
-        'Equipment issued to an event is recorded movement, so shortfalls are attributable to a specific event and crew.',
-    },
-    {
-      problem: 'Final billing lags delivery',
-      detail:
-        'The event is done, everyone moves on, and the final balance against the deposit is raised weeks later.',
-      outcome:
-        'Delivery closes the event and raises the billing task, so the balance is aged from the event date.',
-    },
-    {
-      problem: 'Quotations are built from scratch each time',
-      detail:
-        'Similar events are quoted from memory, so pricing is inconsistent and the margin varies without anyone deciding it should.',
-      outcome:
-        'Past events with their actual costs are records, so a quotation starts from what a comparable event really cost.',
-    },
+      "figure": "78 to 80 million tonnes",
+      "text": "of food wasted in India each year, worth about ₹1.55 lakh crore, according to the UNEP Food Waste Index 2024 as reported in 2026.",
+      "source": {
+        "name": "Drishti IAS, 2026",
+        "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/indias-food-waste-conundrum/print_manually"
+      }
+    }
   ],
-
-  modulesLede:
-    'One system where the event is the record and everything hangs off it.',
-  modules: [
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Seven views, each built for one job. Names, columns and terms are set up in your own catering language.",
+  "screens": [
     {
-      id: 'work',
-      title: 'Events, from enquiry to delivery',
-      line:
-        'An event is work with a client, a date, a venue, a headcount, a menu, a crew requirement, an equipment list and a state.',
-      why:
-        'Everything in a catering business is downstream of the event, which is why the event has to be the record rather than a folder.',
-      example:
-        'Eighteen confirmed events in fourteen days, each showing its headcount, crew position and outstanding balance.',
+      "id": "owner",
+      "title": "Catering / This week",
+      "meta": "Season: wedding, November",
+      "heading": "The owner's morning view",
+      "caption": "Events this week with their final headcount, margin so far, money owed, crew gaps and anything that does not tie, with the items that need a decision under it. It replaces the late-night phone call to the head cook.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Events this week",
+              "value": "9",
+              "note": "4 on Saturday"
+            },
+            {
+              "label": "Plates to serve",
+              "value": "3,860",
+              "note": "up 180 since Monday"
+            },
+            {
+              "label": "Balance due",
+              "value": "₹6.4 lakh",
+              "note": "5 clients"
+            },
+            {
+              "label": "Crew gaps",
+              "value": "14",
+              "note": "for the weekend"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Margin so far, by event"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Sharma wedding, 620",
+              "value": 72,
+              "display": "18%"
+            },
+            {
+              "label": "Rao reception, 450",
+              "value": 54,
+              "display": "13%"
+            },
+            {
+              "label": "Tech park lunches, 5 days",
+              "value": 66,
+              "display": "16%"
+            },
+            {
+              "label": "Kapoor sangeet, 300",
+              "value": 30,
+              "display": "7%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Kapoor sangeet: two live counters added after the quote. Margin has dropped from 15% to 7%.",
+          "action": "Revise"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Sat clash: kitchen at 105% of capacity",
+              "meta": "Four events, one base kitchen",
+              "tag": [
+                "Decide",
+                "flag",
+                "Staggered",
+                "ok"
+              ]
+            },
+            {
+              "name": "Balance overdue, Mehta engagement",
+              "meta": "₹86,000, 9 days past due",
+              "tag": [
+                "Chase",
+                "late",
+                "Paid",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'orders',
-      title: 'Quotations, confirmations and final bills',
-      line:
-        'Quotations, revisions, deposits and final bills are records against the event, with the version that was agreed retained.',
-      why:
-        'Catering disputes are about what was agreed and when it changed, and both need to be on the record months later.',
-      example:
-        'A revised quotation after a headcount change, with the previous version retained and the difference visible.',
+      "id": "enquiries",
+      "title": "Enquiries and quotes",
+      "meta": "Open, by stage",
+      "heading": "No enquiry or tasting goes cold",
+      "caption": "Each enquiry has a date, a venue, a headcount, a budget, a quote and a next step. Anything unanswered is flagged. You still speak to the client; Verity makes sure someone does.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "New",
+              "cards": [
+                {
+                  "title": "Wedding, 500 guests",
+                  "meta": "Sat 22 Nov, Jaipur, budget ₹4 lakh",
+                  "tag": [
+                    "No reply 6 h",
+                    "late",
+                    "Called",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "College fest, 800 guests",
+                  "meta": "Fri 28 Nov, via email",
+                  "tag": [
+                    "Reply",
+                    "flag",
+                    "Quoted",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Tasting",
+              "cards": [
+                {
+                  "title": "Birthday, 150 guests",
+                  "meta": "Tasting Wed 5 pm",
+                  "tag": [
+                    "Confirm",
+                    "info"
+                  ]
+                },
+                {
+                  "title": "Corporate lunches, 40 daily",
+                  "meta": "Monthly rate asked",
+                  "tag": [
+                    "Quote",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Quoted",
+              "cards": [
+                {
+                  "title": "Engagement, 250 guests",
+                  "meta": "₹2.1 lakh, advance not paid",
+                  "tag": [
+                    "Follow up",
+                    "flag"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'inventory',
-      title: 'Ingredients, disposables and equipment',
-      line:
-        'Stock and equipment are held with cost and location, issued against events and reconciled on return.',
-      why:
-        'Catering stock leaves the building for every job, which makes issue and return the point at which loss happens.',
-      example:
-        'Chafing sets issued to Saturday’s event and reconciled on return, rather than counted next month.',
+      "id": "events",
+      "title": "Event",
+      "meta": "Sharma wedding, Sat 22 Nov",
+      "heading": "The event record, with the headcount that changed",
+      "caption": "Menu, final headcount and every revision, dietary notes, counters, quote and margin on one record. A late change goes to the kitchen and crew as a task, not as a phone call.",
+      "blocks": [
+        {
+          "type": "record",
+          "title": "Sharma wedding, reception dinner",
+          "sub": "Venue: Lotus Gardens, 38 km from base kitchen. Client: Rakesh Sharma",
+          "fields": [
+            [
+              "Headcount",
+              "620 (guaranteed 600)"
+            ],
+            [
+              "Rate",
+              "₹880 a plate"
+            ],
+            [
+              "Counters",
+              "Buffet, live chaat, dessert"
+            ],
+            [
+              "Dietary",
+              "Jain table of 40; 2 nut allergies"
+            ],
+            [
+              "Status",
+              [
+                "Count revised",
+                "late",
+                "Kitchen told",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "12 Nov",
+              "Count 600 confirmed by phone, advance ₹1.2 lakh"
+            ],
+            [
+              "18 Nov",
+              "Count up to 620. Kitchen sheet reissued"
+            ],
+            [
+              "19 Nov",
+              "Live chaat counter added, quote revised by ₹28,000"
+            ],
+            [
+              "Note",
+              "Jain table served first, separate utensils"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Menu item",
+            "Per plate",
+            "Cost",
+            "Plates",
+            "Margin"
+          ],
+          "rows": [
+            [
+              "Paneer main",
+              "1 portion",
+              "₹46",
+              "620",
+              [
+                "Healthy",
+                "ok"
+              ]
+            ],
+            [
+              "Dal and rice",
+              "1 portion",
+              "₹22",
+              "620",
+              [
+                "Healthy",
+                "ok"
+              ]
+            ],
+            [
+              "Live chaat counter",
+              "1 portion",
+              "₹38",
+              "620",
+              [
+                "Quote revised",
+                "flag",
+                "Added",
+                "ok"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'people',
-      title: 'Chefs, service crew and supervisors',
-      line:
-        'Staff and casual crew are modelled once, with skills, availability and the events they are committed to.',
-      why:
-        'Catering runs on a partly casual workforce committed across simultaneous events, which is exactly where double-booking happens.',
-      example:
-        'Two events on one date, both short against their crew requirement, visible when the second was confirmed.',
+      "id": "kitchen",
+      "title": "Kitchen and purchases",
+      "meta": "Combined for Saturday, 4 events",
+      "heading": "What to buy, what to cook, what was left",
+      "caption": "Raw quantities scaled to each event's headcount and combined into one purchase list. After the event, plates cooked against plates left are recorded, so the next plan is closer.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Needed",
+            "In store",
+            "To buy",
+            "Last rate",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Paneer (kg)",
+              "88",
+              "10",
+              "78",
+              "₹340",
+              [
+                "Rate +6%",
+                "flag",
+                "Agreed",
+                "ok"
+              ]
+            ],
+            [
+              "Basmati rice (kg)",
+              "210",
+              "180",
+              "30",
+              "₹96",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Onions (kg)",
+              "260",
+              "0",
+              "260",
+              "₹32",
+              [
+                "Buy Fri",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Cooking oil (L)",
+              "74",
+              "50",
+              "24",
+              "₹138",
+              [
+                "OK",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Cooked against left over, last 5 events"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Paneer main",
+              "value": 18,
+              "display": "6% left",
+              "tone": "muted"
+            },
+            {
+              "label": "Dal",
+              "value": 25,
+              "display": "8% left",
+              "tone": "muted"
+            },
+            {
+              "label": "Rice",
+              "value": 60,
+              "display": "19% left"
+            },
+            {
+              "label": "Sweets",
+              "value": 45,
+              "display": "14% left"
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'workforce',
-      title: 'Mobilisation, attendance and hours',
-      line:
-        'Assignment, attendance and hours worked stay connected to the event they served.',
-      why:
-        'Crew hours are the second-largest event cost and the least recorded, which is why per-event costing usually fails.',
-      example:
-        'Hours actually worked at an event against the hours quoted for it.',
+      "id": "crew",
+      "title": "Crew and vehicles",
+      "meta": "Saturday, 4 events",
+      "heading": "Who is working, who drives, and where",
+      "caption": "Every event has a crew list by role, a lead, a call time, a van and a driver. Gaps are marked per role. When someone drops out, the call list of free people is on the same screen.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Event",
+            "Cooks",
+            "Waiters",
+            "Helpers",
+            "Van, driver",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Sharma wedding",
+              "6 of 6",
+              "32 of 36",
+              "10 of 10",
+              "Van 1, Kumar",
+              [
+                "4 waiters short",
+                "late",
+                "Called",
+                "ok"
+              ]
+            ],
+            [
+              "Rao reception",
+              "4 of 4",
+              "20 of 20",
+              "6 of 6",
+              "Van 2, Salim",
+              [
+                "Full",
+                "ok"
+              ]
+            ],
+            [
+              "Kapoor sangeet",
+              "3 of 3",
+              "12 of 14",
+              "4 of 5",
+              "Van 3, Mohan",
+              [
+                "3 short",
+                "flag"
+              ]
+            ],
+            [
+              "Tech park lunches",
+              "2 of 2",
+              "4 of 4",
+              "2 of 2",
+              "Van 4, Pappu",
+              [
+                "Full",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Backup call list for waiters, Saturday",
+              "meta": "9 free, 6 confirmed",
+              "done": false
+            },
+            {
+              "text": "Head cook cleared for Sharma and Rao: staggered cooking times",
+              "meta": "Kitchen at 105% until staggered",
+              "done": true
+            }
+          ]
+        }
+      ]
     },
     {
-      id: 'relationships',
-      title: 'Clients, planners and venues',
-      line:
-        'Clients, event planners and venues are records with their events, preferences, requirements, terms and history.',
-      why:
-        'Repeat catering business comes through planners and venues, and those relationships are worth more than any single client.',
-      example:
-        'A planner who brought nine events this year is a relationship with a record rather than a familiar name.',
+      "id": "money",
+      "title": "Money",
+      "meta": "By event",
+      "heading": "What clients owe and what you owe",
+      "caption": "Advances, balances and extras per event, and what is owed to each supplier and to the crew. What an event cost, in food, labour, transport and subcontracts, sits beside what it earned.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Client",
+            "Quote",
+            "Received",
+            "Extras",
+            "Balance",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Sharma wedding",
+              "₹5.46 lakh",
+              "₹1.2 lakh",
+              "₹28,000",
+              "₹4.54 lakh",
+              [
+                "Due 24 Nov",
+                "info"
+              ]
+            ],
+            [
+              "Mehta engagement",
+              "₹2.1 lakh",
+              "₹1.24 lakh",
+              "₹0",
+              "₹86,000",
+              [
+                "9 days late",
+                "late",
+                "Chased",
+                "info"
+              ]
+            ],
+            [
+              "Rao reception",
+              "₹3.8 lakh",
+              "₹3.8 lakh",
+              "₹0",
+              "₹0",
+              [
+                "Cleared",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "cols": [
+            "Supplier",
+            "For",
+            "Bill",
+            "Matched to",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Gupta Vegetables",
+              "Sharma wedding",
+              "₹38,400",
+              "Delivery slip",
+              [
+                "Matched",
+                "ok"
+              ]
+            ],
+            [
+              "Hari Waiter Contractor",
+              "Rao reception",
+              "₹26,000",
+              "Crew list: 20",
+              [
+                "22 billed, 20 worked",
+                "late",
+                "Corrected",
+                "ok"
+              ]
+            ],
+            [
+              "Decor by Anita",
+              "Kapoor sangeet",
+              "₹45,000",
+              "Quote",
+              [
+                "Awaiting approval",
+                "flag"
+              ]
+            ]
+          ]
+        }
+      ]
     },
     {
-      id: 'workflows',
-      title: 'Revisions, deposits and approvals',
-      line:
-        'Headcount revisions, menu changes, discounts and deposit terms move through defined steps with recorded decisions.',
-      why:
-        'A revision is a commercial event, and treating it as a phone call is how catering businesses absorb cost changes.',
-      example:
-        'A headcount increase inside the cut-off raises a revision with the cost difference attached.',
-    },
-    {
-      id: 'suppliers',
-      title: 'Ingredient suppliers and hired equipment',
-      line:
-        'Suppliers are relationships with their orders, delivery reliability against event dates, hire terms and balances.',
-      why:
-        'An event date cannot move, so a supplier delivering late is a different category of failure here.',
-      example:
-        'Delivery reliability measured against event dates rather than against ordinary lead times.',
-    },
-    {
-      id: 'records',
-      title: 'Menus, specifications and site notes',
-      line:
-        'Menus, dietary requirements, floor plans and site access notes attach to the event they belong to.',
-      why:
-        'The crew arriving at a venue needs what was agreed and what the site requires, and both are usually in someone’s phone.',
-      example:
-        'Site access notes from the last event at the same venue, on the record for the next one.',
-    },
-    {
-      id: 'intelligence',
-      title: 'Per-event costing and pipeline reporting',
-      line:
-        'Cost against quote per event, crew hours against quoted, equipment loss, event type profitability and pipeline value come from the operational records.',
-      why:
-        'A catering business cannot price well until it knows what comparable events actually cost.',
-      example:
-        'Margin by event type, so the categories that lose money are identified rather than suspected.',
-    },
-    {
-      id: 'ai',
-      title: 'Ask the event book a question',
-      line:
-        'Verity AI answers from your own event, crew, stock and client records, respects permissions, and can create assigned follow-ups.',
-      why:
-        'The questions that matter are about conflicts and revisions in the next fortnight, which is exactly when nobody has time to look.',
-      example:
-        '"Which events in the next two weeks are short of crew?" returns two, with the mobilisation tasks assigned.',
-    },
-    {
-      id: 'locations',
-      title: 'Kitchen, stores and event sites',
-      line:
-        'Locations roll into the business, including event sites as temporary locations for stock and equipment.',
-      why:
-        'Treating an event site as a location is what makes issue and return reconcilable.',
-      example:
-        'Equipment at three simultaneous sites, each reconciled against what was issued.',
-    },
-    {
-      id: 'communication',
-      title: 'What the client changed and when',
-      line:
-        'Notes, notifications and activity attach to the event or client they concern.',
-      why:
-        'Catering runs on last-minute conversations, and the one nobody wrote down is the one that causes the failure.',
-      example:
-        'A dietary requirement mentioned on a call, recorded against the event where the chef will see it.',
-    },
-    {
-      id: 'control',
-      title: 'Who can revise and discount',
-      line:
-        'One permission model and one audit trail across every record.',
-      why:
-        'Revisions close to the date carry real cost, and agreeing them should be a recorded decision.',
-      example:
-        'A late headcount change accepted without a price revision becomes a visible, attributed decision.',
-    },
+      "id": "upkeep",
+      "title": "Licences and checks",
+      "meta": "Due in the next 60 days",
+      "heading": "Licences, certificates and what came back from the venue",
+      "caption": "Every licence and every cook's certificate has a date and a person. Each dispatch has a time and temperature check, and each event shows the items sent out and the items that came back.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Held by",
+            "Due",
+            "Owner",
+            "Status"
+          ],
+          "rows": [
+            [
+              "FSSAI registration or licence",
+              "Kitchen",
+              "Check category",
+              "Owner",
+              [
+                "Check",
+                "flag",
+                "Confirmed",
+                "ok"
+              ]
+            ],
+            [
+              "Medical fitness, Ramesh (cook)",
+              "Kitchen",
+              "Expired",
+              "Manager",
+              [
+                "Expired",
+                "late",
+                "Booked",
+                "info"
+              ]
+            ],
+            [
+              "Food safety supervisor training",
+              "Head cook",
+              "Dec 2026",
+              "Manager",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Temporary event permit, Lotus Gardens",
+              "Venue",
+              "Before 22 Nov",
+              "Owner",
+              [
+                "Check with venue",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Sharma wedding: hot food leaves base kitchen above 60 C",
+              "meta": "Driver Kumar, 4:10 pm",
+              "done": true
+            },
+            {
+              "text": "Sharma wedding: items back at the kitchen",
+              "meta": "Out 412, back 398, missing 14",
+              "done": false
+            }
+          ]
+        }
+      ]
+    }
   ],
-
-  workflowsHeading: 'The event is the record.',
-  workflowsLede:
-    'These already happen. Hung off one event record, a change in any of them reaches the rest.',
-  workflows: [
+  "dayHeading": "The same Saturday, before and after.",
+  "dayLede": "What changes is not the food. It is that the event leaves a record, and the record does the chasing.",
+  "day": [
     {
-      name: 'Enquiry to confirmed event',
-      steps: [
-        'Enquiry recorded against the client or planner',
-        'Date, venue and headcount captured',
-        'Menu and service level agreed',
-        'Quotation built against comparable past events and their actual costs',
-        'Deposit terms agreed and recorded',
-        'Event confirmed and crew, equipment and stock provisionally committed',
-      ],
-      note:
-        'Quoting from what comparable events actually cost is the single largest pricing improvement available.',
+      "time": "6:00 am",
+      "before": "The owner calls the head cook, the contractor and the supplier to check that everything for four events is on its way.",
+      "after": "The Saturday sheet shows each event's count, purchase list and crew. Onions are ordered, 4 waiters are short and the call list is open."
     },
     {
-      name: 'Headcount revision',
-      steps: [
-        'Client confirms a change to the headcount',
-        'Food requirement recalculated from the menu',
-        'Crew requirement recalculated against service ratios',
-        'Equipment and transport requirements updated',
-        'Price revision raised and approved',
-        'Client informed and the revised agreement recorded',
-      ],
-      note:
-        'This is the sequence that most often breaks, and the reason events run short of staff.',
+      "time": "10:00 am",
+      "before": "The client calls to say 40 more guests are coming. The cook is told by phone and writes it on his hand.",
+      "after": "The count is changed on the event. The kitchen sheet is reissued and the crew lead gets a task for two more waiters."
     },
     {
-      name: 'Mobilisation',
-      steps: [
-        'Crew assigned against the requirement and their availability',
-        'Equipment issued to the event as a location',
-        'Stock issued and transport arranged',
-        'Site notes and dietary requirements attached for the crew',
-        'Attendance recorded on site',
-      ],
-      note:
-        'Committing crew and equipment against the event is what makes double-booking visible in advance.',
+      "time": "2:00 pm",
+      "before": "The van is loaded by memory, and nobody is sure how many chafing dishes left.",
+      "after": "The loading list shows 412 items out. The driver and the kitchen lead sign it."
     },
     {
-      name: 'Delivery and return',
-      steps: [
-        'Service delivered and hours worked recorded',
-        'Equipment returned and reconciled against what was issued',
-        'Breakages and shortfalls recorded against the event',
-        'Leftover stock returned or written off',
-        'Event closed and the billing task raised',
-      ],
-      note:
-        'Reconciling equipment on return is where a recurring, unattributed loss becomes a specific one.',
+      "time": "6:00 pm",
+      "before": "At the venue the dietary note for the Jain table was forgotten, and the owner is on the phone from the stage.",
+      "after": "The note is on the counter plan for the lead, who set it up before the guests arrived."
     },
     {
-      name: 'Event costing',
-      steps: [
-        'Food consumed valued against the event',
-        'Crew hours costed from attendance',
-        'Transport, equipment and breakages attributed',
-        'Total cost compared against the quotation',
-        'Margin recorded against the event type for future quoting',
-      ],
-      note:
-        'This closes the loop that lets the next quotation be better than the last.',
+      "time": "11:30 pm",
+      "before": "Leftovers are packed in a hurry. Nobody writes down what was cooked and what was left.",
+      "after": "The lead records trays left per dish in two minutes. The next plan is trimmed from it."
     },
     {
-      name: 'Billing and collection',
-      steps: [
-        'Final bill raised against the confirmed agreement',
-        'Deposit applied and balance calculated',
-        'Balance aged from the event date',
-        'Collection follow-up assigned as terms fall due',
-        'Payment recorded against the client',
-      ],
-      note:
-        'Ageing from the event date rather than from the invoice date is what stops billing drift.',
-    },
+      "time": "Next morning",
+      "before": "Items counted back, 14 missing, and the client asks about the extra counter that nobody wrote down.",
+      "after": "Out 412, back 398 is already on the event record. The extras are on the bill, and the balance reminder goes to the owner."
+    }
   ],
-
-  ai: {
-    heading: 'Ask what the next fortnight cannot cover.',
-    lede:
-      'Verity AI reads the same event, crew, stock and client records the business creates as it works. It answers from your own event book, only shows what the person asking can see, and can turn the answer into mobilisation and follow-up tasks.',
-    panelMeta: 'Grounded in your event records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which events in the next two weeks are short of crew?',
-      'Where is equipment committed to two events on the same date?',
-      'Which events had a headcount change without a price revision?',
-      'What did comparable events actually cost against what we quoted?',
-      'Which event types have the weakest margin?',
-      'How much is held in deposits against undelivered events?',
-      'Which delivered events are still unbilled?',
-      'Which planners and venues brought the most business this year?',
-      'Summarise the next fortnight’s events and their readiness.',
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time at your base kitchen and at an event, build Verity around how your catering really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a morning at the base kitchen and an event day with your crew. Watch how an enquiry becomes a quote, how the kitchen is told the count, how the van is loaded and how the event is paid, and note which leaks matter most.",
+        "you": "Two to three hours of yours and your head cook's. A few recent quotes, purchase lists and crew lists, and your menu with rates.",
+        "get": "A written map of your catering business: the menus and recipes, the supplier list, the crew pool, the vehicles and utensils, the licences, and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your menus and recipes per plate, supplier list, crew roles and rates, vehicles, loading lists, licences, and the approval rules for quotes and extras, and build the seven screens around your own terms.",
+        "you": "Check the setup with your head cook and your manager. Tell us where a recipe or rule is wrong.",
+        "get": "A working Verity with your real menus, crew, vehicles and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your client list, upcoming bookings, supplier rates, crew pool and licence details from the notebooks, chats and sheets you use. Train the kitchen, crew leads and drivers on a live event.",
+        "you": "Your booking diary and client numbers in whatever form they exist, and a list of your crew. One hour with each role.",
+        "get": "Your clients, bookings and suppliers inside Verity, and a team that has used it through an event."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first events with you, tune quantities and limits, and handle changes when you add a menu, a vehicle, a kitchen or a city.",
+        "you": "A short review after the first month of events.",
+        "get": "A system that keeps matching how the catering runs, with someone responsible for it."
+      }
     ],
+    "bring": [
+      "Your menus with the rate you quote for each",
+      "Your last five quotes and the matching purchase lists",
+      "The list of crew, cooks and contractors you hire, with their rates",
+      "Your vehicles, vessels and equipment list",
+      "Licence papers and certificates of your cooks"
+    ],
+    "time": "About 9 to 12 hours of your own time across the four weeks, mostly in week 1. Your head cook and manager need a few more.",
+    "after": "Nobody is hired to run Verity. Counts, quantities and payments are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The consequences of a change.',
-  automationLede:
-    'Each runs from the event record at the point the condition is met.',
-  automations: [
+  "ai": {
+    "heading": "Ask your catering business a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own events, recipes, crew and payment records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "How much paneer do I need to buy for Saturday's four events?",
+        "a": "88 kg in total across the four events, with 10 kg in store, so 78 kg to buy. The last rate was ₹340, up 6 percent.",
+        "rows": [
+          [
+            "Sharma wedding",
+            "40 kg"
+          ],
+          [
+            "Rao reception",
+            "28 kg"
+          ],
+          [
+            "Kapoor sangeet",
+            "14 kg"
+          ],
+          [
+            "Tech park lunches",
+            "6 kg"
+          ]
+        ],
+        "action": "Create the purchase order task for the manager"
+      },
+      {
+        "q": "Which clients have unpaid balances older than a week?",
+        "a": "Two clients, together owing ₹1.5 lakh. The Mehta engagement is nine days past due.",
+        "rows": [
+          [
+            "Mehta engagement",
+            "₹86,000"
+          ],
+          [
+            "Gill birthday",
+            "₹64,000"
+          ]
+        ],
+        "action": "Create follow-up tasks for the owner"
+      },
+      {
+        "q": "Which dishes keep coming back as leftovers?",
+        "a": "Rice and sweets. Rice is left over at about 19 percent across the last five events and sweets at 14 percent.",
+        "rows": [
+          [
+            "Rice",
+            "19%"
+          ],
+          [
+            "Sweets",
+            "14%"
+          ],
+          [
+            "Dal",
+            "8%"
+          ],
+          [
+            "Paneer main",
+            "6%"
+          ]
+        ],
+        "action": "Trim the rice quantity in the next three events"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Your team still talks to clients and crew; Verity makes sure the right person knows what to do.",
+  "automations": [
     {
-      trigger: 'A headcount is revised',
-      steps: [
-        'Food, crew, equipment and transport requirements recalculated',
-        'Price revision raised for approval',
-        'Client communication task created',
-        'Revised agreement recorded against the event',
-      ],
+      "when": "A client revises the headcount",
+      "then": [
+        "New count recorded with who gave it and when",
+        "Kitchen sheet and purchase list reissued",
+        "Crew lead gets a task to change the staffing"
+      ]
     },
     {
-      trigger: 'Crew or equipment is committed to overlapping events',
-      steps: [
-        'Conflict flagged with both events named',
-        'Resolution task assigned to the operations owner',
-        'Outcome recorded against both events',
-      ],
+      "when": "A new enquiry arrives or a tasting has no follow-up",
+      "then": [
+        "Added to the enquiries board with an owner",
+        "Reminder to the owner of that enquiry",
+        "Quote and outcome recorded"
+      ]
     },
     {
-      trigger: 'An event is short against its crew requirement',
-      steps: [
-        'Shortfall flagged with the date and requirement',
-        'Mobilisation task assigned',
-        'Escalated as the event date approaches',
-      ],
+      "when": "An event is two days away",
+      "then": [
+        "Purchase list combined with other events that day",
+        "Crew list checked for gaps",
+        "Loading list and dietary notes sent to the kitchen lead"
+      ]
     },
     {
-      trigger: 'An event is delivered',
-      steps: [
-        'Equipment return reconciliation task raised',
-        'Crew hours confirmed against attendance',
-        'Costing assembled against the quotation',
-        'Final billing task assigned',
-      ],
+      "when": "A crew member drops out",
+      "then": [
+        "Role marked as short on the crew list",
+        "Call list of free people shown to the crew lead",
+        "Replacement confirmed and recorded"
+      ]
     },
     {
-      trigger: 'Equipment does not return in full',
-      steps: [
-        'Shortfall recorded against the event and crew',
-        'Replacement or recovery task raised',
-        'Pattern surfaced if it repeats',
-      ],
+      "when": "A balance is overdue by a set number of days",
+      "then": [
+        "Marked on the money screen with the amount and age",
+        "Reminder task to the owner",
+        "Payment and outcome recorded"
+      ]
     },
     {
-      trigger: 'A balance passes its terms',
-      steps: [
-        'Balance aged on the client record from the event date',
-        'Collection follow-up assigned',
-        'Escalated with the event history attached',
-      ],
-    },
+      "when": "A licence or cook's certificate is 45 days from expiry",
+      "then": [
+        "Task to the person who owns it",
+        "Papers and the last renewal shown on the task",
+        "Next date set when done"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the owner can see per event.',
-  intelligenceLede:
-    'Cost against quote, from records created before, during and after each event.',
-  intelligence: [
+  "rules": {
+    "heading": "The rules a caterer has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when a client or an officer asks.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.",
+    "items": [
+      {
+        "name": "FSSAI registration or licence",
+        "what": "A catering business needs FSSAI registration or a licence for its kitchen. From 1 April 2026 the basic registration band generally applies up to ₹1.5 crore of turnover, a state licence above that up to ₹50 crore, and a central licence generally above ₹50 crore. Licences generally no longer need renewal, but hygiene duties continue. Check your category.",
+        "how": "The registration or licence is a record with its number, category and kitchen address, and changes to turnover or premises are tasks.",
+        "source": {
+          "name": "SetIndiaBiz, 2026",
+          "url": "https://www.setindiabiz.com/blog/fssai-2026-reforms"
+        }
+      },
+      {
+        "name": "Safe holding and transport of food",
+        "what": "Hot food is generally expected to be held above 60 degrees C and cold food below 5 degrees C, and cooked food should not be left between those temperatures for more than two hours. A mobile food vehicle generally needs a state licence at its home base.",
+        "how": "Each dispatch is a short checklist with times and temperatures, signed by the driver and the kitchen lead.",
+        "source": {
+          "name": "Velco Legal India, 2026",
+          "url": "https://velcolegalindia.com/blog/fssai-license-caterers-event-food-services-india"
+        }
+      },
+      {
+        "name": "Medical fitness and food safety training",
+        "what": "Food handlers are generally expected to hold a medical fitness certificate each year, and corporate clients, hotels and venues often ask for trained supervisors. Some states require a temporary food permit for large events.",
+        "how": "Each person's certificate and training are records with an expiry date, and a large event opens a task to check the venue and permit.",
+        "source": {
+          "name": "Velco Legal India, 2026",
+          "url": "https://velcolegalindia.com/blog/fssai-license-caterers-event-food-services-india"
+        }
+      },
+      {
+        "name": "Tax on catering services",
+        "what": "The tax treatment of catering depends on the kind of service and the premises. Sources disagreed on the rate for standalone outdoor catering after the September 2025 changes, so your accountant should confirm which applies to each contract.",
+        "how": "Each event holds its quote, invoice and payments so your accountant has the full picture. Verity does not file returns."
+      },
+      {
+        "name": "Shop and labour registrations",
+        "what": "Local shop or establishment registration and the rules for contract labour generally apply and differ by state and city.",
+        "how": "Each registration is stored with its renewal date and owner, and contractor details sit on each event's crew list."
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "The crew lead should not see the margin on a wedding. The head cook should not edit a client's balance. Each role opens on what it needs.",
+  "roles": [
     {
-      area: 'Events',
-      points: [
-        'Confirmed events by date and value',
-        'Readiness against crew, equipment and stock',
-        'Headcount revisions and their price impact',
-        'Cancellations and their recorded reasons',
-      ],
+      "role": "Owner",
+      "question": "Which events make money, and what is owed?",
+      "sees": "Margin per event, balances by age, quotes waiting, capacity by day and licence dates."
     },
     {
-      area: 'Cost',
-      points: [
-        'Cost against quotation per event',
-        'Food consumed against planned',
-        'Crew hours against quoted hours',
-        'Transport, equipment and breakage cost',
-      ],
+      "role": "Operations manager",
+      "question": "What needs sorting this week?",
+      "sees": "Headcount changes, crew gaps, purchase lists, clashes between events, approvals and vehicles."
     },
     {
-      area: 'Margin',
-      points: [
-        'Margin by event type and size',
-        'Margin by venue and by planner',
-        'Effect of late revisions on margin',
-        'Discounting against thresholds',
-      ],
+      "role": "Head cook",
+      "question": "What do I cook, how much, and when?",
+      "sees": "Kitchen sheets scaled to the current count, dietary notes, the purchase list and leftover entries."
     },
     {
-      area: 'Resources',
-      points: [
-        'Crew commitment and availability by date',
-        'Equipment utilisation and conflicts',
-        'Equipment loss by event and crew',
-        'Supplier delivery reliability against event dates',
-      ],
+      "role": "Crew lead",
+      "question": "Who is working my event and where?",
+      "sees": "Crew list by role and counter, call times, the loading list, dispatch checks and the replacement call list."
     },
     {
-      area: 'Commercial',
-      points: [
-        'Pipeline value by month',
-        'Deposits held against undelivered events',
-        'Unbilled delivered events',
-        'Business by client, planner and venue',
-      ],
-    },
+      "role": "Accountant",
+      "question": "What was sold, bought and owed?",
+      "sees": "Quotes, invoices and payments per event, supplier bills matched to receipts and crew payments."
+    }
   ],
-  intelligenceNote:
-    'All of this comes from recording the event, the mobilisation and the return, which the business already does informally.',
-
-  rolesHeading: 'One event book, four different questions.',
-  rolesLede:
-    'Everyone works from the same records, and each opens on what they need.',
-  roles: [
-    {
-      role: 'Owner',
-      question: 'Which events actually make money?',
-      focus: 'Cost against quote by event type, margin by venue and planner, pipeline, deposits held.',
-    },
-    {
-      role: 'Operations manager',
-      question: 'Can we deliver the next fortnight?',
-      focus: 'Crew and equipment commitments, conflicts, shortfalls, mobilisation tasks outstanding.',
-    },
-    {
-      role: 'Head chef',
-      question: 'What am I producing and for how many?',
-      focus: 'Confirmed headcounts, menus and dietary requirements, stock issued, revisions since confirmation.',
-    },
-    {
-      role: 'Accounts',
-      question: 'What is held and what is owed?',
-      focus: 'Deposits against undelivered events, unbilled delivered events, balances ageing, supplier payables.',
-    },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "WhatsApp and phone calls for clients and crew. Staff speak to them",
+      "Verity tracks who owes a reply.",
+      "The invoices or accounting tool you use now. We agree during setup how event amounts reach it.",
+      "Your contractor for waiters and your regular suppliers. Their rates and payments are recorded.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Take online orders or bookings from clients.",
+      "Send messages to clients or crew on its own.",
+      "Issue GST invoices or file returns or run your payroll.",
+      "Drive the van, count the plates or watch the kitchen for you."
+    ],
+    "migration": "We bring your client list, upcoming bookings, menus, supplier rates, crew pool and licence details across from the notebooks, chats and sheets you use now, in stages, so you keep taking events while it happens."
+  },
+  "faqHeading": "Questions caterers ask.",
+  "faqs": [
+    [
+      "My cooks and waiters are not office people. Will they actually use it?",
+      "They do not need to. The head cook reads a printed or phone sheet, the crew lead ticks a list, and the driver signs a dispatch check. We train them at an actual event, in the kitchen, not in a classroom."
+    ],
+    [
+      "Can Verity work out how much to buy and cook?",
+      "Yes, once recipes are entered. Each dish has its quantity per plate, and the kitchen sheet and the combined purchase list follow the current headcount. The actual use after each event makes the next plan closer."
+    ],
+    [
+      "Can it send my quotes or invoices to clients?",
+      "No. Verity holds the quote, the revisions and the payments on the event record. Your team sends them to the client and records what the client said."
+    ],
+    [
+      "What if the headcount changes at the last minute?",
+      "The revision is recorded with the time and the person who gave it. The kitchen sheet and the crew plan are reissued, and the crew lead and head cook get a task. The record also shows the guaranteed count if there is a later argument over the bill."
+    ],
+    [
+      "Can I see which events were profitable?",
+      "Yes. Each event shows its revenue and its costs for food, labour, transport and subcontracts, as far as these have been recorded, and the margin that remains."
+    ],
+    [
+      "I run a small family catering business with twelve regulars. Is this too much?",
+      "A small business has the same leaks and less time to notice them. We set up only what you need, in the same four weeks, and leave out what you do not."
+    ],
+    [
+      "I have two kitchens in two cities. Can I see them together?",
+      "Yes. Each is a location in one system, with events, crew, stock and balances side by side. Clients are the same people across both."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so cooks, crew leads, managers and your accountant each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of kitchens, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your catering runs."
+    ]
   ],
-
-  useCasesHeading: 'What caterers use Verity for',
-  useCases: [
-    {
-      name: 'Headcount revision propagation',
-      body: 'One event record, so a change to the headcount recalculates food, crew, equipment, transport and billing together.',
-    },
-    {
-      name: 'Crew and equipment conflicts',
-      body: 'Resources committed against events, so a double-booking on the same date is visible at confirmation rather than at loading.',
-    },
-    {
-      name: 'Per-event costing',
-      body: 'Food, crew hours, transport, equipment and breakages recorded against the event, so cost against quote is measured rather than believed.',
-    },
-    {
-      name: 'Equipment issue and return',
-      body: 'Event sites as locations, so what went out and what came back reconciles and shortfalls are attributable.',
-    },
-    {
-      name: 'Quotation from actuals',
-      body: 'Past events with their real costs as records, so a new quotation starts from what comparable work actually cost.',
-    },
-    {
-      name: 'Planner and venue relationships',
-      body: 'Planners and venues as records with their event history, since that is where repeat catering business comes from.',
-    },
-    {
-      name: 'Deposit and balance control',
-      body: 'Deposits held against undelivered events and balances aged from the event date rather than from a late invoice.',
-    },
-    {
-      name: 'Asking the event book questions',
-      body: 'Plain-language questions across events, crew, equipment and billing, with mobilisation tasks assigned in the same step.',
-    },
+  "related": [
+    "restaurants",
+    "event-venues",
+    "wedding-planners",
+    "cloud-kitchens",
+    "hotels",
+    "bakeries"
   ],
-
-  migration:
-    'The event diary, the quotation templates and your billing arrangement are mapped during implementation. Clients, planners, venues, confirmed events and equipment lists are brought across, and Verity is introduced around the way the business already runs its calendar.',
-
-  faqHeading: 'Questions caterers ask',
-  faqs: [
-    [
-      'What can AI software do for a catering business?',
-      'Verity AI answers questions from your own event, crew, stock and client records: which events in the next two weeks are short of crew, where equipment is committed to two events on the same date, which events had a headcount change without a price revision, what comparable events actually cost against what you quoted. Each answer can become a mobilisation or billing task.',
-    ],
-    [
-      'Can Verity handle headcount changes?',
-      'That is the main reason to use it here. The event is one record, so a revision recalculates the food requirement, the crew requirement, the equipment list, the transport and the price together rather than changing one of them and leaving the rest to memory.',
-    ],
-    [
-      'Does it prevent double-booking crew and equipment?',
-      'Crew and equipment are committed against events, so a conflict between two events on the same date is visible when the second is confirmed rather than when the van is being loaded.',
-    ],
-    [
-      'Can it tell us what an event actually cost?',
-      'Food consumed, crew hours from attendance, transport, equipment and breakages are all recorded against the event, so cost against quotation is measured. That is what makes the next quotation better than the last.',
-    ],
-    [
-      'Does it track equipment that goes out to sites?',
-      'Event sites are treated as locations, so equipment issued to an event and returned from it reconciles, and shortfalls are attributable to a specific event and crew rather than absorbed as a general expense.',
-    ],
-    [
-      'Can it manage deposits and final billing?',
-      'Deposits are recorded against the event, delivery raises the final billing task, and the balance is aged from the event date rather than from whenever the invoice was eventually raised.',
-    ],
-    [
-      'Does Verity replace our accounting software?',
-      'No. Accounting continues and is mapped during implementation. Verity holds the events, the resources, the costing and the operational reporting across them.',
-    ],
-    [
-      'Is it suitable for a small catering operation?',
-      'A small caterer running two events on one Saturday has the same conflict, revision and costing problems as a large one, with less capacity to absorb them.',
-    ],
-    [
-      'How long does implementation take?',
-      'About four weeks: discovery and mapping of how events are quoted and delivered, configuration, migration of clients, venues and confirmed events, then an ongoing operations partnership.',
-    ],
-  ],
-
-  ctaHeading: 'Start with what your events actually cost.',
-  ctaLede:
-    'Most caterers know their revenue precisely and their cost approximately, which is why some event types quietly lose money. Tell us how you quote today.',
-
-  related: ['restaurants', 'event-venues', 'wedding-planners', 'hotels', 'cloud-kitchens', 'bakeries'],
+  "ctaHeading": "Start with the events that change on the last day.",
+  "ctaLede": "Tell us how your catering runs and we will show you the headcount changes, the crew gaps and the unpaid balances it would find, using your own numbers."
 };

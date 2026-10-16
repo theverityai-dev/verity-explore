@@ -1,181 +1,1108 @@
 export default {
-  slug: 'ai-companies',
-  status: 'published',
-  plural: 'AI companies',
-  subject: 'AI company',
-
-  seo: {
-    title: 'AI business management software for AI companies | Verity',
-    description:
-      'Verity gives AI companies one system for inference cost per account, model versions in production, evaluation runs, annotation work and pilot decisions.',
-    keywords: [
-      'AI software for AI companies',
-      'AI company operations management software',
-      'inference cost per customer tracking',
-      'model evaluation and deployment management',
-    ],
+  "schema": 2,
+  "slug": "ai-companies",
+  "status": "published",
+  "plural": "AI companies",
+  "subject": "AI company",
+  "checked": "16 October 2026",
+  "seo": {
+    "title": "Business software for Indian AI companies | Verity",
+    "description": "Experiments nobody can rerun, GPU bills that arrive late, pilots without success criteria: 14 leaks in an AI company and the Verity screens that close each.",
+    "keywords": [
+      "AI company management software India",
+      "AI startup project and experiment tracking",
+      "GPU compute cost tracking by project",
+      "client AI pilot tracking",
+      "dataset register and licence tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for AI companies',
-    headline: 'Three accounts cost more to serve than they pay, and nobody can name them.',
-    lede:
-      'AI businesses have a variable cost per request and a fixed price per seat. Verity attributes cost to accounts and tracks what is actually running in production.',
-    note: 'Verity runs the company. Training infrastructure and model tooling stay where they are.',
-    panel: {
-      title: 'Company',
-      meta: 'Current position',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Production accounts', value: '64', note: '9 in pilot' },
-        { label: 'Gross margin', value: '48%', note: 'inference and serving cost' },
-        { label: 'Accounts below cost', value: '3', note: 'usage above plan assumptions' },
-        { label: 'Pilots past their window', value: '5', note: 'no deployment decision' },
-      ],
-      rows: [
-        { name: '3 accounts costing more to serve than they pay', meta: 'Heavy usage on flat pricing', active: true },
-        { name: '5 pilots past their evaluation window', meta: 'No decision recorded either way', active: true },
-        { name: '2 model versions live that nobody chose', meta: 'Deployed for a test, never reverted', active: true },
-        { name: 'Annotation backlog affecting 3 evaluations', meta: 'Labelling capacity the constraint', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own company in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "workforce",
+    "schedule",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for AI companies",
+    "headline": "The model scored well in the notebook. Nobody can say what it cost or which data it learned from.",
+    "lede": "An AI company runs on experiments, data, compute and client pilots, and loses money in the gaps between them. A run nobody can repeat, a GPU bill that lands after the month closes, a pilot with no written test of success. Verity keeps the model, the data, the spend and the client against one record, so the company can see what it is building and what it is paying for.",
+    "oneLine": "One system that knows every model and dataset you hold, what each run cost, which client pilot it serves and what you promised to deliver.",
+    "note": "Your training code, notebooks and cloud consoles stay where they are. Verity runs the company around them.",
+    "screen": "owner",
+    "screenNote": "projects, runs, spend, pilots and people"
+  },
+  "today": {
+    "heading": "Most AI companies are strong on the model and loose on everything around it.",
+    "paragraphs": [
+      "The work itself is visible to the people doing it. A researcher knows which run was good. A founder knows which client is hot. What is hard to see is the join: which run produced the model that went to the pilot, which dataset was in it, what that compute cost, and whether the client has signed off on anything in writing.",
+      "Research is kept in notebooks, experiment trackers, cloud billing pages, a shared drive of datasets and a chat channel per client. Each is fine alone. Nobody owns the picture across them, so the founder asks the same questions each week by message.",
+      "Surveys give a sense of the gap. An MSL report in February 2026 found only 15% of Indian organisations had deployed generative AI workloads into production, and just 8% could fully measure and allocate AI costs. A Salesforce study reported in July 2026 found 38% of workers in India said their organisation had an unsuccessful AI pilot in the past year."
+    ],
+    "stack": [
+      "Notebooks and an experiment tracker",
+      "Cloud billing consoles and GPU provider invoices",
+      "A shared drive of datasets",
+      "Slack or WhatsApp channel per client",
+      "Spreadsheet of pilots and grants"
+    ],
+    "stackNote": "The engineers keep what works for research. The business side runs on memory, so the cost and the promise are never in the same place as the model."
+  },
+  "painsHeading": "Where an AI company actually loses time and money.",
+  "painsLede": "These are the situations founders, heads of research and delivery leads describe. For each one: what it looks like on an ordinary week, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Experiments",
+      "title": "A good run that nobody can repeat",
+      "scene": "Priya's team gets 91% on the held-out set in March. In September the client asks for the same model with a new label. The notebook was edited, the data folder was renamed and the engineer who ran it has moved teams. Two weeks go on trying to reproduce a number already shown to the client.",
+      "cost": "Example arithmetic: two engineers for two weeks at a loaded ₹2.5 lakh a month each is about ₹2.3 lakh, spent to get back to where you were, with the client waiting.",
+      "fix": "Each run is a record linked to the project, the dataset version, the code reference, the owner and the result. Verity shows which run each shipped model came from, so a rerun starts from a record and not from memory.",
+      "screen": "runs"
     },
-  },
-
-  overview: {
-    heading: 'A variable cost to serve, a fixed price to charge, and models that change under you.',
-    paragraphs: [
-      'An AI company has a cost structure most software businesses do not: every request costs money. When pricing is per seat or per month and cost is per token, per image or per hour of compute, three accounts costing more to serve than they pay is not unusual — it is the default outcome unless cost is attributed per account.',
-      'The second characteristic is that what is running in production drifts. Two model versions live that nobody deliberately chose, deployed for a test and never reverted, is a common and consequential state, because behaviour customers depend on has changed without a decision.',
-      'The third is evaluation. Model changes need evidence before deployment, and evaluation depends on annotated data, which depends on labelling capacity. An annotation backlog is a deployment blocker one step removed.',
-      'The fourth is the pilot-to-production gap. Five pilots past their evaluation window with no recorded decision is the most expensive state in the business — engineering attention and serving cost with no commercial outcome either way.',
-      'The fifth is that customers ask what changed. A behaviour difference needs an answer that connects the account, the version it was served and when the change happened.',
-      'Verity attributes serving cost to accounts, records what is deployed and why, and tracks evaluations, annotation work and pilot decisions.',
+    {
+      "area": "Compute",
+      "title": "The GPU bill arrives after the run is finished",
+      "scene": "A fine-tune ran for six days on rented GPUs. The provider invoice lands in the next month, and the finance lead cannot say which project, client or experiment it belongs to. The founder finds out the pilot lost money when the invoice is paid.",
+      "cost": "Only 8% of Indian enterprises can fully measure and allocate AI costs, per an MSL report of February 2026. Example arithmetic: ₹6 lakh of compute in a quarter, unassigned, makes every project look cheaper than it was.",
+      "fix": "Compute spend is entered or imported against the project and run it served. Verity shows spend to date against each project's compute budget, and flags a project close to its limit while there is still time to stop.",
+      "screen": "compute",
+      "source": {
+        "name": "Storyboard18 on the MSL report, 2026",
+        "url": "https://www.storyboard18.com/digital/only-15-of-indian-firms-have-ai-in-production-report-reveals-details-about-indias-ai-gap-89172.htm"
+      }
+    },
+    {
+      "area": "Compute",
+      "title": "Reserved capacity that sits idle",
+      "scene": "You committed to a block of GPUs for a year because capacity was hard to find. Two projects have since finished. The nodes sit at low use on weekends and between training runs, and the commitment is still billed in full.",
+      "cost": "Example arithmetic: a commitment of ₹4 lakh a month used at 45% leaves about ₹2.2 lakh a month paid for nothing.",
+      "fix": "Compute commitments are records with start, end, monthly cost and the projects that draw on them. Verity shows booked hours against the commitment by week, so idle capacity is visible and can be offered to the next project.",
+      "screen": "compute"
+    },
+    {
+      "area": "Data",
+      "title": "Datasets with no clear origin or licence",
+      "scene": "A scraped corpus, a client's exported tickets, a purchased set and an open dataset are all in one folder. A prospect's legal team asks where the training data came from and whether it carries personal information. The answer takes a week to assemble.",
+      "cost": "A deal stalls or dies in due diligence. Delhi High Court's July 2026 interim ruling in ANI v OpenAI refused an injunction, but the suit is still going to trial, so the legal position on training data is not settled.",
+      "fix": "Every dataset is a record with source, licence or contract, whether it holds personal data, who approved its use and which models were trained on it. Verity answers \"which models used this dataset\" in one search.",
+      "screen": "data",
+      "source": {
+        "name": "iPleaders blog on ANI v OpenAI, 2026",
+        "url": "https://blog.ipleaders.in/ani-v-openai-ai-training-copyright-ruling/"
+      }
+    },
+    {
+      "area": "Data",
+      "title": "Labelling vendors, rework and quality drift",
+      "scene": "A labelling team delivers 20,000 images. A spot check finds one class labelled inconsistently. The vendor says the guideline was unclear. The next batch is already in progress under the same guideline.",
+      "cost": "Example arithmetic: 20,000 items at ₹6 each is ₹1.2 lakh. If 15% need redoing, ₹18,000 is paid twice, plus weeks of model results built on noisy labels.",
+      "fix": "Each labelling batch is a record with vendor, guideline version, sample check result and accepted count. A failed check holds the batch from training and creates a rework task for the vendor contact.",
+      "screen": "data"
+    },
+    {
+      "area": "Evaluation",
+      "title": "Evaluations scattered, so nobody says \"ready\"",
+      "scene": "Accuracy is in one notebook, a bias check in a slide, red-team notes in a document and latency in a dashboard. The release call is made by whoever speaks loudest in the stand-up.",
+      "cost": "A model ships with a gap nobody tracked, or a good model waits because nobody can show it is good.",
+      "fix": "Each model version has an evaluation checklist: accuracy, safety checks, latency, cost per call, and a named approver for each. Verity shows which checks pass and which are open, and records who signed the release.",
+      "screen": "runs"
+    },
+    {
+      "area": "Pilots",
+      "title": "Pilots begin with no written test of success",
+      "scene": "A bank branch network agrees to a six-week pilot of a document-reading model. The aim is \"see how it goes\". Week six arrives, nobody agrees what a good result is, and the client asks for another month at no charge.",
+      "cost": "Free extensions eat engineering weeks. Example arithmetic: a four-person pilot team for an extra month at ₹10 lakh a month of combined cost is ₹10 lakh of unpaid work.",
+      "fix": "A pilot is a record with the success measure, the target, the start and end dates, what is in and out of scope, and the client approver. Verity tracks the measure through the pilot and flags a pilot that has passed its end date without a decision.",
+      "screen": "pilots"
+    },
+    {
+      "area": "Pilots",
+      "title": "Pilot works, production never happens",
+      "scene": "The pilot hits its target. Then the client's security team asks for a review, the data team needs six weeks to open a feed, and the sponsor changes jobs. The pilot sits in \"approved\" for four months.",
+      "cost": "Only 15% of organisations had deployed generative AI workloads into production, per MSL in February 2026. A stalled conversion is revenue that was promised and never started.",
+      "fix": "After a successful pilot, Verity creates a conversion checklist: security review, data access, contract, support owner. Each item has an owner on both sides and a date. A stuck item shows against the deal.",
+      "screen": "pilots",
+      "source": {
+        "name": "Storyboard18 on the MSL report, 2026",
+        "url": "https://www.storyboard18.com/digital/only-15-of-indian-firms-have-ai-in-production-report-reveals-details-about-indias-ai-gap-89172.htm"
+      }
+    },
+    {
+      "area": "Pilots",
+      "title": "Outputs that lack the client's business context",
+      "scene": "The model gives answers that are correct in general and wrong for this client's products and terms. Their staff stop trusting it after a week and go back to the old way.",
+      "cost": "The Salesforce study reported in July 2026 found 34% of workers whose AI pilot failed said outputs lacked business context. A pilot that people stop using is a pilot you cannot convert.",
+      "fix": "Client feedback is logged on the pilot as records with a category such as wrong context, too generic or slow. Verity groups them by type and by week, so the team fixes the largest category first and the client sees the fix.",
+      "screen": "pilots",
+      "source": {
+        "name": "Business Today on the Salesforce Agentic Workplace Study, 2026",
+        "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/india-loves-ai-so-why-are-so-many-workplace-ai-pilots-failing-546614-2026-07-31"
+      }
+    },
+    {
+      "area": "Delivery",
+      "title": "Deliverables and versions do not match what was promised",
+      "scene": "The contract lists a model, an evaluation report, an API handover note and two training sessions. The client holds version 2 of the report and version 3 of the model. Nobody checks until the final payment is due.",
+      "cost": "A delivery dispute holds up the final instalment. Example arithmetic: 20% of a ₹60 lakh contract held back is ₹12 lakh.",
+      "fix": "Contract deliverables are listed on the project with owner, due date, version and client acceptance. Verity shows what has been delivered, what is accepted and what is still open, and links each to the payment milestone your finance lead tracks.",
+      "screen": "pilots"
+    },
+    {
+      "area": "Compliance",
+      "title": "Client data handled without a clear record",
+      "scene": "A client shares sample customer records for the pilot. Copies end up on three laptops and a cloud bucket. At the end of the pilot, nobody can say who deleted what.",
+      "cost": "The Digital Personal Data Protection Rules were notified on 13 November 2025 and phase in over 18 months, with breach intimation and data retention duties generally from 13 May 2027. Poor records of who held client data become a problem once these apply.",
+      "fix": "Each client data share is a record: what was received, for what purpose, who has access, where it is held and when it must be deleted. Deletion is a task with a due date, and the confirmation is stored on the record.",
+      "screen": "data",
+      "source": {
+        "name": "Hogan Lovells on the DPDP Rules, 2025",
+        "url": "https://www.hlc.com/en/publications/indias-digital-personal-data-protection-act-2023-brought-into-force-"
+      }
+    },
+    {
+      "area": "People",
+      "title": "Researchers stretched across too many projects",
+      "scene": "Rahul is the only person who can tune the speech model. He is half on the bank pilot, half on a grant project, and an urgent request from a third client takes the rest. Nobody sees the overload until he leaves.",
+      "cost": "Over-allocated people ship late and quit. A single departure takes the knowledge of a model with them.",
+      "fix": "Each person is allocated to projects by percentage of time. Verity shows allocation per person and per week, flags anyone above 100%, and shows the single points of failure: models with one person who understands them.",
+      "screen": "people"
+    },
+    {
+      "area": "Money",
+      "title": "Grants, compute subsidies and paperwork on someone's laptop",
+      "scene": "The company applied for subsidised GPU access and a research grant. Utilisation reports, usage letters and invoices are due on different dates. The person who applied is now busy with a pilot.",
+      "cost": "The IndiaAI Mission offers a 100% compute subsidy for core foundational-model work and 40% for other GPU-intensive work, per press reports of June 2025. Missed reporting can put the benefit at risk.",
+      "fix": "Each grant or subsidy is a record with terms, reporting dates, supporting documents and an owner. Verity creates reporting tasks ahead of each date and keeps the usage evidence attached.",
+      "screen": "compute",
+      "source": {
+        "name": "Outlook Business on IndiaAI compute subsidy, 2025",
+        "url": "https://www.outlookbusiness.com/artificial-intelligence/govt-offers-100-compute-subsidy-for-foundational-ai-model-development"
+      }
+    },
+    {
+      "area": "Owner",
+      "title": "The founder cannot see which projects earn",
+      "scene": "Revenue looks healthy. Underneath, one pilot is profitable, one consumes three engineers for little money, and a grant project is quietly paying for the rest. The picture is built by hand on the last weekend of the month.",
+      "cost": "Decisions about hiring and which pilots to chase are made on feel. A loss-making client is kept because nobody can prove it loses.",
+      "fix": "Each project has revenue, compute spend and people time on one line. Verity shows margin by project and client, and lists the projects that have crossed a limit you set.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The MSL and Salesforce figures are survey results reported in the press, and they measure different things (organisations versus workers). The subsidy figures come from a June 2025 press report and may have changed, so confirm on the IndiaAI portal. DPDP dates come from a law-firm summary; confirm on the official gazette.",
+  "facts": [
+    {
+      "figure": "15%",
+      "text": "of organisations in India have deployed generative AI workloads into production, and only 8% can fully measure and allocate AI-related costs, according to an MSL report.",
+      "source": {
+        "name": "Storyboard18 on the MSL report, 2026",
+        "url": "https://www.storyboard18.com/digital/only-15-of-indian-firms-have-ai-in-production-report-reveals-details-about-indias-ai-gap-89172.htm"
+      }
+    },
+    {
+      "figure": "38%",
+      "text": "of workers in India say their organisation had an unsuccessful AI pilot in the past year, the highest among markets surveyed and against a 28% global average.",
+      "source": {
+        "name": "Business Today on the Salesforce Agentic Workplace Study, 2026",
+        "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/india-loves-ai-so-why-are-so-many-workplace-ai-pilots-failing-546614-2026-07-31"
+      }
+    },
+    {
+      "figure": "100% and 40%",
+      "text": "compute subsidy under the IndiaAI Mission, 100% for core foundational-model development and 40% for other GPU-intensive work such as inferencing and applications, with over 34,000 GPUs allocated.",
+      "source": {
+        "name": "Outlook Business, 2025",
+        "url": "https://www.outlookbusiness.com/artificial-intelligence/govt-offers-100-compute-subsidy-for-foundational-ai-model-development"
+      }
+    },
+    {
+      "figure": "13 May 2027",
+      "text": "the date from which most Digital Personal Data Protection Rules, including breach intimation and data retention duties, generally apply, after notification on 13 November 2025.",
+      "source": {
+        "name": "Hogan Lovells, 2025",
+        "url": "https://www.hlc.com/en/publications/indias-digital-personal-data-protection-act-2023-brought-into-force-"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your company's own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Company / This week",
+      "meta": "9 live projects",
+      "heading": "The founder's weekly view",
+      "caption": "Margin by project, compute spend against budget, pilots near their end date and anything that needs a decision, on one screen. It replaces the Friday round of messages.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Compute this month",
+              "value": "₹7.8 lakh",
+              "note": "budget ₹9 lakh"
+            },
+            {
+              "label": "Live pilots",
+              "value": "5",
+              "note": "2 past end date"
+            },
+            {
+              "label": "Runs this week",
+              "value": "64",
+              "note": "11 tied to a pilot"
+            },
+            {
+              "label": "People over 100%",
+              "value": "3",
+              "note": "of 22 researchers"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Margin by project, last quarter"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Bank document reader",
+              "value": 58,
+              "display": "34%"
+            },
+            {
+              "label": "Retail demand model",
+              "value": 41,
+              "display": "24%"
+            },
+            {
+              "label": "Speech grant project",
+              "value": 12,
+              "display": "7%",
+              "tone": "muted"
+            },
+            {
+              "label": "Insurance claims pilot",
+              "value": 3,
+              "display": "-2%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Insurance claims pilot is past its end date",
+              "meta": "No decision from client, 3 weeks over",
+              "tag": [
+                "Decide",
+                "late",
+                "Extended",
+                "info"
+              ]
+            },
+            {
+              "name": "Speech project compute at 92% of budget",
+              "meta": "Two runs queued for Friday",
+              "tag": [
+                "Review",
+                "flag",
+                "Raised",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runs",
+      "title": "Models and runs",
+      "meta": "Document reader v4",
+      "heading": "Runs, models and who signed the release",
+      "caption": "Every run is linked to its project, dataset version, owner and result. A model version carries its evaluation checklist and the person who approved release.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Run",
+            "Dataset",
+            "Owner",
+            "Result",
+            "Cost",
+            "Status"
+          ],
+          "rows": [
+            [
+              "DR-412",
+              "Invoices v7",
+              "Aarav",
+              "F1 0.91",
+              "₹18,400",
+              [
+                "Candidate",
+                "info",
+                "Released",
+                "ok"
+              ]
+            ],
+            [
+              "DR-409",
+              "Invoices v7",
+              "Aarav",
+              "F1 0.88",
+              "₹17,900",
+              [
+                "Superseded",
+                "muted"
+              ]
+            ],
+            [
+              "DR-405",
+              "Invoices v6",
+              "Meera",
+              "F1 0.84",
+              "₹16,200",
+              [
+                "Superseded",
+                "muted"
+              ]
+            ],
+            [
+              "DR-413",
+              "Invoices v8",
+              "Meera",
+              "Running",
+              "₹6,100 so far",
+              [
+                "Running",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "text": "Accuracy on held-out set",
+              "meta": "F1 0.91, Aarav",
+              "done": true
+            },
+            {
+              "text": "Check for bias across document types",
+              "meta": "Open, Meera",
+              "done": false
+            },
+            {
+              "text": "Latency under 800 ms",
+              "meta": "Open, Rahul",
+              "done": false
+            },
+            {
+              "text": "Release approval",
+              "meta": "Head of research",
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "title": "Compute",
+      "meta": "October",
+      "heading": "Compute spend, commitments and grants",
+      "caption": "Spend by project against its budget, GPU commitments against use, and grant or subsidy reporting dates with an owner.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Project",
+            "Budget",
+            "Spent",
+            "Left",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Bank document reader",
+              "₹3.0 lakh",
+              "₹2.4 lakh",
+              "₹0.6 lakh",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Speech grant project",
+              "₹2.5 lakh",
+              "₹2.3 lakh",
+              "₹0.2 lakh",
+              [
+                "92% used",
+                "flag",
+                "Raised",
+                "ok"
+              ]
+            ],
+            [
+              "Retail demand model",
+              "₹2.0 lakh",
+              "₹1.2 lakh",
+              "₹0.8 lakh",
+              [
+                "On track",
+                "ok"
+              ]
+            ],
+            [
+              "Unassigned invoices",
+              "None",
+              "₹1.9 lakh",
+              "None",
+              [
+                "Assign",
+                "late",
+                "Assigned",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Reserved nodes used, week 1",
+              "value": 78,
+              "display": "78%"
+            },
+            {
+              "label": "Reserved nodes used, week 2",
+              "value": 64,
+              "display": "64%"
+            },
+            {
+              "label": "Reserved nodes used, week 3",
+              "value": 41,
+              "display": "41%",
+              "tone": "muted"
+            },
+            {
+              "label": "Reserved nodes used, week 4",
+              "value": 36,
+              "display": "36%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Subsidy utilisation report is due in 12 days. Usage evidence attached for 2 of 3 months.",
+          "action": "Assign"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Datasets",
+      "meta": "31 datasets",
+      "heading": "The dataset register and client data",
+      "caption": "Source, licence, personal data flag, approval and the models trained on each dataset. Client data shares carry a deletion date.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Dataset",
+            "Source",
+            "Personal data",
+            "Approved",
+            "Used by",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Invoices v7",
+              "Client A, contract 14",
+              "Yes, masked",
+              "Legal, 3 Mar",
+              "DR-409, DR-412",
+              [
+                "Cleared",
+                "ok"
+              ]
+            ],
+            [
+              "Support tickets v2",
+              "Client B export",
+              "Yes",
+              "Pending",
+              "2 models",
+              [
+                "Review",
+                "late",
+                "Approved",
+                "ok"
+              ]
+            ],
+            [
+              "Hindi speech set",
+              "Purchased, licence file",
+              "No",
+              "Legal, 12 Jun",
+              "Speech v3",
+              [
+                "Cleared",
+                "ok"
+              ]
+            ],
+            [
+              "Web corpus 2025",
+              "Crawled",
+              "Unknown",
+              "None",
+              "1 model",
+              [
+                "Check source",
+                "flag"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Client B support tickets",
+          "sub": "Shared for the claims pilot",
+          "fields": [
+            [
+              "Purpose",
+              "Pilot training and testing only"
+            ],
+            [
+              "Held in",
+              "Secure bucket, 2 laptops"
+            ],
+            [
+              "Delete by",
+              "30 November"
+            ],
+            [
+              "Status",
+              [
+                "Delete due",
+                "late",
+                "Deleted, confirmed",
+                "ok"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "3 Sep",
+              "Received, 18,400 rows"
+            ],
+            [
+              "10 Sep",
+              "Names and phone numbers masked"
+            ],
+            [
+              "Task",
+              "Delete copies and store confirmation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pilots",
+      "title": "Pilots and deliverables",
+      "meta": "5 live pilots",
+      "heading": "Client pilots and what was promised",
+      "caption": "Each pilot has a written success measure, an end date, feedback by type, and the deliverables the contract lists. Conversion steps after a pilot have owners on both sides.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Running",
+              "cards": [
+                {
+                  "title": "Insurance claims pilot",
+                  "meta": "Target 85% auto-read, now 79%",
+                  "tag": [
+                    "Past end date",
+                    "late",
+                    "Extended",
+                    "info"
+                  ]
+                },
+                {
+                  "title": "Retail demand model",
+                  "meta": "Week 4 of 8",
+                  "tag": [
+                    "On track",
+                    "ok"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Converting",
+              "cards": [
+                {
+                  "title": "Bank document reader",
+                  "meta": "Target met, security review open",
+                  "tag": [
+                    "Review",
+                    "flag",
+                    "Cleared",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Telecom call summaries",
+                  "meta": "Data feed not yet open",
+                  "tag": [
+                    "Waiting",
+                    "info"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Feedback: wrong context",
+              "value": 46,
+              "display": "23 items"
+            },
+            {
+              "label": "Feedback: too generic",
+              "value": 28,
+              "display": "14 items"
+            },
+            {
+              "label": "Feedback: too slow",
+              "value": 12,
+              "display": "6 items",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "Team allocation",
+      "meta": "Next 4 weeks",
+      "heading": "Who is stretched, and who is the only one",
+      "caption": "Each person's share of time across projects, with overloads and single points of failure marked.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Person",
+            "Role",
+            "Bank",
+            "Speech",
+            "Other",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Rahul",
+              "Research lead",
+              "50%",
+              "50%",
+              "30%",
+              [
+                "Over 100%",
+                "late",
+                "Rebalanced",
+                "ok"
+              ]
+            ],
+            [
+              "Aarav",
+              "ML engineer",
+              "80%",
+              "0%",
+              "20%",
+              [
+                "Full",
+                "ok"
+              ]
+            ],
+            [
+              "Meera",
+              "ML engineer",
+              "40%",
+              "40%",
+              "10%",
+              [
+                "Spare 10%",
+                "info"
+              ]
+            ],
+            [
+              "Zoya",
+              "Data lead",
+              "20%",
+              "30%",
+              "40%",
+              [
+                "Full",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Speech model v3 has one person who knows how to retrain it. Add a second owner.",
+          "action": "Assign"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Friday, before and after.",
+  "dayLede": "What changes is not the research. It is that the week leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "9:30",
+      "before": "The founder asks in chat which pilots are over budget. Three people reply with three numbers.",
+      "after": "The weekly view shows compute against budget by project, and the two that need attention are at the top."
+    },
+    {
+      "time": "11:00",
+      "before": "A client asks which data their model was trained on. You spend the afternoon searching folders.",
+      "after": "The dataset register shows the source, licence and approval for each dataset in that model, and you reply in minutes."
+    },
+    {
+      "time": "1:00",
+      "before": "A researcher says a result from March cannot be reproduced.",
+      "after": "The run record links the model to its dataset version and code reference, and a rerun starts from there."
+    },
+    {
+      "time": "3:30",
+      "before": "The pilot is a week past its end date and nobody wants to raise it with the client.",
+      "after": "The pilot is flagged with its success measure and current result, and the owner has a task to ask for a decision."
+    },
+    {
+      "time": "5:00",
+      "before": "Rahul is on four projects and no one has seen it.",
+      "after": "The allocation view marks him above 100% and shows who has spare time."
+    },
+    {
+      "time": "Month end",
+      "before": "Finance asks which project each GPU invoice belongs to.",
+      "after": "Invoices were assigned to projects when they arrived, so the month's compute is already allocated."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We learn how your team really moves a model from idea to client, build Verity around that, bring your records in, then stay on.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Sit with your head of research, delivery lead and finance lead. Trace one model from first experiment to client handover, and one GPU invoice from provider to project.",
+        "you": "Two to three hours across the week. A list of live projects, pilots and datasets, and a recent month of compute invoices.",
+        "get": "A written map of how your company works: the projects, the data, the spend, the pilots and where records are lost today."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up projects, model versions, evaluation checklists, the dataset register, compute budgets and commitments, pilot stages and deliverable lists, and build the six screens around your own terms.",
+        "you": "Check the setup with your head of research and delivery lead. Tell us where a checklist or stage is wrong.",
+        "get": "A working Verity with your real projects, checklists and rules, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your project list, dataset inventory, compute invoices and pilot sheet. We agree how run logs and spend reach Verity during setup. Train researchers, delivery and finance in short sessions on live work.",
+        "you": "The datasets list with source and licence where known, and the contracts for live pilots. One hour per role.",
+        "get": "Your projects, datasets, spend and pilots inside Verity, and a team that has used it on a real run and a real pilot."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on. Review the first weeks with you, tune budget limits and checklists, and handle changes when you add a project, a client or a data source.",
+        "you": "A short monthly review.",
+        "get": "A system that keeps matching how the company works, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Models, versions, deployments', 'Work'],
-    ['Evaluations, benchmarks, results', 'Records'],
-    ['Annotation, labelling, review', 'Workflows'],
-    ['Accounts, pilots, deployments', 'Relationships'],
-    ['Inference, compute, serving cost', 'Control'],
-    ['Researchers, engineers, annotators', 'People'],
-    ['Plans, usage, pricing', 'Orders'],
-  ],
-
-  challengesHeading: 'Cost per request against price per seat.',
-  challengesLede:
-    'AI company difficulties come from variable delivery cost and changing model behaviour.',
-  challenges: [
-    { problem: 'Serving cost is not attributed to accounts', detail: 'Compute and inference spend is a single line and unit economics are unknown.', outcome: 'Cost is attributed per account and per feature against the price they pay.' },
-    { problem: 'Production model versions drift', detail: 'Deployments made for tests remain live and nobody chose them.', outcome: 'Deployed versions carry the decision, evaluation and date behind them.' },
-    { problem: 'Evaluations wait on annotation', detail: 'A model change cannot be evidenced because labelled data is not ready.', outcome: 'Annotation work is tracked as capacity against the evaluations depending on it.' },
-    { problem: 'Pilots have no decision point', detail: 'An evaluation window passes and the pilot continues without a commercial outcome.', outcome: 'Pilots carry a decision date, criteria and an owner.' },
-    { problem: 'Behaviour change questions cannot be answered', detail: 'A customer reports different results and nobody can say what changed.', outcome: 'Accounts, versions served and change dates are linked.' },
-    { problem: 'Heavy users are not identified early', detail: 'Usage grows past plan assumptions and margin erodes silently.', outcome: 'Usage against plan assumptions is monitored per account.' },
-  ],
-
-  modulesLede: 'One system across cost, deployments, evaluations and accounts.',
-  modules: [
-    { id: 'control', title: 'Inference, compute and serving cost', line: 'One permission model and one audit trail, with serving cost attributed per account, feature and model version against the revenue each produces.', why: 'Variable cost against fixed price is the defining economic risk of the business.', example: 'Three accounts costing more to serve than they pay.' },
-    { id: 'work', title: 'Models, versions and deployments', line: 'Each deployment carries its model version, the accounts it serves, the evaluation behind it, the person who approved it and the date.', why: 'What is running should be a decision with evidence attached.', example: 'Two live versions nobody deliberately chose.' },
-    { id: 'records', title: 'Evaluations, benchmarks and results', line: 'Evaluation runs carry datasets, metrics, comparison against the incumbent and the decision they supported.', why: 'A deployment without an evaluation is a change without evidence.', example: 'Evaluation results linked to the deployment they justified.' },
-    { id: 'workflows', title: 'Annotation, labelling and review', line: 'Annotation work carries datasets, annotators, throughput, quality checks and the evaluations waiting on it.', why: 'Labelling capacity is an upstream constraint on shipping model changes.', example: 'Annotation backlog blocking three evaluations.' },
-    { id: 'relationships', title: 'Accounts, pilots and deployments', line: 'Accounts carry their plan, usage, serving cost, model versions, pilot state and decision dates.', why: 'A pilot without a decision date does not end.', example: 'Five pilots past their evaluation window.' },
-    { id: 'orders', title: 'Plans, usage and pricing', line: 'Plans carry their usage assumptions, actual consumption and margin per account.', why: 'Pricing assumptions have to be compared with real usage.', example: 'Usage against plan assumptions by account.' },
-    { id: 'people', title: 'Researchers, engineers and annotators', line: 'Staff carry assignments, evaluation ownership, deployment approvals and annotation throughput.', why: 'Deployment approval is a named responsibility.', example: 'Deployments by approver with evaluation attached.' },
-    { id: 'intelligence', title: 'Margin, deployment and evaluation reporting', line: 'Cost per account and feature, gross margin, deployment history, evaluation outcomes and pilot conversion come from the records.', why: 'Unit economics and model governance are both measurable.', example: 'Gross margin by account and by feature.' },
-    { id: 'ai', title: 'Ask the company a question', line: 'Verity AI answers from your own account, cost, deployment and evaluation records, respects permissions, and can create assigned follow-ups.', why: 'The useful questions are about which accounts lose money and what is deployed.', example: '"Which accounts cost more than they pay?" returns three with usage patterns.' },
-    { id: 'communication', title: 'Customer contact and change notices', line: 'Pilot reviews, change notifications and usage conversations attach to the account.', why: 'A behaviour change customers notice needs to be a notification, not a discovery.', example: 'Change notice recorded against the accounts affected.' },
-    { id: 'schedule', title: 'Evaluation and deployment planning', line: 'Evaluations, annotation capacity and deployment windows are planned together.', why: 'A deployment date is only real if the evaluation and its data are ready.', example: 'Deployment windows planned against annotation capacity.' },
-    { id: 'suppliers', title: 'Compute providers and data vendors', line: 'Providers carry cost, commitments, capacity and reliability.', why: 'Compute commitments are a large fixed obligation against variable demand.', example: 'Committed compute against actual consumption.' },
-  ],
-
-  workflowsHeading: 'Evaluate, deploy, serve, measure, decide.',
-  workflowsLede: 'These already happen. Recorded, unit economics and model governance both become visible.',
-  workflows: [
-    { name: 'Evaluation and deployment', steps: ['Change proposed with an evaluation plan', 'Annotated data confirmed available', 'Evaluation run against the incumbent', 'Deployment approved by a named person with results attached', 'Deployment recorded with accounts affected'], note: 'Attaching the evaluation to the deployment is what makes the change reversible with reason.' },
-    { name: 'Cost attribution', steps: ['Serving cost captured per request class', 'Attributed to account and feature', 'Compared with the revenue from that account', 'Accounts below cost surfaced', 'Pricing or usage conversation raised'], note: 'Attribution per account is the only way flat pricing survives variable cost.' },
-    { name: 'Annotation pipeline', steps: ['Dataset requirement defined by the evaluation', 'Annotation assigned with quality criteria', 'Throughput and quality tracked', 'Dataset released for evaluation', 'Evaluations unblocked'], note: 'Labelling is a capacity constraint on shipping, not a background task.' },
-    { name: 'Pilot to decision', steps: ['Pilot opened with criteria and a decision date', 'Usage and cost tracked during the pilot', 'Results assessed against the criteria', 'Decision recorded either way', 'Conversion or closure completed'], note: 'A recorded decision to stop is worth more than an indefinite pilot.' },
-    { name: 'Change communication', steps: ['Deployment identified as behaviour-affecting', 'Accounts served by the change listed', 'Notification issued', 'Customer responses recorded', 'Rollback decision made if required'], note: 'Knowing which accounts were served which version is what makes the answer possible.' },
-  ],
-
-  ai: {
-    heading: 'Ask about margin and deployments.',
-    lede: 'Verity AI reads the same account, cost, deployment and evaluation records the company creates as it operates. It answers from your own company, respects permissions, and can turn an answer into a pricing conversation or a deployment review.',
-    panelMeta: 'Grounded in your company records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which accounts cost more to serve than they pay?',
-      'What is gross margin by account and by feature?',
-      'Which model versions are live and what evaluation justified them?',
-      'Which pilots are past their decision date?',
-      'Which evaluations are blocked on annotation?',
-      'Which accounts have usage far above their plan assumptions?',
-      'Which accounts were served the version that changed last week?',
-      'What is committed compute against actual consumption?',
-      'Summarise unit economics and deployment position.',
+    "bring": [
+      "List of live projects with owners",
+      "Recent compute invoices from each provider",
+      "Dataset inventory, even if rough",
+      "Contracts and success measures for live pilots",
+      "Grant or subsidy letters with reporting dates"
     ],
+    "time": "About 8 to 12 hours of your own time across the four weeks, mostly in week 1. The head of research, delivery lead and finance lead need a few more.",
+    "after": "Nobody is hired to run Verity. Runs, spend and pilot notes are recorded as part of work the team already does, and reports come from those records."
   },
-
-  automationHeading: 'Cost, deployments and decisions.',
-  automationLede: 'Each runs from the company’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'An account’s serving cost approaches its revenue', steps: ['Flagged with usage pattern', 'Pricing or usage conversation raised', 'Outcome recorded'] },
-    { trigger: 'A deployment is made without an attached evaluation', steps: ['Flagged with the accounts affected', 'Evaluation or rollback assigned', 'Decision recorded'] },
-    { trigger: 'A pilot passes its decision date', steps: ['Criteria and results surfaced', 'Decision assigned to an owner', 'Conversion or closure recorded'] },
-    { trigger: 'An evaluation is blocked on annotation', steps: ['Annotation requirement surfaced with capacity', 'Priority decision raised', 'Evaluation unblocked on release'] },
-    { trigger: 'Usage exceeds plan assumptions', steps: ['Account flagged with cost impact', 'Plan review raised', 'Outcome recorded'] },
+  "ai": {
+    "heading": "Ask your company a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own projects, runs, datasets, spend and pilot records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which models were trained on Client B's support tickets?",
+        "a": "Two models, both in the claims pilot. The dataset is marked for deletion on 30 November.",
+        "rows": [
+          [
+            "Claims reader v2",
+            "Run DR-409"
+          ],
+          [
+            "Claims reader v3",
+            "Run DR-412"
+          ],
+          [
+            "Deletion due",
+            "30 Nov"
+          ]
+        ],
+        "action": "Create a deletion task for the data lead"
+      },
+      {
+        "q": "Which projects will go over their compute budget this month?",
+        "a": "The speech grant project is at 92% with two runs queued. The retail model has room.",
+        "rows": [
+          [
+            "Speech grant",
+            "92% used"
+          ],
+          [
+            "Bank reader",
+            "80%"
+          ],
+          [
+            "Retail demand",
+            "60%"
+          ]
+        ],
+        "action": "Ask the project owner to confirm the queued runs"
+      },
+      {
+        "q": "Which pilots have passed their end date without a decision?",
+        "a": "Two. The insurance claims pilot is three weeks over, and the telecom summaries pilot is one week over.",
+        "rows": [
+          [
+            "Insurance claims",
+            "3 weeks"
+          ],
+          [
+            "Telecom summaries",
+            "1 week"
+          ]
+        ],
+        "action": "Task each owner to ask the client for a decision"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. People still talk to clients and vendors; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "A project's compute spend reaches 80% of its budget",
+      "then": [
+        "Alert to the project owner",
+        "Queued runs listed against the project",
+        "Decision to continue or stop recorded"
+      ]
+    },
+    {
+      "when": "A labelling batch fails its sample check",
+      "then": [
+        "Batch held from training",
+        "Rework task to the vendor contact",
+        "Accepted count updated on reacceptance"
+      ]
+    },
+    {
+      "when": "A pilot passes its end date",
+      "then": [
+        "Flagged on the pilots board",
+        "Task to the owner to ask the client for a decision",
+        "Outcome recorded: convert, extend or close"
+      ]
+    },
+    {
+      "when": "A client data share reaches its deletion date",
+      "then": [
+        "Task to the data lead",
+        "Locations of copies listed on the task",
+        "Confirmation stored on the record"
+      ]
+    },
+    {
+      "when": "A model version is marked ready for release",
+      "then": [
+        "Evaluation checklist checked for open items",
+        "Approval routed to the head of research",
+        "Release recorded with the approver"
+      ]
+    },
+    {
+      "when": "A grant or subsidy reporting date is 14 days away",
+      "then": [
+        "Task to the owner with the evidence list",
+        "Missing usage records flagged",
+        "Submission recorded on the grant"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the company can see.',
-  intelligenceLede: 'Unit economics, deployments and evaluations from operating records.',
-  intelligence: [
-    { area: 'Economics', points: ['Serving cost by account and feature', 'Gross margin per account', 'Usage against plan assumptions', 'Committed compute against consumption'] },
-    { area: 'Deployments', points: ['Live versions and their approvals', 'Deployment history by account', 'Evaluations behind each change', 'Rollbacks and their causes'] },
-    { area: 'Evaluation', points: ['Evaluation outcomes against incumbent', 'Annotation throughput and quality', 'Datasets available and blocked', 'Time from evaluation to deployment'] },
-    { area: 'Commercial', points: ['Pilot conversion and duration', 'Pilots without decisions', 'Account expansion and churn', 'Pricing against real cost'] },
+  "rules": {
+    "heading": "The rules an AI company has to keep up with.",
+    "lede": "Verity does not give legal advice and does not file anything for you. It keeps the records these rules depend on in order, so you are not hunting for them when a client or regulator asks.",
+    "note": "Rules and court positions change. Confirm current requirements with your lawyer or the relevant authority.",
+    "items": [
+      {
+        "name": "Digital Personal Data Protection Act and Rules",
+        "what": "The Rules were notified on 13 November 2025 and phase in. Some parts apply from notification, consent manager rules generally from 13 November 2026, and most remaining duties, including breach intimation and data retention, generally from 13 May 2027. Whether you are a data fiduciary or processor depends on your contracts.",
+        "how": "Each client data share and personal data dataset is a record with purpose, access, location and deletion date, so the facts the Rules ask about are on file.",
+        "source": {
+          "name": "Hogan Lovells",
+          "url": "https://www.hlc.com/en/publications/indias-digital-personal-data-protection-act-2023-brought-into-force-"
+        }
+      },
+      {
+        "name": "India AI Governance Guidelines",
+        "what": "MeitY released principle-based guidelines in November 2025. They generally rely on existing law and do not create a separate AI statute.",
+        "how": "Evaluation checklists, release approvals and a log of client feedback give you a record of the checks you ran and who signed them.",
+        "source": {
+          "name": "AZB & Partners summary",
+          "url": "https://www.azbpartners.com/bank/meity-releases-guidelines-on-ai-governance-the-way-ahead-and-roadmap-for-ai-use-in-india/"
+        }
+      },
+      {
+        "name": "Copyright and training data",
+        "what": "In ANI v OpenAI, the Delhi High Court on 24 July 2026 refused an interim injunction. The findings are interim and the suit continues to trial, so the position on training data is not final.",
+        "how": "Every dataset records its source and licence or contract, and which models used it, so a question about training data can be answered from the record.",
+        "source": {
+          "name": "iPleaders blog",
+          "url": "https://blog.ipleaders.in/ani-v-openai-ai-training-copyright-ruling/"
+        }
+      },
+      {
+        "name": "IndiaAI compute subsidy terms",
+        "what": "Compute subsidies under the IndiaAI Mission were reported at 100% for core foundational-model work and 40% for other GPU-intensive work. Terms and reporting duties depend on your approval.",
+        "how": "Each subsidy is a record with terms, reporting dates and usage evidence, and each report is a task with an owner.",
+        "source": {
+          "name": "Outlook Business",
+          "url": "https://www.outlookbusiness.com/artificial-intelligence/govt-offers-100-compute-subsidy-for-foundational-ai-model-development"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A researcher does not need every client contract. Finance does not need run logs. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Founder or CEO",
+      "question": "Which projects earn, and what needs my decision?",
+      "sees": "Margin by project and client, compute against budget, pilots past their date and the people who are stretched."
+    },
+    {
+      "role": "Head of research",
+      "question": "Which models are ready, and which runs mattered?",
+      "sees": "Runs, evaluation checklists, release approvals, dataset use and single points of failure."
+    },
+    {
+      "role": "Delivery lead",
+      "question": "Are we meeting what we promised each client?",
+      "sees": "Pilots, success measures, deliverables, acceptance and conversion steps."
+    },
+    {
+      "role": "Data lead",
+      "question": "Do we know where every dataset came from?",
+      "sees": "Dataset register, licences, labelling batches, client data shares and deletion dates."
+    },
+    {
+      "role": "Finance lead",
+      "question": "What did this cost, and what do we invoice?",
+      "sees": "Compute spend by project, commitments, grant reporting dates and contract milestones."
+    }
   ],
-  intelligenceNote: 'Verity records the company’s operations. Training infrastructure and model tooling continue as they are.',
-
-  rolesHeading: 'One company, four views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Founder', question: 'Do the unit economics work?', focus: 'Cost per account, gross margin, accounts below cost, pilot conversion.' },
-    { role: 'Engineering lead', question: 'What is deployed and why?', focus: 'Live versions and approvals, evaluations attached, rollback position, annotation capacity.' },
-    { role: 'Research lead', question: 'What can we evaluate?', focus: 'Evaluation queue, dataset availability, annotation throughput, results against incumbent.' },
-    { role: 'Account manager', question: 'Where does this customer stand?', focus: 'Usage against plan, cost to serve, pilot decision date, version and change history.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your training code, notebooks and experiment tracker. We agree during setup how run results reach Verity.",
+      "Your cloud and GPU provider consoles. We record their spend against projects.",
+      "Your chat channels with clients. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Train, host or serve your models.",
+      "Replace your experiment tracker or code repository.",
+      "Send messages to clients or vendors on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your project list, dataset inventory, compute invoices and pilot sheet across from the spreadsheets and shared drives you use now, in stages, so research carries on while it happens."
+  },
+  "faqHeading": "Questions AI company founders ask.",
+  "faqs": [
+    [
+      "Our engineers hate process. Will they actually log runs?",
+      "Only if it takes seconds, so we agree how run results reach Verity during setup rather than asking for typed entries. What people add by hand is short: the project, the dataset version and a line on why."
+    ],
+    [
+      "Does Verity replace our experiment tracker?",
+      "No. Your tracker stays where researchers work. Verity holds the business side: which project and client a run serves, what it cost, which dataset it used and who approved release."
+    ],
+    [
+      "Can it track GPU spend across several providers?",
+      "Yes. Each provider's invoice is allocated to projects as a record, whether the numbers come in by import or by hand. We agree the route for each during setup."
+    ],
+    [
+      "We are four people. Is this too much?",
+      "A four-person team has the same gaps and less time to notice them. We set up only what you need, in the same four weeks, and leave out what you do not."
+    ],
+    [
+      "Can it help with a data protection review from a client?",
+      "It keeps the facts a review asks for in one place: what data you received, for what purpose, who had access and when it was deleted. It does not give legal advice or certify compliance."
+    ],
+    [
+      "Does it run or host our models?",
+      "No. Verity does not train, host or serve models. It runs the company around them."
+    ],
+    [
+      "Can it tell us what a pilot really cost?",
+      "Yes, once compute spend and people time are recorded against the pilot. Each pilot shows spend, time and revenue on one line."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so researchers, delivery, finance and the founder each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the size of your team and what you want set up. Message us and we will give you a clear number after a short conversation about how your company works."
+    ]
   ],
-
-  useCasesHeading: 'What AI companies use Verity for',
-  useCases: [
-    { name: 'Attributing serving cost to accounts', body: 'Inference and compute cost held per account and feature against the revenue each produces, which is the only way flat pricing survives a variable cost to serve.' },
-    { name: 'Knowing what is deployed', body: 'Live model versions carrying the evaluation, the approver and the date, so production reflects decisions rather than leftover tests.' },
-    { name: 'Unblocking evaluations', body: 'Annotation tracked as capacity against the evaluations that depend on it, making labelling a visible constraint on shipping.' },
-    { name: 'Ending pilots deliberately', body: 'Pilots carrying criteria, a decision date and an owner, so an evaluation converts or closes instead of continuing indefinitely.' },
-    { name: 'Answering what changed', body: 'Accounts linked to the versions they were served and the dates they changed, so a customer reporting different behaviour gets a real answer.' },
-    { name: 'Catching heavy usage early', body: 'Consumption compared with plan assumptions per account, surfacing margin erosion before it becomes a renewal problem.' },
-    { name: 'Asking about the company', body: 'Plain-language questions across cost, deployments, evaluations and accounts, with pricing and review actions raised in the same step.' },
+  "related": [
+    "saas-companies",
+    "startups",
+    "data-companies",
+    "software-agencies",
+    "it-services-companies",
+    "cybersecurity-companies"
   ],
-
-  migration: 'Training infrastructure and model tooling continue and are mapped during implementation. Accounts with plans and usage, cost attribution structures, deployment and evaluation history, annotation records and compute commitments are brought across.',
-
-  faqHeading: 'Questions AI companies ask',
-  faqs: [
-    ['What can AI software do for an AI company?', 'Verity AI answers questions from your own account, cost, deployment and evaluation records: which accounts cost more to serve than they pay, what gross margin is by feature, which model versions are live and what justified them, which pilots are past their decision date. Each answer can become a pricing conversation or a deployment review.'],
-    ['Why attribute serving cost per account?', 'Because the cost is variable per request and the price is usually fixed per seat or per month. Without attribution the company knows its total compute spend and not which customers are profitable, and heavy users erode margin invisibly.'],
-    ['How does it help with model governance?', 'Every deployment carries the model version, the evaluation that justified it, the person who approved it and the accounts it affects, so what is running in production is a recorded decision rather than an accumulated state.'],
-    ['Does it track annotation work?', 'Annotation carries datasets, annotators, throughput and quality, with the evaluations waiting on it linked, so labelling capacity is visible as the upstream constraint on shipping model changes.'],
-    ['What about pilots?', 'Pilots carry criteria, a decision date and an owner, and a decision is recorded either way. An indefinite pilot consumes engineering attention and serving cost with no commercial outcome, which is the most expensive state in the business.'],
-    ['Can it answer customer questions about behaviour changes?', 'Accounts are linked to the model versions they were served and the dates those changed, so a customer reporting different results receives a specific answer rather than an investigation.'],
-    ['Does it replace our training infrastructure?', 'No. Training infrastructure, experiment tracking and model tooling continue as they are. Verity holds the company around them — accounts, cost, deployments, evaluations, annotation and pilots.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of cost attribution, deployment process, evaluation practice and plan structures, configuration, migration of accounts and history, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with cost per account.',
-  ctaLede: 'A few accounts usually carry the margin problem. Tell us how serving cost is attributed today.',
-
-  related: ['saas-companies', 'data-companies', 'startups', 'software-agencies', 'cybersecurity-companies', 'online-marketplaces'],
+  "ctaHeading": "Start with the pilot that has no written test of success.",
+  "ctaLede": "Tell us how your company runs and we will show you the compute spend, dataset gaps and stalled pilots it would find, using your own numbers."
 };

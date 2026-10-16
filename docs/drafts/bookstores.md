@@ -34,8 +34,8 @@ Sources (name | URL | year | verified | what it says):
 
 ## SEO
 
-- title: Bookstore software: titles, returns to publishers, school season | Verity
-- description: The 14 problems that quietly drain a bookstore, from dead titles and missed publisher returns to school-season shortages and forgotten special orders, and the Verity screens that fix them.
+- title: Bookstore software: titles, publisher returns, school season | Verity
+- description: The 14 problems that drain a bookstore, from dead titles and missed publisher returns to school-season shortages, and the Verity screens that fix them.
 - keywords: bookstore management software India; bookshop inventory and publisher returns; school book set order tracking; bookstore special order tracking; independent bookshop software
 - plural: bookstores
 - subject: bookstore

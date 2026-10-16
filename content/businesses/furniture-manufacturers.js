@@ -9,7 +9,7 @@ export default {
   seo: {
     title: 'Furniture manufacturing software for workshops and factories | Verity',
     description:
-      'The 14 problems that make furniture orders late and thin on margin: measurements, cut lists, boards and timber, finishing, hardware and stage payments, solved on Verity screens.',
+      'The 14 problems that make furniture orders late and thin on margin: measurements, cut lists, boards, finishing, hardware and stage payments, solved on Verity screens.',
     keywords: [
       'furniture manufacturing software India',
       'made to order furniture job tracking',

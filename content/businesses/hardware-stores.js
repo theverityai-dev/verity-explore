@@ -1,180 +1,1064 @@
 export default {
-  slug: 'hardware-stores',
-  status: 'published',
-  plural: 'hardware stores',
-  subject: 'hardware store',
-
-  seo: {
-    title: 'AI business management software for hardware stores | Verity',
-    description:
-      'Verity connects a very large SKU count, trade credit accounts, break-bulk selling, low-value line management and supplier terms into one operational system.',
-    keywords: [
-      'AI software for hardware stores',
-      'hardware store management software',
-      'trade credit and counter account tracking',
-      'large SKU count inventory software',
-    ],
+  "schema": 2,
+  "slug": "hardware-stores",
+  "status": "published",
+  "plural": "hardware stores",
+  "subject": "hardware store",
+  "checked": "15 October 2026",
+  "seo": {
+    "title": "Hardware store software: contractor credit, SKUs, deliveries | Verity",
+    "description": "The 16 quiet leaks in a hardware store, from contractor khata and dead stock to site deliveries and thin-margin lines, and the Verity screens that fix them.",
+    "keywords": [
+      "hardware store management software India",
+      "contractor credit ledger hardware shop",
+      "hardware inventory slow moving SKUs",
+      "building material delivery tracking",
+      "hardware shop supplier rate tracking"
+    ]
   },
-
-  hero: {
-    eyebrow: 'Verity for hardware retail',
-    headline: 'Eleven thousand lines, most of them worth twenty rupees, and the ones that matter are always out.',
-    lede:
-      'A hardware store carries enormous range at low value and lives on trade customers who buy on credit. Verity manages the range that matters and the accounts that fund it.',
-    note: 'Runs alongside your existing billing setup.',
-    panel: {
-      title: 'Store',
-      meta: 'This month',
-      rowsLabel: 'Needs attention',
-      metrics: [
-        { label: 'Lines carried', value: '11,400', note: '₹68 L at cost' },
-        { label: 'Trade credit', value: '₹22 L', note: '96 accounts' },
-        { label: 'No sale 180d', value: '3,140 lines', note: '₹14 L held' },
-        { label: 'Top-line stockouts', value: '38', note: 'this week' },
-      ],
-      rows: [
-        { name: '38 fast-moving lines out of stock this week', meta: 'Trade customers go elsewhere for the whole list', active: true },
-        { name: '₹22 L on trade credit, ₹6 L beyond 60 days', meta: 'Contractors with ongoing purchases', active: true },
-        { name: '3,140 lines with no sale in six months', meta: 'Range carried out of habit', active: true },
-        { name: 'Break-bulk sales not deducting from bulk stock', meta: 'Count drift on 9 categories', active: false },
-      ],
-      note: 'Illustrative figures. Verity shows your own store in this shape.',
+  "uses": [
+    "people",
+    "work",
+    "relationships",
+    "records",
+    "workflows",
+    "communication",
+    "intelligence",
+    "control",
+    "inventory",
+    "suppliers",
+    "orders",
+    "logistics",
+    "workforce",
+    "locations",
+    "ai"
+  ],
+  "hero": {
+    "eyebrow": "Verity for hardware stores",
+    "headline": "A hardware store sells a thousand small things on credit. The profit is in knowing which ones pay.",
+    "lede": "A hardware store carries pipes, wire, paint, tools, fittings, fasteners and sometimes cement, and sells to plumbers, electricians and contractors who run an account. The margin is thin on the bulky lines and fat on the small ones, and the credit book is bigger than anyone says. Verity connects the item, the contractor, the site and the supplier, so you can see what earns, who owes you and what is about to run out.",
+    "oneLine": "One system that knows every item and its rate, every contractor and what they owe, every delivery to a site and every supplier payment, and tells you what needs attention today.",
+    "note": "Built for a counter that is three deep at 9 am with contractors who each want something different. Records come from the bills, deliveries and ledger entries you already make.",
+    "screen": "owner",
+    "screenNote": "item groups, contractors, sites and suppliers"
+  },
+  "today": {
+    "heading": "Most hardware stores know every customer and every shelf, and carry the rest in the khata.",
+    "paragraphs": [
+      "The counter is easy to see. A plumber with a list of fittings, an electrician asking for a coil of wire, a contractor who takes ten bags of cement for a site and will pay at the month end. What is hard to see is what sits behind it: which of the thousand items has not sold in a year, which lines actually earn a margin, how much each contractor owes and for how long, and what the supplier raised its price by last month.",
+      "That information exists in pieces. The billing screen knows the sale. The credit book is a ledger or a phone app. Supplier rates arrive on a list photographed over WhatsApp. Site deliveries are a phone call to a driver. The owner holds the rest in memory.",
+      "The market is described as highly fragmented, led by contractors and technicians rather than do-it-yourself buyers, and a consultancy projects it growing around 7 percent a year over 2026 to 2032. Credit, working capital and price-sensitive customers are the pressures retailers face."
+    ],
+    "stack": [
+      "Billing screen at the counter",
+      "Credit ledger or khata app",
+      "Supplier price lists and challans",
+      "WhatsApp for contractors and drivers",
+      "The owner’s memory of who owes what"
+    ],
+    "stackNote": "Each one does its own job well enough. None of them talk to each other, and nobody has time to join them."
+  },
+  "painsHeading": "Where a hardware store actually loses money.",
+  "painsLede": "These are the situations hardware store owners and managers describe again and again. For each one: what it looks like on an ordinary day, what it costs, and what Verity does about it.",
+  "pains": [
+    {
+      "area": "Stock",
+      "title": "A customer asks for an item and nobody knows where it is",
+      "scene": "A plumber wants a half-inch CPVC elbow. Staff search two racks and a godown. It is in a box behind the paint tins, or sold out, or you stock it under a different name. The plumber goes next door.",
+      "cost": "Example arithmetic: ten such lost sales a day at an average ₹350 is ₹3,500 a day, over ₹1 lakh a month, and the next time he goes there first.",
+      "fix": "Every item is a record with its size, brand, rack and godown location, and the quantity on hand. Staff search once and see where it is, whether it is in, and if not which supplier can deliver by when.",
+      "screen": "stock"
     },
-  },
-
-  overview: {
-    heading: 'The range is enormous, the values are small, and the customers buy lists.',
-    paragraphs: [
-      'A hardware store carries thousands of lines that individually are worth very little and collectively are the reason customers come. Nobody visits for one washer; they visit because the store has the washer, the bracket and the sealant. That makes range the proposition and stockouts unusually expensive — a trade customer who cannot complete their list at your counter completes it at someone else’s, including the items you did have.',
-      'The second fact is that the range cannot be managed uniformly. Three thousand lines with no sale in six months are carried out of habit, and among eleven thousand lines nobody can tell habit from deliberate service range without movement data.',
-      'The third is trade credit. Contractors and tradespeople buy repeatedly on account, and the exposure grows quietly while purchases continue. Six lakh beyond sixty days across accounts that are still buying is a risk nobody has priced.',
-      'The fourth is break-bulk. Product bought in bulk and sold by length, weight or unit produces a gap between purchase and sale that never reconciles unless both are recorded in the same units.',
-      'Verity manages the range that moves, the accounts that fund the store, and the break-bulk lines that drift.',
+    {
+      "area": "Stock",
+      "title": "Dead stock among a thousand items",
+      "scene": "A brand of switch plates went out of fashion. A bulk buy of a particular tap did not sell. Old-model fittings sit on the top shelf. Nobody has looked at what has not moved in a year.",
+      "cost": "A hardware store carries thousands of items and each slow one holds cash and space that a faster item could use.",
+      "fix": "Verity lists items by days since the last sale and value held, by brand and group. Slow movers show with a suggested action, such as a return to the supplier where terms allow, a bundle or a markdown, and an owner for each.",
+      "screen": "stock"
+    },
+    {
+      "area": "Stock",
+      "title": "Loose items sold by weight or piece that never tally",
+      "scene": "Nails, screws, bolts and washers are sold by weight or by the piece from open bins. The count in the book never matches the bins. Nobody can say if it is spillage, a mistake in weighing or something worse.",
+      "cost": "Fasteners carry some of the best margins in the shop, so small leaks there matter more than they look.",
+      "fix": "Loose items are stocked in a base unit and sold in kilos or pieces. Verity compares what sales say should be left against a periodic count and shows the gap by item, so the pattern can be seen and the count is quick.",
+      "screen": "stock"
+    },
+    {
+      "area": "Contractors",
+      "title": "Contractor credit that nobody can total",
+      "scene": "A contractor takes goods every day for three sites and pays when his client pays him. The ledger shows a running balance in one place, the bills in another, and a different balance in the phone of the staff member who deals with him.",
+      "cost": "Example arithmetic: ₹8 lakh of contractor credit outstanding 45 days on average ties up cash at the same time you pay suppliers on a shorter cycle. Indian retailers report credit cycles and working capital as constant pressures.",
+      "fix": "Each contractor is an account with a credit limit, bills, payments and balance by age. Verity shows what is owed by whom and for how long, stops a bill above the limit until the owner approves it, and gives a task to chase on the schedule you set.",
+      "screen": "credit",
+      "source": {
+        "name": "Nexdigm, India hardware stores retail industry, 2026",
+        "url": "https://www.nexdigm.com/market-research/insights/blog/india-hardware-stores-retail-industry/"
+      }
+    },
+    {
+      "area": "Contractors",
+      "title": "Many sites, one contractor, no clear bills",
+      "scene": "A contractor builds on four sites at the same time. The bills have only his name. When his client wants to know what was bought for which site, nobody can say, and he disputes charges at the month end.",
+      "cost": "Disputes delay payment, and the discussion costs the owner an hour each time.",
+      "fix": "Each bill carries a site reference. Verity shows purchases and balances by site as well as by contractor, so a statement for one site is ready in a minute.",
+      "screen": "credit"
+    },
+    {
+      "area": "Orders",
+      "title": "Project quotes built from a photo of a list",
+      "scene": "A contractor sends a photo of a handwritten list for a flat’s plumbing. You build the quote from memory and a few phone calls. He gets a lower quote from another shop that replied faster.",
+      "cost": "Project lists are the largest orders a hardware store sees. They are lost to slow quotes far more often than to price.",
+      "fix": "Each enquiry is a record with an owner, the item list, the rates, the quote and the next step. Verity lists those with no reply and tells the person responsible. Staff still send the quote, and the outcome is recorded.",
+      "screen": "orders"
+    },
+    {
+      "area": "Orders",
+      "title": "Heavy deliveries and short loads",
+      "scene": "Cement, pipes, tiles and paint go out on a small truck to different sites. The driver has a phone call and a challan. A site says three bags were short. The driver says he delivered all.",
+      "cost": "Short or wrong deliveries mean a second trip, a dispute and sometimes a credit note you did not plan for.",
+      "fix": "Each delivery is an order with the items, the site, the vehicle, the driver and the status. The receiver’s confirmation is recorded against it, and the counter sees what has gone out, what has arrived and what is late.",
+      "screen": "orders"
+    },
+    {
+      "area": "Suppliers",
+      "title": "Supplier prices that move and a shelf price that does not",
+      "scene": "The price of PVC pipe, copper wire or a paint brand moves. The distributor’s new list is a photo on WhatsApp. The shelf and the contractor’s rate stay the same for weeks.",
+      "cost": "Selling below the new cost on bulky, price-led lines like pipes and wire, where margins are already thin, quietly turns a sale into a loss.",
+      "fix": "Every purchase records the rate. Verity shows price trends by supplier and item, flags where your selling rate is now below the margin you set, and shows which contractor rates are affected.",
+      "screen": "suppliers"
+    },
+    {
+      "area": "Suppliers",
+      "title": "Supplier payments and the 45-day rule",
+      "scene": "You buy from distributors and some small manufacturers on credit and pay when cash allows. Your accountant mentions a rule about payments to micro and small suppliers, and you do not know which of your suppliers are in that group.",
+      "cost": "Under section 43B(h), amounts owed to micro and small enterprise suppliers beyond the payment period are deductible only when paid. It is a timing issue, but it can surprise you at year end.",
+      "fix": "Each supplier record holds their category if you know it, terms and the invoices with due dates. Verity lists what is nearing 45 days by supplier, and the accountant sees what is outstanding at year end.",
+      "screen": "suppliers",
+      "source": {
+        "name": "TaxGuru, Section 43B(h): MSME payment clause, 2026",
+        "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+      }
+    },
+    {
+      "area": "Suppliers",
+      "title": "Short deliveries and goods without the ISI mark",
+      "scene": "A distributor’s invoice says forty coils of wire and thirty-six arrive. A batch of switches comes with a different mark than before. The person who signs the challan is busy with a customer.",
+      "cost": "You pay for goods that did not come, and selling products without the right certification is a legal risk that falls on the shop. Cheap lookalikes also hurt the reputation of the shop.",
+      "fix": "Deliveries are received against the order by quantity and brand, with a note on the mark or batch where it matters. Verity compares order, receipt and invoice and flags a mismatch before payment, and keeps the supplier and batch on each item.",
+      "screen": "suppliers"
+    },
+    {
+      "area": "Returns",
+      "title": "The wrong size comes back, and breakages nobody counts",
+      "scene": "A customer buys a fitting, the size is wrong, and he brings it back after the water is turned on. Tiles and sanitaryware crack in the godown. A returned item goes back on the rack in the wrong place.",
+      "cost": "Returns that are not recorded distort stock, and breakage that is not counted never gets claimed from the supplier.",
+      "fix": "Returns and breakage are logged with a reason in two taps, linked to the original bill. Stock goes back to the right location, and Verity totals breakage by supplier and item so a claim has evidence.",
+      "screen": "returns"
+    },
+    {
+      "area": "Returns",
+      "title": "Power tool and electrical warranty claims",
+      "scene": "A drill stops working in month four. The customer has the invoice, or says he lost it. You say you will talk to the brand. The claim sits.",
+      "cost": "A claim that is not filed in time is a direct loss, and a customer who is ignored tells other contractors.",
+      "fix": "Each claim is a record linked to the sale, with the brand, the date, the photos and the status. Verity shows claims awaiting the brand’s reply and flags those near their window, so none is lost.",
+      "screen": "returns"
+    },
+    {
+      "area": "Money",
+      "title": "Margin that hides inside a mix of thin and fat lines",
+      "scene": "Cement and wire are bought on price and sold at a slim margin. Fasteners, adhesives and small tools earn far more. The shop is busy all day and the owner cannot say which lines pay the rent.",
+      "cost": "One vendor’s estimate puts bulk building material margins at 4 to 8 percent against 20 to 30 percent on fasteners. A shop that pushes the wrong lines works hard for little.",
+      "fix": "Every item carries its purchase cost, so margin is known per item and group. Verity shows margin by group, by contractor and by salesperson, flags deals below your floor and shows where the mix is shifting.",
+      "screen": "owner",
+      "source": {
+        "name": "Accountune, Hardware store profit margin in India 2026, a software vendor",
+        "url": "https://accountune.com/hardware-store-profit-margin"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Different GST rates on items that sit in one bill",
+      "scene": "Cement moved from 28 to 18 percent from 22 September 2025. PVC pipes are at 5 percent, while fittings, paints, tiles and wires are at 18 percent. A bill with all of them is confusing, and sources disagree on some fittings.",
+      "cost": "A wrong rate on a bill, an argument with a contractor and hours of correction by your accountant. Rates and classifications can change again.",
+      "fix": "Each item carries its tax category and a mixed bill is split by line as it is made. A rate change is one update to an item’s setup, not a re-label of the shelf, and your accountant sees the split already clean.",
+      "screen": "owner",
+      "source": {
+        "name": "Bajaj Finserv, GST on cement, 2025",
+        "url": "https://bajajfinserv.in/cement-gst-rate"
+      }
+    },
+    {
+      "area": "Money",
+      "title": "Day-end takings do not tie to the bills",
+      "scene": "At closing, cash, card, UPI and credit sales are counted against the billing report and are off by a few hundred rupees. A cash sale was not billed, a credit payment was taken without a receipt or a refund was given at the counter.",
+      "cost": "Small daily gaps compound, and the owner stops trusting the numbers on the screen.",
+      "fix": "The day’s sales and payments by mode are compared with what was collected. A mismatch is flagged with the shift and amount, and the person closing records the reason.",
+      "screen": "owner"
+    },
+    {
+      "area": "Owner",
+      "title": "A godown, a second shop and an owner who is the system",
+      "scene": "Stock is split between the shop, a godown behind it and a second outlet. The owner remembers where the 4-inch pipes are and who owes the most. When he is away, the staff cannot answer.",
+      "cost": "Stock sits idle in one place while another runs out, and the business cannot grow past what one person can hold in their head.",
+      "fix": "Each morning Verity shows a short list of what needs a decision, each with an owner. Shops and godowns are locations in one system, with stock, sales and balances side by side, and stock moves between them against a recorded transfer.",
+      "screen": "owner"
+    }
+  ],
+  "factsHeading": "The numbers that make these problems worth fixing.",
+  "factsLede": "From published sources, with the source named under each figure. Your own numbers will differ, and showing you yours is the first thing Verity does.",
+  "factsNote": "The margin ranges come from a software vendor and have no stated method, so treat them as indicative. The GST figures come from a finance-company blog and a news site, not an official notification, and sources disagree on some fittings, so confirm each item’s rate with your accountant. The 7.0 percent growth is a consultancy projection.",
+  "facts": [
+    {
+      "figure": "4 to 8% against 20 to 30%",
+      "text": "indicative gross margins on cement and bulk building material against fasteners, according to one hardware software vendor.",
+      "source": {
+        "name": "Accountune, Hardware store profit margin in India 2026, vendor estimate",
+        "url": "https://accountune.com/hardware-store-profit-margin"
+      }
+    },
+    {
+      "figure": "28% to 18%",
+      "text": "GST on cement from 22 September 2025, while PVC pipes are at 5 percent and paints, tiles and wires are at 18 percent.",
+      "source": {
+        "name": "Bajaj Finserv, GST on cement, 2025",
+        "url": "https://bajajfinserv.in/cement-gst-rate"
+      }
+    },
+    {
+      "figure": "45 days",
+      "text": "the payment period after which amounts owed to micro and small enterprise suppliers are deductible only when paid, under section 43B(h). Traders are generally outside the rule.",
+      "source": {
+        "name": "TaxGuru, 2026",
+        "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+      }
+    },
+    {
+      "figure": "7.0%",
+      "text": "projected yearly growth of India’s hardware market from 2026 to 2032, in a market described as highly fragmented and led by contractors.",
+      "source": {
+        "name": "Nexdigm, India hardware stores retail industry, 2026",
+        "url": "https://www.nexdigm.com/market-research/insights/blog/india-hardware-stores-retail-industry/"
+      }
+    }
+  ],
+  "screensHeading": "The screens you would use every day.",
+  "screensLede": "Six views, each built for one job. Names, columns and terms are set up in your store’s own language.",
+  "screens": [
+    {
+      "id": "owner",
+      "title": "Hardware / Today",
+      "meta": "Shop: Gandhi Bazaar, godown: Peenya",
+      "heading": "The owner’s morning view",
+      "caption": "Sales, margin by item group, what contractors owe, deliveries out and anything that does not tie, on one screen, with the items that need a decision listed under it.",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "Sales yesterday",
+              "value": "₹2.9 lakh",
+              "note": "168 bills"
+            },
+            {
+              "label": "Owed by contractors",
+              "value": "₹11.6 lakh",
+              "note": "₹3.8 lakh over 45 days"
+            },
+            {
+              "label": "Deliveries out",
+              "value": "9",
+              "note": "2 not confirmed"
+            },
+            {
+              "label": "Slow movers",
+              "value": "212 items",
+              "note": "₹6.4 lakh at cost"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Gross margin by group, this month"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Fasteners",
+              "value": 27,
+              "display": "27%"
+            },
+            {
+              "label": "Hand and power tools",
+              "value": 19,
+              "display": "19%"
+            },
+            {
+              "label": "Pipes and fittings",
+              "value": 13,
+              "display": "13%"
+            },
+            {
+              "label": "Cement and bulk",
+              "value": 6,
+              "display": "6%",
+              "tone": "muted"
+            }
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Cash and UPI differ from bills by ₹540. 3 cash sales unbilled on the evening shift.",
+          "action": "Review"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "CPVC elbows below reorder point",
+              "meta": "Sold 220 a week, 90 on shelf",
+              "tag": [
+                "Order",
+                "flag",
+                "Ordered",
+                "ok"
+              ]
+            },
+            {
+              "name": "Raza Builders over credit limit",
+              "meta": "Balance ₹2.4 lakh, limit ₹2 lakh",
+              "tag": [
+                "Approve?",
+                "late",
+                "Held",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "title": "Stock",
+      "meta": "Shop and godown",
+      "heading": "Items, racks and what has not moved",
+      "caption": "Find any item by size, brand or rack, see what is in the shop and the godown, which items are short for the week and which have not sold for months.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Location",
+            "In stock",
+            "Sold / week",
+            "Status"
+          ],
+          "rows": [
+            [
+              "CPVC elbow 1/2 in",
+              "Rack B4",
+              "90",
+              "220",
+              [
+                "Short",
+                "late",
+                "Ordered",
+                "ok"
+              ]
+            ],
+            [
+              "Copper wire 1.5 sq mm, 90 m",
+              "Rack E1",
+              "34 coils",
+              "19",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Cement 50 kg",
+              "Godown",
+              "310 bags",
+              "140",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Switch plate, old model",
+              "Rack H2",
+              "180",
+              "0",
+              [
+                "No sale 14 months",
+                "flag",
+                "Bundled",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "title",
+          "text": "Loose items, count against expected"
+        },
+        {
+          "type": "bars",
+          "items": [
+            {
+              "label": "Wood screws 1.5 in (kg)",
+              "value": 18,
+              "display": "-4.2 kg",
+              "tone": "muted"
+            },
+            {
+              "label": "Nails 3 in (kg)",
+              "value": 9,
+              "display": "-1.8 kg",
+              "tone": "muted"
+            },
+            {
+              "label": "Anchor bolts (pcs)",
+              "value": 4,
+              "display": "-12 pcs",
+              "tone": "muted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit",
+      "title": "Contractor credit",
+      "meta": "Balances by age",
+      "heading": "Contractors, sites and what they owe",
+      "caption": "Each contractor with a credit limit, balance by age, bills by site and the promises to pay. A bill above the limit waits for approval. Chasing is a task with a date, not a note in the ledger.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Contractor",
+            "Limit",
+            "Balance",
+            "Oldest bill",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Raza Builders",
+              "₹2.0 lakh",
+              "₹2.4 lakh",
+              "62 days",
+              [
+                "Over limit",
+                "late",
+                "Held",
+                "ok"
+              ]
+            ],
+            [
+              "Anand Plumbing",
+              "₹1.0 lakh",
+              "₹68,000",
+              "31 days",
+              [
+                "OK",
+                "ok"
+              ]
+            ],
+            [
+              "Mehta Electricals",
+              "₹1.5 lakh",
+              "₹1.3 lakh",
+              "48 days",
+              [
+                "Chase",
+                "flag",
+                "Promised 25 Oct",
+                "info"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "record",
+          "title": "Raza Builders",
+          "sub": "Contractor since 2019. 4 active sites",
+          "fields": [
+            [
+              "Balance",
+              "₹2.4 lakh"
+            ],
+            [
+              "Site 1, Whitefield villa",
+              "₹1.1 lakh"
+            ],
+            [
+              "Site 2, HSR flats",
+              "₹82,000"
+            ],
+            [
+              "Site 3, Hebbal",
+              "₹48,000"
+            ],
+            [
+              "Status",
+              [
+                "62 days",
+                "late",
+                "Promise 28 Oct",
+                "info"
+              ]
+            ]
+          ],
+          "timeline": [
+            [
+              "14 Oct",
+              "Paid ₹40,000 on account"
+            ],
+            [
+              "2 Oct",
+              "Cement, 60 bags, Site 1"
+            ],
+            [
+              "Note",
+              "Pays when the client pays on the 28th"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "title": "Quotes and deliveries",
+      "meta": "Today",
+      "heading": "Quotes and deliveries to sites",
+      "caption": "Each project list with its quote, owner and next step, and each delivery to a site with the vehicle, the driver and the receiver’s confirmation.",
+      "blocks": [
+        {
+          "type": "board",
+          "columns": [
+            {
+              "name": "Quote asked",
+              "cards": [
+                {
+                  "title": "Flat plumbing list, 62 items",
+                  "meta": "Anand Plumbing, photo received 9 am",
+                  "tag": [
+                    "No reply 6 h",
+                    "late",
+                    "Quoted",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "Bathroom fittings, 3 flats",
+                  "meta": "Sharma & Sons",
+                  "tag": [
+                    "Draft quote",
+                    "flag"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Out for delivery",
+              "cards": [
+                {
+                  "title": "Cement 60 bags, Site 1",
+                  "meta": "Truck 2, Ramu, left 8:40",
+                  "tag": [
+                    "Awaiting receiver",
+                    "info",
+                    "Received",
+                    "ok"
+                  ]
+                },
+                {
+                  "title": "PVC pipes, 40 lengths, Site 3",
+                  "meta": "Truck 1, Suresh",
+                  "tag": [
+                    "3 pipes short",
+                    "late",
+                    "Sent",
+                    "ok"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suppliers",
+      "title": "Suppliers",
+      "meta": "Last 30 days",
+      "heading": "Rates, deliveries and what you owe",
+      "caption": "What each distributor last charged, how rates have changed, whether what arrived matched what was ordered and billed, and which invoices are nearing their due date.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Supplier",
+            "Item",
+            "Last rate",
+            "Change",
+            "Delivery check"
+          ],
+          "rows": [
+            [
+              "Kaveri Pipes",
+              "PVC pipe 1 in, 3 m",
+              "₹185",
+              [
+                "+7%",
+                "late"
+              ],
+              [
+                "Matched",
+                "ok"
+              ]
+            ],
+            [
+              "Sri Ram Wires",
+              "Copper wire 1.5 sq mm, 90 m",
+              "₹1,640",
+              [
+                "+3%",
+                "flag"
+              ],
+              [
+                "4 coils short",
+                "late",
+                "Credit asked",
+                "info"
+              ]
+            ],
+            [
+              "Asian Brush Co.",
+              "Paint brushes, assorted",
+              "₹92",
+              "No change",
+              [
+                "Matched",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "PVC pipe rate rose 7%. 6 contractor rates are now below your set margin.",
+          "action": "Review rates"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Kaveri Pipes, invoice 38 days old",
+              "meta": "Nearing 45 days, ₹1.1 lakh",
+              "tag": [
+                "Pay",
+                "flag",
+                "Scheduled",
+                "ok"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "returns",
+      "title": "Returns and claims",
+      "meta": "Open items",
+      "heading": "Returns, breakage and brand claims",
+      "caption": "Each return with its reason and the original bill, breakage by supplier, and warranty claims awaiting the brand with their claim dates.",
+      "blocks": [
+        {
+          "type": "table",
+          "cols": [
+            "Item",
+            "Type",
+            "Reason",
+            "Supplier or brand",
+            "Status"
+          ],
+          "rows": [
+            [
+              "CPVC fittings, 1 in",
+              "Customer return",
+              "Wrong size",
+              "Local",
+              [
+                "Restock",
+                "flag",
+                "Shelved B4",
+                "ok"
+              ]
+            ],
+            [
+              "Floor tiles, 12 boxes",
+              "Breakage",
+              "Cracked in godown",
+              "Marble House",
+              [
+                "Claim",
+                "late",
+                "Credit asked",
+                "info"
+              ]
+            ],
+            [
+              "Hammer drill",
+              "Warranty",
+              "Stopped in month 4",
+              "PowerPro",
+              [
+                "Awaiting brand",
+                "info",
+                "Replaced",
+                "ok"
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "text": "Breakage claims of ₹14,600 are open with two suppliers. 1 is within a week of the supplier’s claim date.",
+          "action": "File now"
+        }
+      ]
+    }
+  ],
+  "dayHeading": "The same Monday, before and after.",
+  "dayLede": "What changes is not the hardware. It is that the day leaves a record, and the record does the chasing.",
+  "day": [
+    {
+      "time": "8:30",
+      "before": "You open up and walk the racks. You think elbows are low but do not know by how much.",
+      "after": "The Today screen shows CPVC elbows at 90 against a weekly sale of 220, and an order is drafted."
+    },
+    {
+      "time": "10:00",
+      "before": "A contractor asks for a bill above his limit. You decide from memory.",
+      "after": "It lands on your phone as a one-tap approval with his balance and oldest bill shown."
+    },
+    {
+      "time": "12:00",
+      "before": "A site calls to say three pipes are short. The driver says nothing was short.",
+      "after": "The delivery record shows the count loaded and the receiver’s note. The credit is raised in a minute."
+    },
+    {
+      "time": "3:00",
+      "before": "A plumber sends a photo of a list and waits.",
+      "after": "It is on the quote board with an owner and a reminder. The quote goes out before the plumber goes next door."
+    },
+    {
+      "time": "8:00",
+      "before": "You count the till against the bills. It is ₹540 off.",
+      "after": "Verity shows the three cash sales that were not billed. You settle them in a minute."
+    },
+    {
+      "time": "Month end",
+      "before": "The accountant asks for contractor balances and supplier dues by age.",
+      "after": "Both are already listed by age, and every bill carries its tax category."
+    }
+  ],
+  "approach": {
+    "heading": "We set it up with you, in four weeks.",
+    "lede": "You do not get a login and a manual. We spend time at your counter and godown, build Verity around how your hardware store really runs, bring your data in, then stay to make sure it keeps working.",
+    "phases": [
+      {
+        "when": "Week 1",
+        "name": "Discovery and mapping",
+        "we": "Spend a morning rush and a godown visit with you. Watch how a bill, a credit sale and a site delivery move through, how stock arrives and how the day is counted, and note which leaks matter most.",
+        "you": "Two to three hours of yours and your senior counter person’s. Access to your billing reports, the credit ledger and a month of supplier invoices.",
+        "get": "A written map of your store: the item groups, the racks and godown, your suppliers, your contractors with their terms and the first leaks we will close."
+      },
+      {
+        "when": "Weeks 2 to 3",
+        "name": "Configuration",
+        "we": "Set up your items by group, size and brand, tax categories, racks and godown locations, reorder points, suppliers, contractor accounts with limits, site references, delivery steps and approval limits, and build the six screens around your own terms.",
+        "you": "Check the setup with your senior counter person. Tell us where an item, a group or a rule is wrong.",
+        "get": "A working Verity with your real items, contractors, suppliers and staff, ready for your data."
+      },
+      {
+        "when": "Weeks 3 to 4",
+        "name": "Migration and training",
+        "we": "Bring in your item list, stock by location, contractor balances by bill, supplier balances and open quotes from the ledgers and sheets you use. Train the counter, godown and delivery teams at their stations during a real shift.",
+        "you": "Your item list in whatever form it exists, the credit ledger and an opening stock count. One hour with each role.",
+        "get": "Your items, contractors and suppliers inside Verity, and a team that has used it through a busy morning."
+      },
+      {
+        "when": "After go-live",
+        "name": "Operations partnership",
+        "we": "Stay on after launch. Review the first weeks with you, tune the reorder points and credit rules, and handle changes when you add a brand, a godown or a second outlet.",
+        "you": "A short monthly review of what the numbers say.",
+        "get": "A system that keeps matching how the store runs, with someone responsible for it."
+      }
     ],
-  },
-
-  terminology: [
-    ['Lines, SKUs, bulk and break-bulk', 'Inventory'],
-    ['Counter sales, trade orders, returns', 'Orders'],
-    ['Trade accounts, contractors, retail customers', 'Relationships'],
-    ['Distributors, manufacturers, agents', 'Suppliers'],
-    ['Counter staff, storekeepers', 'People'],
-    ['Credit limits, approvals, write-offs', 'Workflows'],
-    ['Shop, godown, racks', 'Locations'],
-  ],
-
-  challengesHeading: 'Range, credit and drift.',
-  challengesLede:
-    'Hardware difficulties come from managing eleven thousand lines with one discipline and extending credit without a limit anyone checks.',
-  challenges: [
-    { problem: 'A stockout loses the whole list', detail: 'A trade customer unable to complete their purchase goes elsewhere for all of it, including what you had.', outcome: 'Availability is tracked specifically on the fast-moving lines that appear in most lists.' },
-    { problem: 'Habit range is indistinguishable from service range', detail: 'Some slow lines exist to complete a customer’s list; others are simply never reviewed.', outcome: 'Movement and basket association are recorded, so a line carried for service is distinguishable from one carried by inertia.' },
-    { problem: 'Trade credit grows while purchases continue', detail: 'A contractor keeps buying while their balance ages, and nobody checks at the counter.', outcome: 'Exposure and ageing sit on the account, checked when the next purchase is made.' },
-    { problem: 'Break-bulk never reconciles', detail: 'Bulk purchased in one unit and sold in another produces drift that becomes an unexplained stocktake variance.', outcome: 'Purchase and sale units are recorded against the same line, so conversion is explicit and the gap is isolated.' },
-    { problem: 'Low-value lines absorb high-cost attention', detail: 'Ordering, counting and pricing effort is spread evenly across lines worth twenty rupees and lines worth two thousand.', outcome: 'Review effort is directed by movement and value rather than applied uniformly.' },
-    { problem: 'Supplier terms differ by line and are forgotten', detail: 'Different distributors supply overlapping ranges on different terms, and orders go to whoever is called first.', outcome: 'Terms sit on the line, so ordering follows the best available source rather than habit.' },
-  ],
-
-  modulesLede: 'One system across a very large range, trade credit and bulk conversion.',
-  modules: [
-    { id: 'inventory', title: 'Lines, bulk and break-bulk', line: 'Stock is held per line with purchase and sale units, conversion, cost, movement rate and location.', why: 'Selling in different units from those purchased is where hardware stock quietly drifts.', example: 'Bulk purchased by length and sold by metre, reconciled through a recorded conversion.' },
-    { id: 'relationships', title: 'Trade accounts and contractors', line: 'Accounts carry their credit limit, balance, ageing, purchase history and contact record.', why: 'Trade credit is the store’s largest exposure and its most valuable customer relationship at once.', example: 'Six lakh beyond sixty days across accounts still purchasing weekly.' },
-    { id: 'orders', title: 'Counter sales and trade orders', line: 'Transactions record their lines, units, customer, account and staff member, including items requested and not available.', why: 'Recording an unfilled request is the only way a stockout appears anywhere.', example: 'Thirty-eight fast lines out of stock, measured as incomplete lists rather than missing items.' },
-    { id: 'suppliers', title: 'Distributors and manufacturers', line: 'Suppliers carry the lines they supply, terms, prices, delivery reliability and balances.', why: 'Overlapping ranges from several sources mean the best source is a per-line fact.', example: 'The preferred supplier and price for a line, on the line itself.' },
-    { id: 'workflows', title: 'Credit limits, approvals and write-offs', line: 'Credit beyond limit, price exceptions and write-offs move through approval steps with recorded reasons.', why: 'The decisive decisions happen at a busy counter under relationship pressure.', example: 'A sale that would take an account past its limit held for approval.' },
-    { id: 'people', title: 'Counter staff and storekeepers', line: 'Staff are modelled once, and every sale, credit entry and adjustment carries who made it.', why: 'Credit extension and pricing discretion both sit at the counter.', example: 'Credit extended and discounts given by staff member.' },
-    { id: 'intelligence', title: 'Range, credit and drift reporting', line: 'Movement by line, basket association for slow lines, credit exposure and ageing, break-bulk variance and supplier price movement come from the records.', why: 'With eleven thousand lines, judgement has to be directed by data rather than applied evenly.', example: 'Slow lines separated into those that complete baskets and those that do not.' },
-    { id: 'ai', title: 'Ask the counter a question', line: 'Verity AI answers from your own stock, account and supplier records, respects permissions, and can create assigned follow-ups.', why: 'Nobody can hold eleven thousand lines and ninety-six accounts in their head.', example: '"Which fast lines are out of stock?" returns thirty-eight with orders raised.' },
-    { id: 'locations', title: 'Shop, godown and racks', line: 'Locations roll into the business with stock and reporting following the same structure.', why: 'Finding stock in a large range is a real operational cost.', example: 'Rack location on the line, so counter staff can find it.' },
-    { id: 'control', title: 'Who can extend credit and adjust', line: 'One permission model and one audit trail across every record.', why: 'Credit and stock adjustment are where a hardware store loses money quietly.', example: 'Every credit extension and adjustment carrying the person and reason.' },
-    { id: 'records', title: 'Specifications and substitutes', line: 'Line specifications, equivalents and substitutes attach to the line.', why: 'Hardware customers accept substitutes if staff know what is equivalent.', example: 'An equivalent line surfaced when the requested one is out of stock.' },
-    { id: 'communication', title: 'What was promised to a trade account', line: 'Notes, commitments and contact attach to the account they concern.', why: 'Trade relationships run on informal commitments about price and availability.', example: 'A price agreed for a contractor’s project, recorded on their account.' },
-  ],
-
-  workflowsHeading: 'Range, credit and the counter.',
-  workflowsLede: 'These already happen. Recorded, eleven thousand lines become manageable.',
-  workflows: [
-    { name: 'Fast-line availability', steps: ['Lines ranked by frequency of appearance in transactions', 'Availability checked on the top ranks specifically', 'Reorder raised against the best source', 'Unfilled requests recorded where noticed', 'Repeat stockouts escalated in ordering discipline'], note: 'A stockout on a frequently requested line costs the whole basket, not the item.' },
-    { name: 'Range review', steps: ['Movement pulled across all lines', 'Slow lines checked for basket association', 'Service range separated from habit range', 'Delist decisions taken on the remainder', 'Space and capital released'], note: 'Some slow lines earn their place by completing baskets; most do not, and only the data separates them.' },
-    { name: 'Trade credit at the counter', steps: ['Account identified when the sale is rung up', 'Balance and ageing checked against the limit', 'Sale released or held for approval', 'Balance updated and aged from the bill', 'Follow-up assigned as terms pass'], note: 'Checking at the counter is the only place the decision can prevent anything.' },
-    { name: 'Break-bulk conversion', steps: ['Bulk purchased and recorded in its purchase unit', 'Conversion to sale unit recorded on the line', 'Sales deducted in sale units through the conversion', 'Variance isolated against recorded wastage', 'Pattern reviewed by line'], note: 'Without an explicit conversion, break-bulk drift is indistinguishable from theft.' },
-    { name: 'Sourcing decision', steps: ['Lines with several possible suppliers identified', 'Prices and delivery reliability compared', 'Preferred source recorded on the line', 'Orders placed against it', 'Terms reviewed periodically'], note: 'Ordering from whoever is called first is how price advantage is lost across a large range.' },
-  ],
-
-  ai: {
-    heading: 'Ask across eleven thousand lines.',
-    lede: 'Verity AI reads the same stock, account and supplier records the store creates as it trades. It answers from your own range, respects permissions, and can turn an answer into ordering and collection.',
-    panelMeta: 'Grounded in your store records',
-    note: 'Verity AI only returns what the person asking has permission to see.',
-    questions: [
-      'Which frequently requested lines are out of stock?',
-      'Which slow lines complete baskets and which do not?',
-      'Which trade accounts are past terms and still purchasing?',
-      'Where is break-bulk variance largest?',
-      'Which lines could be sourced cheaper from another supplier?',
-      'What is credit exposure by account against limits?',
-      'Which lines have not sold in six months?',
-      'Which equivalents can we offer for lines that are out?',
-      'Summarise range productivity and credit exposure.',
+    "bring": [
+      "Your item list with prices, or a billing report that shows it",
+      "The credit ledger with balances by contractor",
+      "A month of supplier invoices and rate lists",
+      "Your delivery routine and vehicle list",
+      "Any warranty and breakage claims that are open"
     ],
+    "time": "About 8 to 10 hours of your own time across the four weeks, mostly in week 1. Your senior counter person and godown keeper need a few more.",
+    "after": "Nobody is hired to run Verity. Bills, deliveries and returns are recorded as part of work the team already does, and the reports come from those records."
   },
-
-  automationHeading: 'The checks at a busy counter.',
-  automationLede: 'Each runs from the store’s own records at the point the condition is met.',
-  automations: [
-    { trigger: 'A frequently requested line falls below reorder', steps: ['Flagged with request frequency', 'Order raised against the preferred source', 'Unfilled requests recorded meanwhile'] },
-    { trigger: 'A trade account would exceed its limit', steps: ['Sale held at the approval step', 'Balance and ageing attached', 'Decision recorded against the account'] },
-    { trigger: 'A balance passes its terms', steps: ['Aged on the account with purchase history', 'Follow-up assigned', 'Escalated while purchases continue'] },
-    { trigger: 'Break-bulk variance exceeds tolerance', steps: ['Line flagged with conversion and recorded wastage', 'Check assigned', 'Pattern surfaced if it repeats'] },
-    { trigger: 'A line passes its no-sale threshold', steps: ['Basket association checked', 'Delist or retain decision raised', 'Outcome recorded'] },
+  "ai": {
+    "heading": "Ask your store a question. Get an answer, not a report to build.",
+    "lede": "Verity AI reads your own sales, stock, contractor and supplier records. Ask in plain language, then turn the answer into tasks for the right people.",
+    "examples": [
+      {
+        "q": "Which contractors owe us more than 45 days?",
+        "a": "Six contractors owe ₹3.8 lakh past 45 days. Raza Builders is the largest at ₹2.4 lakh and over its limit.",
+        "rows": [
+          [
+            "Raza Builders",
+            "₹2.4 lakh"
+          ],
+          [
+            "Mehta Electricals",
+            "₹1.3 lakh"
+          ],
+          [
+            "Others",
+            "₹12,000"
+          ]
+        ],
+        "action": "Create a chase task for each account"
+      },
+      {
+        "q": "Which items have not sold in a year and what do they cost us?",
+        "a": "212 items have not sold in 12 months and hold ₹6.4 lakh at cost. Old-model switch plates and fittings are the largest groups.",
+        "rows": [
+          [
+            "Switch plates and sockets",
+            "₹1.8 lakh"
+          ],
+          [
+            "Old-model fittings",
+            "₹1.4 lakh"
+          ],
+          [
+            "Brass taps",
+            "₹96,000"
+          ],
+          [
+            "Other",
+            "₹2.2 lakh"
+          ]
+        ]
+      },
+      {
+        "q": "Which selling rates are now below our margin after supplier increases?",
+        "a": "Six contractor rates on PVC pipes and wire fall below your floor after this month’s supplier changes.",
+        "action": "Review and update the six rates"
+      }
+    ]
+  },
+  "automationHeading": "The follow-ups nobody has time to make.",
+  "automationLede": "Set once, then they run from your records. Staff still talk to contractors and suppliers; Verity makes sure the right person knows what to do.",
+  "automations": [
+    {
+      "when": "An item falls below its reorder point",
+      "then": [
+        "Checked against its weekly sale",
+        "Order drafted for the next delivery",
+        "Stock updated when the delivery is received"
+      ]
+    },
+    {
+      "when": "A contractor’s bill goes above their credit limit",
+      "then": [
+        "Held for approval",
+        "Routed to the owner with the balance and oldest bill",
+        "Decision recorded against the bill"
+      ]
+    },
+    {
+      "when": "A contractor balance passes your age limit",
+      "then": [
+        "Added to the owed list by age",
+        "Task to the person who deals with them",
+        "Promise to pay recorded"
+      ]
+    },
+    {
+      "when": "A delivery arrives short or at a different rate",
+      "then": [
+        "Mismatch marked against the supplier",
+        "Credit or correction task to the manager",
+        "Held from payment until settled"
+      ]
+    },
+    {
+      "when": "A project list has no quote in a few hours",
+      "then": [
+        "Flagged on the quotes board",
+        "Reminder to the owner of that enquiry",
+        "Quote and outcome recorded"
+      ]
+    },
+    {
+      "when": "A supplier invoice nears 45 days",
+      "then": [
+        "Listed with amount and supplier",
+        "Task to the owner to pay or agree terms",
+        "Payment recorded"
+      ]
+    }
   ],
-
-  intelligenceHeading: 'What the owner can see across the range.',
-  intelligenceLede: 'Movement, credit and conversion from the counter’s own transactions.',
-  intelligence: [
-    { area: 'Range', points: ['Movement and request frequency by line', 'Slow lines with and without basket association', 'Capital held in non-moving range', 'Delist outcomes'] },
-    { area: 'Availability', points: ['Stockouts on frequently requested lines', 'Unfilled requests recorded', 'Cover in days by line rank', 'Substitutes offered and accepted'] },
-    { area: 'Credit', points: ['Exposure by account against limits', 'Ageing bands', 'Accounts purchasing while overdue', 'Collection outcomes'] },
-    { area: 'Stock accuracy', points: ['Break-bulk variance by line', 'Recorded wastage against unexplained gap', 'Adjustments by person', 'Count variance by category'] },
-    { area: 'Supply', points: ['Price by line across suppliers', 'Delivery reliability', 'Margin by line and category', 'Outstanding payable'] },
+  "rules": {
+    "heading": "The rules a hardware store has to keep up with.",
+    "lede": "Verity does not give legal or tax advice and does not file anything for you. It keeps the records these rules depend on in order, so your accountant is not rebuilding them from a ledger.",
+    "note": "Rules change and differ by state. Confirm current requirements with your accountant or the relevant authority.",
+    "items": [
+      {
+        "name": "GST rates across item groups",
+        "what": "From 22 September 2025, cement generally moved from 28 to 18 percent, PVC pipes are generally at 5 percent, and paints, tiles, wires and metal pipe fittings are generally at 18 percent. Sources disagree on some fittings, so check the tariff line for each.",
+        "how": "Each item carries its tax category and a mixed bill is split by line, so the split your accountant needs is already clean.",
+        "source": {
+          "name": "Bajaj Finserv, 2025",
+          "url": "https://bajajfinserv.in/cement-gst-rate"
+        }
+      },
+      {
+        "name": "Payments to micro and small suppliers, section 43B(h)",
+        "what": "Amounts owed to micro and small enterprise suppliers beyond the payment period, generally 45 days, are deductible only in the year they are paid. Traders are generally outside the rule, and the supplier’s Udyam registration decides the category.",
+        "how": "Each supplier record holds their category if known and the invoices with due dates, so what is nearing the limit is listed before year end.",
+        "source": {
+          "name": "TaxGuru, 2026",
+          "url": "https://www.taxguru.in/income-tax/section-43bh-msme-payment.html"
+        }
+      },
+      {
+        "name": "BIS certification of regulated products",
+        "what": "Some products sold in a hardware store, such as certain electrical goods and safety items, are covered by BIS Quality Control Orders that require the ISI mark, and shops found selling uncertified products can face action. Which products are covered changes often, so check the current list.",
+        "how": "Each item records its brand, supplier and batch, with a field for the mark where it matters, so you can show where a product came from."
+      },
+      {
+        "name": "Weights, measures and selling at or below MRP",
+        "what": "Instruments used to weigh loose items such as nails and screws generally have to be verified under the Legal Metrology rules, and packed goods generally cannot be sold above the printed retail price.",
+        "how": "Verification dates for scales are records with a renewal task, and each packed item records its MRP and the price charged.",
+        "source": {
+          "name": "IndiaLaw, 2025",
+          "url": "https://www.indialaw.in/blog/criminal/overpricing-beyond-mrp-violates-consumer-law/"
+        }
+      },
+      {
+        "name": "Customer data and consent",
+        "what": "Phone numbers, addresses and credit details about contractors are personal data. India’s data protection rules were notified on 13 November 2025, and most duties start in phases, with the main ones about 18 months later.",
+        "how": "Customer data sits in one permissioned place, with who viewed or changed it recorded, instead of in personal phones and ledgers.",
+        "source": {
+          "name": "AZB Partners, 2025",
+          "url": "https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/"
+        }
+      }
+    ]
+  },
+  "rolesHeading": "Everyone sees the same records, through their own window.",
+  "rolesLede": "A counter person should not see the margins on every item. The godown keeper should not edit credit limits. Each role opens on what it needs.",
+  "roles": [
+    {
+      "role": "Owner",
+      "question": "Which lines pay and who owes us?",
+      "sees": "Margin by group, contractor balances by age, supplier dues, slow movers and every shop and godown side by side."
+    },
+    {
+      "role": "Store manager",
+      "question": "What needs sorting this week?",
+      "sees": "Items short for the week, deliveries to check, approvals waiting, quotes with no reply and claims near their window."
+    },
+    {
+      "role": "Counter salesperson",
+      "question": "Where is this item and can this contractor buy on credit?",
+      "sees": "Item search with rack and quantity, the contractor’s limit and balance, and the quote tasks assigned to them."
+    },
+    {
+      "role": "Godown keeper and driver",
+      "question": "What goes out and what came in?",
+      "sees": "Deliveries to load and confirm, goods to receive against orders, returns to shelve and breakage to log."
+    },
+    {
+      "role": "Accountant",
+      "question": "What was bought, sold and owed?",
+      "sees": "Sales by payment mode and tax category, supplier invoices matched to deliveries, contractor balances and supplier dues by age."
+    }
   ],
-  intelligenceNote: 'All of it comes from recording the sale, the account and the delivery, which the counter does anyway.',
-
-  rolesHeading: 'A busy counter, three views.',
-  rolesLede: 'Everyone works from the same records.',
-  roles: [
-    { role: 'Owner', question: 'What is the range earning and who owes me?', focus: 'Movement across lines, capital in dead range, credit exposure and ageing, supplier prices.' },
-    { role: 'Counter staff', question: 'Do we have it and can they take it on account?', focus: 'Availability and rack location, equivalents, account balance and limit.' },
-    { role: 'Storekeeper', question: 'What needs ordering and where does it go?', focus: 'Fast lines below reorder, deliveries to check, break-bulk conversions, rack locations.' },
+  "alongside": {
+    "heading": "What changes, and what stays the same.",
+    "keep": [
+      "Your billing screen at the counter. We agree during setup how bills and payments reach Verity.",
+      "Your distributors’ own order channels. We record what you order and receive.",
+      "WhatsApp for contractors, drivers and suppliers. Staff reply",
+      "Verity tracks who owes a reply.",
+      "Your accountant, who still prepares your returns."
+    ],
+    "not": [
+      "Run your billing counter or take online orders.",
+      "Host an online shop or take payment for orders.",
+      "Send messages to contractors or suppliers on its own.",
+      "File your returns or run your payroll."
+    ],
+    "migration": "We bring your item list, stock by location, contractor balances by bill, supplier balances and open quotes across from the ledgers, sheets and phones you use now, in stages, so the shop keeps selling while it happens."
+  },
+  "faqHeading": "Questions hardware store owners ask.",
+  "faqs": [
+    [
+      "I have thousands of items. Will I have to key them all in?",
+      "No. We bring in your list from the sheet or billing report you have, and tidy it in stages. Fast-moving items come first, and the slow ones are added as they sell or are counted."
+    ],
+    [
+      "Does Verity replace my billing system?",
+      "No. Your billing screen keeps taking bills and payments. We agree during setup how those bills reach Verity, which then does the stock, credit, supplier and delivery work around them."
+    ],
+    [
+      "Can it replace my credit khata?",
+      "Yes, for the record keeping. Each contractor becomes an account with a limit, bills, payments and balances by age, and a bill over the limit waits for your approval. Your staff still collect the money; Verity makes sure the chase happens."
+    ],
+    [
+      "Can it handle sites and several bills for one contractor?",
+      "Yes. Each bill carries a site reference, so you can see a contractor’s balance as a whole and by site."
+    ],
+    [
+      "Can it take online orders?",
+      "No. If customers order by phone or message today, that continues. Verity makes sure every enquiry and quote has an owner and a next step."
+    ],
+    [
+      "I have a shop and a godown. Can I see them together?",
+      "Yes. Each is a location in one system, with stock, sales and balances side by side. Stock moves between them against a recorded transfer."
+    ],
+    [
+      "How does it help with price changes from suppliers?",
+      "Every purchase records the rate, so you see the trend by item and supplier, and Verity flags where your selling rate has fallen below the margin you set."
+    ],
+    [
+      "Who can see my data?",
+      "Only the people you allow. Access is set by role, so counter staff, godown keepers, managers and your accountant each see what they need, and every change is recorded with who made it and when."
+    ],
+    [
+      "What does it cost?",
+      "It depends on the number of shops, staff and what you want set up. Message us and we will give you a clear number after a short conversation about how your store runs."
+    ]
   ],
-
-  useCasesHeading: 'What hardware stores use Verity for',
-  useCases: [
-    { name: 'Fast-line availability', body: 'Availability tracked on the lines that appear most often in baskets, because a stockout there loses the entire list.' },
-    { name: 'Range rationalisation', body: 'Slow lines separated into those that complete baskets and those carried by habit, across a range too large to review by judgement.' },
-    { name: 'Trade credit at the counter', body: 'Balance and ageing checked when the next purchase is made rather than at month end.' },
-    { name: 'Break-bulk conversion', body: 'Purchase and sale units recorded with an explicit conversion, so drift is isolated from theft.' },
-    { name: 'Per-line sourcing', body: 'Preferred supplier and price recorded on the line, so ordering follows the best source rather than the first call.' },
-    { name: 'Substitutes at the counter', body: 'Equivalent lines surfaced when the requested one is unavailable, keeping the basket.' },
-    { name: 'Asking across the range', body: 'Plain-language questions across stock, accounts and suppliers, with orders and follow-ups raised in the same step.' },
+  "related": [
+    "building-material-suppliers",
+    "contractors",
+    "industrial-suppliers",
+    "retail-stores",
+    "distributors",
+    "auto-parts-stores"
   ],
-
-  migration: 'Your billing setup continues and is mapped during implementation. Lines, conversions, trade accounts with balances and supplier terms are brought across, and Verity is configured around the way the counter already works.',
-
-  faqHeading: 'Questions hardware retailers ask',
-  faqs: [
-    ['What can AI software do for a hardware store?', 'Verity AI answers questions from your own stock, account and supplier records: which frequently requested lines are out of stock, which slow lines complete baskets, which trade accounts are past terms and still purchasing, where break-bulk variance is largest. Each answer can become an order or a collection follow-up.'],
-    ['How do you manage eleven thousand lines?', 'By directing attention rather than spreading it. Movement and request frequency rank the range, so availability discipline concentrates on the lines that appear in most baskets and review effort concentrates on the capital sitting still.'],
-    ['Why does a stockout cost more here?', 'Because customers buy lists. A trade customer who cannot complete their purchase goes elsewhere for all of it, including the items you did have, and that loss leaves no transaction behind.'],
-    ['Can it control trade credit?', 'Account balance, ageing and limit are checked at the counter when the next purchase is made, so a sale that would take an account past its limit is held for approval rather than discovered when the ledger is reviewed.'],
-    ['What is break-bulk drift?', 'Stock purchased in one unit and sold in another — by length, weight or piece — produces a gap unless the conversion is recorded explicitly. Without it the variance is indistinguishable from theft and nothing can be done about either.'],
-    ['Does it help with sourcing?', 'Preferred supplier, price and delivery reliability sit on the line, so ordering across overlapping ranges follows the best available source rather than whoever was called first.'],
-    ['Does Verity replace our billing software?', 'No. Billing continues and is mapped during implementation. Verity holds the range, the accounts, the conversions, the suppliers and the reporting across them.'],
-    ['How long does implementation take?', 'About four weeks: discovery and mapping of the range and credit practice, configuration of units and conversions, migration of lines and account balances, then an ongoing operations partnership.'],
-  ],
-
-  ctaHeading: 'Start with the fast lines that keep going out.',
-  ctaLede: 'Each one costs a whole basket. Tell us how availability is tracked today.',
-
-  related: ['auto-parts-stores', 'building-material-suppliers', 'retail-stores', 'industrial-suppliers', 'convenience-stores', 'contractors'],
+  "ctaHeading": "Start with the contractors who owe you the most.",
+  "ctaLede": "Tell us how your hardware store runs and we will show you the balances by age, the items that have not moved and the rates that fell below margin, using your own numbers."
 };

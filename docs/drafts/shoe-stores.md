@@ -247,7 +247,7 @@ Lede: Six views, each built for one job. Names, columns and terms are set up in 
 
 ```json
 [
- {"type": "table", "cols": ["Style", "Days on shelf", "Stock at cost", "BIS mark", "Proposed", "Status"], "rows": [
+ {"type": "table", "cols": ["Style", "Days on shelf", "Stock at cost", "BIS mark", "Proposed"], "rows": [
   ["Formal brogue 2210", "134", "₹1.9 lakh", "Declared old stock, sell by 31 Jul 2027", ["Mark down 25%", "flag", "Approved", "ok"]],
   ["Canvas sneaker 7781", "96", "₹1.2 lakh", "Marked", ["Mark down 15%", "flag", "Approved", "ok"]],
   ["Leather sandal 3310", "61", "₹0.8 lakh", "Not recorded", ["Check mark", "late", "Mark confirmed", "ok"]],

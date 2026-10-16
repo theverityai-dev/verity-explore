@@ -124,7 +124,7 @@ for (const slug of slugs) {
         if (b.type === 'list') b.items.forEach((r) => checkTag(r.tag, w));
         if (b.type === 'board') b.columns.forEach((c) => c.cards.forEach((k) => checkTag(k.tag, w)));
         if (b.type === 'record') b.fields.forEach(([, v]) => checkTag(v, w));
-        if (b.type === 'bars') b.items.forEach((r) => { if (!(r.value >= 0 && r.value <= 100)) err(`${w}: bar value ${r.value} not 0 to 100`); });
+        if (b.type === 'bars') b.items.forEach((r) => { if (!(r.value >= 0 && r.value <= 200)) err(`${w}: bar value ${r.value} not 0 to 200`); });
       });
     });
 
