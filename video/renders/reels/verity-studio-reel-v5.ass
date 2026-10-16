@@ -1,0 +1,131 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Cap,Inter Medium,54,&H00FFFFFF,&H00FFFFFF,&H2A000000,&H00000000,0,0,0,0,100,100,0.3,0,3,16,0,5,60,60,60,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.10,0:00:00.98,Cap,,0,0,0,,{\an5\pos(540,1800)}You know what
+Dialogue: 0,0:00:00.98,0:00:01.86,Cap,,0,0,0,,{\an5\pos(540,1800)}there's a very
+Dialogue: 0,0:00:01.86,0:00:02.98,Cap,,0,0,0,,{\an5\pos(540,1800)}big difference between
+Dialogue: 0,0:00:02.98,0:00:04.46,Cap,,0,0,0,,{\an5\pos(540,1800)}imagining something and
+Dialogue: 0,0:00:04.46,0:00:05.22,Cap,,0,0,0,,{\an5\pos(540,1800)}actually making it
+Dialogue: 0,0:00:05.22,0:00:05.66,Cap,,0,0,0,,{\an5\pos(540,1800)}happen
+Dialogue: 0,0:00:05.75,0:00:07.13,Cap,,0,0,0,,{\an5\pos(540,1800)}And ideas are
+Dialogue: 0,0:00:07.13,0:00:08.11,Cap,,0,0,0,,{\an5\pos(540,1800)}literally everywhere
+Dialogue: 0,0:00:08.11,0:00:08.93,Cap,,0,0,0,,{\an5\pos(540,1800)}but what actually
+Dialogue: 0,0:00:08.93,0:00:09.75,Cap,,0,0,0,,{\an5\pos(540,1800)}makes the difference
+Dialogue: 0,0:00:09.75,0:00:10.63,Cap,,0,0,0,,{\an5\pos(540,1800)}is the willingness
+Dialogue: 0,0:00:10.63,0:00:12.03,Cap,,0,0,0,,{\an5\pos(540,1800)}to build to
+Dialogue: 0,0:00:12.03,0:00:13.53,Cap,,0,0,0,,{\an5\pos(540,1800)}experiment To get
+Dialogue: 0,0:00:13.53,0:00:14.71,Cap,,0,0,0,,{\an5\pos(540,1800)}things wrong and
+Dialogue: 0,0:00:14.71,0:00:15.43,Cap,,0,0,0,,{\an5\pos(540,1800)}to keep going
+Dialogue: 0,0:00:15.43,0:00:16.33,Cap,,0,0,0,,{\an5\pos(540,1800)}until something actually
+Dialogue: 0,0:00:16.33,0:00:16.83,Cap,,0,0,0,,{\an5\pos(540,1800)}works
+Dialogue: 0,0:00:16.93,0:00:17.79,Cap,,0,0,0,,{\an5\pos(540,1800)}And that's the
+Dialogue: 0,0:00:17.79,0:00:18.53,Cap,,0,0,0,,{\an5\pos(540,1800)}core thinking behind
+Dialogue: 0,0:00:18.53,0:00:19.39,Cap,,0,0,0,,{\an5\pos(540,1800)}PlotArmour Studio.
+Dialogue: 0,0:00:19.39,0:00:19.97,Cap,,0,0,0,,{\an5\pos(540,1800)}We work across
+Dialogue: 0,0:00:19.97,0:00:20.79,Cap,,0,0,0,,{\an5\pos(540,1800)}technology
+Dialogue: 0,0:00:20.79,0:00:22.07,Cap,,0,0,0,,{\an5\pos(540,1800)}design and creative
+Dialogue: 0,0:00:22.07,0:00:23.15,Cap,,0,0,0,,{\an5\pos(540,1800)}which helps us
+Dialogue: 0,0:00:23.15,0:00:24.25,Cap,,0,0,0,,{\an5\pos(540,1800)}turn ideas into
+Dialogue: 0,0:00:24.25,0:00:25.75,Cap,,0,0,0,,{\an5\pos(540,1800)}products and experiences
+Dialogue: 0,0:00:25.75,0:00:26.57,Cap,,0,0,0,,{\an5\pos(540,1800)}that people can
+Dialogue: 0,0:00:26.57,0:00:27.40,Cap,,0,0,0,,{\an5\pos(540,1800)}actually use.
+Dialogue: 0,0:00:27.40,0:00:28.66,Cap,,0,0,0,,{\an5\pos(540,1800)}Sometimes that means
+Dialogue: 0,0:00:28.66,0:00:29.79,Cap,,0,0,0,,{\an5\pos(540,1800)}building a website
+Dialogue: 0,0:00:29.79,0:00:30.57,Cap,,0,0,0,,{\an5\pos(540,1800)}and sometimes it
+Dialogue: 0,0:00:30.57,0:00:31.31,Cap,,0,0,0,,{\an5\pos(540,1800)}could be building
+Dialogue: 0,0:00:31.31,0:00:32.21,Cap,,0,0,0,,{\an5\pos(540,1800)}a digital platform
+Dialogue: 0,0:00:32.21,0:00:33.06,Cap,,0,0,0,,{\an5\pos(540,1800)}from the scratch
+Dialogue: 0,0:00:33.06,0:00:34.24,Cap,,0,0,0,,{\an5\pos(540,1800)}or sometimes it
+Dialogue: 0,0:00:34.24,0:00:34.98,Cap,,0,0,0,,{\an5\pos(540,1800)}is about figuring
+Dialogue: 0,0:00:34.98,0:00:35.72,Cap,,0,0,0,,{\an5\pos(540,1800)}out how the
+Dialogue: 0,0:00:35.72,0:00:36.72,Cap,,0,0,0,,{\an5\pos(540,1800)}technology can make
+Dialogue: 0,0:00:36.72,0:00:37.40,Cap,,0,0,0,,{\an5\pos(540,1800)}the business work
+Dialogue: 0,0:00:37.40,0:00:37.84,Cap,,0,0,0,,{\an5\pos(540,1800)}better.
+Dialogue: 0,0:00:37.93,0:00:38.97,Cap,,0,0,0,,{\an5\pos(540,1800)}And then there's
+Dialogue: 0,0:00:38.97,0:00:39.63,Cap,,0,0,0,,{\an5\pos(540,1800)}the creative side
+Dialogue: 0,0:00:39.63,0:00:40.19,Cap,,0,0,0,,{\an5\pos(540,1800)}of things.
+Dialogue: 0,0:00:40.19,0:00:41.09,Cap,,0,0,0,,{\an5\pos(540,1800)}From motion design
+Dialogue: 0,0:00:41.09,0:00:42.05,Cap,,0,0,0,,{\an5\pos(540,1800)}and product films
+Dialogue: 0,0:00:42.05,0:00:42.99,Cap,,0,0,0,,{\an5\pos(540,1800)}to launch campaigns
+Dialogue: 0,0:00:42.99,0:00:44.13,Cap,,0,0,0,,{\an5\pos(540,1800)}and social content
+Dialogue: 0,0:00:44.13,0:00:44.89,Cap,,0,0,0,,{\an5\pos(540,1800)}we help businesses
+Dialogue: 0,0:00:44.89,0:00:45.79,Cap,,0,0,0,,{\an5\pos(540,1800)}communicate in such
+Dialogue: 0,0:00:45.79,0:00:46.33,Cap,,0,0,0,,{\an5\pos(540,1800)}a way that
+Dialogue: 0,0:00:46.33,0:00:47.05,Cap,,0,0,0,,{\an5\pos(540,1800)}it connects with
+Dialogue: 0,0:00:47.05,0:00:47.53,Cap,,0,0,0,,{\an5\pos(540,1800)}people.
+Dialogue: 0,0:00:47.55,0:00:48.55,Cap,,0,0,0,,{\an5\pos(540,1800)}We also work
+Dialogue: 0,0:00:48.55,0:00:49.19,Cap,,0,0,0,,{\an5\pos(540,1800)}with the brands
+Dialogue: 0,0:00:49.19,0:00:49.87,Cap,,0,0,0,,{\an5\pos(540,1800)}right from the
+Dialogue: 0,0:00:49.87,0:00:50.89,Cap,,0,0,0,,{\an5\pos(540,1800)}beginning helping them
+Dialogue: 0,0:00:50.89,0:00:51.47,Cap,,0,0,0,,{\an5\pos(540,1800)}figure out their
+Dialogue: 0,0:00:51.47,0:00:52.87,Cap,,0,0,0,,{\an5\pos(540,1800)}identity Their positioning
+Dialogue: 0,0:00:52.87,0:00:53.77,Cap,,0,0,0,,{\an5\pos(540,1800)}and how they
+Dialogue: 0,0:00:53.77,0:00:54.21,Cap,,0,0,0,,{\an5\pos(540,1800)}want to show
+Dialogue: 0,0:00:54.21,0:00:54.53,Cap,,0,0,0,,{\an5\pos(540,1800)}up in the
+Dialogue: 0,0:00:54.53,0:00:54.91,Cap,,0,0,0,,{\an5\pos(540,1800)}world
+Dialogue: 0,0:00:55.00,0:00:55.86,Cap,,0,0,0,,{\an5\pos(540,1800)}But what makes
+Dialogue: 0,0:00:55.86,0:00:57.06,Cap,,0,0,0,,{\an5\pos(540,1800)}PlotArmour Studio particularly
+Dialogue: 0,0:00:57.06,0:00:58.30,Cap,,0,0,0,,{\an5\pos(540,1800)}interesting is that
+Dialogue: 0,0:00:58.30,0:00:58.92,Cap,,0,0,0,,{\an5\pos(540,1800)}we don't just
+Dialogue: 0,0:00:58.92,0:00:59.74,Cap,,0,0,0,,{\an5\pos(540,1800)}build for these
+Dialogue: 0,0:00:59.74,0:01:01.16,Cap,,0,0,0,,{\an5\pos(540,1800)}other businesses We
+Dialogue: 0,0:01:01.16,0:01:01.56,Cap,,0,0,0,,{\an5\pos(540,1800)}build our own
+Dialogue: 0,0:01:01.56,0:01:02.32,Cap,,0,0,0,,{\an5\pos(540,1800)}products too
+Dialogue: 0,0:01:02.32,0:01:03.06,Cap,,0,0,0,,{\an5\pos(540,1800)}Yes
+Dialogue: 0,0:01:03.06,0:01:03.83,Cap,,0,0,0,,{\an5\pos(540,1800)}we have Verity
+Dialogue: 0,0:01:03.83,0:01:04.65,Cap,,0,0,0,,{\an5\pos(540,1800)}a software that
+Dialogue: 0,0:01:04.65,0:01:05.45,Cap,,0,0,0,,{\an5\pos(540,1800)}can manage each
+Dialogue: 0,0:01:05.45,0:01:06.29,Cap,,0,0,0,,{\an5\pos(540,1800)}and every operations
+Dialogue: 0,0:01:06.29,0:01:07.35,Cap,,0,0,0,,{\an5\pos(540,1800)}of your business.
+Dialogue: 0,0:01:07.37,0:01:08.53,Cap,,0,0,0,,{\an5\pos(540,1800)}Then there's Convoke
+Dialogue: 0,0:01:08.53,0:01:09.76,Cap,,0,0,0,,{\an5\pos(540,1800)}bringing opportunities
+Dialogue: 0,0:01:09.76,0:01:10.94,Cap,,0,0,0,,{\an5\pos(540,1800)}events and different
+Dialogue: 0,0:01:10.94,0:01:12.16,Cap,,0,0,0,,{\an5\pos(540,1800)}communities together.
+Dialogue: 0,0:01:12.25,0:01:13.15,Cap,,0,0,0,,{\an5\pos(540,1800)}Both of them
+Dialogue: 0,0:01:13.15,0:01:14.01,Cap,,0,0,0,,{\an5\pos(540,1800)}are solving two
+Dialogue: 0,0:01:14.01,0:01:15.49,Cap,,0,0,0,,{\an5\pos(540,1800)}different purposes solving
+Dialogue: 0,0:01:15.49,0:01:16.99,Cap,,0,0,0,,{\an5\pos(540,1800)}very different problems
+Dialogue: 0,0:01:16.99,0:01:17.63,Cap,,0,0,0,,{\an5\pos(540,1800)}but the thinking
+Dialogue: 0,0:01:17.63,0:01:18.55,Cap,,0,0,0,,{\an5\pos(540,1800)}behind them is
+Dialogue: 0,0:01:18.55,0:01:18.97,Cap,,0,0,0,,{\an5\pos(540,1800)}same.
+Dialogue: 0,0:01:19.05,0:01:20.21,Cap,,0,0,0,,{\an5\pos(540,1800)}Whether it's some
+Dialogue: 0,0:01:20.21,0:01:20.79,Cap,,0,0,0,,{\an5\pos(540,1800)}software
+Dialogue: 0,0:01:20.79,0:01:21.39,Cap,,0,0,0,,{\an5\pos(540,1800)}some AI
+Dialogue: 0,0:01:21.39,0:01:22.69,Cap,,0,0,0,,{\an5\pos(540,1800)}automation or creative
+Dialogue: 0,0:01:22.69,0:01:24.55,Cap,,0,0,0,,{\an5\pos(540,1800)}technology we believe
+Dialogue: 0,0:01:24.55,0:01:25.41,Cap,,0,0,0,,{\an5\pos(540,1800)}in understanding the
+Dialogue: 0,0:01:25.41,0:01:26.49,Cap,,0,0,0,,{\an5\pos(540,1800)}problem first and
+Dialogue: 0,0:01:26.49,0:01:27.21,Cap,,0,0,0,,{\an5\pos(540,1800)}then actually building
+Dialogue: 0,0:01:27.21,0:01:28.49,Cap,,0,0,0,,{\an5\pos(540,1800)}something that genuinely
+Dialogue: 0,0:01:28.49,0:01:29.29,Cap,,0,0,0,,{\an5\pos(540,1800)}makes sense.
+Dialogue: 0,0:01:29.30,0:01:29.94,Cap,,0,0,0,,{\an5\pos(540,1800)}Because at the
+Dialogue: 0,0:01:29.94,0:01:30.32,Cap,,0,0,0,,{\an5\pos(540,1800)}end of the
+Dialogue: 0,0:01:30.32,0:01:30.58,Cap,,0,0,0,,{\an5\pos(540,1800)}day
+Dialogue: 0,0:01:30.58,0:01:31.04,Cap,,0,0,0,,{\an5\pos(540,1800)}it's not about
+Dialogue: 0,0:01:31.04,0:01:32.08,Cap,,0,0,0,,{\an5\pos(540,1800)}making something that
+Dialogue: 0,0:01:32.08,0:01:32.94,Cap,,0,0,0,,{\an5\pos(540,1800)}just looks good
+Dialogue: 0,0:01:32.94,0:01:34.51,Cap,,0,0,0,,{\an5\pos(540,1800)}or getting something
+Dialogue: 0,0:01:34.51,0:01:35.07,Cap,,0,0,0,,{\an5\pos(540,1800)}out there
+Dialogue: 0,0:01:35.07,0:01:36.11,Cap,,0,0,0,,{\an5\pos(540,1800)}It's about creating
+Dialogue: 0,0:01:36.11,0:01:37.91,Cap,,0,0,0,,{\an5\pos(540,1800)}something actually meaningful
+Dialogue: 0,0:01:37.91,0:01:39.61,Cap,,0,0,0,,{\an5\pos(540,1800)}and something that
+Dialogue: 0,0:01:39.61,0:01:40.43,Cap,,0,0,0,,{\an5\pos(540,1800)}really works
+Dialogue: 0,0:01:40.53,0:01:41.69,Cap,,0,0,0,,{\an5\pos(540,1800)}That's what we
+Dialogue: 0,0:01:41.69,0:01:42.43,Cap,,0,0,0,,{\an5\pos(540,1800)}are working towards
+Dialogue: 0,0:01:42.43,0:01:43.49,Cap,,0,0,0,,{\an5\pos(540,1800)}at the PlotArmour
+Dialogue: 0,0:01:43.51,0:01:44.67,Cap,,0,0,0,,{\an5\pos(540,1800)}Studio and we
+Dialogue: 0,0:01:44.67,0:01:45.31,Cap,,0,0,0,,{\an5\pos(540,1800)}have still got
+Dialogue: 0,0:01:45.31,0:01:45.83,Cap,,0,0,0,,{\an5\pos(540,1800)}a lot more
+Dialogue: 0,0:01:45.83,0:01:46.39,Cap,,0,0,0,,{\an5\pos(540,1800)}to build.
+Dialogue: 0,0:01:46.47,0:01:47.69,Cap,,0,0,0,,{\an5\pos(540,1800)}PlotArmour Studio.
+Dialogue: 0,0:01:47.69,0:01:48.55,Cap,,0,0,0,,{\an5\pos(540,1800)}We build what
+Dialogue: 0,0:01:48.55,0:01:49.41,Cap,,0,0,0,,{\an5\pos(540,1800)}comes next.

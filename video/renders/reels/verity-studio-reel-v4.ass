@@ -1,0 +1,131 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Cap,Inter Medium,56,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0.4,0,1,0,0,5,60,60,60,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.10,0:00:00.98,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}You know what
+Dialogue: 0,0:00:00.98,0:00:01.86,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}there's a very
+Dialogue: 0,0:00:01.86,0:00:02.98,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}big difference between
+Dialogue: 0,0:00:02.98,0:00:04.46,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}imagining something and
+Dialogue: 0,0:00:04.46,0:00:05.22,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}actually making it
+Dialogue: 0,0:00:05.22,0:00:05.66,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}happen
+Dialogue: 0,0:00:05.75,0:00:07.13,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}And ideas are
+Dialogue: 0,0:00:07.13,0:00:08.11,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}literally everywhere
+Dialogue: 0,0:00:08.11,0:00:08.93,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}but what actually
+Dialogue: 0,0:00:08.93,0:00:09.75,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}makes the difference
+Dialogue: 0,0:00:09.75,0:00:10.63,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}is the willingness
+Dialogue: 0,0:00:10.63,0:00:12.03,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}to build to
+Dialogue: 0,0:00:12.03,0:00:13.53,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}experiment To get
+Dialogue: 0,0:00:13.53,0:00:14.71,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}things wrong and
+Dialogue: 0,0:00:14.71,0:00:15.43,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}to keep going
+Dialogue: 0,0:00:15.43,0:00:16.33,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}until something actually
+Dialogue: 0,0:00:16.33,0:00:16.83,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}works
+Dialogue: 0,0:00:16.93,0:00:17.79,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}And that's the
+Dialogue: 0,0:00:17.79,0:00:18.53,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}core thinking behind
+Dialogue: 0,0:00:18.53,0:00:19.39,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}PlotArmour Studio.
+Dialogue: 0,0:00:19.39,0:00:19.97,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}We work across
+Dialogue: 0,0:00:19.97,0:00:20.79,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}technology
+Dialogue: 0,0:00:20.79,0:00:22.07,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}design and creative
+Dialogue: 0,0:00:22.07,0:00:23.15,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}which helps us
+Dialogue: 0,0:00:23.15,0:00:24.25,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}turn ideas into
+Dialogue: 0,0:00:24.25,0:00:25.75,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}products and experiences
+Dialogue: 0,0:00:25.75,0:00:26.57,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}that people can
+Dialogue: 0,0:00:26.57,0:00:27.40,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}actually use.
+Dialogue: 0,0:00:27.40,0:00:28.66,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}Sometimes that means
+Dialogue: 0,0:00:28.66,0:00:29.79,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}building a website
+Dialogue: 0,0:00:29.79,0:00:30.57,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}and sometimes it
+Dialogue: 0,0:00:30.57,0:00:31.31,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}could be building
+Dialogue: 0,0:00:31.31,0:00:32.21,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}a digital platform
+Dialogue: 0,0:00:32.21,0:00:33.06,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}from the scratch
+Dialogue: 0,0:00:33.06,0:00:34.24,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}or sometimes it
+Dialogue: 0,0:00:34.24,0:00:34.98,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}is about figuring
+Dialogue: 0,0:00:34.98,0:00:35.72,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}out how the
+Dialogue: 0,0:00:35.72,0:00:36.72,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}technology can make
+Dialogue: 0,0:00:36.72,0:00:37.40,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}the business work
+Dialogue: 0,0:00:37.40,0:00:37.84,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}better.
+Dialogue: 0,0:00:37.93,0:00:38.97,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}And then there's
+Dialogue: 0,0:00:38.97,0:00:39.63,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}the creative side
+Dialogue: 0,0:00:39.63,0:00:40.19,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}of things.
+Dialogue: 0,0:00:40.19,0:00:41.09,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}From motion design
+Dialogue: 0,0:00:41.09,0:00:42.05,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}and product films
+Dialogue: 0,0:00:42.05,0:00:42.99,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}to launch campaigns
+Dialogue: 0,0:00:42.99,0:00:44.13,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}and social content
+Dialogue: 0,0:00:44.13,0:00:44.89,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}we help businesses
+Dialogue: 0,0:00:44.89,0:00:45.79,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}communicate in such
+Dialogue: 0,0:00:45.79,0:00:46.33,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}a way that
+Dialogue: 0,0:00:46.33,0:00:47.05,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}it connects with
+Dialogue: 0,0:00:47.05,0:00:47.53,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}people.
+Dialogue: 0,0:00:47.55,0:00:48.55,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}We also work
+Dialogue: 0,0:00:48.55,0:00:49.19,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}with the brands
+Dialogue: 0,0:00:49.19,0:00:49.87,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}right from the
+Dialogue: 0,0:00:49.87,0:00:50.89,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}beginning helping them
+Dialogue: 0,0:00:50.89,0:00:51.47,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}figure out their
+Dialogue: 0,0:00:51.47,0:00:52.87,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}identity Their positioning
+Dialogue: 0,0:00:52.87,0:00:53.77,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}and how they
+Dialogue: 0,0:00:53.77,0:00:54.21,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}want to show
+Dialogue: 0,0:00:54.21,0:00:54.53,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}up in the
+Dialogue: 0,0:00:54.53,0:00:54.91,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}world
+Dialogue: 0,0:00:55.00,0:00:55.86,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}But what makes
+Dialogue: 0,0:00:55.86,0:00:57.06,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}PlotArmour Studio particularly
+Dialogue: 0,0:00:57.06,0:00:58.30,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}interesting is that
+Dialogue: 0,0:00:58.30,0:00:58.92,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}we don't just
+Dialogue: 0,0:00:58.92,0:00:59.74,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}build for these
+Dialogue: 0,0:00:59.74,0:01:01.16,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}other businesses We
+Dialogue: 0,0:01:01.16,0:01:01.56,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}build our own
+Dialogue: 0,0:01:01.56,0:01:02.32,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}products too
+Dialogue: 0,0:01:02.32,0:01:03.06,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}Yes
+Dialogue: 0,0:01:03.06,0:01:03.83,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}we have Verity
+Dialogue: 0,0:01:03.83,0:01:04.65,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}a software that
+Dialogue: 0,0:01:04.65,0:01:05.45,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}can manage each
+Dialogue: 0,0:01:05.45,0:01:06.29,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}and every operations
+Dialogue: 0,0:01:06.29,0:01:07.35,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}of your business.
+Dialogue: 0,0:01:07.37,0:01:08.53,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}Then there's Convoke
+Dialogue: 0,0:01:08.53,0:01:09.76,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}bringing opportunities
+Dialogue: 0,0:01:09.76,0:01:10.94,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}events and different
+Dialogue: 0,0:01:10.94,0:01:12.16,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}communities together.
+Dialogue: 0,0:01:12.25,0:01:13.15,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}Both of them
+Dialogue: 0,0:01:13.15,0:01:14.01,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}are solving two
+Dialogue: 0,0:01:14.01,0:01:15.49,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}different purposes solving
+Dialogue: 0,0:01:15.49,0:01:16.99,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}very different problems
+Dialogue: 0,0:01:16.99,0:01:17.63,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}but the thinking
+Dialogue: 0,0:01:17.63,0:01:18.55,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}behind them is
+Dialogue: 0,0:01:18.55,0:01:18.97,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}same.
+Dialogue: 0,0:01:19.05,0:01:20.21,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}Whether it's some
+Dialogue: 0,0:01:20.21,0:01:20.79,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}software
+Dialogue: 0,0:01:20.79,0:01:21.39,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}some AI
+Dialogue: 0,0:01:21.39,0:01:22.69,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}automation or creative
+Dialogue: 0,0:01:22.69,0:01:24.55,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}technology we believe
+Dialogue: 0,0:01:24.55,0:01:25.41,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}in understanding the
+Dialogue: 0,0:01:25.41,0:01:26.49,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}problem first and
+Dialogue: 0,0:01:26.49,0:01:27.21,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}then actually building
+Dialogue: 0,0:01:27.21,0:01:28.49,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}something that genuinely
+Dialogue: 0,0:01:28.49,0:01:29.29,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}makes sense.
+Dialogue: 0,0:01:29.30,0:01:29.94,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}Because at the
+Dialogue: 0,0:01:29.94,0:01:30.32,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}end of the
+Dialogue: 0,0:01:30.32,0:01:30.58,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}day
+Dialogue: 0,0:01:30.58,0:01:31.04,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}it's not about
+Dialogue: 0,0:01:31.04,0:01:32.08,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}making something that
+Dialogue: 0,0:01:32.08,0:01:32.94,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}just looks good
+Dialogue: 0,0:01:32.94,0:01:34.51,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}or getting something
+Dialogue: 0,0:01:34.51,0:01:35.07,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}out there
+Dialogue: 0,0:01:35.07,0:01:36.11,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}It's about creating
+Dialogue: 0,0:01:36.11,0:01:37.91,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}something actually meaningful
+Dialogue: 0,0:01:37.91,0:01:39.61,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}and something that
+Dialogue: 0,0:01:39.61,0:01:40.43,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}really works
+Dialogue: 0,0:01:40.53,0:01:41.69,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}That's what we
+Dialogue: 0,0:01:41.69,0:01:42.43,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}are working towards
+Dialogue: 0,0:01:42.43,0:01:43.49,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}at the PlotArmour
+Dialogue: 0,0:01:43.51,0:01:44.67,Cap,,0,0,0,,{\an5\pos(540,1345)\1c&H1A1A1A&\shad0\fad(70,0)}Studio and we
+Dialogue: 0,0:01:44.67,0:01:45.31,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}have still got
+Dialogue: 0,0:01:45.31,0:01:45.83,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}a lot more
+Dialogue: 0,0:01:45.83,0:01:46.39,Cap,,0,0,0,,{\an5\pos(540,1540)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}to build.
+Dialogue: 0,0:01:46.47,0:01:47.69,Cap,,0,0,0,,{\an5\pos(540,672)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}PlotArmour Studio.
+Dialogue: 0,0:01:47.69,0:01:48.55,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}We build what
+Dialogue: 0,0:01:48.55,0:01:49.41,Cap,,0,0,0,,{\an5\pos(540,1640)\1c&HFFFFFF&\shad2\4c&H000000&\4a&H80&\blur1.2\fad(70,0)}comes next.

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PlotArmour Studio reel cover</title>
+<style>
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/Inter-400.ttf"); }
+  @font-face { font-family: "Inter"; font-weight: 500; src: url("fonts/Inter-500.ttf"); }
+  @font-face { font-family: "Inter"; font-weight: 600; src: url("fonts/Inter-600.ttf"); }
+  :root {
+    --paper: #F4F4F1;
+    --ink: #0E0E0E;
+    --ghost: #A9A9A4;
+    --hair: #C9C9C3;
+    --orange: #FF5A1F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; background: var(--paper); }
+  body { position: relative; overflow: hidden; font-family: "Inter", sans-serif; color: var(--ink);
+         -webkit-font-smoothing: antialiased; }
+
+  .tag { position: absolute; left: 72px; top: 96px; display: flex; align-items: center; gap: 14px;
+         font-size: 30px; font-weight: 500; letter-spacing: -0.01em; }
+  .tag svg { width: 30px; height: 34px; }
+  .tag span { font-weight: 400; }
+  .meta { position: absolute; right: 72px; top: 100px; font-size: 22px; font-weight: 500;
+          letter-spacing: 0.14em; text-transform: uppercase; color: var(--ghost); }
+
+  h1 { position: absolute; left: 72px; font-weight: 600; font-size: 172px; line-height: 0.94;
+       letter-spacing: -0.045em; }
+  .imagine { top: 236px; color: var(--ghost); }
+  .make { top: 1150px; }
+  .make em { font-style: normal; color: var(--orange); }
+
+  .mark { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+
+  .rule { position: absolute; left: 72px; right: 72px; top: 1660px; height: 2px; background: var(--hair); }
+  .rule::before { content: ""; position: absolute; left: 0; top: 0; width: 168px; height: 2px; background: var(--orange); }
+  .body { position: absolute; left: 72px; top: 1700px; width: 620px; font-size: 30px; line-height: 1.38;
+          font-weight: 400; letter-spacing: -0.005em; }
+  .foot { position: absolute; right: 72px; top: 1704px; text-align: right; font-size: 22px; font-weight: 500;
+          letter-spacing: 0.14em; text-transform: uppercase; color: var(--ghost); line-height: 1.9; }
+</style>
+</head>
+<body>
+  <div class="tag">
+    <svg viewBox="0 0 30 34" aria-hidden="true"><polygon points="15,0 30,30 23,30 15,13 7,30 0,30" fill="#0E0E0E"/></svg>
+    PlotArmour <span>Studio</span>
+  </div>
+  <div class="meta">Studio reel</div>
+
+  <h1 class="imagine">Imagining<br>something.</h1>
+
+  <!-- the A-mark mid-construction: left leg drawn, right leg built -->
+  <svg class="mark" viewBox="0 0 1080 1920" aria-hidden="true">
+    <g stroke="#B9B9B3" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M96 604h30M111 589v30"/><path d="M906 676h30M921 661v30"/>
+      <path d="M864 1060h30M879 1045v30"/><path d="M168 1004h30M183 989v30"/>
+      <circle cx="934" cy="790" r="24"/><circle cx="146" cy="760" r="18"/>
+      <rect x="884" y="900" width="40" height="40" rx="4"/><rect x="190" y="880" width="30" height="30" rx="3"/>
+      <path d="M830 716l24 42h-48z"/><path d="M262 650l16 28h-32z"/>
+    </g>
+    <!-- left leg: dashed construction line -->
+    <polygon points="540,640 540,790 440,940 340,940" fill="none" stroke="#0E0E0E" stroke-width="3.5"
+             stroke-dasharray="12 10" stroke-linejoin="miter"/>
+    <!-- right leg: built, solid -->
+    <polygon points="540,640 740,940 640,940 540,790" fill="#0E0E0E"/>
+    <!-- base bar: the accent -->
+    <rect x="465" y="984" width="150" height="34" fill="#FF5A1F"/>
+  </svg>
+
+  <h1 class="make">Making<br>it <em>happen.</em></h1>
+
+  <div class="rule"></div>
+  <p class="body">There’s a big difference between imagining something and actually making it happen.</p>
+  <div class="foot">Technology<br>Design<br>Creative</div>
+</body>
+</html>

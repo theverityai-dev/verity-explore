@@ -17,6 +17,7 @@
     "render:ad-r08": "remotion render src/index.ts Ad-R08-Dependency-9x16 renders/ads/R08/verity-meta-R08-9x16-v1.mp4 --crf=16",
     "render:ad-r09": "remotion render src/index.ts Ad-R09-WhatsApp-9x16 renders/ads/R09/verity-meta-R09-9x16-v1.mp4 --crf=16",
     "render:ad-r10": "remotion render src/index.ts Ad-R10-Adapt-16x9 renders/ads/R10/verity-meta-R10-16x9-v2.mp4 --crf=16",
+    "render:ad-r11": "remotion render src/index.ts Ad-R11-Adapt-9x16 renders/ads/R11/verity-meta-R11-9x16-v1.mp4 --crf=16",
     "render:ad-ind10": "remotion render src/index.ts Ad-IND10-Facility-9x16 renders/ads/IND/verity-meta-IND10-9x16-v2.mp4 --crf=16",
     "render:ad-ind02": "remotion render src/index.ts Ad-IND02-Restaurant-9x16 renders/ads/IND/verity-meta-IND02-9x16-v1.mp4 --crf=16",
     "render:ad-ind06": "remotion render src/index.ts Ad-IND06-Factory-9x16 renders/ads/IND/verity-meta-IND06-9x16-v1.mp4 --crf=16",
