@@ -33,6 +33,7 @@ import {AdR08, R08_DURATION, R08_FPS} from './ads/R08/Film';
 import {AdR09, R09_DURATION, R09_FPS} from './ads/R09/Film';
 import {AdR10, R10_DURATION, R10_FPS} from './ads/R10/Film';
 import {AdR11, R11_DURATION, R11_FPS} from './ads/R11/Film';
+import {AdR12, R12_DURATION, R12_FPS} from './ads/R12/Film';
 import {AdIND10, IND10_DURATION, IND10_FPS} from './ads/IND10/Film';
 import {AdIND02, AdIND06, AdIND09, IND02_DURATION, IND06_DURATION, IND09_DURATION, IND_FPS} from './ads/series/reels';
 import {R01_H1} from './ads/copy';
@@ -54,6 +55,8 @@ export const Root = () => (
     <Composition id="Ad-R09-WhatsApp-9x16" component={AdR09} durationInFrames={R09_DURATION} fps={R09_FPS} width={ADW} height={ADH} />
     <Composition id="Ad-R10-Adapt-16x9" component={AdR10} durationInFrames={R10_DURATION} fps={R10_FPS} width={1920} height={1080} />
     <Composition id="Ad-R11-Adapt-9x16" component={AdR11} durationInFrames={R11_DURATION} fps={R11_FPS} width={ADW} height={ADH} />
+    <Composition id="Ad-R12-Scattered-16x9" component={AdR12} durationInFrames={R12_DURATION} fps={R12_FPS} width={1920} height={1080} defaultProps={{theme: 'light' as const}} />
+    <Composition id="Ad-R12-Scattered-Dark-16x9" component={AdR12} durationInFrames={R12_DURATION} fps={R12_FPS} width={1920} height={1080} defaultProps={{theme: 'dark' as const}} />
     <Composition id="Ad-IND10-Facility-9x16" component={AdIND10} durationInFrames={IND10_DURATION} fps={IND10_FPS} width={ADW} height={ADH} />
     <Composition id="Ad-IND02-Restaurant-9x16" component={AdIND02} durationInFrames={IND02_DURATION} fps={IND_FPS} width={ADW} height={ADH} />
     <Composition id="Ad-IND06-Factory-9x16" component={AdIND06} durationInFrames={IND06_DURATION} fps={IND_FPS} width={ADW} height={ADH} />
