@@ -297,12 +297,12 @@ export const AdR13: React.FC<{theme: Theme}> = ({theme}) => {
         <ToolStack t={t} />
 
         <Head t={t} a={0.24} b={3.0} top={250} size={112} at={[0.24, V.isnt, V.because]} lines={[[['Your business', 0]], [["isn't complicated", 0]], [["because it's growing.", 1]]]} />
-        <Head t={t} a={V.complicated2} b={5.75} top={410} size={104} align="center" at={[V.complicated2, V.everything]} lines={[[["It's complicated because", 1]], [['everything is everywhere.', 0]]]} />
-        <Head t={t} a={V.customer} b={7.3} top={400} size={100} at={[V.customer, V.place]} lines={[[['Customer details', 0]], [['in one place.', 1]]]} />
+        <Head t={t} a={V.complicated2} b={5.42} top={410} size={104} align="center" at={[V.complicated2, V.everything]} lines={[[["It's complicated because", 1]], [['everything is everywhere.', 0]]]} />
+        <Head t={t} a={V.customer} b={7.3} top={400} size={100} at={[5.9, V.place]} lines={[[['Customer details', 0]], [['in one place.', 1]]]} />
         <Head t={t} a={V.operations} b={8.5} top={400} size={100} at={[V.operations, V.another]} lines={[[['Operations,', 0]], [['in another.', 1]]]} />
         <Head t={t} a={V.numbers} b={9.85} top={400} size={100} at={[V.numbers, V.spreadsheet]} lines={[[['Numbers,', 0]], [['on a spreadsheet.', 1]]]} />
         <Head t={t} a={10.1} b={12.85} top={110} size={100} at={[10.1, 11.2]} lines={[[["And you're expected", 1]], [['to keep it all connected.', 0]]]} />
-        <Head t={t} a={V.thats} b={13.7} top={470} size={120} align="center" lines={[[["That's exactly where", 0]]]} />
+        <Head t={t} a={V.thats} b={13.4} top={470} size={120} align="center" lines={[[["That's exactly where", 0]]]} />
         <Head t={t} a={V.oneRecord} b={15.38} top={470} size={140} lines={[[['One record.', 0]]]} />
         <Head t={t} a={V.oneSystem} b={16.9} top={350} size={120} at={[15.82, 16.0, 16.48]} lines={[[['One', 0]], [['connected', 0]], [['system.', 1]]]} />
         <Head t={t} a={V.entire} b={18.95} top={400} size={104} at={[V.entire, V.together]} lines={[[['Your entire business,', 0]], [['working together.', 1]]]} />
