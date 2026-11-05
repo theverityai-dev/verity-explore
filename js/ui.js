@@ -122,4 +122,27 @@
       card.style.setProperty('--my', (e.clientY - r.top) + 'px');
     }, { passive: true });
   }
+
+  /* Hero word rotor: cycles business types in place. The heading's accessible
+     name stays "business" (aria-label) so screen readers hear one sentence. */
+  var rotor = document.querySelector('[data-rotor]');
+  if (rotor && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var words = rotor.getAttribute('data-rotor').split('|');
+    var at = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      var old = rotor.querySelector('.up-rotor-word:not(.is-out)');
+      at = (at + 1) % words.length;
+      var next = document.createElement('span');
+      next.className = 'up-rotor-word is-in';
+      next.setAttribute('aria-hidden', 'true');
+      next.textContent = words[at] + '.';
+      if (old) {
+        old.classList.remove('is-in');
+        old.classList.add('is-out');
+        setTimeout(function () { old.remove(); }, 460);
+      }
+      rotor.insertBefore(next, rotor.firstChild);
+    }, 2400);
+  }
 })();

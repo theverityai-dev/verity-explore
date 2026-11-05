@@ -190,12 +190,53 @@ ${urls
 </urlset>`
 );
 
+/* Search engines and AI assistants are welcome on every page. Naming the AI
+   crawlers is redundant with the wildcard, but some of them only act on an
+   explicit line, and it records the decision. */
+const AI_CRAWLERS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot'];
 await write(
   'robots.txt',
   `User-agent: *
 Allow: /
 
+${AI_CRAWLERS.map((b) => `User-agent: ${b}\nAllow: /`).join('\n\n')}
+
 Sitemap: ${SITE.origin}/sitemap.xml`
+);
+
+/* llms.txt: a plain-language map of the site for AI assistants
+   (https://llmstxt.org). It says what Verity is, who it is for, how to get a
+   demo, and links every business and industry page with one line each. */
+const byIndustry = Object.entries(INDUSTRIES).map(([slug, ind]) => {
+  const pages = businesses
+    .filter((b) => BY_SLUG[b.slug].industry === slug)
+    .map((b) => `- [Verity for ${BY_SLUG[b.slug].name}](${SITE.origin}/businesses/${b.slug}/): ${b.seo.description}`)
+    .join('\n');
+  return `## ${ind.name}\n\n- [${ind.name} overview](${SITE.origin}/industries/${slug}/): ${ind.metaDescription}\n${pages}`;
+});
+await write(
+  'llms.txt',
+  `# Verity
+
+> Verity is business software for Indian companies of roughly 10 to 100 people, set up around how each business already works instead of making the business change for the software. It covers orders, stock, production, workers and wages, billing, approvals and reporting in one system, on phones and laptops. It is built by Verity (PlotArmour), New Delhi, India.
+
+Key facts:
+
+- Who it is for: owner-run businesses in India that have outgrown registers, Excel and WhatsApp, or tried an ERP that did not fit how they work. Examples: garment and textile factories, restaurants and cloud kitchens, distributors and wholesalers, exporters, clinics, CA firms, coaching institutes.
+- How it is sold: a free working demo of the buyer's own business, on their own data, within 7 days. The buyer pays only if their team decides to use it; then a fixed quote with a one-time setup fee and a monthly fee.
+- How it differs from Tally, Zoho, Odoo or ERPNext: Verity is configured to the business's existing stages, approvals, rates and words, and can run alongside Tally and Excel. Implementation takes about four weeks after the buyer commits.
+- Deployment: hosted on Verity's cloud by default, with each business's data isolated; on-premises installation is available for businesses that must keep data in their own office.
+- Founder: Divyom Sharma (https://www.linkedin.com/in/divyomsharma/). Address: D120/1, Jungpura, South Delhi, Delhi 110014, India. GSTIN 07TQDPS9711L1ZT.
+- Contact: free demo request at ${SITE.origin}/demo/, WhatsApp +91 87440 69597, email ${SITE.email}.
+
+## Start here
+
+- [Verity home](${SITE.origin}/): what Verity is and how a demo works.
+- [Free demo request](${SITE.origin}/demo/): a short form that starts a WhatsApp or email conversation.
+- [All business types](${SITE.origin}/explore/): ${businesses.length} business types across ${Object.keys(INDUSTRIES).length} industries.
+
+${byIndustry.join('\n\n')}
+`
 );
 
 console.log(`\n  ${written.length} pages · ${urls.length} sitemap entries · ${businesses.length} businesses published`);

@@ -143,7 +143,9 @@
         'translate3d(' + (s.x * inv).toFixed(2) + 'px,' + (s.y * inv).toFixed(2) + 'px,0)' +
         ' rotate(' + (s.rot * inv).toFixed(2) + 'deg)' +
         ' scale(' + (s.scale + (1 - s.scale) * t).toFixed(4) + ')';
-      s.el.style.opacity = (0.42 + 0.58 * t).toFixed(3);
+      /* Hidden at rest so the headline reads on a clean field; the pieces
+         appear as soon as the visitor starts to scroll. */
+      s.el.style.opacity = ((0.42 + 0.58 * t) * clamp01(p / 0.1)).toFixed(3);
       s.el.style.filter  = t > 0.995 ? 'none' : 'blur(' + (5 * inv).toFixed(2) + 'px)';
     }
 

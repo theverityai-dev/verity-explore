@@ -233,3 +233,106 @@ input, textarea { caret-color: var(--accent); }
 .up-mini-pay > span:nth-child(3) { color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 .up-mini-pay b { text-align: right; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
 .up-av { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-a14); color: var(--accent-text); font-size: 11px; font-weight: 500; }
+
+/* ================================================================ hero === */
+/* At rest the hero is a clean field: slow light, a faint grid, the promise.
+   Scrolling hands over to the assembling product screen (hero-assemble.js),
+   so every layer here fades out against the same --p the scrub drives. */
+
+.up-aurora, .up-hero-grid { position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: calc(1 - var(--p, 0) * 1.8); }
+.up-aurora { overflow: hidden; }
+.up-aurora i {
+  position: absolute; border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform;
+}
+.up-aurora i:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: -14vw; background: color-mix(in srgb, var(--accent) 26%, transparent); animation: up-drift-a 22s ease-in-out infinite alternate; }
+.up-aurora i:nth-child(2) { width: 38vw; height: 38vw; right: -10vw; top: 4vw; background: color-mix(in srgb, #5ac8fa 24%, transparent); animation: up-drift-b 26s ease-in-out infinite alternate; }
+.up-aurora i:nth-child(3) { width: 34vw; height: 34vw; left: 30vw; bottom: -22vw; background: color-mix(in srgb, var(--accent) 16%, transparent); animation: up-drift-c 30s ease-in-out infinite alternate; }
+@keyframes up-drift-a { to { transform: translate3d(9vw, 6vw, 0) scale(1.12); } }
+@keyframes up-drift-b { to { transform: translate3d(-8vw, 7vw, 0) scale(0.92); } }
+@keyframes up-drift-c { to { transform: translate3d(-6vw, -5vw, 0) scale(1.08); } }
+
+.up-hero-grid {
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 56px 56px;
+  mask-image: radial-gradient(70% 60% at 50% 46%, #000 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 46%, #000 20%, transparent 80%);
+}
+
+.up-hero { gap: 26px; }
+.up-hero .up-hero-h1 {
+  display: flex; flex-direction: column; align-items: center;
+  max-width: none;
+  font-size: clamp(40px, 5.2vw, 80px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.up-hero .up-hero-h1 > span:first-child { color: var(--ink-muted); }
+.up-hero .hero-sub { max-width: 600px; }
+
+/* The cycling business type. A single line box, so the headline never jumps. */
+.up-rotor { position: relative; display: inline-grid; height: 1.08em; overflow: hidden; color: var(--accent-text); padding-inline: 0.04em; }
+.up-rotor-word { grid-area: 1 / 1; white-space: nowrap; }
+.up-rotor-word.is-in { animation: up-word-in .7s var(--up-spring) both; }
+/* The outgoing word leaves the layout, so the line takes the new word's
+   width at once and the sentence stays centred. */
+.up-rotor-word.is-out { position: absolute; left: 50%; top: 0; translate: -50% 0; animation: up-word-out .45s var(--up-ease) both; }
+@keyframes up-word-in { from { transform: translateY(70%); opacity: 0; filter: blur(8px); } }
+@keyframes up-word-out { to { transform: translateY(-70%); opacity: 0; filter: blur(8px); } }
+.up-rotor { overflow: visible; clip-path: inset(0 -100vw); height: 1.2em; line-height: 1.2em; }
+
+/* Announcement pill: the offer, one tap from the form. */
+.up-pill {
+  position: relative;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 16px 8px 12px; border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--elev-low);
+  font-size: 13.5px; color: var(--ink);
+  transition: border-color .25s var(--up-ease), box-shadow .25s var(--up-ease), transform .3s var(--up-spring);
+}
+.up-pill:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: var(--elev-mid); transform: translateY(-1px); }
+.up-pill svg { color: var(--accent-text); transition: transform .3s var(--up-spring); }
+.up-pill:hover svg { transform: translateX(3px); }
+.up-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--up-ok); box-shadow: 0 0 0 0 color-mix(in srgb, var(--up-ok) 50%, transparent); animation: up-ping 2.4s var(--up-ease) infinite; }
+@keyframes up-ping { 70%, 100% { box-shadow: 0 0 0 8px transparent; } }
+
+/* A light that runs round the primary button's edge. */
+@property --up-a { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+.up-beam { overflow: visible; }
+.up-beam::after {
+  content: ""; position: absolute; inset: -2px; border-radius: calc(var(--r-control) + 2px);
+  padding: 2px;
+  background: conic-gradient(from var(--up-a), transparent 0 70%, rgba(255,255,255,0.9) 82%, #5ac8fa 88%, transparent 96%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: up-spin 3.2s linear infinite;
+  pointer-events: none;
+}
+@keyframes up-spin { to { --up-a: 360deg; } }
+
+.up-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin: 4px 0 0; padding: 0; list-style: none; font-size: 13.5px; color: var(--ink-muted); }
+.up-trust li { display: inline-flex; align-items: center; gap: 7px; }
+.up-trust li::before {
+  content: ""; width: 14px; height: 14px; flex: none;
+  background: var(--up-ok);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Entrance: each line rises out of a soft blur, one after the other. */
+.up-in { animation: up-rise .9s var(--up-ease) both; animation-delay: calc(var(--d, 0) * 90ms + 120ms); }
+@keyframes up-rise { from { opacity: 0; transform: translateY(18px); filter: blur(8px); } }
+
+@media (max-width: 720px) {
+  .up-hero .up-hero-h1 { font-size: clamp(34px, 9vw, 44px); }
+  .up-hero .up-hero-h1 > span { text-wrap: balance; }
+  .up-trust { font-size: 12.5px; gap: 6px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .up-aurora i, .up-pill-dot, .up-beam::after, .up-in, .up-rotor-word { animation: none !important; }
+}
