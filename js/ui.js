@@ -110,4 +110,16 @@
     var idx = parseInt(item.getAttribute('data-city'), 10);
     btn.addEventListener('click', function () { activateCity(idx); });
   });
+
+  /* Spotlight cards: a soft light follows the pointer (css/upgrade.css).
+     One delegated listener, fine pointers only, off under reduced motion. */
+  if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.addEventListener('pointermove', function (e) {
+      var card = e.target.closest && e.target.closest('.up-spot, .xp-card > a, .x-ind-card a');
+      if (!card) return;
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
 })();
