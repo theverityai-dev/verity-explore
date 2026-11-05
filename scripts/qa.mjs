@@ -136,7 +136,7 @@ for (const [page, links] of hrefs) {
     if (!existsSync(target)) fail(page, `dead internal link: ${href}`);
   }
   const canonicalPath = '/' + page.replace(/index\.html$/, '');
-  if (!sitemap.includes(`<loc>https://theverityai.xyz${canonicalPath}</loc>`)) {
+  if (!sitemap.includes(`<loc>https://verity.plotarmour.in${canonicalPath}</loc>`)) {
     fail(page, `not in sitemap.xml (expected ${canonicalPath})`);
   }
 }

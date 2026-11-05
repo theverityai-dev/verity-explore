@@ -4,14 +4,46 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
-      "destination": "https://theverityai.xyz/explore/",
+      "has": [
+        {
+          "type": "host",
+          "value": "explore.theverityai.xyz"
+        }
+      ],
+      "destination": "https://verity.plotarmour.in/explore/",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "explore.theverityai.xyz" }],
-      "destination": "https://theverityai.xyz/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "explore.theverityai.xyz"
+        }
+      ],
+      "destination": "https://verity.plotarmour.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "theverityai.xyz"
+        }
+      ],
+      "destination": "https://verity.plotarmour.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.theverityai.xyz"
+        }
+      ],
+      "destination": "https://verity.plotarmour.in/:path*",
       "permanent": true
     }
   ]

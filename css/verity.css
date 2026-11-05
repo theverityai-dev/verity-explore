@@ -1241,3 +1241,7 @@ img { max-width: 100%; display: block; }
 }
 :root.no-converge .plat-plate-text { opacity: 1; }
 :root.no-converge .plat-parts { opacity: 1; transform: none; }
+
+/* The free-demo offer under every closing call to action. */
+.cta-offer { max-width: 52ch; margin: 0; color: var(--ink); }
+.hero-offer { margin-top: 16px; max-width: 52ch; color: var(--ink); }

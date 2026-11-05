@@ -13,6 +13,7 @@ import { SITE, esc } from '../lib/render.js';
 import { renderBusinessPage } from '../lib/business-page.js';
 import { renderIndustryPage } from '../lib/industry-page.js';
 import { renderHub, renderIndustriesIndex } from '../lib/hub-page.js';
+import { renderDemoPage } from '../lib/demo-page.js';
 import { INDUSTRIES } from '../content/industries.js';
 import { REGISTRY, BY_SLUG } from '../content/businesses/registry.js';
 
@@ -74,9 +75,10 @@ for (const biz of businesses) {
 
 const written = [];
 
-/* The hub lives at /explore/ on the single theverityai.xyz origin. */
+/* The hub lives at /explore/ on the single verity.plotarmour.in origin. */
 written.push(await write('explore/index.html', renderHub(publishedSlugs)));
 written.push(await write('industries/index.html', renderIndustriesIndex(publishedSlugs)));
+written.push(await write('demo/index.html', renderDemoPage()));
 
 for (const slug of Object.keys(INDUSTRIES)) {
   written.push(await write(`industries/${slug}/index.html`, renderIndustryPage(slug, publishedSlugs)));
@@ -165,6 +167,7 @@ ${industryCards}
 const urls = [
   { loc: '/', priority: '1.0' },
   { loc: '/explore/', priority: '0.9' },
+  { loc: '/demo/', priority: '0.9' },
   { loc: '/industries/', priority: '0.8' },
   ...Object.keys(INDUSTRIES).map((s) => ({ loc: `/industries/${s}/`, priority: '0.8' })),
   ...businesses.map((b) => ({ loc: `/businesses/${b.slug}/`, priority: '0.7' })),
