@@ -305,7 +305,8 @@ input, textarea { caret-color: var(--accent); }
 @property --up-a { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 .up-beam { overflow: visible; }
 .up-beam::after {
-  content: ""; position: absolute; inset: -2px; border-radius: calc(var(--r-control) + 2px);
+  /* The ring follows the button's own corners, pill or rounded. */
+  content: ""; position: absolute; inset: -2px; border-radius: inherit;
   padding: 2px;
   background: conic-gradient(from var(--up-a), transparent 0 70%, rgba(255,255,255,0.9) 82%, #5ac8fa 88%, transparent 96%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
