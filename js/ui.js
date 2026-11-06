@@ -145,4 +145,76 @@
       rotor.insertBefore(next, rotor.firstChild);
     }, 2400);
   }
+
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* Bento miniatures animate only while on screen. */
+  if (hasIO) {
+    var liveIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.classList.toggle('is-live', en.isIntersecting); });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('.up-bento-card').forEach(function (c) { liveIO.observe(c); });
+  }
+
+  /* Dashboard figures count up the first time they come into view, keeping
+     their own prefix, suffix, decimals and Indian digit grouping. */
+  var figures = document.querySelectorAll('#command .tnum, #workforce .wf-stat-num, #workforce .wf-bar-count');
+  if (figures.length && hasIO && !still) {
+    var countIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        countIO.unobserve(en.target);
+        var el = en.target, f = el._fig;
+        var t0 = performance.now(), dur = 1400;
+        var tick = function (now) {
+          var k = Math.min(1, (now - t0) / dur);
+          var e = 1 - Math.pow(1 - k, 4);
+          el.textContent = k < 1 ? f.pre + f.fmt.format(f.num * e) + f.post : f.text;
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.2 });
+    figures.forEach(function (el) {
+      var text = el.textContent.trim();
+      /* Plain figures only: "318", "₹42 L", "86%". Times and durations
+         ("09:28", "6m 12s") keep their text. */
+      var m = /^(₹?\s?)(\d[\d,]*(?:\.\d+)?)(\s?(?:L|Cr|%)?)$/.exec(text);
+      if (!m) return;
+      var num = parseFloat(m[2].replace(/,/g, ''));
+      if (!num) return;
+      var dec = (m[2].split('.')[1] || '').length;
+      el._fig = { text: text, pre: m[1], num: num, post: m[3], fmt: new Intl.NumberFormat('en-IN', { minimumFractionDigits: dec, maximumFractionDigits: dec }) };
+      el.textContent = m[1] + el._fig.fmt.format(0) + m[3];
+      countIO.observe(el);
+    });
+  }
+
+  /* Phone dock: one tap to the demo form once the hero is passed. Not on the
+     demo page itself, and out of the way near the closing call to action and
+     the footer, where it would only repeat them. */
+  if (!/^\/demo\//.test(location.pathname)) {
+    var dock = document.createElement('div');
+    dock.className = 'up-dock';
+    dock.setAttribute('role', 'region');
+    dock.setAttribute('aria-label', 'Free demo');
+    dock.innerHTML = '<span><b>See your business in Verity</b><small>Free demo on your own data, in 7 days</small></span><a class="btn btn--primary" href="/demo/">Get free demo</a>';
+    document.body.appendChild(dock);
+    var ends = Array.prototype.slice.call(document.querySelectorAll('#cta, .pf-foot'));
+    var nearEnd = false;
+    var place = function () {
+      dock.classList.toggle('is-shown', window.scrollY > window.innerHeight * 0.9 && !nearEnd);
+    };
+    if (hasIO && ends.length) {
+      var endIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { en.target._in = en.isIntersecting; });
+        nearEnd = ends.some(function (e) { return e._in; });
+        place();
+      });
+      ends.forEach(function (e) { endIO.observe(e); });
+    }
+    window.addEventListener('scroll', place, { passive: true });
+    place();
+  }
 })();

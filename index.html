@@ -43,7 +43,7 @@
 <meta name="twitter:image" content="https://verity.plotarmour.in/og/home.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Verity","url":"https://verity.plotarmour.in/","founder":{"@type":"Person","name":"Divyom Sharma","sameAs":"https://www.linkedin.com/in/divyomsharma/"},"address":{"@type":"PostalAddress","streetAddress":"D120/1, Jungpura","addressLocality":"New Delhi","addressRegion":"Delhi","postalCode":"110014","addressCountry":"IN"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the demo really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Book a 30-minute call, send us one sample of how you work today (a register photo, a sheet, a bill), and within 7 days you click through Verity set up for your business. You pay nothing unless your team decides to use it."}},{"@type":"Question","name":"What does it cost after that?","acceptedAnswer":{"@type":"Answer","text":"It depends on how much of the business goes in. After the demo you get a fixed quote: a one-time setup fee and a monthly fee. Nothing is billed before you agree to it."}},{"@type":"Question","name":"Do we have to change how we work?","acceptedAnswer":{"@type":"Answer","text":"No. That is the point of Verity. We learn your stages, approvals, rates and words, and set the system up to match them. Your team keeps working the way it already does."}},{"@type":"Question","name":"Where is our data kept?","acceptedAnswer":{"@type":"Answer","text":"By default on Verity’s cloud, with every business kept separate from every other. If your data has to stay on your own premises, Verity can also run on a server in your office."}},{"@type":"Question","name":"Can we keep Tally and our Excel sheets?","acceptedAnswer":{"@type":"Answer","text":"Yes. You do not have to replace everything on day one. We move the records that matter and run Verity alongside what already works."}},{"@type":"Question","name":"What if we stop using it?","acceptedAnswer":{"@type":"Answer","text":"Your data is yours. Ask for a full export at any time and you get it."}},{"@type":"Question","name":"Does it work on a phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Supervisors, karigars, waiters and owners use it on ordinary phones, and owners and accountants use it on a laptop."}}]}</script>
-<link rel="stylesheet" href="css/upgrade.css?v=2">
+<link rel="stylesheet" href="css/upgrade.css?v=3">
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
@@ -293,7 +293,7 @@
   <div class="shell">
     <p class="eyebrow" data-reveal>The way business actually runs</p>
 
-    <div style="margin-top:48px;display:grid;gap:clamp(48px,5vw,80px);align-items:start;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);">
+    <div class="up-split" style="margin-top:48px;--cols:minmax(0,0.9fr) minmax(0,1.1fr);">
       <div>
         <h2 id="fragmentation-heading" class="h-lg" data-reveal data-words>Your business isn't broken.<br>Your systems are fragmented.</h2>
 
@@ -343,7 +343,7 @@
 <!-- ---------- B2: WhatIsVerity ---------- -->
 <section class="section section--alt section--tall" id="platform" aria-labelledby="platform-heading">
   <div class="shell">
-    <div style="display:grid;gap:clamp(48px,5vw,80px);align-items:start;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);">
+    <div class="up-split" style="--cols:minmax(0,0.8fr) minmax(0,1.2fr);">
       <div>
         <p class="eyebrow" data-reveal>One platform, configured per business</p>
         <h2 id="platform-heading" class="h-lg" data-reveal data-words>Same platform.<br>A different setup for every business.</h2>
@@ -1042,10 +1042,10 @@
     <h2 id="primitives-heading" class="h-lg" data-reveal data-words>Your way of working is a setting, not a rebuild.</h2>
     <p class="sub" style="margin-top:24px;max-width:56ch;" data-reveal>Workflows, roles, permissions, approval rules, fields, statuses, forms, dashboards, notifications and terminology are all configured on one foundation. Each shares the same identity, permissions and history, so a change to how you work never means new code.</p>
 
-    <div style="margin-top:48px;display:grid;gap:12px;grid-template-columns:repeat(6,1fr);" data-stagger="> *">
+    <div style="margin-top:48px;display:grid;gap:12px;grid-template-columns:minmax(0,1fr);" data-stagger="> *">
 
       <!-- Featured card -->
-      <div style="grid-column:span 6;position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--elev-mid);padding:24px;" data-reveal>
+      <div style="grid-column:1/-1;position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--elev-mid);padding:24px;" data-reveal>
         <div aria-hidden="true" style="pointer-events:none;position:absolute;inset:0;background:radial-gradient(ellipse at 82% 30%, var(--accent-a14), transparent 62%);"></div>
         <div style="position:relative;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;">
           <div>
@@ -1073,71 +1073,49 @@
         </div>
       </div>
 
-      <!-- 8 primitive cards -->
-      <div style="grid-column:span 3;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">01</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">People</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Teams, roles, responsibilities, workforce.</span>
-        </button>
+      <!-- Eight parts, each a live miniature that opens the section showing it -->
+      <div class="up-bento">
+      <a class="up-bento-card up-spot up-b-people" href="#workforce" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-avatars"><i>RA</i><i>SK</i><i>MV</i><i>+9</i></span><span class="bv-chips"><b>Owner</b><b>Supervisor</b><b>Karigar</b></span></span>
+        <span class="up-bento-title">People</span>
+        <span class="up-bento-line">Teams, roles, who is responsible for what.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-work" href="#schedule" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-board"><span><em>To do</em><i></i><i></i></span><span><em>Doing</em><i class="bv-move"></i><i></i></span><span><em>Done</em><i></i><i></i><i></i></span></span></span>
+        <span class="up-bento-title">Work</span>
+        <span class="up-bento-line">Orders, jobs, lots and tasks, each with an owner and a state.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-records" href="#command" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-docs"><i></i><i></i><i></i></span></span>
+        <span class="up-bento-title">Records</span>
+        <span class="up-bento-line">Items, documents, bills and assets in one place.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-flow" href="#roles" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-chain"><span class="bv-node is-done">Order</span><span class="bv-wire"><i></i></span><span class="bv-node is-done">Credit check</span><span class="bv-wire"><i></i></span><span class="bv-node is-now">Owner approval</span><span class="bv-wire"><i></i></span><span class="bv-node">Dispatch</span></span></span>
+        <span class="up-bento-title">Workflows</span>
+        <span class="up-bento-line">Your approvals and stages, in your order, with your rules.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-control" href="#roles" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-perms"><span>Wages<b class="is-on"></b></span><span>Cost price<b></b></span><span>Approve orders<b class="is-on"></b></span></span></span>
+        <span class="up-bento-title">Control</span>
+        <span class="up-bento-line">Each person sees and does only what their role allows.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-rel" href="/explore/" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-graph"><i class="c"></i><i class="n1"></i><i class="n2"></i><i class="n3"></i><i class="n4"></i></span></span>
+        <span class="up-bento-title">Relationships</span>
+        <span class="up-bento-line">Customers, suppliers, karigars and partners, once each.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-comms" href="#intelligence" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><span class="bv-chat"><i>Lot 2417 short by 40 pcs</i><i class="me">Recount at finishing</i><i>Done, 1,160 confirmed</i></span></span>
+        <span class="up-bento-title">Communication</span>
+        <span class="up-bento-line">Comments and alerts on the record they are about.</span>
+      </a>
+      <a class="up-bento-card up-spot up-b-intel" href="#intelligence" data-reveal>
+        <span class="up-bento-vis" aria-hidden="true"><svg class="bv-spark" viewBox="0 0 200 64" preserveAspectRatio="none"><path class="bv-area" d="M0 52 L28 44 L56 47 L84 33 L112 36 L140 22 L168 25 L200 10 L200 64 L0 64 Z"/><path class="bv-stroke" pathLength="100" d="M0 52 L28 44 L56 47 L84 33 L112 36 L140 22 L168 25 L200 10"/></svg></span>
+        <span class="up-bento-title">Intelligence</span>
+        <span class="up-bento-line">Reports and answers drawn from your own records.</span>
+      </a>
       </div>
-
-      <div style="grid-column:span 3;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">02</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Work</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Tasks, projects, jobs, orders, activities.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 3;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">03</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Relationships</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Customers, vendors, partners, stakeholders.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 3;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">04</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Records</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Documents, products, assets, transactions.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 2;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">05</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Workflows</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Approvals, processes, states, automations.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 2;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">06</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Communication</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Comments, notifications, activity, conversations.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 2;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">07</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Intelligence</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Reports, dashboards, insights, AI.</span>
-        </button>
-      </div>
-
-      <div style="grid-column:span 2;" data-reveal>
-        <button type="button" onclick="document.querySelectorAll('[data-prim-card]').forEach(function(c){c.style.borderColor='var(--line)';c.style.background='var(--surface)';c.setAttribute('aria-pressed','false');});this.setAttribute('aria-pressed','true');this.style.borderColor='var(--accent-a40)';this.style.background='var(--accent-a08)';" data-prim-card aria-pressed="false" style="height:100%;width:100%;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:20px;text-align:left;cursor:pointer;transition:border-color .3s,background-color .3s;">
-          <span class="label tnum">08</span>
-          <span style="display:block;margin-top:12px;font-size:21px;font-weight:300;letter-spacing:-0.02em;">Control</span>
-          <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.4;color:var(--ink-body);">Permissions, policies, audit trails.</span>
-        </button>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1400,15 +1378,15 @@
         <p class="eyebrow" data-reveal>Migration</p>
         <h2 id="migration-heading" class="h-lg">Bring your business with you.</h2>
         <p class="body mig-deck">You don't have to replace everything on day one. We map your existing systems into Verity, migrate the records that matter, and introduce the new operating layer alongside what already works.</p>
-        <a href="#cta" class="btn btn--secondary">Talk about your operation</a>
+        <a href="/demo/" class="btn btn--secondary">Get your free demo</a>
       </div>
 
       <div class="mig-right">
         <ul class="mig-sources" data-stagger="> li">
-          <li class="mig-source">Excel</li>
-          <li class="mig-source">Google Sheets</li>
-          <li class="mig-source">Legacy ERP</li>
-          <li class="mig-source">CRM</li>
+          <li class="mig-source">Excel and Google Sheets</li>
+          <li class="mig-source">Tally exports</li>
+          <li class="mig-source">WhatsApp and registers</li>
+          <li class="mig-source">An ERP you stopped using</li>
         </ul>
 
         <div class="mig-arrow" aria-hidden="true">
@@ -1417,6 +1395,11 @@
             <path d="M0 54 C 34 54, 38 70, 72 70" stroke="var(--accent-a40)" stroke-width="1" fill="none"/>
             <path d="M0 92 C 34 92, 38 70, 72 70" stroke="var(--accent-a40)" stroke-width="1" fill="none"/>
             <path d="M0 130 C 34 130, 38 70, 72 70" stroke="var(--accent-a40)" stroke-width="1" fill="none"/>
+          
+            <path class="up-flow" style="--i:0" d="M0 16 C 34 16, 38 70, 72 70" pathLength="100"/>
+            <path class="up-flow" style="--i:1" d="M0 54 C 34 54, 38 70, 72 70" pathLength="100"/>
+            <path class="up-flow" style="--i:2" d="M0 92 C 34 92, 38 70, 72 70" pathLength="100"/>
+            <path class="up-flow" style="--i:3" d="M0 130 C 34 130, 38 70, 72 70" pathLength="100"/>
           </svg>
         </div>
 
@@ -1636,7 +1619,7 @@
 <script src="js/vendor/lenis.min.js"></script>
 <script src="js/motion.js?v=78"></script>
 <script src="js/hero-assemble.js?v=79"></script>
-<script src="js/ui.js?v=79"></script>
+<script src="js/ui.js?v=80"></script>
 <script src="js/liquid-glass.js?v=78"></script>
 </body>
 </html>

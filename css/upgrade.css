@@ -336,3 +336,172 @@ input, textarea { caret-color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   .up-aurora i, .up-pill-dot, .up-beam::after, .up-in, .up-rotor-word { animation: none !important; }
 }
+
+/* =============================================================== bento === */
+/* Eight parts of the system, each card a miniature of the part and a link to
+   the section that shows it. Motion inside a card runs only while it is on
+   screen (.is-live, set by js/ui.js) and never under reduced motion. */
+.up-bento {
+  grid-column: 1 / -1;
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  min-width: 0; width: 100%; justify-self: stretch;
+}
+.up-bento-card, .up-bento-vis { min-width: 0; }
+@media (max-width: 640px) {
+  .bv-chain { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .bv-chain > .bv-wire { display: none; }
+}
+
+/* Two-column text-and-visual sections fold to one column on narrow screens. */
+.up-split { display: grid; gap: clamp(40px, 5vw, 80px); align-items: start; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .up-split { grid-template-columns: var(--cols); } }
+@media (min-width: 1024px) {
+  .up-bento { grid-template-columns: repeat(6, 1fr); }
+  .up-b-people, .up-b-work, .up-b-records, .up-b-rel, .up-b-comms, .up-b-intel { grid-column: span 2; }
+  .up-b-flow { grid-column: span 4; }
+  .up-b-control { grid-column: span 2; }
+}
+.up-bento-card {
+  display: flex; flex-direction: column;
+  min-height: 248px; padding: 20px;
+  border: 1px solid var(--line); border-radius: var(--r-panel);
+  background: var(--surface); color: var(--ink);
+  box-shadow: var(--elev-low);
+  transition: border-color .25s var(--up-ease), box-shadow .3s var(--up-ease), transform .3s var(--up-spring);
+}
+.up-bento-card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); box-shadow: var(--elev-mid); transform: translateY(-2px); }
+.up-bento-card:active { transform: translateY(0) scale(0.99); }
+.up-bento-vis {
+  position: relative; flex: 1; min-height: 120px; margin-bottom: 18px;
+  display: grid; place-items: center; align-content: center; gap: 12px;
+  border-radius: 12px; background: var(--base); border: 1px solid var(--line-hair);
+  overflow: hidden;
+}
+.up-bento-title { font-size: 20px; font-weight: 300; letter-spacing: -0.02em; }
+.up-bento-line { margin-top: 6px; font-size: 13.5px; line-height: 1.45; color: var(--ink-body); }
+
+/* People: an avatar stack and the roles they hold. */
+.bv-avatars { display: flex; }
+.bv-avatars i { display: grid; place-items: center; width: 40px; height: 40px; margin-left: -10px; border-radius: 50%; border: 2px solid var(--surface); background: var(--accent-a14); color: var(--accent-text); font-size: 12px; font-weight: 500; font-style: normal; transition: transform .35s var(--up-spring); }
+.bv-avatars i:first-child { margin-left: 0; }
+.bv-avatars i:last-child { background: var(--base-alt); color: var(--ink-muted); }
+.up-b-people:hover .bv-avatars i { transform: translateX(calc(var(--k, 0) * 4px)); }
+.bv-avatars i:nth-child(2) { --k: 1; } .bv-avatars i:nth-child(3) { --k: 2; } .bv-avatars i:nth-child(4) { --k: 3; }
+.bv-chips { display: flex; gap: 6px; }
+.bv-chips b { padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); font-size: 11.5px; font-weight: 400; color: var(--ink-body); background: var(--surface); }
+
+/* Work: a tiny board where one card keeps moving across. */
+.bv-board { display: grid; grid-template-columns: repeat(3, 64px); gap: 8px; }
+.bv-board > span { display: grid; gap: 6px; align-content: start; }
+.bv-board em { font-style: normal; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.bv-board i { height: 16px; border-radius: 5px; background: var(--surface); border: 1px solid var(--line); }
+.bv-board > span:last-child i { background: var(--accent-a14); border-color: transparent; }
+.bv-board .bv-move { background: var(--accent); border-color: transparent; }
+.is-live .bv-move { animation: bv-hop 4s var(--up-ease) infinite; }
+@keyframes bv-hop { 0%, 30% { transform: translateX(0); } 50%, 80% { transform: translateX(72px); opacity: 1; } 90% { opacity: 0; } 100% { transform: translateX(0); opacity: 0; } }
+
+/* Records: a fanned stack that opens on hover. */
+.bv-docs { position: relative; width: 96px; height: 112px; }
+.bv-docs i { position: absolute; inset: 0; border-radius: 8px; background-color: var(--surface); border: 1px solid var(--line); box-shadow: var(--elev-low); transition: transform .45s var(--up-spring);
+  background-image: linear-gradient(var(--line) 0 0), linear-gradient(var(--line) 0 0), linear-gradient(var(--line) 0 0), linear-gradient(var(--accent-a24) 0 0);
+  background-size: 60% 4px, 70% 4px, 50% 4px, 30% 8px; background-position: 14px 34px, 14px 48px, 14px 62px, 14px 16px; background-repeat: no-repeat; }
+.bv-docs i:nth-child(1) { transform: rotate(-8deg) translateX(-10px); }
+.bv-docs i:nth-child(2) { transform: rotate(4deg) translateX(8px); }
+.up-b-records:hover .bv-docs i:nth-child(1) { transform: rotate(-14deg) translateX(-34px); }
+.up-b-records:hover .bv-docs i:nth-child(2) { transform: rotate(10deg) translateX(32px); }
+
+/* Workflows: an approval chain whose current step pulses. */
+.bv-chain { display: flex; align-items: center; width: 100%; padding-inline: 16px; }
+.bv-node { flex: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 12.5px; color: var(--ink-muted); white-space: nowrap; }
+.bv-node.is-done { color: var(--ink); border-color: color-mix(in srgb, var(--up-ok) 45%, var(--line)); }
+.bv-node.is-done::before { content: "\2713\00a0"; color: var(--up-ok); }
+.bv-node.is-now { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 0 var(--accent-a40); }
+.is-live .bv-node.is-now { animation: bv-pulse 2.2s var(--up-ease) infinite; }
+@keyframes bv-pulse { 70%, 100% { box-shadow: 0 0 0 10px transparent; } }
+.bv-wire { position: relative; flex: 1; min-width: 14px; height: 2px; background: var(--line); overflow: hidden; }
+.bv-wire i { position: absolute; inset: 0; background: var(--accent); transform-origin: left; }
+/* Children run node, wire, node, wire, node, wire, node: the sixth is the
+   step still waiting, so it fills over and over. */
+.bv-chain > .bv-wire:nth-child(6) i { transform: scaleX(0); }
+.is-live .bv-chain > .bv-wire:nth-child(6) i { animation: bv-fill 2.2s var(--up-ease) infinite; }
+@keyframes bv-fill { 0% { transform: scaleX(0); opacity: 1; } 60% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+@media (max-width: 1023px) { .bv-node { font-size: 11px; padding: 5px 8px; } .bv-chain { padding-inline: 10px; } }
+
+/* Control: permission switches per role. */
+.bv-perms { display: grid; gap: 8px; width: min(220px, 86%); }
+.bv-perms span { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); font-size: 12.5px; color: var(--ink-body); }
+.bv-perms b { position: relative; width: 30px; height: 18px; border-radius: 999px; background: var(--line); transition: background-color .3s var(--up-ease); }
+.bv-perms b::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.2); transition: transform .35s var(--up-spring); }
+.bv-perms b.is-on { background: var(--up-ok); }
+.bv-perms b.is-on::after { transform: translateX(12px); }
+.up-b-control:hover .bv-perms span:nth-child(2) b { background: var(--up-ok); }
+.up-b-control:hover .bv-perms span:nth-child(2) b::after { transform: translateX(12px); }
+
+/* Relationships: one party at the centre, others around it. */
+.bv-graph { position: relative; width: 170px; height: 110px; }
+.bv-graph i { position: absolute; width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent-a40); }
+.bv-graph .c { left: 73px; top: 43px; width: 24px; height: 24px; background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 6px var(--accent-a14); }
+.bv-graph .n1 { left: 8px; top: 10px; } .bv-graph .n2 { right: 8px; top: 6px; } .bv-graph .n3 { left: 18px; bottom: 6px; } .bv-graph .n4 { right: 16px; bottom: 12px; }
+.bv-graph::before { content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(32deg, transparent 49.4%, var(--accent-a24) 49.6% 50.4%, transparent 50.6%),
+    linear-gradient(-32deg, transparent 49.4%, var(--accent-a24) 49.6% 50.4%, transparent 50.6%); }
+.is-live .bv-graph .n1, .is-live .bv-graph .n4 { animation: bv-float 5s ease-in-out infinite alternate; }
+.is-live .bv-graph .n2, .is-live .bv-graph .n3 { animation: bv-float 6s ease-in-out infinite alternate-reverse; }
+@keyframes bv-float { to { transform: translate(3px, -4px); } }
+
+/* Communication: messages on the lot they are about. */
+.bv-chat { display: grid; gap: 6px; width: min(240px, 88%); }
+.bv-chat i { justify-self: start; max-width: 88%; padding: 7px 10px; border-radius: 12px 12px 12px 4px; background: var(--surface); border: 1px solid var(--line); font-style: normal; font-size: 12px; color: var(--ink-body); opacity: 0; transform: translateY(6px); }
+.bv-chat i.me { justify-self: end; border-radius: 12px 12px 4px 12px; background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.is-live .bv-chat i { animation: bv-msg .5s var(--up-ease) forwards; }
+.is-live .bv-chat i:nth-child(2) { animation-delay: .6s; }
+.is-live .bv-chat i:nth-child(3) { animation-delay: 1.2s; }
+@keyframes bv-msg { to { opacity: 1; transform: none; } }
+
+/* Intelligence: a trend that draws itself. */
+.bv-spark { width: 86%; height: 70%; overflow: visible; }
+.bv-spark .bv-area { fill: var(--accent-a14); opacity: 0; transition: opacity .8s var(--up-ease) .6s; }
+.bv-spark .bv-stroke { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 1.6s var(--up-ease); }
+.is-live .bv-spark .bv-area { opacity: 1; }
+.is-live .bv-spark .bv-stroke { stroke-dashoffset: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bv-chat i { opacity: 1; transform: none; }
+  .bv-spark .bv-stroke { stroke-dashoffset: 0; } .bv-spark .bv-area { opacity: 1; }
+  .is-live .bv-move, .is-live .bv-node.is-now, .is-live .bv-wire i, .is-live .bv-graph i, .is-live .bv-chat i { animation: none !important; }
+}
+
+/* ========================================================== migration === */
+/* Each source line carries a travelling pulse into Verity. */
+.mig-arrow-svg .up-flow {
+  fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round;
+  stroke-dasharray: 10 90; stroke-dashoffset: 100;
+  animation: up-flow 2.6s linear infinite; animation-delay: calc(var(--i) * -0.65s);
+}
+@keyframes up-flow { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .mig-arrow-svg .up-flow { animation: none; stroke-dasharray: none; opacity: 0.5; } }
+
+/* ============================================================ phone bar === */
+/* After the hero, phones keep one tap to the demo form. Hidden near the
+   closing call to action and the footer, where it would only repeat them. */
+.up-dock {
+  position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 60;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 10px 10px 16px; border-radius: 16px;
+  background: var(--surface-floating);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5);
+  border: 1px solid var(--line);
+  box-shadow: var(--elev-high);
+  font-size: 13.5px; line-height: 1.3; color: var(--ink);
+  transform: translateY(140%); opacity: 0; pointer-events: none;
+  transition: transform .45s var(--up-spring), opacity .3s var(--up-ease);
+}
+.up-dock.is-shown { transform: none; opacity: 1; pointer-events: auto; }
+.up-dock b { font-weight: 500; display: block; }
+.up-dock small { color: var(--ink-muted); font-size: 12px; }
+.up-dock .btn { min-height: 44px; flex: none; }
+@media (min-width: 721px) { .up-dock { display: none; } }
+@media (prefers-reduced-transparency: reduce) { .up-dock { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
