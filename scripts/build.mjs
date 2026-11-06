@@ -9,7 +9,7 @@ import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-import { SITE, esc } from '../lib/render.js';
+import { SITE, esc, ogKey } from '../lib/render.js';
 import { renderBusinessPage } from '../lib/business-page.js';
 import { renderIndustryPage } from '../lib/industry-page.js';
 import { renderHub, renderIndustriesIndex } from '../lib/hub-page.js';
@@ -177,13 +177,16 @@ const today = new Date().toISOString().slice(0, 10);
 await write(
   'sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls
   .map(
     (u) => `  <url>
     <loc>${SITE.origin}${u.loc}</loc>
     <lastmod>${today}</lastmod>
     <priority>${u.priority}</priority>
+    <image:image><image:loc>${SITE.origin}/og/${ogKey(u.loc)}.png</image:loc></image:image>${
+      u.loc === '/' ? `\n    <image:image><image:loc>${SITE.origin}/assets/founder-divyom.jpg</image:loc></image:image>` : ''
+    }
   </url>`
   )
   .join('\n')}

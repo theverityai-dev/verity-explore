@@ -505,3 +505,83 @@ input, textarea { caret-color: var(--accent); }
 .up-dock .btn { min-height: 44px; flex: none; }
 @media (min-width: 721px) { .up-dock { display: none; } }
 @media (prefers-reduced-transparency: reduce) { .up-dock { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* ====================================================== business pages === */
+/* The same light as the landing hero behind every business and industry
+   hero; the copy and screen sit above it. */
+.up-page-hero { position: relative; overflow: hidden; isolation: isolate; }
+.up-page-hero > .up-aurora, .up-page-hero > .up-hero-grid { z-index: -1; opacity: 1; }
+.up-page-hero > .up-aurora i { opacity: 0.75; }
+.up-page-hero .x-hero-panel { position: relative; }
+.up-page-hero .x-hero-panel .panel { transition: transform .6s var(--up-spring), box-shadow .4s var(--up-ease); }
+@media (hover: hover) and (min-width: 1024px) {
+  .up-page-hero .x-hero-panel:hover .panel { transform: translateY(-4px); box-shadow: var(--elev-high), 0 30px 60px -30px rgba(10,132,255,0.35); }
+}
+
+/* The problems: a sticky index beside the list on wide screens. */
+.bz-pains-wrap { display: grid; gap: 40px; }
+.bz-pains-nav { display: none; }
+@media (min-width: 1100px) {
+  .bz-pains-wrap { grid-template-columns: 280px minmax(0, 1fr); gap: 64px; align-items: start; }
+  .bz-pains-nav { display: block; position: sticky; top: 104px; max-height: calc(100vh - 128px); overflow-y: auto; padding-right: 8px; }
+  .bz-pains-nav .label { display: block; margin-bottom: 14px; color: var(--ink-muted); }
+  .bz-pains-nav ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+  .bz-pains-nav a {
+    position: relative; display: flex; gap: 10px;
+    padding: 8px 0 8px 16px; margin-left: -1px;
+    border-left: 2px solid transparent;
+    font-size: 13.5px; line-height: 1.35; color: var(--ink-muted);
+    transition: color .2s var(--up-ease), border-color .2s var(--up-ease), background-color .2s var(--up-ease);
+  }
+  .bz-pains-nav a .tnum { flex: none; width: 20px; font-size: 11.5px; color: var(--ink-faint); padding-top: 1px; }
+  .bz-pains-nav a:hover { color: var(--ink); }
+  .bz-pains-nav a.is-current { color: var(--ink); border-left-color: var(--accent); background: linear-gradient(90deg, var(--accent-a08), transparent); }
+  .bz-pains-nav a.is-current .tnum { color: var(--accent-text); }
+}
+.bz-pain { scroll-margin-top: 96px; }
+.bz-pain-n { font-size: 13px; font-weight: 500; }
+.bz-pain-fix {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  transition: border-color .25s var(--up-ease), box-shadow .3s var(--up-ease), transform .3s var(--up-spring);
+}
+.bz-pain:hover .bz-pain-fix { border-color: color-mix(in srgb, var(--accent) 45%, transparent); box-shadow: 0 14px 30px -18px rgba(10,132,255,0.45); transform: translateY(-2px); }
+@media (min-width: 900px) { .bz-pain-cols { grid-template-columns: 1fr 1fr 1.15fr; } }
+
+/* Facts: each figure its own lifted cell. */
+.bz-fact { transition: background-color .25s var(--up-ease); }
+.bz-fact:hover { background: var(--accent-a08); }
+
+/* An ordinary day: the "with Verity" column carries the accent. */
+.bz-day-a { position: relative; color: var(--ink); }
+@media (min-width: 900px) {
+  .bz-day-row:not(.bz-day-head) .bz-day-a { display: block; align-self: stretch; background: var(--accent-a08); border-radius: 10px; padding: 10px 14px; margin-block: -10px; }
+  .bz-day-head span:last-child { color: var(--accent-text); }
+}
+.bz-day-row:not(.bz-day-head) { transition: background-color .2s var(--up-ease); }
+.bz-day-row:not(.bz-day-head):hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+
+/* The four-week setup reads as a connected timeline. */
+.bz-phases { position: relative; }
+.bz-phase { position: relative; }
+.bz-phase-w { display: inline-flex; align-items: center; gap: 8px; }
+.bz-phase-w::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-a14); }
+.bz-phase:last-child .bz-phase-w::before { background: var(--up-ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--up-ok) 18%, transparent); }
+
+/* Related businesses: cards with the pointer light. */
+.x-rel a { position: relative; isolation: isolate; transition: background-color .2s var(--up-ease); }
+.x-rel a::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, -40%), var(--accent-a14), transparent 60%);
+  opacity: 0; transition: opacity .35s var(--up-ease);
+}
+.x-rel a:hover::before { opacity: 1; }
+.x-rel a::after { content: "\2192"; margin-left: auto; padding-left: 12px; color: var(--accent-text); opacity: 0; transform: translateX(-4px); transition: opacity .2s var(--up-ease), transform .3s var(--up-spring); }
+.x-rel a:hover::after { opacity: 1; transform: none; }
+
+/* Questions on every page share the landing accordion's open motion. */
+@supports (interpolate-size: allow-keywords) {
+  .x-faq-item { interpolate-size: allow-keywords; }
+  .x-faq-item::details-content { height: 0; overflow: clip; transition: height .35s var(--up-ease), content-visibility .35s allow-discrete; }
+  .x-faq-item[open]::details-content { height: auto; }
+}

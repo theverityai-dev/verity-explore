@@ -115,7 +115,7 @@
      One delegated listener, fine pointers only, off under reduced motion. */
   if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.addEventListener('pointermove', function (e) {
-      var card = e.target.closest && e.target.closest('.up-spot, .xp-card > a, .x-ind-card a');
+      var card = e.target.closest && e.target.closest('.up-spot, .xp-card > a, .x-ind-card a, .x-rel a');
       if (!card) return;
       var r = card.getBoundingClientRect();
       card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
@@ -159,7 +159,7 @@
 
   /* Dashboard figures count up the first time they come into view, keeping
      their own prefix, suffix, decimals and Indian digit grouping. */
-  var figures = document.querySelectorAll('#command .tnum, #workforce .wf-stat-num, #workforce .wf-bar-count');
+  var figures = document.querySelectorAll('#command .tnum, #workforce .wf-stat-num, #workforce .wf-bar-count, .bz-fact-v');
   if (figures.length && hasIO && !still) {
     var countIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -180,7 +180,7 @@
       var text = el.textContent.trim();
       /* Plain figures only: "318", "₹42 L", "86%". Times and durations
          ("09:28", "6m 12s") keep their text. */
-      var m = /^(₹?\s?)(\d[\d,]*(?:\.\d+)?)(\s?(?:L|Cr|%)?)$/.exec(text);
+      var m = /^(₹?\s?)(\d[\d,]*(?:\.\d+)?)(\s?(?:L|Cr|%|crore|lakh)?)$/.exec(text);
       if (!m) return;
       var num = parseFloat(m[2].replace(/,/g, ''));
       if (!num) return;
@@ -189,6 +189,32 @@
       el.textContent = m[1] + el._fig.fmt.format(0) + m[3];
       countIO.observe(el);
     });
+  }
+
+  /* Problem index on business pages: mark the problem being read. */
+  var painLinks = document.querySelectorAll('.bz-pains-nav a');
+  if (painLinks.length && hasIO) {
+    var byId = {};
+    painLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var current = null;
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        if (current) current.classList.remove('is-current');
+        current = byId[en.target.id];
+        if (current) {
+          current.classList.add('is-current');
+          current.setAttribute('aria-current', 'true');
+          var nav = current.closest('.bz-pains-nav');
+          if (nav && nav.scrollHeight > nav.clientHeight) {
+            var top = current.offsetTop - nav.clientHeight / 2;
+            nav.scrollTo({ top: top, behavior: still ? 'auto' : 'smooth' });
+          }
+        }
+        Object.keys(byId).forEach(function (k) { if (byId[k] !== current) byId[k].removeAttribute('aria-current'); });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    document.querySelectorAll('.bz-pain[id]').forEach(function (p) { spy.observe(p); });
   }
 
   /* Phone dock: one tap to the demo form once the hero is passed. Not on the
