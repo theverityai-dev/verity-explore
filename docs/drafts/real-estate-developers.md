@@ -48,6 +48,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Example arithmetic: if a project gets 400 site visits in a quarter and 3 in every 100 book at ₹90 lakh, that is 12 units, about ₹10.8 crore. One missed follow-up in ten costs more than one unit.
 - fix: Every visit becomes a record with the unit they liked, their budget and a next step. Verity lists visits with no follow-up in a set number of days and assigns each to the executive who met them.
 - screen: units
+- root: A site visit is logged in the sales executive's phone, and the next step is whatever the executive remembers.
+- workaround: The sales head asks executives for a weekly update.
+- options: A central call team to follow every lead, which adds cost | A shared lead sheet | Every visit a record with the unit liked, budget and a next step, and visits with no follow-up in your set number of days listed
+- pick: A visit that goes quiet is caught on day three and not day thirty.
+- needs: Visit and enquiry sources.
 
 ### 2. Channel partners claim the same buyer, and brokerage is argued over
 - area: Sales
@@ -55,6 +60,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Hours of senior time per dispute, and a channel partner network that gets quieter after being treated unfairly.
 - fix: The first registered visit is recorded against the partner with the date. Brokerage is then linked to the booking, so the claim can be settled from the record instead of from memory.
 - screen: units
+- root: Several channel partners bring the same buyer, and the rule for who gets credit lives in conversation.
+- workaround: The sales head decides each dispute by personal judgement.
+- options: A single exclusive partner, which limits reach | A paper register of visits | The first registered visit recorded against the partner with a date, and brokerage linked to the booking so a claim can be checked
+- pick: Disputes are settled on a dated record.
+- needs: Your partner policy and registered visits.
 
 ### 3. Units are held verbally and the availability chart is wrong
 - area: Inventory
@@ -62,6 +72,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: A good unit sitting idle while a ready buyer walks away. In a project with 200 units, even ten stale holds change what you can say yes to.
 - fix: Each unit has a state: available, on hold, booked, agreement signed, possession given. A hold carries a name, a reason and an expiry date, and lapses back to available unless someone renews it.
 - screen: units
+- root: A unit is held on a phone call and released on another, and the availability chart is updated on a good day.
+- workaround: The sales head keeps the real chart in his head.
+- options: A printed chart | A shared sheet | Each unit with a state from available to possession given, with a hold carrying a name, reason and expiry and expired holds released
+- pick: Two buyers are never shown the same unit.
+- needs: Unit list.
 
 ### 4. Booking is made, but the agreement stalls on paperwork
 - area: Sales
@@ -69,6 +84,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: A booking that is not yet an agreement can still be cancelled. The unit and the cash both stay uncertain.
 - fix: The path from booking to agreement is a checklist on each buyer’s record: KYC, loan documents, draft sent, stamp duty paid, registration date. Verity shows which buyers are stuck and on which step.
 - screen: demands
+- root: A booking is a feeling of commitment, and the long path to agreement involves several people and documents.
+- workaround: The sales executive chases the buyer for each paper.
+- options: A checklist on paper | Hand over to a legal team entirely | A checklist on each buyer's record: KYC, loan documents, draft sent, stamp duty paid, registration booked, with stalled bookings listed
+- pick: A stalled booking is chased before the buyer cools.
+- needs: Documents your process needs.
 
 ### 5. Demand letters go out late because someone has to notice the stage
 - area: Collections
@@ -76,6 +96,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Example arithmetic: a stage worth 10% on 200 units of ₹90 lakh is about ₹18 crore. Each week of delay in raising it is a week of that money not available for contractor bills.
 - fix: Each stage in the payment plan is linked to a site milestone. When the site team marks the milestone complete and the engineer’s certificate is attached, Verity creates the demand for every affected buyer, ready for accounts to review and send.
 - screen: demands
+- root: A milestone is reached on site and the demand letter waits for someone to notice.
+- workaround: Accounts asks the site team on a given date.
+- options: Demand by calendar | Wait for the owner | Each payment plan stage linked to a site milestone, with a demand drafted when the site marks it complete and the engineer's certificate is attached
+- pick: Demands go out as soon as the milestone is certified.
+- needs: Payment plans and milestone list.
 
 ### 6. Overdue buyer payments are chased by different people in different ways
 - area: Collections
@@ -83,6 +108,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Cash that is owed, not received. Interest terms in the agreement are only useful if they are applied evenly and on time.
 - fix: Each buyer’s overdue amount shows the days late, the last contact and the promised date. Follow-ups are tasks with an owner. Verity highlights those who have broken a promise twice.
 - screen: demands
+- root: Overdue buyers are followed by different people in different ways, and no one sees the total conversation.
+- workaround: A sales executive and an accounts clerk both call.
+- options: A collection agency | Interest alone | Each buyer's overdue showing days late, last contact and promised date, with follow-ups as tasks with an owner
+- pick: One person calls with the full history.
+- needs: Buyer dues.
 
 ### 7. Bank loan disbursements are not tracked against construction stage
 - area: Collections
@@ -90,6 +120,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Buyer cash stuck in a queue at the bank. The buyer is shown as defaulting when the delay is in paperwork.
 - fix: For each buyer with a loan, the record shows bank, sanctioned amount, tranches released and the document the next tranche needs. Verity creates a task to send it when the stage completes.
 - screen: demands
+- root: Banks disburse tranches against certificates and the builder is not told which document is missing.
+- workaround: Accounts phones the bank officer.
+- options: Ask the buyer to follow up | A bank-wise sheet | For each buyer with a loan, bank, sanctioned amount, tranches released and the document the next tranche needs, with a stage reached and not yet disbursed flagged
+- pick: Money due from banks is chased with the right document.
+- needs: Loan details.
 
 ### 8. The RERA quarterly update is built in a hurry from scattered numbers
 - area: Compliance
@@ -98,6 +133,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - fix: The unit list, receipts, stage progress and photographs already sit on the project record. Verity assembles the figures a quarterly update needs, flags what is missing and assigns the gaps, so your team enters the update in the portal from one checked sheet.
 - screen: rera
 - source: (TaxGuru, Importance of RERA compliances, July 2024: https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html)
+- root: The quarterly update asks for numbers from sales, accounts and site, and they are collected in the last week.
+- workaround: A consultant compiles from several sheets.
+- options: Outsource everything | Start earlier each quarter | The unit list, receipts, stage progress and photographs already on the project record, with the figures an update needs assembled from them. Confirm requirements with your adviser.
+- pick: The update is a review, not a hunt.
+- needs: Project records and the format your regulator asks for.
 
 ### 9. The 70 percent account and its withdrawal certificates
 - area: Compliance
@@ -106,6 +146,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - fix: Receipts are split into the project account and the free account as they arrive. A withdrawal request is a workflow: the bill, the completion percentage and the three certificates must be attached before it is released for approval.
 - screen: rera
 - source: (TaxGuru, Importance of RERA compliances, July 2024: https://taxguru.in/corporate-law/importance-rera-compliances-real-estate-project-registration.html)
+- root: Receipts must be split between accounts, and withdrawals need certificates, and the order of work is a sequence of approvals.
+- workaround: Accounts keeps a sheet and the CA prepares certificates.
+- options: Manual split by accounts | Rely on the CA | Receipts split into the project account and the free account as they arrive, and a withdrawal request as a workflow of the bill, the certificate and the approvals. Confirm rules with your adviser.
+- pick: Withdrawals are requested with the papers ready.
+- needs: Your account structure and the approvals involved.
 
 ### 10. Progress is reported in photographs, not against the plan
 - area: Site
@@ -113,6 +158,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Delay interest exposure that nobody has added up, and buyers who learn of a slip from a rumour.
 - fix: Every tower has stages with planned and actual dates. Progress is recorded against them with photographs, so the gap to plan is a number on the project head’s screen and the sales team can see it too.
 - screen: site
+- root: Progress is shared as photographs and the comparison with plan is left to the reader.
+- workaround: A weekly review with a presentation.
+- options: Photos in a chat group | A weekly progress report | Every tower with stages and planned and actual dates, progress recorded against them with photographs so the gap to plan is a number
+- pick: Slippage is quantified.
+- needs: Tower stage plans.
 
 ### 11. Contractor running bills are paid on trust, not on measured work
 - area: Site
@@ -120,6 +170,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Example arithmetic: a 15 percent over-claim on a ₹6 crore work order is ₹90 lakh. It does not need to be fraud, only unmeasured work billed early.
 - fix: Each work order has a bill schedule. A running bill is compared with the measured quantity and the progress recorded on site, and needs the engineer’s sign-off, then the project head’s, before accounts pays. Retention and advances are tracked on the same record.
 - screen: bills
+- root: A contractor's running bill is paid on trust and measured later.
+- workaround: The engineer signs bills based on site memory.
+- options: Pay on fixed schedule | Hold until final measurement | A bill schedule per work order, with a running bill compared with measured quantity and recorded progress, and needing the engineer's approval
+- pick: Payments follow work done.
+- needs: Work orders and rates.
 
 ### 12. Sanctions, NOCs and the occupancy certificate run on a lawyer’s folder
 - area: Approvals
@@ -127,6 +182,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: A project that cannot be handed over because one paper lapsed. Buyers who have paid in full wait outside the building.
 - fix: Every approval is a record with its authority, validity date, conditions and owner. Verity lists those expiring soon and those that gate the next step, and assigns the follow-up to the liaison person or the lawyer.
 - screen: rera
+- root: Approvals come from many authorities with different validity dates, and the papers sit in a lawyer's folder.
+- workaround: A lawyer or consultant keeps track.
+- options: A calendar | Outsource tracking | Each approval as a record with authority, validity date, conditions and owner, with those expiring soon and those with conditions to meet listed
+- pick: No approval lapses unnoticed.
+- needs: Approvals list.
 
 ### 13. Buyers ask the sales team about progress and nobody has a clear answer
 - area: Buyers
@@ -134,6 +194,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Loss of trust in the one period when trust matters most. Unhappy buyers also tend to be slower to pay.
 - fix: Each buyer’s record carries their unit, payment history, change requests and tickets. Questions become tickets with an owner and a due date, and the answer is recorded for the next person who gets the same call.
 - screen: demands
+- root: Buyers ask the sales team about construction progress, and the answer is in the site team.
+- workaround: The sales executive phones the engineer.
+- options: A monthly buyer newsletter | A portal built separately | Each buyer's record carrying the unit, payment history, change requests and tickets, with questions becoming tickets with an owner and a due date
+- pick: Buyers get an answer from the owner of the topic.
+- needs: Buyer and unit list.
 
 ### 14. Snagging and possession are managed on paper checklists
 - area: Handover
@@ -141,6 +206,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Possession delayed past the agreed date, and a quiet source of delay interest for flats that were “nearly ready”.
 - fix: Each flat gets a snag list with items, photographs, an owner and a status. Verity shows how many flats are clean, how many have open snags and which contractor is holding up the most.
 - screen: handover
+- root: Snagging and possession are done flat by flat on paper checklists that are never summed.
+- workaround: A customer relations executive keeps a sheet.
+- options: Paper checklist | A shared sheet | Each flat with a snag list with items, photographs, an owner and a status, showing how many flats are clean and how many have open items
+- pick: Possession dates are set from facts.
+- needs: Snag checklists by trade.
 
 ### 15. Cash across several projects is judged by instinct
 - area: Owner
@@ -148,7 +218,11 @@ Lede: These are the situations project heads, sales heads and finance heads desc
 - cost: Borrowing at a higher rate than needed, or delaying a stage payment that would have kept a site moving.
 - fix: Receipts due, receipts overdue, payables by contractor and committed amounts are shown for each project side by side. The owner sees which project is short and which has room, from the same live records.
 - screen: owner
-
+- root: Cash across projects is seen in each project's books, and the owner reconciles them in his head.
+- workaround: A monthly review by the accounts head.
+- options: A weekly meeting | A single bank account | Receipts due, receipts overdue, payables by contractor and committed amounts shown for each project side by side
+- pick: Cash decisions use all projects at once.
+- needs: Receipts and payables by project.
 
 ## Facts
 
@@ -783,6 +857,165 @@ Heading: Questions developers ask.
 - cta heading: Start with the demand letters that are late.
 - cta lede: Tell us how your projects run and we will show you the overdue dues, the stale unit holds and the approvals that are close to lapsing, using your own numbers.
 
+## Workflow
+
+Heading: From launch to possession, for a real estate developer.
+Lede: A developer sells units before they are built, collects at milestones and answers to buyers, banks and the regulator. The risk is in the handoffs between sales, legal, site and accounts.
+
+### 1. Launch and enquiry
+- owner: Sales head
+- does: The project is launched and enquiries are generated.
+- data: Visits, channel partner, unit liked, budget.
+- breaks: Visits go cold and partners clash over credit.
+- handoff: A visit becomes a booking.
+
+### 2. Booking and agreement
+- owner: Sales and legal
+- does: Units are booked and agreements are signed.
+- data: Unit state, KYC, loan documents, stamp duty, registration.
+- breaks: Holds are verbal and agreements stall on papers.
+- handoff: The agreement starts the payment plan.
+
+### 3. Payment plan and demands
+- owner: Accounts
+- does: Demands are raised at milestones.
+- data: Plan, milestone, demand letter, receipts.
+- breaks: Demands are late and follow-up is inconsistent.
+- handoff: Money received funds construction.
+
+### 4. Construction and contractors
+- owner: Project head
+- does: Towers are built by contractors against plan.
+- data: Stages, planned and actual dates, work orders, measurements.
+- breaks: Progress is shown in photos and contractors are paid on trust.
+- handoff: Milestones go to billing and approvals.
+
+### 5. Banks and compliance
+- owner: Accounts and legal
+- does: Loans are disbursed and regulatory updates are filed.
+- data: Tranches, quarterly figures, account split, approvals.
+- breaks: Updates are built in a hurry and approvals lapse.
+- handoff: Compliance supports sales and possession.
+
+### 6. Buyer service
+- owner: Customer relations
+- does: Buyers' questions and changes are answered.
+- data: Tickets, changes, payment history.
+- breaks: Buyers ask sales and nobody has a clear answer.
+- handoff: Resolved items return to the buyer record.
+
+### 7. Snagging and possession
+- owner: Project and customer relations
+- does: Flats are snagged and handed over.
+- data: Snags, photos, owner, status, possession date.
+- breaks: Paper checklists are never summed.
+- handoff: The buyer takes possession.
+
+### 8. Cash and review
+- owner: Owner
+- does: Cash across projects is managed and reviewed.
+- data: Receipts, payables, committed amounts.
+- breaks: Decisions are made by instinct.
+- handoff: Findings return to the next launch.
+
+## Content kit
+
+### Hooks
+- Site visit hui, follow up kisne kiya?
+- Do channel partner ek hi buyer ke liye lad rahe hain.
+- Unit hold par tha, kisi ne bech diya.
+- Booking ho gayi par agreement atka hua hai.
+- Milestone ho gaya par demand letter nahi gaya.
+- Buyer ki overdue par teen log alag alag call karte hain.
+- Bank se tranche kab aayega, kisko pata?
+- RERA ka quarterly update ek hafte mein banta hai.
+- 70 percent account ka certificate ek aur dauda dhoopa.
+- Progress photo mein hai, plan se farak nahi.
+- Contractor ko measurement ke bina bill pass.
+- NOC ki date nikal gayi.
+- Buyer ne progress poochha, sales ko pata nahi.
+- Snag list paper par, possession ki date dar par.
+- Teen project ka cash instinct se.
+- Unit ka availability chart galat hai.
+- Brokerage ka claim kaun check karega?
+- Booking ke baad ka checklist adhoora.
+- Demand letter ka due date kisne dekha?
+- Tower ka stage plan se kitna peeche?
+- Loan wale buyer ka document adhoora.
+- Approval ka validity date kisne yaad rakha?
+- Buyer ka ticket kisne band kiya?
+- Aap site par nahi hote to project ka status kaun batata hai?
+- Receipts kab due the aur kab aaye?
+
+### Explainers
+- concept: The visit that does not go cold | pain: Site visits and enquiries go cold (pain 1) | for: Sales heads | hook: Site visit hui, follow up kisne kiya? | show: Visits with unit liked, budget and next step, plus those with no follow-up | visual: A lead list with cold ones fading | outcome: More bookings | cta: Book the free seven day demo
+- concept: Whose buyer is this | pain: Channel partner disputes (pain 2) | for: Sales heads | hook: Do channel partner ek hi buyer ke liye lad rahe hain | show: First registered visit against a partner and linked brokerage | visual: Two partner cards and a dated record choosing one | outcome: Disputes settled on record | cta: Share two disputes
+- concept: The unit that was already held | pain: Units held verbally (pain 3) | for: Sales | hook: Unit hold par tha, kisi ne bech diya | show: Unit states and holds with expiry | visual: A grid of units with a hold timer | outcome: No double selling | cta: Share your unit chart
+- concept: From booking to agreement | pain: Agreements stall on paperwork (pain 4) | for: Sales and legal | hook: Booking ho gayi par agreement atka hua hai | show: A checklist on the buyer record and stalled bookings | visual: A checklist ticking and one item red | outcome: Fewer stalled bookings | cta: Try ten bookings
+- concept: Milestone to demand | pain: Demand letters late (pain 5) | for: Accounts | hook: Milestone ho gaya par demand letter nahi gaya | show: A milestone certified and a demand drafted | visual: A tower stage lighting a letter | outcome: Faster collection | cta: Share a payment plan
+- concept: One caller, one history | pain: Overdue chased by many (pain 6) | for: Accounts | hook: Buyer ki overdue par teen log alag alag call karte hain | show: Overdue with last contact and promise date | visual: A call timeline | outcome: Consistent follow-up | cta: Load your dues
+- concept: The tranche that has not come | pain: Bank loan disbursements tracked by phone (pain 7) | for: Accounts | hook: Bank se tranche kab aayega, kisko pata? | show: Loan tranches and the document each needs | visual: A loan bar with tranches | outcome: Bank money chased early | cta: Share five loans
+- concept: The quarterly update without the hurry | pain: Quarterly update built in a hurry (pain 8) | for: Compliance | hook: RERA ka quarterly update ek hafte mein banta hai | show: Figures assembled from the project record | visual: A report building from live records | outcome: Calm quarterly filings | cta: Share last quarter's update
+- concept: The approval that lapses | pain: Approvals in a lawyer's folder (pain 12) | for: Owners and legal | hook: NOC ki date nikal gayi | show: Approvals with validity and conditions | visual: A timeline with a red expiry | outcome: No lapses | cta: Share your approvals list
+- concept: Snags to possession | pain: Snagging on paper (pain 14) | for: Customer relations | hook: Snag list paper par, possession ki date dar par | show: Flats clean vs open items | visual: A tower where flats turn green | outcome: Possession from facts | cta: Try one tower
+
+### Script 1: Visit ka follow up
+- 0 to 5s: Site visit hui, follow up kisne kiya?
+- 5 to 15s: Executive ke phone mein, owner ko pata nahi.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har visit ka record: kaun sa unit pasand aaya, budget, agla kadam. Jis visit ka follow up nahi hua woh list mein.
+- 40 to 50s: Sales head ko roz dikhta hai kaun thanda pad raha hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Partner ka jhagda
+- 0 to 5s: Do channel partner ek hi buyer ke liye lad rahe hain.
+- 5 to 15s: Kisne pehle dikhaya, koi record nahi.
+- 15 to 25s: Do dispute dijiye. Saat din mein free demo.
+- 25 to 40s: Pehla registered visit partner ke naam, tarikh ke saath. Brokerage booking se juda hota hai.
+- 40 to 50s: Claim record se check hota hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Milestone aur demand
+- 0 to 5s: Milestone ho gaya par demand letter nahi gaya.
+- 5 to 15s: Kisi ko pata hi nahi chala ki stage ho gaya.
+- 15 to 25s: Ek payment plan dijiye. Saat din mein free demo.
+- 25 to 40s: Har stage site milestone se juda. Site complete mark kare, engineer certify kare, aur demand tayyar.
+- 40 to 50s: Customer ke dues aur calls ka record bhi.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Bank tranche
+- 0 to 5s: Bank se tranche kab aayega, kisko pata?
+- 5 to 15s: Accounts bank ko phone karta hai, jawab alag alag.
+- 15 to 25s: Paanch loan dijiye. Saat din mein free demo.
+- 25 to 40s: Har buyer ka bank, sanctioned amount, release hue tranche aur agle ke liye zaroori document.
+- 40 to 50s: Stage ho gaya aur paisa nahi aaya to flag.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Teen project ka cash
+- 0 to 5s: Teen project ka cash instinct se.
+- 5 to 15s: Har project ka alag hisaab, aur owner ke dimag mein jod.
+- 15 to 25s: Do project ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har project ki due receipts, overdue receipts, contractor ki payables aur committed amounts saath saath.
+- 40 to 50s: Cash ka faisla sabko ek saath dekhkar.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Cold site visits, late demand letters and money stuck in bank tranches
+- titles: Managing Director | Owner | Director | Head of Sales | Head of Projects | Head of Accounts | Chief Financial Officer
+- deciders: The managing director decides. The sales head, project head and finance head influence.
+- best size: A developer with 50 to 500 people, one to ten projects and buyers on stage-linked plans and bank loans.
+- first message: Hello, I work with real estate developers on site visits that go cold and demands that go out late. We build a free seven day demo on one of your projects. How do you follow up a visit that did not convert?
+- discovery: How do you follow up site visits and who sees the list? | How do you settle channel partner claims? | How do you hold and release units? | How do you link demands to milestones? | How do you track bank tranches? | How do you prepare quarterly regulatory updates?
+- objection: We use a CRM for sales | We keep it and connect the unit, payment and milestone records it does not cover.
+- objection: Our team is busy at launch | The four week plan needs about 8 to 14 owner hours in total, and we can start with one project.
+- objection: Cost | Cost depends on scope. We start with one project and the demo is free.
+- objection: Compliance is with the consultant | We keep the consultant and give them clean records to work from.
+- demo: Visits with no follow-up listed, a unit hold expiring, a milestone producing a demand, a loan tranche not yet disbursed and homes with possession at risk.
+- proof: Take one tower and show overdue demands, stalled bookings and bank tranches pending.
+- follow up: Thank you for your time. I have built the demo around the project you described, with its visits and demands. When can your head of sales and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

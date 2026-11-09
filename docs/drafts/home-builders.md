@@ -68,6 +68,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Example arithmetic: 15 percent of a ₹70 lakh home is ₹10.5 lakh. Three weeks late, on borrowed money at 12 percent a year, is about ₹7,000 in interest per home. Across ten homes it is larger, and the delay is repeated at every stage.
 - fix: Each home has its payment schedule linked to construction stages. When the site engineer marks a stage as reached with a photo, a demand task goes to accounts with the amount and the customer, and the stage stays red on the owner's screen until the demand is raised.
 - screen: payments
+- root: The stage is reached on site, and the demand is a letter prepared in the office by someone who is not on site.
+- workaround: The accounts person asks the engineer which homes have reached which stage.
+- options: Raise demands on a fixed calendar, which ignores progress | Wait for the owner's instruction | A payment schedule linked to construction stages, with a demand prepared when the engineer marks a stage reached with a photo
+- pick: The demand goes out the day the stage is reached.
+- needs: Payment schedule per home and the stage list.
 
 ### 2. Buyers pay late and nobody follows up in a pattern
 - area: Payments
@@ -75,6 +80,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: A home builder funds construction from stage payments. When many are late, wages and contractor bills wait, and construction slows.
 - fix: Every demand has a due date, a status and a record of calls and promises. Verity shows overdue amounts by customer, and by how many days and promises were broken, and creates a follow-up for the person who knows the buyer.
 - screen: payments
+- root: Collection follow-up is done by whoever is free, with no pattern, and promises are not recorded.
+- workaround: A salesperson calls the big defaulters when the owner asks.
+- options: Penalty interest alone | A weekly collection meeting | Each demand with due date, status, and a record of calls and promises, with overdue amounts by customer and days
+- pick: Follow-up has an owner and a history.
+- needs: Demands with due dates.
 
 ### 3. Bank loan disbursements are tracked on phone calls
 - area: Payments
@@ -82,6 +92,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Each loan disbursed late holds back the builder's money, and the buyer blames the builder when the bank sits on it.
 - fix: For each home with a loan, Verity records the bank, the sanctioned amount, the disbursement stages and the documents required. A stage reached creates a task to prepare the bank's document set, and the disbursement is recorded when it arrives.
 - screen: payments
+- root: A bank disburses against stage certificates and the builder learns of the status by phoning the bank.
+- workaround: The accounts person visits or calls the branch.
+- options: Ask the buyer to follow up | A sheet per bank | For each home with a loan, the bank, sanctioned amount, disbursement stages and documents required, with a stage reached and not yet disbursed flagged
+- pick: Money due from banks is chased with documents ready.
+- needs: Loan details and disbursement stages.
 
 ### 4. GST and receipts are mixed up with the demand
 - area: Payments
@@ -90,6 +105,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - fix: Each home carries its GST treatment as set by your accountant. Demands show the instalment and the tax separately, and receipts are recorded against the demand so the balance is always clear.
 - screen: payments
 - source: (Busy, GST on builders, 2026: https://busy.in/gst-rates/builders/)
+- root: GST treatment varies by project and the demand mixes instalment and tax in one figure.
+- workaround: The accountant corrects receipts at month end.
+- options: Issue one total demand | Separate sheets for tax | Each home carrying its treatment as set by your accountant, with demands showing instalment and tax separately and receipts allocated correctly. Your accountant decides the treatment.
+- pick: Receipts reconcile with demands without correction.
+- needs: Tax treatment set by your accountant.
 
 ### 5. Customers change their mind and the extra is not billed
 - area: Changes
@@ -97,6 +117,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Extra work that is done and not billed is margin given away. When it is billed late, the customer disputes it.
 - fix: A change request is a record on the home with the request, the estimate, the customer's approval and the stage after which it cannot be changed. Approved extras add to the customer's payment schedule, and work on an unapproved one is flagged.
 - screen: changes
+- root: A buyer asks for a change during construction, and the extra cost is discussed verbally.
+- workaround: The sales head quotes an informal amount.
+- options: Refuse all changes | Take changes without charge | A change request on the home with the request, estimate, customer approval and the stage after which it cannot be accepted
+- pick: Changes are paid for and the cutoff is clear.
+- needs: Your change policy and cutoff stages.
 
 ### 6. Choices of fittings and finishes arrive too late
 - area: Changes
@@ -104,6 +129,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: A wrong or late decision delays a stage, and each delay compounds across the remaining stages.
 - fix: Each home has a list of customer decisions with a deadline tied to a construction stage. Open ones are flagged before the stage starts, and the task goes to the sales or interior coordinator who deals with the buyer.
 - screen: changes
+- root: Customers choose tiles, fittings and finishes late, and the site waits for the decision.
+- workaround: The sales person reminds the buyer.
+- options: Fix a standard specification | Choose at the end | Each home with a list of customer decisions and a deadline tied to a construction stage, with open decisions flagged before the stage starts
+- pick: Choices are made before they delay work.
+- needs: Specification options and stage dates.
 
 ### 7. The site engineer's progress reaches the owner days later
 - area: Construction
@@ -111,6 +141,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Problems that were small on Monday are large by Sunday, and a late stage is a late demand, a late handover and a worried buyer.
 - fix: Each home is on a stage board with planned and actual dates. The engineer updates it after a visit with a photo, and Verity lists homes behind plan and the reason recorded.
 - screen: progress
+- root: The engineer's progress notes travel by phone and reach the owner days later.
+- workaround: A weekly site meeting.
+- options: Site visits by the owner | A weekly report | Each home on a stage board with planned and actual dates, updated after each visit with a photo, and homes behind plan listed
+- pick: Slippage is seen within a day.
+- needs: Stage plan per home.
 
 ### 8. Materials arrive for the wrong stage, or not at all
 - area: Construction
@@ -118,6 +153,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Idle crews and rushed buying at higher prices.
 - fix: The next stages of each home list the materials they need and the order dates. Verity checks stock and open orders against stage dates and drafts a purchase for what is missing.
 - screen: vendors
+- root: Materials are ordered by the stage that is running, not the one after next, so deliveries arrive late or early.
+- workaround: The store keeper tells the purchase person when something is short.
+- options: Bulk buying for the whole building | Order only on request | The next stages of each home listing materials and order dates, with stock and open orders checked against stage dates
+- pick: Material arrives for the right stage at the right time.
+- needs: Materials per stage.
 
 ### 9. Contractors and sub-contractors are paid without matching the work
 - area: Contractors
@@ -125,6 +165,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Overpayment is hard to recover and leaves nothing to hold when quality is poor.
 - fix: Each contractor has a work order with rates and homes. Payments are made against measured work on each home, with a retention you set, and Verity shows work done, paid and balance per contractor.
 - screen: vendors
+- root: A contractor is paid on his bill, and the measured work on each home is not compared.
+- workaround: The engineer signs bills based on memory of progress.
+- options: Pay fixed instalments | Pay at completion | A work order per contractor with rates and homes, with payments made against measured work on each home and a retention
+- pick: You pay for what was built, home by home.
+- needs: Work orders and measurements.
 
 ### 10. Construction cost per home is known only at handover
 - area: Money
@@ -132,6 +177,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: A loss is found when the last home is sold, and the next project is priced without lessons.
 - fix: Costs for material, labour and contractors are recorded against each home. The owner sees cost to date against the budget by home and stage.
 - screen: owner
+- root: Costs are posted by project, not by home, so the cost per home is calculated at the end.
+- workaround: The accountant divides project cost by area.
+- options: Average cost per square foot | Review only at completion | Costs for material, labour and contractors recorded against each home, with cost to date against budget by home and by project
+- pick: A home that is running over is found early.
+- needs: Budget per home.
 
 ### 11. Possession day arrives and the home is not ready
 - area: Possession
@@ -140,6 +190,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - fix: Each home has a handover checklist with the possession date, tasks left, owners and dates. Verity shows homes whose date is at risk months in advance, and the reasons recorded against each delay.
 - screen: snags
 - source: (LiveLaw on Bombay High Court, 2026: https://www.livelawbiz.com/amp/rera/high-court/homebuyers-right-to-interest-under-rera-for-delayed-possession-is-independent-indefeasible-bombay-high-court-545704)
+- root: Possession dates are promised on the sale agreement, and the work left is tracked by memory.
+- workaround: The site engineer informs the sales head a week before.
+- options: Add buffer to promised dates | Inspect only at the end | Each home with a handover checklist, possession date, tasks left, owners and dates, with homes whose date is at risk listed months ahead
+- pick: A delay is discussed with the buyer before the day arrives.
+- needs: Possession dates and the handover checklist.
 
 ### 12. The snag list grows by phone call
 - area: Possession
@@ -147,6 +202,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: A buyer who sees no progress on snags delays final payment and tells neighbours. Repeated visits cost crew days.
 - fix: Each snag is a record on the home with a photo, a location, a trade, an owner and a due date. The buyer's sign-off on each is recorded, and the final payment task waits until the list is cleared or agreed.
 - screen: snags
+- root: Snags are noted by the buyer on a walk-through, reported to the site by phone and followed up by nobody.
+- workaround: The customer relations person keeps a sheet.
+- options: A paper snag form | A shared sheet | Each snag as a record on the home with photo, location, trade, owner and due date, and the buyer's sign-off recorded on each
+- pick: Handover is not delayed by a forgotten snag.
+- needs: Trade list and owners.
 
 ### 13. Defects after handover are not tracked
 - area: After sales
@@ -155,6 +215,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - fix: A defect call is logged on the original home with the date reported, the photos, the contractor who built that part and a thirty-day due date. Verity shows calls near the due date and keeps the history for the home.
 - screen: snags
 - source: (LiveLaw on Tamil Nadu RERA, 2026: https://www.livelawbiz.com/rera/developer-liable-to-fix-non-structural-defects-if-reported-within-five-years-tn-rera-531922)
+- root: Defects after handover arrive on many channels and the contractor who built the part is not identified.
+- workaround: The service person phones the site engineer.
+- options: A warranty hotline | Shared inbox | A defect call logged on the original home with date, photos, the contractor who built that part and a thirty-day follow-up
+- pick: The right contractor is called back and the buyer knows the status.
+- needs: Warranty terms.
 
 ### 14. RERA records, withdrawals and certificates are done in a rush
 - area: Compliance
@@ -163,6 +228,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - fix: Registration, updates and certificate requests are tasks with due dates and the documents attached. The progress behind each certificate comes from the stage board and the site visit that supports it.
 - screen: owner
 - source: (Business Today on RERA Section 4(2)(l)(D), 2019: https://www.businesstoday.in/amp/latest/story/builders-buyers-construction-rera-housing-sector-houses-real-estate-190489-2019-04-25)
+- root: Registration, updates and certificates have separate dates and documents, and are prepared close to the deadline.
+- workaround: A consultant prepares and the team supplies papers late.
+- options: Rely on the consultant alone | A calendar of dates | Registration, updates and certificate requests as tasks with due dates and documents attached, with the progress behind each certificate shown. Confirm requirements with your adviser.
+- pick: Papers are ready before the date.
+- needs: Project registrations and the documents involved.
 
 ### 15. Enquiries and site visits go cold
 - area: Sales
@@ -170,6 +240,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: A home is a rare and large purchase, and a buyer who feels ignored goes elsewhere.
 - fix: Each enquiry is a record with the home they liked, budget, loan status and next step. Verity lists enquiries with no follow-up and records the visit, the quote and the result.
 - screen: owner
+- root: Enquiries and site visits are recorded in phones, and follow-up depends on the salesperson.
+- workaround: The sales head reviews the list weekly.
+- options: A central call centre | A sheet of leads | Each enquiry with the home liked, budget, loan status and next step, with enquiries without follow-up listed
+- pick: A warm buyer is not lost to silence.
+- needs: Enquiry sources and the sales team.
 
 ### 16. The owner sees the whole business at month end
 - area: Owner
@@ -177,6 +252,11 @@ Lede: These are the situations builders, project managers and sales teams descri
 - cost: Slow decisions on cash, buying and which home to push.
 - fix: One owner view shows homes by stage, dues and overdue demands, change requests awaiting approval, snags and possession dates at risk, with the person responsible.
 - screen: owner
+- root: The owner assembles homes, dues, snags and possession dates from different people at month end.
+- workaround: A monthly review meeting.
+- options: A weekly meeting | Separate reports | One owner view showing homes by stage, dues and overdue demands, change requests awaiting approval, snags and possession dates at risk, each with an owner
+- pick: Decisions come from one view.
+- needs: Data from site, sales and accounts.
 
 ## Facts
 
@@ -488,6 +568,165 @@ Heading: Questions home builders ask.
 - cta heading: Start with the stages you reached and never billed.
 - cta lede: Tell us how your homes are sold and built and we will show you the demands not raised, the overdue buyers and the possession dates at risk, using your own numbers.
 
+## Workflow
+
+Heading: From enquiry to handover and after, for a home builder.
+Lede: A home builder sells a home before it exists, collects money at stages and delivers on a date. The risk lies in the handoffs between sales, site, accounts and the buyer.
+
+### 1. Enquiry and site visit
+- owner: Sales
+- does: Buyers enquire, visit and choose a home.
+- data: Home liked, budget, loan status, next step.
+- breaks: Enquiries go cold.
+- handoff: A booked home goes to the agreement.
+
+### 2. Agreement and payment schedule
+- owner: Sales and accounts
+- does: The agreement is signed and the payment schedule is fixed.
+- data: Price, stages, tax treatment, loan details.
+- breaks: The schedule is not linked to construction stages.
+- handoff: The schedule goes to accounts and site.
+
+### 3. Construction
+- owner: Site engineer
+- does: The home is built stage by stage.
+- data: Stage, planned and actual dates, photos.
+- breaks: Progress reaches the owner days late.
+- handoff: A stage reached goes to billing.
+
+### 4. Material and contractors
+- owner: Purchase and project manager
+- does: Material and contractors are arranged.
+- data: Materials per stage, work orders, measurements.
+- breaks: Material arrives for the wrong stage and contractors are paid unmatched.
+- handoff: Work done feeds cost and bills.
+
+### 5. Demands and collection
+- owner: Accounts
+- does: Demands are raised and money is followed up.
+- data: Demand, due date, calls, promises, loan disbursement.
+- breaks: Demands are late and promises are not recorded.
+- handoff: Money received funds construction.
+
+### 6. Customisation and decisions
+- owner: Sales and site
+- does: Customers choose finishes and request changes.
+- data: Decisions with deadlines, change requests, estimates.
+- breaks: Decisions are late and extras are not billed.
+- handoff: Decisions go to site.
+
+### 7. Handover
+- owner: Project manager and customer relations
+- does: The home is inspected and handed over.
+- data: Checklist, snags, possession date, sign-off.
+- breaks: The home is not ready on the date.
+- handoff: The buyer takes possession.
+
+### 8. After handover
+- owner: Customer relations
+- does: Defects and compliance are handled.
+- data: Defect calls, contractor, registration certificates.
+- breaks: Defects have no owner and certificates are rushed.
+- handoff: Learning returns to the next project.
+
+## Content kit
+
+### Hooks
+- Stage ho gaya par demand letter nahi gaya.
+- Customer 40 din se late hai, kisne call kiya?
+- Bank se disbursement ka status phone se pooch rahe hain.
+- Instalment aur GST ek hi figure mein.
+- Customer ne change manga par paise nahi liye.
+- Tiles ka decision nahi aaya aur site ruki.
+- Site engineer ki report teen din baad aayi.
+- Material galat stage ke liye aa gaya.
+- Contractor ko measurement ke bina paise diye.
+- Ghar ki cost handover ke baad pata chali.
+- Possession ki date aayi aur ghar taiyaar nahi.
+- Snag list phone par badhti jaa rahi hai.
+- Handover ke baad defect, kis contractor ka?
+- RERA ka certificate last minute mein.
+- Site visit ke baad enquiry thandi pad gayi.
+- Owner ko poora hisaab mahine ke end mein.
+- Loan wale customer ka documents adhoora.
+- Kaun sa ghar kis stage par hai?
+- Demand ka due date kisne dekha?
+- Possession date khatre mein hai, kitne ghar?
+- Customer ko promise ki tarikh yaad dilaye?
+- Change request approve hua ya nahi?
+- Contractor ka retention kitna rukka hai?
+- Aap site par nahi hote to progress kaun batata hai?
+- Buyer ka snag sign off kahan hai?
+
+### Explainers
+- concept: The demand the day the stage is reached | pain: Demand not raised at the stage (pain 1) | for: Owners and accounts | hook: Stage ho gaya par demand letter nahi gaya | show: A stage marked reached with photo and a demand ready | visual: A building stage lighting up and a letter appearing | outcome: Faster collection | cta: Book the free seven day demo
+- concept: Follow-up with a memory | pain: Buyers pay late (pain 2) | for: Accounts | hook: Customer 40 din se late hai, kisne call kiya? | show: Demands with calls and promises and overdue by customer | visual: A timeline of calls per demand | outcome: Pattern in follow-up | cta: Load your demands
+- concept: The bank that disburses | pain: Loan disbursement tracked by phone (pain 3) | for: Accounts | hook: Bank se disbursement ka status phone se pooch rahe hain | show: Loan, stage and documents with a flag when a stage is reached and not disbursed | visual: A loan bar filling by stage | outcome: Disbursements chased early | cta: Share five loans
+- concept: Extras that get billed | pain: Customer changes not billed (pain 5) | for: Sales heads | hook: Customer ne change manga par paise nahi liye | show: A change request with estimate, approval and cutoff stage | visual: A stamped request before a stage line | outcome: Extras paid | cta: Bring a recent change
+- concept: The decision before the stage | pain: Choices arrive late (pain 6) | for: Site and sales | hook: Tiles ka decision nahi aaya aur site ruki | show: Customer decisions with deadlines tied to stages | visual: A decision card turning amber before a stage | outcome: No stage waits for a choice | cta: Share a specification list
+- concept: Progress this morning | pain: Progress reaches owner late (pain 7) | for: Owners | hook: Site engineer ki report teen din baad aayi | show: A stage board with planned and actual dates | visual: Homes in a grid with colours | outcome: Slippage seen within a day | cta: Try one project
+- concept: Possession on the day | pain: Home not ready on possession day (pain 11) | for: Project managers | hook: Possession ki date aayi aur ghar taiyaar nahi | show: Handover checklist and homes at risk | visual: A calendar with homes marked at risk | outcome: Delays discussed early | cta: Share your handover list
+- concept: The snag that gets closed | pain: Snag list grows by phone (pain 12) | for: Customer relations | hook: Snag list phone par badhti jaa rahi hai | show: Snags with photo, trade, owner and sign-off | visual: A snag card moving to signed | outcome: A smooth handover | cta: Try one tower
+- concept: Real cost per home | pain: Cost per home known at handover (pain 10) | for: Owners | hook: Ghar ki cost handover ke baad pata chali | show: Cost to date against budget by home | visual: A bar approaching a budget line | outcome: Overruns found | cta: Ask for the demo
+
+- concept: The enquiry that is not lost | pain: Enquiries and site visits go cold (pain 15) | for: Sales heads | hook: Site visit ke baad enquiry thandi pad gayi | show: Enquiries with budget, loan status and next step, and those with no follow-up listed | visual: A lead list with cold ones turning blue | outcome: Warm buyers followed up | cta: Share your enquiry list
+
+### Script 1: Stage ka demand
+- 0 to 5s: Stage ho gaya par demand letter nahi gaya.
+- 5 to 15s: Engineer ne bola, accounts ko pata nahi, aur paisa hafte late.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har ghar ka payment schedule construction stage se juda. Engineer photo ke saath stage mark karta hai aur demand tayyar.
+- 40 to 50s: Customer ke due date aur calls ka record bhi.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Bank ka paisa
+- 0 to 5s: Bank se disbursement ka status phone se pooch rahe hain.
+- 5 to 15s: Stage ho gaya, certificate gaya, par paisa kab aayega kisi ko nahi pata.
+- 15 to 25s: Paanch loan dijiye. Saat din mein free demo.
+- 25 to 40s: Har ghar ka bank, sanctioned amount, stage aur documents. Stage ho gaya aur disbursement nahi hua to flag.
+- 40 to 50s: Accounts ko pata hai kise phone karna hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Extra ka paisa
+- 0 to 5s: Customer ne change manga par paise nahi liye.
+- 5 to 15s: Sales ne haan kar di, site ne kar diya, accounts ko pata hi nahi.
+- 15 to 25s: Ek change dijiye. Saat din mein free demo.
+- 25 to 40s: Har change ek record: maang, estimate, customer ki approval aur wo stage jiske baad change nahi ho sakta.
+- 40 to 50s: Extra ka bill sahi samay par.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Possession ki date
+- 0 to 5s: Possession ki date aayi aur ghar taiyaar nahi.
+- 5 to 15s: Ek hafte pehle pata chala, customer ko kya bataenge?
+- 15 to 25s: Ek tower ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har ghar ka handover checklist: bacha kaam, owner, tarikh. Jis ghar ki date khatre mein hai woh mahino pehle dikhta hai.
+- 40 to 50s: Customer se baat pehle hoti hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Owner ka view
+- 0 to 5s: Owner ko poora hisaab mahine ke end mein.
+- 5 to 15s: Site, sales aur accounts teen alag report.
+- 15 to 25s: Ek project ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Ek view: ghar stage ke hisaab se, dues, change requests, snags aur khatre ki possession dates, har item ka owner.
+- 40 to 50s: Faisle ek jagah se hote hain.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Demands raised late, change requests not billed and possession dates at risk
+- titles: Managing Director | Owner | Director | Project Head | General Manager Sales | Head of Accounts | Head of Customer Relations
+- deciders: The owner or managing director decides. The project head and accounts head influence.
+- best size: A residential builder with 30 to 300 people, one to five projects and buyers on stage-linked payment plans with bank loans.
+- first message: Hello, I work with home builders on demands that go out late and extras that are never billed. We build a free seven day demo on one of your projects. How do you know the day a stage is reached that a demand is due?
+- discovery: How do you link demands to construction stages? | How do you track loan disbursements? | How do you handle customer change requests and their cost? | How do you know a home's possession date is at risk? | How do you track snags and post-handover defects? | How do you see cost per home?
+- objection: We use project accounting software | We keep it and add the stage, change and snag records that sit outside it.
+- objection: Site engineers are busy | We keep the stage update to a photo and a tick.
+- objection: Cost | Cost depends on scope. We start with one project, and the demo is free.
+- objection: Busy launch period | The four week plan needs about 8 to 14 owner hours in total.
+- demo: A home with a stage reached and a demand ready, a loan stage not yet disbursed, a change request with approval and a possession date at risk.
+- proof: Take one project and show demands that were late and extras not billed.
+- follow up: Thank you for your time. I have built the demo around the project you described, from stage to demand. When can your project head and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - No 2025 or 2026 Anarock figure was found; the 2022 figure is shown with its year. RERA Section 11 quarterly update rules and the West Bengal penalty could not be verified (scanned PDF), so no quarterly deadline is stated.
@@ -496,3 +735,4 @@ Heading: Questions home builders ask.
 - GST rates are from a vendor page that is partly inconsistent; the accountant decides treatment.
 - Owner hours, screen figures and the buyer view of stage photos are illustrative or assumed; confirm that a limited buyer view is possible.
 - Pain 3 assumes Verity can record bank loan disbursement stages as tasks and documents without integrating with any bank.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

@@ -69,6 +69,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Every day between work and measurement is a day of delay in the bill, and measurements argued late tend to go against the contractor.
 - fix: Each item of work has a measurement task with the quantity done, the date, the photo and the client engineer who must sign. Verity lists measurements pending for more than a set number of days, by site.
 - screen: bills
+- root: The client's engineer signs measurements when he visits, and his visits are rare and unplanned.
+- workaround: The contractor waits for the engineer and measures from rough notes later.
+- options: Measure yourself and ask for a signature later, which is disputed | Wait for the engineer, which delays the bill | A measurement task per work item with quantity, date and photo, and a list of measurements waiting for the client's signature
+- pick: The delay sits with a named person, and you can chase it.
+- needs: The work items in the contract and the engineer's name for each.
 
 ### 2. Measurements are taken but never become a bill
 - area: Measurements
@@ -76,6 +81,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Example arithmetic: ₹18 lakh of work measured and not billed for a month, on borrowed money at 18 percent a year, costs about ₹27,000 in interest, before any dispute.
 - fix: A signed measurement turns into a bill line on the site's next running bill. Verity shows work measured, work billed and the difference for each site, so a gap is seen the week it opens.
 - screen: bills
+- root: A measurement sits in a book and the bill is made by a different person who may not know it exists.
+- workaround: The office asks site for figures at the end of the month.
+- options: A weekly handover of the measurement book | One person does both jobs | A signed measurement becoming a line on the next running bill, with work measured, work billed and the difference shown for each site
+- pick: No measured work is forgotten when the bill is prepared.
+- needs: Contract rates for each item.
 
 ### 3. Running bills sit with the client for months
 - area: Bills
@@ -84,6 +94,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - fix: Every bill has a stage: submitted, checked, certified, passed, paid, with the date it moved and the person you spoke to. Verity lists bills stuck longer than your limit and creates a follow-up task for the person who handles that client.
 - screen: bills
 - source: (Telangana Today on the Recordent report, 2026: https://telanganatoday.com/indian-msmes-face-mounting-delayed-payments-recordent-report-reveals)
+- root: A bill passes through several desks at the client, and the contractor knows only that it was submitted.
+- workaround: Phone calls to the clerk who last handled it.
+- options: Visit the client every week | Ask for a written status | Every bill with a stage from submitted to paid, the date it moved and the person spoken to, with bills stuck beyond your limit listed
+- pick: You know where each bill is and whom to call.
+- needs: Bills with submission dates.
 
 ### 4. Retention money is held and nobody tracks the release
 - area: Retention
@@ -91,6 +106,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Example arithmetic: 5 percent of a ₹4 crore job is ₹20 lakh, locked until the defects period is over and the client certifies it. Contract terms differ, for example some tenders release half at virtual completion and the rest after the defects period.
 - fix: Each contract records the retention terms: percentage, when half is due, the defects period end and the release condition. Verity shows retention held by project and date released is due, and creates a task to apply before the date.
 - screen: retention
+- root: Retention terms differ by contract, and the release dates are in the agreement nobody reopens.
+- workaround: The owner remembers the big ones.
+- options: A retention register in a sheet | Ask the client to remind you | Each contract recording percentage, when half is due, defects period end and release condition, with retention due soon shown
+- pick: Retention is claimed on the first date it is due.
+- needs: Retention clauses from each contract.
 
 ### 5. Variations and extra work are done on a phone call
 - area: Variations
@@ -98,6 +118,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Extra work that is not instructed in writing is hard to bill. It consumes crews, materials and days, and is one of the most common sources of disputes.
 - fix: A variation is a record with the instruction, the person who gave it, a photo, an estimate and a status of instructed or not. Work on an uninstructed variation is flagged to the project manager, and the approved value flows into the next bill.
 - screen: bills
+- root: A site instruction is given by phone by whoever is present, and no one writes down who asked or what was agreed.
+- workaround: The supervisor tells the owner at the end of the day.
+- options: Refuse any work without a paper instruction | Record all variations at the end | A variation record with the instruction, who gave it, a photo, an estimate and a status, with work on an uninstructed variation flagged
+- pick: Extra work has proof behind it when you bill it.
+- needs: Who may instruct a variation on each contract.
 
 ### 6. Material is issued to site without a record
 - area: Materials
@@ -105,6 +130,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Material cost is typically the largest cost on a job, and loss shows only at the end when it can no longer be recovered.
 - fix: The store records each issue against a site and a work item, and each return. Verity compares material issued with the quantity the measured work should have used, and shows the gap by site and by item.
 - screen: materials
+- root: Material leaves the store on the word of the supervisor and no one records which job it went to.
+- workaround: A store register filled in at the end of the day.
+- options: A locked store | Weekly physical count | Each issue recorded against a site and work item, with returns recorded, and material issued compared with the quantity the measured work should have used
+- pick: Overuse is seen item by item and site by site.
+- needs: Standard use per work item.
 
 ### 7. Supplier prices rise in the middle of a fixed-price job
 - area: Materials
@@ -113,6 +143,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - fix: Purchases record the rate by supplier and item against the contract's estimated rate. Verity flags when the rate paid goes above what the estimate assumed, with the quantity still to buy, so the owner sees the effect while a price escalation claim can still be made.
 - screen: materials
 - source: (Indian Infrastructure, Cost Concerns: Price fluctuations in the material market, 2022: https://indianinfrastructure.com/2022/11/20/cost-concerns-price-fluctuations-in-the-material-market/)
+- root: A fixed-price contract is priced once, and the rate paid later is not compared with the rate allowed.
+- workaround: The owner notices when the cash runs short.
+- options: Buy all material at the start | Re-quote the client | Purchases recording rate by supplier and item against the estimated rate, flagged when the rate paid goes above what the estimate allows
+- pick: You see the squeeze early and can renegotiate or substitute.
+- needs: Estimated rates by item.
 
 ### 8. Crews, attendance and wages are on paper
 - area: Crews
@@ -120,6 +155,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Overpaying labour by even three or four heads a day, across sites, is a quiet and steady loss.
 - fix: Each site has an attendance record by crew and trade, taken once a day on the supervisor's phone or sheet. Verity compares days worked with the labour contractor's claim and flags differences before wages are paid.
 - screen: crews
+- root: Crews are paid on a sheet kept by the supervisor, and days worked are not compared with output.
+- workaround: The accounts person pays what the supervisor reports.
+- options: Pay by gang lead | Check muster rolls weekly | Attendance by crew and trade once a day on the supervisor's phone or sheet, compared with work measured
+- pick: Wages follow output and a padded muster stands out.
+- needs: Crew lists and rates.
 
 ### 9. Sub-contractors are paid without checking the work
 - area: Crews
@@ -127,6 +167,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Paying more than the work done leaves nothing to hold when quality goes wrong or the sub-contractor leaves.
 - fix: Each sub-contractor has a work order with a rate and quantity. Payments are made against measured work, with a retention you set. Verity shows work done, amount paid and the balance for each sub-contractor.
 - screen: crews
+- root: A sub-contractor is paid on his claim and the check against measured work is skipped to avoid delay.
+- workaround: The site engineer approves by eye.
+- options: Fixed advances only | Pay on completion | A work order per sub-contractor with rate and quantity, payments made against measured work with a retention you set
+- pick: You pay for what was done and hold what is due.
+- needs: Work orders and rates.
 
 ### 10. Several sites and no single view of progress
 - area: Sites
@@ -134,6 +179,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Problems that were small on Monday are large on Friday. A crew stands idle on one site while another site is short.
 - fix: Each site is a location with its tasks, progress against plan, issues raised and next milestones. The owner sees which sites are on track and which have blockers, with the person responsible.
 - screen: owner
+- root: Each site reports in its own way and the owner assembles the picture by calling.
+- workaround: A daily round of calls.
+- options: A weekly meeting | Site visits | Each site as a location with tasks, progress against plan, issues and next milestones, so the owner sees which sites are on track
+- pick: He calls only the sites that are in trouble.
+- needs: Site plan with milestones.
 
 ### 11. Drawings and instructions change and the crew builds the old one
 - area: Sites
@@ -141,6 +191,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Demolition and rework, a client dispute and a day of crews wasted.
 - fix: The latest drawing per item is a record on the site. The supervisor sees what is current, and when a new revision arrives, a task asks the supervisor to confirm the older one is withdrawn.
 - screen: owner
+- root: A revised drawing reaches the owner's office and waits to be passed on.
+- workaround: The supervisor is told verbally.
+- options: Print and send | A shared folder | The latest drawing per item as a record, with a task for the supervisor to acknowledge each new revision
+- pick: The crew builds the current version and receipt is recorded.
+- needs: Drawing list.
 
 ### 12. Machines and tools are not tracked
 - area: Equipment
@@ -148,6 +203,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Hire costs for replacements, idle crews and equipment lost between sites.
 - fix: Each machine is an asset record with the site it is on, hours used, service dates and the person responsible. A service due date becomes a task, and moves between sites are recorded.
 - screen: materials
+- root: Small machines and tools move between sites without a record.
+- workaround: A list kept by the store person.
+- options: Mark each tool | Annual stock take | Each machine as an asset with site, hours, service dates and responsible person, with a service due date becoming a task
+- pick: Equipment is found, serviced and charged to the right site.
+- needs: Machine and tool list.
 
 ### 13. Statutory labour paperwork piles up
 - area: Compliance
@@ -156,6 +216,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - fix: Registrations, cess payments and returns are records with dates and owners. Each project has the tasks that apply to it, such as advance cess and the final assessment, with the proof attached.
 - screen: retention
 - source: (Taxmann on BOCW cess, 2026: https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/)
+- root: Labour registers, cess and returns are due on different dates and are handled by whoever has time.
+- workaround: A consultant prepares returns at the last minute.
+- options: A calendar of dates | Outsource completely | Registrations, cess payments and returns as records with dates and owners, with each project showing the tasks that apply. Confirm requirements with your adviser.
+- pick: Nothing is missed and the consultant gets tidy records.
+- needs: Registrations and project costs.
 
 ### 14. Tender and enquiry follow-ups are missed
 - area: New work
@@ -163,6 +228,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: A tender submitted late or incomplete is lost, and a developer who gets no reply goes elsewhere.
 - fix: Each tender and enquiry is a record with a closing date, documents needed, an owner and a next step. Verity lists items with missing documents and enquiries with no reply, and records the result.
 - screen: followups
+- root: Tenders and enquiries have closing dates and documents, and the checklist is in the estimator's head.
+- workaround: A diary and reminders.
+- options: A tender calendar | A tender consultant | Each tender and enquiry as a record with closing date, documents needed, owner and next step, with items missing documents listed
+- pick: You bid on time with complete documents.
+- needs: Tender notices and the documents each needs.
 
 ### 15. Cash gets tight and the owner learns too late
 - area: Money
@@ -170,6 +240,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: Short loans at high interest, and sometimes work stopped on site because of a cash gap that was visible two weeks earlier.
 - fix: Expected receipts from bills in each stage and expected payments for wages, suppliers and sub-contractors are shown by week. The owner sees the week the cash dips and which bill to chase.
 - screen: owner
+- root: Money from bills in different stages and money out for wages and suppliers are watched separately.
+- workaround: The owner checks the bank balance.
+- options: Higher overdraft | A weekly cash review | Expected receipts by bill stage and expected payments for wages, suppliers and sub-contractors by week
+- pick: The owner sees a shortfall before it arrives.
+- needs: Bills and payables.
 
 ### 16. Every site's profit is known only at the end
 - area: Money
@@ -177,6 +252,11 @@ Lede: These are the situations owners, site engineers and accountants describe a
 - cost: A loss is found when it can no longer be fixed, and the next tender is priced without lessons.
 - fix: Each site shows billed, received, cost to date for material, labour and sub-contractors, and the estimated cost to finish. The owner sees margin by site while there is still time to act.
 - screen: owner
+- root: Costs are posted in the books, and a site's margin is worked out after the work is done.
+- workaround: A final account when the site closes.
+- options: Review sites quarterly | Rely on the accountant | Each site showing billed, received, cost to date for material, labour and sub-contractors, and estimated cost to finish
+- pick: A losing site is seen while it can be fixed.
+- needs: Site budgets and costs.
 
 ## Facts
 
@@ -482,6 +562,164 @@ Heading: Questions contractors ask.
 - cta heading: Start with the work you measured and never billed.
 - cta lede: Tell us how your sites run and we will show you the unbilled measurements, the bills stuck with clients and the retention you can claim, using your own numbers.
 
+## Workflow
+
+Heading: From enquiry to final bill for a working contractor, and where each handoff slips.
+Lede: A contractor wins work, measures it, bills it and waits for payment. Every step involves someone at the client's end, and each of those handoffs is where cash is delayed.
+
+### 1. Enquiry and tender
+- owner: Owner or estimator
+- does: Tenders and enquiries are found and priced.
+- data: Closing date, documents, rates, owner.
+- breaks: A missing document or missed date loses the bid.
+- handoff: A won tender becomes a contract.
+
+### 2. Contract and mobilisation
+- owner: Owner and site supervisor
+- does: Crews, material and sub-contractors are arranged.
+- data: Contract terms, retention, work orders, crews.
+- breaks: Terms are known only to the owner.
+- handoff: Work starts on site.
+
+### 3. Execution
+- owner: Site supervisor
+- does: Work is done against drawings and instructions.
+- data: Daily attendance, work done, material issued, drawing revision.
+- breaks: The crew works to an old drawing and issues are not recorded.
+- handoff: Work done goes for measurement.
+
+### 4. Measurement
+- owner: Site engineer and client engineer
+- does: Work is measured and signed.
+- data: Quantity, date, photo, signature.
+- breaks: Measurements wait for the client's engineer.
+- handoff: Signed measurement goes to billing.
+
+### 5. Running bill
+- owner: Office
+- does: The bill is prepared and submitted.
+- data: Measured quantity, rates, variations, retention.
+- breaks: Measured work is never billed.
+- handoff: The bill goes to the client.
+
+### 6. Client processing
+- owner: Client team
+- does: The bill is checked, certified and passed.
+- data: Stage, date moved, person.
+- breaks: The bill sits at a desk for months.
+- handoff: A passed bill goes for payment.
+
+### 7. Payment and payments out
+- owner: Accounts
+- does: Money is received and wages, suppliers and sub-contractors are paid.
+- data: Receipts, wages, supplier bills, sub-contractor bills.
+- breaks: Cash gaps are seen late.
+- handoff: Cash funds the next site.
+
+### 8. Closure
+- owner: Owner
+- does: Final bill, retention and defects period are managed.
+- data: Retention release dates, final account, margin.
+- breaks: Retention release dates are missed and margin is learned at the end.
+- handoff: Margin and experience feed the next tender.
+
+## Content kit
+
+### Hooks
+- Engineer sign nahi kar raha, bill nahi ban raha.
+- Measurement le liya par bill mein chadha hi nahi.
+- Bill client ke paas teen mahine se pada hai.
+- Retention kab chhootega, kisi ko yaad hai?
+- Phone par extra kaam bola, bill kaise banayenge?
+- Store se material gaya, kis kaam mein laga?
+- Fixed rate ka contract aur supplier ne daam badha diye.
+- Mistri ki hazri aur kaam ka hisaab alag.
+- Sub-contractor ko bina measurement ke paisa diya.
+- Paanch site, paanch alag report.
+- Naya drawing aaya, crew purana bana rahi hai.
+- Machine kis site par hai, kisi ko nahi pata.
+- Cess aur labour return last minute mein.
+- Tender ka document adhoora rah gaya.
+- Cash tight hai aur owner ko ek din pehle pata chala.
+- Site ka profit kaam khatam hone par pata chalta hai.
+- Client ke clerk ko kitni baar phone kiya?
+- Bill ka stage kya hai: submitted ya passed?
+- Variation ka instruction kisne diya tha?
+- Retention ka percentage har contract mein alag.
+- Wage sheet mein ek hi naam do baar.
+- Contract ke rate se zyada par material kharida.
+- Work order ka rate aur bill ka rate match?
+- Aap site par nahi hote to kaam ka record kaun rakhta hai?
+- Defects period khatam hua, retention maanga ya nahi?
+
+### Explainers
+- concept: The signature you are waiting for | pain: Work is not measured on time (pain 1) | for: Contractors and engineers | hook: Engineer sign nahi kar raha, bill nahi ban raha | show: Measurement tasks with photo and the client engineer who must sign | visual: A task list with the waiting signature highlighted | outcome: Delay has a name | cta: Book the free seven day demo
+- concept: Measured but never billed | pain: Measurements never become a bill (pain 2) | for: Owners and billing clerks | hook: Measurement le liya par bill mein chadha hi nahi | show: A signed measurement turning into a bill line with the difference shown | visual: Two bars, measured and billed, with a gap shaded | outcome: No forgotten work | cta: Share one site's measurements
+- concept: Where is my bill | pain: Running bills sit with client (pain 3) | for: Owners | hook: Bill client ke paas teen mahine se pada hai | show: Bills by stage with date moved and person spoken to | visual: A pipeline with a stuck bill glowing | outcome: A call to the right person | cta: Load your bills
+- concept: Retention you are owed | pain: Retention release untracked (pain 4) | for: Owners and accounts | hook: Retention kab chhootega, kisi ko yaad hai? | show: Retention terms and dates by contract | visual: A calendar with release dates | outcome: Retention claimed on time | cta: Share two contracts
+- concept: Extra work with proof | pain: Variations on a phone call (pain 5) | for: Site supervisors | hook: Phone par extra kaam bola, bill kaise banayenge? | show: A variation record with instruction, photo and estimate | visual: A phone call becoming a record | outcome: Extra work billed | cta: Bring a recent variation
+- concept: Material for the right job | pain: Material issued without a record (pain 6) | for: Store keepers | hook: Store se material gaya, kis kaam mein laga? | show: Issues against site and work item, compared with measured work | visual: A bag counter and a work item | outcome: Overuse found | cta: Try one site
+- concept: The rate that moved | pain: Supplier prices rise on fixed-price job (pain 7) | for: Owners | hook: Fixed rate ka contract aur supplier ne daam badha diye | show: Rate paid compared with estimate and flagged | visual: A price line crossing an estimate | outcome: Early renegotiation | cta: Share one estimate
+- concept: Pay for measured work | pain: Sub-contractors paid without checking (pain 9) | for: Accounts | hook: Sub-contractor ko bina measurement ke paisa diya | show: A work order with payments against measured work | visual: A payment bar limited by measurement | outcome: Pay for what was done | cta: Share a work order
+- concept: Five sites in one view | pain: No single view of progress (pain 10) | for: Owners | hook: Paanch site, paanch alag report | show: Sites on track or not with milestones | visual: A map with sites in colours | outcome: Calls only to troubled sites | cta: Ask for the demo
+- concept: Cash by week | pain: Cash gets tight (pain 15) | for: Owners | hook: Cash tight hai aur owner ko ek din pehle pata chala | show: Expected receipts and payments by week | visual: A cash line dipping before it happens | outcome: Shortfall seen weeks ahead | cta: Bring your bills and payables
+
+### Script 1: Signature ka intezaar
+- 0 to 5s: Engineer sign nahi kar raha, bill nahi ban raha.
+- 5 to 15s: Kaam ho chuka, measurement kachche note mein, aur paisa atka hua.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har kaam ka measurement task: quantity, tarikh, photo, aur client engineer jise sign karna hai. Intezaar wali list alag.
+- 40 to 50s: Sign hote hi measurement agle running bill ki line ban jaata hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Bill kahan hai
+- 0 to 5s: Bill client ke paas teen mahine se pada hai.
+- 5 to 15s: Kis desk par, kisne dekha, kisse baat hui, kuch yaad nahi.
+- 15 to 25s: Apne bills dijiye. Saat din mein free demo.
+- 25 to 40s: Har bill ka stage: submitted, checked, certified, passed, paid. Tarikh aur wo insaan jisse baat hui.
+- 40 to 50s: Atke hue bill ki list upar.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Retention
+- 0 to 5s: Retention kab chhootega, kisi ko yaad hai?
+- 5 to 15s: Agreement almari mein, tarikh owner ke dimag mein.
+- 15 to 25s: Do contract dijiye. Saat din mein free demo.
+- 25 to 40s: Har contract ka retention: percentage, aadha kab, defects period ka ant, aur release ki shart.
+- 40 to 50s: Jo jaldi due hai woh upar dikhta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Extra kaam
+- 0 to 5s: Phone par extra kaam bola, bill kaise banayenge?
+- 5 to 15s: Instruction kisne diya tha, kisi ko yaad nahi.
+- 15 to 25s: Ek variation ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har variation: instruction, kisne diya, photo, estimate, status. Bina instruction ke kaam par flag.
+- 40 to 50s: Bill banate waqt saboot tayyar.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Site ka profit
+- 0 to 5s: Site ka profit kaam khatam hone par pata chalta hai.
+- 5 to 15s: Tab tak galti sudharne ka waqt nikal chuka hota hai.
+- 15 to 25s: Ek chalti site ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har site ka bill, mila hua paisa, ab tak ka cost aur kaam khatam karne ka anumaanit cost.
+- 40 to 50s: Margin tab dikhta hai jab sudhaar sambhav hai.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Measured work that never becomes a bill, and bills stuck at the client
+- titles: Owner | Proprietor | Managing Partner | Director | Site Manager | Head of Accounts | Project Manager
+- deciders: The owner decides, often alone. A project manager or accounts head influences.
+- best size: A contractor with 15 to 150 people, several sites, sub-contractors and running bills to government or private clients.
+- first message: Hello, I work with contractors on measured work that never reaches the bill and bills that sit with the client. We build a free seven day demo on your own site data. How do you know today what has been measured but not billed?
+- discovery: How do you get measurements signed and track the wait? | How do you track bills at the client end? | How do you track retention and release dates? | How do you record variations? | How do you check sub-contractor payments against measured work? | How do you see a site's margin while it runs?
+- objection: I do it myself and it works | It works while you are everywhere. We make the same record available to your supervisor and accounts person so it works when you are not.
+- objection: My supervisors are not computer people | We keep entries short and in the terms they already use.
+- objection: Too expensive | Cost depends on scope. We start with one site, and the demo is free.
+- objection: Too busy | The four week plan needs about 8 to 14 owner hours in total.
+- demo: A site with measurements waiting for signature, a bill with a measured and billed gap, retention due soon and a sub-contractor payment against measured work.
+- proof: Take one site and show measured but unbilled work and retention due.
+- follow up: Thank you for your time. I have built the demo around the site you described, with its measurements and bills. When can you and your site manager go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Retention percentages in the page are examples from public-sector tender documents seen in search results (not fetched); every contract differs.
@@ -490,3 +728,4 @@ Heading: Questions contractors ask.
 - The 73-day payment figure is for all MSMEs, not construction. The MoSPI figure is for central projects, not a contractor's outcome.
 - All screen figures, cash gap, owner hours and the weekly cash view are illustrative; whether Verity can show an expected-cash-by-week view from bill stages is an assumption to confirm.
 - Pain 12 on machines assumes asset records with hours used; confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

@@ -66,7 +66,16 @@ export default {
       "scene": "The slab was cast on the 4th. The client's engineer is busy and the joint measurement happens on the 19th. By then the shuttering is stripped and the reinforcement cannot be re-checked. The numbers are argued over.",
       "cost": "Every day between work and measurement is a day of delay in the bill, and measurements argued late tend to go against the contractor.",
       "fix": "Each item of work has a measurement task with the quantity done, the date, the photo and the client engineer who must sign. Verity lists measurements pending for more than a set number of days, by site.",
-      "screen": "bills"
+      "screen": "bills",
+      "root": "The client's engineer signs measurements when he visits, and his visits are rare and unplanned.",
+      "workaround": "The contractor waits for the engineer and measures from rough notes later.",
+      "options": [
+        "Measure yourself and ask for a signature later, which is disputed",
+        "Wait for the engineer, which delays the bill",
+        "A measurement task per work item with quantity, date and photo, and a list of measurements waiting for the client's signature"
+      ],
+      "pick": "The delay sits with a named person, and you can chase it.",
+      "needs": "The work items in the contract and the engineer's name for each."
     },
     {
       "area": "Measurements",
@@ -74,7 +83,16 @@ export default {
       "scene": "The site engineer has a signed measurement sheet in a bag. The accountant is waiting for it. The next running bill is due on the 25th and half the work is still not in it.",
       "cost": "Example arithmetic: ₹18 lakh of work measured and not billed for a month, on borrowed money at 18 percent a year, costs about ₹27,000 in interest, before any dispute.",
       "fix": "A signed measurement turns into a bill line on the site's next running bill. Verity shows work measured, work billed and the difference for each site, so a gap is seen the week it opens.",
-      "screen": "bills"
+      "screen": "bills",
+      "root": "A measurement sits in a book and the bill is made by a different person who may not know it exists.",
+      "workaround": "The office asks site for figures at the end of the month.",
+      "options": [
+        "A weekly handover of the measurement book",
+        "One person does both jobs",
+        "A signed measurement becoming a line on the next running bill, with work measured, work billed and the difference shown for each site"
+      ],
+      "pick": "No measured work is forgotten when the bill is prepared.",
+      "needs": "Contract rates for each item."
     },
     {
       "area": "Bills",
@@ -86,7 +104,16 @@ export default {
       "source": {
         "name": "Telangana Today on the Recordent report, 2026",
         "url": "https://telanganatoday.com/indian-msmes-face-mounting-delayed-payments-recordent-report-reveals"
-      }
+      },
+      "root": "A bill passes through several desks at the client, and the contractor knows only that it was submitted.",
+      "workaround": "Phone calls to the clerk who last handled it.",
+      "options": [
+        "Visit the client every week",
+        "Ask for a written status",
+        "Every bill with a stage from submitted to paid, the date it moved and the person spoken to, with bills stuck beyond your limit listed"
+      ],
+      "pick": "You know where each bill is and whom to call.",
+      "needs": "Bills with submission dates."
     },
     {
       "area": "Retention",
@@ -94,7 +121,16 @@ export default {
       "scene": "Five percent of every running bill has been held across three projects for two years. The defects period ended on one of them in March. Nobody applied for the release.",
       "cost": "Example arithmetic: 5 percent of a ₹4 crore job is ₹20 lakh, locked until the defects period is over and the client certifies it. Contract terms differ, for example some tenders release half at virtual completion and the rest after the defects period.",
       "fix": "Each contract records the retention terms: percentage, when half is due, the defects period end and the release condition. Verity shows retention held by project and date released is due, and creates a task to apply before the date.",
-      "screen": "retention"
+      "screen": "retention",
+      "root": "Retention terms differ by contract, and the release dates are in the agreement nobody reopens.",
+      "workaround": "The owner remembers the big ones.",
+      "options": [
+        "A retention register in a sheet",
+        "Ask the client to remind you",
+        "Each contract recording percentage, when half is due, defects period end and release condition, with retention due soon shown"
+      ],
+      "pick": "Retention is claimed on the first date it is due.",
+      "needs": "Retention clauses from each contract."
     },
     {
       "area": "Variations",
@@ -102,7 +138,16 @@ export default {
       "scene": "The client's site engineer asks for an extra wall and a changed toilet layout on a call. Your crew does it that evening. The written instruction never comes. Three months later the client says it was in scope.",
       "cost": "Extra work that is not instructed in writing is hard to bill. It consumes crews, materials and days, and is one of the most common sources of disputes.",
       "fix": "A variation is a record with the instruction, the person who gave it, a photo, an estimate and a status of instructed or not. Work on an uninstructed variation is flagged to the project manager, and the approved value flows into the next bill.",
-      "screen": "bills"
+      "screen": "bills",
+      "root": "A site instruction is given by phone by whoever is present, and no one writes down who asked or what was agreed.",
+      "workaround": "The supervisor tells the owner at the end of the day.",
+      "options": [
+        "Refuse any work without a paper instruction",
+        "Record all variations at the end",
+        "A variation record with the instruction, who gave it, a photo, an estimate and a status, with work on an uninstructed variation flagged"
+      ],
+      "pick": "Extra work has proof behind it when you bill it.",
+      "needs": "Who may instruct a variation on each contract."
     },
     {
       "area": "Materials",
@@ -110,7 +155,16 @@ export default {
       "scene": "Cement goes from the store to site three on a loose slip. Steel leaves for site one but is used on site two. At the end of the job the bill of quantities and the stock disagree.",
       "cost": "Material cost is typically the largest cost on a job, and loss shows only at the end when it can no longer be recovered.",
       "fix": "The store records each issue against a site and a work item, and each return. Verity compares material issued with the quantity the measured work should have used, and shows the gap by site and by item.",
-      "screen": "materials"
+      "screen": "materials",
+      "root": "Material leaves the store on the word of the supervisor and no one records which job it went to.",
+      "workaround": "A store register filled in at the end of the day.",
+      "options": [
+        "A locked store",
+        "Weekly physical count",
+        "Each issue recorded against a site and work item, with returns recorded, and material issued compared with the quantity the measured work should have used"
+      ],
+      "pick": "Overuse is seen item by item and site by site.",
+      "needs": "Standard use per work item."
     },
     {
       "area": "Materials",
@@ -122,7 +176,16 @@ export default {
       "source": {
         "name": "Indian Infrastructure, Cost Concerns: Price fluctuations in the material market, 2022",
         "url": "https://indianinfrastructure.com/2022/11/20/cost-concerns-price-fluctuations-in-the-material-market/"
-      }
+      },
+      "root": "A fixed-price contract is priced once, and the rate paid later is not compared with the rate allowed.",
+      "workaround": "The owner notices when the cash runs short.",
+      "options": [
+        "Buy all material at the start",
+        "Re-quote the client",
+        "Purchases recording rate by supplier and item against the estimated rate, flagged when the rate paid goes above what the estimate allows"
+      ],
+      "pick": "You see the squeeze early and can renegotiate or substitute.",
+      "needs": "Estimated rates by item."
     },
     {
       "area": "Crews",
@@ -130,7 +193,16 @@ export default {
       "scene": "The supervisor's notebook shows 38 workers on Monday. The labour contractor's claim shows 44. Wages are paid on Saturday, and arguments follow.",
       "cost": "Overpaying labour by even three or four heads a day, across sites, is a quiet and steady loss.",
       "fix": "Each site has an attendance record by crew and trade, taken once a day on the supervisor's phone or sheet. Verity compares days worked with the labour contractor's claim and flags differences before wages are paid.",
-      "screen": "crews"
+      "screen": "crews",
+      "root": "Crews are paid on a sheet kept by the supervisor, and days worked are not compared with output.",
+      "workaround": "The accounts person pays what the supervisor reports.",
+      "options": [
+        "Pay by gang lead",
+        "Check muster rolls weekly",
+        "Attendance by crew and trade once a day on the supervisor's phone or sheet, compared with work measured"
+      ],
+      "pick": "Wages follow output and a padded muster stands out.",
+      "needs": "Crew lists and rates."
     },
     {
       "area": "Crews",
@@ -138,7 +210,16 @@ export default {
       "scene": "The plastering sub-contractor asks for ₹2.4 lakh as the next payment. The supervisor thinks he has done about 70 percent. No joint measurement was taken.",
       "cost": "Paying more than the work done leaves nothing to hold when quality goes wrong or the sub-contractor leaves.",
       "fix": "Each sub-contractor has a work order with a rate and quantity. Payments are made against measured work, with a retention you set. Verity shows work done, amount paid and the balance for each sub-contractor.",
-      "screen": "crews"
+      "screen": "crews",
+      "root": "A sub-contractor is paid on his claim and the check against measured work is skipped to avoid delay.",
+      "workaround": "The site engineer approves by eye.",
+      "options": [
+        "Fixed advances only",
+        "Pay on completion",
+        "A work order per sub-contractor with rate and quantity, payments made against measured work with a retention you set"
+      ],
+      "pick": "You pay for what was done and hold what is due.",
+      "needs": "Work orders and rates."
     },
     {
       "area": "Sites",
@@ -146,7 +227,16 @@ export default {
       "scene": "The owner runs five sites. One is ahead, one is stuck waiting for drawings, one is waiting for a pour. Each supervisor calls in the evening and the owner builds the picture in their head.",
       "cost": "Problems that were small on Monday are large on Friday. A crew stands idle on one site while another site is short.",
       "fix": "Each site is a location with its tasks, progress against plan, issues raised and next milestones. The owner sees which sites are on track and which have blockers, with the person responsible.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Each site reports in its own way and the owner assembles the picture by calling.",
+      "workaround": "A daily round of calls.",
+      "options": [
+        "A weekly meeting",
+        "Site visits",
+        "Each site as a location with tasks, progress against plan, issues and next milestones, so the owner sees which sites are on track"
+      ],
+      "pick": "He calls only the sites that are in trouble.",
+      "needs": "Site plan with milestones."
     },
     {
       "area": "Sites",
@@ -154,7 +244,16 @@ export default {
       "scene": "The architect revised the staircase. The supervisor has the old drawing in his drawer. The crew builds it.",
       "cost": "Demolition and rework, a client dispute and a day of crews wasted.",
       "fix": "The latest drawing per item is a record on the site. The supervisor sees what is current, and when a new revision arrives, a task asks the supervisor to confirm the older one is withdrawn.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "A revised drawing reaches the owner's office and waits to be passed on.",
+      "workaround": "The supervisor is told verbally.",
+      "options": [
+        "Print and send",
+        "A shared folder",
+        "The latest drawing per item as a record, with a task for the supervisor to acknowledge each new revision"
+      ],
+      "pick": "The crew builds the current version and receipt is recorded.",
+      "needs": "Drawing list."
     },
     {
       "area": "Equipment",
@@ -162,7 +261,16 @@ export default {
       "scene": "A concrete mixer, a vibrator and scaffolding sets move between sites. The mixer breaks and nobody knows which site had it last or when it was serviced.",
       "cost": "Hire costs for replacements, idle crews and equipment lost between sites.",
       "fix": "Each machine is an asset record with the site it is on, hours used, service dates and the person responsible. A service due date becomes a task, and moves between sites are recorded.",
-      "screen": "materials"
+      "screen": "materials",
+      "root": "Small machines and tools move between sites without a record.",
+      "workaround": "A list kept by the store person.",
+      "options": [
+        "Mark each tool",
+        "Annual stock take",
+        "Each machine as an asset with site, hours, service dates and responsible person, with a service due date becoming a task"
+      ],
+      "pick": "Equipment is found, serviced and charged to the right site.",
+      "needs": "Machine and tool list."
     },
     {
       "area": "Compliance",
@@ -174,7 +282,16 @@ export default {
       "source": {
         "name": "Taxmann on BOCW cess, 2026",
         "url": "https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/"
-      }
+      },
+      "root": "Labour registers, cess and returns are due on different dates and are handled by whoever has time.",
+      "workaround": "A consultant prepares returns at the last minute.",
+      "options": [
+        "A calendar of dates",
+        "Outsource completely",
+        "Registrations, cess payments and returns as records with dates and owners, with each project showing the tasks that apply. Confirm requirements with your adviser."
+      ],
+      "pick": "Nothing is missed and the consultant gets tidy records.",
+      "needs": "Registrations and project costs."
     },
     {
       "area": "New work",
@@ -182,7 +299,16 @@ export default {
       "scene": "A tender closes on Thursday. The earnest money, the experience certificates and the price sheet are in three places. Another enquiry from a developer has had no reply in ten days.",
       "cost": "A tender submitted late or incomplete is lost, and a developer who gets no reply goes elsewhere.",
       "fix": "Each tender and enquiry is a record with a closing date, documents needed, an owner and a next step. Verity lists items with missing documents and enquiries with no reply, and records the result.",
-      "screen": "followups"
+      "screen": "followups",
+      "root": "Tenders and enquiries have closing dates and documents, and the checklist is in the estimator's head.",
+      "workaround": "A diary and reminders.",
+      "options": [
+        "A tender calendar",
+        "A tender consultant",
+        "Each tender and enquiry as a record with closing date, documents needed, owner and next step, with items missing documents listed"
+      ],
+      "pick": "You bid on time with complete documents.",
+      "needs": "Tender notices and the documents each needs."
     },
     {
       "area": "Money",
@@ -190,7 +316,16 @@ export default {
       "scene": "Wages are due Saturday, a steel supplier wants payment, and the next client payment is promised for Monday. The owner arranges a short loan.",
       "cost": "Short loans at high interest, and sometimes work stopped on site because of a cash gap that was visible two weeks earlier.",
       "fix": "Expected receipts from bills in each stage and expected payments for wages, suppliers and sub-contractors are shown by week. The owner sees the week the cash dips and which bill to chase.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Money from bills in different stages and money out for wages and suppliers are watched separately.",
+      "workaround": "The owner checks the bank balance.",
+      "options": [
+        "Higher overdraft",
+        "A weekly cash review",
+        "Expected receipts by bill stage and expected payments for wages, suppliers and sub-contractors by week"
+      ],
+      "pick": "The owner sees a shortfall before it arrives.",
+      "needs": "Bills and payables."
     },
     {
       "area": "Money",
@@ -198,7 +333,16 @@ export default {
       "scene": "The accounts show total purchases and wages. Nobody can say if the school building job is making or losing money until the final bill.",
       "cost": "A loss is found when it can no longer be fixed, and the next tender is priced without lessons.",
       "fix": "Each site shows billed, received, cost to date for material, labour and sub-contractors, and the estimated cost to finish. The owner sees margin by site while there is still time to act.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Costs are posted in the books, and a site's margin is worked out after the work is done.",
+      "workaround": "A final account when the site closes.",
+      "options": [
+        "Review sites quarterly",
+        "Rely on the accountant",
+        "Each site showing billed, received, cost to date for material, labour and sub-contractors, and estimated cost to finish"
+      ],
+      "pick": "A losing site is seen while it can be fixed.",
+      "needs": "Site budgets and costs."
     }
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
@@ -1119,5 +1263,397 @@ export default {
     "real-estate-developers"
   ],
   "ctaHeading": "Start with the work you measured and never billed.",
-  "ctaLede": "Tell us how your sites run and we will show you the unbilled measurements, the bills stuck with clients and the retention you can claim, using your own numbers."
+  "ctaLede": "Tell us how your sites run and we will show you the unbilled measurements, the bills stuck with clients and the retention you can claim, using your own numbers.",
+  "workflow": {
+    "heading": "From enquiry to final bill for a working contractor, and where each handoff slips.",
+    "lede": "A contractor wins work, measures it, bills it and waits for payment. Every step involves someone at the client's end, and each of those handoffs is where cash is delayed.",
+    "stages": [
+      {
+        "name": "Enquiry and tender",
+        "owner": "Owner or estimator",
+        "does": "Tenders and enquiries are found and priced.",
+        "data": "Closing date, documents, rates, owner.",
+        "breaks": "A missing document or missed date loses the bid.",
+        "handoff": "A won tender becomes a contract."
+      },
+      {
+        "name": "Contract and mobilisation",
+        "owner": "Owner and site supervisor",
+        "does": "Crews, material and sub-contractors are arranged.",
+        "data": "Contract terms, retention, work orders, crews.",
+        "breaks": "Terms are known only to the owner.",
+        "handoff": "Work starts on site."
+      },
+      {
+        "name": "Execution",
+        "owner": "Site supervisor",
+        "does": "Work is done against drawings and instructions.",
+        "data": "Daily attendance, work done, material issued, drawing revision.",
+        "breaks": "The crew works to an old drawing and issues are not recorded.",
+        "handoff": "Work done goes for measurement."
+      },
+      {
+        "name": "Measurement",
+        "owner": "Site engineer and client engineer",
+        "does": "Work is measured and signed.",
+        "data": "Quantity, date, photo, signature.",
+        "breaks": "Measurements wait for the client's engineer.",
+        "handoff": "Signed measurement goes to billing."
+      },
+      {
+        "name": "Running bill",
+        "owner": "Office",
+        "does": "The bill is prepared and submitted.",
+        "data": "Measured quantity, rates, variations, retention.",
+        "breaks": "Measured work is never billed.",
+        "handoff": "The bill goes to the client."
+      },
+      {
+        "name": "Client processing",
+        "owner": "Client team",
+        "does": "The bill is checked, certified and passed.",
+        "data": "Stage, date moved, person.",
+        "breaks": "The bill sits at a desk for months.",
+        "handoff": "A passed bill goes for payment."
+      },
+      {
+        "name": "Payment and payments out",
+        "owner": "Accounts",
+        "does": "Money is received and wages, suppliers and sub-contractors are paid.",
+        "data": "Receipts, wages, supplier bills, sub-contractor bills.",
+        "breaks": "Cash gaps are seen late.",
+        "handoff": "Cash funds the next site."
+      },
+      {
+        "name": "Closure",
+        "owner": "Owner",
+        "does": "Final bill, retention and defects period are managed.",
+        "data": "Retention release dates, final account, margin.",
+        "breaks": "Retention release dates are missed and margin is learned at the end.",
+        "handoff": "Margin and experience feed the next tender."
+      }
+    ]
+  },
+  "content": {
+    "hooks": [
+      "Engineer sign nahi kar raha, bill nahi ban raha.",
+      "Measurement le liya par bill mein chadha hi nahi.",
+      "Bill client ke paas teen mahine se pada hai.",
+      "Retention kab chhootega, kisi ko yaad hai?",
+      "Phone par extra kaam bola, bill kaise banayenge?",
+      "Store se material gaya, kis kaam mein laga?",
+      "Fixed rate ka contract aur supplier ne daam badha diye.",
+      "Mistri ki hazri aur kaam ka hisaab alag.",
+      "Sub-contractor ko bina measurement ke paisa diya.",
+      "Paanch site, paanch alag report.",
+      "Naya drawing aaya, crew purana bana rahi hai.",
+      "Machine kis site par hai, kisi ko nahi pata.",
+      "Cess aur labour return last minute mein.",
+      "Tender ka document adhoora rah gaya.",
+      "Cash tight hai aur owner ko ek din pehle pata chala.",
+      "Site ka profit kaam khatam hone par pata chalta hai.",
+      "Client ke clerk ko kitni baar phone kiya?",
+      "Bill ka stage kya hai: submitted ya passed?",
+      "Variation ka instruction kisne diya tha?",
+      "Retention ka percentage har contract mein alag.",
+      "Wage sheet mein ek hi naam do baar.",
+      "Contract ke rate se zyada par material kharida.",
+      "Work order ka rate aur bill ka rate match?",
+      "Aap site par nahi hote to kaam ka record kaun rakhta hai?",
+      "Defects period khatam hua, retention maanga ya nahi?"
+    ],
+    "explainers": [
+      {
+        "concept": "The signature you are waiting for",
+        "pain": "Work is not measured on time (pain 1)",
+        "for": "Contractors and engineers",
+        "hook": "Engineer sign nahi kar raha, bill nahi ban raha",
+        "show": "Measurement tasks with photo and the client engineer who must sign",
+        "visual": "A task list with the waiting signature highlighted",
+        "outcome": "Delay has a name",
+        "cta": "Book the free seven day demo"
+      },
+      {
+        "concept": "Measured but never billed",
+        "pain": "Measurements never become a bill (pain 2)",
+        "for": "Owners and billing clerks",
+        "hook": "Measurement le liya par bill mein chadha hi nahi",
+        "show": "A signed measurement turning into a bill line with the difference shown",
+        "visual": "Two bars, measured and billed, with a gap shaded",
+        "outcome": "No forgotten work",
+        "cta": "Share one site's measurements"
+      },
+      {
+        "concept": "Where is my bill",
+        "pain": "Running bills sit with client (pain 3)",
+        "for": "Owners",
+        "hook": "Bill client ke paas teen mahine se pada hai",
+        "show": "Bills by stage with date moved and person spoken to",
+        "visual": "A pipeline with a stuck bill glowing",
+        "outcome": "A call to the right person",
+        "cta": "Load your bills"
+      },
+      {
+        "concept": "Retention you are owed",
+        "pain": "Retention release untracked (pain 4)",
+        "for": "Owners and accounts",
+        "hook": "Retention kab chhootega, kisi ko yaad hai?",
+        "show": "Retention terms and dates by contract",
+        "visual": "A calendar with release dates",
+        "outcome": "Retention claimed on time",
+        "cta": "Share two contracts"
+      },
+      {
+        "concept": "Extra work with proof",
+        "pain": "Variations on a phone call (pain 5)",
+        "for": "Site supervisors",
+        "hook": "Phone par extra kaam bola, bill kaise banayenge?",
+        "show": "A variation record with instruction, photo and estimate",
+        "visual": "A phone call becoming a record",
+        "outcome": "Extra work billed",
+        "cta": "Bring a recent variation"
+      },
+      {
+        "concept": "Material for the right job",
+        "pain": "Material issued without a record (pain 6)",
+        "for": "Store keepers",
+        "hook": "Store se material gaya, kis kaam mein laga?",
+        "show": "Issues against site and work item, compared with measured work",
+        "visual": "A bag counter and a work item",
+        "outcome": "Overuse found",
+        "cta": "Try one site"
+      },
+      {
+        "concept": "The rate that moved",
+        "pain": "Supplier prices rise on fixed-price job (pain 7)",
+        "for": "Owners",
+        "hook": "Fixed rate ka contract aur supplier ne daam badha diye",
+        "show": "Rate paid compared with estimate and flagged",
+        "visual": "A price line crossing an estimate",
+        "outcome": "Early renegotiation",
+        "cta": "Share one estimate"
+      },
+      {
+        "concept": "Pay for measured work",
+        "pain": "Sub-contractors paid without checking (pain 9)",
+        "for": "Accounts",
+        "hook": "Sub-contractor ko bina measurement ke paisa diya",
+        "show": "A work order with payments against measured work",
+        "visual": "A payment bar limited by measurement",
+        "outcome": "Pay for what was done",
+        "cta": "Share a work order"
+      },
+      {
+        "concept": "Five sites in one view",
+        "pain": "No single view of progress (pain 10)",
+        "for": "Owners",
+        "hook": "Paanch site, paanch alag report",
+        "show": "Sites on track or not with milestones",
+        "visual": "A map with sites in colours",
+        "outcome": "Calls only to troubled sites",
+        "cta": "Ask for the demo"
+      },
+      {
+        "concept": "Cash by week",
+        "pain": "Cash gets tight (pain 15)",
+        "for": "Owners",
+        "hook": "Cash tight hai aur owner ko ek din pehle pata chala",
+        "show": "Expected receipts and payments by week",
+        "visual": "A cash line dipping before it happens",
+        "outcome": "Shortfall seen weeks ahead",
+        "cta": "Bring your bills and payables"
+      }
+    ],
+    "scripts": [
+      {
+        "title": "Signature ka intezaar",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Engineer sign nahi kar raha, bill nahi ban raha."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Kaam ho chuka, measurement kachche note mein, aur paisa atka hua."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har kaam ka measurement task: quantity, tarikh, photo, aur client engineer jise sign karna hai. Intezaar wali list alag."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Sign hote hi measurement agle running bill ki line ban jaata hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Bill kahan hai",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Bill client ke paas teen mahine se pada hai."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Kis desk par, kisne dekha, kisse baat hui, kuch yaad nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apne bills dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har bill ka stage: submitted, checked, certified, passed, paid. Tarikh aur wo insaan jisse baat hui."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Atke hue bill ki list upar."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Retention",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Retention kab chhootega, kisi ko yaad hai?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Agreement almari mein, tarikh owner ke dimag mein."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Do contract dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har contract ka retention: percentage, aadha kab, defects period ka ant, aur release ki shart."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Jo jaldi due hai woh upar dikhta hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Extra kaam",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Phone par extra kaam bola, bill kaise banayenge?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Instruction kisne diya tha, kisi ko yaad nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek variation ka data dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har variation: instruction, kisne diya, photo, estimate, status. Bina instruction ke kaam par flag."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Bill banate waqt saboot tayyar."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Site ka profit",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Site ka profit kaam khatam hone par pata chalta hai."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Tab tak galti sudharne ka waqt nikal chuka hota hai."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek chalti site ka data dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har site ka bill, mila hua paisa, ab tak ka cost aur kaam khatam karne ka anumaanit cost."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Margin tab dikhta hai jab sudhaar sambhav hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      }
+    ]
+  },
+  "sales": {
+    "leadWith": "Measured work that never becomes a bill, and bills stuck at the client",
+    "titles": [
+      "Owner",
+      "Proprietor",
+      "Managing Partner",
+      "Director",
+      "Site Manager",
+      "Head of Accounts",
+      "Project Manager"
+    ],
+    "deciders": "The owner decides, often alone. A project manager or accounts head influences.",
+    "size": "A contractor with 15 to 150 people, several sites, sub-contractors and running bills to government or private clients.",
+    "firstMessage": "Hello, I work with contractors on measured work that never reaches the bill and bills that sit with the client. We build a free seven day demo on your own site data. How do you know today what has been measured but not billed?",
+    "discovery": [
+      "How do you get measurements signed and track the wait?",
+      "How do you track bills at the client end?",
+      "How do you track retention and release dates?",
+      "How do you record variations?",
+      "How do you check sub-contractor payments against measured work?",
+      "How do you see a site's margin while it runs?"
+    ],
+    "objections": [
+      {
+        "o": "I do it myself and it works",
+        "a": "It works while you are everywhere. We make the same record available to your supervisor and accounts person so it works when you are not."
+      },
+      {
+        "o": "My supervisors are not computer people",
+        "a": "We keep entries short and in the terms they already use."
+      },
+      {
+        "o": "Too expensive",
+        "a": "Cost depends on scope. We start with one site, and the demo is free."
+      },
+      {
+        "o": "Too busy",
+        "a": "The four week plan needs about 8 to 14 owner hours in total."
+      }
+    ],
+    "demo": "A site with measurements waiting for signature, a bill with a measured and billed gap, retention due soon and a sub-contractor payment against measured work.",
+    "proof": "Take one site and show measured but unbilled work and retention due.",
+    "followUp": "Thank you for your time. I have built the demo around the site you described, with its measurements and bills. When can you and your site manager go through it for 20 minutes?"
+  }
 };

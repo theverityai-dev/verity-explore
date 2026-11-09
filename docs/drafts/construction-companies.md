@@ -48,6 +48,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Example arithmetic: a ₹40 lakh running bill raised four weeks late is cash you did not have for four weeks. At a 12 percent borrowing rate that is about ₹37,000, besides the strain on the next payment to your suppliers.
 - fix: Each contract item has a quantity and a rate. Site records the quantity done and the consultant’s certification. Verity builds the next running bill from certified quantities and shows the gap between work done and work billed.
 - screen: billing
+- root: Site records quantities in a measurement book, the consultant certifies later, and the office builds the bill from whatever has reached it.
+- workaround: The billing engineer collects measurements at month end and raises the bill when the figures are agreed.
+- options: Bill a fixed percent each month, which invites disputes | Wait for the final measurement, which delays cash | Quantity done recorded against contract items with the consultant's certification, and the next running bill built from certified quantities
+- pick: The bill is ready when the work is certified, so cash is not waiting on a month-end scramble.
+- needs: Contract items with rates, and the measurement and certification you already record.
 
 ### 2. Retention, advances and deductions are tracked on paper
 - area: Billing
@@ -55,6 +60,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Retention is cash earned and not received. Lost or forgotten, it is profit that never reaches the account.
 - fix: Retention, advance recovery and other deductions are recorded on every bill. Verity lists what is held per contract, its release date and the condition, such as a defect liability period ending.
 - screen: billing
+- root: Retention, advance recovery and deductions are set in the contract and applied by hand on each bill.
+- workaround: A sheet per contract maintained by accounts.
+- options: Rely on the client's statement | A manual ledger per project | Retention, advance recovery and other deductions recorded on every bill, with what is held per contract, its release date and the conditions
+- pick: Money held by the client is chased on its release date.
+- needs: Contract terms for retention, advance and deductions.
 
 ### 3. Variations and extra work are done on a verbal word
 - area: Billing
@@ -62,6 +72,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Example arithmetic: ₹18 lakh of extra work without a written approval is ₹18 lakh you may argue for and not recover.
 - fix: A change request is a record: description, quantity, rate, who asked, who approved and the drawing revision. Work against a change that is not yet approved is flagged, and the approved value is added to the contract billing.
 - screen: changes
+- root: Extra work is requested on site, started on a word, and priced afterwards when memory has faded.
+- workaround: The site engineer keeps a note and the project manager raises a variation later.
+- options: Refuse all extra work without paper, which is not practical | Collect variations at the end of the project | A change request record with description, quantity, rate, who asked, who approved and the drawing revision, with work against an unapproved change flagged
+- pick: Extra work is priced before it is done or at least while it is fresh.
+- needs: Your approval route for changes.
 
 ### 4. Material is ordered in a hurry and bought dear
 - area: Materials
@@ -69,6 +84,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Example arithmetic: a 4 percent premium on ₹50 lakh of urgent purchases a month is ₹2 lakh a month.
 - fix: Each site raises an indent against the planned quantity. Purchase sees the quotes next to the last rate paid and the contract allowance, and a purchase order is issued only after approval.
 - screen: materials
+- root: Sites raise urgent indents and purchase buys the quickest quote, not the best one.
+- workaround: The purchase manager phones known suppliers.
+- options: Bulk contracts for key materials | A central purchase rule | An indent against planned quantity, quotes shown beside the last rate paid and the contract allowance, with a purchase above allowance needing approval
+- pick: Urgent buying is still compared with something.
+- needs: Planned quantities, last rates and supplier quotes.
 
 ### 5. Cement and steel go missing between the gate and the slab
 - area: Materials
@@ -76,6 +96,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Material is often the largest cost on a project. A few percent of unexplained wastage across a year is lakhs, and nobody can name where it went.
 - fix: Receipts are recorded against the purchase order with quantity checked. Issues are recorded against the work item. Verity compares material issued with the quantity of work done and flags a gap beyond the allowed wastage.
 - screen: materials
+- root: Cement and steel are received at the gate by a watchman and issued by a store keeper, and the work done is measured by someone else.
+- workaround: A store register and a monthly physical count.
+- options: More gate checks | Monthly reconciliation only | Receipts recorded against the purchase order with quantity checked, issues against the work item, and material issued compared with the quantity the work should use
+- pick: A gap shows by item and site while the pour is still fresh.
+- needs: Standard consumption per work item.
 
 ### 6. Subcontractor bills are paid without being checked against measured work
 - area: Subcontractors
@@ -83,6 +108,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Example arithmetic: a 10 percent overpayment on a ₹3 crore work order is ₹30 lakh. It is usually early billing, not fraud, but it is still your money gone out before the work.
 - fix: Each work order has a bill schedule. A subcontractor bill is compared with the measured quantity and needs the engineer’s sign-off, then the project manager’s, before accounts releases it. Retention and advances are tracked on the same record.
 - screen: subcontractors
+- root: A subcontractor's bill arrives with its own quantity, and checking it against site measurement is slow and political.
+- workaround: The engineer signs off after a quick look.
+- options: Pay on work orders as scheduled | Hold bills until the final measurement | A bill schedule per work order, with the bill compared against measured quantity and signed off by the engineer before payment
+- pick: Payments follow work done.
+- needs: Work orders with rates and the measurements the engineer takes.
 
 ### 7. Small subcontractors wait for payment and walk off site
 - area: Subcontractors
@@ -91,6 +121,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - fix: Every bill shows its age and where it is waiting. Verity lists bills nearing the due date by approver, and a stuck bill is flagged before the contractor stops work.
 - screen: subcontractors
 - source: (ClearTax, Section 43B(h) of the Income Tax Act: https://cleartax.in/s/section-43bh-of-income-tax-act)
+- root: A small subcontractor's bill waits on a signature chain nobody tracks, and he stops work to be heard.
+- workaround: The subcontractor phones the owner directly.
+- options: Pay on fixed days | Escalate on complaint | Every bill showing its age and where it is waiting, with bills nearing the due date listed by approver and stuck ones flagged
+- pick: Payments reach the subcontractor before he walks off.
+- needs: Bills with approvers.
 
 ### 8. Progress is known by the site engineer, not by the project plan
 - area: Site
@@ -99,6 +134,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - fix: Each site files a short daily report: work done by item, labour, material received, issues and photographs. Progress is shown against the programme, and the slip is a number on the project manager’s screen.
 - screen: site
 - source: (Outlook Business, MoSPI monthly report, March 2024: https://www.outlookbusiness.com/news/mospi-says-449-infra-projects-hit-by-cost-overrun-of-rs-501-lakh-crore-in-march)
+- root: Progress sits in the site engineer's head and reaches the office as a phone update.
+- workaround: A weekly review meeting.
+- options: A weekly progress report | Site visits | A short daily report with work done by item, labour, material received, issues and photographs, shown against the programme
+- pick: The office sees slippage within a day.
+- needs: The programme and work items.
 
 ### 9. Drawing changes do not reach the people doing the work
 - area: Site
@@ -106,6 +146,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Demolition and recasting. A single wrongly poured column can cost days and a lot of material.
 - fix: Drawings are records with revision numbers and an issued date. When a revision is issued, Verity assigns an acknowledgement task to the site engineer and the supervisor, and shows which revision each work item is on.
 - screen: changes
+- root: A revised drawing is issued to the office but not necessarily to the person laying bricks.
+- workaround: The engineer collects the latest drawings on request.
+- options: Print and post revised drawings | A shared folder | Drawings as records with revision numbers and issue dates, with an acknowledgement task assigned to the site engineer on each new revision
+- pick: Work starts from the right revision, and receipt is on record.
+- needs: Drawing register and who receives each.
 
 ### 10. Labour headcount, attendance and wages are not matched to work done
 - area: Labour
@@ -113,6 +158,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Paying for people who were not there, and no basis to say if a gang is slow. Labour is a major part of the cost of a site.
 - fix: Attendance is recorded by gang and trade each day. Verity compares headcount with work done per trade, shows productivity, and ties the labour contractor’s bill to recorded days.
 - screen: workforce
+- root: Labour is hired through gangs and wages are paid on a sheet that is separate from the work done.
+- workaround: The supervisor reports headcount and the accounts person calculates wages.
+- options: Daily wages for everyone | Piece rate by contract | Attendance by gang and trade each day compared with work done per trade, and wages tied to the record
+- pick: Productivity per trade becomes visible and wage disputes shrink.
+- needs: Gang lists and rates.
 
 ### 11. The construction workers’ cess and registers are done in a rush
 - area: Compliance
@@ -121,6 +171,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - fix: The cost of construction per work is on the project record. Verity shows the cess calculation inputs, the due dates for advance and final assessments, and the worker register for each site.
 - screen: workforce
 - source: (Taxmann, BOCW Cess under the Code on Social Security 2020, September 2026: https://www.taxmann.com/post/blog/analysis-bocw-cess-under-code-on-social-security/)
+- root: The cess and registers are prepared by the accounts person under deadline.
+- workaround: A consultant prepares the figures at assessment time.
+- options: Leave it all to the consultant | A yearly tidy-up | The cost of construction on the project record, the inputs for the cess calculation and due dates shown, and the registers produced from the same data. Confirm requirements with your adviser.
+- pick: The consultant starts from clean records.
+- needs: Project cost and the registers you must keep.
 
 ### 12. Site safety checks and incidents are not recorded
 - area: Compliance
@@ -128,6 +183,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Injury, stoppage, and a record you cannot produce when asked. Insurance and client contracts also ask for safety logs.
 - fix: Inspections are scheduled checklists per site with photographs and sign-off. Missed ones are listed by site, and incidents are records with a cause, an action and an owner.
 - screen: site
+- root: Safety checks are done by the safety officer, with sheets that are signed and filed.
+- workaround: A weekly checklist and an incident book.
+- options: A checklist on paper | Daily briefing | Scheduled inspections with photographs and sign-off, missed ones listed by site, and incidents as records with a corrective action
+- pick: A missed check is visible the same day, and incidents are followed up.
+- needs: Your checklist and who signs.
 
 ### 13. Machines sit idle on one site while another hires the same machine
 - area: Equipment
@@ -135,6 +195,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Hire charges for equipment you already own, and breakdowns from missed servicing.
 - fix: Each machine is an asset record with site, hours, service date and operator. A request on one site first shows what you own that is idle elsewhere, and service dates raise tasks.
 - screen: materials
+- root: Each site hires or buys what it needs, unaware that another site owns an idle machine.
+- workaround: The plant manager remembers where machines are.
+- options: Central equipment pool | Rent everything | Each machine as an asset with site, hours, service date and operator, and a request showing idle owned machines first
+- pick: You use what you own before hiring.
+- needs: Machine list with current site.
 
 ### 14. Cash is tight across ten sites and nobody can see by how much
 - area: Cash
@@ -142,6 +207,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: Late payment fees to suppliers, borrowing when you did not need to, and strained relationships on the sites that matter most.
 - fix: Bills raised, bills received, payments due to subcontractors and suppliers, and retention held are shown for each project and for the company, by week. The gap is visible before the week starts.
 - screen: owner
+- root: Cash for ten sites is held in ten sets of numbers and the company view is built at month end.
+- workaround: The accountant consolidates figures for the owner.
+- options: A weekly cash meeting | A bank limit buffer | Bills raised and received, payments due to subcontractors and suppliers, and retention held for each project and for the company
+- pick: The gap is seen weeks ahead.
+- needs: Bills and dues by project.
 
 ### 15. The profit on a project is known only after it finishes
 - area: Owner
@@ -149,7 +219,11 @@ Lede: These are the situations project managers, site engineers, purchase heads 
 - cost: A problem you could have fixed at 40 percent of the project is found at 100 percent.
 - fix: Each project carries a budget by cost head. Costs from purchases, subcontractor bills and labour are recorded against it as they happen, so the likely margin is a live number from the start.
 - screen: owner
-
+- root: Costs land in the books under general heads, and the profit of a project is worked out at the end.
+- workaround: A final account prepared after completion.
+- options: A quarterly project review | A yearly audit | Each project with a budget by cost head, with purchases, subcontractor bills and labour recorded against it as they happen
+- pick: An overrun is seen when it can still be handled.
+- needs: Project budgets by cost head.
 
 ## Facts
 
@@ -753,6 +827,173 @@ Heading: Questions construction companies ask.
 - cta heading: Start with the work done and not yet billed.
 - cta lede: Tell us how your company runs and we will show you the unbilled work, the material gaps and the old subcontractor bills it would find, using your own numbers.
 
+## Workflow
+
+Heading: From tender to final account, and where each handoff slips.
+Lede: A construction project runs through tender, planning, procurement, site work, billing and handover, with many parties. The money is lost where the site, the office and the client each hold a different version.
+
+### 1. Tender and contract
+- owner: Estimator and owner
+- does: The tender is priced and a contract is signed.
+- data: Bill of quantities, rates, terms, retention, advance.
+- breaks: Terms are not carried to the people billing.
+- handoff: The contract becomes the project in planning.
+
+### 2. Planning and budget
+- owner: Project manager
+- does: Programme, resources and budget by cost head are set.
+- data: Programme, budget, materials plan, labour plan.
+- breaks: The budget is not compared with actual costs as they occur.
+- handoff: The plan goes to site and purchase.
+
+### 3. Procurement
+- owner: Purchase
+- does: Materials and subcontract work are ordered.
+- data: Indents, quotes, orders, work orders.
+- breaks: Urgent buying skips comparison and work orders are not tied to bill schedules.
+- handoff: Goods and subcontractors arrive on site.
+
+### 4. Site work
+- owner: Site engineer
+- does: Work is executed against drawings and the programme.
+- data: Daily report, labour, material received, photographs.
+- breaks: Drawing revisions do not reach the work and progress is told by phone.
+- handoff: Quantities are measured for billing.
+
+### 5. Measurement and certification
+- owner: Billing engineer and consultant
+- does: Work done is measured and certified.
+- data: Measured quantity, certification, variations.
+- breaks: Extra work is not priced and certification waits.
+- handoff: Certified quantities go to billing.
+
+### 6. Billing and collection
+- owner: Accounts
+- does: Running bills are raised and payments followed.
+- data: Bill, retention, advance recovery, due date.
+- breaks: Bills are raised late and deductions are tracked on paper.
+- handoff: Collected cash goes to payments.
+
+### 7. Subcontractor and supplier payments
+- owner: Accounts and project manager
+- does: Subcontractors and suppliers are paid against checked bills.
+- data: Subcontractor bill, measured work, approvals.
+- breaks: Bills are paid unchecked or wait too long.
+- handoff: Payments close work orders.
+
+### 8. Compliance and safety
+- owner: Safety and compliance
+- does: Safety checks, registers and statutory payments are maintained.
+- data: Inspections, incidents, registers, cess.
+- breaks: Registers are filled in a rush.
+- handoff: Findings go back to site.
+
+### 9. Handover and final account
+- owner: Project manager and owner
+- does: The project is handed over and the final account settled.
+- data: Retention release, final cost against budget.
+- breaks: Profit is known only after the project ends.
+- handoff: Actual cost returns to the next tender.
+
+## Content kit
+
+### Hooks
+- Kaam ho gaya, bill abhi tak nahi bana.
+- Retention kitna rukka hua hai, kab milega?
+- Extra kaam muh zabani hua, paisa kaun dega?
+- Cement mangwaya aur rate pichle se zyada.
+- Cement aur steel gate se slab tak kahan gaya?
+- Subcontractor ka bill bina measurement ke pass ho gaya.
+- Chhota subcontractor paisa ke liye kaam chhod gaya.
+- Site engineer ko pata hai kitna kaam hua, office ko nahi.
+- Naya drawing aaya, mistri purane par kaam kar raha hai.
+- Labour ki hazri aur kaam ka output alag alag.
+- Cess ka hisaab deadline ke din.
+- Safety check ki sheet kab bhari gayi?
+- Ek site par machine khaali, doosri site par kiraye par.
+- Das site ka cash ek jagah kahan dikhta hai?
+- Project ka profit khatam hone ke baad pata chalta hai.
+- Running bill kab raise hua, kisne dekha?
+- Variation ka paisa client se kab liya?
+- Advance recovery kitna kata, koi record?
+- Site par daily report kaun bharta hai?
+- Material ka indent urgent tha, rate dekha?
+- Work order aur bill ka match.
+- Consultant ne certify kiya par bill nahi bana.
+- Aap site par nahi hote to progress kaun batata hai?
+- Budget kitna tha, abhi tak kitna laga?
+- Retention release ki tareekh kisne yaad rakhi?
+
+### Explainers
+- concept: The bill that follows the work | pain: Work done but bill raised late (pain 1) | for: Owners and billing engineers | hook: Kaam ho gaya, bill abhi tak nahi bana | show: Certified quantities building the next running bill | visual: A work item filling up and a bill assembling | outcome: Bills raised on time | cta: Book the free seven day demo
+- concept: Money the client is holding | pain: Retention and deductions on paper (pain 2) | for: Owners and accounts | hook: Retention kitna rukka hua hai, kab milega? | show: Retention held per contract with release dates | visual: A vault with dates | outcome: Retention collected on time | cta: Share one contract
+- concept: Extra work with a price | pain: Variations on a verbal word (pain 3) | for: Project managers | hook: Extra kaam muh zabani hua, paisa kaun dega? | show: A change request with approval and drawing revision | visual: A request card gaining a stamp before work starts | outcome: Extra work gets paid | cta: Bring a recent variation
+- concept: Cement from gate to slab | pain: Material goes missing (pain 5) | for: Owners and store keepers | hook: Cement aur steel gate se slab tak kahan gaya? | show: Material issued against the quantity work should use | visual: A bag count and a slab volume side by side | outcome: Gaps found by item | cta: Try one site
+- concept: Pay for measured work | pain: Subcontractor bills unchecked (pain 6) | for: Accounts | hook: Subcontractor ka bill bina measurement ke pass ho gaya | show: Bill compared with measured quantity before sign-off | visual: Two quantity bars with a mismatch flagged | outcome: Pay for work actually done | cta: Share one work order
+- concept: The small subcontractor | pain: Small subcontractors wait for payment (pain 7) | for: Project managers | hook: Chhota subcontractor paisa ke liye kaam chhod gaya | show: Bills by age and where they wait | visual: A queue with an old bill highlighted | outcome: No site stoppage | cta: Load your pending bills
+- concept: The revision that reaches the site | pain: Drawing changes do not reach work (pain 9) | for: Site engineers | hook: Naya drawing aaya, mistri purane par kaam kar raha hai | show: A revision creating an acknowledgement task for the engineer | visual: A drawing stamp reaching a site card | outcome: Work from the right revision | cta: Share a drawing register
+- concept: One machine, one site | pain: Machines idle while another site hires (pain 13) | for: Plant managers | hook: Ek site par machine khaali, doosri site par kiraye par | show: Idle owned machines shown when a site requests one | visual: A map of sites with a machine moving | outcome: Less hiring | cta: Share your machine list
+- concept: Project profit while it runs | pain: Profit known after finish (pain 15) | for: Owners | hook: Project ka profit khatam hone ke baad pata chalta hai | show: Budget against actual by cost head as costs occur | visual: A bar approaching its budget line | outcome: Overruns handled in time | cta: Ask for the demo
+
+- concept: Safety checks that happened | pain: Safety checks and incidents unrecorded (pain 12) | for: Safety officers | hook: Safety check ki sheet kab bhari gayi? | show: Scheduled inspections with photographs and missed ones by site | visual: A site grid with a missed check in amber | outcome: Checks visible the same day | cta: Share your checklist
+
+### Script 1: Bill kab banega
+- 0 to 5s: Kaam ho gaya, bill abhi tak nahi bana.
+- 5 to 15s: Measurement book ek jagah, certification doosri jagah, aur office ko mahine ke end mein pata chalta hai.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Contract item ka quantity aur rate. Site kaam darj karti hai, consultant certify karta hai, aur agla running bill us se bankar tayyar.
+- 40 to 50s: Retention aur deduction bhi har bill mein dikhte hain.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Extra kaam
+- 0 to 5s: Extra kaam muh zabani hua, paisa kaun dega?
+- 5 to 15s: Site par kaam hua, mahine baad client ko yaad dilana mushkil.
+- 15 to 25s: Ek variation ka data dijiye. Saat din mein free demo, aapke data par.
+- 25 to 40s: Har badlav ek record: kaam, quantity, rate, kisne manga, kisne approve kiya, drawing revision.
+- 40 to 50s: Bina approve ke kaam par flag.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Cement kahan gaya
+- 0 to 5s: Cement aur steel gate se slab tak kahan gaya?
+- 5 to 15s: Gate par receipt, store mein issue, aur kaam ka measurement alag.
+- 15 to 25s: Ek site ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Receipt purchase order ke saath, issue kaam ke item ke saath. System compare karta hai ki kaam ke liye kitna chahiye tha.
+- 40 to 50s: Farak item aur site ke hisaab se dikhta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Subcontractor ka bill
+- 0 to 5s: Subcontractor ka bill bina measurement ke pass ho gaya.
+- 5 to 15s: Engineer ne dekha nahi, ya dekha par record nahi.
+- 15 to 25s: Ek work order dijiye. Saat din mein free demo.
+- 25 to 40s: Work order ka bill schedule. Bill measured quantity se milta hai, engineer sign karta hai, phir payment.
+- 40 to 50s: Chhote subcontractor ka bill kahan atka hai, dikhta hai.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Project ka profit
+- 0 to 5s: Project ka profit khatam hone ke baad pata chalta hai.
+- 5 to 15s: Tab tak overrun ho chuka hota hai.
+- 15 to 25s: Ek chalte project ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Budget cost head ke hisaab se. Purchase, subcontractor bill aur labour us par darj hote jaate hain.
+- 40 to 50s: Overrun tab dikhta hai jab abhi sambhala ja sakta hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Late running bills, retention stuck with clients and unchecked subcontractor payments
+- titles: Managing Director | Owner | Director | Project Director | General Manager Projects | Head of Billing | Head of Accounts
+- deciders: The owner or managing director decides. The project director and accounts head influence.
+- best size: A construction company with 50 to 500 people, several sites, subcontractors and running bills to clients.
+- first message: Hello, I work with construction companies on late running bills and money stuck in retention and unchecked subcontractor bills. We build a free seven day demo on one of your live projects. How do you know today what is certified but not yet billed?
+- discovery: How do you know what work is certified but not billed? | How do you track retention and release dates? | How do you price and track variations? | How are subcontractor bills checked against measured work? | How do you compare material issued with work done? | How do you see profit while a project runs?
+- objection: We use Tally and Excel | We keep them. We add the measurement, certification, subcontractor and material records they do not hold.
+- objection: Site staff will not fill reports | We keep daily reports short and tied to what they already write.
+- objection: We have an ERP | We connect the bill, variation and site records that ERPs seldom capture well on site.
+- objection: Cost | Cost depends on scope. We start with the one project that costs you most, and the demo is free.
+- demo: A project with certified quantities building a running bill, retention held with release dates, a variation with approval and a subcontractor bill compared with measurement.
+- proof: Take one live project and show certified but unbilled work and retention due.
+- follow up: Thank you for your time. I have built the demo around the project you described, with its running bill and retention. When can your project director and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.
