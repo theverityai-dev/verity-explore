@@ -82,7 +82,7 @@ written.push(await write('industries/index.html', renderIndustriesIndex(publishe
 written.push(await write('demo/index.html', renderDemoPage()));
 
 for (const slug of Object.keys(INDUSTRIES)) {
-  written.push(await write(`industries/${slug}/index.html`, renderIndustryPage(slug, publishedSlugs)));
+  written.push(await write(`industries/${slug}/index.html`, renderIndustryPage(slug, publishedSlugs, Object.fromEntries(businesses.map((b) => [b.slug, b])))));
 }
 
 for (const biz of businesses) {
