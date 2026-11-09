@@ -32,13 +32,23 @@ async function walk(dir, acc = []) {
   return acc;
 }
 
-const pages = [
+const allPages = [
   ...(await walk(join(root, 'businesses'))),
   ...(await walk(join(root, 'industries'))),
   ...(await walk(join(root, 'explore'))),
 ];
+/* Team-only content kits (businesses/<slug>/kit/) are the one place noindex is
+   required; they are checked below and left out of the indexable-page checks. */
+const isKit = (f) => /[\\/]kit[\\/]index\.html$/.test(f);
+const pages = allPages.filter((f) => !isKit(f));
 
 const sitemap = await readFile(join(root, 'sitemap.xml'), 'utf8');
+for (const file of allPages.filter(isKit)) {
+  const page = relative(root, file).split(sep).join('/');
+  const html = await readFile(file, 'utf8');
+  if (!/<meta name="robots" content="noindex/.test(html)) fail(page, 'kit page must be noindex');
+  if (sitemap.includes('/' + page.replace(/index\.html$/, ''))) fail(page, 'kit page must not be in sitemap.xml');
+}
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 
 if (!/Sitemap:\s*https:\/\//.test(robots)) fail('robots.txt', 'no Sitemap directive');

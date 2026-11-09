@@ -14,6 +14,7 @@ import { renderBusinessPage } from '../lib/business-page.js';
 import { renderIndustryPage } from '../lib/industry-page.js';
 import { renderHub, renderIndustriesIndex } from '../lib/hub-page.js';
 import { renderDemoPage } from '../lib/demo-page.js';
+import { renderKitPage } from '../lib/kit-page.js';
 import { INDUSTRIES } from '../content/industries.js';
 import { REGISTRY, BY_SLUG } from '../content/businesses/registry.js';
 
@@ -86,6 +87,10 @@ for (const slug of Object.keys(INDUSTRIES)) {
 
 for (const biz of businesses) {
   written.push(await write(`businesses/${biz.slug}/index.html`, renderBusinessPage(biz)));
+  /* Team-only content kit (noindex, not in the sitemap). */
+  if (biz.content && biz.sales) {
+    written.push(await write(`businesses/${biz.slug}/kit/index.html`, renderKitPage(biz)));
+  }
 }
 
 /* Remove business directories whose content file was unpublished or deleted. */

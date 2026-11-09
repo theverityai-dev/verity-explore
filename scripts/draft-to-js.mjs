@@ -84,6 +84,10 @@ export function parseDraft(md) {
   const rel = sec('Related and CTA');
 
   const todayBullets = bullets(today);
+  const extra = {};
+  if (S['Workflow']) extra.workflow = parseWorkflow(S['Workflow']);
+  if (S['Content kit']) extra.content = parseContent(S['Content kit']);
+  if (S['Sales kit']) extra.sales = parseSales(S['Sales kit']);
   const howParts = how.split(/^### /m);
 
   return {
@@ -130,6 +134,15 @@ export function parseDraft(md) {
       if (src) {
         const { source } = splitSource(src);
         if (source) out.source = source;
+      }
+      const root = optField(p, 'root');
+      if (root) {
+        out.root = root;
+        out.workaround = field(p, 'workaround');
+        out.options = list(field(p, 'options'), ' | ');
+        out.pick = field(p, 'pick');
+        const needs = optField(p, 'needs');
+        if (needs) out.needs = needs;
       }
       return out;
     }),
@@ -240,6 +253,75 @@ export function parseDraft(md) {
     related: list(field(rel, 'related'), ','),
     ctaHeading: field(rel, 'cta heading'),
     ctaLede: field(rel, 'cta lede'),
+    ...extra,
+  };
+}
+
+/* Optional sections: Workflow, Content kit, Sales kit. */
+
+function parseWorkflow(sec) {
+  return {
+    heading: heading(sec),
+    lede: lede(sec),
+    stages: sec.split(/^### /m).slice(1).map((st) => ({
+      name: st.split('\n')[0].replace(/^\d+\.\s*/, '').trim(),
+      owner: field(st, 'owner'),
+      does: field(st, 'does'),
+      data: field(st, 'data'),
+      breaks: field(st, 'breaks'),
+      handoff: field(st, 'handoff'),
+    })),
+  };
+}
+
+function parseContent(sec) {
+  const blocks = sec.split(/^### /m);
+  const named = (n) => blocks.find((b) => b.startsWith(n)) || '';
+  const kv = (str) =>
+    Object.fromEntries(
+      str.split(' | ').map((x) => {
+        const i = x.indexOf(': ');
+        return [x.slice(0, i).trim(), x.slice(i + 2).trim()];
+      })
+    );
+  return {
+    hooks: bullets(named('Hooks')),
+    explainers: bullets(named('Explainers')).map((b) => {
+      const o = kv(b);
+      for (const k of ['concept', 'pain', 'for', 'hook', 'show', 'visual', 'outcome', 'cta']) need(o[k], `explainer ${k}`);
+      return o;
+    }),
+    scripts: blocks
+      .filter((b) => b.startsWith('Script'))
+      .map((b) => ({
+        title: b.split('\n')[0].replace(/^Script[^:]*:\s*/, '').trim(),
+        beats: bullets(b).map((l) => {
+          const i = l.indexOf(': ');
+          return { at: l.slice(0, i), say: l.slice(i + 2) };
+        }),
+      })),
+  };
+}
+
+function parseSales(sec) {
+  const get = (k) => field(sec, k);
+  return {
+    leadWith: get('lead with'),
+    titles: list(get('titles'), ' | '),
+    deciders: get('deciders'),
+    size: get('best size'),
+    firstMessage: get('first message'),
+    discovery: list(get('discovery'), ' | '),
+    objections: sec
+      .split('\n')
+      .filter((l) => l.startsWith('- objection: '))
+      .map((l) => {
+        const [o, a] = l.slice(13).split(' | ');
+        return { o: need(o, 'objection'), a: need(a, 'objection answer') };
+      }),
+    demo: get('demo'),
+    proof: get('proof'),
+    followUp: get('follow up'),
   };
 }
 

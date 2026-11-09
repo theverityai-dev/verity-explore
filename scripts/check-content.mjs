@@ -134,6 +134,35 @@ for (const slug of slugs) {
     const prims = ids.filter((i) => PRIMITIVES.includes(i));
     if (wedge.length && prims.length < MIN_PRIMITIVES_WITH_WEDGE) err(`uses has wedge capabilities but only ${prims.length} primitives`);
 
+    /* Optional depth layer: pain depth, workflow, content kit, sales kit. */
+    (biz.pains || []).forEach((p, i) => {
+      if (p.root) {
+        need(p, ['workaround', 'options', 'pick'], `pains[${i}]`);
+        if (!Array.isArray(p.options) || p.options.length < 3) err(`pains[${i}].options needs 3 alternatives`);
+      }
+    });
+    if (biz.workflow) {
+      count(biz.workflow.stages, 8, 14, 'workflow.stages');
+      (biz.workflow.stages || []).forEach((s, i) => need(s, ['name', 'owner', 'does', 'data', 'breaks', 'handoff'], `workflow.stages[${i}]`));
+    }
+    if (biz.content) {
+      if ((biz.content.hooks || []).length < 25) err(`content.hooks has ${(biz.content.hooks || []).length}, expected at least 25`);
+      if ((biz.content.explainers || []).length < 10) err('content.explainers needs at least 10');
+      if ((biz.content.scripts || []).length < 5) err('content.scripts needs at least 5');
+      (biz.content.scripts || []).forEach((s, i) => { if ((s.beats || []).length < 5) err(`content.scripts[${i}] needs at least 5 beats`); });
+      const pains = biz.pains?.length || 0;
+      (biz.content.explainers || []).forEach((e, i) => {
+        const m = e.pain.match(/\(pain (\d+)\)/);
+        if (m && Number(m[1]) > pains) err(`content.explainers[${i}] cites pain ${m[1]}, page has ${pains}`);
+      });
+    }
+    if (biz.sales) {
+      need(biz.sales, ['leadWith', 'titles', 'deciders', 'size', 'firstMessage', 'discovery', 'objections', 'demo', 'proof', 'followUp'], 'sales');
+      if ((biz.sales.discovery || []).length < 5) err('sales.discovery needs at least 5 questions');
+      if ((biz.sales.objections || []).length < 4) err('sales.objections needs at least 4');
+    }
+    if ((biz.content || biz.sales) && !(biz.content && biz.sales)) err('content and sales must both be present');
+
     const flat = JSON.stringify(biz).toLowerCase();
     FORBIDDEN_CLAIMS.forEach((c) => { if (flat.includes(c.toLowerCase())) err(`contains forbidden phrase "${c}"`); });
     if (/[—–]/.test(JSON.stringify(biz))) warn('contains an em or en dash; use commas, colons or full stops');

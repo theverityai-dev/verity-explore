@@ -48,6 +48,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Example arithmetic: 800 surplus pieces at a fabric and making cost of ₹300 are ₹2.4 lakh in goods nobody ordered, plus the lost sales value if they cannot be sold.
 - fix: Each order is a record with styles, colours and size splits. A revision creates a new version with the change highlighted and notifies the cutting, stores and planning owners, who confirm that they have seen it.
 - screen: styles
+- root: The buyer talks to the merchandiser, the merchandiser talks to planning, and planning talks to the floor. Every step is a message, and a revision has no record that forces the next person to acknowledge it.
+- workaround: The merchandiser forwards the email, calls the cutting master and updates a sheet when time allows. It works while there are few styles and the same people are in the room.
+- options: A shared folder with the latest order sheet, which still depends on someone opening it | A WhatsApp group per order, which buries the change in chat | One order record with versions, where a change must be acknowledged by cutting, stores and planning
+- pick: Only the versioned record makes the change itself the trigger. Nobody has to remember to tell the next person, and the owner can see who has not yet confirmed.
+- needs: Buyer purchase orders and revisions as you receive them, and the names of the people who must confirm a change.
 
 ### 2. Sample approvals drag and nobody owns the delay
 - area: Orders
@@ -55,6 +60,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Every week lost at the sample stage comes out of cutting and sewing time later, and is usually recovered with overtime or air freight.
 - fix: Each style shows its sample stages with owner, sent date and buyer comments. Verity lists approvals that are overdue, with the shipments they will squeeze, and tasks the merchandiser to follow up.
 - screen: styles
+- root: A sample has no single owner after it leaves the factory. The date it was sent, the buyer comment and the next step sit in different inboxes.
+- workaround: A time and action calendar on the wall or in a sheet, updated by hand, reviewed when someone remembers.
+- options: A weekly sample meeting, which finds delays after they happen | A shared tracker sheet, which goes stale within days | Sample stages on each style with an owner and a due date, plus a list of what is overdue
+- pick: Putting the stage and owner on the style means the delay shows up next to the shipment it will squeeze, not in a separate calendar.
+- needs: The sample stages you follow for each buyer, and who owns each one.
 
 ### 3. The line waits for trims, buttons or labels
 - area: Materials
@@ -62,6 +72,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: A parked line wastes operator hours already paid for. Missing trims are one of the most common reasons for late garment shipments.
 - fix: Each style has a bill of materials of fabric, trims and packing. Verity compares what each order needs with stock and purchase orders, and lists shortfalls with the date by which each must reach the line.
 - screen: materials
+- root: Fabric is planned carefully but trims are bought late and tracked loosely, so the shortage is found when the line runs out.
+- workaround: The merchandiser or stores keeper keeps a trim list, checks it before sewing starts and chases suppliers by phone.
+- options: A trim checklist signed off before cutting, which depends on the checker | A purchase tracker per order, which does not compare against stock | A bill of materials per style compared with stock and open purchase orders, with a date each shortfall must arrive
+- pick: The comparison is done by the system for every order every day, so a shortfall is seen when there is still time to buy, not on the day the line stops.
+- needs: Bill of materials for each style, current trim stock, and open purchase orders with promised dates.
 
 ### 4. Fabric received is short, shaded or shrinks more than the test
 - area: Materials
@@ -69,6 +84,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Fabric is typically the largest cost of a garment. A shortfall means fewer pieces or a re-order, and a shade mismatch can fail a whole lot.
 - fix: Fabric is received by lot, with metres, shade band and test results recorded. Cutting draws from a named lot, and the consumption per style is compared with the booked quantity so shortfalls are seen at receipt, not at the cutting table.
 - screen: materials
+- root: Fabric is received by invoice quantity and checked later, if at all. Shade, shrinkage and short length are discovered at different stages by different people.
+- workaround: Stores counts rolls, the quality person checks a few, and results stay in separate notebooks.
+- options: Full inspection of every roll, which is thorough but slow and costly | Spot checks with notes on paper, which cannot be traced to a cut | Lot-wise receipt with metres, shade band and test results recorded, and cutting drawing from a named lot
+- pick: It keeps the effort you already spend and links it to the lot, so a problem found late can be traced to the roll and the supplier.
+- needs: Invoice length, measured length, shade band and the buyer limits for shrinkage.
 
 ### 5. Cut quantities and fabric consumption drift from the plan
 - area: Cutting
@@ -76,6 +96,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Example arithmetic: 3 percent over on a ₹6 crore monthly fabric spend is ₹18 lakh a year. Excess cut pieces are stock that is only sometimes sold.
 - fix: Cutting records fabric used, pieces cut and end bits per marker. Verity shows consumption against the plan by style and cutting table, and flags orders cut beyond the ordered quantity.
 - screen: materials
+- root: Planned consumption is a number on a sheet. Actual use is decided at the cutting table, and nobody adds up the small extras.
+- workaround: The cutting master keeps a register and the planner looks at it at month end.
+- options: A weekly manual comparison, which finds drift after the fabric is gone | A fabric issue slip per marker, which records but does not compare | Cutting records compared with planned consumption by style and table, flagging any order cut beyond its quantity
+- pick: Comparison happens as each marker is cut, which is when the extra can still be stopped.
+- needs: Planned consumption per style, markers, plies and pieces cut per marker.
 
 ### 6. Line efficiency is a number said at the end of the day
 - area: Lines
@@ -83,6 +108,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: A line that is 10 points below plan on a 50-operator line wastes the pay of five operators every shift, and the shortfall appears as late pieces later.
 - fix: Hourly or shift output is entered per line, with reasons for lost time. Verity shows efficiency against the standard minutes per piece, by line and style, and ranks causes of lost time over the week.
 - screen: lines
+- root: Line output is counted by hand and summed at the end of the day. Lost time has no reason attached, so the same loss repeats.
+- workaround: A supervisor writes hourly counts on a board and an office person calculates efficiency later.
+- options: Machine-level counters, which cost money and still need reasons for lost time | A daily efficiency sheet, which arrives after the day is over | Hourly or shift output with a reason for each loss, shown against standard minutes
+- pick: The reasons are the valuable part. They tell you what to fix, and they cost a supervisor a few seconds per hour.
+- needs: Standard minutes per piece for each style, line manpower and hourly counts.
 
 ### 7. Style changes keep restarting the learning curve
 - area: Lines
@@ -90,6 +120,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Frequent changeovers on small orders consume days of production that are not in the quote.
 - fix: Each style carries its operations, standard minutes and skill needs. Planning sees how many days a change costs and groups similar styles onto the same line, with the ramp-up recorded after each style.
 - screen: lines
+- root: Planning sees styles as orders. The floor feels them as new operations, new skills and a slow first day, and that cost is never written down.
+- workaround: The planner relies on memory of which line did similar work before.
+- options: Fix styles to lines permanently, which hurts when orders vary | Add buffer days by habit, which hides the real cost | Operations, skills and recorded ramp-up per style, so similar styles are grouped and the cost of a change is visible
+- pick: The ramp-up is measured each time, so the next plan uses real days instead of a guess.
+- needs: Operation list per style, skill needs and past efficiency by day after changeover.
 
 ### 8. Defects are found at final inspection, when it is too late to fix cheaply
 - area: Quality
@@ -97,6 +132,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Rework at the end costs many times more than at the operation. A failed inspection holds the shipment and can bring a buyer discount.
 - fix: Defects are recorded by operation, line and operator at inline, endline and final stages. Verity shows the defect that is rising, so a supervisor can fix the cause within the hour, and a failed lot shows which operations caused it.
 - screen: quality
+- root: Defects are counted at the end, by lot, not by operation or operator. The cause is already gone from the line by then.
+- workaround: Final inspection reports are totalled on paper, and a supervisor is told next morning.
+- options: More checkers at the end, which finds more but fixes nothing earlier | Weekly defect meetings, which are too slow | Defects recorded by operation, line and operator at inline, endline and final stages, with the rising defect shown the same hour
+- pick: It moves the finding to where the fix is cheapest, and it makes rework visible as a number.
+- needs: Your defect list, inspection stages and who records at each stage.
 
 ### 9. Pieces go out for embroidery, printing or wash and come back different
 - area: Job work
@@ -104,6 +144,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Missing pieces cannot be replaced from the cut fabric left, and an unrecorded shortage is absorbed by the factory.
 - fix: Each outward challan records style, pieces, process and the expected return. Returns are matched, shortages and rejects are recorded against the unit, and work in hand with each is a number.
 - screen: lines
+- root: Pieces leave on a gate pass or challan and return in parts. The match between sent, received and rejected is done later, if at all.
+- workaround: A job work register and phone calls to the unit when the return is late.
+- options: Count at the gate on every return, which helps but is not recorded against the unit | A shared sheet with the vendor, which depends on them updating it | Outward challan with expected return, returns matched to it, and shortages and rejects recorded against the unit
+- pick: It gives a number for work in hand at each unit and a clear record to settle a dispute.
+- needs: Outward challans with style, pieces, process and expected return date.
 
 ### 10. The costing sheet is not the cost of the order
 - area: Costing
@@ -111,6 +156,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: A style that appears to give 8 percent margin can give nothing, and the factory only finds out after shipping.
 - fix: The quote is built from the style’s bill of materials, operations and rates. After the order, the actual consumption, efficiency and rejects are compared with the quote, so the real margin per style is known and usable for the next quote.
 - screen: styles
+- root: The quote is made once from assumptions and never compared with what the order actually used.
+- workaround: Costing is redone by the owner or accounts after shipment when something feels wrong.
+- options: Keep a margin buffer in every quote, which loses orders or hides losses | Review a few orders every quarter, which misses the pattern | Quote built from the style record, then actual consumption, efficiency and rejects compared with it after the order
+- pick: The next quote starts from what the last one really cost.
+- needs: Bill of materials, operations and rates per style, and the actuals the floor already records.
 
 ### 11. The ex-factory date slips and the only remedy is air freight
 - area: Shipments
@@ -118,6 +168,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Example arithmetic: air freight on 5,000 pieces that should have gone by sea can run into several lakh rupees, borne by the factory.
 - fix: Every order has a shipment date with a countdown of the steps behind it: cutting, sewing, finishing, inspection, packing, documents, booking. Verity shows which step is behind and by how many days, and tasks its owner.
 - screen: shipments
+- root: The ship date is one number. The steps behind it each have an owner, but nobody sees them together, so a slip in cutting is not linked to the container.
+- workaround: A chase meeting a few days before the date and air freight if it fails.
+- options: Daily production meeting, which depends on who speaks | Calendar reminders per order, which do not show the cause | A countdown of every step behind the date, with the late step and its owner shown
+- pick: The warning arrives weeks earlier and names the owner, so action starts while it is cheap.
+- needs: The steps and lead times you use from cutting to booking.
 
 ### 12. Export documents, incentives and payment realisation are tracked loosely
 - area: Money
@@ -126,6 +181,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - fix: Each shipment carries its invoice, shipping bill, payment due date and incentive claim status. Verity lists payments due, overdue realisations and claims not yet lodged.
 - screen: shipments
 - source: (Manorama Yearbook, RoSCTL extension: https://www.manoramayearbook.in/current-affairs/india/2026/10/01/rosctl-scheme-extended-explained.html)
+- root: Export paperwork is split between merchandiser, accounts and the forwarder, and nobody owns the follow-up after shipment.
+- workaround: Accounts keeps a sheet of invoices and pursues realisation when cash is tight.
+- options: Hand over to the forwarder and CA entirely, which gives less visibility | A tracker sheet, which needs constant updating | Each shipment carries its invoice, shipping bill, due date and claim status, with overdue items listed
+- pick: It keeps the people you already use and gives you one list of what is due and what is overdue.
+- needs: Invoice, shipping bill and payment due dates, and the incentive schemes you claim under.
 
 ### 13. Operators leave, attendance swings and compliance audits arrive
 - area: People
@@ -133,6 +193,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: A short line, a failed audit, and a buyer who holds orders until the finding is closed.
 - fix: Attendance, overtime, skills, wages by piece or time, and contract workers are recorded per person. The records an auditor asks for are produced from the same source, and absentees are seen the evening before.
 - screen: owner
+- root: Attendance, output and wages are kept in separate places, so a dispute needs three people and an afternoon to settle.
+- workaround: A muster roll, a production sheet and an accounts sheet, reconciled by hand at the end of the month.
+- options: Pay by attendance only, which loses the link to output | Separate supervisor books, which cannot be audited | Attendance, overtime, skills and piece or time earnings in one record per person, produced for audits from the same source
+- pick: One record settles disputes quickly and answers an auditor without a scramble.
+- needs: Employee and contract worker lists, shifts, and how each person is paid.
 
 ### 14. Several buyers, several units, no single picture
 - area: Owner
@@ -140,7 +205,11 @@ Lede: These are the situations garment makers describe again and again. For each
 - cost: Capacity goes to the loudest buyer and not the most profitable, and a problem in one unit is found when the shipment is late.
 - fix: A morning view lists orders at risk, lines behind, shortfalls and dues, each item with an owner. Units are locations in one system, so lines and orders compare side by side.
 - screen: owner
-
+- root: Each unit and each buyer reports in its own format. The group picture exists only in the owner’s head.
+- workaround: Daily calls to unit heads and a monthly consolidated sheet.
+- options: More calls, which do not scale | A weekly review pack built by hand, which is out of date on arrival | A morning view of orders at risk, lines behind, shortfalls and dues, with each item owned
+- pick: It replaces the calls with a list of exceptions, so the owner talks only about what needs a decision.
+- needs: One agreed set of daily numbers from each unit.
 
 ## Facts
 
@@ -778,6 +847,188 @@ Heading: Questions garment makers ask.
 - cta heading: Start with the orders that are about to miss their ship date.
 - cta lede: Tell us how your factory runs and we will show you the at-risk orders, the trim shortfalls and the overdue realisations it would find, using your own numbers.
 
+## Workflow
+
+Heading: From buyer enquiry to cash, and where each handoff can fail.
+Lede: A garment order passes through eleven stages and many hands. The stage owners are usually good at their own work. The money is lost where one stage hands over to the next.
+
+### 1. Enquiry and costing
+- owner: Merchandiser and owner
+- does: The buyer sends a tech pack or sample. The factory works out fabric, trims, operations and a price.
+- data: Style, consumption, operations, quoted price, target margin, and the version quoted.
+- breaks: The quote rests on assumptions that no one compares with the real cost later.
+- handoff: Approved quote goes to the merchandiser, who opens the order.
+
+### 2. Order confirmation and sampling
+- owner: Merchandiser
+- does: The purchase order arrives and sample stages begin: fit, pre-production and approvals.
+- data: Order, styles, colours, size splits, sample stages with sent date and buyer comments.
+- breaks: Approvals wait with the buyer, and the ship date does not move.
+- handoff: Approved samples release the bulk fabric to planning and stores.
+
+### 3. Planning and time and action calendar
+- owner: Planner
+- does: Dates are set for fabric, trims, cutting, sewing, finishing and shipment, and styles are assigned to lines.
+- data: Calendar per order, line allocation, capacity, standard minutes per piece.
+- breaks: The calendar lives in a sheet that does not know about late trims or revised quantities.
+- handoff: Plan goes to purchase and stores for materials and to the floor for lines.
+
+### 4. Purchase of fabric and trims
+- owner: Purchase
+- does: Fabric, buttons, zips, labels and packing material are ordered from the bill of materials.
+- data: Purchase orders, supplier, promised dates, price.
+- breaks: Trims are bought late, and promised dates are not tracked against need dates.
+- handoff: Goods arrive at stores with the supplier challan.
+
+### 5. Receiving and inspection of material
+- owner: Stores keeper and quality
+- does: Rolls and cartons are counted, checked for length, shade and shrinkage, and stored by lot.
+- data: Lot, metres received against invoice, shade band, test results, rack location.
+- breaks: Short length or the wrong shade is found at the cutting table, not at the gate.
+- handoff: Cleared lots are issued to cutting against a cutting plan.
+
+### 6. Cutting
+- owner: Cutting master
+- does: Markers are made, fabric is spread and cut, and pieces are bundled.
+- data: Fabric issued, plies, pieces cut, end bits, consumption against plan.
+- breaks: A revised size ratio does not reach the table, and extra pieces are cut without anyone adding them up.
+- handoff: Bundles go to the sewing lines with the line plan.
+
+### 7. Sewing
+- owner: Line supervisors
+- does: Operators complete operations in sequence against the standard minutes for the style.
+- data: Hourly output per line, lost time with reasons, operator attendance.
+- breaks: Efficiency is known only at day end, and a style change restarts the learning curve unseen.
+- handoff: Sewn garments pass to finishing with an inline quality record.
+
+### 8. Job work and processes
+- owner: Production manager
+- does: Some pieces go out for embroidery, printing or wash and return.
+- data: Outward challan, pieces sent, process, expected return, pieces received and rejected.
+- breaks: Pieces return short or different and the settlement is argued weeks later.
+- handoff: Returned pieces rejoin the line or go to finishing.
+
+### 9. Finishing, inspection and packing
+- owner: Quality and packing in charge
+- does: Garments are trimmed, pressed, inspected against the buyer standard and packed to the packing list.
+- data: Defects by type and operation, AQL result, cartons, packing list.
+- breaks: Defects are discovered when it is too late to fix them cheaply, and a failed lot has no clear cause.
+- handoff: Passed cartons are released for dispatch with the inspection report.
+
+### 10. Dispatch and shipping documents
+- owner: Merchandiser and shipping clerk
+- does: The shipment is booked, documents prepared and goods handed to the forwarder or transporter.
+- data: Booking, invoice, packing list, shipping bill, ex-factory date.
+- breaks: A late step upstream turns into air freight, and documents wait for someone to complete them.
+- handoff: Shipping documents go to accounts for the invoice and realisation.
+
+### 11. Invoice, payment and costing
+- owner: Accounts and owner
+- does: The invoice is raised, payment and incentives are followed, and the order is costed.
+- data: Invoice, due date, realisation, incentive claim, actual cost against quote.
+- breaks: Payment chasing starts late, and the order is rarely costed against its quote.
+- handoff: Actual cost returns to step 1 as the starting point for the next quote.
+
+## Content kit
+
+### Hooks
+- Buyer ne size ratio badal diya. Cutting table ko kisne bataya?
+- Trims nahi aaye aur line aadhi pe ruki hai. Ye kal hi pata chal sakta tha.
+- Sampling mein do hafte nikal gaye. Ship date wahi hai. Kaun jawab dega?
+- Line ki efficiency shaam ko pata chalti hai. Tab tak din nikal chuka hota hai.
+- Fabric invoice se 3 percent kam aaya. Cutting table pe jaakar pata chala.
+- 800 extra pieces cut ho gaye. Order mein nahi the.
+- Embroidery wale ko 2000 pieces bheje. Wapas kitne aaye, sahi hisaab hai?
+- Ship date se pehle air freight ka kharcha. Ye bacha ja sakta tha.
+- Costing sheet mein margin dikhta hai. Order ke baad actual margin kaun dekhta hai?
+- Defect final inspection mein mila. Line pe kab ban raha tha, kisko pata?
+- Naya style aaya aur line ki output aadhi. Is learning curve ka paisa kisne gina?
+- Roz subah unit heads ko phone karke poochna padta hai kya chal raha hai?
+- Operator absent hua aur aapko line pe pata chala. Kal shaam ko pata ho sakta tha.
+- Export payment due thi 40 din pehle. Kisi ne yaad dilaya?
+- Buyer ka revision email aaya. Merchandiser chutti pe tha.
+- Fabric lot ka shade alag nikla. Kis supplier ka, kis roll ka, koi record hai?
+- Incentive claim file karna bhool gaye. Paisa gaya.
+- Do unit, teen buyer, ek Excel sheet. Kaun sa order khatre mein hai?
+- Wage dispute pe teen log, ek dopahar. Attendance aur output ek jagah kyun nahi?
+- Aap factory mein nahi hote to line check kaun karta hai?
+- Trim ka supplier bola kal bhej dunga. Kal kab aata hai?
+- Rework ka kharcha kisi ko dikhta hai? Kaun si operation se aa raha hai?
+- Cutting ke baad pata chala ki fabric kam hai. Isko receipt pe pakadna tha.
+- Sample approve nahi hua aur bulk fabric ruka hai. Owner kaun?
+- Buyer bola late shipment ka discount do. Kahan atka tha, kisko pata?
+- Packing list aur cartons mein farq nikla. Buyer ke warehouse mein pata chala.
+
+### Explainers
+- concept: The revision that never reached the table | pain: Buyer revisions reach the floor late (pain 1) | for: Owners and merchandisers | hook: Buyer ne size ratio badal diya. Cutting table ko kisne bataya? | show: An order record with a new version, the changes highlighted and three confirmations pending from cutting, stores and planning | visual: Two screens side by side, the old and new size split, with the cutting table card turning from stale to confirmed | outcome: No extra pieces are cut from an old sheet | cta: Book the free seven day demo on your own orders
+- concept: Trims before the line stops | pain: Line waits for trims (pain 3) | for: Production managers and purchase heads | hook: Trims nahi aaye aur line aadhi pe ruki hai | show: A shortfall list sorted by the date each item must reach the line | visual: A line board where one lane dims as a label item turns amber a week before | outcome: Shortfalls are bought while there is time | cta: Send us one live order and see its trim gaps
+- concept: Fabric that was short at the gate | pain: Fabric short, shaded or shrinks (pain 4) | for: Stores and quality | hook: Fabric invoice se 3 percent kam aaya | show: A lot receipt with metres against invoice and the shade band, then the cutting plan drawing from that lot | visual: A roll counter against an invoice number, ending on a flagged lot | outcome: Problems are caught at receipt, with the supplier named | cta: Try it on your next fabric lot
+- concept: Cutting more than ordered | pain: Cut quantities drift (pain 5) | for: Owners and cutting heads | hook: 800 extra pieces cut ho gaye | show: Consumption against plan per table and a flag on orders cut beyond quantity | visual: A bar rising past a line marked with the ordered quantity | outcome: Overcutting stops while the fabric is still on the table | cta: See the cutting view on your numbers
+- concept: Efficiency before the day ends | pain: Line efficiency known at day end (pain 6) | for: Production heads | hook: Efficiency shaam ko pata chalti hai | show: Hourly output against standard minutes and a ranked list of lost time reasons | visual: A line chart building hour by hour with reasons labelled underneath | outcome: The loss is fixed in the same shift | cta: Start with one line for seven days
+- concept: Pieces out, pieces back | pain: Job work comes back different (pain 9) | for: Production managers | hook: Embroidery wale ko 2000 pieces bheje. Wapas kitne aaye? | show: Outward challan matched with returns, the shortage and rejects shown against the unit | visual: 2000 icons leaving, 1940 returning, and the gap labelled with the unit name | outcome: Disputes end with a number | cta: Show us your job work register
+- concept: The real margin of an order | pain: Costing sheet is not the real cost (pain 10) | for: Owners and accounts | hook: Costing sheet mein margin dikhta hai. Actual margin kaun dekhta hai? | show: Quote against actual consumption, efficiency and rejects for a finished order | visual: Two columns, quoted and actual, with the difference highlighted | outcome: The next quote uses true cost | cta: Cost one finished order with us
+- concept: The date that slipped | pain: Ex-factory date slips (pain 11) | for: Owners and merchandisers | hook: Ship date se pehle air freight ka kharcha | show: A countdown of every step behind the date and the late step with its owner | visual: A timeline that turns amber at the step that is behind | outcome: Action starts weeks earlier | cta: Bring one at-risk order to the demo
+- concept: Owner morning view | pain: Several buyers, units, no picture (pain 14) | for: Owners | hook: Roz subah unit heads ko phone karke poochna padta hai? | show: One list of orders at risk, lines behind, shortfalls and dues | visual: A phone-sized card list replacing a stack of call logs | outcome: The owner talks only about exceptions | cta: Ask for the seven day demo
+- concept: One person, one record | pain: Wage disputes and compliance (pain 13) | for: HR and accounts | hook: Wage dispute pe teen log, ek dopahar | show: Attendance, overtime and earnings for one worker on one record | visual: Three scattered notebooks collapsing into one worker card | outcome: Disputes close in minutes | cta: Try it on one month of your muster roll
+
+### Script 1: The revision nobody passed on
+- 0 to 5s: Buyer ne size ratio badal diya. Cutting table ko kisne bataya?
+- 5 to 15s: Email merchandiser ke paas gaya, cutting master purani sheet pe kaam kar raha tha, aur 800 extra pieces cut ho gaye.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Dekhiye, order ka naya version, badla hua hissa highlight, aur cutting, stores, planning se confirmation pending.
+- 40 to 50s: Owner ko subah list mein dikhta hai kaun confirm kar chuka aur kaun baaki hai.
+- 50 to 60s: Aapki team demo use karke dekhe. Pasand aaye aur value dikhe, tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Trim ka intezaar
+- 0 to 5s: Line aadhi chali aur baaki ruk gayi. Label nahi aaye.
+- 5 to 15s: Fabric aur cutting ready thi. Trim ki list kisi ke paas thi, par date ka hisaab kisi ke paas nahi.
+- 15 to 25s: Apna order batayiye. Saat din mein aapke actual data par customised demo, bilkul free.
+- 25 to 40s: Har style ka bill of materials, stock aur purchase orders se milaya jaata hai. Jo kam hai woh us date ke saath dikhta hai jab tak use line pe hona chahiye.
+- 40 to 50s: Purchase head ko subah ki list milti hai, aur trim ka delay hafta pehle pakda jaata hai.
+- 50 to 60s: Team khud dekhe. Value dikhe tabhi aage badhein. Nahi toh koi charge nahi.
+
+### Script 3: 2000 gaye, kitne aaye
+- 0 to 5s: Embroidery wale ko 2000 pieces bheje. Wapas kitne aaye?
+- 5 to 15s: Kuch aaye, kuch baad mein. Reject kitne hue, kiski galti, koi record nahi.
+- 15 to 25s: Aapka job work register hamein dijiye. Saat din mein customised demo, aapke data par, free.
+- 25 to 40s: Har challan mein style, pieces, process, aur wapsi ki date. Wapsi match hoti hai, kami aur reject unit ke naam par.
+- 40 to 50s: Owner ko dikhta hai kis unit ke paas kitna maal hai aur kaun late hai.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Efficiency subah pata ho
+- 0 to 5s: Line ki efficiency shaam ko pata chalti hai. Tab tak din nikal gaya.
+- 5 to 15s: Supervisor ka board, office ka calculation, aur kal subah ki meeting.
+- 15 to 25s: Ek line ke saath saat din ka demo, aapke actual numbers par, free.
+- 25 to 40s: Har ghante ki output standard minutes ke saamne, aur lost time ka reason. Hafte ke end tak sabse bada reason upar.
+- 40 to 50s: Production head ko woh reason dikhta hai jise theek karne se sabse zyada output milega.
+- 50 to 60s: Team dekhe, pasand aaye tab aage. Nahi toh koi charge nahi.
+
+### Script 5: Ship date aur air freight
+- 0 to 5s: Ship date se teen din pehle pata chalta hai ki kaam peeche hai.
+- 5 to 15s: Phir overtime, phir air freight, phir buyer ka discount.
+- 15 to 25s: Apna ek at-risk order lekar aaiye. Saat din mein customised demo, aapke data par, free.
+- 25 to 40s: Har order ke peeche ke step, cutting se booking tak, countdown ke saath. Jo step peeche hai woh owner ke naam ke saath amber dikhta hai.
+- 40 to 50s: Aapko hafton pehle pata chalta hai, jab abhi sasta solution mil sakta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Late shipments from revisions, trim gaps and slow sampling
+- titles: Managing Director | Owner | Director Operations | General Manager Production | Head of Merchandising | Factory Manager | Head of Planning
+- deciders: The owner or managing director decides. The general manager or merchandising head influences, and accounts raises cost questions.
+- best size: Roughly 100 to 500 machines or workers, with several buyers and at least one line of outside job work, where the merchandiser is the link between everything.
+- first message: Hello, I work with garment makers on one problem: buyer changes and trim gaps that show up at the cutting table or on the line. We build a free seven day demo on your actual order data so your team can see it. Can I ask how you track revisions today?
+- discovery: How does a buyer revision reach the cutting table today? | Which was the last order that went to air freight, and what step caused it? | How do you know on Tuesday that the Friday shipment is safe? | Who tracks trims and labels, and where is that list? | What do you do when job work returns short? | How do you cost an order after it ships? | Which numbers do you ask your unit heads for every morning?
+- objection: We already use Excel and it works | Excel works until the person who maintains it is away. We keep the sheets you trust and connect them to one order record, so the sheet stops being the only copy.
+- objection: My team will not use new software | We start with the three or four screens each role needs and bring your own formats. Your supervisors keep their routine; Verity records it.
+- objection: We tried an ERP and it failed | Most fail because the factory is asked to fit the software. We map your actual process first and configure around it. You see the demo on your data before you decide.
+- objection: It is too expensive | Cost depends on scope, so we start with the one problem that costs you most. The demo is free and you decide after seeing it.
+- objection: We cannot spare time for a project | The fixed four week plan needs about 8 to 14 owner hours in total. The rest is done by us with your team.
+- demo: An order with two revisions, a trim shortfall dated to the line and a job work challan with a shortage, loaded from the buyer's real order sheet.
+- proof: Take one at-risk order and show, with your own data, the step that is behind and by how many days.
+- follow up: Thank you for your time. I have put together the demo around the order you described, including the revision and the trim gap. When can your merchandising head and I walk through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields (root, workaround, options, pick, needs), the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general garment factory practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.
