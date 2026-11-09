@@ -48,6 +48,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Example arithmetic: a wholesaler with 150 retailers and an average ₹1.2 lakh outstanding is carrying ₹1.8 crore of other people’s money. At a 12% cost of funds, every extra 15 days of delay across the book costs about ₹90,000.
 - fix: Each retailer has a credit limit and a credit period. When an order would take them over either, it waits for one tap from you, with the dues and age of the oldest bill shown beside it.
 - screen: credit
+- root: Credit is given on relationship, and the limit and the period are known to the owner but not checked at the moment an order is taken.
+- workaround: The salesman or munim asks the owner before big orders, and small ones go through.
+- options: Cash only, which loses retailers | A credit register kept by the munim | A credit limit and period for each retailer, with an order that would cross either waiting for one tap from you with dues and age shown
+- pick: The decision is made once, at the point of order, with the facts in front of you.
+- needs: Retailer list with limits and periods you already work to.
 
 ### 2. Collections depend on who remembers to ask
 - area: Credit
@@ -56,6 +61,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - fix: Outstanding is aged into 0 to 30, 31 to 60 and over 60 days per retailer. Each late buyer gets a follow-up task for a named person, and the promise date and the result are written back to the retailer’s record.
 - screen: credit
 - source: (GAME, FISME and C2FO report, via Storyboard18, 2025: https://storyboard18.com/how-it-works/delayed-payments-to-msmes-fall-to-rs-7-34-lakh-crore-report-84822.htm)
+- root: Collections are chased by whoever remembers, and the promise given by a retailer is not recorded.
+- workaround: The munim calls retailers when the owner asks, and the owner calls big ones.
+- options: A weekly collection day | Hire a collection person | Outstanding aged into bands per retailer, each late buyer with a follow-up task for a named person, and the promise date recorded
+- pick: Follow-up does not depend on memory, and a broken promise is visible.
+- needs: Outstanding by retailer and invoice dates.
 
 ### 3. Post-dated cheques that bounce, discovered late
 - area: Credit
@@ -63,6 +73,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: A bounced cheque means a bill that was counted as received but is not, plus a week or more before you chase it. Repeat bouncers keep buying because nobody joined the dots.
 - fix: Every cheque is a record against the retailer with its date, bank and the bills it settles. A cheque due this week appears in a deposit list, and a bounce reopens the bills and marks the buyer for approval on the next order.
 - screen: credit
+- root: Post-dated cheques are kept in a drawer and the dates are in a diary, so a bounce is discovered when the bank tells you.
+- workaround: The munim deposits cheques by date from the drawer.
+- options: Take only cash or transfer | A cheque register in a notebook | Every cheque as a record with date, bank and the bills it settles, a deposit list for the week, and a bounce recorded with its effect on the retailer
+- pick: Cheques are deposited on time and a bounce changes the credit view at once.
+- needs: Cheque details as they arrive.
 
 ### 4. Rates quoted from memory, floors broken quietly
 - area: Rates
@@ -70,6 +85,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Example arithmetic: on a line sold at ₹1,000 a unit with a 4% margin, a ₹20 slip is half the profit. Across 200 invoices a month, one quiet rate error a day adds up quickly.
 - fix: Rate slabs by quantity and buyer type are kept on each line. A quote below the floor for that quantity needs an approval, and Verity shows each week which invoices went under their slab and who raised them.
 - screen: rates
+- root: Rates are said on the phone by whoever is at the counter, and the floor price for a quantity is not written anywhere.
+- workaround: The owner approves exceptions in person when he is there.
+- options: A printed rate card | A fixed margin on every line | Rate slabs by quantity and buyer type on each line, a quote below the floor needing approval, and a weekly list of which sales broke the floor
+- pick: The owner sees margin leaks without sitting at the counter.
+- needs: Your rate slabs and the floor price per line.
 
 ### 5. The market moves daily and your stock does not
 - area: Rates
@@ -77,6 +97,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Price exposure is the whole risk of the trade. Without a daily comparison, you find out the stock is under water when you try to sell it.
 - fix: You enter the day’s market rate per line, or a small team member does. Verity sets it against your holding cost, flags lines now below cost, and shows the rupee value of the gap before you decide to hold or sell.
 - screen: rates
+- root: Market rates change daily, and the stock bought at an earlier rate is sold at the new one without checking.
+- workaround: The owner watches the market and instructs the counter by phone.
+- options: Reprice only weekly | Fix a margin over cost and ignore the market | The day's market rate entered per line and set against holding cost, with lines now below cost flagged
+- pick: You see which lines lose money today and which gain.
+- needs: Daily rates for your main lines and the cost of stock held.
 
 ### 6. Slow stock that ties up cash in the godown
 - area: Stock
@@ -84,6 +109,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Example arithmetic: ₹10 lakh sitting for four months at a 12% cost of funds is about ₹40,000 of interest, before damage, shrinkage or expiry.
 - fix: Every stock lot carries its receive date. Verity lists lines by age, how many days of sales they represent at the current pace, and which retailers last bought them, so a clearance push goes to the right buyers.
 - screen: stock
+- root: Stock is bought in bulk to catch a price, and no one looks at how long it has sat.
+- workaround: The godown keeper tells the owner when space is short.
+- options: A yearly stock count | Sell by discount at year end | Every stock lot carrying its receive date, with lines listed by age, days of sales held at the current pace, and the retailers who last bought each
+- pick: Slow stock is pushed while it still has value, and the buyers are known.
+- needs: Stock by lot with receive date and recent sales.
 
 ### 7. Buying by gut leaves fast lines empty and slow lines full
 - area: Stock
@@ -91,6 +121,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: A missed sale goes to a competitor, who may keep the retailer. An over-buy ties up money and space. Both come from the same missing view.
 - fix: Verity shows sales per week, stock in hand, goods on order and the supplier’s lead time for each line, and drafts a purchase list of what is likely to run out before the next delivery. You approve or change it.
 - screen: stock
+- root: Purchase decisions are made by the owner's memory of what sells, and he is not looking at stock and orders together.
+- workaround: A weekly list from the godown and the owner's instinct.
+- options: Fixed reorder levels, which ignore season | A purchase manager | Sales per week, stock, goods on order and supplier lead time per line, with a drafted purchase list of what is likely to run out
+- pick: Fast lines stop running out and slow lines stop piling up.
+- needs: Sales history and supplier lead times per line.
 
 ### 8. Orders on phone, WhatsApp and slips, all in different formats
 - area: Orders
@@ -98,6 +133,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Wrong quantities mean returns, a second trip and a retailer who trusts you a little less each time.
 - fix: Every order becomes one record with lines, rates, the salesman, the retailer and a state: received, checked for credit, picked, loaded, delivered. Whoever takes it sees the same thing as the godown does.
 - screen: orders
+- root: Orders come by phone, messaging and slips, and each one is written down in a different way by a different person.
+- workaround: The munim rewrites each order into the billing system.
+- options: Ask all retailers to use one channel, which they will not | A salesman writes every order | Every order as one record with lines, rates, salesman, retailer and a state from received to delivered
+- pick: Whoever picks up the order sees the same record and the state is clear.
+- needs: The channels through which orders reach you today.
 
 ### 9. Picking mistakes and short deliveries found at the retailer’s shop
 - area: Orders
@@ -105,6 +145,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Credit notes, a free top-up trip, and arguments over who is right. Each one eats the margin on a whole order.
 - fix: The picklist is generated from the order and ticked off by the loader. The delivery record carries the count, and a shortage or damage on arrival is noted against the order the same day.
 - screen: orders
+- root: Picking is done by the loader from a list that was copied, and the count is checked only when the retailer complains.
+- workaround: The delivery boy counts at the shop and the retailer disputes later.
+- options: Weigh or count all packages twice | Accept the loss | A picklist generated from the order and ticked off by the loader, a delivery record with the count, and a shortage or damage on arrival noted at once
+- pick: Disputes start from a record and fewer happen.
+- needs: Orders and the delivery process you follow.
 
 ### 10. Trucks, e-way bills and freight as paper at the weighbridge
 - area: Transport
@@ -112,6 +157,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: A vehicle held at a check post, a penalty, or a freight bill paid twice. All avoidable with the right record at the right moment.
 - fix: Each dispatch records the vehicle, driver, transporter, lorry receipt number and your e-way bill number. A dispatch without one gets flagged before the van leaves, and monthly freight is checked against the dispatches.
 - screen: orders
+- root: Dispatch papers, e-way bill and freight are written on paper and checked at the weighbridge or by the driver.
+- workaround: The munim hands over papers by hand and the driver stops at the checkpoint.
+- options: A paper dispatch register | Rely on the transporter | Each dispatch recording vehicle, driver, transporter, lorry receipt and e-way bill number, with a dispatch lacking one flagged before the vehicle leaves
+- pick: Papers are complete when the vehicle moves.
+- needs: Vehicle and transporter details and the e-way bill number as you generate it.
 
 ### 11. Supplier dues paid late, or early and then short of cash
 - area: Suppliers
@@ -120,6 +170,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - fix: Each supplier bill shows its due date and a flag for whether the supplier is a micro or small enterprise. A payables list sorts by due date, so payments go out in the right order, with the cash they need.
 - screen: suppliers
 - source: (ClearTax, Section 43B(h): https://cleartax.in/s/section-43bh-of-income-tax-act)
+- root: Supplier dues are paid when the supplier calls or when cash allows, and the legal limit for small suppliers is not tracked.
+- workaround: The owner decides each week whom to pay.
+- options: Pay everyone on the due date | A payables sheet | Each supplier bill with due date and a micro or small flag, sorted by due date so payments are planned
+- pick: Payment is planned instead of reacting to calls.
+- needs: Supplier bills with due dates and a size flag where you know it.
 
 ### 12. No memory of which supplier gave the better rate
 - area: Suppliers
@@ -127,6 +182,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: A 1% better buying rate on a ₹5 crore annual purchase is ₹5 lakh. You only get it if you can see the comparison.
 - fix: Each purchase records the supplier, rate, quantity, delay in delivery and quality complaints. A comparison per line shows who was cheapest, who was late, and who sent returns.
 - screen: suppliers
+- root: Which supplier gave the best rate and which delivered late is held in the owner's head.
+- workaround: The owner trusts his memory of each supplier.
+- options: Stay with one supplier | A yearly review | Each purchase recording supplier, rate, quantity, delivery delay and complaints, with a per-line comparison of price and reliability
+- pick: Purchases go to the supplier who really performs.
+- needs: Purchase records by supplier.
 
 ### 13. Salesmen, loaders and the munim each know a part
 - area: People
@@ -134,6 +194,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Retailers drift to a competitor’s salesman. The new person starts from nothing, and the owner is back to answering every call.
 - fix: Retailers belong to the business, not to a salesman. Each salesman’s route, orders, collections and targets are visible, and reassigning a route moves the history and the open dues in one step.
 - screen: owner
+- root: Retailers are known to the salesman, not to the business, so a salesman's departure takes the relationship with him.
+- workaround: The owner keeps close ties with the important retailers himself.
+- options: Rotate salesmen | Pay commission to hold them | Retailers belonging to the business, with each salesman's route, orders, collections and targets visible, and reassigning a route moving the history with it
+- pick: The business owns the relationship record.
+- needs: Retailer list and the salesman for each route.
 
 ### 14. You cannot say which retailers and lines make the money
 - area: Owner
@@ -141,7 +206,11 @@ Lede: These are the situations wholesalers describe again and again. For each on
 - cost: Decisions are made on turnover, which tells you how busy you are, not how well you are doing.
 - fix: Margin per line and per retailer is calculated from the buying rate, the selling rate and the credit days. The morning screen shows dues, stock under water, orders waiting and approvals, so you start from facts.
 - screen: owner
-
+- root: Margin is known on the bill but not after the credit days and the discount are counted.
+- workaround: The owner feels which lines sell well.
+- options: A yearly profit review by line | Rely on the accountant's summary | Margin per line and per retailer from buying rate, selling rate and credit days, with dues, stock under water and slow lines on a morning screen
+- pick: You see which lines and retailers make the money.
+- needs: Buying and selling rates and credit days.
 
 ## Facts
 
@@ -728,6 +797,165 @@ Heading: Questions wholesalers ask.
 - cta heading: Start with the retailers who owe you the most.
 - cta lede: Tell us how you trade and we will show you the aged dues, the stock under water and the supplier bills coming up, using your own numbers.
 
+## Workflow
+
+Heading: From market buying to collected cash, and where each handoff slips.
+Lede: A wholesaler buys in volume, sells on credit and moves goods daily. Each step is run by someone with a good memory, and the losses sit in the credit, the rate and the stock that no one sees together.
+
+### 1. Buying
+- owner: Owner and purchase head
+- does: Goods are bought from suppliers and the market.
+- data: Supplier, rate, quantity, delivery delay.
+- breaks: Buying is by gut and the supplier record is in memory.
+- handoff: Goods arrive at the godown.
+
+### 2. Receiving and storing
+- owner: Godown keeper
+- does: Goods are counted and stored.
+- data: Quantity, receive date, location, damage.
+- breaks: Slow stock is not seen by age.
+- handoff: Stock becomes available to sell.
+
+### 3. Rate setting and quoting
+- owner: Owner and sales
+- does: Rates are set for the day and quoted to retailers.
+- data: Market rate, floor price, slab, margin.
+- breaks: Rates are said from memory and floors are broken.
+- handoff: Orders are taken.
+
+### 4. Order taking
+- owner: Salesmen and munim
+- does: Orders arrive from phone, messaging and slips.
+- data: Retailer, lines, quantity, rate, salesman.
+- breaks: Formats differ and credit is not checked.
+- handoff: Orders go to the godown for picking.
+
+### 5. Picking and loading
+- owner: Loaders
+- does: Goods are picked and loaded.
+- data: Picklist, count, vehicle, e-way bill.
+- breaks: Mistakes are found at the retailer's shop.
+- handoff: The vehicle leaves with papers.
+
+### 6. Delivery and billing
+- owner: Delivery team and munim
+- does: Goods are delivered and the bill is raised.
+- data: Delivered count, shortages, signed bill.
+- breaks: Shortages and damages are disputed later.
+- handoff: The bill enters the outstanding list.
+
+### 7. Collection
+- owner: Munim and salesmen
+- does: Payments and cheques are collected.
+- data: Cheque details, promise date, outstanding age.
+- breaks: Collection depends on who remembers and cheques bounce late.
+- handoff: Collected cash goes to payables.
+
+### 8. Payment to suppliers and review
+- owner: Owner and accounts
+- does: Suppliers are paid and margins reviewed.
+- data: Due dates, margin by line and retailer.
+- breaks: Payments are reactive and margins are known only roughly.
+- handoff: Findings return to buying and credit.
+
+## Content kit
+
+### Hooks
+- Udhaar badhta gaya aur limit kisne dekhi?
+- Collection ke liye call kaun karega, yaad kisko hai?
+- Post-dated cheque bounce hua. Pata ek hafte baad chala.
+- Rate phone par bol diya. Floor se neeche gaya.
+- Bazaar ka rate badla aur aapka stock purana.
+- Maal godown mein ek saal se pada hai.
+- Khareed andaaze se, fast line khaali, slow line bhari.
+- Order phone, WhatsApp aur parchi, teen alag format.
+- Retailer ke yahan pata chala ki maal kam tha.
+- E-way bill aur lorry receipt ki parchi kahan hai?
+- Supplier ka bill kab dena tha, kisne dekha?
+- Kis supplier ne sasta diya aur kaun late aaya?
+- Salesman gaya, retailer bhi chale gaye.
+- Kaun si line se paisa banta hai, kaun si se nahi?
+- Munim chhutti par to hisaab kiska?
+- Retailer ne bola paisa aa gaya. Kab aur kitna?
+- Credit limit paar hui aur order phir bhi nikla.
+- Cheque kis bill ka tha?
+- Subah ki list: kis retailer ka paisa baaki?
+- Maal kam nikla aur retailer ne paisa kaat liya.
+- Price badla aur purane rate ka stock abhi bhi shelf pe.
+- Ek mahine mein kitna dead stock bana?
+- Aap dukaan par nahi hote to rate kaun tay karta hai?
+- Slow stock kis retailer ko bech sakte hain?
+- Supplier ko paise time par diye ya cash ruka hua tha?
+
+### Explainers
+- concept: Credit with a limit | pain: Udhaar grows unchecked (pain 1) | for: Owners | hook: Udhaar badhta gaya aur limit kisne dekhi? | show: An order waiting for approval when a retailer crosses limit or period | visual: A retailer card with a limit ring filling up | outcome: Credit decided at the order | cta: Book the free seven day demo
+- concept: The call that gets made | pain: Collections depend on who remembers (pain 2) | for: Munims and owners | hook: Collection ke liye call kaun karega, yaad kisko hai? | show: Outstanding aged by band with a follow-up task and promise date | visual: An ageing bar with tasks | outcome: Follow-up that does not slip | cta: Load your outstanding list
+- concept: The cheque in the drawer | pain: Post-dated cheques bounce late (pain 3) | for: Owners and accounts | hook: Post-dated cheque bounce hua. Pata ek hafte baad chala | show: A deposit list for the week and a bounce updating credit | visual: A cheque icon moving from drawer to list | outcome: Timely deposits | cta: Share your cheque list
+- concept: Rates with a floor | pain: Floors broken quietly (pain 4) | for: Owners | hook: Rate phone par bol diya. Floor se neeche gaya | show: Slabs, a quote below floor needing approval and a weekly leak list | visual: A price gate with an approval stamp | outcome: Margin protected | cta: Share your rate slabs
+- concept: Today's rate against your stock | pain: Market moves daily (pain 5) | for: Owners | hook: Bazaar ka rate badla aur aapka stock purana | show: Lines below cost flagged against the day's rate | visual: A rate line crossing a cost line | outcome: Daily margin awareness | cta: Bring five lines
+- concept: Slow stock to a buyer | pain: Slow stock ties up cash (pain 6) | for: Owners | hook: Maal godown mein ek saal se pada hai | show: Lines by age, days of sales held and past buyers | visual: Boxes greying out with a buyer list | outcome: Cash released | cta: Share your stock list
+- concept: A list that buys | pain: Buying by gut (pain 7) | for: Owners and purchase | hook: Khareed andaaze se, fast line khaali, slow line bhari | show: A drafted purchase list from sales, stock and lead time | visual: A reorder list appearing | outcome: Fewer stockouts | cta: Try five lines
+- concept: One order record | pain: Orders in different formats (pain 8) | for: Munims and salesmen | hook: Order phone, WhatsApp aur parchi, teen alag format | show: An order with states from received to delivered | visual: Three formats merging into one card | outcome: One order, one state | cta: Share an order sample
+- concept: The count at delivery | pain: Picking mistakes found late (pain 9) | for: Loaders and owners | hook: Retailer ke yahan pata chala ki maal kam tha | show: A picklist ticked by the loader and a delivery record | visual: A truck loading with ticks | outcome: Fewer disputes | cta: Try it on one route
+- concept: Which lines make money | pain: Unknown profitable lines (pain 14) | for: Owners | hook: Kaun si line se paisa banta hai, kaun si se nahi? | show: Margin per line and retailer after credit days | visual: A sorted list with margin bars | outcome: Better buying and selling | cta: Ask for the demo
+
+### Script 1: Udhaar ki limit
+- 0 to 5s: Udhaar badhta gaya aur limit kisne dekhi?
+- 5 to 15s: Munim ne order le liya, owner ko baad mein pata chala.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har retailer ki limit aur period. Order us se upar jaye to ruk jata hai aur aap ek tap se faisla lete hain, baaki dues aur age ke saath.
+- 40 to 50s: Faisla order ke waqt, baad mein nahi.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Collection ki call
+- 0 to 5s: Collection ke liye call kaun karega, yaad kisko hai?
+- 5 to 15s: Vada kiya tha, tarikh kisi ko yaad nahi.
+- 15 to 25s: Apni outstanding list dijiye. Saat din mein free demo.
+- 25 to 40s: Har retailer ka outstanding 30, 60 aur 60 se upar ke hisaab se. Har late buyer ko ek person ka follow up task aur vade ki tarikh.
+- 40 to 50s: Toota hua vada saaf dikhta hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Rate aur floor
+- 0 to 5s: Rate phone par bol diya. Floor se neeche gaya.
+- 5 to 15s: Aap counter par nahi the aur margin chala gaya.
+- 15 to 25s: Das lines ke rate dijiye. Saat din mein free demo.
+- 25 to 40s: Quantity ke slab aur floor har line par. Floor se neeche ka quote approval maangta hai. Har hafte dikhta hai kahan floor toota.
+- 40 to 50s: Aapko counter par baithna nahi padta.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Dead stock
+- 0 to 5s: Maal godown mein ek saal se pada hai.
+- 5 to 15s: Kharid ke waqt sasta tha, ab paisa phansa hua hai.
+- 15 to 25s: Apni stock list dijiye. Saat din mein free demo.
+- 25 to 40s: Har lot ki receive date. Lines umar ke hisaab se, current bikri par kitne din ka maal, aur kaun se retailer ne last kharida.
+- 40 to 50s: Slow maal usi ko bechiye jise chahiye.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Kaun si line kamati hai
+- 0 to 5s: Kaun si line se paisa banta hai, kaun si se nahi?
+- 5 to 15s: Bill par margin dikhta hai, udhaar ke din nahi.
+- 15 to 25s: Teen mahine ki bikri dijiye. Saat din mein free demo.
+- 25 to 40s: Har line aur retailer ka margin kharid rate, bikri rate aur credit days se. Subah ek screen mein dues, dead stock aur slow lines.
+- 40 to 50s: Aap sahi line aur sahi retailer par dhyan dete hain.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Udhaar and collections, and the margin lost when floors are broken
+- titles: Owner | Managing Director | Partner | Director | Head of Sales | Accounts Head | General Manager
+- deciders: The owner decides, often with a partner or the munim in the loop. The accounts head influences credit and collection decisions.
+- best size: A wholesale business with 15 to 100 people, hundreds of retailers on credit and several suppliers.
+- first message: Hello, I work with wholesalers on credit limits, collections and slow stock. We build a free seven day demo on your own retailer and stock data. How do you decide if a retailer can take more udhaar today?
+- discovery: How do you check a retailer's limit when an order comes in? | Who follows up outstanding and how is the promise recorded? | How do you track post-dated cheques? | How do you set and protect the floor rate for each line? | How do you know which stock has been sitting longest? | Which lines and retailers make you the most margin?
+- objection: Our munim handles everything and it works | We keep the munim's way and make his records visible to you, so you do not depend on one person.
+- objection: Retailers will not change how they order | They do not have to. We record orders as they come, in whatever channel.
+- objection: Tally is enough | Tally records accounts. We add the credit, order, cheque and stock views that you check in the same day.
+- objection: Cost | Cost depends on scope. We start with the problem that costs most, and the demo is free.
+- demo: A retailer over the credit limit waiting for approval, an ageing list with follow-up tasks, a cheque deposit list and slow stock by age, built from the wholesaler's own sheets.
+- proof: Take the top twenty retailers and show their outstanding age and the stock that has sat longest.
+- follow up: Thank you for your time. I have built the demo around the retailers you described, with their outstanding and limits. When can you and your munim go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

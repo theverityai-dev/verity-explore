@@ -48,6 +48,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Example arithmetic: a rebuilt carcass of ₹28,000 in material and labour, on two orders a month, is ₹56,000 a month in work done twice.
 - fix: Each order holds the drawing versions, the changes with who asked for them and the date, and the approval. Production can see only the latest approved version, and a change after cutting begins raises a flag with the cost.
 - screen: orders
+- root: A drawing changes by phone and sketch during the order, and only the person who took the call knows the final version.
+- workaround: The owner or designer gives the head carpenter a marked-up print and hopes it is the latest.
+- options: Freeze the design at order time, which customers will not accept | Share drawings in a chat group, which mixes versions | Drawing versions held on the order with who asked for each change, approval recorded, and only the latest approved version shown to production
+- pick: The floor cannot build from an old version, and a dispute about a change has a dated answer.
+- needs: Drawings and the approval the customer gives, in whatever form you take it today.
 
 ### 2. The quote is a guess that the board rate has already changed
 - area: Orders
@@ -55,6 +60,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Example arithmetic: a 4 percent fall in margin on ₹60 lakh of monthly sales is ₹2.4 lakh each month, and it shows up only in the year’s profit.
 - fix: Quotes are built from the cut list, board and hardware at the latest rates on record, plus labour and waste. After the order, actual material and hours are compared with the quote so the real margin of each job is known.
 - screen: orders
+- root: Board and hardware rates change between the quote and the purchase, and the quote has no record of what rate it used.
+- workaround: A margin percent on the owner's estimate, corrected when a job clearly loses money.
+- options: Add a fixed safety margin, which loses orders | Re-quote each time the rate moves, which is slow | Quote from the cut list and latest rates on record, then compare actual material and hours after the order
+- pick: The next quote starts from real use, and a rate change is visible against open quotes.
+- needs: Cut lists or standard items, current rates and labour hours per type of piece.
 
 ### 3. Boards are cut with too much waste, and offcuts are lost
 - area: Material
@@ -62,6 +72,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Example arithmetic: 6 percent waste above plan on ₹15 lakh of monthly board spend is ₹90,000 a month. Offcuts that could be used on small items are sold as scrap.
 - fix: Boards are issued by sheet to a job with the planned cut. Offcuts above a size are returned to stock as usable pieces. Verity compares board used with board planned per job and flags the jobs and cutters with the largest gap.
 - screen: material
+- root: Boards are cut by the carpenter's eye and offcuts are stacked where nobody sees them again.
+- workaround: Experienced carpenters reuse offcuts by memory and waste is accepted as normal.
+- options: Cutting software, which needs input discipline | A fixed waste percent in the quote, which hides the leak | Boards issued by sheet to a job with the planned cut, offcuts returned to stock as usable pieces, and board used compared with planned
+- pick: It uses records the workshop can keep and shows the carpenters whose waste is high.
+- needs: Board sizes, planned cuts per job and a minimum offcut size worth keeping.
 
 ### 4. Timber is bought on price and used before it is seasoned
 - area: Material
@@ -69,6 +84,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: A return and rebuild, a damaged reputation and, with an exported order, a rejected container.
 - fix: Timber parcels are recorded with species, source, quantity, moisture reading and date in the yard. A parcel cannot be issued to a job until its moisture reading is recorded and within your limit.
 - screen: material
+- root: Timber is bought when the price is good and is used when the job is urgent, not when it is ready.
+- workaround: The head carpenter judges dryness by feel and sound.
+- options: Buy only kiln-dried timber, which costs more | Wait by habit, which delays jobs | Parcels recorded with moisture reading and date, and issue to a job blocked until the reading is within your limit
+- pick: Warping complaints fall because the rule is written down and checked.
+- needs: Moisture meter readings, which you may already take, and your accepted limit.
 
 ### 5. The job waits for hinges, channels or a laminate colour
 - area: Material
@@ -76,6 +96,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: A job that waits blocks space, ties up half-finished goods and pushes the delivery date for the customer.
 - fix: Each order carries its bill of materials with fittings. Verity compares the next fortnight’s orders with stock and open purchase orders and lists what must be ordered by which date, with the order it affects.
 - screen: material
+- root: Fittings are bought late and by memory, so a missing hinge, channel or laminate colour is found at assembly.
+- workaround: The head carpenter makes a list on the day the job starts.
+- options: Stock every fitting in large numbers, which locks cash | A weekly purchase list, which misses job-specific items | Bill of materials with fittings per order, compared with stock and open purchase orders, listing what must be ordered by which date
+- pick: The shortfall is known when there is still time to buy.
+- needs: Bill of materials with fittings and finish for each order, and current stock.
 
 ### 6. Nobody knows which stage a job is at, or what is holding the line
 - area: Shop floor
@@ -83,6 +108,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Time lost searching and re-planning each day, with the finishing room or the upholstery bench as the hidden bottleneck.
 - fix: Every job sits on a board by stage: cutting, edge banding, assembly, finishing, upholstery, packing. Moving it is a tap. Verity shows the queue in front of each stage, and which jobs are held and why.
 - screen: floor
+- root: A job passes through several stations and only the person at each station knows where it is.
+- workaround: The owner walks the workshop and asks.
+- options: A whiteboard by stage, which stays right for one day | Daily meeting, which is slow | A board by stage where moving a job is a tap and queues in front of each stage are visible
+- pick: Everyone sees the bottleneck, and the owner stops asking where jobs are.
+- needs: The stages you follow and who moves a job at each stage.
 
 ### 7. Skilled carpenters leave, take advances and work at different quality
 - area: People
@@ -90,6 +120,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Output falls when a skilled hand leaves, advances are lost and the quality varies from job to job.
 - fix: Attendance, advances, piece-rate work by job and skill are recorded per person. Jobs are assigned by skill, advances are tracked against earnings, and the month-end statement is built from the work recorded.
 - screen: floor
+- root: Piece-rate work, advances and attendance are tracked in a notebook by the head carpenter, and month-end settlement is argued.
+- workaround: The owner trusts the head carpenter's account of who did what.
+- options: Daily wages for all, which removes the link to output | A shared sheet with the head carpenter | Attendance, advances and piece-rate work by job and skill on one record per person, with a statement at month end
+- pick: Fair and checkable settlement, and jobs assigned by skill.
+- needs: Worker list, rates per piece or job type and the advance record.
 
 ### 8. Finish defects and damage show up at the customer’s door
 - area: Quality
@@ -97,6 +132,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Every site fix costs a van trip, two workers’ time and the goodwill of a customer who already has the piece in the room.
 - fix: A pre-dispatch checklist with photos is a record on each order: dimensions, finish, hardware function, packing. Failures stay on the order and go back to the stage that made them, with the cause noted.
 - screen: floor
+- root: Finish defects and damage are checked by the same person who made the piece, and nothing is recorded before it leaves.
+- workaround: A quick look before loading and a photo only after a complaint.
+- options: A second inspector, which adds cost | Photo in a chat group, which is not linked to the order | Pre-dispatch checklist with photos on each order, and failures sent back to the stage
+- pick: A defect is fixed in the workshop and the record protects you when a dispute arises.
+- needs: Your checklist for dimension, finish, hardware function and packing.
 
 ### 9. The van goes out with half an order, or to a site that is not ready
 - area: Delivery
@@ -104,6 +144,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Example arithmetic: each wasted trip of van, driver and two installers costs ₹3,500 to ₹5,000. Five a month is up to ₹25,000 for nothing delivered.
 - fix: Delivery is scheduled only when all pieces are packed and the site is confirmed ready. Installation crews and vehicles are assigned from one schedule, with the checklist of items on the van.
 - screen: delivery
+- root: Delivery is arranged when the main piece is ready, not when the whole order and the site are ready.
+- workaround: The owner calls the customer and the driver on the day.
+- options: Fixed delivery days, which do not fit every site | Customer confirmation by phone, which is not recorded | Delivery scheduled only when all pieces are packed and the site is confirmed ready, with crew and vehicle on one schedule
+- pick: It prevents a wasted trip and a second delivery charge.
+- needs: Packing status, site readiness confirmation and vehicle and crew availability.
 
 ### 10. After-sales requests are lost between phone calls
 - area: Delivery
@@ -111,6 +156,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: An unhappy customer rarely refers anyone, and unresolved warranty claims cost far more than a quick repair.
 - fix: Every complaint becomes a service request tied to the original order, with the warranty status, a visit date and an owner. The outcome is recorded on the order.
 - screen: delivery
+- root: After-sales complaints arrive by call to whoever answers, and the original order is not at hand.
+- workaround: A notebook of complaints and a promise to visit.
+- options: A shared WhatsApp group, which buries requests | A paper register | A service request tied to the original order with warranty status, visit date and owner
+- pick: The history stays with the order and a repeat fault is visible.
+- needs: Warranty terms and the contact for each order.
 
 ### 11. Advances, stage payments and final balances drift
 - area: Money
@@ -118,6 +168,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Cash tied in finished jobs, and a customer who is allowed to pay late because nobody ties the final amount to a delivery event.
 - fix: Each order has a payment schedule tied to stages. The balance due at delivery is on the delivery checklist, and overdue stage payments are listed with an owner and the customer’s last promise.
 - screen: money
+- root: Payments are taken in stages by different people and the balance at delivery is not on the delivery sheet.
+- workaround: The owner remembers who has paid how much.
+- options: Full payment before work, which customers resist | A payment sheet kept by accounts | A payment schedule tied to stages, balance due on the delivery checklist, overdue stage payments listed with an owner
+- pick: Delivery goes out knowing what is to be collected.
+- needs: The stage payment terms you agree with customers.
 
 ### 12. Dealers and showrooms take stock on credit and pay slowly
 - area: Money
@@ -125,6 +180,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: Money held at the dealer and unsold stock, with no clear sense of which dealers are worth the credit.
 - fix: Dealer orders, goods sent, returns and payments sit on one dealer record with age of dues. Dealers with growing overdue amounts are visible before new stock goes out.
 - screen: money
+- root: Dealers take stock on credit, and the dues are known only when the next order arrives.
+- workaround: The owner decides on each dealer by relationship.
+- options: Cash only dealers, which limits sales | A dealer ledger kept by accounts | A dealer record with goods sent, returns, payments and age of dues, visible before new stock goes out
+- pick: Credit decisions use history, not memory.
+- needs: Dealer list, goods sent and payments.
 
 ### 13. Export buyers ask where the wood came from
 - area: Export and rules
@@ -133,6 +193,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - fix: Timber parcels link to the supplier, invoice and transport papers, and to the orders they were issued to. The trail from a finished piece back to its source is one search.
 - screen: material
 - source: (Forest Trends, India’s wooden furniture and handicrafts, 2020: https://www.forest-trends.org/publications/indias-wooden-furniture-and-wooden-handicrafts-risk-of-trade-in-illegally-harvested-wood/)
+- root: Export buyers ask for proof of where the timber came from, and the papers are in different files.
+- workaround: Digging through invoices when the buyer asks.
+- options: Buy only from certified sources, which narrows options | A folder per shipment | Timber parcels linked to supplier, invoice and transport papers and to the orders they were issued to
+- pick: The trail from a finished piece to its source is one lookup.
+- needs: Supplier invoices and transport papers for each parcel.
 
 ### 14. You and the head carpenter are the only system
 - area: Owner
@@ -140,7 +205,11 @@ Lede: These are the situations furniture workshop owners describe again and agai
 - cost: The workshop cannot take more orders than two people can hold in their heads, and a showroom opening makes it worse.
 - fix: A morning view lists jobs at risk, shortages, deliveries and dues, each with an owner. Showrooms and the factory are locations in one system, and the manager can run the list when you are away.
 - screen: owner
-
+- root: Decisions pass through the owner and the head carpenter, and neither has a list.
+- workaround: Daily walks and phone calls.
+- options: Hire a manager, which still needs information | A weekly review | A morning list of jobs at risk, shortages, deliveries and dues with owners, and showrooms as locations
+- pick: Exceptions reach the owner without a walk.
+- needs: A short daily set of numbers from the workshop and showrooms.
 
 ## Facts
 
@@ -830,6 +899,172 @@ Heading: Questions furniture makers ask.
 - cta heading: Start with the jobs that are about to miss their delivery date.
 - cta lede: Tell us how your workshop runs and we will show you the jobs at risk, the hardware shortages and the balances waiting at delivery, using your own numbers.
 
+## Workflow
+
+Heading: From customer sketch to delivered furniture, and where each handoff slips.
+Lede: A furniture order passes through design, purchase, cutting, assembly, finish, delivery and service. Each stage is skilled work. The losses sit in the version of the drawing, the material list and the delivery date that pass between them.
+
+### 1. Enquiry and design
+- owner: Designer and owner
+- does: The customer describes the need and a design and price are shared.
+- data: Drawings, dimensions, finish, version, customer comments.
+- breaks: Changes are made by phone and the latest version is not recorded.
+- handoff: The approved drawing becomes the order.
+
+### 2. Quotation and advance
+- owner: Owner and sales
+- does: The price is worked out and an advance is taken.
+- data: Cut list, board and hardware rates, labour hours, advance.
+- breaks: Rates change before purchase and the quote has no basis to compare against.
+- handoff: The order goes to the head carpenter with the approved drawing.
+
+### 3. Material planning and purchase
+- owner: Purchase and head carpenter
+- does: Boards, timber, hardware and finish are ordered.
+- data: Bill of materials, supplier, promised date, moisture reading for timber.
+- breaks: Fittings are ordered late and timber is used before it is ready.
+- handoff: Material reaches the yard or store.
+
+### 4. Cutting and edge banding
+- owner: Carpenters
+- does: Boards are cut to the planned sizes and edges are finished.
+- data: Sheets issued, pieces cut, offcuts returned.
+- breaks: Waste is high and offcuts are lost.
+- handoff: Cut pieces go to assembly.
+
+### 5. Assembly
+- owner: Skilled carpenters
+- does: Pieces are joined and hardware is fitted.
+- data: Stage, carpenter, hours, piece-rate work.
+- breaks: Missing fittings stop the job and the stage of each job is known only by asking.
+- handoff: Assembled units go to finishing.
+
+### 6. Finishing and upholstery
+- owner: Finishing and upholstery teams
+- does: Polish, paint or upholstery are done.
+- data: Finish batch, drying time, defects.
+- breaks: Defects found later at the customer's door.
+- handoff: Finished pieces go to quality check and packing.
+
+### 7. Quality check and packing
+- owner: Head carpenter and packing team
+- does: Pieces are checked and packed.
+- data: Checklist with photos for dimension, finish and hardware function.
+- breaks: Checks are informal and nothing is recorded.
+- handoff: Packed pieces are ready for delivery.
+
+### 8. Delivery and installation
+- owner: Dispatch and installation crew
+- does: The order is delivered and installed on site.
+- data: Delivery date, site readiness, crew, vehicle.
+- breaks: The van goes with half an order or to a site that is not ready.
+- handoff: The customer signs off and the balance is collected.
+
+### 9. Payment and after-sales
+- owner: Owner and service lead
+- does: The balance is collected and service requests are handled.
+- data: Stage payments, balance, warranty status, service visits.
+- breaks: Balances drift and service requests are lost.
+- handoff: Actual cost and complaints feed the next quote and design.
+
+## Content kit
+
+### Hooks
+- Customer ne drawing approve ki thi. Floor par purani drawing chal rahi hai.
+- Board ka rate badal gaya. Quote wahi.
+- Board kitna kata, kitna waste hua, kisko pata?
+- Timber sasta mila par sukhne se pehle laga diya.
+- Hinge aur channel kal tak aane the. Job ruki hai.
+- Kaun sa job kis stage par hai, ye poochna padta hai.
+- Carpenter ne advance liya aur kaam adhoora chhoda.
+- Finish ki shikayat customer ke ghar pe pata chali.
+- Van aadhe order ke saath chali gayi.
+- Site taiyaar nahi thi aur delivery gayi.
+- Service ka call aaya. Original order ki file kahan hai?
+- Advance ke baad stage payment kisne li, kitna baaki?
+- Dealer ne stock liya aur paisa abhi tak nahi aaya.
+- Export buyer ne poocha lakdi kahan se aayi. Kaghaz kahan hain?
+- Aap aur head carpenter hi poora system hain.
+- Offcut ka dher kabhi kaam nahi aata.
+- Piece-rate ka hisaab mahine ke end mein jhagda banta hai.
+- Warping ki shikayat. Moisture kisi ne naapa tha?
+- Customer ne chhota badlav bola, quote kisne badla?
+- Job ka margin pata hi nahi chalta.
+- Packing mein ek piece kam. Customer ke ghar pata chala.
+- Showroom ke order aur factory ka plan alag chalte hain.
+- Payment schedule yaad rakhne se nahi, system se chalta hai.
+- Warranty mein kya aata hai, kisko pata?
+- Aap workshop mein nahi hote to kaam kaun check karta hai?
+
+### Explainers
+- concept: The drawing that did not reach the floor | pain: Approved drawing differs from the floor drawing (pain 1) | for: Owners and designers | hook: Customer ne drawing approve ki thi. Floor par purani drawing chal rahi hai | show: An order with drawing versions, who asked for each change and only the latest approved one shown to production | visual: Two drawings, the old one fading as the new one locks in | outcome: No rework from an old version | cta: Book the free seven day demo
+- concept: The board rate that moved | pain: Quote guesses and rates change (pain 2) | for: Owners | hook: Board ka rate badal gaya. Quote wahi | show: A quote built from the cut list and latest rate, with actual cost compared after the job | visual: A rate line moving under a fixed quote bar | outcome: Quotes follow real cost | cta: Cost one finished job
+- concept: Where did the board go | pain: Boards cut with waste, offcuts lost (pain 3) | for: Workshop heads | hook: Board kitna kata, kitna waste hua? | show: Board used against planned and offcuts returned to stock | visual: A sheet with a cut pattern and the offcut tagged back to a rack | outcome: Less waste and more reuse | cta: Try one week of boards
+- concept: Timber that was not ready | pain: Timber used before seasoned (pain 4) | for: Owners and head carpenters | hook: Timber sasta mila par sukhne se pehle laga diya | show: A parcel blocked from issue until the moisture reading is within limit | visual: A moisture gauge needle settling and the lock opening | outcome: Fewer warping complaints | cta: Share your timber record
+- concept: The missing hinge | pain: Job waits for fittings (pain 5) | for: Purchase and production | hook: Hinge aur channel kal tak aane the. Job ruki hai | show: A shortfall list with the date to order | visual: A timeline with a fitting card turning amber a week ahead | outcome: Jobs do not stop for fittings | cta: Send us a week of orders
+- concept: Where is the job | pain: Nobody knows the stage of a job (pain 6) | for: Owners and supervisors | hook: Kaun sa job kis stage par hai? | show: A board by stage with queues in front of each | visual: Cards moving left to right with a long queue highlighted | outcome: The bottleneck is visible | cta: Try it on your open jobs
+- concept: Checked before it leaves | pain: Defects show at the door (pain 8) | for: Quality and dispatch | hook: Finish ki shikayat customer ke ghar pe pata chali | show: A pre-dispatch checklist with photos | visual: A photo gallery with ticks | outcome: Fewer returns | cta: Show us your checks
+- concept: A full van | pain: Van goes out half full (pain 9) | for: Dispatch teams | hook: Van aadhe order ke saath chali gayi | show: Delivery scheduled only when all pieces are packed and the site is ready | visual: A van icon waiting at a gate until the last box turns green | outcome: One trip per order | cta: Share your delivery routine
+- concept: The service request with history | pain: After-sales lost between calls (pain 10) | for: Service leads | hook: Service ka call aaya. Original order ki file kahan hai? | show: A service request linked to the order with warranty and visit date | visual: A call becoming a card attached to an order | outcome: Faster service | cta: Try it on last month's complaints
+- concept: One list for the owner | pain: You are the only system (pain 14) | for: Owners | hook: Aap aur head carpenter hi poora system hain | show: A morning list of jobs at risk, shortages and dues | visual: A phone list replacing a walk round the shop | outcome: Control without a walk | cta: Ask for the demo
+
+### Script 1: Purani drawing
+- 0 to 5s: Customer ne drawing approve ki thi. Floor par purani drawing chal rahi hai.
+- 5 to 15s: Phone par badlav hua, sketch par likha, aur head carpenter ke paas purana print.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har order mein drawing ke versions, kisne badlav maanga, aur approval. Floor ko sirf latest approved dikhti hai.
+- 40 to 50s: Dispute ho to tareekh ke saath jawab milta hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Board ka waste
+- 0 to 5s: Board kitna kata, kitna waste hua?
+- 5 to 15s: Offcut ka dher, aur quote mein ek fixed waste.
+- 15 to 25s: Ek hafte ka board data dijiye. Saat din mein free demo, aapke data par.
+- 25 to 40s: Har sheet job ke saath issue hoti hai. Offcut stock mein wapas. Plan se zyada use hone par flag.
+- 40 to 50s: Owner ko pata chalta hai kahan waste zyada hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Fittings ka intezaar
+- 0 to 5s: Hinge aur channel kal tak aane the. Job ruki hai.
+- 5 to 15s: Head carpenter ne list job shuru hone par banayi.
+- 15 to 25s: Ek hafte ke order lekar aaiye. Saat din mein free demo.
+- 25 to 40s: Har order ka bill of materials stock aur purchase orders se milta hai. Jo kam hai woh date ke saath dikhta hai.
+- 40 to 50s: Purchase ko subah list milti hai.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Delivery sahi din
+- 0 to 5s: Van aadhe order ke saath chali gayi.
+- 5 to 15s: Site taiyaar nahi thi aur doosri baar ka kharcha.
+- 15 to 25s: Ek order ka delivery plan dijiye. Saat din mein customised demo, free.
+- 25 to 40s: Delivery tabhi schedule hoti hai jab saare piece pack hon aur site ready confirm ho. Crew aur gaadi ek schedule mein.
+- 40 to 50s: Balance payment delivery checklist mein dikhta hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Aapka system
+- 0 to 5s: Aap aur head carpenter hi poora system hain.
+- 5 to 15s: Aap chhutti par hain to workshop mein kya chal raha hai, kisko pata?
+- 15 to 25s: Ek workshop ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Subah ek list: jobs jo risk mein hain, kam material, delivery, due payment. Har item ka owner.
+- 40 to 50s: Aap sirf faisle wali baat sunte hain.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Rework from drawing changes and board waste
+- titles: Owner | Managing Director | Director | Works Manager | Head of Production | Head Carpenter | Operations Manager
+- deciders: The owner decides. The works manager and head carpenter influence, and the designer influences drawing control.
+- best size: A workshop or factory with 15 to 150 people, custom or semi-custom orders, and a showroom or dealer channel.
+- first message: Hello, I work with furniture makers on one problem: jobs rebuilt because the drawing changed or the fittings were missing. We build a free seven day demo on your own orders so your team can see it. How do you track drawing changes today?
+- discovery: How do you make sure the floor works from the approved drawing? | How do you cost a custom order and compare it afterwards? | How much board waste do you see and where do offcuts go? | How do you track jobs through the stages? | How do you plan delivery and installation? | How do you handle after-sales requests?
+- objection: We are a workshop, not a company that uses software | We keep the routine your carpenters know and record only what you need to see.
+- objection: Our head carpenter will resist | We build the screens with the head carpenter and show that it reduces the calls he has to answer.
+- objection: Too expensive | Cost depends on scope. We start with the one problem that costs you most, and the demo is free.
+- objection: Customers change things all the time | That is exactly why drawing versions and approvals are on the order.
+- demo: An order with three drawing versions, a board plan with an offcut returned, a fittings shortfall and a delivery held until the site is ready, built from the workshop's own jobs.
+- proof: Take one reworked job from last quarter and show how the order record would have caught it.
+- follow up: Thank you for your time. I have built the demo around the order with the drawing change you described. When can your head carpenter and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

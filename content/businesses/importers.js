@@ -67,7 +67,16 @@ export default {
       "scene": "Five containers are at sea, two are at port and one is on a truck. The tracking links are in five emails. A customer asks for a date and the answer takes an hour.",
       "cost": "Customers who cannot get a date place the order elsewhere, and the team spends its day answering where is my container.",
       "fix": "Each shipment is a record with supplier, order, vessel or flight, container, expected dates and status. Verity shows all shipments by stage on one board, with the date each one needs a decision.",
-      "screen": "shipments"
+      "screen": "shipments",
+      "root": "Shipment status is held by the freight forwarder, the clearing agent and the supplier, and the importer asks each one separately.",
+      "workaround": "Phone calls and messages to the forwarder, and a spreadsheet of containers kept by one person.",
+      "options": [
+        "Rely on the forwarder's portal, which shows only their view",
+        "A shared tracker sheet",
+        "Each shipment as a record with supplier, order, vessel or flight, container, expected dates and status, all shown by stage on one board"
+      ],
+      "pick": "One board answers where the goods are without a phone call.",
+      "needs": "Order and shipping details from the supplier and forwarder, as you receive them."
     },
     {
       "area": "Documents",
@@ -75,7 +84,16 @@ export default {
       "scene": "The bill of lading says one consignee name, the invoice another. The packing list quantity differs by a carton. The broker holds the filing until the supplier corrects it.",
       "cost": "Every day of correction can be a day of port charges, with a customer waiting for the stock.",
       "fix": "Each shipment has a document checklist: invoice, packing list, bill of lading, certificates and others needed for the product. Verity compares key fields across them, lists mismatches and assigns the correction to the person who owns the supplier.",
-      "screen": "shipments"
+      "screen": "shipments",
+      "root": "Documents are made by different parties and checked against each other late, usually by the clearing agent.",
+      "workaround": "The clearing agent flags a mismatch when the documents arrive at the port.",
+      "options": [
+        "Check documents by hand when they arrive",
+        "Ask the supplier to send drafts first",
+        "A document checklist per shipment, with key fields compared across invoice, packing list and bill of lading"
+      ],
+      "pick": "A mismatch is found when it can still be corrected by the supplier.",
+      "needs": "The document list for each product and the key fields to compare."
     },
     {
       "area": "Port charges",
@@ -87,7 +105,16 @@ export default {
       "source": {
         "name": "Cogoport, Demurrage and detention, 2026",
         "url": "https://www.cogoport.com/blogs/demurrage-detention-how-to-avoid-charges"
-      }
+      },
+      "root": "The free time on a container is a date in the shipping line's notice, and no one in the importer's office owns it.",
+      "workaround": "The clearing agent tells the importer when charges are about to start.",
+      "options": [
+        "Ask the agent to track every day",
+        "A reminder in a calendar",
+        "Each container showing its free time end and the steps pending to clear it, listed by days left with tasks for broker, transporter and warehouse"
+      ],
+      "pick": "Demurrage is avoided or at least a decision made in time.",
+      "needs": "Free time per container and the clearance steps in your process."
     },
     {
       "area": "Port charges",
@@ -99,7 +126,16 @@ export default {
       "source": {
         "name": "Cogoport, 2026",
         "url": "https://www.cogoport.com/blogs/demurrage-detention-how-to-avoid-charges"
-      }
+      },
+      "root": "The empty container must be returned by a date, and once the goods are in the warehouse, no one is watching the date.",
+      "workaround": "The transporter is asked when it is convenient.",
+      "options": [
+        "Leave it to the transporter",
+        "A reminder on the calendar",
+        "A return task with due date and owner raised when the container leaves the port, with containers still out and days left shown"
+      ],
+      "pick": "Detention is avoided by a visible task.",
+      "needs": "Return dates and the transporter who will return the container."
     },
     {
       "area": "Costing",
@@ -107,7 +143,16 @@ export default {
       "scene": "The price list was set from the supplier's invoice and a rough duty. Freight, insurance, port charges, clearing fees, transport and exchange rate moved. Margin is checked quarterly.",
       "cost": "Example arithmetic: a ₹100 invoice value that becomes ₹138 landed, quoted at ₹135, loses money on every unit.",
       "fix": "Each shipment collects every cost line: goods, freight, insurance, duty, port charges, clearing and transport at the actual exchange rate. Verity spreads it across the items and shows landed cost per unit and margin at today's price list.",
-      "screen": "landed"
+      "screen": "landed",
+      "root": "Cost lines come from many bills over weeks, and the product cost is not calculated until the last one arrives.",
+      "workaround": "A rough landed cost based on the last shipment of the same product.",
+      "options": [
+        "Add a fixed percent to the purchase price",
+        "Calculate at the end of the quarter",
+        "Each shipment collecting every cost line at the actual exchange rate and spreading it across items to give a landed cost per unit"
+      ],
+      "pick": "The selling price is set from the real cost.",
+      "needs": "Bills for freight, insurance, duty, port charges, clearing and transport."
     },
     {
       "area": "Customs and duty",
@@ -119,7 +164,16 @@ export default {
       "source": {
         "name": "ICAI, Union Budget 2026: Transformative Amendments in Customs Law, 2026",
         "url": "https://cajournal.icai.org/article-details/union-budget-2026-transformative-amendments-in-customs-law"
-      }
+      },
+      "root": "Classification and duty are decided by the clearing agent and not recorded in a way the importer can compare with the past.",
+      "workaround": "The importer asks the agent what was paid and files the Bill of Entry.",
+      "options": [
+        "Trust the agent entirely",
+        "Keep copies of every Bill of Entry in a folder",
+        "Each item recording its classification, rate and duty assessed on past Bills of Entry, with a new shipment compared against earlier ones and unusual changes flagged"
+      ],
+      "pick": "The importer can raise a question before paying or after assessment. Confirm classification with your customs adviser.",
+      "needs": "Past Bills of Entry and the items imported."
     },
     {
       "area": "Money",
@@ -131,7 +185,16 @@ export default {
       "source": {
         "name": "ICAI, Union Budget 2026: Transformative Amendments in Customs Law, 2026",
         "url": "https://cajournal.icai.org/article-details/union-budget-2026-transformative-amendments-in-customs-law"
-      }
+      },
+      "root": "Duty payment dates are scattered across Bills of Entry, and the finance head sees the cash outflow when it arrives.",
+      "workaround": "The accountant asks the clearing agent how much is due this week.",
+      "options": [
+        "Pay at assessment each time",
+        "A monthly estimate",
+        "Duty due on each Bill of Entry on a calendar with payment route and due date, totalled by month"
+      ],
+      "pick": "The finance head plans cash around known dates.",
+      "needs": "Duty amounts and due dates from the Bills of Entry."
     },
     {
       "area": "Suppliers",
@@ -139,7 +202,16 @@ export default {
       "scene": "A 30 percent advance goes out for an order. Production at the supplier slips. Three months later the goods are late and nobody remembers the terms agreed.",
       "cost": "An advance with no delivery is a loan to a supplier with little recourse. Recovery from an overseas supplier is hard.",
       "fix": "Each order records the advance, the date, the agreed shipping date and the refund terms. Verity lists advances by age and orders overdue to ship, and creates a follow-up task for the person who owns that supplier.",
-      "screen": "suppliers"
+      "screen": "suppliers",
+      "root": "Advances to suppliers are paid to secure the order, and the shipping date and refund terms are recorded in an email.",
+      "workaround": "The purchase head remembers which suppliers owe shipments.",
+      "options": [
+        "Avoid advances, which limits supply options",
+        "A sheet of advances",
+        "Each order recording advance, date, agreed shipping date and refund terms, listed by age and overdue shipments"
+      ],
+      "pick": "Money paid to suppliers is chased by name and date.",
+      "needs": "Orders with advances and agreed terms."
     },
     {
       "area": "Money",
@@ -147,7 +219,16 @@ export default {
       "scene": "The bank remits against an invoice. The Bill of Entry is filed later. Which remittance covers which entry is only worked out when the bank asks.",
       "cost": "Import payments are generally expected to be completed within six months of shipment, with extensions only through the bank. A mismatch means bank queries and a scramble to find documents.",
       "fix": "Each remittance is linked to the order and shipment, with the shipment date and the Bill of Entry. Verity lists shipments with payments near the generally expected six month point, so the finance head acts early.",
-      "screen": "suppliers"
+      "screen": "suppliers",
+      "root": "Overseas payments are made through the bank, and the link between the payment, the order and the shipment lives in separate records.",
+      "workaround": "Accounts matches by hand at the end of the month.",
+      "options": [
+        "Match at year end",
+        "Ask the bank to supply a list",
+        "Each remittance linked to the order and shipment, with shipment date and Bill of Entry, and shipments with payments near the generally applicable time limits listed. Confirm limits with your bank or adviser."
+      ],
+      "pick": "Matching is done as the payment is made.",
+      "needs": "Remittance details and the shipments they relate to."
     },
     {
       "area": "Money",
@@ -155,7 +236,16 @@ export default {
       "scene": "An order is priced in dollars when the rupee is at one level. By payment, it has moved. The finance head learns the gain or loss from the bank statement.",
       "cost": "A rupee move of 2 to 3 percent on a large order can be larger than the whole margin.",
       "fix": "Each order records its currency, amount, rate at order and the rate at payment. Verity shows exposure across open orders and the cost effect at today's rate. Verity does not hedge or buy currency.",
-      "screen": "landed"
+      "screen": "landed",
+      "root": "The exchange rate at order, at shipment and at payment are different, and nobody tracks the gap.",
+      "workaround": "The owner compares rates occasionally and hopes.",
+      "options": [
+        "Always buy forward, which has a cost",
+        "Add a safety margin on prices",
+        "Each order recording currency, amount, rate at order and rate at payment, with exposure across open orders and the effect at today's rate"
+      ],
+      "pick": "The owner sees the exposure and decides when to cover.",
+      "needs": "Order currency, amounts and the rates you use."
     },
     {
       "area": "Quality",
@@ -163,7 +253,16 @@ export default {
       "scene": "A batch of imported goods is found defective at the warehouse. The inspection report was a photo on WhatsApp. The supplier disputes the claim.",
       "cost": "A claim without a record trail is a claim you lose, and the stock sits unsold.",
       "fix": "Inspection reports, photos and claims are records on the shipment and supplier. Verity shows the claim, the documents and the supplier's reply, and tracks the credit or replacement through to settlement.",
-      "screen": "suppliers"
+      "screen": "suppliers",
+      "root": "Quality is checked when goods arrive, but the supplier, the claim and the proof are in separate emails.",
+      "workaround": "The importer sends photos to the supplier by message and follows up by phone.",
+      "options": [
+        "Inspect before shipment, which adds cost",
+        "Accept a discount",
+        "Inspection reports, photos and claims as records on the shipment and supplier, with the claim, the documents and the supplier's reply tracked"
+      ],
+      "pick": "Claims are made with evidence, and bad suppliers are visible.",
+      "needs": "Inspection reports and photos."
     },
     {
       "area": "Stock",
@@ -171,7 +270,16 @@ export default {
       "scene": "A container is cleared, but the warehouse sheet is not updated for two days. Sales quotes the same item as out of stock.",
       "cost": "A lost sale for stock that was sitting in the warehouse.",
       "fix": "Receipt at the warehouse updates stock against the shipment and landed cost. Sales sees what is cleared, what is in transit, and what is reserved for orders.",
-      "screen": "dues"
+      "screen": "dues",
+      "root": "Stock in transit, cleared stock and reserved stock are different, and sales sees only what the warehouse says.",
+      "workaround": "Sales calls the warehouse for each customer enquiry.",
+      "options": [
+        "Sell only what is in the warehouse",
+        "A shared stock sheet",
+        "Receipt at the warehouse updating stock against the shipment and landed cost, with sales seeing cleared, in transit and reserved stock"
+      ],
+      "pick": "Sales sells what is really available.",
+      "needs": "Warehouse receipts and reservations."
     },
     {
       "area": "Money",
@@ -179,7 +287,16 @@ export default {
       "scene": "The importer pays the overseas supplier on the due date and carries customers on 60 to 90 days.",
       "cost": "Example arithmetic: ₹1.2 crore outstanding beyond 60 days financed at 11 percent a year costs about ₹1.1 lakh a month in interest.",
       "fix": "Invoices are tracked against due date and customer's usual payment days. Verity lists overdue amounts by customer and age with the person who owns the relationship, and creates follow-up tasks. Staff make the call.",
-      "screen": "dues"
+      "screen": "dues",
+      "root": "Suppliers must be paid on time but customers pay slowly, and neither list is seen together.",
+      "workaround": "The owner tells accounts which customer to call.",
+      "options": [
+        "Advance payments from customers, which limits sales",
+        "A ledger sheet",
+        "Invoices tracked against due date and the customer's usual payment days, overdue by customer and age with an owner"
+      ],
+      "pick": "Cash needs are visible before the supplier payment date.",
+      "needs": "Invoices, customer terms and payments."
     },
     {
       "area": "Owner",
@@ -187,7 +304,16 @@ export default {
       "scene": "The owner asks which shipments are still open, which are making money and what cash is tied up in transit. Each answer needs a different person.",
       "cost": "Decisions about what to order next run on feel.",
       "fix": "One morning screen with shipments by stage, free days left, advances outstanding, duty due, landed cost against price, and dues.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Profit is known only when the goods are sold and all costs are in, which is weeks after the decision to import.",
+      "workaround": "The owner relies on feel for the product.",
+      "options": [
+        "A quarterly profit review",
+        "Rely on the accountant's summary",
+        "A morning screen of shipments by stage, free days left, advances, duty due, landed cost against price and dues"
+      ],
+      "pick": "Decisions about import are made on live numbers.",
+      "needs": "Shipments, costs and selling prices."
     }
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
@@ -1040,5 +1166,397 @@ export default {
     "electronics-stores"
   ],
   "ctaHeading": "Start with the container running out of free days.",
-  "ctaLede": "Tell us how your imports run and we will show you the free-day list, the advances outstanding and the landed cost it would find, using your own numbers."
+  "ctaLede": "Tell us how your imports run and we will show you the free-day list, the advances outstanding and the landed cost it would find, using your own numbers.",
+  "workflow": {
+    "heading": "From supplier order to cash collected, and where each handoff slips.",
+    "lede": "An import passes through a supplier, a shipping line, a port, a clearing agent, a transporter and a warehouse. The importer owns none of these steps, so the risks sit in the handoffs between parties.",
+    "stages": [
+      {
+        "name": "Supplier order",
+        "owner": "Purchase head",
+        "does": "The order is placed with price, quantity, terms and shipping date.",
+        "data": "Supplier, items, currency, advance, shipping date.",
+        "breaks": "Advances are paid and the shipping date is forgotten.",
+        "handoff": "The supplier ships and sends documents."
+      },
+      {
+        "name": "Documents and shipment",
+        "owner": "Import coordinator",
+        "does": "Documents are received and checked and the shipment is tracked.",
+        "data": "Invoice, packing list, bill of lading, vessel, container.",
+        "breaks": "Mismatches are found late and status is requested from many parties.",
+        "handoff": "Documents go to the clearing agent."
+      },
+      {
+        "name": "Arrival and clearance",
+        "owner": "Clearing agent and importer",
+        "does": "The Bill of Entry is filed, duty is assessed and goods are cleared.",
+        "data": "Classification, duty, free days, charges.",
+        "breaks": "Free time runs out and duty is paid without a comparison to past assessments.",
+        "handoff": "Cleared goods go to the transporter."
+      },
+      {
+        "name": "Transport and warehouse",
+        "owner": "Logistics and warehouse",
+        "does": "Goods move to the warehouse and the container is returned.",
+        "data": "Transporter, receipt quantity, container return date.",
+        "breaks": "Containers are not returned on time and receipt differences are late.",
+        "handoff": "Stock updates and sales is told."
+      },
+      {
+        "name": "Landed cost",
+        "owner": "Accounts",
+        "does": "All costs are gathered and a cost per unit is calculated.",
+        "data": "Goods, freight, insurance, duty, port charges, clearing, transport, exchange rate.",
+        "breaks": "The cost is known only after the goods are sold.",
+        "handoff": "Landed cost goes to pricing."
+      },
+      {
+        "name": "Sales and delivery",
+        "owner": "Sales",
+        "does": "Stock is sold and delivered.",
+        "data": "Stock available, reserved, price, customer.",
+        "breaks": "Sales does not know what is cleared or reserved.",
+        "handoff": "The invoice goes to accounts."
+      },
+      {
+        "name": "Payment and settlement",
+        "owner": "Accounts and finance head",
+        "does": "Overseas payments, duty and customer collections are managed.",
+        "data": "Remittance, exchange rate, invoices, dues.",
+        "breaks": "Payments do not match shipments and customers pay late.",
+        "handoff": "Settled records close the shipment."
+      },
+      {
+        "name": "Review and next order",
+        "owner": "Owner and purchase head",
+        "does": "Shipment results are reviewed against the plan before the next order is placed.",
+        "data": "Landed cost against price, claims, supplier performance, free days lost.",
+        "breaks": "The review happens rarely, so the same supplier or route problem repeats.",
+        "handoff": "Findings return to the supplier order for the next shipment."
+      }
+    ]
+  },
+  "content": {
+    "hooks": [
+      "Container kahan hai, har baar forwarder ko phone karna padta hai?",
+      "Ek document galat tha aur container port par ruka raha.",
+      "Free days khatam hue aur demurrage shuru ho gaya.",
+      "Khaali container samay par wapas nahi gaya.",
+      "Landed cost bikne ke baad pata chalta hai.",
+      "Duty kitni lagi, pichle shipment se kya farak?",
+      "Duty ka paisa kab jaana hai, finance ko pata hai?",
+      "Supplier ko advance diya, shipping date bhool gaye.",
+      "Overseas payment aur shipment ka match mahine ke end mein.",
+      "Dollar ka rate badla, margin kitna gaya?",
+      "Goods aaye aur quality kharab nikli. Claim ka saboot kahan hai?",
+      "Sales ko pata nahi stock kitna clear hai.",
+      "Customer late paisa deta hai, supplier ko time par dena padta hai.",
+      "Maal bik gaya aur ab pata chala profit kitna.",
+      "Aap office mein nahi hote to shipment ka status kaun batata hai?",
+      "Bill of Entry ke classification ka record kahan hai?",
+      "Container ki detention ka bill aaya.",
+      "Shipment ka invoice aur packing list mein farak.",
+      "Insurance ka kaghaz shipment ke saath gaya?",
+      "Supplier ne kal tak ship karne ka vada kiya tha.",
+      "Clearing agent ka bill aur port charge alag alag.",
+      "Stock in transit sales ko nahi dikhta.",
+      "Hum 12 supplier se mangwate hain aur ek hi Excel mein.",
+      "Open orders par exchange rate ka exposure kitna hai?",
+      "Duty ki payment ki tarikh kisne dekhi?"
+    ],
+    "explainers": [
+      {
+        "concept": "Every container on one board",
+        "pain": "Nobody knows where each container is (pain 1)",
+        "for": "Owners and import coordinators",
+        "hook": "Container kahan hai, har baar forwarder ko phone karna padta hai?",
+        "show": "Shipments by stage on one board with expected dates",
+        "visual": "A world strip with container icons moving through stages",
+        "outcome": "No more status calls",
+        "cta": "Book the free seven day demo"
+      },
+      {
+        "concept": "The mismatch caught early",
+        "pain": "A document is missing or wrong (pain 2)",
+        "for": "Import coordinators",
+        "hook": "Ek document galat tha aur container port par ruka raha",
+        "show": "A document checklist with key fields compared across documents",
+        "visual": "Three documents with a mismatching field highlighted",
+        "outcome": "Corrections before arrival",
+        "cta": "Share your document set"
+      },
+      {
+        "concept": "Days left before demurrage",
+        "pain": "Free days run out (pain 3)",
+        "for": "Logistics heads",
+        "hook": "Free days khatam hue aur demurrage shuru ho gaya",
+        "show": "Containers by days left with tasks for each party",
+        "visual": "A countdown on each container card",
+        "outcome": "Demurrage avoided",
+        "cta": "Load your containers"
+      },
+      {
+        "concept": "The empty container",
+        "pain": "Container is not returned (pain 4)",
+        "for": "Logistics",
+        "hook": "Khaali container samay par wapas nahi gaya",
+        "show": "Return tasks with due dates",
+        "visual": "A container icon with a return date ring",
+        "outcome": "No detention",
+        "cta": "Try it on open containers"
+      },
+      {
+        "concept": "Real landed cost",
+        "pain": "Landed cost known after sale (pain 5)",
+        "for": "Owners and accounts",
+        "hook": "Landed cost bikne ke baad pata chalta hai",
+        "show": "A shipment collecting every cost line and a cost per unit",
+        "visual": "Cost lines stacking onto a unit price",
+        "outcome": "Pricing from true cost",
+        "cta": "Cost one shipment"
+      },
+      {
+        "concept": "Duty against the past",
+        "pain": "Duty without a clear view (pain 6)",
+        "for": "Owners and accounts",
+        "hook": "Duty kitni lagi, pichle shipment se kya farak?",
+        "show": "Classification and duty compared with earlier Bills of Entry",
+        "visual": "Two bills side by side with a flag on a difference",
+        "outcome": "Questions raised in time",
+        "cta": "Share three past bills"
+      },
+      {
+        "concept": "Money out to suppliers",
+        "pain": "Supplier advances forgotten (pain 8)",
+        "for": "Purchase heads",
+        "hook": "Supplier ko advance diya, shipping date bhool gaye",
+        "show": "Advances by age and orders overdue to ship",
+        "visual": "A ledger with an aging colour",
+        "outcome": "Advances recovered or shipped",
+        "cta": "List your advances"
+      },
+      {
+        "concept": "The rate that moved",
+        "pain": "Exchange rate moves (pain 10)",
+        "for": "Owners and finance",
+        "hook": "Dollar ka rate badla, margin kitna gaya?",
+        "show": "Exposure across open orders and the effect at today's rate",
+        "visual": "A rate line against a stack of orders",
+        "outcome": "Cover decisions on facts",
+        "cta": "Bring your open orders"
+      },
+      {
+        "concept": "What can sales sell",
+        "pain": "Stock status unclear (pain 12)",
+        "for": "Sales",
+        "hook": "Sales ko pata nahi stock kitna clear hai",
+        "show": "Cleared, in transit and reserved stock",
+        "visual": "Three stock bars side by side",
+        "outcome": "Promises that hold",
+        "cta": "Share your stock sheet"
+      },
+      {
+        "concept": "Profit before the sale",
+        "pain": "Profit known only after sale (pain 14)",
+        "for": "Owners",
+        "hook": "Maal bik gaya aur ab pata chala profit kitna",
+        "show": "A morning screen with landed cost against price",
+        "visual": "A phone list with margins",
+        "outcome": "Better import decisions",
+        "cta": "Ask for the demo"
+      }
+    ],
+    "scripts": [
+      {
+        "title": "Container kahan hai",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Container kahan hai, har baar forwarder ko phone karna padta hai?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Forwarder ek baat, clearing agent doosri, supplier teesri."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har shipment ek record: supplier, order, vessel, container, dates. Ek board par stage ke hisaab se."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Aapko poochna nahi padta."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Free days",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Free days khatam hue aur demurrage shuru ho gaya."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Kisi ne date dekhi hi nahi thi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apne containers ki list dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har container ke free days aur baaki steps. Din kam hone par broker, transporter aur warehouse ko task."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Container ki wapsi ka task bhi."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Demo pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Landed cost",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Landed cost bikne ke baad pata chalta hai."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Freight, duty, port, clearing, sab alag bill."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek shipment ke bill dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har shipment mein saari cost lines, asli exchange rate par, item par baanti hui. Cost per unit tayyar."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Selling price asli cost se tay hota hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Supplier ka advance",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Supplier ko advance diya, shipping date bhool gaye."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Email mein vada tha, kisi ko yaad nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apne advance ki list dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har order mein advance, tarikh, shipping date aur refund terms. Purane advance aur late shipment upar."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Purchase head naam aur tarikh se follow up karta hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Dollar ka rate",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Dollar ka rate badla, margin kitna gaya?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Order par ek rate, payment par doosra."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apne open order dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har order mein currency, rate at order aur rate at payment. Sab open order ka exposure ek jagah."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Aap cover ka faisla jaankari se lete hain."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      }
+    ]
+  },
+  "sales": {
+    "leadWith": "Landed cost known only after the sale, and demurrage from untracked free days",
+    "titles": [
+      "Managing Director",
+      "Owner",
+      "Head of Import",
+      "Head of Purchase",
+      "Director Finance",
+      "Head of Logistics",
+      "General Manager Operations"
+    ],
+    "deciders": "The owner or managing director decides. The finance head and head of import influence.",
+    "size": "A trading or manufacturing business with 20 to 200 people and a regular flow of imported containers from several suppliers.",
+    "firstMessage": "Hello, I work with importers on landed cost and container tracking. We build a free seven day demo on your own shipment data. How do you know the real cost of a shipment today?",
+    "discovery": [
+      "How do you track where each container is?",
+      "How do you catch a document mismatch before arrival?",
+      "Who watches free days and container return dates?",
+      "When do you know the landed cost per unit?",
+      "How are advances to suppliers followed up?",
+      "How do you track exchange rate exposure on open orders?"
+    ],
+    "objections": [
+      {
+        "o": "The clearing agent handles this",
+        "a": "The agent does clearance. We give you one view across all the parties so you do not have to ask each of them."
+      },
+      {
+        "o": "We use Tally",
+        "a": "We keep Tally for accounts and add the shipment and landed cost record it does not hold."
+      },
+      {
+        "o": "Not enough staff for a project",
+        "a": "The four week plan needs about 8 to 14 owner hours in total."
+      },
+      {
+        "o": "Cost",
+        "a": "Cost depends on scope. We start with the one problem that costs most, and the demo is free."
+      }
+    ],
+    "demo": "A board of shipments by stage, a document mismatch flagged, a container with days left and a landed cost per unit, built from the importer's own shipments.",
+    "proof": "Take the last three shipments and show their real landed cost and any free days lost.",
+    "followUp": "Thank you for your time. I have built the demo around the shipment you described, with its landed cost. When can your finance head and I go through it for 20 minutes?"
+  }
 };

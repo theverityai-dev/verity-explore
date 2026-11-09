@@ -72,6 +72,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - fix: Each batch record is a set of steps with a person, a time and a check. A step cannot be closed without the entry, and a missing step is listed for the shift in charge before the batch moves on.
 - screen: batches
 - source: (Raw Law on a Supreme Court ruling, 2026: https://rawlaw.in/supreme-court-of-india-upholds-prosecution-of-pharma-manufacturer-for-schedule-m-violations-non-maintenance-of-manufacturing-records-attracts-section-18avi-read-with-section-27/)
+- root: Batch records are paper sheets filled across several shifts, and a missed entry is found only at review.
+- workaround: A reviewer goes through each sheet after the batch and chases the person who missed an entry.
+- options: A second checker at each step, which slows the line | A checklist at the end of the batch | Each batch record as steps with a person, time and check, where a step cannot close without its entry and missing steps are listed for the shift in charge
+- pick: A gap is fixed while the operator is still at the station, not days later.
+- needs: Your batch manufacturing record steps for one product to start with.
 
 ### 2. Raw materials get used before they are approved
 - area: Stores
@@ -79,6 +84,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: A batch made from an unapproved lot may have to be quarantined or destroyed. The cost is the batch and the trust of the customer.
 - fix: Each material lot has a status: quarantine, approved or rejected. Issuing is blocked unless the lot is approved. QC result entry changes the status, with who and when.
 - screen: batches
+- root: Quarantine, approved and rejected materials are separated by tags and by a store keeper's care.
+- workaround: Coloured labels on containers and a status board.
+- options: Physically separate rooms for each status | A register updated by hand | Each lot with a status and issue blocked unless approved, with the status changed by the QC result and who made the change
+- pick: An unapproved lot cannot be issued by mistake, and the decision is on record.
+- needs: Lot numbers on receipt and the QC approval step you follow.
 
 ### 3. The QC result is in one place and the batch in another
 - area: Quality control
@@ -86,6 +96,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: Review stretches to days. In an audit, a result you cannot trace to a sample is a finding.
 - fix: Samples are recorded against batch and test, with the analyst, the instrument and the result. The batch record shows all results with their sample IDs, and the release screen shows which tests are pending.
 - screen: qc
+- root: Samples are tested in the lab and the batch record is kept in production, and the results are copied across.
+- workaround: The QC person hands result sheets to production, who attach them to the batch file.
+- options: Photocopy results into the batch file | A shared register | Samples recorded against batch and test with analyst, instrument and result, shown on the batch record with sample IDs
+- pick: The batch and its results are one record and a reviewer sees both.
+- needs: Test list per product and instrument details.
 
 ### 4. Out-of-specification results are handled in a hurry
 - area: Quality control
@@ -93,6 +108,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: A repeat without a documented reason is a data integrity risk and a likely audit finding.
 - fix: Each out-of-specification result opens an investigation record with its phases: lab check, review, decision. Every retest is linked to the original result and cannot hide it, and open ones are listed by age.
 - screen: qc
+- root: An out-of-specification result puts pressure on dispatch, and the investigation steps are shortened.
+- workaround: A quick retest and a note, with the full investigation written later.
+- options: Retest freely, which hides the result | A fixed template investigation form | An investigation record with phases for lab check, review and decision, retests linked to the original result, and the decision with who made it
+- pick: The process is followed in order and the record shows it.
+- needs: Your OOS procedure and the people who sign each phase.
 
 ### 5. Deviations sit open for months
 - area: Deviations
@@ -100,6 +120,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: Open deviations block batch release and show up at audits as a lack of control.
 - fix: Each deviation is a record with batch, area, owner, classification, root cause, action and due date. Verity lists open deviations by age and owner, and links each to the batches it affects.
 - screen: deviations
+- root: Deviations are raised quickly but the investigation and the action wait on busy owners.
+- workaround: A deviation log reviewed monthly by quality.
+- options: Close deviations without root cause, which repeats them | Monthly meeting only | A deviation record with batch, area, owner, class, root cause, action and due date, listed by age and owner
+- pick: Old deviations show up and the same cause is visible across batches.
+- needs: Your deviation classes and the owners of each area.
 
 ### 6. Changes are made without a trail
 - area: Change control
@@ -107,6 +132,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: A change nobody assessed can alter product quality and leaves no justification at inspection.
 - fix: Each change is a request with an assessment, approvals by the right roles, and the batches made under it. The master record only changes after approval, and the history stays.
 - screen: deviations
+- root: A change to a process, a material or a machine goes through several signatures that are chased on paper.
+- workaround: A change form carried from desk to desk.
+- options: A change committee that meets rarely | A shared folder of forms | A change request with an assessment, approvals by role, and the batches made under it, with the master record changed only after approval
+- pick: Every change has an approved trail and a list of affected batches.
+- needs: Your change control procedure and approver roles.
 
 ### 7. Revised Schedule M asks for more than the old paperwork
 - area: Compliance
@@ -115,6 +145,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - fix: Each requirement is a task with an owner, a due date and evidence. Verity shows readiness by area, the open gaps and the documents each gap needs, so the quality head can show where the plant stands.
 - screen: gmp
 - source: (India Briefing, India extends GMP compliance deadline, 2025: https://www.india-briefing.com/news/india-extends-gmp-compliance-deadline-to-december-2025-35679.html)
+- root: Revised requirements add documents, tasks and evidence that the old paperwork never had to show.
+- workaround: A consultant's gap list and a spreadsheet of tasks.
+- options: Hire more quality staff | Rely on the consultant alone | Each requirement as a task with owner, due date and evidence, showing readiness by area and the document each gap needs
+- pick: The quality head sees what is ready and what is not without a meeting.
+- needs: The gap list you already have and the people responsible.
 
 ### 8. Equipment calibration and validation lapse quietly
 - area: Equipment
@@ -122,6 +157,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: Results from an uncalibrated instrument can invalidate a batch. The cost is the batch and an investigation.
 - fix: Each instrument and machine is an asset record with calibration, qualification and maintenance dates. Verity blocks use in the batch record when the date has passed, and opens tasks weeks ahead.
 - screen: gmp
+- root: Calibration dates sit in a log, and an instrument can be used after the due date because no one checks at the point of use.
+- workaround: A sticker on the instrument and a monthly check by the engineering team.
+- options: Remove the instrument from use at the due date by hand | A bigger sticker | Each instrument and machine as an asset with calibration, qualification and maintenance dates, and use in a batch step blocked when the date has passed
+- pick: The check happens where it matters, in the batch.
+- needs: Asset list with calibration and qualification dates.
 
 ### 9. Training records do not match who is doing the job
 - area: People
@@ -129,6 +169,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: Work by an untrained person is a finding and, if it affects a batch, a deviation.
 - fix: Each person's SOP training, with version and sign-off, is a record. A batch step asks for someone cleared for that SOP, and Verity lists people whose training is overdue or whose SOP version has changed.
 - screen: gmp
+- root: Training records live in HR and SOP versions live in quality, so the person on the line may not be trained on the current version.
+- workaround: A training file per person reviewed before audits.
+- options: Retrain everyone every time a document changes | A matrix kept in a spreadsheet | Each person's SOP training with version and sign-off, a batch step that asks for someone cleared, and a list of people whose training is due
+- pick: Only trained people do the step, and the proof is on record.
+- needs: SOP list with versions and the current training record.
 
 ### 10. A complaint or recall drill is slow
 - area: Complaints and recall
@@ -137,6 +182,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - fix: A complaint is a record linked to batch, customer, dispatch and retained sample. Verity lists the affected batches, stock held, quantity shipped and customers, with tasks for each call.
 - screen: batches
 - source: (ETV Bharat on the July 2026 CDSCO alert: https://www.etvbharat.com/en/bharat/cdsco-flags-280-drug-samples-as-nsq-or-spurious-in-july-enn26082107816)
+- root: A complaint touches sales, quality and dispatch, and the batch, stock and customer lists are in separate places.
+- workaround: Phone calls and spreadsheets to rebuild the list during a drill.
+- options: Run a mock recall rarely | Keep a distribution list per batch | A complaint record linked to batch, customer, dispatch and retained sample, listing affected batches, stock held and customers
+- pick: A recall drill takes hours, not days.
+- needs: Dispatch records with batch numbers and customer details.
 
 ### 11. Retained samples and stability studies are hard to track
 - area: Quality control
@@ -144,6 +194,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: A missing retained sample cannot be tested when a complaint arrives. A missed stability pull leaves a gap in the data.
 - fix: Each retained sample and stability pull is a record with batch, storage location and due date. Verity raises tasks at each pull and shows where each sample is.
 - screen: qc
+- root: Retained samples and stability pulls are scheduled by dates in a diary and stored in many places.
+- workaround: A stability calendar kept by the QC head.
+- options: A shared calendar | A dedicated person for stability | Each retained sample and stability pull as a record with batch, location and due date, with a task at each pull
+- pick: No pull is missed and every sample has a place.
+- needs: Stability protocols and storage locations.
 
 ### 12. Contract and loan-licence customers need documents on time
 - area: Customers
@@ -151,6 +206,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: A missed document date delays the customer's release, and the next order goes elsewhere.
 - fix: Each order lists the documents required for release, with status and owner. Verity flags missing ones and shows delivery risk before the date.
 - screen: orders
+- root: Contract and loan-licence customers each have their own document requirements before release.
+- workaround: A checklist per customer kept by the quality team.
+- options: One standard pack for everyone, which does not fit | A shared folder per customer | Each order listing the documents required for release with status and owner, and missing ones flagged early
+- pick: Delivery risk appears before the date.
+- needs: Document lists for each customer.
 
 ### 13. Customers pay late and raw material is bought on short terms
 - area: Money
@@ -159,6 +219,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - fix: Invoices and supplier bills are tracked against due dates and the limit where it applies. Verity lists overdue dues by customer and age, and bills nearing the limit.
 - screen: orders
 - source: (SetIndiaBiz, MSME 45 day payment rule, 2025: https://www.setindiabiz.com/blog/msme-45-day-payment-rule)
+- root: Raw material is bought on short terms while customers pay slowly, and neither list is viewed together.
+- workaround: Accounts tells the owner about cash on the day a payment is due.
+- options: Delay supplier payments | Advance from customers | Invoices and supplier bills tracked against due dates, overdue dues by customer and age, and bills nearing the limit
+- pick: Cash decisions are made with the dates in view.
+- needs: Invoices, supplier bills and payment terms.
 
 ### 14. The owner sees quality problems after they cost money
 - area: Owner
@@ -166,6 +231,11 @@ Lede: These are the situations plant heads, quality heads and owners describe ag
 - cost: Decisions about capacity and customers run on late numbers.
 - fix: One morning screen with batches released, on hold or rejected, open deviations by age, calibration and training due, deliveries and dues.
 - screen: owner
+- root: Quality problems are reported in a monthly review, after the batch cost has been spent.
+- workaround: The quality head briefs the owner when something big happens.
+- options: A weekly quality meeting | A monthly dashboard prepared by hand | A morning screen of batches released, on hold or rejected, open deviations by age, calibration and training due, deliveries and dues
+- pick: The owner sees quality exceptions as they happen.
+- needs: A short daily set of figures from quality and production.
 
 ## Facts
 
@@ -328,7 +398,7 @@ Heading: The same Monday, before and after.
 Lede: What changes is not the product. It is that each step leaves a connected record, and the record does the chasing.
 
 - 8:30: before: Quality and production meet to find out which batches are waiting and why. | after: The Today screen shows 3 batches on hold, 9 open deviations and the two blocking release.
-- 10:30: before: A lot is issued under test because the line needs it. | after: Issue is blocked until the lot is approved, and QC result entry unlocks it.
+- 10:30: before: A lot is issued under test because the line needs it. | after: Issue is blocked until the lot is approved, and QC result entry releases it.
 - 12:00: before: A reviewer finds a batch record missing two entries and chases the shift. | after: Missing entries were listed before the batch moved on, and the shift fixed them the same day.
 - 3:00: before: An out-of-specification result is retested without a trail. | after: The retest is linked to the original and the investigation shows its phase and age.
 - 5:30: before: A calibration date was missed and a batch was weighed on that balance. | after: A task opened weeks earlier and the batch step would not accept the balance after its date.
@@ -435,8 +505,167 @@ Heading: Questions pharma owners and quality heads ask.
 - cta heading: Start with the deviations that are still open.
 - cta lede: Tell us how your plant runs and we will show you the held batches, the overdue deviations and the dues it would find, using your own numbers.
 
+## Workflow
+
+Heading: From order to release and payment in a pharma plant, and where each handoff slips.
+Lede: A pharma batch moves through approved materials, documented manufacture, testing and release. Each step is documented. The weak points are the handoffs between production, quality control and quality assurance.
+
+### 1. Order and planning
+- owner: Planner and sales
+- does: Orders are accepted and batches are planned.
+- data: Product, quantity, delivery date, customer document needs.
+- breaks: Documents required for release are discovered late.
+- handoff: The batch plan goes to stores and production.
+
+### 2. Material receipt and approval
+- owner: Stores and QC
+- does: Materials are received, sampled, tested and approved or rejected.
+- data: Lot, supplier, status, test results.
+- breaks: Unapproved material can be issued by mistake.
+- handoff: Approved lots are issued to the batch.
+
+### 3. Manufacturing
+- owner: Production
+- does: The batch is made step by step against the master record.
+- data: Step entries, person, time, equipment, yield.
+- breaks: Entries are missed and found at review.
+- handoff: The batch goes to QC for sampling and testing.
+
+### 4. Testing and investigation
+- owner: QC
+- does: Samples are tested and any out-of-specification result is investigated.
+- data: Results, analyst, instrument, investigation record.
+- breaks: Results sit apart from the batch record and investigations are rushed.
+- handoff: Results go to QA for review.
+
+### 5. Review and release
+- owner: QA
+- does: The record, deviations and results are reviewed and the batch is released or held.
+- data: Batch record, deviations, results, release decision.
+- breaks: Open deviations and changes delay release.
+- handoff: Released batches go to dispatch.
+
+### 6. Dispatch
+- owner: Dispatch
+- does: Goods are packed with documents and sent.
+- data: Batch, quantity, customer, documents.
+- breaks: Customer documents are incomplete.
+- handoff: The invoice goes to accounts and a retained sample is stored.
+
+### 7. Stability and complaints
+- owner: QC and QA
+- does: Retained samples are stored, stability pulls are made and complaints are handled.
+- data: Sample location, pull dates, complaint record.
+- breaks: Pulls are missed and a recall drill is slow.
+- handoff: Findings go to change control and training.
+
+### 8. Compliance and improvement
+- owner: Quality head
+- does: Change control, calibration, training and audits are maintained.
+- data: Change requests, asset dates, training records, audit findings.
+- breaks: Dates lapse and changes lack a trail.
+- handoff: Updated procedures return to production.
+
+## Content kit
+
+### Hooks
+- Batch record mein ek entry chhoot gayi. Review mein pata chala.
+- Unapproved raw material line par chala gaya.
+- QC ka result alag, batch record alag.
+- Out of specification result aaya. Retest se kaam chalaya?
+- Deviation teen mahine se khula hai.
+- Change kiya par approval baad mein mila.
+- Naye Schedule M ke liye taiyari kahan tak hui?
+- Instrument ki calibration ki date nikal gayi. Batch usi par chala.
+- Training record purana aur SOP naya.
+- Recall drill mein do din lag gaye.
+- Stability pull miss ho gaya.
+- Loan licence customer ko documents time par chahiye the.
+- Raw material ka bill 45 din mein dena tha.
+- Owner ko quality ki problem tab pata chalti hai jab paisa lag chuka hota hai.
+- Batch ka status kya hai, hold ya release?
+- Retained sample kahan rakha hai?
+- Shift ke end mein record complete karte hain, kaun yaad rakhta hai?
+- Quarantine ka maal galat rack mein rakha tha.
+- QA ke paas deviation ki list hai, production ke paas nahi.
+- Audit mein ek hi sawal: ye entry kisne aur kab kiya?
+- Customer ko certificate chahiye aur QC ne abhi test nahi kiya.
+- Machine ki qualification due thi. Kisi ko yaad nahi tha.
+- Complaint ka batch mil gaya par customer list nahi mili.
+- Operator ne naya SOP padha ya nahi, record kahan hai?
+- Aap plant mein nahi hote to quality ki khabar kaun deta hai?
+
+### Explainers
+- concept: The batch record that cannot skip a step | pain: Batch records come back incomplete (pain 1) | for: Production and QA heads | hook: Batch record mein ek entry chhoot gayi. Review mein pata chala | show: A batch record where a step cannot close without its entry | visual: A checklist where a missing step blinks for the shift in charge | outcome: Complete records at the point of work | cta: Book the free seven day demo
+- concept: Quarantine that holds | pain: Materials used before approval (pain 2) | for: Stores and QC | hook: Unapproved raw material line par chala gaya | show: A lot status that blocks issue until QC approves | visual: A lock opening when a QC result is entered | outcome: No unapproved material issued | cta: Share your lot list
+- concept: Results with the batch | pain: QC result and batch in different places (pain 3) | for: QC and QA | hook: QC ka result alag, batch record alag | show: A batch record that shows every result with sample ID, analyst and instrument | visual: Result cards sliding into a batch page | outcome: One record to review | cta: Try one batch
+- concept: The OOS investigation in order | pain: Out-of-specification handled in a hurry (pain 4) | for: QA heads | hook: Out of specification result aaya. Retest se kaam chalaya? | show: An investigation record with phases and linked retests | visual: A three step ladder with a retest tied to the first result | outcome: A defensible record | cta: Show us your OOS procedure
+- concept: Deviations with owners | pain: Deviations sit open for months (pain 5) | for: Quality heads | hook: Deviation teen mahine se khula hai | show: Open deviations by age and owner | visual: A list ageing from green to amber | outcome: Old deviations are closed | cta: Load your deviation log
+- concept: The instrument that was due | pain: Calibration and validation lapse (pain 8) | for: Engineering and QA | hook: Instrument ki calibration ki date nikal gayi. Batch usi par chala | show: A batch step blocked when the instrument date has passed | visual: An instrument card turning red and a step locking | outcome: Dates are respected where the work happens | cta: Share your asset list
+- concept: Trained for this step | pain: Training does not match the person (pain 9) | for: HR and QA | hook: Training record purana aur SOP naya | show: A batch step that asks for someone cleared for the current SOP | visual: A person card with a green ring on the right SOP version | outcome: Only trained people do the step | cta: Try it on one SOP
+- concept: A recall drill in hours | pain: Complaint or recall drill is slow (pain 10) | for: QA and sales | hook: Recall drill mein do din lag gaye | show: A complaint linked to batches, stock held and customers | visual: One batch card fanning to a list of customers | outcome: A fast, complete list | cta: Run a drill on your data
+- concept: Documents before release | pain: Contract customers need documents (pain 12) | for: Contract and loan licence teams | hook: Loan licence customer ko documents time par chahiye the | show: An order with required documents, status and owners | visual: A checklist for a customer with one item missing | outcome: Release without a last-minute scramble | cta: Share a customer document list
+- concept: Morning quality view | pain: Owner sees problems after they cost money (pain 14) | for: Owners | hook: Owner ko quality ki problem tab pata chalti hai jab paisa lag chuka hota hai | show: A morning screen of batches, deviations, due dates and dues | visual: A phone with a short list | outcome: Early visibility | cta: Ask for the demo
+
+### Script 1: Entry chhoot gayi
+- 0 to 5s: Batch record mein ek entry chhoot gayi. Review mein pata chala.
+- 5 to 15s: Operator ja chuka, batch aage badh chuka, aur ab sabko dhoondna hai.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Batch record ke step mein person, time aur check. Bina entry ke step band nahi hota. Chhoota step shift in charge ko dikhta hai.
+- 40 to 50s: Review ke din record already poora hota hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Quarantine ka lock
+- 0 to 5s: Unapproved raw material line par chala gaya.
+- 5 to 15s: Tag laga tha, par kisi ne dekha nahi.
+- 15 to 25s: Ek lot ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har lot ka status: quarantine, approved ya rejected. Approved nahi to issue block. QC result se status badalta hai.
+- 40 to 50s: Kisne badla aur kab, record mein.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Calibration ki date
+- 0 to 5s: Instrument ki calibration ki date nikal gayi. Batch usi par chala.
+- 5 to 15s: Sticker laga tha par batch ke waqt kisne dekha?
+- 15 to 25s: Apni asset list dijiye. Saat din mein free demo.
+- 25 to 40s: Har instrument ki calibration, qualification aur maintenance date. Date nikal jaye to batch step usme block.
+- 40 to 50s: Renewal tasks pehle se khulte hain.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Recall drill
+- 0 to 5s: Recall drill mein do din lag gaye.
+- 5 to 15s: Batch ek jagah, dispatch doosri jagah, customer list teesri.
+- 15 to 25s: Ek complaint ka data dijiye. Saat din mein customised demo, free.
+- 25 to 40s: Complaint batch, customer, dispatch aur retained sample se judti hai. Prabhavit batch, stock aur customer ki list.
+- 40 to 50s: Ghanton mein tayyar.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Quality ki subah
+- 0 to 5s: Quality ki problem tab pata chalti hai jab paisa lag chuka hota hai.
+- 5 to 15s: Monthly review mein sab purani baat hoti hai.
+- 15 to 25s: Ek line ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Subah ek screen: release, hold, reject batch, khuli deviation, calibration aur training due, dues. Har item ka owner.
+- 40 to 50s: Aap sirf jahan faisla chahiye wahan ruk-te hain.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Incomplete batch records and open deviations ahead of audits and the revised Schedule M
+- titles: Managing Director | Owner | Head of Quality Assurance | Head of Production | Plant Head | Head of Quality Control | Director Operations
+- deciders: The owner or managing director decides. The head of quality and plant head influence strongly.
+- best size: A formulation or contract pharma plant with 50 to 300 people, several products and customers who audit.
+- first message: Hello, I work with pharma plants on one problem: incomplete batch records and deviations that stay open. We build a free seven day demo on your own batch and deviation data. How do you catch a missed entry before review today?
+- discovery: How do you catch a missed batch record entry? | How is material status controlled at issue? | How do QC results reach the batch record? | How do you follow an out-of-specification investigation? | How are deviations and changes tracked by age? | How ready are you for the revised Schedule M?
+- objection: We use paper and it is validated | We do not ask you to drop what works. We start with the records that are hardest to track, such as deviations and training, and show the record on your data.
+- objection: Regulatory risk of software | Verity records and tracks. You keep your procedures and approvals, and we map the software around them.
+- objection: Our team is overloaded | The four week plan needs about 8 to 14 owner hours in total, and we do the rest with your team.
+- objection: Cost | Cost depends on scope. We start with the one problem that costs most, and the demo is free.
+- demo: One batch record with a missed step flagged, a lot blocked until QC approval, a deviation list by age and a recall drill from complaint to customer list.
+- proof: Take one open deviation or one recent complaint and show its full linked record.
+- follow up: Thank you for your time. I have built the demo around the deviation you described, with its batch and its history. When can your head of quality and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Sample figures, names, product letters, batch numbers, process hours and day rows are drafted illustrations to confirm with the Verity team.
 - Unverified: the Form A filing date (sources gave 11 May 2025 and 4 April 2025); retention periods for batch records and reference samples (one snippet only); the claim that Schedule M applies to all units from 1 January 2026 (third-party site, not used); the CDSCO inspection halt figures (The Wire, headline only, not used); FDA warning letter details (search snippets, background only).
 - Verity cannot support electronic record validation claims. How Verity fits a plant's own computer system validation is for the quality team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

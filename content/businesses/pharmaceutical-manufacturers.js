@@ -72,7 +72,16 @@ export default {
       "source": {
         "name": "Raw Law on a Supreme Court ruling, 2026",
         "url": "https://rawlaw.in/supreme-court-of-india-upholds-prosecution-of-pharma-manufacturer-for-schedule-m-violations-non-maintenance-of-manufacturing-records-attracts-section-18avi-read-with-section-27/"
-      }
+      },
+      "root": "Batch records are paper sheets filled across several shifts, and a missed entry is found only at review.",
+      "workaround": "A reviewer goes through each sheet after the batch and chases the person who missed an entry.",
+      "options": [
+        "A second checker at each step, which slows the line",
+        "A checklist at the end of the batch",
+        "Each batch record as steps with a person, time and check, where a step cannot close without its entry and missing steps are listed for the shift in charge"
+      ],
+      "pick": "A gap is fixed while the operator is still at the station, not days later.",
+      "needs": "Your batch manufacturing record steps for one product to start with."
     },
     {
       "area": "Stores",
@@ -80,7 +89,16 @@ export default {
       "scene": "A new lot of an excipient arrives in a hurry. The sample goes to QC but the line needs it today. The lot is issued with an under test label that nobody checks.",
       "cost": "A batch made from an unapproved lot may have to be quarantined or destroyed. The cost is the batch and the trust of the customer.",
       "fix": "Each material lot has a status: quarantine, approved or rejected. Issuing is blocked unless the lot is approved. QC result entry changes the status, with who and when.",
-      "screen": "batches"
+      "screen": "batches",
+      "root": "Quarantine, approved and rejected materials are separated by tags and by a store keeper's care.",
+      "workaround": "Coloured labels on containers and a status board.",
+      "options": [
+        "Physically separate rooms for each status",
+        "A register updated by hand",
+        "Each lot with a status and issue blocked unless approved, with the status changed by the QC result and who made the change"
+      ],
+      "pick": "An unapproved lot cannot be issued by mistake, and the decision is on record.",
+      "needs": "Lot numbers on receipt and the QC approval step you follow."
     },
     {
       "area": "Quality control",
@@ -88,7 +106,16 @@ export default {
       "scene": "The assay result for batch 24-118 is on an instrument printout. The batch record has the result written, but not the sample ID. A reviewer cannot tell which sample it was.",
       "cost": "Review stretches to days. In an audit, a result you cannot trace to a sample is a finding.",
       "fix": "Samples are recorded against batch and test, with the analyst, the instrument and the result. The batch record shows all results with their sample IDs, and the release screen shows which tests are pending.",
-      "screen": "qc"
+      "screen": "qc",
+      "root": "Samples are tested in the lab and the batch record is kept in production, and the results are copied across.",
+      "workaround": "The QC person hands result sheets to production, who attach them to the batch file.",
+      "options": [
+        "Photocopy results into the batch file",
+        "A shared register",
+        "Samples recorded against batch and test with analyst, instrument and result, shown on the batch record with sample IDs"
+      ],
+      "pick": "The batch and its results are one record and a reviewer sees both.",
+      "needs": "Test list per product and instrument details."
     },
     {
       "area": "Quality control",
@@ -96,7 +123,16 @@ export default {
       "scene": "A dissolution result comes back low. The analyst repeats the test and records only the repeat. The investigation is a short note.",
       "cost": "A repeat without a documented reason is a data integrity risk and a likely audit finding.",
       "fix": "Each out-of-specification result opens an investigation record with its phases: lab check, review, decision. Every retest is linked to the original result and cannot hide it, and open ones are listed by age.",
-      "screen": "qc"
+      "screen": "qc",
+      "root": "An out-of-specification result puts pressure on dispatch, and the investigation steps are shortened.",
+      "workaround": "A quick retest and a note, with the full investigation written later.",
+      "options": [
+        "Retest freely, which hides the result",
+        "A fixed template investigation form",
+        "An investigation record with phases for lab check, review and decision, retests linked to the original result, and the decision with who made it"
+      ],
+      "pick": "The process is followed in order and the record shows it.",
+      "needs": "Your OOS procedure and the people who sign each phase."
     },
     {
       "area": "Deviations",
@@ -104,7 +140,16 @@ export default {
       "scene": "A temperature excursion in the packing area was logged in March. The root cause was never agreed, so the corrective action is blank.",
       "cost": "Open deviations block batch release and show up at audits as a lack of control.",
       "fix": "Each deviation is a record with batch, area, owner, classification, root cause, action and due date. Verity lists open deviations by age and owner, and links each to the batches it affects.",
-      "screen": "deviations"
+      "screen": "deviations",
+      "root": "Deviations are raised quickly but the investigation and the action wait on busy owners.",
+      "workaround": "A deviation log reviewed monthly by quality.",
+      "options": [
+        "Close deviations without root cause, which repeats them",
+        "Monthly meeting only",
+        "A deviation record with batch, area, owner, class, root cause, action and due date, listed by age and owner"
+      ],
+      "pick": "Old deviations show up and the same cause is visible across batches.",
+      "needs": "Your deviation classes and the owners of each area."
     },
     {
       "area": "Change control",
@@ -112,7 +157,16 @@ export default {
       "scene": "A supplier changes, a mixing time is shortened, a new packing line is used. The change is agreed on a call and put into practice the next week.",
       "cost": "A change nobody assessed can alter product quality and leaves no justification at inspection.",
       "fix": "Each change is a request with an assessment, approvals by the right roles, and the batches made under it. The master record only changes after approval, and the history stays.",
-      "screen": "deviations"
+      "screen": "deviations",
+      "root": "A change to a process, a material or a machine goes through several signatures that are chased on paper.",
+      "workaround": "A change form carried from desk to desk.",
+      "options": [
+        "A change committee that meets rarely",
+        "A shared folder of forms",
+        "A change request with an assessment, approvals by role, and the batches made under it, with the master record changed only after approval"
+      ],
+      "pick": "Every change has an approved trail and a list of affected batches.",
+      "needs": "Your change control procedure and approver roles."
     },
     {
       "area": "Compliance",
@@ -124,7 +178,16 @@ export default {
       "source": {
         "name": "India Briefing, India extends GMP compliance deadline, 2025",
         "url": "https://www.india-briefing.com/news/india-extends-gmp-compliance-deadline-to-december-2025-35679.html"
-      }
+      },
+      "root": "Revised requirements add documents, tasks and evidence that the old paperwork never had to show.",
+      "workaround": "A consultant's gap list and a spreadsheet of tasks.",
+      "options": [
+        "Hire more quality staff",
+        "Rely on the consultant alone",
+        "Each requirement as a task with owner, due date and evidence, showing readiness by area and the document each gap needs"
+      ],
+      "pick": "The quality head sees what is ready and what is not without a meeting.",
+      "needs": "The gap list you already have and the people responsible."
     },
     {
       "area": "Equipment",
@@ -132,7 +195,16 @@ export default {
       "scene": "A balance or a tablet press was due for calibration last month. The sticker still shows an old date. A batch is weighed on it.",
       "cost": "Results from an uncalibrated instrument can invalidate a batch. The cost is the batch and an investigation.",
       "fix": "Each instrument and machine is an asset record with calibration, qualification and maintenance dates. Verity blocks use in the batch record when the date has passed, and opens tasks weeks ahead.",
-      "screen": "gmp"
+      "screen": "gmp",
+      "root": "Calibration dates sit in a log, and an instrument can be used after the due date because no one checks at the point of use.",
+      "workaround": "A sticker on the instrument and a monthly check by the engineering team.",
+      "options": [
+        "Remove the instrument from use at the due date by hand",
+        "A bigger sticker",
+        "Each instrument and machine as an asset with calibration, qualification and maintenance dates, and use in a batch step blocked when the date has passed"
+      ],
+      "pick": "The check happens where it matters, in the batch.",
+      "needs": "Asset list with calibration and qualification dates."
     },
     {
       "area": "People",
@@ -140,7 +212,16 @@ export default {
       "scene": "A new operator is placed on granulation in his first week. His training on the SOP is dated after the batch. The training matrix is a spreadsheet updated before audits.",
       "cost": "Work by an untrained person is a finding and, if it affects a batch, a deviation.",
       "fix": "Each person's SOP training, with version and sign-off, is a record. A batch step asks for someone cleared for that SOP, and Verity lists people whose training is overdue or whose SOP version has changed.",
-      "screen": "gmp"
+      "screen": "gmp",
+      "root": "Training records live in HR and SOP versions live in quality, so the person on the line may not be trained on the current version.",
+      "workaround": "A training file per person reviewed before audits.",
+      "options": [
+        "Retrain everyone every time a document changes",
+        "A matrix kept in a spreadsheet",
+        "Each person's SOP training with version and sign-off, a batch step that asks for someone cleared, and a list of people whose training is due"
+      ],
+      "pick": "Only trained people do the step, and the proof is on record.",
+      "needs": "SOP list with versions and the current training record."
     },
     {
       "area": "Complaints and recall",
@@ -152,7 +233,16 @@ export default {
       "source": {
         "name": "ETV Bharat on the July 2026 CDSCO alert",
         "url": "https://www.etvbharat.com/en/bharat/cdsco-flags-280-drug-samples-as-nsq-or-spurious-in-july-enn26082107816"
-      }
+      },
+      "root": "A complaint touches sales, quality and dispatch, and the batch, stock and customer lists are in separate places.",
+      "workaround": "Phone calls and spreadsheets to rebuild the list during a drill.",
+      "options": [
+        "Run a mock recall rarely",
+        "Keep a distribution list per batch",
+        "A complaint record linked to batch, customer, dispatch and retained sample, listing affected batches, stock held and customers"
+      ],
+      "pick": "A recall drill takes hours, not days.",
+      "needs": "Dispatch records with batch numbers and customer details."
     },
     {
       "area": "Quality control",
@@ -160,7 +250,16 @@ export default {
       "scene": "Retained samples are on a shelf in a cold room with handwritten labels. A stability pull is due this week; the person who knows is on leave.",
       "cost": "A missing retained sample cannot be tested when a complaint arrives. A missed stability pull leaves a gap in the data.",
       "fix": "Each retained sample and stability pull is a record with batch, storage location and due date. Verity raises tasks at each pull and shows where each sample is.",
-      "screen": "qc"
+      "screen": "qc",
+      "root": "Retained samples and stability pulls are scheduled by dates in a diary and stored in many places.",
+      "workaround": "A stability calendar kept by the QC head.",
+      "options": [
+        "A shared calendar",
+        "A dedicated person for stability",
+        "Each retained sample and stability pull as a record with batch, location and due date, with a task at each pull"
+      ],
+      "pick": "No pull is missed and every sample has a place.",
+      "needs": "Stability protocols and storage locations."
     },
     {
       "area": "Customers",
@@ -168,7 +267,16 @@ export default {
       "scene": "A contract customer wants the batch record summary and certificate for a lot by Friday. Quality is in the middle of an audit.",
       "cost": "A missed document date delays the customer's release, and the next order goes elsewhere.",
       "fix": "Each order lists the documents required for release, with status and owner. Verity flags missing ones and shows delivery risk before the date.",
-      "screen": "orders"
+      "screen": "orders",
+      "root": "Contract and loan-licence customers each have their own document requirements before release.",
+      "workaround": "A checklist per customer kept by the quality team.",
+      "options": [
+        "One standard pack for everyone, which does not fit",
+        "A shared folder per customer",
+        "Each order listing the documents required for release with status and owner, and missing ones flagged early"
+      ],
+      "pick": "Delivery risk appears before the date.",
+      "needs": "Document lists for each customer."
     },
     {
       "area": "Money",
@@ -180,7 +288,16 @@ export default {
       "source": {
         "name": "SetIndiaBiz, MSME 45 day payment rule, 2025",
         "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
-      }
+      },
+      "root": "Raw material is bought on short terms while customers pay slowly, and neither list is viewed together.",
+      "workaround": "Accounts tells the owner about cash on the day a payment is due.",
+      "options": [
+        "Delay supplier payments",
+        "Advance from customers",
+        "Invoices and supplier bills tracked against due dates, overdue dues by customer and age, and bills nearing the limit"
+      ],
+      "pick": "Cash decisions are made with the dates in view.",
+      "needs": "Invoices, supplier bills and payment terms."
     },
     {
       "area": "Owner",
@@ -188,7 +305,16 @@ export default {
       "scene": "Rejected batches, open deviations and held stock are known by the quality head. The owner sees the cost on the month end report.",
       "cost": "Decisions about capacity and customers run on late numbers.",
       "fix": "One morning screen with batches released, on hold or rejected, open deviations by age, calibration and training due, deliveries and dues.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Quality problems are reported in a monthly review, after the batch cost has been spent.",
+      "workaround": "The quality head briefs the owner when something big happens.",
+      "options": [
+        "A weekly quality meeting",
+        "A monthly dashboard prepared by hand",
+        "A morning screen of batches released, on hold or rejected, open deviations by age, calibration and training due, deliveries and dues"
+      ],
+      "pick": "The owner sees quality exceptions as they happen.",
+      "needs": "A short daily set of figures from quality and production."
     }
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
@@ -881,7 +1007,7 @@ export default {
     {
       "time": "10:30",
       "before": "A lot is issued under test because the line needs it.",
-      "after": "Issue is blocked until the lot is approved, and QC result entry unlocks it."
+      "after": "Issue is blocked until the lot is approved, and QC result entry releases it."
     },
     {
       "time": "12:00",
@@ -1190,5 +1316,397 @@ export default {
     "exporters"
   ],
   "ctaHeading": "Start with the deviations that are still open.",
-  "ctaLede": "Tell us how your plant runs and we will show you the held batches, the overdue deviations and the dues it would find, using your own numbers."
+  "ctaLede": "Tell us how your plant runs and we will show you the held batches, the overdue deviations and the dues it would find, using your own numbers.",
+  "workflow": {
+    "heading": "From order to release and payment in a pharma plant, and where each handoff slips.",
+    "lede": "A pharma batch moves through approved materials, documented manufacture, testing and release. Each step is documented. The weak points are the handoffs between production, quality control and quality assurance.",
+    "stages": [
+      {
+        "name": "Order and planning",
+        "owner": "Planner and sales",
+        "does": "Orders are accepted and batches are planned.",
+        "data": "Product, quantity, delivery date, customer document needs.",
+        "breaks": "Documents required for release are discovered late.",
+        "handoff": "The batch plan goes to stores and production."
+      },
+      {
+        "name": "Material receipt and approval",
+        "owner": "Stores and QC",
+        "does": "Materials are received, sampled, tested and approved or rejected.",
+        "data": "Lot, supplier, status, test results.",
+        "breaks": "Unapproved material can be issued by mistake.",
+        "handoff": "Approved lots are issued to the batch."
+      },
+      {
+        "name": "Manufacturing",
+        "owner": "Production",
+        "does": "The batch is made step by step against the master record.",
+        "data": "Step entries, person, time, equipment, yield.",
+        "breaks": "Entries are missed and found at review.",
+        "handoff": "The batch goes to QC for sampling and testing."
+      },
+      {
+        "name": "Testing and investigation",
+        "owner": "QC",
+        "does": "Samples are tested and any out-of-specification result is investigated.",
+        "data": "Results, analyst, instrument, investigation record.",
+        "breaks": "Results sit apart from the batch record and investigations are rushed.",
+        "handoff": "Results go to QA for review."
+      },
+      {
+        "name": "Review and release",
+        "owner": "QA",
+        "does": "The record, deviations and results are reviewed and the batch is released or held.",
+        "data": "Batch record, deviations, results, release decision.",
+        "breaks": "Open deviations and changes delay release.",
+        "handoff": "Released batches go to dispatch."
+      },
+      {
+        "name": "Dispatch",
+        "owner": "Dispatch",
+        "does": "Goods are packed with documents and sent.",
+        "data": "Batch, quantity, customer, documents.",
+        "breaks": "Customer documents are incomplete.",
+        "handoff": "The invoice goes to accounts and a retained sample is stored."
+      },
+      {
+        "name": "Stability and complaints",
+        "owner": "QC and QA",
+        "does": "Retained samples are stored, stability pulls are made and complaints are handled.",
+        "data": "Sample location, pull dates, complaint record.",
+        "breaks": "Pulls are missed and a recall drill is slow.",
+        "handoff": "Findings go to change control and training."
+      },
+      {
+        "name": "Compliance and improvement",
+        "owner": "Quality head",
+        "does": "Change control, calibration, training and audits are maintained.",
+        "data": "Change requests, asset dates, training records, audit findings.",
+        "breaks": "Dates lapse and changes lack a trail.",
+        "handoff": "Updated procedures return to production."
+      }
+    ]
+  },
+  "content": {
+    "hooks": [
+      "Batch record mein ek entry chhoot gayi. Review mein pata chala.",
+      "Unapproved raw material line par chala gaya.",
+      "QC ka result alag, batch record alag.",
+      "Out of specification result aaya. Retest se kaam chalaya?",
+      "Deviation teen mahine se khula hai.",
+      "Change kiya par approval baad mein mila.",
+      "Naye Schedule M ke liye taiyari kahan tak hui?",
+      "Instrument ki calibration ki date nikal gayi. Batch usi par chala.",
+      "Training record purana aur SOP naya.",
+      "Recall drill mein do din lag gaye.",
+      "Stability pull miss ho gaya.",
+      "Loan licence customer ko documents time par chahiye the.",
+      "Raw material ka bill 45 din mein dena tha.",
+      "Owner ko quality ki problem tab pata chalti hai jab paisa lag chuka hota hai.",
+      "Batch ka status kya hai, hold ya release?",
+      "Retained sample kahan rakha hai?",
+      "Shift ke end mein record complete karte hain, kaun yaad rakhta hai?",
+      "Quarantine ka maal galat rack mein rakha tha.",
+      "QA ke paas deviation ki list hai, production ke paas nahi.",
+      "Audit mein ek hi sawal: ye entry kisne aur kab kiya?",
+      "Customer ko certificate chahiye aur QC ne abhi test nahi kiya.",
+      "Machine ki qualification due thi. Kisi ko yaad nahi tha.",
+      "Complaint ka batch mil gaya par customer list nahi mili.",
+      "Operator ne naya SOP padha ya nahi, record kahan hai?",
+      "Aap plant mein nahi hote to quality ki khabar kaun deta hai?"
+    ],
+    "explainers": [
+      {
+        "concept": "The batch record that cannot skip a step",
+        "pain": "Batch records come back incomplete (pain 1)",
+        "for": "Production and QA heads",
+        "hook": "Batch record mein ek entry chhoot gayi. Review mein pata chala",
+        "show": "A batch record where a step cannot close without its entry",
+        "visual": "A checklist where a missing step blinks for the shift in charge",
+        "outcome": "Complete records at the point of work",
+        "cta": "Book the free seven day demo"
+      },
+      {
+        "concept": "Quarantine that holds",
+        "pain": "Materials used before approval (pain 2)",
+        "for": "Stores and QC",
+        "hook": "Unapproved raw material line par chala gaya",
+        "show": "A lot status that blocks issue until QC approves",
+        "visual": "A lock opening when a QC result is entered",
+        "outcome": "No unapproved material issued",
+        "cta": "Share your lot list"
+      },
+      {
+        "concept": "Results with the batch",
+        "pain": "QC result and batch in different places (pain 3)",
+        "for": "QC and QA",
+        "hook": "QC ka result alag, batch record alag",
+        "show": "A batch record that shows every result with sample ID, analyst and instrument",
+        "visual": "Result cards sliding into a batch page",
+        "outcome": "One record to review",
+        "cta": "Try one batch"
+      },
+      {
+        "concept": "The OOS investigation in order",
+        "pain": "Out-of-specification handled in a hurry (pain 4)",
+        "for": "QA heads",
+        "hook": "Out of specification result aaya. Retest se kaam chalaya?",
+        "show": "An investigation record with phases and linked retests",
+        "visual": "A three step ladder with a retest tied to the first result",
+        "outcome": "A defensible record",
+        "cta": "Show us your OOS procedure"
+      },
+      {
+        "concept": "Deviations with owners",
+        "pain": "Deviations sit open for months (pain 5)",
+        "for": "Quality heads",
+        "hook": "Deviation teen mahine se khula hai",
+        "show": "Open deviations by age and owner",
+        "visual": "A list ageing from green to amber",
+        "outcome": "Old deviations are closed",
+        "cta": "Load your deviation log"
+      },
+      {
+        "concept": "The instrument that was due",
+        "pain": "Calibration and validation lapse (pain 8)",
+        "for": "Engineering and QA",
+        "hook": "Instrument ki calibration ki date nikal gayi. Batch usi par chala",
+        "show": "A batch step blocked when the instrument date has passed",
+        "visual": "An instrument card turning red and a step locking",
+        "outcome": "Dates are respected where the work happens",
+        "cta": "Share your asset list"
+      },
+      {
+        "concept": "Trained for this step",
+        "pain": "Training does not match the person (pain 9)",
+        "for": "HR and QA",
+        "hook": "Training record purana aur SOP naya",
+        "show": "A batch step that asks for someone cleared for the current SOP",
+        "visual": "A person card with a green ring on the right SOP version",
+        "outcome": "Only trained people do the step",
+        "cta": "Try it on one SOP"
+      },
+      {
+        "concept": "A recall drill in hours",
+        "pain": "Complaint or recall drill is slow (pain 10)",
+        "for": "QA and sales",
+        "hook": "Recall drill mein do din lag gaye",
+        "show": "A complaint linked to batches, stock held and customers",
+        "visual": "One batch card fanning to a list of customers",
+        "outcome": "A fast, complete list",
+        "cta": "Run a drill on your data"
+      },
+      {
+        "concept": "Documents before release",
+        "pain": "Contract customers need documents (pain 12)",
+        "for": "Contract and loan licence teams",
+        "hook": "Loan licence customer ko documents time par chahiye the",
+        "show": "An order with required documents, status and owners",
+        "visual": "A checklist for a customer with one item missing",
+        "outcome": "Release without a last-minute scramble",
+        "cta": "Share a customer document list"
+      },
+      {
+        "concept": "Morning quality view",
+        "pain": "Owner sees problems after they cost money (pain 14)",
+        "for": "Owners",
+        "hook": "Owner ko quality ki problem tab pata chalti hai jab paisa lag chuka hota hai",
+        "show": "A morning screen of batches, deviations, due dates and dues",
+        "visual": "A phone with a short list",
+        "outcome": "Early visibility",
+        "cta": "Ask for the demo"
+      }
+    ],
+    "scripts": [
+      {
+        "title": "Entry chhoot gayi",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Batch record mein ek entry chhoot gayi. Review mein pata chala."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Operator ja chuka, batch aage badh chuka, aur ab sabko dhoondna hai."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Batch record ke step mein person, time aur check. Bina entry ke step band nahi hota. Chhoota step shift in charge ko dikhta hai."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Review ke din record already poora hota hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Quarantine ka lock",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Unapproved raw material line par chala gaya."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Tag laga tha, par kisi ne dekha nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek lot ka data dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har lot ka status: quarantine, approved ya rejected. Approved nahi to issue block. QC result se status badalta hai."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Kisne badla aur kab, record mein."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Calibration ki date",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Instrument ki calibration ki date nikal gayi. Batch usi par chala."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Sticker laga tha par batch ke waqt kisne dekha?"
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apni asset list dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har instrument ki calibration, qualification aur maintenance date. Date nikal jaye to batch step usme block."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Renewal tasks pehle se khulte hain."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Demo pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Recall drill",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Recall drill mein do din lag gaye."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Batch ek jagah, dispatch doosri jagah, customer list teesri."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek complaint ka data dijiye. Saat din mein customised demo, free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Complaint batch, customer, dispatch aur retained sample se judti hai. Prabhavit batch, stock aur customer ki list."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Ghanton mein tayyar."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Quality ki subah",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Quality ki problem tab pata chalti hai jab paisa lag chuka hota hai."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Monthly review mein sab purani baat hoti hai."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek line ka data dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Subah ek screen: release, hold, reject batch, khuli deviation, calibration aur training due, dues. Har item ka owner."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Aap sirf jahan faisla chahiye wahan ruk-te hain."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      }
+    ]
+  },
+  "sales": {
+    "leadWith": "Incomplete batch records and open deviations ahead of audits and the revised Schedule M",
+    "titles": [
+      "Managing Director",
+      "Owner",
+      "Head of Quality Assurance",
+      "Head of Production",
+      "Plant Head",
+      "Head of Quality Control",
+      "Director Operations"
+    ],
+    "deciders": "The owner or managing director decides. The head of quality and plant head influence strongly.",
+    "size": "A formulation or contract pharma plant with 50 to 300 people, several products and customers who audit.",
+    "firstMessage": "Hello, I work with pharma plants on one problem: incomplete batch records and deviations that stay open. We build a free seven day demo on your own batch and deviation data. How do you catch a missed entry before review today?",
+    "discovery": [
+      "How do you catch a missed batch record entry?",
+      "How is material status controlled at issue?",
+      "How do QC results reach the batch record?",
+      "How do you follow an out-of-specification investigation?",
+      "How are deviations and changes tracked by age?",
+      "How ready are you for the revised Schedule M?"
+    ],
+    "objections": [
+      {
+        "o": "We use paper and it is validated",
+        "a": "We do not ask you to drop what works. We start with the records that are hardest to track, such as deviations and training, and show the record on your data."
+      },
+      {
+        "o": "Regulatory risk of software",
+        "a": "Verity records and tracks. You keep your procedures and approvals, and we map the software around them."
+      },
+      {
+        "o": "Our team is overloaded",
+        "a": "The four week plan needs about 8 to 14 owner hours in total, and we do the rest with your team."
+      },
+      {
+        "o": "Cost",
+        "a": "Cost depends on scope. We start with the one problem that costs most, and the demo is free."
+      }
+    ],
+    "demo": "One batch record with a missed step flagged, a lot blocked until QC approval, a deviation list by age and a recall drill from complaint to customer list.",
+    "proof": "Take one open deviation or one recent complaint and show its full linked record.",
+    "followUp": "Thank you for your time. I have built the demo around the deviation you described, with its batch and its history. When can your head of quality and I go through it for 20 minutes?"
+  }
 };

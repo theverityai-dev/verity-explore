@@ -67,7 +67,16 @@ export default {
       "scene": "A buyer asks for 20,000 printed cartons. The estimate is done from last year's similar job. The board rate has changed twice since.",
       "cost": "Example arithmetic: a ₹6 carton quoted at ₹6.40 with actual cost of ₹6.20 earns ₹0.20 a piece, so ₹4,000 on the order. A 3 percent wastage overrun alone wipes that out.",
       "fix": "Each quote is a record built from spec, material at the latest rate, wastage allowance, tooling and conversion cost. When the job closes, Verity shows quoted against actual cost and margin by job and by customer.",
-      "screen": "jobs"
+      "screen": "jobs",
+      "root": "A packaging quote is built from a spec, a material estimate and a conversion rate, and the actual use is never compared after the job.",
+      "workaround": "The estimator uses a rule of thumb and the owner adjusts the price for the customer.",
+      "options": [
+        "Add a fixed margin to every job, which loses competitive quotes",
+        "Review closed jobs yearly",
+        "A quote record from spec, material rate, wastage allowance, tooling and conversion cost, compared with actuals when the job closes"
+      ],
+      "pick": "Each job teaches the next quote, and jobs that always lose money are named.",
+      "needs": "Specs, material rates, wastage allowances and the actuals the floor already records."
     },
     {
       "area": "Production",
@@ -75,7 +84,16 @@ export default {
       "scene": "A print job takes 300 sheets to get colour right on a short run. The corrugator trim on a particular size is higher than the estimate allowed. Nobody records either.",
       "cost": "Material is usually the largest cost in a converter. A point or two of extra wastage across all jobs is a visible dent in a thin margin.",
       "fix": "Each job records material issued, good output and waste, with a reason such as setup, trim or damage. Verity shows wastage by job, machine and operator against the allowance used in the quote.",
-      "screen": "material"
+      "screen": "material",
+      "root": "Wastage is a mix of setup, trim and damage, but the record shows only a total, and no one can tell which cause dominates.",
+      "workaround": "The machine operator reports waste at the end of the job, usually as an estimate.",
+      "options": [
+        "Fixed waste allowance for every job",
+        "A paper waste sheet",
+        "Material issued, good output and waste recorded per job with a reason, shown by job, machine and operator"
+      ],
+      "pick": "The largest cause is seen and reduced, with the numbers to prove it.",
+      "needs": "Material issued, good output and a short list of waste reasons."
     },
     {
       "area": "Costing",
@@ -87,7 +105,16 @@ export default {
       "source": {
         "name": "PrintWeek India, Survival of corrugated packaging industry at stake, 2021",
         "url": "https://www.printweek.in/features/survival-of-corrugated-packaging-industry-at-stake-55335"
-      }
+      },
+      "root": "Board and film are bought at changing prices, and the price in the quote was set weeks earlier.",
+      "workaround": "The owner changes prices when a supplier calls with a new rate.",
+      "options": [
+        "Quote with a short validity, which annoys customers",
+        "Add an escalation clause, which not every customer accepts",
+        "Each purchase rate recorded and compared with the rate in each open quote, with a flag when cost moves beyond a limit"
+      ],
+      "pick": "You decide on exposed quotes before the material is bought.",
+      "needs": "Open quotes and current purchase rates."
     },
     {
       "area": "Tooling",
@@ -95,7 +122,16 @@ export default {
       "scene": "A repeat order for a customer's carton needs the die made last year. It is not where the register says. A new one is made, and the old one turns up later.",
       "cost": "A die or a set of printing plates can be a real expense, and a duplicate or a delayed job is avoidable.",
       "fix": "Each die, plate set and cylinder is an asset record with customer, spec, location, number of impressions run and what it cost. A job picks its tooling from the record and the location changes when it is issued and returned.",
-      "screen": "tooling"
+      "screen": "tooling",
+      "root": "Dies, plates and cylinders are stored on shelves, and the record of where each one is lives in memory.",
+      "workaround": "The store person finds them by looking.",
+      "options": [
+        "Label every tool with a number, which helps only if a record exists",
+        "Make a new tool for each repeat order, which wastes money",
+        "Each die, plate set and cylinder as an asset with customer, spec, location, impressions run and cost, picked from the job"
+      ],
+      "pick": "Tools are found, reused and retired by record.",
+      "needs": "Tool list with customer, spec and location."
     },
     {
       "area": "Tooling",
@@ -103,7 +139,16 @@ export default {
       "scene": "The die and plate cost is absorbed into the first order. A customer cancels after the first run and the tooling cost stays with you.",
       "cost": "Unrecovered tooling is a straight loss. It also hides which customers are costly to serve.",
       "fix": "Tooling cost is recorded against the customer and the spec, with what was charged and what remains to be recovered. Verity lists tooling unrecovered by customer.",
-      "screen": "tooling"
+      "screen": "tooling",
+      "root": "A tool cost is quoted into the job price or forgotten, and no one tracks whether the customer has paid for it.",
+      "workaround": "Accounts sees the tool bill and tries to recall who it was for.",
+      "options": [
+        "Absorb the cost into the price, which hides it",
+        "Charge each time by negotiation",
+        "Tooling cost recorded against customer and spec, with what was charged and what remains to recover, listed by customer"
+      ],
+      "pick": "Money spent on a customer's tooling is recovered on purpose.",
+      "needs": "Tool invoices and what was quoted to the customer."
     },
     {
       "area": "Customers",
@@ -111,7 +156,16 @@ export default {
       "scene": "The customer changes a colour on WhatsApp after the plates are made. The approved artwork is one version, the file on the computer is another, and the operator prints from the old one.",
       "cost": "A full reprint of a job is a direct loss, and an argument over who approved what.",
       "fix": "Each job holds the approved artwork version, the sign-off by the customer with date, and changes with who requested them. The job card shows only the approved version.",
-      "screen": "jobs"
+      "screen": "jobs",
+      "root": "Artwork and sample approvals go back and forth by email and messaging, and the final version is not stamped.",
+      "workaround": "The customer service person searches mail for the approved file.",
+      "options": [
+        "A shared folder of artwork",
+        "A paper sign-off sheet",
+        "The approved artwork version with customer sign-off and date on the job, changes recorded with who requested them, and only the approved version shown on the job card"
+      ],
+      "pick": "The floor prints from the approved version and a dispute has a dated answer.",
+      "needs": "Artwork files and the approval form you use."
     },
     {
       "area": "Delivery",
@@ -119,7 +173,16 @@ export default {
       "scene": "Sales confirms Thursday. The press is booked until Wednesday and the sheets have not been cut. The job moves to Saturday and the customer's line stops.",
       "cost": "Packaging goes into the customer's own production. Lateness can halt their line, and it costs you the next order.",
       "fix": "Each job shows spec, material availability, machine slot and promised date. The planner sees conflicts before a date is committed, and late-running jobs are listed with the reason.",
-      "screen": "deliveries"
+      "screen": "deliveries",
+      "root": "Dates are promised by sales and the machine slot is known only to the planner, who is not at the table.",
+      "workaround": "A call to the planner for each date.",
+      "options": [
+        "Fixed lead times, which do not reflect load",
+        "Weekly planning meeting",
+        "Each job showing spec, material availability, machine slot and promised date, with conflicts seen before commitment"
+      ],
+      "pick": "Dates come from the schedule, and late jobs are visible.",
+      "needs": "Machine list, slots and jobs on the floor."
     },
     {
       "area": "Delivery",
@@ -127,7 +190,16 @@ export default {
       "scene": "A customer takes 8,000 of a 20,000 order and asks for the rest in lots. Each lot has its own challan. A box batch is rejected for print quality and nobody records the quantity or the reason.",
       "cost": "Open balances are forgotten, and rejections are argued from memory instead of from the batch.",
       "fix": "Each dispatch is recorded against the job with quantity and challan. Verity shows balance to deliver, and a rejection is a record with batch, quantity and reason, linked to the job.",
-      "screen": "deliveries"
+      "screen": "deliveries",
+      "root": "Customers take part deliveries, and the balance and rejections are tracked in separate challan books.",
+      "workaround": "Dispatch tallies deliveries from challans at invoice time.",
+      "options": [
+        "Deliver the whole job at once, which customers do not like",
+        "A tally sheet",
+        "Each dispatch recorded against the job with quantity and challan, balance to deliver shown, and rejections linked to batch, quantity and reason"
+      ],
+      "pick": "Invoices match deliveries and rejections have a cause.",
+      "needs": "Job quantities and dispatch challans."
     },
     {
       "area": "Quality",
@@ -135,7 +207,16 @@ export default {
       "scene": "A food company complains about seal strength on a flexible pack. The reel lot, the laminator shift and the operator are not recorded on the job.",
       "cost": "A complaint with no root cause becomes a credit note and a repeat problem.",
       "fix": "Jobs record reel and board lots issued, machine and operator, and the in-process checks. A complaint links to the job and shows the lots and shift behind it.",
-      "screen": "jobs"
+      "screen": "jobs",
+      "root": "Complaints cannot be traced to a material lot or shift because the job card records neither.",
+      "workaround": "The quality person recalls the job and asks the operator.",
+      "options": [
+        "Keep reel labels in a folder",
+        "Photograph the label each job",
+        "Jobs recording reel and board lots, machine, operator and in-process checks, with a complaint linked to the job and its lots and shift"
+      ],
+      "pick": "A complaint leads to a cause, and a supplier can be shown evidence.",
+      "needs": "Lot numbers on issue slips and in-process check sheets."
     },
     {
       "area": "Equipment",
@@ -143,7 +224,16 @@ export default {
       "scene": "A printing press loses two hours a shift for plate changes, web breaks and waiting for material. The day report says output was low.",
       "cost": "Hours lost repeat day after day because the causes are not named.",
       "fix": "Stops are recorded with reason and duration. Verity shows downtime by machine and cause, and links scheduled maintenance tasks to each machine.",
-      "screen": "material"
+      "screen": "material",
+      "root": "A machine stop is short and the operator moves on, so no reason is written.",
+      "workaround": "The supervisor estimates downtime at the end of the shift.",
+      "options": [
+        "Machine counters, which cost money",
+        "A paper downtime log",
+        "Stops recorded with reason and duration, shown by machine and cause, with maintenance tasks linked"
+      ],
+      "pick": "The biggest cause is fixed first, with a date.",
+      "needs": "Machine list and a short list of stop reasons."
     },
     {
       "area": "Money",
@@ -155,7 +245,16 @@ export default {
       "source": {
         "name": "SetIndiaBiz, MSME 45 day payment rule, 2025",
         "url": "https://www.setindiabiz.com/blog/msme-45-day-payment-rule"
-      }
+      },
+      "root": "Customers pay at 60 or 90 days, and the packaging company in turn owes small suppliers within legal limits.",
+      "workaround": "Accounts keeps ledgers and the owner calls the larger customers.",
+      "options": [
+        "Advance payments, which limit sales",
+        "A ledger sheet",
+        "Invoices and supplier bills tracked against due dates and the legal limit where it applies, overdue amounts by customer and age with follow-up tasks"
+      ],
+      "pick": "Cash is planned with the dates in view.",
+      "needs": "Invoices, supplier bills and payment terms."
     },
     {
       "area": "Compliance",
@@ -167,7 +266,16 @@ export default {
       "source": {
         "name": "Packaging Europe, 2025",
         "url": "https://packagingeurope.com/news/india-updates-plastic-waste-rules-for-packaging-traceability-and-compliance/12439.article"
-      }
+      },
+      "root": "Rules for plastic packaging change, and the people who track them are not the people who quote jobs.",
+      "workaround": "The owner hears about changes from industry associations or customers.",
+      "options": [
+        "A consultant to monitor rules",
+        "Follow association updates",
+        "Each registration, certificate and test report as a record with number and expiry, jobs for regulated products carrying the needed information, and renewals as tasks"
+      ],
+      "pick": "Your own registrations stay current and the job record shows what applies. Confirm the rules themselves with an adviser.",
+      "needs": "Your registrations and the products they cover."
     },
     {
       "area": "Compliance",
@@ -175,7 +283,16 @@ export default {
       "scene": "A biscuit maker asks for proof that the board, ink and film you supply are suitable for food contact. The test reports are with the supplier or in a folder.",
       "cost": "Without the documents, you lose food-sector customers or hold up deliveries while you search.",
       "fix": "Material lots link to supplier test reports. Verity shows, for each food-contact job, which lots were used and which reports are on file, and flags gaps.",
-      "screen": "material"
+      "screen": "material",
+      "root": "Food-contact work needs supplier test reports and lot records, which sit in different files.",
+      "workaround": "Reports are searched when a customer asks.",
+      "options": [
+        "Only buy certified material and rely on that",
+        "A folder per supplier",
+        "Material lots linked to supplier test reports, with each food-contact job showing which lots were used and which reports are on file"
+      ],
+      "pick": "A gap in the records shows before the customer asks.",
+      "needs": "Supplier test reports and lot numbers."
     },
     {
       "area": "Owner",
@@ -183,7 +300,16 @@ export default {
       "scene": "The accountant shows margin by month. Nobody can say which customers and specs earn the most per machine hour.",
       "cost": "Decisions about which jobs to chase or drop run on feel.",
       "fix": "One morning screen with jobs closed, margin by job and customer, material wastage, tooling at risk, deliveries due and overdue dues.",
-      "screen": "owner"
+      "screen": "owner",
+      "root": "Job profitability is calculated at the end of the quarter, from an accountant's summary.",
+      "workaround": "The owner trusts customers with high volumes.",
+      "options": [
+        "A monthly review of a few jobs",
+        "Add everything into one margin figure",
+        "A morning screen of jobs closed, margin by job and customer, wastage, tooling at risk, deliveries due and dues"
+      ],
+      "pick": "The owner learns which jobs pay in days, not months.",
+      "needs": "Quotes, actuals and invoices per job."
     }
   ],
   "factsHeading": "The numbers that make these problems worth fixing.",
@@ -1032,5 +1158,397 @@ export default {
     "distributors"
   ],
   "ctaHeading": "Start with the job that lost money.",
-  "ctaLede": "Tell us how your unit runs and we will show you the quoted against actual margin, the tooling not recovered and the dues it would find, using your own numbers."
+  "ctaLede": "Tell us how your unit runs and we will show you the quoted against actual margin, the tooling not recovered and the dues it would find, using your own numbers.",
+  "workflow": {
+    "heading": "From enquiry to payment in a packaging unit, and where each handoff slips.",
+    "lede": "Packaging is made to a customer's spec, in many small jobs, with tooling that belongs to one customer. The losses appear where the quote, the tool, the material and the artwork do not travel together.",
+    "stages": [
+      {
+        "name": "Enquiry and specification",
+        "owner": "Sales and estimator",
+        "does": "The customer sends a spec or sample and a price is prepared.",
+        "data": "Spec, quantity, material, print, tooling needed.",
+        "breaks": "The estimate rests on a rule of thumb and old rates.",
+        "handoff": "The accepted quote becomes a job."
+      },
+      {
+        "name": "Artwork and sample approval",
+        "owner": "Customer service and prepress",
+        "does": "Artwork is checked and a sample is approved.",
+        "data": "Artwork version, approval, changes.",
+        "breaks": "The approved version is not stamped and changes get lost.",
+        "handoff": "The approved artwork goes with the job card to production."
+      },
+      {
+        "name": "Tooling",
+        "owner": "Prepress and store",
+        "does": "Dies, plates or cylinders are made or retrieved.",
+        "data": "Tool, customer, spec, location, impressions run, cost.",
+        "breaks": "Tools are lost or made twice, and the cost is not recovered.",
+        "handoff": "The tool goes to the machine."
+      },
+      {
+        "name": "Material purchase and receipt",
+        "owner": "Purchase and stores",
+        "does": "Board, film, ink and adhesive are bought and received.",
+        "data": "Supplier, lot, rate, test report.",
+        "breaks": "Prices move after the quote and lot records are incomplete.",
+        "handoff": "Material is issued to the job."
+      },
+      {
+        "name": "Production",
+        "owner": "Plant manager and operators",
+        "does": "The job runs through printing, conversion and finishing.",
+        "data": "Material issued, good output, waste, stops, lots.",
+        "breaks": "Waste and stops are not written down.",
+        "handoff": "Finished goods go to quality and packing."
+      },
+      {
+        "name": "Quality check",
+        "owner": "Quality in charge",
+        "does": "Output is checked against the approved sample.",
+        "data": "In-process checks, lot, machine, operator.",
+        "breaks": "A complaint cannot be traced to a lot or shift.",
+        "handoff": "Approved goods go to dispatch."
+      },
+      {
+        "name": "Dispatch",
+        "owner": "Dispatch",
+        "does": "Goods are sent in full or part deliveries.",
+        "data": "Quantity, challan, balance, rejections.",
+        "breaks": "Part deliveries and returns are not matched.",
+        "handoff": "The invoice goes to accounts."
+      },
+      {
+        "name": "Invoice, payment and costing",
+        "owner": "Accounts and owner",
+        "does": "Invoices are raised, payments chased and the job costed.",
+        "data": "Invoice, due date, actual cost against quote.",
+        "breaks": "Costing is done rarely.",
+        "handoff": "Actual cost returns to the estimator."
+      }
+    ]
+  },
+  "content": {
+    "hooks": [
+      "Quote feel pe bana tha. Job ke baad asli cost kisne dekha?",
+      "Setup aur trim ka waste allowance se zyada chala gaya.",
+      "Board ka rate badla aur quote wahi raha.",
+      "Die kahan rakhi hai, ek aadmi ko pata hai.",
+      "Tooling ka kharcha customer se liya hi nahi.",
+      "Artwork ka final version kaun sa tha?",
+      "Delivery date de di. Machine ka slot dekha?",
+      "Part delivery ke baad balance kisko pata?",
+      "Complaint aayi. Kaun sa reel, kaun si shift?",
+      "Machine ruki kyun, kisi ne likha nahi.",
+      "Customer 90 din mein paisa deta hai.",
+      "Chhote supplier ka bill 45 din mein dena tha.",
+      "Plastic packaging ke rules badal gaye. Aapki registration ki date?",
+      "Food contact job ka test report kahan hai?",
+      "Quarter ke end mein pata chalta hai kaun si job se paisa bana.",
+      "Plate dobara bani. Purani plate mil hi nahi rahi.",
+      "Waste kis machine pe zyada, kis operator pe zyada?",
+      "Customer ne artwork badla. Floor ko purana mil gaya.",
+      "Material sasta mila par waste badh gaya.",
+      "Job card par kya likha hai, kaun badalta hai?",
+      "Machine ki service kab hui thi?",
+      "Customer ne return kiya. Kaun sa batch tha?",
+      "Quote bheji, customer ne maana, aur margin kitna?",
+      "Cylinder kitne impression chala, kisi ko pata?",
+      "Aap plant mein nahi hote to job ka kaam kaun dekhta hai?"
+    ],
+    "explainers": [
+      {
+        "concept": "The quote against the real cost",
+        "pain": "Quote on feel (pain 1)",
+        "for": "Owners and estimators",
+        "hook": "Quote feel pe bana tha. Job ke baad asli cost kisne dekha?",
+        "show": "A job closing with quote against actual material, waste and hours",
+        "visual": "Two bars, quoted and actual, the gap highlighted",
+        "outcome": "Better quotes",
+        "cta": "Book the free seven day demo"
+      },
+      {
+        "concept": "Where the waste goes",
+        "pain": "Wastage above allowance (pain 2)",
+        "for": "Plant managers",
+        "hook": "Setup aur trim ka waste allowance se zyada chala gaya",
+        "show": "Waste by job, machine and reason",
+        "visual": "A waste bar split by cause",
+        "outcome": "The biggest cause is fixed",
+        "cta": "Try it on a week of jobs"
+      },
+      {
+        "concept": "The rate that moved",
+        "pain": "Material prices move (pain 3)",
+        "for": "Owners",
+        "hook": "Board ka rate badla aur quote wahi raha",
+        "show": "Open quotes flagged when material cost has moved beyond a limit",
+        "visual": "A price line crossing a quote bar",
+        "outcome": "Decisions before buying",
+        "cta": "Load your open quotes"
+      },
+      {
+        "concept": "Find the die",
+        "pain": "Dies, plates and cylinders lost (pain 4)",
+        "for": "Prepress and stores",
+        "hook": "Die kahan rakhi hai, ek aadmi ko pata hai",
+        "show": "A tool record with customer, spec, location and impressions",
+        "visual": "A rack with a tool glowing",
+        "outcome": "Tools reused, not remade",
+        "cta": "Share your tool list"
+      },
+      {
+        "concept": "Tooling recovered",
+        "pain": "Tooling cost not charged (pain 5)",
+        "for": "Owners and sales",
+        "hook": "Tooling ka kharcha customer se liya hi nahi",
+        "show": "Tooling by customer with amount charged and amount to recover",
+        "visual": "A bar partly filled and a note to recover",
+        "outcome": "Money recovered on purpose",
+        "cta": "Show us last year's tool bills"
+      },
+      {
+        "concept": "The approved artwork",
+        "pain": "Artwork and approvals lost (pain 6)",
+        "for": "Customer service",
+        "hook": "Artwork ka final version kaun sa tha?",
+        "show": "Approved version with sign-off and date shown on the job card",
+        "visual": "Artwork versions stacking with one stamped",
+        "outcome": "Print from the approved version",
+        "cta": "Try it on one job"
+      },
+      {
+        "concept": "A date from the schedule",
+        "pain": "Date promised before slot checked (pain 7)",
+        "for": "Sales and planners",
+        "hook": "Delivery date de di. Machine ka slot dekha?",
+        "show": "A job with material availability, machine slot and promised date",
+        "visual": "Machine lanes filling as a job drops in",
+        "outcome": "Promises that hold",
+        "cta": "Bring your planning board"
+      },
+      {
+        "concept": "Complaint to the reel",
+        "pain": "Complaint cannot be traced (pain 9)",
+        "for": "Quality",
+        "hook": "Complaint aayi. Kaun sa reel, kaun si shift?",
+        "show": "A job showing lots, machine, operator and checks",
+        "visual": "A thread from the complaint to a reel number",
+        "outcome": "A cause you can show the supplier",
+        "cta": "Trace an old complaint"
+      },
+      {
+        "concept": "Why did the machine stop",
+        "pain": "Machines stop for unrecorded reasons (pain 10)",
+        "for": "Plant managers",
+        "hook": "Machine ruki kyun, kisi ne likha nahi",
+        "show": "Downtime by machine and cause",
+        "visual": "A machine strip with reason tags",
+        "outcome": "The top cause is fixed",
+        "cta": "Start with one machine"
+      },
+      {
+        "concept": "Which jobs paid",
+        "pain": "Owner learns at quarter end (pain 14)",
+        "for": "Owners",
+        "hook": "Quarter ke end mein pata chalta hai kaun si job se paisa bana",
+        "show": "Margin by job and customer",
+        "visual": "A list sorted by margin",
+        "outcome": "Pricing by facts",
+        "cta": "Ask for the demo"
+      }
+    ],
+    "scripts": [
+      {
+        "title": "Quote aur asli cost",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Quote feel pe bana tha. Job ke baad asli cost kisne dekha?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Job nikal gayi, margin ka andaaza raha."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Quote spec, material rate, waste aur tooling se banta hai. Job band hone par quote aur asli cost saath dikhte hain."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Agla quote asli cost se shuru hota hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Waste ka karan",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Setup aur trim ka waste allowance se zyada chala gaya."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Total pata hai, karan nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek hafte ka job data dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har job mein material, achha output aur waste, karan ke saath: setup, trim ya damage. Job, machine aur operator ke hisaab se."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Sabse bada karan upar dikhta hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Die ka hisaab",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Die kahan rakhi hai, ek aadmi ko pata hai."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Naya plate bana diya, purana mila hi nahi."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Apni tool list dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Har die, plate aur cylinder ka customer, spec, location, impression aur cost. Job se tool chuna jaata hai."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Customer se tooling ka paisa kitna liya, kitna baaki, wo bhi."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Demo pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Complaint aur reel",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Complaint aayi. Kaun sa reel, kaun si shift?"
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Job card par kuch likha nahi tha."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Ek purani complaint dijiye. Saat din mein customised demo, free."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Job mein reel aur board lot, machine, operator aur checks. Complaint job se judti hai."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Supplier ko saboot milta hai."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi."
+          }
+        ]
+      },
+      {
+        "title": "Kaun si job se paisa bana",
+        "beats": [
+          {
+            "at": "0 to 5s",
+            "say": "Quarter ke end mein pata chalta hai kaun si job se paisa bana."
+          },
+          {
+            "at": "5 to 15s",
+            "say": "Tab tak wahi customer, wahi rate."
+          },
+          {
+            "at": "15 to 25s",
+            "say": "Das closed jobs dijiye. Saat din mein free demo."
+          },
+          {
+            "at": "25 to 40s",
+            "say": "Subah ek screen: band hui jobs, margin job aur customer ke hisaab se, waste, tooling, delivery aur dues."
+          },
+          {
+            "at": "40 to 50s",
+            "say": "Aap sahi customer ko sahi rate dete hain."
+          },
+          {
+            "at": "50 to 60s",
+            "say": "Pasand aaye tabhi aage. Nahi toh koi charge nahi."
+          }
+        ]
+      }
+    ]
+  },
+  "sales": {
+    "leadWith": "Quotes that never get compared with real cost, and wastage no one can explain",
+    "titles": [
+      "Managing Director",
+      "Owner",
+      "Director",
+      "Plant Head",
+      "General Manager Operations",
+      "Head of Production",
+      "Head of Costing"
+    ],
+    "deciders": "The owner or managing director decides. The plant head and estimator influence.",
+    "size": "A corrugated, carton, label or flexible packaging unit with 30 to 250 people, many small repeat jobs and customer-owned tooling.",
+    "firstMessage": "Hello, I work with packaging companies on quotes that are never compared with real cost, and on wastage that has no cause recorded. We build a free seven day demo on your own jobs. How do you check a job's margin after it closes?",
+    "discovery": [
+      "How do you build and check a quote?",
+      "How do you track waste by cause?",
+      "How do you find a die or plate when a repeat order comes?",
+      "How is tooling cost recovered from customers?",
+      "How do you control the approved artwork?",
+      "How do you trace a complaint to a reel or a shift?"
+    ],
+    "objections": [
+      {
+        "o": "We have a job costing sheet",
+        "a": "We keep it and connect it to the job record so the actual numbers come from the floor, not typed again."
+      },
+      {
+        "o": "Operators will not fill screens",
+        "a": "We keep entries short and in the terms your operators use."
+      },
+      {
+        "o": "Cost",
+        "a": "Cost depends on scope. We start with the problem that costs most, and the demo is free."
+      },
+      {
+        "o": "We are busy with orders",
+        "a": "The four week plan needs about 8 to 14 owner hours in total."
+      }
+    ],
+    "demo": "A closed job with quote against actual, waste by reason, a tool record with unrecovered cost, and a complaint traced to a reel, built from your own jobs.",
+    "proof": "Take five closed jobs and show real margin against the quote.",
+    "followUp": "Thank you for your time. I have built the demo around the job you described, quote against actual. When can your plant head and I go through it for 20 minutes?"
+  }
 };

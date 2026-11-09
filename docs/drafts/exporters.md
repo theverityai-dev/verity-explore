@@ -57,6 +57,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Example arithmetic: a bank that rejects documents can hold payment for days or weeks. On a ₹25 lakh shipment financed at 12 percent a year, ten extra days costs about ₹8,000 in interest, before the buyer's annoyance.
 - fix: Each shipment has a document checklist with the files attached and the fields that must match across them. Verity flags a mismatch before the set goes to the bank.
 - screen: docs
+- root: Documents are made by the factory, the buyer's team, the bank and the forwarder, and checked against each other only when the set is presented.
+- workaround: A checklist kept by the export executive and a last-minute review before the bank submission.
+- options: Rely on the forwarder to check | Check manually at the end | Each shipment with a document checklist, attached files and the fields that must match across them, with a mismatch flagged before the set goes to the bank or buyer
+- pick: A mismatch is corrected while the cargo can still be held.
+- needs: The documents each buyer and bank requires and the fields that must match.
 
 ### 2. Orders and samples are tracked in email threads
 - area: Orders
@@ -64,6 +69,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Rework, a rejected lot and a buyer who lost confidence. Late or wrong shipments are the fastest way to lose a repeat order.
 - fix: Every order is a record with its buyer, version of the sample, quantity, ship date and status. A change is recorded against the order, and everyone sees the same latest version.
 - screen: orders
+- root: A sample, a change and a quantity update each arrive by email, and no one has the latest picture of the order.
+- workaround: The merchandiser forwards emails and keeps a sheet.
+- options: A shared tracker sheet | A messaging group per buyer | Each order as a record with buyer, sample version, quantity, ship date and status, with changes recorded on the order
+- pick: Everyone works from the same order.
+- needs: Orders and the way you currently receive changes.
 
 ### 3. The deadline to realise export payment passes quietly
 - area: Payments
@@ -72,6 +82,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - fix: Each invoice shows its shipment date, the amount realised so far and the days left. Verity lists the ones nearing the limit so you can chase the buyer or ask the bank for an extension in good time.
 - screen: realisation
 - source: (Taxguru, RBI notification dated 13 November 2025: https://taxguru.in/rbi/rbi-extends-export-proceeds-realisation-timeline.html)
+- root: The time allowed to realise export proceeds is counted from shipment, and no one owns the date.
+- workaround: Accounts remembers big invoices and checks the bank statement.
+- options: A ledger reminder | Rely on the bank to flag | Each invoice showing its shipment date, the amount realised and days left, with those nearing the generally applicable limit listed. Confirm the limit with your bank or adviser.
+- pick: Chasing starts before the deadline, not after it.
+- needs: Invoices with shipment dates and realisations.
 
 ### 4. Buyers pay late and chasing is by memory
 - area: Payments
@@ -79,6 +94,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Money tied up for months, higher borrowing and a growing share of the book that is hard to recover.
 - fix: Every invoice has a due date, an owner and a follow-up history. Overdue ones appear on a list ordered by amount and age, with a task to the person who knows the buyer.
 - screen: realisation
+- root: The buyer relationship sits with the sales head and the money chase with accounts, so neither sees the whole.
+- workaround: Accounts sends reminders and the owner calls big buyers.
+- options: Advance payment, which buyers resist | A receivable sheet | Every invoice with due date, owner and follow-up history, overdue listed by amount and age, with a task to the person who knows the buyer
+- pick: The right person makes the call.
+- needs: Invoices, due dates and buyer contacts.
 
 ### 5. Incentives go unclaimed or sit unpaid
 - area: Incentives
@@ -87,6 +107,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - fix: Each shipping bill carries the claims it qualifies for, the date filed and the date credited. Verity lists claims past three days without credit so they can be raised with the right office.
 - screen: incentives
 - source: (StudyCafe on the CBIC clarification of 23 April 2026: https://studycafe.in/cbic-enforces-3-day-timeline-to-prevent-delays-in-rodtep-rosctl-payments-418739.html)
+- root: Each shipment may qualify for different claims, and the filing and credit dates are in separate files.
+- workaround: A consultant or an accountant files and the exporter hopes it is credited.
+- options: Hand it all to a consultant | An incentive tracker sheet | Each shipping bill carrying the claims it qualifies for, the date filed and the date credited, with claims past the expected time listed
+- pick: Money owed to you is chased on purpose. Confirm eligibility with your adviser.
+- needs: Shipping bills and the schemes you claim under.
 
 ### 6. Working capital is stretched and nobody sees the gap coming
 - area: Cash
@@ -94,6 +119,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Short-term borrowing at higher rates, or a supplier who is paid late and ships later next time.
 - fix: Orders, advances, expected payment dates and supplier dues sit in one view, so the weekly cash gap is visible and the bank limit is used with a plan.
 - screen: owner
+- root: Orders, advances, supplier payments and expected receipts are in separate places, so cash gaps appear suddenly.
+- workaround: A weekly cash estimate by the accountant.
+- options: Higher bank limit | Monthly cash review | Orders, advances, expected payment dates and supplier dues in one view, showing the weekly cash gap
+- pick: The bank limit is used with a plan.
+- needs: Orders, expected receipts and supplier dues.
 
 ### 7. Quotes are priced without the full landed cost
 - area: Margin
@@ -101,6 +131,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Orders that look profitable on the quote and are not on the books. Margins for small exporters are thin, and a few percent of missed cost can wipe out the profit.
 - fix: Each order has a cost sheet with product cost, packing, freight, charges and expected incentive. The quote and the actual cost are compared after the shipment.
 - screen: costing
+- root: Quotes are built on the factory price and a rough guess for freight and charges, and the actual cost is never compared.
+- workaround: The owner adds a fixed margin.
+- options: Quote ex-works only | Review costs at year end | Each order with a cost sheet of product, packing, freight, charges and expected incentive, compared with the actual after shipment
+- pick: Quotes reflect the real cost to ship.
+- needs: Cost lines for a typical order.
 
 ### 8. Foreign exchange moves between order and payment
 - area: Margin
@@ -108,6 +143,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: A margin eaten or gained by luck. Without a record, you cannot tell which of the two it was.
 - fix: The quote records the rate assumed. When payment is realised, the actual rate is recorded and the difference is shown per order and per buyer.
 - screen: costing
+- root: The rate assumed in the quote and the rate on realisation are different, and the difference is lost in the margin.
+- workaround: The owner sees the effect when the bank credits the amount.
+- options: Quote in rupees | Forward cover on all orders | The quote recording the rate assumed, the actual rate on realisation, and the difference shown by order and buyer
+- pick: The currency effect is a visible number, not a surprise.
+- needs: Quote rates and realisation rates.
 
 ### 9. Container bookings, cut-offs and detention charges
 - area: Shipping
@@ -115,6 +155,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: A delayed shipment, a buyer with a missed deadline and detention or storage charges that are argued afterwards.
 - fix: Each booking records the vessel, cut-off and free days. Verity warns when cut-off is close and documents are not complete, and lists cargo that has overstayed.
 - screen: docs
+- root: Booking, cut-off and free days are communicated by the forwarder and tracked in the executive's inbox.
+- workaround: The forwarder phones when a cut-off is near.
+- options: Rely on the forwarder | A shared calendar | Each booking recording vessel, cut-off and free days, with a warning when cut-off is close and documents are incomplete
+- pick: Missed vessels and detention charges fall.
+- needs: Booking details from the forwarder.
 
 ### 10. Buyers ask where their cargo is
 - area: Shipping
@@ -122,6 +167,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Hours of staff time on updates and a buyer who feels uninformed.
 - fix: Each shipment shows its stage and expected arrival from the details your forwarder gives you. The team answers from the record rather than chasing.
 - screen: orders
+- root: Buyers ask for status by email, and the answer depends on whoever last spoke to the forwarder.
+- workaround: The executive contacts the forwarder for each query.
+- options: Share the forwarder's tracking link | A weekly status email | Each shipment showing stage and expected arrival from the forwarder's information, answered from the record
+- pick: Buyers get quick answers without chasing.
+- needs: Status details as the forwarder provides them.
 
 ### 11. Factory supply and inspection are loosely tracked
 - area: Supply
@@ -129,6 +179,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Rejections, replacement shipments by air at your cost and a buyer's trust gone.
 - fix: Each supplier delivery is linked to the order with inspection result and photos. A failed lot is flagged before booking and the order is held.
 - screen: orders
+- root: Factory deliveries and inspections are tracked in notes, and a failed lot is found when the cargo is already booked.
+- workaround: A quality person's report by phone or message.
+- options: Third-party inspection on all orders, which costs money | A shared sheet | Each supplier delivery linked to the order with inspection result and photos, a failed lot flagged before booking and the order held
+- pick: Quality problems are found before shipment.
+- needs: Inspection reports and photos.
 
 ### 12. Claims, short shipments and credit notes
 - area: Buyers
@@ -136,6 +191,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: Deductions you did not agree to and no history to argue from. Repeat claims from one buyer or factory go unnoticed.
 - fix: Each claim is a record linked to the order with photos, the reply and the outcome. Verity shows claims by buyer and by factory so repeat problems are visible.
 - screen: realisation
+- root: Claims arrive by email with photos, and the link to the order, the factory and the credit note is manual.
+- workaround: The merchandiser forwards the claim to the factory.
+- options: Settle claims with a discount | A claims folder | Each claim as a record linked to the order with photos, reply and outcome, showing claims by buyer and factory
+- pick: Repeat problems are visible and recoverable from the factory.
+- needs: Claims received and the replies.
 
 ### 13. Licences, certificates and registrations expire
 - area: Compliance
@@ -143,6 +203,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - cost: A shipment held because a certificate lapsed, or an incentive claim rejected for a missing registration.
 - fix: Each licence and certificate is a record with expiry and an owner. Verity reminds ahead of time and ties documents to the shipments that need them.
 - screen: docs
+- root: Registrations and certificates have different expiry dates, and the person who knows them is the compliance person.
+- workaround: A diary or a spreadsheet.
+- options: Calendar reminders | A consultant to track | Each licence and certificate as a record with expiry and an owner, tied to shipments that need them, with reminders ahead of time
+- pick: A lapse does not stop a shipment.
+- needs: The list of registrations and certificates.
 
 ### 14. Too much depends on a few buyers and one market
 - area: Owner
@@ -151,6 +216,11 @@ Lede: These are the situations exporters describe. For each one: what it looks l
 - fix: Sales, receivables and orders are shown by buyer and by country. Verity highlights when one buyer or market passes a share you set.
 - screen: owner
 - source: (Business Today on the US tariff and Tiruppur exporters: https://www.businesstoday.in/magazine/corporate/story/msmes-under-strain-after-us-imposes-additional-tariff-491479-2025-08-28)
+- root: A few buyers and one market bring most of the business, and the share is not visible until a buyer slows.
+- workaround: The owner knows the main buyers by memory.
+- options: A yearly buyer review | A quarterly sales report | Sales, receivables and orders by buyer and by country, highlighting when one buyer or market passes a share you set
+- pick: The concentration is visible before a loss.
+- needs: Sales and orders by buyer and country.
 
 ## Facts
 
@@ -401,6 +471,164 @@ Heading: Questions exporters ask.
 - cta heading: Find out what is waiting to be paid.
 - cta lede: Tell us how your export business runs and we will show you the unpaid invoices, missing documents and pending incentives it would find, using your own numbers.
 
+## Workflow
+
+Heading: From buyer enquiry to realised payment, and where each handoff slips.
+Lede: An export order depends on a factory, a forwarder, a bank and a buyer, and the exporter coordinates all four. The risks sit in the documents and the dates that pass between them.
+
+### 1. Enquiry and sampling
+- owner: Merchandiser
+- does: The buyer sends an enquiry and samples are developed.
+- data: Buyer, product, sample version, comments.
+- breaks: Changes arrive by email and the latest version is unclear.
+- handoff: The approved sample becomes the order.
+
+### 2. Costing and quotation
+- owner: Owner and sales
+- does: A price is calculated and quoted.
+- data: Product cost, packing, freight, charges, incentive, exchange rate assumed.
+- breaks: The quote uses a rough guess for freight and charges.
+- handoff: The confirmed quote becomes an order.
+
+### 3. Order and production
+- owner: Merchandiser and factory
+- does: The order is placed with the factory or produced in house.
+- data: Quantity, ship date, supplier delivery, inspection.
+- breaks: A failed lot is found after booking.
+- handoff: Goods go to packing and booking.
+
+### 4. Booking and logistics
+- owner: Logistics executive
+- does: The container is booked and cargo is moved to port.
+- data: Vessel, cut-off, free days, stuffing date.
+- breaks: Cut-offs are missed and detention is charged.
+- handoff: The shipping bill and documents are prepared.
+
+### 5. Documents and bank presentation
+- owner: Documentation executive
+- does: Documents are prepared, checked and presented.
+- data: Invoice, packing list, bill of lading, certificates.
+- breaks: A mismatch is found at the bank.
+- handoff: Shipment moves and status is shared with the buyer.
+
+### 6. In transit and arrival
+- owner: Merchandiser and logistics
+- does: The shipment is followed to the destination.
+- data: Stage, expected arrival.
+- breaks: Buyers chase for status.
+- handoff: The buyer receives the goods.
+
+### 7. Payment and realisation
+- owner: Accounts
+- does: Payment is followed and proceeds are realised.
+- data: Due date, realisation, exchange rate.
+- breaks: The realisation deadline passes quietly.
+- handoff: Realised amounts close the invoice.
+
+### 8. Incentives, claims and review
+- owner: Accounts and owner
+- does: Incentives are claimed, claims are handled and the order is reviewed.
+- data: Claims filed and credited, buyer claims, margin against quote.
+- breaks: Incentives sit unpaid and claims are not linked to the factory.
+- handoff: Results return to the next quote.
+
+## Content kit
+
+### Hooks
+- Shipping documents bank mein reject hue. Ek field galat thi.
+- Order ke changes teen email mein, kaun sa latest?
+- Export payment ki deadline chup chaap nikal gayi.
+- Buyer ko yaad dilana padta hai, kisi ko yaad nahi rehta.
+- Incentive file kiya, credit hua ya nahi?
+- Working capital kam pad gaya, pata hi nahi chala.
+- Quote mein freight ka andaaza. Asli cost kitna?
+- Dollar ka rate badla, margin kitna gaya?
+- Cut-off miss hua aur next vessel ka intezaar.
+- Buyer poochta hai cargo kahan hai.
+- Factory ka lot fail hua, booking ho chuki.
+- Claim aaya. Kis factory ka maal tha?
+- Licence expire hua aur shipment ruki.
+- Ek buyer par poora business tika hai.
+- Documents ka set bank ko dene se pehle kaun check karta hai?
+- Sample ka version kaun sa approve hua tha?
+- Container ki detention ka bill aaya.
+- Shipping bill ke claim kitne baaki?
+- Buyer ne kaha bhej diya hai. Paisa kahan?
+- Export order mein advance mila ya nahi?
+- Packing list aur invoice mein quantity alag.
+- Realisation ka certificate ka deadline?
+- Aap office mein nahi hote to export status kaun batata hai?
+- Credit note kis order ka?
+- Kaun sa buyer sabse zyada late paisa deta hai?
+
+### Explainers
+- concept: The document set that matches | pain: Shipping documents scattered and failing (pain 1) | for: Documentation executives | hook: Shipping documents bank mein reject hue. Ek field galat thi | show: A checklist with fields compared across documents and a mismatch flagged | visual: Three documents with one highlighted field | outcome: Fewer rejected sets | cta: Book the free seven day demo
+- concept: One order, one version | pain: Orders tracked in email (pain 2) | for: Merchandisers | hook: Order ke changes teen email mein, kaun sa latest? | show: An order record with sample version and changes | visual: Email threads collapsing into an order card | outcome: One truth for the order | cta: Share one order thread
+- concept: The deadline that passes | pain: Realisation deadline passes quietly (pain 3) | for: Accounts | hook: Export payment ki deadline chup chaap nikal gayi | show: Invoices with days left before the limit | visual: A countdown ring on invoice cards | outcome: Chasing starts in time | cta: Load your invoices
+- concept: Incentives you are owed | pain: Incentives go unclaimed (pain 5) | for: Owners and accounts | hook: Incentive file kiya, credit hua ya nahi? | show: Claims with filed and credited dates and delays flagged | visual: A claims ledger with overdue amber | outcome: Money recovered | cta: Share your shipping bills
+- concept: A cash gap you can see | pain: Working capital stretched (pain 6) | for: Owners and finance | hook: Working capital kam pad gaya, pata hi nahi chala | show: Orders, advances, expected payments and dues in one weekly view | visual: A cash line dipping below zero before it happens | outcome: Bank limit used with a plan | cta: Bring your open orders
+- concept: The real cost to ship | pain: Quotes without full landed cost (pain 7) | for: Owners | hook: Quote mein freight ka andaaza. Asli cost kitna? | show: A cost sheet compared with actuals after shipment | visual: Cost lines stacking up | outcome: Quotes at true cost | cta: Cost one shipment
+- concept: Before the cut-off | pain: Cut-offs and detention (pain 9) | for: Logistics | hook: Cut-off miss hua aur next vessel ka intezaar | show: Bookings with cut-off warnings and incomplete documents | visual: A clock approaching a vessel | outcome: Fewer missed vessels | cta: Share your bookings
+- concept: Answer the buyer in seconds | pain: Buyers ask where cargo is (pain 10) | for: Merchandisers | hook: Buyer poochta hai cargo kahan hai | show: Shipment stage and expected arrival | visual: A buyer question answered with a record | outcome: Fewer chase emails | cta: Try one shipment
+- concept: Too much on one buyer | pain: Dependence on a few buyers (pain 14) | for: Owners | hook: Ek buyer par poora business tika hai | show: Sales and receivables by buyer and country with a share warning | visual: A bar where one buyer dominates | outcome: Early warning | cta: Ask for the demo
+- concept: The certificate that does not lapse | pain: Licences and certificates expire (pain 13) | for: Compliance and owners | hook: Licence expire hua aur shipment ruki | show: Licences and certificates with expiry, owner and linked shipments | visual: A timeline with a renewal task opening early | outcome: No shipment held by a lapse | cta: Share your licence list
+
+### Script 1: Document set
+- 0 to 5s: Shipping documents bank mein reject hue. Ek field galat thi.
+- 5 to 15s: Invoice mein ek quantity, packing list mein doosri, aur cargo ruka hua.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har shipment ka document checklist. Files juda hua, aur jo fields match honi chahiye unki jaanch.
+- 40 to 50s: Galti bank se pehle pakdi jaati hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Realisation ki deadline
+- 0 to 5s: Export payment ki deadline chup chaap nikal gayi.
+- 5 to 15s: Kisi ne gina nahi tha aur buyer ne bhi yaad nahi dilaya.
+- 15 to 25s: Apne invoice dijiye. Saat din mein free demo.
+- 25 to 40s: Har invoice mein shipment ki tarikh, kitna aaya aur kitne din baaki. Limit ke paas wale upar.
+- 40 to 50s: Chase usi person ko jaata hai jo buyer ko jaanta hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Incentive ka paisa
+- 0 to 5s: Incentive file kiya, credit hua ya nahi?
+- 5 to 15s: Shipping bill alag, claim alag, aur credit ki tarikh kisi ke paas nahi.
+- 15 to 25s: Das shipping bill dijiye. Saat din mein free demo.
+- 25 to 40s: Har shipping bill ke saath claim, file ki tarikh aur credit ki tarikh. Der hone wale claim ki list.
+- 40 to 50s: Aapka paisa aapke follow up se aata hai.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Dollar aur margin
+- 0 to 5s: Dollar ka rate badla, margin kitna gaya?
+- 5 to 15s: Quote par ek rate, payment par doosra.
+- 15 to 25s: Apne order dijiye. Saat din mein free demo.
+- 25 to 40s: Quote mein rate, payment par asli rate, aur farak order aur buyer ke hisaab se.
+- 40 to 50s: Cost sheet mein freight aur charges bhi, shipment ke baad asli ke saath compare.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Buyer ko jawab
+- 0 to 5s: Buyer poochta hai cargo kahan hai.
+- 5 to 15s: Aap forwarder ko phone karte hain, phir buyer ko.
+- 15 to 25s: Ek shipment dijiye. Saat din mein free demo.
+- 25 to 40s: Har shipment ka stage aur expected arrival forwarder ki jaankari se. Team record se jawab deti hai.
+- 40 to 50s: Chase kam, bharosa zyada.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Rejected document sets and unrealised payments
+- titles: Managing Director | Owner | Head of Exports | Export Manager | Director Finance | Head of Merchandising | General Manager Operations
+- deciders: The owner or managing director decides. The export head and finance head influence.
+- best size: An export business with 20 to 250 people, a few large buyers and many shipments a month.
+- first message: Hello, I work with exporters on rejected document sets and payments that pass their deadline. We build a free seven day demo on your own shipment data. How do you check documents before they reach the bank?
+- discovery: How do you check that documents match before presentation? | How do you track the deadline to realise payment? | How do you keep up with incentive claims? | How do you answer buyers asking for shipment status? | How do you cost an order before quoting? | How do you track claims and credit notes?
+- objection: Our forwarder handles documents | The forwarder prepares them. We give you a check across all parties so you are not relying on one.
+- objection: We use Tally | We keep Tally for accounts and add the shipment and document record.
+- objection: Small team | The four week plan needs about 8 to 14 owner hours in total.
+- objection: Cost | Cost depends on scope. We start with the one problem that costs most, and the demo is free.
+- demo: A shipment with a document mismatch flagged, invoices with days left to realise, an incentive claim past due and a cost sheet against actual.
+- proof: Take the last five shipments and show unrealised payments and claim status.
+- follow up: Thank you for your time. I have built the demo around the shipment you described, with its documents and realisation dates. When can your export head and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - All names, amounts, rates, order numbers and process hours are illustrations for the Verity team to confirm.
@@ -408,3 +636,4 @@ Heading: Questions exporters ask.
 - The 3 day rule comes from a news report of a CBIC clarification, not the circular text. The "Instruction 05/2026" number was not confirmed and is not used.
 - The tariff figure is from 2025 and its current status was not confirmed.
 - No sourced figure was found for how much incentive is typically unclaimed or for document rejection rates, so those use labelled example arithmetic.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

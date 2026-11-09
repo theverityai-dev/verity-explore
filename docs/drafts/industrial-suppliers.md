@@ -48,6 +48,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Breakdown orders go to whoever answers first. An unanswered enquiry is a lost order and sometimes a lost vendor listing.
 - fix: Every enquiry becomes a record with the plant, the contact, items and a response time. Anything unanswered past your limit goes to the next person, and the open list shows who owns what.
 - screen: quotes
+- root: An enquiry from a plant arrives by phone, message or email to whoever is free, and no one owns the response time.
+- workaround: The salesman who sees it first answers, and the rest wait for his return.
+- options: A shared inbox for enquiries, which has no owner | A response rule on paper | Every enquiry as a record with plant, contact, items and response time, with unanswered ones past your limit moving to the next person
+- pick: An urgent breakdown enquiry is answered by someone every time.
+- needs: The channels enquiries arrive through and your response limit.
 
 ### 2. Quotes sent and never followed up
 - area: Quotes
@@ -55,6 +60,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Example arithmetic: if 40 quotes a week average ₹60,000 and you win 25%, the 30 you do not win are ₹18 lakh of enquiries. If a follow-up call lifts even 3 of them to a win, that is ₹1.8 lakh a week.
 - fix: Each quote has a status and a follow-up date. Verity lists quotes due for a call, with the plant’s history, and records the outcome and the reason you lost, so patterns show up.
 - screen: quotes
+- root: Quotes are sent and the follow-up depends on the salesman's diary.
+- workaround: The salesman remembers the big quotes and forgets the small ones.
+- options: A weekly quote review meeting | A quote sheet | Each quote with a status and follow-up date, quotes due for a call listed with the plant's history, and the outcome and loss reason recorded
+- pick: Follow-up does not depend on one memory, and the reasons you lose become visible.
+- needs: Quotes issued and their status.
 
 ### 3. The wrong part is quoted or sent
 - area: Catalogue
@@ -62,6 +72,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Returns, a second dispatch, a delayed breakdown fix and a purchaser who stops trusting your word.
 - fix: Each part is a record with brand, specification, size, alternatives and supersessions. A quote line pulls from the record, and a salesman sees the variants side by side before he commits.
 - screen: catalogue
+- root: A part has many brands, sizes and supersessions, and the salesman quotes from memory or an old catalogue.
+- workaround: The experienced salesman checks the specification with the plant by phone.
+- options: A printed catalogue | One expert checks every quote | Each part as a record with brand, specification, size, alternatives and supersessions, with a quote line pulling from it and variants shown to the salesman
+- pick: The wrong part is caught before the quote leaves.
+- needs: Part list with specifications and known alternatives.
 
 ### 4. Brand prices change and quotes stay on the old list
 - area: Pricing
@@ -69,6 +84,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: You sell below your new cost and the margin on that order is gone, sometimes the whole of it.
 - fix: Brand price lists are loaded with effective dates. A quote shows its validity, and an order against an expired quote waits for a decision, with the current cost and the old price beside it.
 - screen: catalogue
+- root: Brand price lists change by email, and the salesman keeps using the old list.
+- workaround: The owner informs the team by message when a list changes.
+- options: Reprice only at renewal | Quote with a short validity | Brand price lists loaded with effective dates, a quote showing its validity, and an order against an expired quote waiting for a decision with the current price shown
+- pick: You sell at the right price or choose consciously to honour the old one.
+- needs: Brand price lists with effective dates.
 
 ### 5. Rate contracts kept on paper and quietly crossed
 - area: Pricing
@@ -76,6 +96,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Contract abuse in either direction. Sell below and you lose margin, sell above and the plant complains.
 - fix: Contracts are records with items, rates, validity and quantity caps. The order screen applies the live contract and shows what is left, and a lapsing contract creates a renewal task weeks before the end.
 - screen: catalogue
+- root: Rate contracts are held in paper files and the salesman who knows them is not always there.
+- workaround: The accounts person checks the contract when a plant disputes a rate.
+- options: A contract register | A shared folder | Contracts as records with items, rates, validity and quantity caps, the order screen applying the live contract and showing what is left, and a lapsing contract flagged
+- pick: Contracted rates are applied each time and renewal is planned.
+- needs: Current contracts with rates and validity.
 
 ### 6. Plants pay late and the cash sits in invoices
 - area: Credit
@@ -84,6 +109,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - fix: Each plant has terms, a limit and an ageing record. Verity shows dues by bill and age, logs the purchaser or accounts person to call, and puts a hold flag on new orders when a plant is over limit.
 - screen: credit
 - source: (UNICbiz analysis, via Devdiscourse, May 2026 (vendor): https://www.devdiscourse.com/article/business/3916401-indias-45-day-msme-payment-rule-exposes-structural-gap-in-industrial-supply-chain-finance)
+- root: Large plants pay on long cycles and the salesman does not own the collection.
+- workaround: Accounts sends reminders and the owner calls when cash is short.
+- options: Insist on advance | Take a smaller share of the plant's spend | Each plant with terms, a limit and an ageing record, dues by bill and age, the person to call logged, and a hold flag on new orders where you choose
+- pick: Credit is a decision, not a drift.
+- needs: Plant terms and the outstanding.
 
 ### 7. Payment chasing depends on one person’s relationship
 - area: Credit
@@ -91,6 +121,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Invoices rejected for a missing PO or GRN number are re-raised, and payment slips by weeks.
 - fix: The bill record holds the customer PO, delivery note, GRN number and the submission status. Pending submissions are listed with the plant’s process notes, so any colleague can pick one up.
 - screen: credit
+- root: Payment from a plant needs a bill submission, a GRN number and a purchaser's approval, and the process is in one person's head.
+- workaround: One accounts executive knows each plant's way.
+- options: Rely on that executive | A checklist per plant | The bill record holding the customer PO, delivery note, GRN number and submission status, pending submissions listed with the plant's process noted
+- pick: Chasing works from a record and does not depend on one person.
+- needs: Each plant's bill submission steps.
 
 ### 8. POs do not match quotes, and invoices do not match POs
 - area: Orders
@@ -98,6 +133,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: A debit note, a credit note and a month’s delay. The margin on that order is gone.
 - fix: A customer PO is matched line by line to the quote and the contract rate on arrival. A difference is flagged for a salesman’s decision before the order is accepted, not after the bill is rejected.
 - screen: orders
+- root: The plant's PO may differ from the quote in rate or quantity, and the difference is found at invoice.
+- workaround: The order desk compares a few key lines.
+- options: Accept all POs as is | Re-quote after PO | A customer PO matched line by line to the quote and contract rate on arrival, with a difference flagged for a salesman's decision
+- pick: Mismatches are settled before dispatch and not at the payment stage.
+- needs: Quotes and POs.
 
 ### 9. Test certificates and documents missing at dispatch
 - area: Orders
@@ -105,6 +145,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: A wasted trip, a delayed plant job and a quality note against your name on the vendor list.
 - fix: Each order line lists the documents the plant needs: test certificate, datasheet, batch number, material code. The order cannot move to dispatched until each required document is attached.
 - screen: orders
+- root: A plant may demand a test certificate, datasheet or batch number with every delivery, and dispatch does not know which.
+- workaround: The dispatch clerk phones the salesman.
+- options: Send documents with every order | Send on request | Each order line listing the documents the plant needs, with the order unable to move to dispatched until they are attached
+- pick: Rejections at the gate for missing papers stop.
+- needs: Document requirements per plant and per item.
 
 ### 10. Partial deliveries and back orders lost in the follow-up
 - area: Orders
@@ -112,6 +157,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Trust. A plant that has to chase you for a promised delivery looks at other vendors.
 - fix: The order keeps the open quantity as a back order with a promised date and a supplier purchase order behind it. A date at risk goes to the salesman before the customer calls.
 - screen: orders
+- root: Partial deliveries and back orders are remembered by the salesman and not by the system.
+- workaround: A salesman keeps a list of pending items.
+- options: Deliver complete orders only | A back order sheet | Open quantity kept as a back order with a promised date and a supplier purchase order behind it, and a date at risk going to the salesman
+- pick: The plant hears from you before it chases.
+- needs: Orders, deliveries and supplier purchase orders.
 
 ### 11. Fast movers run out and slow movers pile up
 - area: Stock
@@ -119,6 +169,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: A missed sale for the fast item and cash locked in the slow one. Both happen when minimum levels are set once and never checked.
 - fix: Each part carries a reorder level, the lead time of its supplier, and sales history. A short list shows what will run out before the next delivery, and another shows parts that have not moved in your chosen months.
 - screen: stock
+- root: Reorder is by the storekeeper's feel and the owner's fear of stockouts, not by sales history and supplier lead time.
+- workaround: The owner approves purchases weekly by looking at the shelf.
+- options: Stock everything, which locks cash | Reorder only on demand, which loses urgent orders | Each part with reorder level, supplier lead time and sales history, and a short list of what will run out before the next delivery
+- pick: Fast movers are protected and slow movers are visible.
+- needs: Part sales history and supplier lead times.
 
 ### 12. Brand rebates, targets and claims tracked only at year end
 - area: Suppliers
@@ -126,6 +181,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: A rebate missed by a small gap, or a warranty credit written off, is real money for a business on thin margins.
 - fix: Each brand has its target, purchase to date and days left. Warranty claims are records with the batch, the customer complaint and the stage, from raised to credited.
 - screen: brands
+- root: Brand rebates depend on purchase targets and warranty claims depend on documents, and both are checked at year end.
+- workaround: Accounts compiles the position when the brand asks.
+- options: Accept the brand's figure | A yearly sheet | Each brand with target, purchase to date and days left, and warranty claims as records with batch, complaint and stage from raised to credited
+- pick: You adjust purchases to meet a target and chase claims in time.
+- needs: Brand targets and claims.
 
 ### 13. Brand and supplier payments and the small supplier rule
 - area: Suppliers
@@ -134,6 +194,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - fix: Supplier bills carry due dates and a flag for micro and small suppliers. The payables list sorts by due date and the flag, so payments go out in the order that matters.
 - screen: brands
 - source: (ClearTax, Section 43B(h): https://cleartax.in/s/section-43bh-of-income-tax-act)
+- root: Supplier bills are paid when the owner decides, and the micro and small supplier limit is not tracked.
+- workaround: Accounts pays by the order of the supplier's calls.
+- options: Pay everyone on the due date | A watch list | Supplier bills with due dates and a micro and small flag, the payables list sorted by due date and flag
+- pick: Payments go out in the right order.
+- needs: Supplier bills with dates and size category.
 
 ### 14. You cannot say which plants and brands really make money
 - area: Owner
@@ -141,7 +206,11 @@ Lede: These are the situations industrial suppliers describe most often. For eac
 - cost: Time and capital go to accounts that look big and earn little.
 - fix: For each plant and brand Verity shows margin after the cost of credit days, discount given, returns and claims. The owner’s screen shows the five accounts that need attention today.
 - screen: owner
-
+- root: Margin shows on the bill but not after credit days, discounts, returns and claims.
+- workaround: The owner favours big plants and big brands by habit.
+- options: A yearly review | Rely on the accountant's summary | For each plant and brand, margin after credit days, discount, returns and claims, and the owner's screen showing the accounts that need attention
+- pick: You see which plants and brands really earn.
+- needs: Sales, costs and credit days by plant and brand.
 
 ## Facts
 
@@ -757,6 +826,166 @@ Heading: Questions industrial suppliers ask.
 - cta heading: Start with the quotes nobody called back.
 - cta lede: Tell us how your counter runs and we will show you the aged quotes, the plant dues and the brand targets, using your own numbers.
 
+## Workflow
+
+Heading: From plant enquiry to payment, and where each handoff slips.
+Lede: An industrial supplier answers urgent enquiries for thousands of parts from many brands. Each person does their job. The gaps appear in the quote, the contract rate, the documents and the payment process.
+
+### 1. Enquiry
+- owner: Sales desk
+- does: A plant sends an enquiry for items, often urgent.
+- data: Plant, contact, items, urgency, response time.
+- breaks: Enquiries are answered late or not at all.
+- handoff: The enquiry goes to quoting.
+
+### 2. Quoting
+- owner: Salesman
+- does: A quote is prepared with part, brand and price.
+- data: Part record, brand price, contract rate, validity.
+- breaks: The wrong part or an old price is quoted.
+- handoff: The quote goes to the plant.
+
+### 3. Follow-up and PO
+- owner: Salesman and order desk
+- does: The quote is followed up and a PO is received.
+- data: Quote status, PO, differences from quote.
+- breaks: Quotes are not followed up and POs do not match.
+- handoff: The order is accepted for supply.
+
+### 4. Procurement and stock
+- owner: Purchase and stores
+- does: Goods are supplied from stock or ordered from the brand.
+- data: Stock, supplier order, lead time, back order.
+- breaks: Fast movers run out and back orders are forgotten.
+- handoff: Goods go to dispatch.
+
+### 5. Dispatch and documents
+- owner: Dispatch
+- does: Goods are sent with delivery note and required papers.
+- data: Delivery note, test certificate, batch, datasheet.
+- breaks: Documents are missing at the plant gate.
+- handoff: The delivery note goes to billing.
+
+### 6. Billing and submission
+- owner: Accounts
+- does: Invoices are raised and submitted to the plant.
+- data: Invoice, PO, delivery note, GRN number.
+- breaks: Submission steps are in one person's head.
+- handoff: The bill enters the receivable list.
+
+### 7. Collection
+- owner: Accounts and sales
+- does: Payment is followed up with the plant.
+- data: Due date, ageing, contact, promise.
+- breaks: Chasing depends on a relationship.
+- handoff: Collected cash goes to supplier payments.
+
+### 8. Brand relationship and review
+- owner: Owner
+- does: Targets, rebates, claims and plant profitability are reviewed.
+- data: Purchase vs target, claims, margin by plant and brand.
+- breaks: Targets and claims are checked at year end.
+- handoff: Findings return to purchase and credit decisions.
+
+## Content kit
+
+### Hooks
+- Plant ka urgent enquiry aaya. Jawab kisne diya?
+- Quote bheja aur phir kisi ne call nahi kiya.
+- Galat part quote hua aur plant ne reject kar diya.
+- Brand ne rate badla aur quote purani list par.
+- Rate contract kaghaz mein, aur quietly paar ho gaya.
+- Plant 90 din mein paisa deta hai.
+- Bill submission ka tareeka sirf ek aadmi ko pata hai.
+- PO aur quote ka rate alag.
+- Test certificate ke bina maal gate se wapas.
+- Back order ka kya hua, salesman ko yaad nahi.
+- Fast mover khatam, slow mover godown mein.
+- Brand ka year end rebate target miss hua.
+- Warranty claim kab credit hoga?
+- Chhote supplier ka bill 45 din mein.
+- Kaun sa plant aur kaun sa brand paisa banata hai?
+- Aap dukaan par nahi hote to enquiry ka kya?
+- Quote kitne bheje, kitne mile, kyun nahi mile?
+- Part ki supersession ka pata nahi, purana bheja.
+- Contract ka rate kab expire hoga?
+- Plant ne kaha bill submit nahi hua.
+- Delivery note aur GRN ka number kahan hai?
+- Customer ne PO mein quantity badal di.
+- Stock mein kya hai, kya aa raha hai, kya late hai?
+- Plant ke purchaser ka phone yaad nahi.
+- Rebate ka hisaab brand ke figure par chhoda?
+
+### Explainers
+- concept: Every enquiry answered | pain: Urgent enquiries answered late (pain 1) | for: Owners and sales heads | hook: Plant ka urgent enquiry aaya. Jawab kisne diya? | show: Enquiries with response time and unanswered ones moving to the next person | visual: A clock on each enquiry and a card moving along | outcome: No urgent enquiry unanswered | cta: Book the free seven day demo
+- concept: Quotes that get followed up | pain: Quotes never followed up (pain 2) | for: Salesmen and owners | hook: Quote bheja aur phir kisi ne call nahi kiya | show: Quotes due for a call with plant history and loss reasons | visual: A list sorted by follow-up date | outcome: More quotes become orders | cta: Share your open quotes
+- concept: The right part | pain: Wrong part quoted or sent (pain 3) | for: Sales and stores | hook: Galat part quote hua aur plant ne reject kar diya | show: A part record with variants and supersessions pulled into the quote | visual: Two similar parts side by side with the right one chosen | outcome: Fewer wrong parts | cta: Share ten parts
+- concept: The price that moved | pain: Brand prices change (pain 4) | for: Owners | hook: Brand ne rate badla aur quote purani list par | show: Price lists with effective dates and an expired quote waiting for a decision | visual: A price tag changing and a quote pausing | outcome: Right price or a conscious choice | cta: Share a brand list
+- concept: The contract rate applied | pain: Rate contracts on paper (pain 5) | for: Order desks | hook: Rate contract kaghaz mein, aur quietly paar ho gaya | show: Live contract on the order screen with quantity left | visual: A contract bar emptying with a renewal flag | outcome: Contract rates every time | cta: Share two contracts
+- concept: A bill that reaches payment | pain: Payment process in one head (pain 7) | for: Accounts | hook: Bill submission ka tareeka sirf ek aadmi ko pata hai | show: Bill record with PO, delivery note, GRN number and submission status | visual: A bill moving through plant steps | outcome: Chasing without a relationship | cta: Share one plant process
+- concept: Papers with the delivery | pain: Documents missing at dispatch (pain 9) | for: Dispatch | hook: Test certificate ke bina maal gate se wapas | show: Document requirements per order line blocking dispatch | visual: A checklist at the gate | outcome: No rejected deliveries | cta: Share a plant requirement list
+- concept: The back order that was remembered | pain: Back orders lost (pain 10) | for: Salesmen | hook: Back order ka kya hua, salesman ko yaad nahi | show: Open quantity with a promised date and supplier order | visual: A shortage card with a date | outcome: The plant hears first | cta: Try five orders
+- concept: Which plants and brands pay | pain: Unknown profitable plants and brands (pain 14) | for: Owners | hook: Kaun sa plant aur kaun sa brand paisa banata hai? | show: Margin after credit days, discount, returns and claims | visual: A ranked list | outcome: Better focus | cta: Ask for the demo
+
+- concept: Stock for the urgent order | pain: Fast movers run out, slow movers pile up (pain 11) | for: Owners and purchase | hook: Fast mover khatam, slow mover godown mein | show: Reorder levels, supplier lead time and a short list of parts that will run out | visual: A shelf with one slot emptying and a reorder appearing | outcome: Fast movers protected | cta: Share ten parts
+
+### Script 1: Urgent enquiry
+- 0 to 5s: Plant ka urgent enquiry aaya. Jawab kisne diya?
+- 5 to 15s: Phone, message, email, sab jagah, aur kisi ek ke paas.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har enquiry ka record: plant, contact, items aur response time. Limit se upar ruka hua enquiry agle aadmi ko jaata hai.
+- 40 to 50s: Breakdown wale plant ko jawab turant milta hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Quote ka follow up
+- 0 to 5s: Quote bheja aur phir kisi ne call nahi kiya.
+- 5 to 15s: Salesman ki diary mein tha, ya shayad nahi.
+- 15 to 25s: Apne open quote dijiye. Saat din mein free demo.
+- 25 to 40s: Har quote ka status aur follow up ki tarikh. Call ki list plant ki history ke saath, aur jo nahi mila uska karan.
+- 40 to 50s: Aapko pata chalta hai kyun haarte hain.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Rate contract
+- 0 to 5s: Rate contract kaghaz mein, aur quietly paar ho gaya.
+- 5 to 15s: Plant ne rate poochha, kisi ko yaad nahi.
+- 15 to 25s: Do contract dijiye. Saat din mein free demo.
+- 25 to 40s: Contract ka record: items, rate, validity, quantity cap. Order screen par live rate aur kitna bacha. Khatam hone wala contract flag.
+- 40 to 50s: Renewal pehle se plan hota hai.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Bill submission
+- 0 to 5s: Bill submission ka tareeka sirf ek aadmi ko pata hai.
+- 5 to 15s: Wo chhutti par hai aur bill atka hai.
+- 15 to 25s: Ek plant ka process dijiye. Saat din mein free demo.
+- 25 to 40s: Bill ke saath PO, delivery note, GRN number aur submission status. Pending bill ki list, plant ke steps ke saath.
+- 40 to 50s: Chasing record se hoti hai, rishte se nahi.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Kaun sa plant kamata hai
+- 0 to 5s: Kaun sa plant aur kaun sa brand paisa banata hai?
+- 5 to 15s: Bill par margin dikhta hai, credit ke din aur returns nahi.
+- 15 to 25s: Paanch plant ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har plant aur brand ka margin credit days, discount, returns aur claims ke baad.
+- 40 to 50s: Owner ki screen par paanch account jahan dhyan chahiye.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Late enquiry response, unfollowed quotes and bills stuck in plant processes
+- titles: Owner | Managing Director | Director | Head of Sales | General Manager | Accounts Head | Branch Manager
+- deciders: The owner decides. The head of sales and accounts head influence.
+- best size: An industrial supply business with 15 to 120 people, many brands and parts, and plant customers on long credit.
+- first message: Hello, I work with industrial suppliers on enquiries that are answered late and quotes that are never followed up. We build a free seven day demo on your own enquiry and quote data. How do you track the response time to an urgent plant enquiry today?
+- discovery: How do you make sure every enquiry is answered quickly? | How do you follow up quotes and learn why you lose? | How do you handle brand price changes? | How are rate contracts applied at order time? | How do you keep up with each plant's bill submission steps? | How do you track brand targets and warranty claims?
+- objection: We have billing software | We keep it. We add the enquiry, quote, contract and plant-process records that billing software does not hold.
+- objection: Salesmen will not log enquiries | The record is how they get follow-up reminders and a clear view of their own quotes, which they usually want.
+- objection: Cost | Cost depends on scope. We start with the problem that costs most, and the demo is free.
+- objection: Busy season | The four week plan needs about 8 to 14 owner hours in total.
+- demo: An enquiry with response time, a quote due for a call, a contract rate applied on a PO with a difference flagged, and a bill submission status, built from the supplier's own data.
+- proof: Take last month's quotes and show how many were never followed up and why the others were lost.
+- follow up: Thank you for your time. I have built the demo around the quotes and enquiries you described. When can you and your head of sales go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

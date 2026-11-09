@@ -48,6 +48,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Example arithmetic: if one order in eight ships late and each late order costs a ₹15,000 penalty or discount, a factory shipping 40 orders a month gives away about ₹75,000 a month, plus the customer who quietly moves part of the volume elsewhere.
 - fix: Every order becomes jobs with a date, a machine or line, and a material need. Before a date is confirmed, Verity shows the load on each machine for those weeks, so the promise comes from the schedule and not from hope.
 - screen: jobs
+- root: Sales promises a date to win the order, and the machine load lives with the planner, who is not in the conversation.
+- workaround: The owner or sales head asks the production manager on a call and quotes a date from memory of how busy the floor feels.
+- options: Always quote a long standard lead time, which loses orders | A shared load sheet, which is stale by the afternoon | Jobs with dates and machines on one board, and the load for those weeks shown before a date is confirmed
+- pick: The promise comes from the schedule, and a date that cannot be kept is seen before the customer hears it.
+- needs: Machine or line list, capacity per day, and the jobs already booked.
 
 ### 2. The plan lives on a whiteboard that is wrong by lunchtime
 - area: Planning
@@ -55,6 +60,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Machine hours spent on the less urgent job, changeovers that did not need to happen, and a supervisor who spends the day reshuffling instead of supervising.
 - fix: Jobs sit on one board by machine and day. When the supervisor moves a job, the new order is visible to planning, stores and dispatch at once, with the reason recorded.
 - screen: jobs
+- root: The plan is drawn on a board by one person, and changes made on the floor are not written back.
+- workaround: Whiteboard or Excel updated twice a day by the planner, plus phone calls.
+- options: Printed daily plan, which is out of date after the first change | A shared sheet, which has no reasons for changes | One board by machine and day, where a move is visible to planning, stores and dispatch with its reason
+- pick: Everyone works from the same plan, and the reasons for slips pile up into a pattern you can fix.
+- needs: Jobs, machines and who is allowed to move a job.
 
 ### 3. The line stops for a material that was never ordered
 - area: Materials
@@ -62,6 +72,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: A stopped line still pays wages, power and rent. Example arithmetic: ten workers and two machines idle for two days can be ₹40,000 or more of cost with nothing produced.
 - fix: Each job carries its bill of materials. Verity compares what the next fortnight’s jobs need with stock and open purchase orders, and lists the shortfalls with the date by which each must be ordered.
 - screen: materials
+- root: Purchase buys against requests, not against the plan, so a material that a job needs next week has nobody asking for it today.
+- workaround: Stores keeper tells purchase when the stock looks low, usually the day before it is needed.
+- options: Keep large safety stock of everything, which ties up cash | A weekly shortage meeting, which finds problems late | Each job carries its bill of materials, compared with stock and open orders, with the date each item must be ordered
+- pick: The shortage appears with the date to act on it, not on the morning the line stops.
+- needs: Bill of materials per product, current stock, and open purchase orders with promised dates.
 
 ### 4. Cash is stuck in stock that is not needed
 - area: Materials
@@ -69,6 +84,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Working capital sits on shelves while a short-term loan carries interest. Old stock also gets damaged, rusts, or becomes obsolete when a design changes.
 - fix: Stock is valued item by item with its usage rate. Verity lists items with many months of cover and no recent issue, so purchase and the owner can decide to stop buying, return or use them up.
 - screen: materials
+- root: Items are bought in bulk or for one job and never used, and nobody looks at what has not moved.
+- workaround: A yearly stock count and a clear-out when the godown is full.
+- options: Strict reorder limits on every item, which is heavy to maintain | An annual review, which finds the problem a year late | Stock valued item by item with usage rate and months of cover, listing dead items
+- pick: The owner sees the cash locked in dead stock and decides to stop buying, return or use it.
+- needs: Item list with stock, rate and issue history.
 
 ### 5. The quote was priced on old material rates
 - area: Costing
@@ -76,6 +96,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Orders that look profitable on the invoice but are not. Without the real cost per job, the factory cannot tell which customers and products to push.
 - fix: Quotes are built from the item’s bill of materials and the latest purchase rate on record. After the job, actual material, scrap and hours are compared with the quote so the margin of each job is a number.
 - screen: jobs
+- root: A quote uses a material rate from the last time anyone checked, and the actual scrap and hours are never compared with it afterward.
+- workaround: The owner fixes a margin percent on top and revises it when a job obviously lost money.
+- options: Add a large safety margin, which loses orders | Review a few jobs a quarter, which misses patterns | Quote from the bill of materials and latest rate, then compare actual material, scrap and hours after the job
+- pick: Each job's real margin is known and the next quote starts from it.
+- needs: Bill of materials, rates, standard hours, and the actuals the floor already records.
 
 ### 6. Scrap and rework are known to everyone and written down by no one
 - area: Quality
@@ -83,6 +108,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Example arithmetic: 3 percent scrap on a ₹1 crore monthly material spend is ₹3 lakh a month. If the causes are never recorded, the same causes repeat.
 - fix: Rejects and rework are entered against the job with a cause: material, machine, tool, operator, process. Verity totals them by cause and by machine, so the repeated cause is the first thing on the list.
 - screen: quality
+- root: Scrap is thrown into a bin and rework is done quietly by the operator, so there is no record to learn from.
+- workaround: Supervisors remember the worst cases and mention them in the morning.
+- options: A paper reject register, which is rarely summed | Blame-based reviews, which hide scrap | Rejects and rework entered against the job with a cause, totalled by cause and machine
+- pick: The repeated cause becomes the first item to fix, and the record is not about blaming a person.
+- needs: A short list of causes and who records at each station.
 
 ### 7. A customer complaint cannot be traced to its batch
 - area: Quality
@@ -90,6 +120,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Whole lots get blamed or credited, a good customer loses trust, and the same fault is hard to stop because nobody knows where it began.
 - fix: Each lot carries its material source, machine, shift and inspection results as a record. A complaint opens against that lot, and the linked records show what else may be affected.
 - screen: quality
+- root: Batches are not recorded against material source, machine and shift, so a complaint starts a search instead of a lookup.
+- workaround: The quality head recalls the job and phones people who might remember.
+- options: Mark every piece with a batch code, which helps only if records exist | Keep copies of inspection reports in a folder | Each lot carries material source, machine, shift and inspection, and a complaint opens against that lot
+- pick: The linked records show what else could be affected, so a recall is narrow rather than broad.
+- needs: Lot or batch numbers on job cards and inspection records.
 
 ### 8. Machines are repaired after they break
 - area: Machines
@@ -97,6 +132,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Breakdown days stop output and push every promised date. A spare ordered in a hurry costs more and takes longer than one planned.
 - fix: Each machine has a service schedule, a history of faults and spares used. Verity tasks the maintenance team when a service is due and flags spares to buy before the service date.
 - screen: machines
+- root: Maintenance is called when a machine stops, and the service dates and spares are in someone's diary.
+- workaround: The maintenance in charge keeps a breakdown notebook and services when time permits.
+- options: Run to failure and fix fast, which costs production | Fixed calendar services without history | A service schedule per machine with fault history and spares, and a task when a service is due
+- pick: Services happen before the stop, and spares are bought before the date.
+- needs: Machine list, service intervals and spare parts used.
 
 ### 9. Suppliers promise a date and nobody follows up
 - area: Suppliers
@@ -104,6 +144,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Late inbound material is the most common reason for late outbound orders, and a late arrival is only discovered when the line needs it.
 - fix: Each purchase order carries a promised date and a follow-up task for the buyer. Overdue deliveries list at the top of the purchase view, with the job each one will hold up.
 - screen: materials
+- root: A supplier's promise is a phone call, and the buyer has no list of what is overdue and what it will hold up.
+- workaround: The buyer calls when the stores keeper complains.
+- options: Pay for expediting, which costs more | A shared tracker, which depends on updates | Purchase orders with promised date and a follow-up task, and overdue deliveries shown against the job they hold up
+- pick: Follow-up starts before the line is affected.
+- needs: Purchase orders with promised dates and the job each supports.
 
 ### 10. Finished goods sit waiting for paperwork
 - area: Dispatch
@@ -111,6 +156,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: A day’s delay on every dispatch pushes the payment date by a day as well. Packed stock also takes space and risks damage.
 - fix: A job that clears inspection becomes a dispatch task with its checklist: quantity, packing, invoice, transport details. Anything missing shows against the dispatch so it can be fixed before the truck arrives.
 - screen: jobs
+- root: Dispatch needs invoice, packing, transport and quantity to line up, and any one missing item holds up the truck.
+- workaround: The dispatch clerk chases each person when the vehicle arrives.
+- options: A paper checklist, which is not seen by anyone else | A daily dispatch meeting, which is too slow | A dispatch task per cleared job with its checklist and missing items shown early
+- pick: The gap is fixed before the vehicle is waiting.
+- needs: Dispatch checklist items for your products and buyers.
 
 ### 11. Customers pay late and the chasing is by memory
 - area: Money
@@ -118,6 +168,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Late receipts mean more borrowing. Example arithmetic: ₹40 lakh held back for two extra months at 12 percent a year is about ₹80,000 of interest.
 - fix: Every invoice has a due date and an owner. Overdue amounts list by customer and age, a follow-up task is assigned, and each call or promise is recorded so the next person does not start from zero.
 - screen: money
+- root: Collection has no owner for each invoice and promises are remembered by whoever took the call.
+- workaround: Accounts keeps a ledger and the owner calls the largest defaulters.
+- options: Hand overdue accounts to an agency, which strains relationships | A receivable sheet, which lacks promises | Invoices with due date and owner, overdue by customer and age, and every call recorded
+- pick: The next person continues the conversation instead of starting it again.
+- needs: Invoices, due dates and customer contacts.
 
 ### 12. Micro and small suppliers must be paid within a legal limit
 - area: Money
@@ -126,6 +181,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - fix: Supplier bills are recorded with the acceptance date and the supplier’s type if you tell us it. Verity lists bills approaching the 45-day limit so they are scheduled for payment on time.
 - screen: money
 - source: (Busy Infotech, Section 43B(h) and the MSMED Act: https://busy.in/tds/section-43bh-msme-payment-rule-and-45-day-limit-explained/)
+- root: The legal payment limit for micro and small suppliers is not visible when bills are approved.
+- workaround: Accounts pays oldest bills first and checks the limit when a supplier complains.
+- options: Pay all suppliers early, which strains cash | A manual watch list | Bills with acceptance dates and a list of those nearing the limit
+- pick: Payment is scheduled in time, and cash planning improves because the dates are known.
+- needs: Supplier bills with acceptance dates and supplier type where you know it.
 
 ### 13. Absenteeism, overtime and contract labour are tracked on paper
 - area: People
@@ -133,6 +193,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: Output falls on short shifts, overtime is paid without a check, and a labour inspection means days of gathering registers.
 - fix: Attendance, shifts, overtime approvals and contract workers are recorded against each person and line. Short shifts are visible the evening before, and the registers an inspector asks for come from the same records.
 - screen: machines
+- root: Attendance, overtime and contract labour are in separate registers and checked after the shift.
+- workaround: A muster roll and a supervisor's overtime list approved at month end.
+- options: Biometric systems, which add hardware | Paper registers for each category | Attendance, shifts, overtime approvals and contract workers on one record per person
+- pick: Shortages are visible the evening before, and registers for inspection come from the same data.
+- needs: Worker list, shifts and the registers you must maintain.
 
 ### 14. You are the control room, and a second plant doubles it
 - area: Owner
@@ -140,7 +205,11 @@ Lede: These are the situations manufacturers describe again and again. For each:
 - cost: The factory cannot grow beyond what one head can hold, and the owner cannot take a week off without a call from the floor.
 - fix: A morning view lists what needs a decision, each item with a named owner. Units are locations in one system, so output, rejects, stock and dues compare side by side.
 - screen: owner
-
+- root: The owner is the only place where plant, purchase, quality and money meet.
+- workaround: Daily calls, a morning walk and a monthly review.
+- options: Hire a general manager, which does not remove the need for information | A weekly report pack, which is late | A morning list of decisions with named owners and units as locations in one system
+- pick: You talk about exceptions with the person who owns each one.
+- needs: A short daily set of numbers from each department and unit.
 
 ## Facts
 
@@ -781,6 +850,179 @@ Heading: Questions factory owners ask.
 - cta heading: Start with the orders that are about to be late.
 - cta lede: Tell us how your factory runs and we will show you the at-risk orders, the material shortfalls and the overdue dues it would find, using your own numbers.
 
+## Workflow
+
+Heading: From enquiry to payment in a make-to-order factory, and where each handoff slips.
+Lede: A factory makes a promise in the first week and keeps or breaks it eight stages later. The work in each stage is understood. What fails is the information passed between stages.
+
+### 1. Enquiry and quotation
+- owner: Sales and owner
+- does: The customer sends a drawing or specification and a price and date are quoted.
+- data: Item, quantity, material, rates used, promised date, version.
+- breaks: Material rates are old and the date does not reflect floor load.
+- handoff: The confirmed quote becomes an order in planning.
+
+### 2. Order and job creation
+- owner: Planner
+- does: The order is split into jobs with materials, machines and dates.
+- data: Jobs, bill of materials, routing, due dates.
+- breaks: Changes to the order reach the floor late.
+- handoff: Jobs go to purchase for material and to the floor for scheduling.
+
+### 3. Material planning and purchase
+- owner: Purchase
+- does: Material is ordered against the jobs' needs.
+- data: Purchase orders, supplier, promised date, price.
+- breaks: Buying follows requests, not the plan, and supplier dates are not chased.
+- handoff: Material arrives at stores with a supplier challan.
+
+### 4. Receiving and storing
+- owner: Stores keeper
+- does: Goods are checked against the challan and put away.
+- data: Quantity received, quality check, location, batch.
+- breaks: Short or wrong material is found at the machine.
+- handoff: Material is issued to the job on request.
+
+### 5. Production
+- owner: Production manager and supervisors
+- does: Jobs run on machines and lines in the planned order.
+- data: Output, scrap, rework with cause, hours, operator.
+- breaks: The board is wrong by lunchtime and scrap is not recorded.
+- handoff: Finished jobs go to quality with their records.
+
+### 6. Quality and inspection
+- owner: Quality head
+- does: Pieces are checked against specification and a lot is passed or held.
+- data: Inspection results, lot, machine, shift.
+- breaks: A complaint later cannot be traced to its lot.
+- handoff: Passed lots move to finished goods and dispatch.
+
+### 7. Maintenance
+- owner: Maintenance in charge
+- does: Machines are serviced and repaired and spares are used.
+- data: Service schedule, fault history, spares.
+- breaks: Repairs follow breakdowns and spares are bought late.
+- handoff: A working machine returns to the schedule.
+
+### 8. Dispatch
+- owner: Dispatch and stores
+- does: Packing, documents and transport are arranged and goods leave.
+- data: Quantity, packing, invoice, transport details.
+- breaks: A missing paper holds the truck.
+- handoff: The invoice goes to accounts.
+
+### 9. Invoice and collection
+- owner: Accounts
+- does: Invoices are raised and payment is followed.
+- data: Invoice, due date, promises, overdue age.
+- breaks: Collection depends on whoever remembers.
+- handoff: Payment closes the job and actual cost is reviewed.
+
+### 10. Costing and review
+- owner: Owner
+- does: The job is costed against the quote and lessons feed the next quote.
+- data: Actual material, scrap and hours against estimate.
+- breaks: This step is often skipped.
+- handoff: Actual cost returns to stage 1.
+
+## Content kit
+
+### Hooks
+- Delivery date de di. Machine ka load kisne dekha tha?
+- Whiteboard ka plan dopahar tak galat ho jaata hai.
+- Line ruki hai kyunki ek material order hi nahi hua.
+- Stock godown mein bhara hai, par kaam ka kuch nahi.
+- Quote purane material rate par bana tha. Job ke baad margin kitna bacha?
+- Scrap sabko pata hai, likha kisi ne nahi.
+- Customer ki complaint aayi. Kaun sa batch, kaun sa machine?
+- Machine tab theek hoti hai jab ruk jaati hai.
+- Supplier ne kal ka vada kiya tha. Aaj kya hua?
+- Maal tayyar hai par invoice aur packing list adhoori.
+- Customer se payment lena yaad se hota hai ya system se?
+- Chhote supplier ka bill 45 din mein dena tha. Kisne gina?
+- Overtime kisne approve kiya, kisne kiya, register mein nahi.
+- Owner nahi to factory ka control kiska?
+- Dusra plant khola aur phone double ho gaye.
+- Job ke liye bill of materials kahan hai?
+- Kal ki production ka plan aaj subah kaun badalta hai?
+- Reject ka karan machine tha, tool tha ya operator? Koi record?
+- Rework ka kharcha kisi ke budget mein nahi dikhta.
+- Material mil gaya par quality check baaki hai. Line kya kare?
+- Order pura hua par margin kitna? Mahine ke end mein pata chalega.
+- Spare part mangwana tha. Machine ruk gayi.
+- Dispatch ke din truck khadi hai, document nahi.
+- Customer 70 din se paisa roke baitha hai. Kisi ne yaad dilaya?
+- Aap factory mein nahi hote to kaam kaun check karta hai?
+
+### Explainers
+- concept: A date promised from the floor | pain: Delivery dates promised without checking load (pain 1) | for: Owners and sales heads | hook: Delivery date de di. Machine ka load kisne dekha tha? | show: A date confirmation screen showing machine load for the next four weeks | visual: A calendar with machine lanes filling up as an order is added | outcome: Promises that can be kept | cta: Book the free seven day demo on your orders
+- concept: The board that stays right | pain: Plan on a whiteboard (pain 2) | for: Planners and supervisors | hook: Whiteboard ka plan dopahar tak galat ho jaata hai | show: One board where moving a job updates planning, stores and dispatch with a reason | visual: A card dragged between lanes with ripples to three other screens | outcome: One plan for everyone | cta: Share your current plan sheet
+- concept: The material nobody ordered | pain: Line stops for material never ordered (pain 3) | for: Purchase and production | hook: Line ruki hai kyunki ek material order hi nahi hua | show: A shortfall list with date to order against the jobs of the next fortnight | visual: A jobs timeline with one item turning amber a week ahead | outcome: Shortages are bought in time | cta: Send us a week of jobs
+- concept: Cash in dead stock | pain: Cash stuck in stock not needed (pain 4) | for: Owners | hook: Stock godown mein bhara hai, par kaam ka kuch nahi | show: Items with months of cover and no recent issue | visual: A shelf of boxes greying out as months pass | outcome: Money released from stock | cta: Load your item list
+- concept: The real margin | pain: Quote on old rates (pain 5) | for: Owners and estimators | hook: Quote purane rate par bana tha | show: Quote against actual material, scrap and hours for a finished job | visual: Two bars, quote and actual, with the gap shaded | outcome: Better quotes | cta: Cost one finished job
+- concept: Scrap with a cause | pain: Scrap and rework unrecorded (pain 6) | for: Production managers | hook: Scrap sabko pata hai, likha kisi ne nahi | show: Rejects by cause and machine for the week | visual: A bin icon filling with labelled causes | outcome: The repeat cause is fixed first | cta: Try one week of rejects
+- concept: A complaint with an address | pain: Complaint cannot be traced to a batch (pain 7) | for: Quality heads | hook: Customer ki complaint aayi. Kaun sa batch, kaun sa machine? | show: A lot record with material source, machine, shift and inspection | visual: A thread from the complaint to the lot card | outcome: A narrow, fast response | cta: Trace one old complaint with us
+- concept: Service before breakdown | pain: Machines repaired after they break (pain 8) | for: Maintenance heads | hook: Machine tab theek hoti hai jab ruk jaati hai | show: Service schedule, fault history and spares due | visual: A machine row where a wrench icon appears before the red | outcome: Fewer unplanned stops | cta: Share your machine list
+- concept: The truck waiting for paper | pain: Finished goods wait for paperwork (pain 10) | for: Dispatch teams | hook: Dispatch ke din truck khadi hai, document nahi | show: A dispatch checklist with items missing flagged early | visual: A truck icon with a checklist ticking | outcome: Trucks leave on time | cta: Show us your dispatch routine
+- concept: The morning list | pain: Owner is the control room (pain 14) | for: Owners | hook: Owner nahi to factory ka control kiska? | show: A morning list of decisions with owners across plants | visual: A phone with a short list replacing a call log | outcome: Decisions only on exceptions | cta: Ask for the seven day demo
+
+### Script 1: Delivery date
+- 0 to 5s: Delivery date de di. Machine ka load kisne dekha tha?
+- 5 to 15s: Sales ne date di, production ko baad mein pata chala, aur customer ko late maal mila.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Order confirm karne se pehle agle char hafte ka machine load dikhta hai. Date schedule se aati hai.
+- 40 to 50s: Owner ko dikhta hai kaun se order jokhim mein hain.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Line ruk gayi
+- 0 to 5s: Line ruki hai kyunki ek material order hi nahi hua.
+- 5 to 15s: Stores ne kal bataya, purchase ne aaj dekha, supplier ne parso bheja.
+- 15 to 25s: Ek hafte ke jobs dijiye. Saat din mein free demo, aapke data par.
+- 25 to 40s: Har job ka bill of materials stock aur purchase orders se milta hai. Kam item us date ke saath dikhte hain jab tak order karna hai.
+- 40 to 50s: Purchase head ko subah list milti hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Scrap ka karan
+- 0 to 5s: Scrap sabko pata hai, likha kisi ne nahi.
+- 5 to 15s: Bin mein girta hai, aur har hafte wahi karan.
+- 15 to 25s: Ek hafte ka reject data lekar aaiye. Saat din mein free demo.
+- 25 to 40s: Har reject ke saath karan: material, machine, tool, operator ya process. Machine aur karan ke hisaab se total.
+- 40 to 50s: Sabse zyada karan upar dikhta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 4: Complaint ka batch
+- 0 to 5s: Customer ki complaint aayi. Kaun sa batch, kaun sa machine?
+- 5 to 15s: Teen log, do register, aur ek din ki khoj.
+- 15 to 25s: Ek purani complaint dijiye. Saat din mein customised demo, free.
+- 25 to 40s: Har lot ke saath material source, machine, shift aur inspection. Complaint lot ke saath khulti hai.
+- 40 to 50s: Kaun sa aur maal prabhavit ho sakta hai, woh bhi dikhta hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 5: Owner ki subah
+- 0 to 5s: Owner nahi to factory ka control kiska?
+- 5 to 15s: Subah ki walk, teen phone call, aur phir bhi kuch chhoot jaata hai.
+- 15 to 25s: Ek plant ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Subah ek list: peeche order, kam material, due payment, band machine. Har item ka owner.
+- 40 to 50s: Aap sirf us par baat karte hain jis par faisla chahiye.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Late deliveries and the step that caused them
+- titles: Managing Director | Owner | Director Operations | Plant Head | General Manager Production | Head of Planning | Head of Purchase
+- deciders: The owner or managing director decides. The plant head influences, and accounts raises cost questions.
+- best size: A make-to-order factory with 50 to 300 people, several machines or lines, and customers who ask for delivery dates.
+- first message: Hello, I work with manufacturers on one problem: orders that go late and nobody can say which step caused it. We build a free seven day demo on your own order and job data. How do you decide a delivery date today?
+- discovery: How do you promise a delivery date to a customer? | Where is the current plan and who updates it? | How do you know a material is short before the line stops? | How do you trace a customer complaint to its batch? | How are scrap and rework recorded? | Who follows overdue customer payments and how?
+- objection: We have an ERP already | We do not replace what works. We connect the order, plan and shortage view that the ERP does not show you, and you see it on your data.
+- objection: Our team will not enter data | We start with the few screens each person needs, in your terms, and reduce what they have to write.
+- objection: Too busy for a project | The four week plan needs about 8 to 14 owner hours in total. We do the rest with your team.
+- objection: Cost | Cost depends on scope. We start with the one problem that costs most, and the demo is free.
+- demo: A week of jobs on one board, a material shortfall dated to the line, one complaint traced to a lot and an overdue customer list, built from the factory's own order sheet.
+- proof: Take one late order from last quarter and show which step made it late.
+- follow up: Thank you for your time. I have built the demo around the late order you described, with the step that caused it. When can your plant head and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

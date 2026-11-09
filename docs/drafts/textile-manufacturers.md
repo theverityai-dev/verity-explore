@@ -48,6 +48,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Example arithmetic: a 20-tonne yarn lot returned at ₹20 a kg below price is ₹4 lakh. The bigger cost is the repeat buyer who moves to another mill.
 - fix: Each cotton lot is recorded with its source, staple, trash and rate, and each mixing is recorded against the lots used. Yarn lots link back to the mixing, so a complaint shows which bales went into it.
 - screen: lots
+- root: Cotton is bought by the broker on price and availability, and the mixing is decided on the shop floor. The link between the bales bought and the yarn sold exists only in memory.
+- workaround: A mixing register and the spinning master's judgement. When a complaint arrives, someone tries to recall which lots were running.
+- options: Buy only from fixed suppliers, which limits price options | Keep a lot register in Excel, which is not tied to yarn lots | Record each cotton lot with its quality, link each mixing to the lots, and link yarn lots to the mixing
+- pick: A complaint then traces to the bales in minutes, and the buying team sees which source gives the fewest complaints.
+- needs: Cotton lot details from the broker invoice, and the mixing sheet the spinning master already writes.
 
 ### 2. Nobody knows how much cotton became saleable yarn
 - area: Fibre and yarn
@@ -55,6 +60,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Example arithmetic: one extra point of waste on 300 tonnes a month of cotton at ₹150 a kg is about ₹4.5 lakh a month, partly recovered as waste sales at a much lower rate.
 - fix: Cotton issued, yarn produced and waste sold are recorded by lot and by stage. Verity shows yield for each mixing, so a drift in waste is seen within the week and compared across shifts.
 - screen: lots
+- root: Cotton issued, waste and yarn produced are measured at different points by different people, and nobody joins them for a mixing.
+- workaround: A monthly yield figure worked out from total issue and total production.
+- options: Weigh everything and reconcile daily, which is accurate but heavy | Rely on the monthly figure, which hides which shift or mixing leaks | Record issue, output and waste by lot and stage, and show yield per mixing
+- pick: It finds the leak while the lot is still running, using weights the mill already takes.
+- needs: Issue, production and waste weights by lot and stage.
 
 ### 3. Loom and spindle efficiency is a guess
 - area: Production
@@ -62,6 +72,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: A loom running at 78 instead of 85 percent loses about 8 percent of its output every day, which no one sees on the bill.
 - fix: Shift output is entered per loom or frame with stoppage reasons. Verity ranks looms by efficiency and lists the three biggest causes of lost time, so the fitter and shift in charge work from facts.
 - screen: production
+- root: Machine stoppages are not recorded with reasons, so efficiency is a single end-of-shift number that nobody can act on.
+- workaround: Shift in charge reports output verbally and the fitter is called when something stops.
+- options: Machine-mounted monitoring, which costs money and still needs reasons | A paper stoppage log, which is rarely summed | Shift output per loom or frame with stoppage reasons, ranked by cost
+- pick: Reasons are the useful part, and they can be entered by the shift in charge in a minute.
+- needs: Loom or frame list, shift output, and a short list of stoppage reasons.
 
 ### 4. Too many small orders, too many changeovers
 - area: Production
@@ -69,6 +84,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Each changeover loses hours of machine time, and small orders accepted without a loading check push the orders already promised.
 - fix: Orders carry quantity, count or construction and promised date. Before sales confirms, Verity shows the loading on each shed or frame, so small orders are grouped or priced to cover the change.
 - screen: orders
+- root: Sales accepts small orders without seeing the loading, because the cost of a changeover is not in the quote.
+- workaround: The owner decides each order by feel and the planner finds out later.
+- options: Set a minimum order quantity, which turns away good buyers | Charge a flat change fee, which is crude | Show loading per shed or frame before confirming, and group or price small orders
+- pick: The decision is made with the loading in view, not after the changeover.
+- needs: Order details, count or construction, and the capacity of each frame or shed.
 
 ### 5. Cloth is graded late and defects are not traced
 - area: Quality
@@ -76,6 +96,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Cloth downgraded to B or C grade sells at a heavy discount. Example arithmetic: 3,000 metres downgraded at ₹25 a metre is ₹75,000 lost in one run.
 - fix: Inspection points per roll are entered with the loom, warp beam and shift. Verity shows defect rates by loom and by beam, so a faulty one is stopped after a few rolls and not a few days.
 - screen: production
+- root: Cloth is graded after it comes off the loom, and the roll is not linked to the beam or loom, so the defect has no source.
+- workaround: Inspectors record defect points per roll on a sheet, but no one groups them by loom.
+- options: More inspectors, which finds defects but not their cause | Weekly review of defect sheets, which is late | Defect points per roll tied to loom, warp beam and shift, with a rising rate shown at once
+- pick: It stops a faulty beam after a few rolls instead of a few days.
+- needs: Roll numbers with loom, beam and shift, and your grading system.
 
 ### 6. The shade does not match and the lot is re-dyed
 - area: Processing
@@ -83,6 +108,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: A redye costs dyes, chemicals, power, water and effluent handling again, and it delays the dispatch.
 - fix: Each dye batch records its recipe, machine, fabric lot and result. A repeat order for the same shade pulls the recipe that worked, and redye rates are visible by shade and by machine.
 - screen: processing
+- root: Shade is matched by eye and recipes are remembered or kept in separate books, so a repeat order starts from scratch.
+- workaround: The dye master recalls the earlier recipe and a lab dip is repeated.
+- options: Recipe cards in a cabinet, which are hard to search | A shared sheet of recipes, which has no result column | Each dye batch records recipe, machine, fabric lot and result, and a repeat order pulls the recipe that worked
+- pick: A redye is a recorded event with a cause, and the best recipe for each shade is one click away.
+- needs: Recipe, machine and result of each batch, and shade names used by buyers.
 
 ### 7. Cloth goes out for processing and comes back short
 - area: Processing
@@ -90,6 +120,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Example arithmetic: a shortage of 2 percent on 1 lakh metres a month at ₹90 is ₹1.8 lakh, and it is rarely recovered because the original numbers were not kept.
 - fix: Every job work challan records metres out, with the processor, process and expected return. Returns are matched against it, and shrinkage per processor is compared, so one with consistently higher loss is visible.
 - screen: processing
+- root: Metres out and metres back are written in different books by different people, and shrinkage is argued rather than measured.
+- workaround: A processor register and a call when the lot is late.
+- options: Check at the gate, which catches shortage but does not record it against the processor | A shared sheet with the processor, which depends on them | Challan with expected return, matched on return, and shrinkage compared by processor
+- pick: A processor with consistently higher loss becomes visible, and settlement uses numbers.
+- needs: Outward and inward challans with metres, process and date.
 
 ### 8. Grey, in-process and finished cloth are counted separately
 - area: Stock
@@ -97,6 +132,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Orders are accepted against stock that does not exist, and old stock sits unseen until it is sold at a loss.
 - fix: Stock is held by stage and place: grey in the shed, at each processor, folded and ready, and in each godown. The total available to promise to a buyer comes from the records.
 - screen: processing
+- root: Grey, in-process and finished cloth sit in different places and are counted by different people, so the total you can promise is a guess.
+- workaround: A morning walk and a phone call to each processor.
+- options: A physical count each week, which is out of date by Tuesday | A stock sheet by godown, which ignores cloth at processors | Stock by stage and place, with the total available to promise computed from records
+- pick: Sales can answer a buyer without walking the floor.
+- needs: Current stock by stage and godown, and movement challans.
 
 ### 9. Fixed price orders, moving fibre prices
 - area: Costs
@@ -104,6 +144,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: A volatile input with fixed output prices is the main swing in a mill’s annual profit, and it is easiest to miss at order time.
 - fix: Each order shows the cost of the mixing on record and the margin at the rate agreed. If the cotton replacement rate moves beyond a limit, the order is flagged so the owner decides before further cover is bought.
 - screen: orders
+- root: Orders are priced at one date and fibre is bought at another, and the margin at order time is never compared with the replacement cost.
+- workaround: The owner watches cotton rates and decides cover by instinct.
+- options: Hedge every order with immediate purchase, which locks cash | Add a fixed buffer to prices, which loses orders | Show cost and margin per order and flag it when the replacement rate crosses a limit
+- pick: The owner decides on a flagged order rather than watching every order.
+- needs: Order rates, the mixing cost on record, and the current replacement rate you track.
 
 ### 10. Power is the second biggest cost and is read once a month
 - area: Power
@@ -111,6 +156,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Power and fuel are one of the largest running costs of a spinning or processing unit, and idle running of a few machines is spread over the whole month.
 - fix: Meter readings and diesel use are entered per shift and compared with output. Verity shows units per kilogram of yarn or per metre of cloth by day, so an unusual day is seen and asked about.
 - screen: production
+- root: Power is metered once a month and billed as one figure, so unusual days vanish into the average.
+- workaround: The electrician reads the meter and the monthly bill is compared with last month.
+- options: Sub-meters and monitoring, which cost money | Monthly comparison, which is too late | Meter readings and diesel use per shift compared with output, showing units per kilogram or metre by day
+- pick: It uses readings the mill can already take and shows the day that went wrong.
+- needs: Meter readings per shift and the output for the same shift.
 
 ### 11. Buyers take 60 to 120 days and the chasing is through brokers
 - area: Money
@@ -118,6 +168,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Example arithmetic: ₹1 crore held for an extra 60 days at 11 percent a year is about ₹1.8 lakh in interest. Cheques that bounce or goods returned for quality add to it.
 - fix: Each invoice has a due date, broker, buyer and a follow-up owner. Overdue amounts are listed by buyer and age with every promise recorded, so credit limits can be decided on history.
 - screen: money
+- root: Payment terms of 60 to 120 days are managed by brokers, and the follow-up has no owner inside the mill.
+- workaround: Accounts keeps a ledger and the owner calls big buyers personally.
+- options: Hand the chase to the broker, which gives no control | A receivable sheet, which does not record promises | Invoices with due date, broker and follow-up owner, with promises recorded and overdue listed by age
+- pick: Credit limits can then be set from the actual payment history of each buyer.
+- needs: Invoices, due dates, brokers and any promises made.
 
 ### 12. Small suppliers must be paid on time, and many mills are small suppliers too
 - area: Money
@@ -126,6 +181,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - fix: Supplier bills carry their acceptance date. Verity lists bills approaching the 45-day limit for micro and small suppliers, so payment is scheduled before the limit.
 - screen: money
 - source: (Busy Infotech, Section 43B(h) and the MSMED Act: https://busy.in/tds/section-43bh-msme-payment-rule-and-45-day-limit-explained/)
+- root: Micro and small suppliers must be paid within a legal limit, and bills are approved on the day someone gets to them.
+- workaround: Accounts pays by oldest first and hopes the limit is not crossed.
+- options: Pay everyone at the limit, which strains cash | Manual watch list, which is easy to miss | Bills carry acceptance date, and those nearing the limit are listed with an owner
+- pick: Payment is scheduled before the limit, not after the complaint.
+- needs: Supplier bills with acceptance dates and a flag for micro and small suppliers.
 
 ### 13. Shifts, contract labour and migrant workers are hard to keep steady
 - area: People
@@ -133,6 +193,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Machines stop for want of operators, and untrained hands raise defects and waste in the first weeks.
 - fix: Attendance, shifts, machine allocation, skills and contractor labour are recorded per person. The shift in charge sees shortages the evening before and who is trained for which machine.
 - screen: owner
+- root: Attendance, machine allocation and skills sit in separate registers, and the shift in charge learns of shortages when the shift starts.
+- workaround: The supervisor reassigns people by phone in the morning.
+- options: Overstaff for safety, which costs wages | A muster sheet, which gives no skill view | Attendance, shifts, machine allocation and skills per person, with shortages seen the evening before
+- pick: Fewer stops from missing operators, with contract labour recorded alongside employees.
+- needs: Worker list, shifts and the machines each person can run.
 
 ### 14. Several units, one owner and a stack of reports
 - area: Owner
@@ -140,7 +205,11 @@ Lede: These are the situations spinners, weavers, knitters and processors descri
 - cost: Decisions are made on stale data, and a problem in one unit is found only when the monthly numbers arrive.
 - fix: Units are locations in one system. Daily output, yield, stock, dues and rejections are comparable side by side, and the owner’s morning view lists the items that need a decision.
 - screen: owner
-
+- root: Each unit reports in its own format and the group picture is built by an accountant at month end.
+- workaround: A daily call to each unit head and a monthly consolidated sheet.
+- options: More calls, which do not scale | A weekly pack built by hand, which is late | Units as locations in one system with a morning exception list
+- pick: The owner reviews exceptions, not reports.
+- needs: A common set of daily numbers from each unit.
 
 ## Facts
 
@@ -761,6 +830,179 @@ Heading: Questions textile owners ask.
 - cta heading: Start with the lot that came back as a complaint.
 - cta lede: Tell us how your mill runs and we will show you yield by mixing, loom efficiency, cloth at processors and overdue buyers, using your own numbers.
 
+## Workflow
+
+Heading: From cotton bale to realised payment, and where each handoff slips.
+Lede: A textile mill moves fibre or yarn through several processes and many owners. Each process is run well on its own. The losses sit at the handoffs, where quality, quantity or cost is not carried across.
+
+### 1. Buying fibre or yarn
+- owner: Purchase head and owner
+- does: Cotton or yarn is bought through brokers and suppliers against price, staple and trash.
+- data: Lot, supplier, quality, rate, quantity, delivery date.
+- breaks: Price drives the choice and the quality record stays with the broker.
+- handoff: Lots arrive at the godown with a supplier challan.
+
+### 2. Receiving and testing
+- owner: Stores and quality
+- does: Bales are weighed, sampled and tested and placed in the godown.
+- data: Weight against invoice, test results, bale numbers.
+- breaks: A difference in weight or quality is noticed only when the lot is mixed.
+- handoff: Cleared lots go to the mixing room with an issue record.
+
+### 3. Mixing and blowroom
+- owner: Spinning master
+- does: Lots are combined into a mixing for the required count.
+- data: Lots used, proportions, waste at blowroom.
+- breaks: The mixing is not linked to the lots, so later complaints cannot be traced.
+- handoff: The mixing moves to carding and spinning against an order.
+
+### 4. Spinning or weaving
+- owner: Shift in charge and fitter
+- does: Frames or looms run to the order and the shift output is counted.
+- data: Output per frame or loom, stoppages with reasons, shift staffing.
+- breaks: Efficiency is a single number at the end of the shift.
+- handoff: Yarn or grey cloth passes to inspection with a lot number.
+
+### 5. Inspection and grading
+- owner: Quality in charge
+- does: Rolls or cones are checked and graded against the buyer standard.
+- data: Defect points per roll, grade, loom, beam, shift.
+- breaks: Defects are not traced to the loom or beam and are repeated.
+- handoff: Graded stock goes to the godown or to processing.
+
+### 6. Dyeing, printing and finishing
+- owner: Dye master and processing head
+- does: Grey cloth is processed in house or by an outside processor to the required shade and finish.
+- data: Recipe, machine, fabric lot, result, challans out and in.
+- breaks: Shade mismatches cause redyeing and the processor returns the cloth short.
+- handoff: Finished cloth returns to the godown after a count.
+
+### 7. Stock and planning
+- owner: Planner
+- does: Stock is held by stage and the plan for the next orders is made.
+- data: Stock by stage and place, orders, promised dates, loading per frame.
+- breaks: The total available to promise differs between the planner and the godown.
+- handoff: Confirmed orders are released to production and dispatch.
+
+### 8. Order costing and pricing
+- owner: Owner and sales
+- does: Orders are priced from fibre cost, conversion cost, processing and margin.
+- data: Mixing cost, expected yield, processing rate, agreed price.
+- breaks: Prices are fixed before the fibre is covered, and the margin is not watched as rates move.
+- handoff: The order goes to planning with the agreed price and promise date.
+
+### 9. Dispatch and invoicing
+- owner: Dispatch and accounts
+- does: Goods are packed, loaded and invoiced to the buyer through the broker.
+- data: Lot numbers, quantity, vehicle, invoice, due date.
+- breaks: Dispatch and invoice quantities differ and disputes follow.
+- handoff: The invoice enters the receivable list.
+
+### 10. Collection and costing
+- owner: Accounts and owner
+- does: Payment is followed up and the order is costed against the quote.
+- data: Due date, broker, promises, actual cost against quote.
+- breaks: Collection is chased only when cash is short, and real cost is not carried back.
+- handoff: Actual cost and buyer payment history feed the next order's price and credit limit.
+
+## Content kit
+
+### Hooks
+- Yarn complaint aaya. Kaun se bales mixing mein gaye the?
+- Cotton ka bhav badla. Order ka margin kitna bacha, kisko pata?
+- Loom ki efficiency mahine ke end mein pata chalti hai.
+- Cloth roll mein defect mila. Kaun si loom, kaun sa beam?
+- Dye lot dobara karna pada. Pehli baar ka recipe kahan hai?
+- Processor ko 5000 metre bheja. Wapas kitna aaya?
+- Grey, folded aur processor ke paas kitna maal hai, ek number mein bataiye.
+- Chhote order aate hain aur changeover khaate hain. Quote mein ye kharcha hai?
+- Bijli ka bill mahine mein ek baar dekhte hain. Kaun sa din bigda?
+- Buyer 90 din mein paisa deta hai. Broker ne kya promise kiya, record hai?
+- Chhote supplier ka bill 45 din ke andar dena tha. Kisi ne gina?
+- Shift mein operator kam. Raat ko pata chal sakta tha.
+- Cotton lot sasta mila par yarn ka count bigda. Kisko dosh dein?
+- Waste kitna nikla, kisi lot ka hisaab hai?
+- Teen unit ki teen report aur owner ke liye ek sawaal: kaun sa order khatre mein hai?
+- Shade match nahi hua. Machine ka kasoor tha ya recipe ka?
+- Roz subah godown ghoom ke stock dekhna padta hai?
+- Waste cotton kis shift mein zyada nikalta hai?
+- Fibre ka daam badla aur order ka daam wahi. Kahan ruk sakte the?
+- Loom ruki hai par reason kisi ko nahi pata.
+- Ek buyer ki shikayat aur teen din ki khoj. Record hota to ek ghanta.
+- Contract labour ki hazri aur output alag register mein.
+- Printing wale ne cloth short lauta diya. Kitna aur kab?
+- Folding ke baad pata chala ki grade kharab hai. Beam kaun sa tha?
+- Aap mill mein nahi hote to shift ka kaam kaun check karta hai?
+
+### Explainers
+- concept: From a complaint to the bale | pain: Cotton quality varies, complaints cannot be traced (pain 1) | for: Owners and spinning masters | hook: Yarn complaint aaya. Kaun se bales mixing mein gaye the? | show: A yarn lot opening to its mixing and the cotton lots used | visual: A thread that pulls backward through lot cards to a bale photo placeholder | outcome: A complaint is traced in minutes | cta: Try it on one complaint from last month
+- concept: Where did the cotton go | pain: No one knows how much cotton became yarn (pain 2) | for: Owners | hook: Waste kitna nikla, kisi lot ka hisaab hai? | show: Yield per mixing with issue, output and waste | visual: A bar split into yarn, waste and unaccounted | outcome: Leaks are found within the week | cta: Send us one mixing to measure
+- concept: The loom that stopped without a reason | pain: Loom efficiency is a guess (pain 3) | for: Production heads | hook: Loom ruki hai par reason kisi ko nahi pata | show: Looms ranked by efficiency and the top three stoppage causes | visual: A shed floor plan where one loom glows and a reason tag appears | outcome: The fitter works from facts | cta: Start with one shed
+- concept: The defect with an address | pain: Cloth graded late, defects untraced (pain 5) | for: Quality heads | hook: Cloth roll mein defect mila. Kaun si loom, kaun sa beam? | show: Defect rate by loom and beam with a rising warning | visual: A roll tape unrolling and stopping at the beam number | outcome: A faulty beam is stopped after a few rolls | cta: Try it on a week of grading sheets
+- concept: Same shade, second time | pain: Shade mismatch and redye (pain 6) | for: Dye masters | hook: Dye lot dobara karna pada. Pehli baar ka recipe kahan hai? | show: A repeat order pulling the recipe that worked | visual: Two swatches matching as a recipe card slides in | outcome: Redye rates fall by shade and machine | cta: Show us your recipe books
+- concept: 5000 metres out, how many back | pain: Processor returns short (pain 7) | for: Production managers | hook: Processor ko 5000 metre bheja. Wapas kitna aaya? | show: Challan matched with returns and shrinkage per processor | visual: Metre counters leaving and returning with a gap labelled | outcome: Settlement uses numbers | cta: Show us your challan register
+- concept: Margin when cotton moves | pain: Fixed price orders, moving fibre prices (pain 9) | for: Owners | hook: Cotton ka bhav badla. Order ka margin kitna bacha? | show: Orders flagged when replacement rate crosses a limit | visual: A price line moving against a fixed order bar | outcome: The owner decides on flagged orders only | cta: Bring five open orders to the demo
+- concept: The expensive day | pain: Power read once a month (pain 10) | for: Owners and plant heads | hook: Bijli ka bill mahine mein ek baar dekhte hain | show: Units per kilogram by day with the bad day highlighted | visual: A calendar heat strip | outcome: An unusual day is asked about at once | cta: Try it on a month of meter readings
+- concept: Money that arrives in 90 days | pain: Buyers take 60 to 120 days (pain 11) | for: Owners and accounts | hook: Buyer 90 din mein paisa deta hai. Broker ne kya promise kiya? | show: Overdue by buyer and age with every promise recorded | visual: A ledger turning into an aging ladder | outcome: Credit limits follow real history | cta: Load your receivable list
+- concept: One owner, three units | pain: Several units, no single view (pain 14) | for: Owners | hook: Teen unit ki teen report, ek sawaal: kaun sa order khatre mein hai? | show: Morning list of exceptions across units | visual: Three unit cards merging into one list | outcome: Review by exception | cta: Ask for the demo
+
+### Script 1: Complaint aur bale
+- 0 to 5s: Yarn complaint aaya. Kaun se bales mixing mein gaye the?
+- 5 to 15s: Mixing register ek jagah, lot register doosri jagah, aur yaad sirf spinning master ko.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har cotton lot ka record, mixing us lot se juda, yarn lot mixing se. Complaint kholte hi bales dikhte hain.
+- 40 to 50s: Owner ko dikhta hai kaun sa source sabse kam complaint deta hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Loom ka reason
+- 0 to 5s: Loom ruki hai par reason kisi ko nahi pata.
+- 5 to 15s: Shift ke end mein ek number aata hai, aur kal wahi galti dobara.
+- 15 to 25s: Ek shed ke saath saat din ka free demo, aapke actual numbers par.
+- 25 to 40s: Har loom ka output aur ruki hui jagah ka reason. Hafte mein top teen reasons upar.
+- 40 to 50s: Fitter aur shift in charge facts se kaam karte hain.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 3: Processor se kitna aaya
+- 0 to 5s: Processor ko 5000 metre bheja. Wapas kitna aaya?
+- 5 to 15s: Aadha cloth baad mein aaya, shrinkage ka jhagda alag.
+- 15 to 25s: Apna challan register lekar aaiye. Saat din mein free demo, aapke data par.
+- 25 to 40s: Har challan mein metre, process aur wapsi ki date. Wapsi match hoti hai aur shrinkage processor ke hisaab se compare hoti hai.
+- 40 to 50s: Jis processor ka loss lagataar zyada hai woh saaf dikhta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Cotton ka bhav aur order
+- 0 to 5s: Cotton ka bhav badla. Order ka margin kitna bacha?
+- 5 to 15s: Order purane daam pe, cotton naye daam pe. Aapko kab pata chala?
+- 15 to 25s: Paanch open order lekar aaiye. Saat din mein free demo.
+- 25 to 40s: Har order ka cost aur margin dikhta hai. Replacement rate limit paar kare to order flag hota hai.
+- 40 to 50s: Owner sirf flagged order pe faisla leta hai.
+- 50 to 60s: Value dikhe tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Teen unit, ek subah
+- 0 to 5s: Teen unit, teen report. Kaun sa order khatre mein hai?
+- 5 to 15s: Roz subah phone aur mahine ke end mein ek consolidated sheet.
+- 15 to 25s: Apne do unit ka data dijiye. Saat din mein customised demo, free.
+- 25 to 40s: Subah ek list: peeche chal rahe order, kam stock, aur due payments. Har item ka owner.
+- 40 to 50s: Aap sirf us par baat karte hain jis par faisla chahiye.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Complaints that cannot be traced, and margin lost when fibre prices move
+- titles: Managing Director | Owner | Director Operations | Mill Manager | General Manager Production | Head of Marketing | Head of Quality
+- deciders: The owner or managing director decides. The mill manager and quality head influence, and accounts raises cost and credit questions.
+- best size: A spinning or weaving mill with 50 to 500 people, one to three units, and buyers that pay through brokers.
+- first message: Hello, I work with textile mills on one problem: complaints that cannot be traced to a cotton lot, and margins that move when fibre prices do. We build a free seven day demo on your own lot and order data. How do you trace a yarn complaint today?
+- discovery: How do you trace a yarn or cloth complaint back to the cotton lot? | How do you know the yield of a mixing while it is running? | How is loom or frame efficiency recorded and who sees it? | What happens when cotton prices move after you fix an order price? | How do you track cloth that goes to processors? | Who follows up buyer payments and how are promises recorded?
+- objection: We are used to our register system | We keep the registers you trust and connect them to one lot record, so tracing does not depend on one person's memory.
+- objection: Our people are not computer literate | We start with a few short screens each shift in charge can fill in a minute, in your own terms.
+- objection: ERP failed for us earlier | Those usually force the mill to fit the software. We map your process first and show the demo on your data before you decide.
+- objection: It will be too costly | Cost depends on scope. We start with the one problem that costs most, and the demo is free.
+- demo: A mixing with its cotton lots, one yarn complaint traced back, a processor return with a shortage and an order flagged for a cotton rate move, built from the mill's own lot sheets.
+- proof: Trace one real complaint from last quarter to its bales and show the yield of that mixing.
+- follow up: Thank you for your time. I have built the demo around the complaint you described, from cotton lot to yarn. When can your mill manager and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

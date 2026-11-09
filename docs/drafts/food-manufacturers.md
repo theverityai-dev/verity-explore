@@ -71,6 +71,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Without the map, you hold or recall more than you need. A bigger hold is more lost stock and a louder problem.
 - fix: Ingredient lots are received with supplier, date and expiry. Each batch records the lots it used. Verity shows, both ways, every batch a lot went into and every customer who received them.
 - screen: lots
+- root: Ingredients arrive by lot, but batches are recorded by product, so the link between a lot and the batches that used it is written only on a batch sheet.
+- workaround: The production head searches batch sheets and calls the store keeper when a supplier raises a concern.
+- options: Use one lot per batch, which wastes stock | Keep a lot register by hand | Lots received with supplier, date and expiry, each batch recording the lots used, readable both ways
+- pick: A supplier alert shows every affected batch and every customer in one lookup.
+- needs: Lot numbers on receipt and on batch issue sheets.
 
 ### 2. Short-dated stock goes out last and comes back as returns
 - area: Stock
@@ -79,6 +84,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - fix: Finished goods are held by batch and best-before date. Verity picks first-expiry-first-out for each order, and shows each batch's remaining shelf life against each customer's minimum.
 - screen: shelf
 - source: (The Better India, 2023: https://thebetterindia.com/315182/kolkata-milind-shah-started-gauraa-to-prevents-fmcg-products-from-going-to-landfills)
+- root: Dispatch picks the nearest or easiest pallet, not the oldest, and shelf life is checked only when a distributor complains.
+- workaround: A first-in first-out rule posted in the warehouse and followed by the careful.
+- options: Mark each pallet with a date label | Weekly warehouse review | Finished goods held by batch and best-before date with first-expiry-first-out picking and shelf life shown against each customer's minimum
+- pick: The older stock leaves first without anyone having to remember.
+- needs: Batch and best-before date for finished goods and customer shelf-life rules.
 
 ### 3. A batch fails a check and still gets packed
 - area: Quality
@@ -86,6 +96,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: A failed batch in the market is a recall risk. A failed batch caught after packing is wasted packaging, labour and shelf space.
 - fix: In-process and final checks are recorded against the batch with the allowed range. A result outside range places the batch on hold, and the packing step cannot start for it until the quality head releases it.
 - screen: quality
+- root: A check is done on a sheet, and the packing line is under pressure to continue.
+- workaround: The quality person tells the supervisor, who decides whether to hold.
+- options: A second sign-off before packing, which slows the line | Verbal stop instruction | In-process and final checks recorded with the allowed range, a result outside range placing the batch on hold, and packing blocked
+- pick: The stop is automatic and the decision to release is recorded.
+- needs: Check points and allowed ranges per product.
 
 ### 4. Holds are verbal and stock moves anyway
 - area: Quality
@@ -93,6 +108,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Hold means nothing without a block. A held batch that ships becomes a customer's problem.
 - fix: A hold is a status on the batch that stops picking and dispatch. Verity lists current holds with the reason, the owner and the age, and records the release or the destruction decision.
 - screen: quality
+- root: A hold is announced by shouting or a note on the pallet, and anyone who did not hear it moves stock as usual.
+- workaround: A red tag on the pallet and a message to the dispatch team.
+- options: A locked cage for held stock, which takes space | A hold register | A hold as a status on the batch that stops picking and dispatch, listed with reason, owner and age
+- pick: Held stock cannot be dispatched by mistake and the release is recorded.
+- needs: A list of who can place and lift a hold.
 
 ### 5. A recall drill takes days, not hours
 - area: Recall
@@ -101,6 +121,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - fix: Verity lists affected batches, quantity dispatched, customers, warehouse stock and returns in one view, and creates a task per customer for staff to call, with outcomes recorded.
 - screen: lots
 - source: (Taxguru, FSSAI Food Recall Plan and its Procedure, 2021: https://taxguru.in/corporate-law/fssai-food-recall-plan-procedure.html)
+- root: Batch, dispatch, warehouse and customer lists are in different places and each is updated by a different person.
+- workaround: A team gathers papers and calls everyone during the drill.
+- options: Run drills rarely | Keep a distribution sheet per batch | One view of affected batches, quantity dispatched, customers, warehouse stock and returns, with a task for each customer call
+- pick: A drill takes hours and the record shows what was done.
+- needs: Dispatch records by batch and customer contacts.
 
 ### 6. Best-before dates are wrong on the pack
 - area: Packing
@@ -108,6 +133,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Rework, relabelling and sometimes a destroyed batch. Worse, a wrong date that reaches the market.
 - fix: The pack date, batch code and shelf life come from the batch record. A line-start check compares the first printed pack with the record, and a mismatch holds the line until it is signed off.
 - screen: quality
+- root: Date and batch codes are set on the printer by hand each run, and the first pack is not compared with the record.
+- workaround: The operator checks the date on the first few packs.
+- options: Printer with automatic dates, which needs equipment | A second person verifies | Pack date, batch code and shelf life taken from the batch record, a line-start check against the first printed pack, and a mismatch holding the batch
+- pick: Wrong dates are caught before the batch is packed.
+- needs: Shelf life per product and the line-start check step.
 
 ### 7. Ingredient prices move and the pack price does not
 - area: Costing
@@ -115,6 +145,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Example arithmetic: a ₹40 pack with ₹26 of ingredients and packing, ₹6 of conversion and 5 percent line loss earns about ₹6, not ₹8.
 - fix: Every purchase records the rate. Verity costs each batch from actual lots, yield and line loss, and shows margin per product and per customer, so a rise shows as a changed margin quickly.
 - screen: owner
+- root: Pack prices are fixed for months and ingredient prices move weekly, with costing done rarely.
+- workaround: The owner reviews prices when margins feel tight.
+- options: Raise all prices by a fixed amount | Review costing quarterly | Each batch costed from actual lots, yield and line loss, with margin by product and customer
+- pick: A price rise is decided on numbers for the products that need it.
+- needs: Purchase rates, yield and line loss.
 
 ### 8. Ingredients expire in stores before they are used
 - area: Stock
@@ -122,6 +157,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Cash tied up and written off. Example arithmetic: ₹3 lakh of stock written off a quarter is about ₹12 lakh a year.
 - fix: Ingredient lots carry expiry. Verity lists lots by days left against the production plan, and raises a task to use or return the ones at risk.
 - screen: shelf
+- root: Ingredients are bought for a plan that changes, and expiry is checked when someone cleans the store.
+- workaround: The store keeper keeps a rough list of what is near expiry.
+- options: Buy only just in time, which risks shortage | A monthly store check | Ingredient lots listed by days left against the production plan, with a task to use or return the ones at risk
+- pick: Stock is used or returned before it is lost.
+- needs: Expiry dates on lots and the production plan.
 
 ### 9. Distributors pay late and ask for returns in the same call
 - area: Money
@@ -129,6 +169,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Return adjustments without records are disputes later. Slow payment also pushes the factory to borrow.
 - fix: Returns are recorded against the original batch and invoice with a reason. Verity shows dues by distributor and age net of approved returns, and routes a return above your limit for approval.
 - screen: orders
+- root: Returns and payment are negotiated in the same call, and neither the return nor the invoice is linked to the batch.
+- workaround: The sales head offers credit in return for payment.
+- options: No returns policy | A returns sheet | Returns recorded against the original batch and invoice with a reason, dues by distributor net of approved returns, and a route for returned stock
+- pick: The distributor's dues and returns are one clear number.
+- needs: Invoices, returns and distributor terms.
 
 ### 10. Micro and small suppliers are paid late
 - area: Money
@@ -137,6 +182,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - fix: Each supplier bill is a record with due date against the 45 day limit and the supplier's size category. Verity lists bills approaching the limit so payment is planned before it turns into a tax cost.
 - screen: orders
 - source: (SetIndiaBiz, MSME 45 day payment rule, 2025: https://www.setindiabiz.com/blog/msme-45-day-payment-rule)
+- root: Supplier bills are approved when the owner has time, and the legal limit for small suppliers is not visible.
+- workaround: Accounts pays by oldest bill first.
+- options: Pay everyone early | A watch list kept by hand | Bills with due date against the limit and supplier size category, listed as they approach it
+- pick: Payment is scheduled before the limit.
+- needs: Supplier bills with acceptance dates and size category.
 
 ### 11. Licence, training and test dates sit with one person
 - area: Compliance
@@ -145,6 +195,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - fix: Each licence, test report, contract and training certificate is a record with expiry and owner. Renewal tasks open weeks ahead. Annual returns are tasks with the figures totalled from batches and dispatches.
 - screen: upkeep
 - source: (SetIndiaBiz, FSSAI 2026 reforms, 2026: https://www.setindiabiz.com/blog/fssai-2026-reforms)
+- root: Licences, test reports, contracts and training certificates have separate expiries and the dates are in one person's diary.
+- workaround: The quality manager keeps a spreadsheet.
+- options: Calendar reminders | A consultant tracks dates | Each licence, report, contract and certificate as a record with expiry and owner, with renewal tasks opening weeks ahead
+- pick: A renewal does not depend on one person.
+- needs: The list of licences, reports and certificates with expiry dates.
 
 ### 12. Cleaning, pest and temperature checks are signed in bulk
 - area: Hygiene
@@ -152,6 +207,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: A check that is not done on the day cannot be proved later. A cold room drift can spoil a whole store of ingredients.
 - fix: Daily checks are tasks with a person and a time. A missed one is flagged the same day, and a temperature outside range opens an issue on the stock held there.
 - screen: upkeep
+- root: Hygiene checks are signed at the end of the day or week in one go.
+- workaround: A supervisor signs sheets before the auditor arrives.
+- options: More frequent supervisor walks | Paper sheets in each area | Daily checks as tasks with a person and time, a missed one flagged the same day, and a temperature outside range opening an issue on the stock held there
+- pick: The record reflects what happened and an excursion triggers action.
+- needs: Your check lists and temperature limits.
 
 ### 13. Machine stops are noted nowhere
 - area: Equipment
@@ -159,6 +219,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Without reasons, the same stops repeat. Over a month they are lost packs and overtime.
 - fix: Each stop is a quick entry with reason and duration. Verity shows downtime by machine and cause, and links service tasks with dates to each machine.
 - screen: upkeep
+- root: Machine stops are small and frequent and nobody writes them down.
+- workaround: The line leader estimates downtime at the end of the shift.
+- options: Machine counters, which cost money | A paper downtime log | A quick entry for each stop with reason and duration, showing downtime by machine and cause with service tasks linked
+- pick: The biggest cause is fixed first, with a date.
+- needs: Machine list and a short list of stop reasons.
 
 ### 14. Orders are taken without knowing what is packed
 - area: Orders
@@ -166,6 +231,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: A missed delivery to a modern trade chain can mean penalties or a lost listing.
 - fix: Each order shows stock by batch, packing material, line slot and promised date. The planner sees conflicts before a date is confirmed.
 - screen: orders
+- root: Sales takes an order on a date without seeing stock by batch, packing material or line slot.
+- workaround: A call to the planner or the warehouse before replying.
+- options: Quote a long lead time | A shared stock sheet | Each order showing stock by batch, packing material, line slot and promised date, with conflicts seen before confirming
+- pick: Dates come from the factory's real position.
+- needs: Stock by batch, packing material and line capacity.
 
 ### 15. The owner reads the factory through phone calls
 - area: Owner
@@ -173,6 +243,11 @@ Lede: These are the situations food business owners and quality heads describe a
 - cost: Decisions run on memory. A shelf-life or yield problem shows up weeks later as a return.
 - fix: One morning screen with batches made, holds, stock near expiry, dispatches and overdue dues, each with an owner.
 - screen: owner
+- root: The owner is the only place where production, quality, stock and money meet.
+- workaround: Daily calls to department heads.
+- options: A weekly report | More calls | A morning screen of batches made, holds, stock near expiry, dispatches and overdue dues, each with an owner
+- pick: The owner sees exceptions without calling.
+- needs: A short daily set of figures from each department.
 
 ## Facts
 
@@ -438,8 +513,167 @@ Heading: Questions food factory owners ask.
 - cta heading: Start with the stock about to expire.
 - cta lede: Tell us how your factory runs and we will show you the shelf-life list, the lot-to-customer trace and the dues it would find, using your own numbers.
 
+## Workflow
+
+Heading: From ingredient lot to paid invoice in a food factory, and where each handoff slips.
+Lede: A food batch is only as safe as its records. Every handoff from receipt to dispatch needs to carry the lot, the date and the check, and that is where the paper breaks.
+
+### 1. Order and planning
+- owner: Sales and planner
+- does: Orders are booked against stock and line capacity.
+- data: Product, quantity, date, customer shelf-life rule.
+- breaks: Orders are taken without seeing stock by batch or packing material.
+- handoff: The plan goes to purchase, stores and the line.
+
+### 2. Ingredient purchase and receipt
+- owner: Purchase and stores
+- does: Ingredients and packaging are bought, received and checked.
+- data: Supplier, lot, date, expiry, quality check.
+- breaks: Expiry is not tracked against the plan.
+- handoff: Cleared lots go to the production store.
+
+### 3. Batch production
+- owner: Production head
+- does: The batch is made to the recipe.
+- data: Lots used, quantities, process checks, yield, line loss.
+- breaks: Lots are not linked to batches and checks are signed in bulk.
+- handoff: The batch goes to quality for the final check.
+
+### 4. Quality check and hold
+- owner: Quality
+- does: Checks are done and the batch is released, held or rejected.
+- data: Results with ranges, hold status, decision.
+- breaks: A failed batch is packed and holds are verbal.
+- handoff: Released batches go to packing.
+
+### 5. Packing and coding
+- owner: Line leader
+- does: Goods are packed and dates and batch codes are printed.
+- data: Pack date, batch code, shelf life, first-pack check.
+- breaks: Wrong dates are printed.
+- handoff: Packed goods go to the warehouse by batch.
+
+### 6. Warehouse and dispatch
+- owner: Warehouse and dispatch
+- does: Stock is stored by batch and picked for orders.
+- data: Batch, best-before date, location, picking order.
+- breaks: Short-dated stock goes last and returns follow.
+- handoff: Goods go to the customer with an invoice.
+
+### 7. Returns and recalls
+- owner: Quality and sales
+- does: Returns are accepted and recalls are handled.
+- data: Returns by batch, reason, recall list.
+- breaks: A recall drill takes days.
+- handoff: Findings go back to production and quality.
+
+### 8. Money and compliance
+- owner: Accounts and quality manager
+- does: Dues are collected, suppliers are paid and licences are kept current.
+- data: Invoices, dues, bills, licence expiry.
+- breaks: Late supplier payments and one-person licence dates.
+- handoff: Costs and margins return to planning and pricing.
+
+## Content kit
+
+### Hooks
+- Ek ingredient lot, das batch. Supplier ne alert diya, ab kya?
+- Best-before kam bacha tha aur maal wahi pehle gaya.
+- Batch fail hua aur phir bhi pack ho gaya.
+- Hold ka bola tha par pallet nikal gaya.
+- Recall drill mein do din lag gaye.
+- Pack par best-before galat chhap gaya.
+- Ingredient ka rate badla. Pack ka daam wahi.
+- Ingredient store mein expire ho gaya.
+- Distributor ne paisa roka aur return bhi manga.
+- Chhote supplier ka bill 45 din mein dena tha.
+- Licence ki date ek aadmi ki diary mein.
+- Cleaning aur temperature ki sheet ek saath sign hoti hai.
+- Machine kyun ruki, kisi ne likha nahi.
+- Order le liya. Stock aur packing material dekha?
+- Aap factory mein nahi hote to line kaun dekhta hai?
+- Customer ki complaint aayi. Kaun sa batch?
+- Short shelf life ki wajah se return kitne aaye?
+- Lot ka certificate kahan hai?
+- Pest control ka record bhara gaya, par kab?
+- Cold room ka temperature raat ko upar gaya, kisne dekha?
+- Raw material sasta mila, par yield kam aayi.
+- Packing material kam padha aur line ruki.
+- Allergen wala batch aur bina allergen wala, ek hi line par?
+- Audit se pehle sab register bhare jaate hain.
+- Dispatch ke din customer ne sirf long shelf life maanga.
+
+### Explainers
+- concept: One lot, every batch | pain: Lot to batch mapping missing (pain 1) | for: Quality and owners | hook: Ek ingredient lot, das batch. Supplier ne alert diya, ab kya? | show: A lot record listing every batch and customer it reached | visual: A lot card fanning to batches and customers | outcome: A narrow, fast response | cta: Book the free seven day demo
+- concept: Oldest first, automatically | pain: Short-dated stock goes out last (pain 2) | for: Warehouse and sales | hook: Best-before kam bacha tha aur maal wahi pehle gaya | show: Picking by first expiry and shelf life against each customer's minimum | visual: A warehouse rack with the oldest pallet glowing | outcome: Fewer returns | cta: Try it on your stock list
+- concept: The batch that could not be packed | pain: Failed batch still packed (pain 3) | for: Quality and production | hook: Batch fail hua aur phir bhi pack ho gaya | show: A result outside range placing the batch on hold and blocking packing | visual: A gate closing in front of a batch card | outcome: Failed batches never reach the pack | cta: Share your check sheet
+- concept: A hold that holds | pain: Holds are verbal (pain 4) | for: Quality heads | hook: Hold ka bola tha par pallet nikal gaya | show: Hold status stopping pick and dispatch, with reason and age | visual: A red tag attached to a batch that blocks a truck | outcome: Held stock stays held | cta: Try it on a held batch
+- concept: Recall drill in hours | pain: Recall drill takes days (pain 5) | for: Quality and sales | hook: Recall drill mein do din lag gaye | show: Affected batches, quantity, customers, warehouse stock and returns in one view | visual: A batch card expanding into a customer list | outcome: Ready for a real recall | cta: Run a drill on your data
+- concept: Date printed right | pain: Best-before dates wrong on pack (pain 6) | for: Line leaders | hook: Pack par best-before galat chhap gaya | show: Pack date and batch code from the batch record and a first-pack check | visual: A pack with a date matching a record | outcome: Wrong dates caught early | cta: Share your coding step
+- concept: Margin by product | pain: Ingredient prices move, pack price does not (pain 7) | for: Owners | hook: Ingredient ka rate badla. Pack ka daam wahi | show: Batch cost from actual lots and margin by product and customer | visual: A rate line pushing a margin bar down | outcome: Price changes on facts | cta: Cost one product
+- concept: Use it before it expires | pain: Ingredients expire in stores (pain 8) | for: Stores and purchase | hook: Ingredient store mein expire ho gaya | show: Lots by days left against the production plan | visual: Calendar chips sliding toward a red date | outcome: Less write-off | cta: Load your ingredient list
+- concept: Daily checks that were done | pain: Checks signed in bulk (pain 12) | for: Quality managers | hook: Cleaning aur temperature ki sheet ek saath sign hoti hai | show: Daily checks as tasks with a person and time and a temperature excursion raising an issue | visual: A day timeline with checks appearing in time | outcome: A record that reflects reality | cta: Try one week of checks
+- concept: One morning screen | pain: Owner reads factory through phone (pain 15) | for: Owners | hook: Aap factory mein nahi hote to line kaun dekhta hai? | show: Batches, holds, near-expiry stock, dispatches and dues | visual: A phone with a short list | outcome: Review by exception | cta: Ask for the demo
+
+### Script 1: Ek lot, das batch
+- 0 to 5s: Ek ingredient lot, das batch. Supplier ne alert diya, ab kya?
+- 5 to 15s: Batch sheets nikaalo, store keeper ko bulao, aur ek din nikal jaata hai.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har lot ka record, har batch mein kaun se lot. Alert aaye to saare prabhavit batch aur customer ek jagah dikhte hain.
+- 40 to 50s: Recall chhota aur tez hota hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Pehle purana maal
+- 0 to 5s: Best-before kam bacha tha aur maal wahi pehle gaya.
+- 5 to 15s: Distributor ne shelf life dekhi aur maal wapas aaya.
+- 15 to 25s: Apna finished stock list dijiye. Saat din mein free demo.
+- 25 to 40s: Maal batch aur best-before ke saath. Order ke liye pehle expiry wala maal chuna jaata hai, customer ki shelf life ke saath milaya hua.
+- 40 to 50s: Returns kam hote hain.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Fail batch pack nahi hoga
+- 0 to 5s: Batch fail hua aur phir bhi pack ho gaya.
+- 5 to 15s: Result sheet par tha, line chalti rahi.
+- 15 to 25s: Ek product ki check sheet dijiye. Saat din mein free demo.
+- 25 to 40s: Har check ke saath range. Range se bahar result se batch hold. Packing ka step band.
+- 40 to 50s: Release kisne kiya, record mein.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Hold jo ruka rahe
+- 0 to 5s: Hold ka bola tha par pallet nikal gaya.
+- 5 to 15s: Red tag laga tha, par dispatch ko pata nahi tha.
+- 15 to 25s: Ek held batch ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Hold batch ka status hai. Pick aur dispatch dono rukte hain. Reason, owner aur age dikhte hain.
+- 40 to 50s: Release ka record bhi.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Owner ki subah
+- 0 to 5s: Aap factory mein nahi hote to line kaun dekhta hai?
+- 5 to 15s: Phone par poochte hain, phir bhi kuch chhoot jaata hai.
+- 15 to 25s: Ek factory ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Subah ek screen: kitne batch bane, kaun se hold par, kaun sa stock expire hone wala, dispatch aur dues. Har item ka owner.
+- 40 to 50s: Aap sirf faisle wali baat sunte hain.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Batch traceability, holds that hold, and returns from short shelf life
+- titles: Managing Director | Owner | Plant Head | Head of Quality | Head of Production | Head of Supply Chain | General Manager Operations
+- deciders: The owner or managing director decides. The plant head and quality head influence, and sales raises shelf-life and returns questions.
+- best size: A packaged food or beverage maker with 30 to 300 people, several products and distributors or retailers who audit or return stock.
+- first message: Hello, I work with food manufacturers on batch traceability and returns from short shelf life. We build a free seven day demo on your own batch and stock data. How long does a recall drill take you today?
+- discovery: How do you find every batch an ingredient lot went into? | How do you pick stock by best-before date? | What happens when a check fails during packing? | How are holds communicated and enforced? | How are returns recorded and linked to the batch? | How do you track licences, tests and hygiene checks?
+- objection: We already have ERP for accounts | We do not replace accounts. We connect batch, lot and hold records that accounts software does not hold.
+- objection: Operators will not use screens | We start with the few screens each line leader needs and use your language and terms.
+- objection: Cost | Cost depends on scope. We start with the problem that costs most, and the demo is free.
+- objection: Our process is changing | We configure around how you work now, and change it with you as it moves.
+- demo: A lot traced to its batches and customers, a failed check blocking packing, a hold that stops dispatch, and first-expiry picking, built from the factory's own sheets.
+- proof: Run a recall drill on one real lot and show how long it takes with the record.
+- follow up: Thank you for your time. I have built the demo around the lot you described, from receipt to customer. When can your quality head and I go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Sample figures, names, product names, process hours and day rows are drafted illustrations to confirm with the Verity team.
 - Unverified: the 24 hour recall reporting limit and distribution record retention period (search wording only; the source page returned 404); the Form D1 annual return deadline and late fee (search snippets only, not stated as fact); the number of food safety supervisors a licence requires; the FSSAI Central Licence threshold (sources disagreed between ₹20 crore and ₹50 crore; the fetched page says ₹50 crore).
 - The Verity pain "machine stops" is a record of stop reasons only, not machine control.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.

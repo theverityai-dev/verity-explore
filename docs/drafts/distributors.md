@@ -48,6 +48,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Example arithmetic: on a business doing ₹1 crore a month with an average 35 days of credit, about ₹1.2 crore is always out in the market. Each extra 10 days adds roughly ₹33 lakh to what you must fund.
 - fix: Outstanding is held per outlet, per beat and per salesman, aged in bands. An order from an outlet over its limit waits for your tap, with its oldest bill and last payment beside it.
 - screen: credit
+- root: Salesmen give credit on the beat to keep orders flowing, and the owner sees the total only when the billing desk adds it up.
+- workaround: The owner reviews the outstanding list weekly and tells the salesman who to stop.
+- options: Cash only on the beat, which cuts sales | A credit register per salesman | Outstanding held per outlet, beat and salesman in bands, with an order from an outlet over its limit waiting for your tap with its oldest bill shown
+- pick: Credit is decided at the order, not at the weekly review.
+- needs: Outlet list with limits and the current outstanding.
 
 ### 2. Cash with the salesman does not reach the counter the same day
 - area: Credit
@@ -55,6 +60,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Cash held outside the books for days is a standing risk. Small gaps repeated over a month become a large figure that nobody can place.
 - fix: Each collection is recorded on the outlet against the bill it settles, with mode: cash, cheque or UPI. At the end of the day the settlement screen compares what the salesman recorded with what was handed in, per person.
 - screen: settlement
+- root: Cash taken on the route is counted at the end of the day, and any gap is not linked to a bill or outlet.
+- workaround: The cashier counts, finds a gap and asks the salesman to explain.
+- options: Require cash to be deposited before the next day | Daily reconciliation on paper | Each collection recorded on the outlet against the bill it settles with mode, and an end-of-day settlement comparing what was recorded with what is handed in
+- pick: A gap is found the same day, with the bill it relates to.
+- needs: Collection records by salesman and the modes you accept.
 
 ### 3. A scheme given to the retailer is never claimed from the company
 - area: Schemes
@@ -63,6 +73,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - fix: A scheme is a record with a start, end, slab and product. Each invoice that earns it is tagged, so when it closes, the claim is already totalled by outlet and bill, ready for the claim form.
 - screen: schemes
 - source: (Kirana Club, FMCG distribution guide, 2026: https://kirana.club/resources/fmcg-distribution-india-guide)
+- root: A company scheme is given to a retailer at billing, and the claim to the company is made later from a separate calculation.
+- workaround: A person gathers invoices at the end of the scheme period.
+- options: Claim only the large schemes | A monthly manual compilation | A scheme as a record with start, end, slab and product, each invoice that earns it tagged, and the claim totalled by outlet when it closes
+- pick: The claim is ready when the scheme ends and money is not lost.
+- needs: Scheme terms from the company and the invoices.
 
 ### 4. Schemes change mid-month and the billing desk is the last to know
 - area: Schemes
@@ -70,6 +85,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Credit notes issued later, retailer irritation, and a claim that does not match the invoice that supported it.
 - fix: Scheme rules sit in Verity with the dates they apply. The invoice record picks the live rule for that outlet and date, and a bill that did not earn a scheme it should have shows up in a weekly exception list.
 - screen: schemes
+- root: Scheme rules arrive by message or from the company representative, and the billing desk works from yesterday's rule.
+- workaround: The owner relays the rule to the biller by phone.
+- options: A printed circular on the desk | Re-bill when a mistake is found | Scheme rules held in the system with the dates they apply, the invoice picking the live rule for that outlet and date, and a bill that did not earn a scheme it should have flagged
+- pick: The right scheme is applied at billing and errors are visible.
+- needs: Scheme terms with start and end dates.
 
 ### 5. Damage, expiry and return claims pending for months
 - area: Claims
@@ -78,6 +98,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - fix: A claim is a record with the batch, quantity, value, photos and dates. Each has an owner and a state: raised, acknowledged, approved, credited. Anything older than your window appears on the Today screen.
 - screen: schemes
 - source: (Storyboard18, 8 October 2025, on AICPDF and Tata Consumer Products distributors: https://storyboard18.com/how-it-works/tata-consumer-products-distributors-allege-mismanagement-call-for-non-cooperation-movement-82179.htm)
+- root: A damage or expiry claim needs proof and goes through many stages at the company, and no one tracks where it is.
+- workaround: The claim person keeps a notebook and follows up when asked.
+- options: Absorb the loss | A shared sheet with the company representative | A claim as a record with batch, quantity, value, photos and dates, an owner, and a state from raised to credited, with old claims listed
+- pick: Money owed by the company is chased by name and age.
+- needs: Claims raised and the company's process.
 
 ### 6. Credit notes from the company that do not match your books
 - area: Claims
@@ -85,6 +110,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Money you are owed sits unmatched, and disputes start from a pile of papers instead of a list.
 - fix: Credit notes from the principal are matched to the claims they settle. Anything unmatched, short-paid or older than your window is listed with amounts, so the reply to the company is a table.
 - screen: principals
+- root: Credit notes from the company arrive in bulk and do not state which claims they settle.
+- workaround: Accounts matches by amount when it has time.
+- options: Match at year end | Accept the company's figure | Credit notes matched to the claims they settle, with unmatched, short-paid or old ones listed with amounts
+- pick: Short payments are raised while the company will still discuss them.
+- needs: Credit notes and the claims raised.
 
 ### 7. Targets and stock pushed to you that the market does not need
 - area: Targets
@@ -92,6 +122,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Cash locked in a godown, a higher chance of expiry, and no one to blame because the order was yours.
 - fix: Before you accept a primary order, Verity shows weekly secondary sales, stock in hand, goods in transit and days of cover for each item. You see what the order does to your cash and expiry risk before you say yes.
 - screen: stock
+- root: The company pushes primary stock to meet its targets, and the distributor takes it without checking what the market is buying.
+- workaround: The owner relies on his sense of the market and accepts to keep the relationship.
+- options: Refuse stock, which risks the principal | Accept all and manage later | Before accepting a primary order, weekly secondary sales, stock, goods in transit and days of cover shown per item
+- pick: You accept what the market needs and can argue the rest with numbers.
+- needs: Secondary sales and stock by item.
 
 ### 8. Beats are visited by habit, not by plan
 - area: Routes
@@ -99,6 +134,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Missed outlets do not order, and the next distributor’s man does. A route that is never reviewed stays inefficient for years.
 - fix: Each outlet belongs to a beat with a visit day. Verity shows outlets not visited within their cycle, orders per call, and lines sold per outlet, so beats can be rebalanced on facts.
 - screen: routes
+- root: Beats are planned by habit and the salesman decides the order of visits.
+- workaround: The sales manager reviews calls monthly.
+- options: A fixed beat plan on paper | GPS tracking, which adds cost | Each outlet in a beat with a visit day, outlets not visited in their cycle, orders per call and lines sold per outlet
+- pick: Beats are adjusted using what each call earns.
+- needs: Outlet list with beat and visit day.
 
 ### 9. Van stock does not tally with van sales
 - area: Routes
@@ -106,6 +146,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Shortages are written off with a guess. If the cause is theft or poor billing, you never find out which.
 - fix: Each van load is an issue from the godown. Sales, returns and the closing load are recorded against the trip, and the difference is shown by van and by driver the same evening.
 - screen: routes
+- root: Van stock is loaded in the morning and sold during the day, and the closing count is compared with sales only when someone looks.
+- workaround: The storekeeper counts the van at the end of the day.
+- options: Seal the van | Count weekly | Each van load as an issue from the godown, sales, returns and closing load recorded against the trip, and the difference shown by van and day
+- pick: Shortages are found the same day with the van and the person.
+- needs: Van loads and sales by trip.
 
 ### 10. Short-dated stock found too late
 - area: Stock
@@ -113,6 +158,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Expired goods are often only partly recovered from the company, and the rest comes out of your margin.
 - fix: Stock is held by batch and expiry date. Picking suggests the oldest batch first, and a weekly list shows lots expiring within your window with the outlets that last bought them.
 - screen: stock
+- root: Short-dated stock is found by the warehouse team during cleaning, after the outlet has been missed.
+- workaround: A weekly check of dated lines by the storekeeper.
+- options: Mark all stock with a date | Sell slow lines at a discount | Stock held by batch and expiry with picking from the oldest, and a weekly list of lots expiring in your window with the outlets that last bought each
+- pick: Near-expiry stock is moved before it is lost.
+- needs: Batch and expiry on stock.
 
 ### 11. A salesman leaves and takes the outlet knowledge with him
 - area: People
@@ -120,6 +170,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: A beat that goes cold for a month. Distributors’ bodies cite high sales team attrition as an industry problem.
 - fix: Outlets, their history and dues belong to the business. A route is reassigned in one step, and the handover list shows each outlet with last order, usual items and money owed.
 - screen: routes
+- root: Outlet knowledge lives with the salesman, and a departure leaves a route without memory.
+- workaround: The owner briefs the new salesman verbally.
+- options: Pay to retain salesmen | Rotate beats often | Outlets, history and dues owned by the business, a route reassigned in one step, and a handover list with each outlet's last order and usual items
+- pick: A new salesman starts with the outlet history.
+- needs: Outlet records and past orders.
 
 ### 12. Incentives and expenses argued from memory
 - area: People
@@ -127,6 +182,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Hours of the accountant’s time and a salesman’s trust that goes down a notch.
 - fix: Visits, orders, collections and trips are on each salesman’s record. Verity builds the month’s statement from your slabs. He sees the same breakdown, so there is nothing to argue about.
 - screen: owner
+- root: Incentives and expenses are calculated by the manager from notes and the salesman disputes the total.
+- workaround: A monthly argument with a spreadsheet.
+- options: A flat allowance | Review by sales manager alone | Visits, orders, collections and trips on each salesman's record, the month's statement built from your slabs, and the salesman seeing the same breakdown
+- pick: Disputes shrink because both sides see the same record.
+- needs: Your incentive slabs and expense rules.
 
 ### 13. No one knows which company actually makes you money
 - area: Principals
@@ -134,6 +194,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Capital and godown space go to the principals that look big, not the ones that earn.
 - fix: For every principal Verity shows margin, credit given, claims pending and stock held. You see return on money employed for each company before you renew or push a line.
 - screen: principals
+- root: A distributor holds several companies, and the profit on each is not compared after credit, claims and stock held.
+- workaround: The owner favours the company that pays him best.
+- options: Judge by turnover | A yearly review of each company | For every principal margin, credit given, claims pending and stock held, with return on money employed shown before renewal
+- pick: You renew or drop a company with the numbers.
+- needs: Sales, claims and stock by principal.
 
 ### 14. The depot, the vans and the books are three different views
 - area: Owner
@@ -141,7 +206,11 @@ Lede: These are the situations distributors describe most often. For each: what 
 - cost: Decisions are delayed until the month closes, when it is too late to chase a claim or pause a credit.
 - fix: The Today screen shows the day’s sales by route, outstanding, claims waiting, stock cover and approvals. Every item has an owner and opens into the record.
 - screen: owner
-
+- root: The depot, the vans and the books each tell part of the story, and the owner reconciles them by walking around.
+- workaround: Daily reports from the depot, the van team and the accountant.
+- options: A consolidated sheet at end of day | A manager to reconcile | A Today screen showing the day's sales by route, outstanding, claims waiting, stock cover and approvals, each item with an owner
+- pick: One view for the day, with owners for each item.
+- needs: Daily figures from depot, vans and accounts.
 
 ## Facts
 
@@ -758,6 +827,166 @@ Heading: Questions distributors ask.
 - cta heading: Start with the claims nobody is chasing.
 - cta lede: Tell us how your depot runs and we will show you the aged claims, the beats you are missing and the cash held by each route, using your own numbers.
 
+## Workflow
+
+Heading: From company order to collected cash and claims, and where each handoff slips.
+Lede: A distributor buys from companies, sells to retailers through salesmen, and claims schemes and damages back. Money is made or lost in the cycle of credit, schemes and claims.
+
+### 1. Primary order from the company
+- owner: Owner and purchase
+- does: Stock is ordered from the company against its targets.
+- data: Items, quantity, scheme terms, secondary sales, days of cover.
+- breaks: Stock is accepted without checking what the market needs.
+- handoff: Goods arrive at the depot.
+
+### 2. Receiving and storing
+- owner: Depot keeper
+- does: Goods are counted and stored by batch.
+- data: Batch, expiry, quantity, damage.
+- breaks: Expiry is found by chance.
+- handoff: Stock is available for orders.
+
+### 3. Orders from the beat
+- owner: Salesmen
+- does: Orders are taken from retailers on the beat.
+- data: Outlet, items, quantity, scheme, credit.
+- breaks: Credit is given beyond limits and the beat is visited by habit.
+- handoff: Orders go to billing.
+
+### 4. Billing and scheme application
+- owner: Billing desk
+- does: Invoices are raised and schemes applied.
+- data: Rates, live scheme, outlet, salesman.
+- breaks: The scheme applied is yesterday's rule.
+- handoff: Goods are loaded.
+
+### 5. Delivery and van sales
+- owner: Delivery team and vans
+- does: Goods are delivered and sold from vans.
+- data: Van load, sales, returns, closing load.
+- breaks: Van stock does not tally.
+- handoff: Cash and returns come back to the depot.
+
+### 6. Collection and settlement
+- owner: Salesmen and cashier
+- does: Money is collected and settled at the end of the day.
+- data: Collections against bills, mode, cash handed in.
+- breaks: Gaps are not linked to a bill.
+- handoff: Collections go to accounts.
+
+### 7. Claims and credit notes
+- owner: Claims person
+- does: Scheme, damage and expiry claims are raised and followed.
+- data: Claim, batch, value, photos, state, credit note.
+- breaks: Claims stay pending for months and credit notes do not match.
+- handoff: Credits enter the books.
+
+### 8. Salesman review and principal review
+- owner: Owner and sales manager
+- does: Salesman performance and each company's profit are reviewed.
+- data: Visits, orders, collections, margin, credit, claims.
+- breaks: Incentives are argued from memory and company profit is unknown.
+- handoff: Decisions return to the next primary order.
+
+## Content kit
+
+### Hooks
+- Beat par udhaar badhta jaa raha hai, kaun rok raha hai?
+- Salesman ne cash diya, par kis bill ka?
+- Company ki scheme di, claim kab bhejoge?
+- Scheme badli aur biller ko pata nahi chala.
+- Damage claim teen mahine se pending hai.
+- Company ka credit note aaya, kaun sa claim settle hua?
+- Company ne stock thop diya, market ko chahiye bhi tha?
+- Beat par kaun sa outlet kitne din se nahi gaya?
+- Van ka stock aur van ki sale ka match nahi.
+- Expiry se pehle maal nikla ya nahi?
+- Salesman gaya aur outlet bhi gaye.
+- Incentive ka hisaab har mahine jhagda.
+- Kaun si company se paisa banta hai?
+- Depot, van aur books teen alag kahani.
+- Retailer ka credit limit kisne dekha?
+- Primary order lene se pehle secondary sale dekhi?
+- Cash ka gap mila aur salesman kehta hai pata nahi.
+- Scheme claim ka total kaun nikalta hai?
+- Short dated stock ke liye kaun si dukaan?
+- Beat ki visit planning ya aadat?
+- Return ka maal wapas aaya, kiske naam?
+- Company ne credit note short diya.
+- Aap depot mein nahi hote to claims ka kya?
+- Outlet history naye salesman ko kaun deta hai?
+- Aaj ki sale, outstanding aur claims ek screen par chahiye.
+
+### Explainers
+- concept: Credit decided at the order | pain: Retailer credit grows beat by beat (pain 1) | for: Owners | hook: Beat par udhaar badhta jaa raha hai, kaun rok raha hai? | show: An order from an outlet over its limit waiting for your tap | visual: An outlet card with a ring and an approval button | outcome: Credit with control | cta: Book the free seven day demo
+- concept: Cash with a bill number | pain: Cash does not reach the counter (pain 2) | for: Owners and cashiers | hook: Salesman ne cash diya, par kis bill ka? | show: Collections against bills and an end-of-day settlement | visual: Notes sorted into bill envelopes | outcome: Gaps found the same day | cta: Try one day of settlement
+- concept: The scheme claim ready at scheme end | pain: Scheme not claimed (pain 3) | for: Owners and accounts | hook: Company ki scheme di, claim kab bhejoge? | show: Invoices tagged with the scheme and the claim totalled by outlet | visual: Invoices stacking into a claim total | outcome: Claims never missed | cta: Share one scheme
+- concept: The live scheme rule | pain: Schemes change mid-month (pain 4) | for: Billing desks | hook: Scheme badli aur biller ko pata nahi chala | show: The billing picking the live rule by date | visual: A rule calendar switching | outcome: Correct schemes at billing | cta: Share two scheme circulars
+- concept: Claims that get paid | pain: Claims pending for months (pain 5) | for: Claims persons | hook: Damage claim teen mahine se pending hai | show: Claims by state and age | visual: A claim moving along states | outcome: Money collected | cta: Load your claims list
+- concept: Credit note match | pain: Credit notes do not match (pain 6) | for: Accounts | hook: Company ka credit note aaya, kaun sa claim settle hua? | show: Credit notes matched to claims with unmatched items listed | visual: Two columns matching with gaps | outcome: Short payments raised | cta: Share a recent credit note
+- concept: Primary order with cover | pain: Stock pushed that the market does not need (pain 7) | for: Owners | hook: Primary order lene se pehle secondary sale dekhi? | show: Secondary sales, stock and days of cover before accepting | visual: A stock bar with days of cover | outcome: Accept only what sells | cta: Bring five items
+- concept: Van that tallies | pain: Van stock mismatch (pain 9) | for: Depot managers | hook: Van ka stock aur van ki sale ka match nahi | show: Van load, sales and closing load per trip | visual: A van with a balance | outcome: Gaps found the same day | cta: Try one van
+- concept: Which company pays | pain: No view of company profit (pain 13) | for: Owners | hook: Kaun si company se paisa banta hai? | show: Margin, credit, claims and stock by company | visual: A list of companies with return on money | outcome: Renew with facts | cta: Ask for the demo
+
+- concept: The route that hands over cleanly | pain: A salesman leaves and takes outlet knowledge (pain 11) | for: Owners and sales managers | hook: Salesman gaya aur outlet bhi gaye | show: A route reassigned in one step with a handover list of each outlet | visual: A route map passing from one salesman card to another | outcome: New salesmen start with history | cta: Share one route
+
+### Script 1: Beat ka udhaar
+- 0 to 5s: Beat par udhaar badhta jaa raha hai, kaun rok raha hai?
+- 5 to 15s: Salesman ko order chahiye aur retailer ko credit.
+- 15 to 25s: Aap apna business process batayiye. Hum saat din mein, aapke actual business data par, ek customised demo banate hain. Bilkul free.
+- 25 to 40s: Har outlet, beat aur salesman ke hisaab se outstanding. Limit paar karne wala order aapke ek tap ka intezaar karta hai, sabse purane bill ke saath.
+- 40 to 50s: Faisla order ke waqt hota hai.
+- 50 to 60s: Aapki team dekhe, pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 2: Cash ka bill
+- 0 to 5s: Salesman ne cash diya, par kis bill ka?
+- 5 to 15s: Cashier ne ginti ki, gap mila, sab pooch rahe hain.
+- 15 to 25s: Ek din ka collection data dijiye. Saat din mein free demo.
+- 25 to 40s: Har collection outlet ke bill ke saath, mode ke saath. Din ke end mein jo record hua aur jo jama hua, dono saamne.
+- 40 to 50s: Gap usi din pakda jaata hai.
+- 50 to 60s: Pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 3: Scheme claim
+- 0 to 5s: Company ki scheme di, claim kab bhejoge?
+- 5 to 15s: Scheme khatam hui aur ginti ab shuru hoti hai.
+- 15 to 25s: Ek scheme ke invoice dijiye. Saat din mein free demo.
+- 25 to 40s: Scheme ka record: shuru, ant, slab, product. Jo invoice kamata hai woh tag hota hai, aur claim outlet ke hisaab se pehle se tayyar.
+- 40 to 50s: Billing desk ko live rule dikhta hai.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+### Script 4: Claim aur credit note
+- 0 to 5s: Damage claim teen mahine se pending hai.
+- 5 to 15s: Company ka credit note aaya par kis claim ka, pata nahi.
+- 15 to 25s: Apne claims dijiye. Saat din mein free demo.
+- 25 to 40s: Har claim ka batch, quantity, photo aur state: raised se credited tak. Credit note claim se milta hai, jo na mile wo list mein.
+- 40 to 50s: Company ka baaki paisa aapko dikhta hai.
+- 50 to 60s: Pasand aaye tabhi aage badhiye. Nahi toh koi charge nahi.
+
+### Script 5: Kaun si company kamati hai
+- 0 to 5s: Kaun si company se paisa banta hai?
+- 5 to 15s: Turnover dikhta hai, credit aur claims ke baad ka paisa nahi.
+- 15 to 25s: Teen company ka data dijiye. Saat din mein free demo.
+- 25 to 40s: Har company ka margin, diya hua credit, pending claim aur phansa hua stock. Renewal se pehle return on money employed.
+- 40 to 50s: Aap numbers ke saath baat karte hain.
+- 50 to 60s: Demo pasand aaye tabhi aage. Nahi toh koi charge nahi.
+
+## Sales kit
+
+- lead with: Retailer credit on the beat, scheme claims and pending company claims
+- titles: Owner | Managing Director | Director | Head of Sales | Accounts Head | General Manager | Depot Manager
+- deciders: The owner decides. The accounts head and sales manager influence.
+- best size: A distribution business with 20 to 150 people, several companies, vans and salesmen on beats.
+- first message: Hello, I work with distributors on retailer credit, scheme claims and company claims that stay pending. We build a free seven day demo on your own outlet and claim data. How do you track what a salesman has given on credit today?
+- discovery: How do you check a retailer's credit limit when an order comes in? | How do you settle a salesman's cash against bills at the end of the day? | How do you track scheme claims to the company? | How are damage and expiry claims followed up? | How do you decide which primary orders to accept? | Which company is the most profitable for you after credit and claims?
+- objection: We use the company's distributor software | That software shows the company's view. We add your own credit, claim and salesman views.
+- objection: Salesmen will resist | We start with what makes their month-end statement clear, which they usually want.
+- objection: Cost | Cost depends on scope. We start with the problem that costs most, and the demo is free.
+- objection: We are busy | The four week plan needs about 8 to 14 owner hours in total.
+- demo: An outlet over its credit limit, a settlement with a cash gap by bill, a scheme claim totalled by outlet and a list of pending claims by age, built from the distributor's own data.
+- proof: Take one company's last quarter of schemes and claims and show what has not been claimed or credited.
+- follow up: Thank you for your time. I have built the demo around the scheme and claims you described. When can you and your accounts head go through it for 20 minutes?
+
 ## Assumptions and unverified
 
 - Exported from the finished JS. Process hours and sample figures are drafted assumptions to confirm with the Verity team.
+- Pain depth fields, the Workflow section, the Content kit and the Sales kit are reasoned from the researched pains and general industry practice, not from new sourced research. Hinglish hooks and scripts are drafts for the recorder to edit. Job titles and company-size ranges are drafted assumptions to confirm with the sales team.
